@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/madhavajay/dev/**)",
+      "Bash(ls -d exvitae*)",
+      "Bash(chmod +x:*)",
+      "Bash(./fetch_test_data.sh:*)",
+      "Bash(bash --version)",
+      "Bash(gh api:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)"
+    ]
+  }
+}

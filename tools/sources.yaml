@@ -1,0 +1,55 @@
+# Test data source manifest
+# Used by fetch_test_data.sh to download missing files.
+# Each dataset has a local directory and a list of files with URLs.
+
+datasets:
+  1k-genomes:
+    description: "1000 Genomes Project high-coverage data (NA06985, CEU population)"
+    subdirs:
+      ref:
+        description: "GRCh38 reference genome"
+        files:
+          - name: "GRCh38_full_analysis_set_plus_decoy_hla.fa"
+            url: "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa"
+            description: "GRCh38 reference FASTA with decoy and HLA sequences"
+          - name: "GRCh38_full_analysis_set_plus_decoy_hla.fa.fai"
+            url: "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa.fai"
+            description: "FASTA index for the reference genome"
+      aligned:
+        description: "High-coverage aligned reads"
+        files:
+          - name: "NA06985.final.cram"
+            url: "https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/1000G_2504_high_coverage/data/ERR3239276/NA06985.final.cram"
+            description: "CRAM alignment for NA06985 (30x WGS)"
+          - name: "NA06985.final.cram.crai"
+            url: "https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/1000G_2504_high_coverage/data/ERR3239276/NA06985.final.cram.crai"
+            description: "CRAM index"
+
+  23andme:
+    description: "23andMe SNP genotype files from OpenMined biovault-data (PGP participants)"
+    source_repo: "https://github.com/OpenMined/biovault-data/tree/main/snp/23andme"
+    subdirs:
+      v2/hu0199C8:
+        description: "23andMe chip version 2, participant hu0199C8"
+        files:
+          - name: "23data20100526.txt.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/23andme/v2/hu0199C8/23data20100526.txt.zip"
+            description: "PGP participant hu0199C8, 23andMe v2 export (2010)"
+      v3/huE4DAE4:
+        description: "23andMe chip version 3, participant huE4DAE4"
+        files:
+          - name: "huE4DAE4_20120522224129.txt.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/23andme/v3/huE4DAE4/huE4DAE4_20120522224129.txt.zip"
+            description: "PGP participant huE4DAE4, 23andMe v3 export (2012)"
+      v4/huE18D82:
+        description: "23andMe chip version 4, participant huE18D82"
+        files:
+          - name: "genome__v4_Full_2016.txt.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/23andme/v4/huE18D82/genome__v4_Full_2016.txt.zip"
+            description: "PGP participant huE18D82, 23andMe v4 export (2016)"
+      v5/hu50B3F5:
+        description: "23andMe chip version 5, participant hu50B3F5"
+        files:
+          - name: "genome_hu50B3F5_v5_Full.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/23andme/v5/hu50B3F5/genome_hu50B3F5_v5_Full.zip"
+            description: "PGP participant hu50B3F5, 23andMe v5 export"
