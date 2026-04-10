@@ -10,6 +10,8 @@ set -euo pipefail
 #   ./fetch_test_data.sh --dataset 1k-genomes    # only this dataset
 #   ./fetch_test_data.sh --dataset 23andme       # only this dataset
 #   ./fetch_test_data.sh --list                  # show full manifest
+#   ./fetch_test_data.sh --only "*.crai,*.fai"   # only matching files
+#   ./fetch_test_data.sh --exclude "*.fa,*.cram"  # skip matching files
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DATA_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)/test-data"
@@ -60,24 +62,52 @@ for ds_name, ds in cfg.get('datasets', {}).items():
 
 MODE="download"
 FILTER_DATASET=""
+ONLY_PATTERNS=""
+EXCLUDE_PATTERNS=""
+
+# Check if a filename matches any pattern in a comma-separated list
+# Supports: exact name, glob (*), partial substring
+matches_any() {
+  local filename="$1"
+  local patterns="$2"
+  [ -z "$patterns" ] && return 1
+  local IFS=','
+  for pat in $patterns; do
+    pat="$(echo "$pat" | sed 's/^ *//;s/ *$//')"
+    case "$filename" in
+      $pat) return 0 ;;
+    esac
+  done
+  return 1
+}
 
 while [ $# -gt 0 ]; do
   case "$1" in
     --check)    MODE="check"; shift ;;
     --list)     MODE="list"; shift ;;
     --dataset)  FILTER_DATASET="$2"; shift 2 ;;
+    --only)     ONLY_PATTERNS="$2"; shift 2 ;;
+    --exclude)  EXCLUDE_PATTERNS="$2"; shift 2 ;;
     --help|-h)
       cat <<EOF
 Usage: $0 [OPTIONS]
 
-Downloads test data files defined in test-data/sources.yaml.
+Downloads test data files defined in sources.yaml.
 Only fetches files that are not already present locally.
 
 Options:
   --check              Report what's present/missing without downloading
   --list               Show the full file manifest with URLs
   --dataset <name>     Only process this dataset (e.g. 1k-genomes, 23andme)
+  --only <patterns>    Only include files matching patterns (comma-separated globs)
+  --exclude <patterns> Skip files matching patterns (comma-separated globs)
   -h, --help           Show this help
+
+Filter examples:
+  --only "*.zip"                  Only 23andMe zip files
+  --only "*.fai,*.crai"           Only index files
+  --exclude "*.fa,*.cram"         Skip large files, get indexes only
+  --dataset 23andme --only "*v5*" Only the v5 23andMe file
 
 Datasets:
   1k-genomes           GRCh38 reference genome + NA06985 high-coverage CRAM
@@ -109,9 +139,9 @@ echo "PGx Test Data Fetcher"
 echo "====================="
 echo "Config: ${SOURCES}"
 echo "Data:   ${DATA_DIR}"
-if [ -n "$FILTER_DATASET" ]; then
-  echo "Filter: ${FILTER_DATASET}"
-fi
+[ -n "$FILTER_DATASET" ]   && echo "Dataset: ${FILTER_DATASET}"
+[ -n "$ONLY_PATTERNS" ]    && echo "Only:    ${ONLY_PATTERNS}"
+[ -n "$EXCLUDE_PATTERNS" ] && echo "Exclude: ${EXCLUDE_PATTERNS}"
 echo ""
 
 missing=0
@@ -123,6 +153,20 @@ while IFS=$'\t' read -r dataset subdir filename url; do
   # apply dataset filter
   if [ -n "$FILTER_DATASET" ] && [ "$dataset" != "$FILTER_DATASET" ]; then
     continue
+  fi
+
+  # apply --only filter (match against filename or full path)
+  if [ -n "$ONLY_PATTERNS" ]; then
+    if ! matches_any "$filename" "$ONLY_PATTERNS" && ! matches_any "${dataset}/${subdir}/${filename}" "$ONLY_PATTERNS"; then
+      continue
+    fi
+  fi
+
+  # apply --exclude filter
+  if [ -n "$EXCLUDE_PATTERNS" ]; then
+    if matches_any "$filename" "$EXCLUDE_PATTERNS" || matches_any "${dataset}/${subdir}/${filename}" "$EXCLUDE_PATTERNS"; then
+      continue
+    fi
   fi
 
   label="${dataset}/${subdir}/${filename}"

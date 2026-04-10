@@ -1,0 +1,62 @@
+name: Test Assays
+
+on:
+  pull_request:
+
+jobs:
+  test-assays:
+    runs-on: namespace-profile-default
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust build
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            bioscript/rust
+            bioscript/monty
+
+      - name: Restore 23andMe test data cache
+        id: cache-23andme-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            test-data/23andme
+          key: assay-test-data-23andme-${{ runner.os }}-${{ hashFiles('tools/sources.yaml') }}
+
+      - name: Install PyYAML for test-data fetcher
+        run: python3 -m pip install pyyaml
+
+      - name: Fetch 23andMe fixtures
+        run: ./tools/fetch_test_data.sh --dataset 23andme
+
+      - name: Save 23andMe test data cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            test-data/23andme
+          key: assay-test-data-23andme-${{ runner.os }}-${{ hashFiles('tools/sources.yaml') }}
+
+      - name: Run assays against cached 23andMe fixtures
+        run: ./test-assays.sh --input test-data/23andme
+
+      - name: Upload assay report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assay-test-report
+          path: |
+            test-output/results.csv
+            test-output/report
