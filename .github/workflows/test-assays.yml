@@ -3,6 +3,9 @@ name: Test Assays
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   test-assays:
     runs-on: namespace-profile-default

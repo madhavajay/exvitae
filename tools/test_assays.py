@@ -315,6 +315,8 @@ def build_probe_script(variants: list[VariantDefinition]) -> str:
             )
         )
 
+    row_block = textwrap.indent("\n".join(row_lines), " " * 8)
+
     return textwrap.dedent(
         """\
         """
@@ -323,7 +325,7 @@ def build_probe_script(variants: list[VariantDefinition]) -> str:
         def main():
             genotypes = bioscript.load_genotypes(input_file)
             rows = [
-        {textwrap.indent("\n".join(row_lines), " " * 8)}
+        {row_block}
             ]
             bioscript.write_tsv(output_file, rows)
 
