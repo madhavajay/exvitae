@@ -1,0 +1,207 @@
+{
+  "schema": "exvitae:assay-index",
+  "version": "1.0",
+  "assays": [
+    {
+      "id": "glp1_response_signals",
+      "title": "GLP1 Response Signals",
+      "summary": "Report curated GLP1 efficacy and side-effect signals from the researched GLP1 variant set.",
+      "category": "pgx",
+      "tags": [
+        "glp1",
+        "tirzepatide",
+        "pgx",
+        "latest_science"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "variant_panel",
+      "path": "assays/pgx/GLP1",
+      "assay_path": "assays/pgx/GLP1/assay.yaml",
+      "compiled_path": "assays/pgx/GLP1/assay.compiled.yaml",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Best on full WGS/VCF/CRAM. Some loci may be absent in chip-based genotype files."
+      ],
+      "template": "variant-panel",
+      "runnable_variant_count": 4,
+      "unsupported_variant_count": 1
+    },
+    {
+      "id": "apol1_risk",
+      "title": "APOL1 Risk Classifier",
+      "summary": "Classify APOL1 G0, G1, and G2 haplotype combinations from three defining sites.",
+      "category": "risk",
+      "tags": [
+        "apol1",
+        "kidney",
+        "risk"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "script",
+      "path": "assays/risk/APOL1",
+      "assay_path": "assays/risk/APOL1/assay.yaml",
+      "compiled_path": "assays/risk/APOL1/assay.compiled.yaml",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Works when all three APOL1 defining sites are present in the source data."
+      ],
+      "template": "risk-classifier",
+      "runnable_variant_count": 3,
+      "unsupported_variant_count": 0
+    },
+    {
+      "id": "brca_pathogenic_panel",
+      "title": "BRCA Pathogenic Variant Panel",
+      "summary": "Report curated pathogenic BRCA1 and BRCA2 ClinVar variants from the legacy BRCA panel.",
+      "category": "risk",
+      "tags": [
+        "brca",
+        "brca1",
+        "brca2",
+        "risk"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "variant_panel",
+      "path": "assays/risk/BRCA",
+      "assay_path": "assays/risk/BRCA/assay.yaml",
+      "compiled_path": "assays/risk/BRCA/assay.compiled.yaml",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Panel-style assay built from curated ClinVar pathogenic variants."
+      ],
+      "template": "variant-panel",
+      "runnable_variant_count": 1127,
+      "unsupported_variant_count": 0
+    },
+    {
+      "id": "hba_pathogenic_panel",
+      "title": "HBA Pathogenic Variant Panel",
+      "summary": "Report curated HBA1 and HBA2 pathogenic ClinVar variants from the legacy thalassemia panel.",
+      "category": "risk",
+      "tags": [
+        "hba",
+        "hba1",
+        "hba2",
+        "thalassemia",
+        "risk"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "variant_panel",
+      "path": "assays/risk/HBA",
+      "assay_path": "assays/risk/HBA/assay.yaml",
+      "compiled_path": "assays/risk/HBA/assay.compiled.yaml",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Panel-style assay built from curated ClinVar pathogenic variants."
+      ],
+      "template": "variant-panel",
+      "runnable_variant_count": 72,
+      "unsupported_variant_count": 0
+    },
+    {
+      "id": "hbb_pathogenic_panel",
+      "title": "HBB Pathogenic Variant Panel",
+      "summary": "Report curated HBB pathogenic ClinVar variants from the legacy thalassemia panel.",
+      "category": "risk",
+      "tags": [
+        "hbb",
+        "thalassemia",
+        "risk"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "variant_panel",
+      "path": "assays/risk/HBB",
+      "assay_path": "assays/risk/HBB/assay.yaml",
+      "compiled_path": "assays/risk/HBB/assay.compiled.yaml",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Panel-style assay built from curated ClinVar pathogenic variants."
+      ],
+      "template": "variant-panel",
+      "runnable_variant_count": 149,
+      "unsupported_variant_count": 0
+    },
+    {
+      "id": "herc2_eye_color",
+      "title": "HERC2 Eye Color",
+      "summary": "Classify the main HERC2 eye-color signal from one defining site.",
+      "category": "traits",
+      "tags": [
+        "herc2",
+        "eye-color",
+        "traits"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "script",
+      "path": "assays/traits/HERC2",
+      "assay_path": "assays/traits/HERC2/assay.yaml",
+      "compiled_path": "assays/traits/HERC2/assay.compiled.yaml",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Checks one major HERC2 eye-color signal."
+      ],
+      "template": "binary-call",
+      "runnable_variant_count": 1,
+      "unsupported_variant_count": 0
+    }
+  ]
+}
