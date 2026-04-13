@@ -1,0 +1,57 @@
+name: Publish Assay Artifacts
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - madhava/updating-format
+    paths:
+      - "assays/**"
+      - "tools/build_assay_artifacts.py"
+      - ".github/workflows/publish-assay-artifacts.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish-assay-artifacts:
+    runs-on: ubuntu-latest
+    env:
+      ARTIFACT_BASE_URL: https://exvitae.biovault.net
+      R2_BUCKET: exvitae
+      R2_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: python3 -m pip install pyyaml awscli
+
+      - name: Rebuild assay zip artifacts and index
+        run: |
+          python3 tools/build_assay_artifacts.py \
+            --artifact-base-url "$ARTIFACT_BASE_URL" \
+            --artifact-dir dist/assays \
+            --index-path assays/index.json
+
+      - name: Upload zip artifacts to R2
+        run: aws s3 sync dist/assays "s3://$R2_BUCKET/" --endpoint-url "$R2_ENDPOINT" --delete
+
+      - name: Commit refreshed assay index
+        run: |
+          if git diff --quiet -- assays/index.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assays/index.json
+          git commit -m "Refresh assay artifacts index"
+          git push
