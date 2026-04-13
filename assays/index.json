@@ -1,0 +1,231 @@
+{
+  "schema": "exvitae:assay-index",
+  "version": "1.0",
+  "assays": [
+    {
+      "id": "glp1_response_signals",
+      "title": "GLP1 Response Signals",
+      "summary": "Report curated GLP1 efficacy and side-effect signals from the researched GLP1 variant set.",
+      "category": "pgx",
+      "tags": [
+        "glp1",
+        "tirzepatide",
+        "pgx",
+        "latest_science"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "variant_panel",
+      "path": "assays/pgx/GLP1",
+      "assay_path": "assays/pgx/GLP1/assay.yaml",
+      "compiled_path": "assays/pgx/GLP1/assay.compiled.yaml",
+      "artifact_url": "https://exvitae.biovault.net/glp1_response_signals-0.1.0.zip",
+      "artifact_sha256": "825f5dec9a5c0e0cf90bbcfcb856eade87be3ee62eb9ce5e2751ea6bf228de48",
+      "artifact_size": 6914,
+      "artifact_format": "zip",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Best on full WGS/VCF/CRAM. Some loci may be absent in chip-based genotype files."
+      ],
+      "template": "variant-panel",
+      "runnable_variant_count": 4,
+      "unsupported_variant_count": 1
+    },
+    {
+      "id": "apol1_risk",
+      "title": "APOL1 Risk Classifier",
+      "summary": "Classify APOL1 G0, G1, and G2 haplotype combinations from three defining sites.",
+      "category": "risk",
+      "tags": [
+        "apol1",
+        "kidney",
+        "risk"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "script",
+      "path": "assays/risk/APOL1",
+      "assay_path": "assays/risk/APOL1/assay.yaml",
+      "compiled_path": "assays/risk/APOL1/assay.compiled.yaml",
+      "artifact_url": "https://exvitae.biovault.net/apol1_risk-0.1.0.zip",
+      "artifact_sha256": "e04f79990efec2889a3dbb784231fa0c26a27afb2dcca575c30a34059dfd6dca",
+      "artifact_size": 3943,
+      "artifact_format": "zip",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Works when all three APOL1 defining sites are present in the source data."
+      ],
+      "template": "risk-classifier",
+      "runnable_variant_count": 3,
+      "unsupported_variant_count": 0
+    },
+    {
+      "id": "brca_pathogenic_panel",
+      "title": "BRCA Pathogenic Variant Panel",
+      "summary": "Report curated pathogenic BRCA1 and BRCA2 ClinVar variants from the legacy BRCA panel.",
+      "category": "risk",
+      "tags": [
+        "brca",
+        "brca1",
+        "brca2",
+        "risk"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "variant_panel",
+      "path": "assays/risk/BRCA",
+      "assay_path": "assays/risk/BRCA/assay.yaml",
+      "compiled_path": "assays/risk/BRCA/assay.compiled.yaml",
+      "artifact_url": "https://exvitae.biovault.net/brca_pathogenic_panel-0.1.0.zip",
+      "artifact_sha256": "c02922c0deaf6aab7133e453f4db1015bbf2a7f281a560254fe1f5391bbf5a5a",
+      "artifact_size": 530515,
+      "artifact_format": "zip",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Panel-style assay built from curated ClinVar pathogenic variants."
+      ],
+      "template": "variant-panel",
+      "runnable_variant_count": 1127,
+      "unsupported_variant_count": 0
+    },
+    {
+      "id": "hba_pathogenic_panel",
+      "title": "HBA Pathogenic Variant Panel",
+      "summary": "Report curated HBA1 and HBA2 pathogenic ClinVar variants from the legacy thalassemia panel.",
+      "category": "risk",
+      "tags": [
+        "hba",
+        "hba1",
+        "hba2",
+        "thalassemia",
+        "risk"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "variant_panel",
+      "path": "assays/risk/HBA",
+      "assay_path": "assays/risk/HBA/assay.yaml",
+      "compiled_path": "assays/risk/HBA/assay.compiled.yaml",
+      "artifact_url": "https://exvitae.biovault.net/hba_pathogenic_panel-0.1.0.zip",
+      "artifact_sha256": "b1931560854ac301d5d755e3adcbef4e15955cb5420807a852dc9fb683b49fdb",
+      "artifact_size": 37175,
+      "artifact_format": "zip",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Panel-style assay built from curated ClinVar pathogenic variants."
+      ],
+      "template": "variant-panel",
+      "runnable_variant_count": 72,
+      "unsupported_variant_count": 0
+    },
+    {
+      "id": "hbb_pathogenic_panel",
+      "title": "HBB Pathogenic Variant Panel",
+      "summary": "Report curated HBB pathogenic ClinVar variants from the legacy thalassemia panel.",
+      "category": "risk",
+      "tags": [
+        "hbb",
+        "thalassemia",
+        "risk"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "variant_panel",
+      "path": "assays/risk/HBB",
+      "assay_path": "assays/risk/HBB/assay.yaml",
+      "compiled_path": "assays/risk/HBB/assay.compiled.yaml",
+      "artifact_url": "https://exvitae.biovault.net/hbb_pathogenic_panel-0.1.0.zip",
+      "artifact_sha256": "af35df5d093bc46509d2de32260c7ac9ee31353060039a4fd153c76f56277c99",
+      "artifact_size": 74226,
+      "artifact_format": "zip",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf",
+        "cram"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Panel-style assay built from curated ClinVar pathogenic variants."
+      ],
+      "template": "variant-panel",
+      "runnable_variant_count": 149,
+      "unsupported_variant_count": 0
+    },
+    {
+      "id": "herc2_eye_color",
+      "title": "HERC2 Eye Color",
+      "summary": "Classify the main HERC2 eye-color signal from one defining site.",
+      "category": "traits",
+      "tags": [
+        "herc2",
+        "eye-color",
+        "traits"
+      ],
+      "disclaimer": "Research use only. Not medical advice.",
+      "package_version": "0.1.0",
+      "source_of_truth": "script",
+      "path": "assays/traits/HERC2",
+      "assay_path": "assays/traits/HERC2/assay.yaml",
+      "compiled_path": "assays/traits/HERC2/assay.compiled.yaml",
+      "artifact_url": "https://exvitae.biovault.net/herc2_eye_color-0.1.0.zip",
+      "artifact_sha256": "5100b5b5fd832175beff1906bde51aaedcc05af529aee78475f12e145e58eb67",
+      "artifact_size": 2500,
+      "artifact_format": "zip",
+      "works_with": [
+        "23andme",
+        "wgs",
+        "vcf"
+      ],
+      "assemblies": [
+        "grch37",
+        "grch38"
+      ],
+      "notes": [
+        "Checks one major HERC2 eye-color signal."
+      ],
+      "template": "binary-call",
+      "runnable_variant_count": 1,
+      "unsupported_variant_count": 0
+    }
+  ]
+}
