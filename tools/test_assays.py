@@ -65,7 +65,7 @@ def ensure_bioscript_binary() -> Path:
             "--manifest-path",
             str(REPO_ROOT / "bioscript" / "rust" / "Cargo.toml"),
             "-p",
-            "bioscript",
+            "bioscript-cli",
         ],
         cwd=REPO_ROOT,
         env=env,
