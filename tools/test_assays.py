@@ -428,6 +428,19 @@ def format_info_display(variants: list[VariantDefinition]) -> str:
     return "; ".join(format_variant_target(variant) for variant in variants)
 
 
+def format_unsupported_variants(unsupported: list[tuple[VariantDefinition, str]]) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for variant, reason in unsupported:
+        rows.append(
+            {
+                "variant_name": variant.name,
+                "target": format_variant_target(variant),
+                "reason": reason,
+            }
+        )
+    return rows
+
+
 def format_evidence_display(genome_rows: list[dict[str, str]]) -> str:
     if not genome_rows:
         return ""
@@ -796,11 +809,13 @@ def run_probe(
 
 
 def render_detail_html(record: dict[str, Any]) -> str:
+    unsupported_rows = record.get("unsupported_variants", [])
     summary_rows = [
         {"field": "status", "value": record["status"]},
         {"field": "result", "value": record["result_display"]},
         {"field": "evidence", "value": record.get("evidence_display", "")},
         {"field": "info", "value": record.get("info_display", "")},
+        {"field": "unsupported_variants", "value": str(len(unsupported_rows))},
         {"field": "assay", "value": record["assay_path"]},
         {"field": "assay_sha256", "value": record["assay_sha256"]},
         {"field": "git_commit", "value": record["git_commit_short"] or record["git_commit"]},
@@ -821,6 +836,7 @@ def render_detail_html(record: dict[str, Any]) -> str:
     output_table = html_table(output_rows, "No assay output.")
     trace_table = html_table(trace_rows, "No trace available.")
     timing_table = html_table(timing_rows, "No timing data available.")
+    unsupported_table = html_table(unsupported_rows, "No unsupported assay members.")
     stdout_text = html.escape(record.get("stdout", ""))
     stderr_text = html.escape(record.get("stderr", ""))
     command = html.escape(" ".join(shlex.quote(part) for part in record["command"]))
@@ -908,6 +924,7 @@ def render_detail_html(record: dict[str, Any]) -> str:
         <button class="tab" data-target="output">Assay Output</button>
         <button class="tab" data-target="trace">Trace</button>
         <button class="tab" data-target="timings">Timings</button>
+        <button class="tab" data-target="unsupported">Unsupported</button>
         <button class="tab" data-target="logs">Logs</button>
       </div>
       <section id="summary" class="panel active">{summary_table}</section>
@@ -915,6 +932,7 @@ def render_detail_html(record: dict[str, Any]) -> str:
       <section id="output" class="panel">{output_table}</section>
       <section id="trace" class="panel">{trace_table}</section>
       <section id="timings" class="panel">{timing_table}</section>
+      <section id="unsupported" class="panel">{unsupported_table}</section>
       <section id="logs" class="panel">
         <h2>Command</h2>
         <pre>{command}</pre>
@@ -947,6 +965,7 @@ def render_detail_markdown(record: dict[str, Any]) -> str:
     timing_rows = read_tsv_rows(REPO_ROOT / record["timing_file"]) if record["timing_file"] else []
     genome_rows = read_tsv_rows(REPO_ROOT / record["genome_reads_file"]) if record["genome_reads_file"] else []
     output_rows = read_tsv_rows(REPO_ROOT / record["output_file"]) if record["output_file"] else []
+    unsupported_rows = record.get("unsupported_variants", [])
     lines = [
         f"# {record['assay']} / {record['participant']}",
         "",
@@ -954,6 +973,7 @@ def render_detail_markdown(record: dict[str, Any]) -> str:
         f"- Result: `{record['result_display']}`",
         f"- Evidence: `{record.get('evidence_display', '')}`",
         f"- Info: `{record.get('info_display', '')}`",
+        f"- Unsupported assay members: `{len(unsupported_rows)}`",
         f"- Duration: `{record['duration_display']}`",
         f"- Ran at: `{record['timestamp']}`",
         f"- Input file: `{record['input_file_path']}`",
@@ -979,6 +999,10 @@ def render_detail_markdown(record: dict[str, Any]) -> str:
         "## Timings",
         "",
         markdown_table(timing_rows, "No timing data available."),
+        "",
+        "## Unsupported Assay Members",
+        "",
+        markdown_table(unsupported_rows, "No unsupported assay members."),
         "",
         "## stdout",
         "",
@@ -1225,6 +1249,7 @@ def run_one(assay_path: Path, package: AssayPackage, input_path: Path, debug: bo
     timestamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     runtime_root = runtime_root_for(input_path, output_path)
     version = assay_version_metadata(assay_path)
+    unsupported_rows = format_unsupported_variants(package.unsupported_variants)
 
     if package.implementation_kind == "panel":
         script_path = ensure_probe_script(assay_path, variants)
@@ -1270,6 +1295,7 @@ def run_one(assay_path: Path, package: AssayPackage, input_path: Path, debug: bo
             "evidence_display": "",
             "info": format_info_display(variants),
             "info_display": format_info_display(variants),
+            "unsupported_variants": unsupported_rows,
             "duration_ms": 0,
             "duration_display": "0ms",
             "exit_code": "",
@@ -1343,6 +1369,7 @@ def run_one(assay_path: Path, package: AssayPackage, input_path: Path, debug: bo
         "evidence_display": evidence_display,
         "info": info_display,
         "info_display": info_display,
+        "unsupported_variants": unsupported_rows,
         "duration_ms": duration_ms,
         "duration_display": format_duration(duration_ms),
         "exit_code": exit_code,
