@@ -86,6 +86,10 @@
       "path": "assays/risk/BRCA",
       "assay_path": "assays/risk/BRCA/assay.yaml",
       "compiled_path": "assays/risk/BRCA/assay.compiled.yaml",
+      "artifact_url": "https://exvitae.biovault.net/brca_pathogenic_panel-0.1.0.zip",
+      "artifact_sha256": "935071666920e097ce998bc117ed9c561cd14587103e160185dd28d4713bcdca",
+      "artifact_size": 589421,
+      "artifact_format": "zip",
       "works_with": [
         "23andme",
         "wgs",
