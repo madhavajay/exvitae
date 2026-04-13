@@ -54,9 +54,7 @@ def count_non_ref(text, ref):
     return total
 
 
-def classify_apol1(genotypes):
-    site1, site2, g2 = genotypes.lookup_variants(APOL1_QUERY_PLAN)
-
+def classify_apol1(site1, site2, g2):
     if site1 is None and site2 is None and g2 is None:
         return "G-/G-"
 
@@ -83,12 +81,25 @@ def classify_apol1(genotypes):
     return "G0/G0"
 
 
+def assay_outcome(site1, site2, g2, status):
+    if site1 is None and site2 is None and g2 is None:
+        return "missing"
+    if site1 is None or site2 is None or g2 is None:
+        return "partial"
+    if status == "G0/G0":
+        return "normal"
+    return "matched"
+
+
 def main():
     genotypes = bioscript.load_genotypes(input_file)
-    status = classify_apol1(genotypes)
+    site1, site2, g2 = genotypes.lookup_variants(APOL1_QUERY_PLAN)
+    status = classify_apol1(site1, site2, g2)
+    outcome = assay_outcome(site1, site2, g2, status)
     rows = [{
         "participant_id": participant_id,
         "apol1_status": status,
+        "assay_outcome": outcome,
     }]
     bioscript.write_tsv(output_file, rows)
     print(status)
