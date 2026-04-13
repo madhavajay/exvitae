@@ -1,0 +1,25 @@
+name: HBA1_rs63749948_C_A
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+summary: HBA1 pathogenic variant from legacy thalassemia ClinVar panel.
+identifiers:
+  rsids:
+  - rs63749948
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '16'
+    pos: 177314
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+findings:
+- alt: A
+  notes: 'ClinVar significance: Likely_pathogenic'
+clinical:
+  review_status: criteria_provided,_multiple_submitters,_no_conflicts
+  significance: Likely_pathogenic
+  variant_class: single_nucleotide_variant

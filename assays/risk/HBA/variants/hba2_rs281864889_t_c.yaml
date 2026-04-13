@@ -1,0 +1,25 @@
+name: HBA2_rs281864889_T_C
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+summary: HBA2 pathogenic variant from legacy thalassemia ClinVar panel.
+identifiers:
+  rsids:
+  - rs281864889
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '16'
+    pos: 173560
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- alt: C
+  notes: 'ClinVar significance: Pathogenic'
+clinical:
+  review_status: criteria_provided,_single_submitter
+  significance: Pathogenic
+  variant_class: single_nucleotide_variant

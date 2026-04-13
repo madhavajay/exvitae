@@ -1,0 +1,25 @@
+name: BRCA1_rs80356860_C_T
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BRCA1
+summary: BRCA1 pathogenic variant from legacy ClinVar panel.
+identifiers:
+  rsids:
+  - rs80356860
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '17'
+    pos: 43063909
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+findings:
+- alt: T
+  notes: 'ClinVar significance: Pathogenic'
+clinical:
+  review_status: reviewed_by_expert_panel
+  significance: Pathogenic
+  variant_class: single_nucleotide_variant

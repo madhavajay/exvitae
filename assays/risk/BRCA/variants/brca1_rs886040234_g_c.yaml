@@ -1,0 +1,25 @@
+name: BRCA1_rs886040234_G_C
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BRCA1
+summary: BRCA1 pathogenic variant from legacy ClinVar panel.
+identifiers:
+  rsids:
+  - rs886040234
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '17'
+    pos: 43074440
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+findings:
+- alt: C
+  notes: 'ClinVar significance: Pathogenic'
+clinical:
+  review_status: reviewed_by_expert_panel
+  significance: Pathogenic
+  variant_class: single_nucleotide_variant

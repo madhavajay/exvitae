@@ -13,6 +13,10 @@ metadata:
     - "latest_science"
   disclaimer: "Research use only. Not medical advice."
 
+ui:
+  template: "variant-panel"
+  version: "1.0"
+
 package:
   assay_version: "0.1.0"
   source_of_truth: "variant_panel"

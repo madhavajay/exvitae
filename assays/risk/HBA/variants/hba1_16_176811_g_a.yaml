@@ -1,0 +1,24 @@
+name: HBA1_16_176811_G_A
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+summary: HBA1 pathogenic variant from legacy thalassemia ClinVar panel.
+identifiers:
+  rsids: []
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '16'
+    pos: 176811
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- alt: A
+  notes: 'ClinVar significance: Likely_pathogenic'
+clinical:
+  review_status: criteria_provided,_single_submitter
+  significance: Likely_pathogenic
+  variant_class: single_nucleotide_variant

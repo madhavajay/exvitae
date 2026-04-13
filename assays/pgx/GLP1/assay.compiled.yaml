@@ -18,8 +18,8 @@ implementation:
   kind: panel
   script_path: null
 ui:
-  template: null
-  version: null
+  template: variant-panel
+  version: '1.0'
 compatibility:
   works_with:
   - 23andme

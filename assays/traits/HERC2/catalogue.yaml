@@ -1,0 +1,4 @@
+schema: bioscript:catalogue
+version: '1.0'
+variants:
+- path: variants/rs12913832.yaml

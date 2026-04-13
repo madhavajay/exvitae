@@ -1,0 +1,3158 @@
+schema: bioscript:assay-compiled
+version: '1.0'
+assay:
+  id: hbb_pathogenic_panel
+  label: HBB Pathogenic Variant Panel
+  summary: Report curated HBB pathogenic ClinVar variants from the legacy thalassemia
+    panel.
+  category: risk
+  tags:
+  - hbb
+  - thalassemia
+  - risk
+  disclaimer: Research use only. Not medical advice.
+  package_version: 0.1.0
+  source_of_truth: variant_panel
+implementation:
+  kind: panel
+  script_path: null
+ui:
+  template: variant-panel
+  version: '1.0'
+compatibility:
+  works_with:
+  - 23andme
+  - wgs
+  - vcf
+  - cram
+  assemblies:
+  - grch37
+  - grch38
+  notes:
+  - Panel-style assay built from curated ClinVar pathogenic variants.
+privacy:
+  mode: local_only
+  uploads_data: false
+  stores_results_locally: true
+  external_urls: []
+runnable_variants:
+- name: HBB_rs33985472_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33985472
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225485
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33985472
+    grch38: 11:5225485-5225485
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs63751128_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs63751128
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225487
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs63751128
+    grch38: 11:5225487-5225487
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs33978907_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33978907
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225488
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33978907
+    grch38: 11:5225488-5225488
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs34809925_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34809925
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225592
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs34809925
+    grch38: 11:5225592-5225592
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_rs33954264_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33954264
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225602
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33954264
+    grch38: 11:5225602-5225602
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs35117167_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35117167
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225605
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35117167
+    grch38: 11:5225605-5225605
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs33949869_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33949869
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225606
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33949869
+    grch38: 11:5225606-5225606
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33949869_A_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33949869
+  kind: snv
+  ref: A
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225606
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33949869
+    grch38: 11:5225606-5225606
+    ref: A
+    alt: T
+    kind: snp
+- name: HBB_rs35020585_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35020585
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225607
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35020585
+    grch38: 11:5225607-5225607
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33918338_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33918338
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225611
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33918338
+    grch38: 11:5225611-5225611
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs33918338_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33918338
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225611
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33918338
+    grch38: 11:5225611-5225611
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs33927093_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33927093
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225620
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33927093
+    grch38: 11:5225620-5225620
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs281864530_A_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs281864530
+  kind: snv
+  ref: A
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225649
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs281864530
+    grch38: 11:5225649-5225649
+    ref: A
+    alt: T
+    kind: snp
+- name: HBB_rs33910569_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33910569
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225659
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33910569
+    grch38: 11:5225659-5225659
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs33971634_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33971634
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225660
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33971634
+    grch38: 11:5225660-5225660
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs33925391_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33925391
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225662
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33925391
+    grch38: 11:5225662-5225662
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs33946267_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33946267
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225678
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33946267
+    grch38: 11:5225678-5225678
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33946267_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33946267
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225678
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33946267
+    grch38: 11:5225678-5225678
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33946267_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33946267
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225678
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33946267
+    grch38: 11:5225678-5225678
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs35485099_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35485099
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225695
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35485099
+    grch38: 11:5225695-5225695
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs34945623_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34945623
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225696
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34945623
+    grch38: 11:5225696-5225696
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs36015961_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs36015961
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225698
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs36015961
+    grch38: 11:5225698-5225698
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs35256489_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35256489
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225710
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35256489
+    grch38: 11:5225710-5225710
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33969677_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33969677
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225714
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33969677
+    grch38: 11:5225714-5225714
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33969677_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33969677
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225714
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33969677
+    grch38: 11:5225714-5225714
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_11_5225715_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids: []
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225715
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    grch38: 11:5225715-5225715
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_rs35519485_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35519485
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225719
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs35519485
+    grch38: 11:5225719-5225719
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33941844_A_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33941844
+  kind: snv
+  ref: A
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225722
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33941844
+    grch38: 11:5225722-5225722
+    ref: A
+    alt: T
+    kind: snp
+- name: HBB_rs33952266_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33952266
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225727
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33952266
+    grch38: 11:5225727-5225727
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33952266_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33952266
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225727
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33952266
+    grch38: 11:5225727-5225727
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33952266_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33952266
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225727
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33952266
+    grch38: 11:5225727-5225727
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33914668_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33914668
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225728
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33914668
+    grch38: 11:5225728-5225728
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs33914668_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33914668
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225728
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33914668
+    grch38: 11:5225728-5225728
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs33913413_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33913413
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225729
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33913413
+    grch38: 11:5225729-5225729
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_rs33913413_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33913413
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225729
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33913413
+    grch38: 11:5225729-5225729
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs35703285_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35703285
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225740
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs35703285
+    grch38: 11:5225740-5225740
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs34690599_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34690599
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225832
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs34690599
+    grch38: 11:5225832-5225832
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_rs35328027_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35328027
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225872
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35328027
+    grch38: 11:5225872-5225872
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs34451549_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34451549
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5225923
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34451549
+    grch38: 11:5225923-5225923
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs35099082_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35099082
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226572
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35099082
+    grch38: 11:5226572-5226572
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs63750283_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs63750283
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226575
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs63750283
+    grch38: 11:5226575-5226575
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs33945777_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33945777
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226576
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33945777
+    grch38: 11:5226576-5226576
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33945777_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33945777
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226576
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33945777
+    grch38: 11:5226576-5226576
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33945777_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33945777
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226576
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33945777
+    grch38: 11:5226576-5226576
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33954595_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33954595
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226594
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33954595
+    grch38: 11:5226594-5226594
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33933298_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33933298
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226597
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33933298
+    grch38: 11:5226597-5226597
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs34515413_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34515413
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226598
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs34515413
+    grch38: 11:5226598-5226598
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_11_5226598_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids: []
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226598
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    grch38: 11:5226598-5226598
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs33951978_T_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33951978
+  kind: snv
+  ref: T
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226599
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33951978
+    grch38: 11:5226599-5226599
+    ref: T
+    alt: A
+    kind: snp
+- name: HBB_11_5226602_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids: []
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226602
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    grch38: 11:5226602-5226602
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs34083951_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34083951
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226613
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs34083951
+    grch38: 11:5226613-5226613
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_rs34083951_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34083951
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226613
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34083951
+    grch38: 11:5226613-5226613
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs33924775_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33924775
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226615
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33924775
+    grch38: 11:5226615-5226615
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs33917785_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33917785
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226617
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33917785
+    grch38: 11:5226617-5226617
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs35002698_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35002698
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226619
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35002698
+    grch38: 11:5226619-5226619
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33913712_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33913712
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226621
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33913712
+    grch38: 11:5226621-5226621
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33940204_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33940204
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226626
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33940204
+    grch38: 11:5226626-5226626
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33993568_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33993568
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226629
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33993568
+    grch38: 11:5226629-5226629
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs35693898_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35693898
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226635
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35693898
+    grch38: 11:5226635-5226635
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33991993_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33991993
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226643
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33991993
+    grch38: 11:5226643-5226643
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33987903_T_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33987903
+  kind: snv
+  ref: T
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226644
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33987903
+    grch38: 11:5226644-5226644
+    ref: T
+    alt: A
+    kind: snp
+- name: HBB_rs33972593_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33972593
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226686
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33972593
+    grch38: 11:5226686-5226686
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33961459_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33961459
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226687
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33961459
+    grch38: 11:5226687-5226687
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs36008922_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs36008922
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226690
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs36008922
+    grch38: 11:5226690-5226690
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs35939489_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35939489
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226692
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs35939489
+    grch38: 11:5226692-5226692
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs35353749_T_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35353749
+  kind: snv
+  ref: T
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226696
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35353749
+    grch38: 11:5226696-5226696
+    ref: T
+    alt: A
+    kind: snp
+- name: HBB_rs33922873_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33922873
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226702
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33922873
+    grch38: 11:5226702-5226702
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs33922873_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33922873
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226702
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33922873
+    grch38: 11:5226702-5226702
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs33995148_T_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33995148
+  kind: snv
+  ref: T
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226708
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33995148
+    grch38: 11:5226708-5226708
+    ref: T
+    alt: A
+    kind: snp
+- name: HBB_11_5226732_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids: []
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226732
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    grch38: 11:5226732-5226732
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33978338_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33978338
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226755
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33978338
+    grch38: 11:5226755-5226755
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs33922842_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33922842
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226762
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33922842
+    grch38: 11:5226762-5226762
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs34378160_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34378160
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226764
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34378160
+    grch38: 11:5226764-5226764
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs11549407_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs11549407
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226774
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs11549407
+    grch38: 11:5226774-5226774
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs33974936_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33974936
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226778
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33974936
+    grch38: 11:5226778-5226778
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33991059_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33991059
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226779
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33991059
+    grch38: 11:5226779-5226779
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33982568_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33982568
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226784
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33982568
+    grch38: 11:5226784-5226784
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs1141387_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs1141387
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226789
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs1141387
+    grch38: 11:5226789-5226789
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33948578_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33948578
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226794
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33948578
+    grch38: 11:5226794-5226794
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33948578_A_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33948578
+  kind: snv
+  ref: A
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226794
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33948578
+    grch38: 11:5226794-5226794
+    ref: A
+    alt: T
+    kind: snp
+- name: HBB_rs33943001_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33943001
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226800
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33943001
+    grch38: 11:5226800-5226800
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33943001_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33943001
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226800
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33943001
+    grch38: 11:5226800-5226800
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs63750513_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs63750513
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226801
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs63750513
+    grch38: 11:5226801-5226801
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs63750513_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs63750513
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226801
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs63750513
+    grch38: 11:5226801-5226801
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs34527846_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34527846
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226802
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs34527846
+    grch38: 11:5226802-5226802
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs35456885_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35456885
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226814
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35456885
+    grch38: 11:5226814-5226814
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs35004220_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35004220
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226820
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs35004220
+    grch38: 11:5226820-5226820
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs35724775_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35724775
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226924
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs35724775
+    grch38: 11:5226924-5226924
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33915217_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33915217
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226925
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33915217
+    grch38: 11:5226925-5226925
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33915217_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33915217
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226925
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33915217
+    grch38: 11:5226925-5226925
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33915217_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33915217
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226925
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33915217
+    grch38: 11:5226925-5226925
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33956879_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33956879
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226928
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33956879
+    grch38: 11:5226928-5226928
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs33956879_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33956879
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226928
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33956879
+    grch38: 11:5226928-5226928
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33956879_A_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33956879
+  kind: snv
+  ref: A
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226928
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33956879
+    grch38: 11:5226928-5226928
+    ref: A
+    alt: T
+    kind: snp
+- name: HBB_rs33971440_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33971440
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226929
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33971440
+    grch38: 11:5226929-5226929
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33971440_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33971440
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226929
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33971440
+    grch38: 11:5226929-5226929
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_11_5226930_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids: []
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226930
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    grch38: 11:5226930-5226930
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33960103_C_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33960103
+  kind: snv
+  ref: C
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226930
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33960103
+    grch38: 11:5226930-5226930
+    ref: C
+    alt: G
+    kind: snp
+- name: HBB_rs33960103_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33960103
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226930
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33960103
+    grch38: 11:5226930-5226930
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs35684407_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35684407
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226931
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35684407
+    grch38: 11:5226931-5226931
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs35684407_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35684407
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226931
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs35684407
+    grch38: 11:5226931-5226931
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs35685286_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35685286
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226933
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs35685286
+    grch38: 11:5226933-5226933
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33916412_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33916412
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226936
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33916412
+    grch38: 11:5226936-5226936
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33954632_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33954632
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226939
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33954632
+    grch38: 11:5226939-5226939
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs35424040_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35424040
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226940
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs35424040
+    grch38: 11:5226940-5226940
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33950507_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33950507
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226943
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33950507
+    grch38: 11:5226943-5226943
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33950507_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33950507
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226943
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33950507
+    grch38: 11:5226943-5226943
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33951465_A_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33951465
+  kind: snv
+  ref: A
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226947
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33951465
+    grch38: 11:5226947-5226947
+    ref: A
+    alt: T
+    kind: snp
+- name: HBB_rs33959855_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33959855
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226955
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33959855
+    grch38: 11:5226955-5226955
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs35890959_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs35890959
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226961
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs35890959
+    grch38: 11:5226961-5226961
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33972047_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33972047
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226963
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33972047
+    grch38: 11:5226963-5226963
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs33986703_T_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33986703
+  kind: snv
+  ref: T
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226970
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33986703
+    grch38: 11:5226970-5226970
+    ref: T
+    alt: A
+    kind: snp
+- name: HBB_rs370075492_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs370075492
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226971
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs370075492
+    grch38: 11:5226971-5226971
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs34716011_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34716011
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226974
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34716011
+    grch38: 11:5226974-5226974
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs63750783_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs63750783
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226975
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs63750783
+    grch38: 11:5226975-5226975
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33926764_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33926764
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5226997
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33926764
+    grch38: 11:5226997-5226997
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs34948328_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34948328
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227000
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34948328
+    grch38: 11:5227000-5227000
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs334_T_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs334
+  kind: snv
+  ref: T
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227002
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs334
+    grch38: 11:5227002-5227002
+    ref: T
+    alt: A
+    kind: snp
+- name: HBB_rs33930165_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33930165
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227003
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33930165
+    grch38: 11:5227003-5227003
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33930702_C_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33930702
+  kind: snv
+  ref: C
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227019
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33930702
+    grch38: 11:5227019-5227019
+    ref: C
+    alt: A
+    kind: snp
+- name: HBB_rs33930702_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33930702
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227019
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33930702
+    grch38: 11:5227019-5227019
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs33941849_A_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33941849
+  kind: snv
+  ref: A
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227020
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33941849
+    grch38: 11:5227020-5227020
+    ref: A
+    alt: C
+    kind: snp
+- name: HBB_rs33941849_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33941849
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227020
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33941849
+    grch38: 11:5227020-5227020
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33941849_A_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33941849
+  kind: snv
+  ref: A
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227020
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33941849
+    grch38: 11:5227020-5227020
+    ref: A
+    alt: T
+    kind: snp
+- name: HBB_rs34563000_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34563000
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227021
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34563000
+    grch38: 11:5227021-5227021
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs34563000_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34563000
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227021
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs34563000
+    grch38: 11:5227021-5227021
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs34135787_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34135787
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227039
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34135787
+    grch38: 11:5227039-5227039
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_rs34704828_C_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34704828
+  kind: snv
+  ref: C
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227050
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34704828
+    grch38: 11:5227050-5227050
+    ref: C
+    alt: T
+    kind: snp
+- name: HBB_rs34305195_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34305195
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227071
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs34305195
+    grch38: 11:5227071-5227071
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs33931746_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33931746
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227099
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33931746
+    grch38: 11:5227099-5227099
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs33931746_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33931746
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227099
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33931746
+    grch38: 11:5227099-5227099
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs34598529_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34598529
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227100
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34598529
+    grch38: 11:5227100-5227100
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs34598529_T_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34598529
+  kind: snv
+  ref: T
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227100
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs34598529
+    grch38: 11:5227100-5227100
+    ref: T
+    alt: G
+    kind: snp
+- name: HBB_rs33980857_A_G
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33980857
+  kind: snv
+  ref: A
+  alts:
+  - G
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227101
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33980857
+    grch38: 11:5227101-5227101
+    ref: A
+    alt: G
+    kind: snp
+- name: HBB_rs33980857_A_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33980857
+  kind: snv
+  ref: A
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227101
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33980857
+    grch38: 11:5227101-5227101
+    ref: A
+    alt: T
+    kind: snp
+- name: HBB_rs33981098_T_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33981098
+  kind: snv
+  ref: T
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227102
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33981098
+    grch38: 11:5227102-5227102
+    ref: T
+    alt: C
+    kind: snp
+- name: HBB_rs281864518_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs281864518
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227142
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs281864518
+    grch38: 11:5227142-5227142
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs33994806_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33994806
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227157
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33994806
+    grch38: 11:5227157-5227157
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs33994806_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33994806
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227157
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33994806
+    grch38: 11:5227157-5227157
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_rs33994806_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33994806
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227157
+  note: 'ClinVar significance: Likely_pathogenic'
+  fields:
+    rsid: rs33994806
+    grch38: 11:5227157-5227157
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs33941377_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33941377
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227158
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33941377
+    grch38: 11:5227158-5227158
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs33941377_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33941377
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227158
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33941377
+    grch38: 11:5227158-5227158
+    ref: G
+    alt: C
+    kind: snp
+- name: HBB_rs33941377_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33941377
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227158
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs33941377
+    grch38: 11:5227158-5227158
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs33944208_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33944208
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227159
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33944208
+    grch38: 11:5227159-5227159
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs33944208_G_T
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs33944208
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227159
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs33944208
+    grch38: 11:5227159-5227159
+    ref: G
+    alt: T
+    kind: snp
+- name: HBB_rs34999973_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34999973
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227161
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs34999973
+    grch38: 11:5227161-5227161
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs34883338_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs34883338
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227163
+  note: 'ClinVar significance: Pathogenic/Likely_pathogenic'
+  fields:
+    rsid: rs34883338
+    grch38: 11:5227163-5227163
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs63751208_G_A
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs63751208
+  kind: snv
+  ref: G
+  alts:
+  - A
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227172
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs63751208
+    grch38: 11:5227172-5227172
+    ref: G
+    alt: A
+    kind: snp
+- name: HBB_rs63751208_G_C
+  gene: HBB
+  summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+  rsids:
+  - rs63751208
+  kind: snv
+  ref: G
+  alts:
+  - C
+  deletion_length: null
+  grch37: null
+  grch38:
+    chrom: '11'
+    pos: 5227172
+  note: 'ClinVar significance: Pathogenic'
+  fields:
+    rsid: rs63751208
+    grch38: 11:5227172-5227172
+    ref: G
+    alt: C
+    kind: snp
+unsupported_variants: []

@@ -1,0 +1,25 @@
+name: HBB_rs34083951_G_T
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+summary: HBB pathogenic variant from legacy thalassemia ClinVar panel.
+identifiers:
+  rsids:
+  - rs34083951
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '11'
+    pos: 5226613
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+findings:
+- alt: T
+  notes: 'ClinVar significance: Pathogenic'
+clinical:
+  review_status: criteria_provided,_single_submitter
+  significance: Pathogenic
+  variant_class: single_nucleotide_variant

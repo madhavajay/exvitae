@@ -1,0 +1,25 @@
+name: BRCA1_rs80357331_A_T
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BRCA1
+summary: BRCA1 pathogenic variant from legacy ClinVar panel.
+identifiers:
+  rsids:
+  - rs80357331
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '17'
+    pos: 43094709
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+findings:
+- alt: T
+  notes: 'ClinVar significance: Pathogenic'
+clinical:
+  review_status: reviewed_by_expert_panel
+  significance: Pathogenic
+  variant_class: single_nucleotide_variant

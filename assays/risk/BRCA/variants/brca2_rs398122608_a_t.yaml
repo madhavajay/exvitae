@@ -1,0 +1,25 @@
+name: BRCA2_rs398122608_A_T
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BRCA2
+summary: BRCA2 pathogenic variant from legacy ClinVar panel.
+identifiers:
+  rsids:
+  - rs398122608
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '13'
+    pos: 32371049
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+findings:
+- alt: T
+  notes: 'ClinVar significance: Pathogenic'
+clinical:
+  review_status: reviewed_by_expert_panel
+  significance: Pathogenic
+  variant_class: single_nucleotide_variant

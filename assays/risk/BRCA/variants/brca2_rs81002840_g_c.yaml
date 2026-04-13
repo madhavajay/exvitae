@@ -1,0 +1,25 @@
+name: BRCA2_rs81002840_G_C
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BRCA2
+summary: BRCA2 pathogenic variant from legacy ClinVar panel.
+identifiers:
+  rsids:
+  - rs81002840
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '13'
+    pos: 32319330
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+findings:
+- alt: C
+  notes: 'ClinVar significance: Pathogenic'
+clinical:
+  review_status: reviewed_by_expert_panel
+  significance: Pathogenic
+  variant_class: single_nucleotide_variant

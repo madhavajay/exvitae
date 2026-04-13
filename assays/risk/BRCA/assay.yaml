@@ -1,0 +1,55 @@
+schema: bioscript:assay
+version: '1.0'
+assay_id: brca_pathogenic_panel
+label: BRCA Pathogenic Variant Panel
+summary: Report curated pathogenic BRCA1 and BRCA2 ClinVar variants from the legacy
+  BRCA panel.
+metadata:
+  category: risk
+  tags:
+  - brca
+  - brca1
+  - brca2
+  - risk
+  disclaimer: Research use only. Not medical advice.
+package:
+  assay_version: 0.1.0
+  source_of_truth: variant_panel
+compatibility:
+  works_with:
+  - 23andme
+  - wgs
+  - vcf
+  - cram
+  assemblies:
+  - grch37
+  - grch38
+  notes: Panel-style assay built from curated ClinVar pathogenic variants.
+privacy:
+  mode: local_only
+  uploads_data: false
+  stores_results_locally: true
+  external_urls: []
+ui:
+  template: variant-panel
+  version: '1.0'
+inputs:
+  catalogue: catalogue.yaml
+implementation:
+  kind: panel
+  runtime: bioscript
+outputs:
+  format: tsv
+  fields:
+  - name: participant_id
+  - name: gene
+  - name: label
+  - name: rsid
+  - name: location
+  - name: kind
+  - name: ref
+  - name: alts
+  - name: observed
+  - name: row_status
+  - name: assay_outcome
+  - name: summary
