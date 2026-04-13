@@ -26,6 +26,11 @@ alleles:
   ref: "I"
   alts:
     - "D"
+  canonical_alt: "D"
+  deletion_length: 6
+  motifs:
+    - "TTATAA"
+    - "ATAATT"
 
 findings:
   - alt: "D"

@@ -47,6 +47,16 @@ class VariantDefinition:
     source: str
 
 
+@dataclass
+class AssayPackage:
+    root: Path
+    manifest: dict[str, Any]
+    implementation_kind: str
+    script_path: Path | None
+    variants: list[VariantDefinition]
+    unsupported_variants: list[tuple[VariantDefinition, str]]
+
+
 def ensure_bioscript_binary() -> Path:
     env = os.environ.copy()
     xcrun = shutil.which("xcrun")
@@ -80,13 +90,11 @@ def ensure_bioscript_binary() -> Path:
 
 
 def find_assays() -> list[Path]:
-    assays = sorted(ASSAY_DIR.rglob("*.py"))
-    seen_dirs: set[Path] = {p.parent for p in assays}
-    for yaml_dir in sorted(ASSAY_DIR.rglob("*.yaml")):
-        parent = yaml_dir.parent
-        if parent not in seen_dirs and is_yaml_assay_dir(parent):
-            seen_dirs.add(parent)
-            assays.append(parent)
+    assays: list[Path] = []
+    for manifest_path in sorted(ASSAY_DIR.rglob("assay.yaml")):
+        root = manifest_path.parent
+        if root not in assays:
+            assays.append(root)
     return sorted(assays)
 
 
@@ -147,7 +155,7 @@ def participant_from_path(input_path: Path) -> str:
 
 
 def assay_name_from_path(assay_path: Path) -> str:
-    return assay_path.stem
+    return assay_path.name if assay_path.is_dir() else assay_path.stem
 
 
 def output_path_for(assay_path: Path, input_path: Path) -> Path:
@@ -213,7 +221,7 @@ def read_tsv_text_preview(path: Path, max_lines: int = 80) -> str:
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     if path.is_dir():
-        for child in sorted(path.rglob("*.yaml")):
+        for child in sorted(candidate for candidate in path.rglob("*") if candidate.is_file() and candidate.suffix in {".yaml", ".py"}):
             digest.update(child.read_bytes())
         return digest.hexdigest()
     with path.open("rb") as handle:
@@ -332,11 +340,21 @@ def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
         fields["ref"] = ref
     alts = alleles_block.get("alts", [])
     if alts:
-        fields["alt"] = alts[0]
+        canonical_alt = alleles_block.get("canonical_alt")
+        if canonical_alt in alts:
+            fields["alt"] = canonical_alt
+        else:
+            fields["alt"] = alts[0]
     kind = alleles_block.get("kind")
     if kind:
         kind_map = {"snv": "snp", "deletion": "deletion", "insertion": "insertion", "indel": "indel"}
         fields["kind"] = kind_map.get(kind, kind)
+    deletion_length = alleles_block.get("deletion_length")
+    if deletion_length is not None:
+        fields["deletion_length"] = deletion_length
+    motifs = alleles_block.get("motifs")
+    if motifs:
+        fields["motifs"] = motifs
 
     name_str = data.get("name", "") or yaml_path.stem
     safe_name = name_str.replace("-", "_").replace(".", "_").replace(" ", "_")
@@ -357,6 +375,82 @@ def is_yaml_assay_dir(path: Path) -> bool:
     if not path.is_dir():
         return False
     return any(path.glob("*.yaml"))
+
+
+def read_yaml_dict(path: Path) -> dict[str, Any]:
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise RuntimeError(f"{relative_to(path, REPO_ROOT)} did not contain a YAML mapping")
+    return data
+
+
+def resolve_catalogue_variants(assay_root: Path, manifest: dict[str, Any]) -> list[VariantDefinition]:
+    inputs = manifest.get("inputs", {}) or {}
+    catalogue_ref = inputs.get("catalogue")
+    if not isinstance(catalogue_ref, str) or not catalogue_ref:
+        return extract_yaml_variant_definitions(assay_root)
+
+    catalogue_path = (assay_root / catalogue_ref).resolve()
+    catalogue = read_yaml_dict(catalogue_path)
+    variants: list[VariantDefinition] = []
+    for entry in catalogue.get("variants", []) or []:
+        if not isinstance(entry, dict):
+            continue
+        variant_ref = entry.get("path")
+        if not isinstance(variant_ref, str) or not variant_ref:
+            continue
+        variant_path = (catalogue_path.parent / variant_ref).resolve()
+        variant = yaml_to_variant_definition(variant_path)
+        if variant:
+            variants.append(variant)
+    return variants
+
+
+def runtime_supports_variant(variant: VariantDefinition) -> tuple[bool, str]:
+    kind = str(variant.fields.get("kind", "") or "").lower()
+    if kind in {"", "snp"}:
+        return True, ""
+    if kind == "deletion":
+        if variant.fields.get("deletion_length"):
+            return True, ""
+        return False, "deletion missing deletion_length"
+    if kind == "insertion":
+        return False, "insertions not yet supported by bioscript runtime"
+    if kind == "indel":
+        return False, "indels not yet supported by bioscript runtime"
+    return False, f"unsupported variant kind: {kind}"
+
+
+def load_assay_package(assay_path: Path) -> AssayPackage:
+    manifest_path = assay_path / "assay.yaml"
+    manifest = read_yaml_dict(manifest_path)
+    implementation = manifest.get("implementation", {}) or {}
+    implementation_kind = str(implementation.get("kind", "panel") or "panel")
+    script_path: Path | None = None
+    if implementation_kind == "script":
+        script_ref = implementation.get("path")
+        if not isinstance(script_ref, str) or not script_ref:
+            raise RuntimeError(f"{relative_to(manifest_path, REPO_ROOT)} missing implementation.path for script assay")
+        script_path = (assay_path / script_ref).resolve()
+
+    all_variants = resolve_catalogue_variants(assay_path, manifest)
+    supported_variants: list[VariantDefinition] = []
+    unsupported_variants: list[tuple[VariantDefinition, str]] = []
+    for variant in all_variants:
+        supported, reason = runtime_supports_variant(variant)
+        if supported:
+            supported_variants.append(variant)
+        else:
+            unsupported_variants.append((variant, reason))
+
+    return AssayPackage(
+        root=assay_path,
+        manifest=manifest,
+        implementation_kind=implementation_kind,
+        script_path=script_path,
+        variants=supported_variants,
+        unsupported_variants=unsupported_variants,
+    )
 
 
 def bioscript_literal(value: Any) -> str:
@@ -1280,11 +1374,12 @@ def generate_report(records: list[dict[str, Any]]) -> None:
     index_md.write_text(render_index_markdown(records), encoding="utf-8")
 
 
-def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition], debug: bool) -> dict[str, Any]:
+def run_one(assay_path: Path, package: AssayPackage, input_path: Path, debug: bool) -> dict[str, Any]:
     run_started = time.monotonic()
     assay = assay_name_from_path(assay_path)
     participant = participant_from_path(input_path)
     source = detect_source(input_path)
+    variants = package.variants
     output_path = output_path_for(assay_path, input_path)
     trace_path = trace_path_for(assay_path, input_path)
     genome_reads_path = genome_reads_path_for(assay_path, input_path)
@@ -1305,11 +1400,10 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
     runtime_root = runtime_root_for(input_path, output_path)
     version = assay_version_metadata(assay_path)
 
-    # For YAML directories, generate a probe script to run
-    if assay_path.is_dir():
+    if package.implementation_kind == "panel":
         script_path = ensure_probe_script(assay_path, variants)
     else:
-        script_path = assay_path
+        script_path = package.script_path or assay_path
 
     command = [
         str(BIOSCRIPT_BINARY),
@@ -1635,12 +1729,9 @@ def main(argv: list[str]) -> int:
     if RESULTS_CSV.exists():
         RESULTS_CSV.unlink()
 
-    variant_cache: dict[Path, list[VariantDefinition]] = {}
+    assay_cache: dict[Path, AssayPackage] = {}
     for assay in assays:
-        if assay.is_dir():
-            variant_cache[assay] = extract_yaml_variant_definitions(assay)
-        else:
-            variant_cache[assay] = extract_variant_definitions(assay)
+        assay_cache[assay] = load_assay_package(assay)
     records: list[dict[str, Any]] = []
     passed = failed = skipped = 0
 
@@ -1649,7 +1740,7 @@ def main(argv: list[str]) -> int:
         print(f"--- {assay_name} ({relative_to(assay_path, REPO_ROOT)}) ---")
         print("")
         for input_path in inputs:
-            record = run_one(assay_path, input_path, variant_cache[assay_path], args.debug)
+            record = run_one(assay_path, assay_cache[assay_path], input_path, args.debug)
             records.append(record)
             print_run_status(record)
             if record["status"] == "pass":
