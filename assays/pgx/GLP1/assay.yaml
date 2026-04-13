@@ -1,0 +1,70 @@
+schema: "bioscript:assay"
+version: "1.0"
+assay_id: "glp1_response_signals"
+label: "GLP1 Response Signals"
+summary: "Report curated GLP1 efficacy and side-effect signals from the researched GLP1 variant set."
+
+metadata:
+  category: "pgx"
+  tags:
+    - "glp1"
+    - "tirzepatide"
+    - "pgx"
+    - "latest_science"
+  disclaimer: "Research use only. Not medical advice."
+
+package:
+  assay_version: "0.1.0"
+  source_of_truth: "variant_panel"
+
+compatibility:
+  works_with:
+    - "23andme"
+    - "wgs"
+    - "vcf"
+    - "cram"
+  assemblies:
+    - "grch37"
+    - "grch38"
+  notes: "Best on full WGS/VCF/CRAM. Some loci may be absent in chip-based genotype files."
+
+privacy:
+  mode: "local_only"
+  uploads_data: false
+  stores_results_locally: true
+  external_urls: []
+
+distribution:
+  discoverable: true
+  import:
+    supports_file: true
+    supports_url: true
+  updates:
+    channel: "latest_science"
+    auto_check: true
+
+inputs:
+  catalogue: "catalogue.yaml"
+
+implementation:
+  kind: "panel"
+  runtime: "bioscript"
+
+outputs:
+  format: "tsv"
+  fields:
+    - name: "variant_name"
+    - name: "rsid"
+    - name: "kind"
+    - name: "grch37"
+    - name: "grch38"
+    - name: "ref"
+    - name: "alt"
+    - name: "genotype"
+
+inspection:
+  show:
+    - "inputs"
+    - "matched"
+    - "unmatched"
+    - "trace"
