@@ -41,6 +41,9 @@ jobs:
       - name: Install PyYAML for test-data fetcher
         run: python3 -m pip install pyyaml
 
+      - name: Verify compiled assay artifacts
+        run: python3 tools/generate_assay_compiled.py --check assays
+
       - name: Fetch 23andMe fixtures
         run: ./tools/fetch_test_data.sh --dataset 23andme
 

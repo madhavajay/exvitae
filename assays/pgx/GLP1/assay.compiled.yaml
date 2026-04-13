@@ -1,0 +1,189 @@
+schema: bioscript:assay-compiled
+version: '1.0'
+assay:
+  id: glp1_response_signals
+  label: GLP1 Response Signals
+  summary: Report curated GLP1 efficacy and side-effect signals from the researched
+    GLP1 variant set.
+  category: pgx
+  tags:
+  - glp1
+  - tirzepatide
+  - pgx
+  - latest_science
+  disclaimer: Research use only. Not medical advice.
+  package_version: 0.1.0
+  source_of_truth: variant_panel
+implementation:
+  kind: panel
+  script_path: null
+ui:
+  template: null
+  version: null
+compatibility:
+  works_with:
+  - 23andme
+  - wgs
+  - vcf
+  - cram
+  assemblies:
+  - grch37
+  - grch38
+  notes:
+  - Best on full WGS/VCF/CRAM. Some loci may be absent in chip-based genotype files.
+privacy:
+  mode: local_only
+  uploads_data: false
+  stores_results_locally: true
+  external_urls: []
+runnable_variants:
+- name: GLP1_nature_23andme_rs10305420_C_T
+  gene: GLP1R
+  summary: GLP1R missense variant p.Pro7Leu associated in Nature (2026) with increased
+    GLP-1 receptor agonist weight-loss efficacy, with approximately 0.76 kg additional
+    weight loss per effect allele; also linked to nausea/vomiting signal at the GLP1R
+    locus.
+  rsids:
+  - rs10305420
+  kind: snv
+  ref: C
+  alts:
+  - G
+  - T
+  deletion_length: null
+  grch37:
+    chrom: '6'
+    pos: 39016636
+  grch38:
+    chrom: '6'
+    pos: 39048860
+  note: "p.Pro7Leu missense \u2014 associated with increased GLP-1 receptor agonist\
+    \ weight-loss efficacy (~0.76 kg per allele, p=2.9e-10, GLP1RA cohort)"
+  fields:
+    rsid: rs10305420
+    grch37: 6:39016636-39016636
+    grch38: 6:39048860-39048860
+    ref: C
+    alt: G
+    kind: snp
+- name: GLP1_nature_23andme_rs11760106_G_T
+  gene: GLP1R
+  summary: GLP1R locus index SNP for GLP-1 medication-related vomiting in Nature (2026);
+    associated with increased vomiting risk and co-localizes with the GLP1R efficacy/side-effect
+    signal.
+  rsids:
+  - rs11760106
+  kind: snv
+  ref: G
+  alts:
+  - T
+  deletion_length: null
+  grch37:
+    chrom: '6'
+    pos: 39019674
+  grch38:
+    chrom: '6'
+    pos: 39051898
+  note: GLP1R locus index SNP for moderate-to-severe vomiting during GLP-1 therapy
+    (p=2.5e-27, OR=1.57, GLP1RA cohort)
+  fields:
+    rsid: rs11760106
+    grch37: 6:39019674-39019674
+    grch38: 6:39051898-39051898
+    ref: G
+    alt: T
+    kind: snp
+- name: GLP1_nature_23andme_rs1800437_G_C
+  gene: GIPR
+  summary: GIPR missense variant p.Glu354Gln reported as the probable causal variant
+    for increased GLP-1 medication-related vomiting and nausea risk, with the effect
+    restricted to tirzepatide-treated individuals in Nature (2026).
+  rsids:
+  - rs1800437
+  kind: snv
+  ref: G
+  alts:
+  - A
+  - C
+  deletion_length: null
+  grch37:
+    chrom: '19'
+    pos: 46181392
+  grch38:
+    chrom: '19'
+    pos: 45678134
+  note: "p.Glu354Gln missense \u2014 probable causal variant for vomiting/nausea in\
+    \ tirzepatide-treated individuals (p=5.1e-9, OR=1.83)"
+  fields:
+    rsid: rs1800437
+    grch37: 19:46181392-46181392
+    grch38: 19:45678134-45678134
+    ref: G
+    alt: A
+    kind: snp
+- name: GLP1_nature_23andme_rs9357296_A_G
+  gene: GLP1R
+  summary: GLP1R locus index SNP for GLP-1 medication-related nausea in Nature (2026);
+    associated with increased nausea risk and co-localizes with the GLP1R efficacy/side-effect
+    signal. dbSNP places this variant in DNAH8, but it is retained here under GLP1R
+    because the paper treats it as a GLP1R-locus index SNP.
+  rsids:
+  - rs9357296
+  kind: snv
+  ref: A
+  alts:
+  - G
+  - T
+  deletion_length: null
+  grch37:
+    chrom: '6'
+    pos: 38979128
+  grch38:
+    chrom: '6'
+    pos: 39011352
+  note: GLP1R locus index SNP for nausea during GLP-1 therapy (p=2.6e-28, OR=1.36,
+    GLP1RA cohort)
+  fields:
+    rsid: rs9357296
+    grch37: 6:38979128-38979128
+    grch38: 6:39011352-39011352
+    ref: A
+    alt: G
+    kind: snp
+unsupported_variants:
+- name: GLP1_nature_23andme_rs71338792_INDEL
+  gene: GIPR
+  summary: GIPR-locus index variant reported in Nature (2026) for GLP-1 medication-related
+    side effects and described as being in high linkage disequilibrium with the missense
+    variant rs1800437 (p.Glu354Gln), which the paper prioritizes as the more likely
+    causal signal. This variant is included to preserve completeness of the paper-derived
+    rsID set and to represent the association/tagging signal at the locus.
+  rsids:
+  - rs71338792
+  kind: indel
+  ref: TTTTTTTTTTTTT
+  alts:
+  - TTTTTTTTTTTT
+  - TTTTTTTTTTTTTT
+  - TTTTTTTTTTTTTTT
+  deletion_length: null
+  grch37:
+    chrom: '19'
+    start: 46183032
+    end: 46183044
+  grch38:
+    chrom: '19'
+    start: 45679774
+    end: 45679786
+  note: GIPR locus index/tagging variant rs71338792 (shown as rs71338792:AT in the
+    paper figure) is a multiallelic indel in dbSNP and is in high LD with rs1800437
+    (p.Glu354Gln). Associated with vomiting in tirzepatide-treated individuals; paper
+    prioritizes rs1800437 as the probable causal variant.
+  fields:
+    rsid: rs71338792
+    grch37: 19:46183032-46183044
+    grch38: 19:45679774-45679786
+    ref: TTTTTTTTTTTTT
+    alt: TTTTTTTTTTTT
+    kind: indel
+  reason: indels not yet supported by bioscript runtime

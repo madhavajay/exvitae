@@ -23,7 +23,7 @@ from typing import Any
 
 sys.path.insert(0, str((Path(__file__).resolve().parent.parent / "bioscript").resolve()))
 
-from assay_loader import AssayPackage, VariantDefinition, load_assay_package
+from assay_loader import AssayPackage, UnsupportedVariantEntry, VariantDefinition, load_assay_package
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BS = REPO_ROOT / "bioscript" / "bs"
@@ -38,10 +38,64 @@ GENERATED_SCRIPT_DIR = REPORT_DIR / ".generated"
 DEFAULT_REF_FA = DATA_DIR / "1k-genomes" / "ref" / "GRCh38_full_analysis_set_plus_decoy_hla.fa"
 DEFAULT_REF_FAI = DATA_DIR / "1k-genomes" / "ref" / "GRCh38_full_analysis_set_plus_decoy_hla.fa.fai"
 HARD_TIMEOUT_SECONDS = 60
-BIOSCRIPT_BINARY = REPO_ROOT / "bioscript" / "rust" / "target" / "debug" / "bioscript"
+BIOSCRIPT_CARGO_MANIFEST = REPO_ROOT / "bioscript" / "rust" / "Cargo.toml"
+BIOSCRIPT_CARGO_PACKAGE = "bioscript-cli"
+BIOSCRIPT_BINARY_NAME = "bioscript"
+BIOSCRIPT_BINARY_PATH: Path | None = None
+
+
+def resolve_bioscript_binary_path() -> Path:
+    result = subprocess.run(
+        [
+            "cargo",
+            "metadata",
+            "--manifest-path",
+            str(BIOSCRIPT_CARGO_MANIFEST),
+            "--no-deps",
+            "--format-version",
+            "1",
+        ],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(result.stderr.strip() or result.stdout.strip() or "failed to inspect bioscript cargo metadata")
+
+    try:
+        metadata = json.loads(result.stdout)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"failed to parse bioscript cargo metadata: {exc}") from exc
+
+    target_directory = metadata.get("target_directory")
+    if not isinstance(target_directory, str) or not target_directory:
+        raise RuntimeError("bioscript cargo metadata did not include target_directory")
+
+    packages = metadata.get("packages")
+    if not isinstance(packages, list):
+        raise RuntimeError("bioscript cargo metadata did not include packages")
+
+    package = next((pkg for pkg in packages if pkg.get("name") == BIOSCRIPT_CARGO_PACKAGE), None)
+    if not isinstance(package, dict):
+        raise RuntimeError(f"bioscript cargo metadata did not include package {BIOSCRIPT_CARGO_PACKAGE}")
+
+    targets = package.get("targets")
+    if not isinstance(targets, list) or not any(
+        isinstance(target, dict)
+        and target.get("name") == BIOSCRIPT_BINARY_NAME
+        and "bin" in target.get("kind", [])
+        for target in targets
+    ):
+        raise RuntimeError(
+            f"bioscript cargo package {BIOSCRIPT_CARGO_PACKAGE} does not define binary {BIOSCRIPT_BINARY_NAME}"
+        )
+
+    return Path(target_directory) / "debug" / BIOSCRIPT_BINARY_NAME
 
 
 def ensure_bioscript_binary() -> Path:
+    global BIOSCRIPT_BINARY_PATH
     env = os.environ.copy()
     xcrun = shutil.which("xcrun")
     if xcrun:
@@ -58,9 +112,9 @@ def ensure_bioscript_binary() -> Path:
             "cargo",
             "build",
             "--manifest-path",
-            str(REPO_ROOT / "bioscript" / "rust" / "Cargo.toml"),
+            str(BIOSCRIPT_CARGO_MANIFEST),
             "-p",
-            "bioscript-cli",
+            BIOSCRIPT_CARGO_PACKAGE,
         ],
         cwd=REPO_ROOT,
         env=env,
@@ -70,7 +124,15 @@ def ensure_bioscript_binary() -> Path:
     )
     if result.returncode != 0:
         raise RuntimeError(result.stderr.strip() or result.stdout.strip() or "failed to build bioscript")
-    return BIOSCRIPT_BINARY
+    binary_path = resolve_bioscript_binary_path()
+    if not binary_path.exists():
+        raise RuntimeError(f"bioscript binary was not produced at expected path: {binary_path}")
+    BIOSCRIPT_BINARY_PATH = binary_path
+    return binary_path
+
+
+def get_bioscript_binary() -> Path:
+    return BIOSCRIPT_BINARY_PATH or ensure_bioscript_binary()
 
 
 def find_assays() -> list[Path]:
@@ -428,14 +490,14 @@ def format_info_display(variants: list[VariantDefinition]) -> str:
     return "; ".join(format_variant_target(variant) for variant in variants)
 
 
-def format_unsupported_variants(unsupported: list[tuple[VariantDefinition, str]]) -> list[dict[str, str]]:
+def format_unsupported_variants(unsupported: list[UnsupportedVariantEntry]) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
-    for variant, reason in unsupported:
+    for entry in unsupported:
         rows.append(
             {
-                "variant_name": variant.name,
-                "target": format_variant_target(variant),
-                "reason": reason,
+                "variant_name": entry.variant.name,
+                "target": format_variant_target(entry.variant),
+                "reason": entry.reason,
             }
         )
     return rows
@@ -780,8 +842,9 @@ def run_probe(
         return False, direct_error
     probe_script = ensure_probe_script(assay_path, variants)
     runtime_root = runtime_root_for(input_path, output_path)
+    bioscript_binary = get_bioscript_binary()
     cmd = [
-        str(BIOSCRIPT_BINARY),
+        str(bioscript_binary),
         str(probe_script),
         "--root",
         str(runtime_root),
@@ -1248,6 +1311,7 @@ def run_one(assay_path: Path, package: AssayPackage, input_path: Path, debug: bo
 
     timestamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     runtime_root = runtime_root_for(input_path, output_path)
+    bioscript_binary = get_bioscript_binary()
     version = assay_version_metadata(assay_path)
     unsupported_rows = format_unsupported_variants(package.unsupported_variants)
 
@@ -1257,7 +1321,7 @@ def run_one(assay_path: Path, package: AssayPackage, input_path: Path, debug: bo
         script_path = package.script_path or assay_path
 
     command = [
-        str(BIOSCRIPT_BINARY),
+        str(bioscript_binary),
         str(script_path),
         "--root",
         str(runtime_root),
