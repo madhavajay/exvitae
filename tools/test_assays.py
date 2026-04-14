@@ -1075,6 +1075,35 @@ def render_detail_markdown(record: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def render_call_cell(text: str) -> str:
+    """Render a Result/Evidence cell, colorizing REF / VAR / MISSING tokens."""
+    if not text:
+        return ""
+    parts = [part.strip() for part in text.split(";")]
+    rendered = []
+    for part in parts:
+        if not part:
+            continue
+        key, sep, value = part.partition("=")
+        if not sep:
+            rendered.append(html.escape(part))
+            continue
+        value_stripped = value.strip()
+        token_class = None
+        upper = value_stripped.upper()
+        if upper == "REF":
+            token_class = "token-ref"
+        elif upper == "VAR":
+            token_class = "token-var"
+        elif upper == "MISSING":
+            token_class = "token-missing"
+        value_html = html.escape(value_stripped)
+        if token_class:
+            value_html = f'<span class="{token_class}">{value_html}</span>'
+        rendered.append(f"{html.escape(key.strip())}={value_html}")
+    return "; ".join(rendered)
+
+
 def render_index_html(records: list[dict[str, Any]]) -> str:
     rows = []
     for record in records:
@@ -1084,8 +1113,8 @@ def render_index_html(records: list[dict[str, Any]]) -> str:
 <td><span class="{status_class}">{html.escape(record['status'])}</span></td>
 <td>{html.escape(record['assay'])}</td>
 <td>{html.escape(record['participant'])}</td>
-<td>{html.escape(record['result_display'])}</td>
-<td>{html.escape(record['evidence_display'])}</td>
+<td>{render_call_cell(record['result_display'])}</td>
+<td>{render_call_cell(record['evidence_display'])}</td>
 <td>{html.escape(record['info_display'])}</td>
 <td>{html.escape(record['duration_display'])}</td>
 <td><a href="{html.escape(record['detail_href'])}">details</a></td>
@@ -1173,6 +1202,26 @@ def render_index_html(records: list[dict[str, Any]]) -> str:
     .status-pass {{ color: var(--pass); font-weight: 700; }}
     .status-fail {{ color: var(--fail); font-weight: 700; }}
     .status-skip {{ color: var(--skip); font-weight: 700; }}
+    .token-ref {{
+      background: rgba(27, 127, 93, 0.16);
+      color: #0f6347;
+      border-radius: 4px;
+      padding: 0 0.35em;
+      font-weight: 700;
+    }}
+    .token-var {{
+      background: rgba(209, 120, 35, 0.18);
+      color: #a65412;
+      border-radius: 4px;
+      padding: 0 0.35em;
+      font-weight: 700;
+    }}
+    .token-missing {{
+      background: rgba(120, 113, 101, 0.12);
+      color: #8a8277;
+      border-radius: 4px;
+      padding: 0 0.35em;
+    }}
     p.meta {{ color: var(--muted); }}
   </style>
 </head>
@@ -1459,6 +1508,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--exclude", help="Comma-separated glob patterns to exclude matching input paths")
     parser.add_argument("--debug", action="store_true", help="Emit per-stage timing reports and include them in the output report")
     parser.add_argument("--list", action="store_true", help="List assays and test data")
+    parser.add_argument("--report", action="store_true", help="Open the generated HTML report in the default browser after running")
     return parser.parse_args(argv)
 
 
@@ -1668,6 +1718,13 @@ def main(argv: list[str]) -> int:
     print(f"CSV:     {relative_to(RESULTS_CSV, REPO_ROOT)}")
     print(f"HTML:    {relative_to(REPORT_DIR / 'index.html', REPO_ROOT)}")
     print(f"MD:      {relative_to(REPORT_DIR / 'README.md', REPO_ROOT)}")
+
+    if args.report:
+        report_url = (REPORT_DIR / "index.html").resolve().as_uri()
+        print(f"Opening: {report_url}")
+        import webbrowser
+        webbrowser.open(report_url)
+
     return 1 if failed else 0
 
 
