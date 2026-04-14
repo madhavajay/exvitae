@@ -16,6 +16,7 @@ import subprocess
 import sys
 import textwrap
 import time
+import yaml
 import zipfile
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -65,7 +66,7 @@ def ensure_bioscript_binary() -> Path:
             "--manifest-path",
             str(REPO_ROOT / "bioscript" / "rust" / "Cargo.toml"),
             "-p",
-            "bioscript",
+            "bioscript-cli",
         ],
         cwd=REPO_ROOT,
         env=env,
@@ -79,7 +80,14 @@ def ensure_bioscript_binary() -> Path:
 
 
 def find_assays() -> list[Path]:
-    return sorted(ASSAY_DIR.rglob("*.py"))
+    assays = sorted(ASSAY_DIR.rglob("*.py"))
+    seen_dirs: set[Path] = {p.parent for p in assays}
+    for yaml_dir in sorted(ASSAY_DIR.rglob("*.yaml")):
+        parent = yaml_dir.parent
+        if parent not in seen_dirs and is_yaml_assay_dir(parent):
+            seen_dirs.add(parent)
+            assays.append(parent)
+    return sorted(assays)
 
 
 def find_inputs(base_dir: Path) -> list[Path]:
@@ -204,6 +212,10 @@ def read_tsv_text_preview(path: Path, max_lines: int = 80) -> str:
 
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
+    if path.is_dir():
+        for child in sorted(path.rglob("*.yaml")):
+            digest.update(child.read_bytes())
+        return digest.hexdigest()
     with path.open("rb") as handle:
         for chunk in iter(lambda: handle.read(65536), b""):
             digest.update(chunk)
@@ -273,6 +285,78 @@ def extract_variant_definitions(assay_path: Path) -> list[VariantDefinition]:
         snippet = ast.get_source_segment(source, node) or target.id
         variants.append(VariantDefinition(name=target.id, fields=fields, source=snippet))
     return variants
+
+
+def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
+    data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        return None
+    schema = data.get("schema", "")
+    if not isinstance(schema, str) or "variant" not in schema:
+        return None
+
+    coords = data.get("coordinates", {}) or {}
+    alleles_block = data.get("alleles", {}) or {}
+    identifiers = data.get("identifiers", {}) or {}
+    rsids = identifiers.get("rsids", []) or []
+    rsid = rsids[0] if rsids else None
+
+    def fmt_coord(c: dict) -> str | None:
+        if not c:
+            return None
+        chrom = c.get("chrom")
+        if not chrom:
+            return None
+        pos = c.get("pos")
+        start = c.get("start")
+        end = c.get("end")
+        if pos is not None:
+            return f"{chrom}:{pos}-{pos}"
+        if start is not None and end is not None:
+            return f"{chrom}:{start}-{end}"
+        if start is not None:
+            return f"{chrom}:{start}-{start}"
+        return None
+
+    fields: dict[str, Any] = {}
+    if rsid:
+        fields["rsid"] = rsid
+    grch37 = fmt_coord(coords.get("grch37", {}))
+    grch38 = fmt_coord(coords.get("grch38", {}))
+    if grch37:
+        fields["grch37"] = grch37
+    if grch38:
+        fields["grch38"] = grch38
+    ref = alleles_block.get("ref")
+    if ref:
+        fields["ref"] = ref
+    alts = alleles_block.get("alts", [])
+    if alts:
+        fields["alt"] = alts[0]
+    kind = alleles_block.get("kind")
+    if kind:
+        kind_map = {"snv": "snp", "deletion": "deletion", "insertion": "insertion", "indel": "indel"}
+        fields["kind"] = kind_map.get(kind, kind)
+
+    name_str = data.get("name", "") or yaml_path.stem
+    safe_name = name_str.replace("-", "_").replace(".", "_").replace(" ", "_")
+    source_text = yaml_path.read_text(encoding="utf-8")
+    return VariantDefinition(name=safe_name, fields=fields, source=source_text)
+
+
+def extract_yaml_variant_definitions(directory: Path) -> list[VariantDefinition]:
+    variants = []
+    for yaml_file in sorted(directory.glob("*.yaml")):
+        vd = yaml_to_variant_definition(yaml_file)
+        if vd:
+            variants.append(vd)
+    return variants
+
+
+def is_yaml_assay_dir(path: Path) -> bool:
+    if not path.is_dir():
+        return False
+    return any(path.glob("*.yaml"))
 
 
 def bioscript_literal(value: Any) -> str:
@@ -1220,9 +1304,16 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
     timestamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     runtime_root = runtime_root_for(input_path, output_path)
     version = assay_version_metadata(assay_path)
+
+    # For YAML directories, generate a probe script to run
+    if assay_path.is_dir():
+        script_path = ensure_probe_script(assay_path, variants)
+    else:
+        script_path = assay_path
+
     command = [
         str(BIOSCRIPT_BINARY),
-        str(assay_path),
+        str(script_path),
         "--root",
         str(runtime_root),
         "--input-file",
@@ -1544,7 +1635,12 @@ def main(argv: list[str]) -> int:
     if RESULTS_CSV.exists():
         RESULTS_CSV.unlink()
 
-    variant_cache = {assay: extract_variant_definitions(assay) for assay in assays}
+    variant_cache: dict[Path, list[VariantDefinition]] = {}
+    for assay in assays:
+        if assay.is_dir():
+            variant_cache[assay] = extract_yaml_variant_definitions(assay)
+        else:
+            variant_cache[assay] = extract_variant_definitions(assay)
     records: list[dict[str, Any]] = []
     passed = failed = skipped = 0
 
