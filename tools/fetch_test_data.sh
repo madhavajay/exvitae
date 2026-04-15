@@ -14,7 +14,10 @@ set -euo pipefail
 #   ./fetch_test_data.sh --exclude "*.fa,*.cram"  # skip matching files
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DATA_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)/test-data"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+DATA_DIR="${REPO_ROOT}/test-data"
+DEFAULT_CACHE_ROOT="${HOME}/.bioscript/cache/test-data"
+CACHE_ROOT="${BIOSCRIPT_TEST_DATA_CACHE_DIR:-${DEFAULT_CACHE_ROOT}}"
 SOURCES="${SCRIPT_DIR}/sources.yaml"
 
 # --- Helpers -----------------------------------------------------------------
@@ -41,6 +44,55 @@ human_size() {
 
 file_size() {
   stat -f%z "$1" 2>/dev/null || stat --printf="%s" "$1" 2>/dev/null || echo "0"
+}
+
+ensure_parent_dir() {
+  mkdir -p "$(dirname "$1")"
+}
+
+ensure_repo_symlink() {
+  local cache_path="$1"
+  local repo_path="$2"
+
+  ensure_parent_dir "$repo_path"
+
+  if [ -L "$repo_path" ] && [ "$(readlink "$repo_path")" = "$cache_path" ]; then
+    return 0
+  fi
+
+  rm -f "$repo_path"
+  ln -s "$cache_path" "$repo_path"
+}
+
+migrate_repo_file_into_cache() {
+  local repo_path="$1"
+  local cache_path="$2"
+
+  ensure_parent_dir "$cache_path"
+  mv "$repo_path" "$cache_path"
+  ensure_repo_symlink "$cache_path" "$repo_path"
+}
+
+materialize_local_file() {
+  local label="$1"
+  local repo_path="$2"
+  local cache_path="$3"
+
+  if [ -f "$cache_path" ]; then
+    ensure_repo_symlink "$cache_path" "$repo_path"
+    return 0
+  fi
+
+  if [ -f "$repo_path" ] && [ ! -L "$repo_path" ]; then
+    if migrate_repo_file_into_cache "$repo_path" "$cache_path"; then
+      info "${label} (migrated into cache)"
+      return 0
+    fi
+    error "${label} — failed to migrate into cache"
+    return 1
+  fi
+
+  return 1
 }
 
 # --- Parse sources.yaml via python and emit tab-separated lines --------------
@@ -114,6 +166,7 @@ Datasets:
   23andme              23andMe SNP exports (v2-v5) from OpenMined biovault-data
 
 Data directory: ${DATA_DIR}/
+Cache directory: ${CACHE_ROOT}/
 Config file:    ${SOURCES}
 EOF
       exit 0
@@ -139,6 +192,7 @@ echo "PGx Test Data Fetcher"
 echo "====================="
 echo "Config: ${SOURCES}"
 echo "Data:   ${DATA_DIR}"
+echo "Cache:  ${CACHE_ROOT}"
 [ -n "$FILTER_DATASET" ]   && echo "Dataset: ${FILTER_DATASET}"
 [ -n "$ONLY_PATTERNS" ]    && echo "Only:    ${ONLY_PATTERNS}"
 [ -n "$EXCLUDE_PATTERNS" ] && echo "Exclude: ${EXCLUDE_PATTERNS}"
@@ -170,16 +224,18 @@ while IFS=$'\t' read -r dataset subdir filename url; do
   fi
 
   label="${dataset}/${subdir}/${filename}"
-  dir="${DATA_DIR}/${dataset}/${subdir}"
-  full_path="${dir}/${filename}"
+  repo_dir="${DATA_DIR}/${dataset}/${subdir}"
+  repo_path="${repo_dir}/${filename}"
+  cache_dir="${CACHE_ROOT}/${dataset}/${subdir}"
+  cache_path="${cache_dir}/${filename}"
 
   if [ "$MODE" = "list" ]; then
     printf "  %-60s %s\n" "$label" "$url"
     continue
   fi
 
-  if [ -f "$full_path" ]; then
-    size=$(file_size "$full_path")
+  if materialize_local_file "$label" "$repo_path" "$cache_path"; then
+    size=$(file_size "$cache_path")
     info "${label} ($(human_size "$size"))"
     present=$((present + 1))
     continue
@@ -192,17 +248,18 @@ while IFS=$'\t' read -r dataset subdir filename url; do
   fi
 
   # download
-  mkdir -p "$dir"
+  mkdir -p "$cache_dir"
   fetching "${label}"
   echo "       ${url}"
 
-  if curl -fSL --progress-bar --retry 3 --retry-delay 5 -o "$full_path" "$url"; then
-    size=$(file_size "$full_path")
+  if curl -fSL --progress-bar --retry 3 --retry-delay 5 -o "$cache_path" "$url"; then
+    ensure_repo_symlink "$cache_path" "$repo_path"
+    size=$(file_size "$cache_path")
     info "${label} ($(human_size "$size"))"
     downloaded=$((downloaded + 1))
   else
     error "${label} — download failed"
-    rm -f "$full_path"
+    rm -f "$cache_path"
     failed=$((failed + 1))
   fi
 
