@@ -24,6 +24,18 @@ datasets:
           - name: "NA06985.final.cram.crai"
             url: "https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/1000G_2504_high_coverage/data/ERR3239276/NA06985.final.cram.crai"
             description: "CRAM index"
+      vcf:
+        description: "NA06985 cleaned VCF on GRCh37"
+        files:
+          - name: "NA06985.clean.vcf.gz.tar.gz.aa"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/vcf/NA06985/NA06985.clean.vcf.gz.tar.gz.aa"
+            description: "First split archive chunk containing the cleaned NA06985 VCF"
+          - name: "NA06985.clean.vcf.gz.tar.gz.ab"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/vcf/NA06985/NA06985.clean.vcf.gz.tar.gz.ab"
+            description: "Second split archive chunk containing the cleaned NA06985 VCF"
+          - name: "NA06985.clean.vcf.gz.tbi"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/vcf/NA06985/NA06985.clean.vcf.gz.tbi"
+            description: "Tabix index for the cleaned NA06985 VCF"
 
   23andme:
     description: "23andMe SNP genotype files from OpenMined biovault-data (PGP participants)"
@@ -53,3 +65,68 @@ datasets:
           - name: "genome_hu50B3F5_v5_Full.zip"
             url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/23andme/v5/hu50B3F5/genome_hu50B3F5_v5_Full.zip"
             description: "PGP participant hu50B3F5, 23andMe v5 export"
+
+  dynamicdna:
+    description: "Dynamic DNA SNP genotype files from OpenMined biovault-data"
+    source_repo: "https://github.com/OpenMined/biovault-data/tree/main/snp/dynamicdna"
+    subdirs:
+      100001-synthetic:
+        description: "Synthetic Dynamic DNA GSAv3-DTC participant on GRCh38"
+        files:
+          - name: "100001_X_X_GSAv3-DTC_GRCh38-07-12-2025.txt.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/dynamicdna/100001-synthetic/100001_X_X_GSAv3-DTC_GRCh38-07-12-2025.txt.zip"
+            description: "Dynamic DNA GSAv3-DTC synthetic export on GRCh38"
+
+  ancestrydna:
+    description: "AncestryDNA SNP genotype files from OpenMined biovault-data"
+    source_repo: "https://github.com/OpenMined/biovault-data/tree/main/snp/ancestrydna"
+    subdirs:
+      huE922FC:
+        description: "AncestryDNA V2.0 export"
+        files:
+          - name: "AncestryDNA.txt.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/ancestrydna/huE922FC/AncestryDNA.txt.zip"
+            description: "AncestryDNA export with V2.0 array header and build 37.1 coordinates"
+
+  familytreedna:
+    description: "FamilyTreeDNA SNP genotype files from OpenMined biovault-data"
+    source_repo: "https://github.com/OpenMined/biovault-data/tree/main/snp/familytreedna"
+    subdirs:
+      hu17B792:
+        description: "FamilyTreeDNA CSV export"
+        files:
+          - name: "2017-04-29_Family_Tree_DNA_Data.csv.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/familytreedna/hu17B792/2017-04-29_Family_Tree_DNA_Data.csv.zip"
+            description: "FamilyTreeDNA CSV export wrapped as zip"
+
+  genesforgood:
+    description: "Genes for Good genotype files from OpenMined biovault-data"
+    source_repo: "https://github.com/OpenMined/biovault-data/tree/main/snp/genesforgood"
+    subdirs:
+      hu80B047:
+        description: "Genes for Good filtered unphased genotype calls on GRCh37"
+        files:
+          - name: "GFG0_filtered_imputed_genotypes_noY_noMT_23andMe.txt.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/genesforgood/hu80B047/GFG0_filtered_imputed_genotypes_noY_noMT_23andMe.txt.zip"
+            description: "Genes for Good filtered, imputed genotype export on GRCh37"
+
+  myheritage:
+    description: "MyHeritage SNP genotype files from OpenMined biovault-data"
+    source_repo: "https://github.com/OpenMined/biovault-data/tree/main/snp/myheritage"
+    subdirs:
+      hu33515F:
+        description: "MyHeritage raw DNA export"
+        files:
+          - name: "MyHeritage_raw_dna_data.zip"
+            url: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/snp/myheritage/hu33515F/MyHeritage_raw_dna_data.zip"
+            description: "MyHeritage raw DNA export for participant hu33515F"
+
+sample_data_urls:
+  NA06985-chrY:
+    ref_version: GRCh38
+    ref: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/cram/reference/GRCh38_chrY.fa"
+    ref_index: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/cram/reference/GRCh38_chrY.fa.fai"
+    aligned:
+      - "https://raw.githubusercontent.com/OpenMined/biovault-data/main/cram/NA06985/NA06985.final.chrY.cram.tar.gz.aa"
+      - "https://raw.githubusercontent.com/OpenMined/biovault-data/main/cram/NA06985/NA06985.final.chrY.cram.tar.gz.ab"
+    aligned_index: "https://raw.githubusercontent.com/OpenMined/biovault-data/main/cram/NA06985/NA06985.final.chrY.cram.crai"

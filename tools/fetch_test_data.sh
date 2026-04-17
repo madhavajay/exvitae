@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Fetch test data defined in test-data/sources.yaml.
+# Fetch test data defined in tools/sources.yaml.
 # Only downloads files that are not already present locally.
 #
 # Usage:
@@ -14,11 +14,12 @@ set -euo pipefail
 #   ./fetch_test_data.sh --exclude "*.fa,*.cram"  # skip matching files
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+DEFAULT_REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+REPO_ROOT="${BIOSCRIPT_TEST_DATA_REPO_ROOT:-${DEFAULT_REPO_ROOT}}"
 DATA_DIR="${REPO_ROOT}/test-data"
 DEFAULT_CACHE_ROOT="${HOME}/.bioscript/cache/test-data"
 CACHE_ROOT="${BIOSCRIPT_TEST_DATA_CACHE_DIR:-${DEFAULT_CACHE_ROOT}}"
-SOURCES="${SCRIPT_DIR}/sources.yaml"
+SOURCES="${BIOSCRIPT_TEST_DATA_SOURCES:-${SCRIPT_DIR}/sources.yaml}"
 
 # --- Helpers -----------------------------------------------------------------
 
@@ -48,6 +49,75 @@ file_size() {
 
 ensure_parent_dir() {
   mkdir -p "$(dirname "$1")"
+}
+
+is_split_archive_part() {
+  case "$1" in
+    *.tar.gz.??) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+reconstruct_split_archive() {
+  local cache_dir="$1"
+  local repo_dir="$2"
+  local filename="$3"
+
+  is_split_archive_part "$filename" || return 0
+
+  local archive_name="${filename%.[A-Za-z][A-Za-z]}"
+  local final_name="${archive_name%.tar.gz}"
+  local final_cache_path="${cache_dir}/${final_name}"
+  local final_repo_path="${repo_dir}/${final_name}"
+  local first_part="${cache_dir}/${archive_name}.aa"
+
+  if [ -f "$final_cache_path" ]; then
+    ensure_repo_symlink "$final_cache_path" "$final_repo_path"
+    return 0
+  fi
+
+  if [ ! -f "$first_part" ]; then
+    return 0
+  fi
+
+  local parts=()
+  local candidate=""
+  for candidate in "${cache_dir}/${archive_name}".??; do
+    [ -e "$candidate" ] || continue
+    parts+=("$candidate")
+  done
+
+  if [ "${#parts[@]}" -eq 0 ]; then
+    return 0
+  fi
+
+  local tmpdir
+  tmpdir="$(mktemp -d "${cache_dir}/reconstruct.XXXXXX")"
+
+  if cat "${parts[@]}" | tar tzf - >/dev/null 2>&1; then
+    if cat "${parts[@]}" | tar xzf - -C "$tmpdir"; then
+      local extracted
+      extracted="$(find "$tmpdir" -type f | head -n 1)"
+      if [ -n "$extracted" ] && [ -f "$extracted" ]; then
+        mv "$extracted" "$final_cache_path"
+        ensure_repo_symlink "$final_cache_path" "$final_repo_path"
+      fi
+    fi
+  fi
+
+  rm -rf "$tmpdir"
+}
+
+ensure_repo_materialized() {
+  local cache_path="$1"
+  local repo_path="$2"
+  local filename="$3"
+
+  if is_split_archive_part "$filename"; then
+    return 0
+  fi
+
+  ensure_repo_symlink "$cache_path" "$repo_path"
 }
 
 ensure_repo_symlink() {
@@ -100,13 +170,38 @@ materialize_local_file() {
 
 parse_sources() {
   python3 -c "
-import yaml, sys
+import os, sys
+from urllib.parse import unquote, urlparse
+
+import yaml
+
+def basename(url: str) -> str:
+    return os.path.basename(unquote(urlparse(url).path))
+
 with open(sys.argv[1]) as f:
     cfg = yaml.safe_load(f)
+
 for ds_name, ds in cfg.get('datasets', {}).items():
     for sd_name, sd in ds.get('subdirs', {}).items():
         for f in sd.get('files', []):
             print(f\"{ds_name}\t{sd_name}\t{f['name']}\t{f['url']}\")
+
+for sample_name, sample in cfg.get('sample_data_urls', {}).items():
+    for key, subdir in (
+        ('ref', 'ref'),
+        ('ref_index', 'ref'),
+        ('aligned', 'aligned'),
+        ('aligned_index', 'aligned'),
+        ('vcf', 'vcf'),
+        ('vcf_index', 'vcf'),
+        ('snp', 'snp'),
+    ):
+        value = sample.get(key)
+        if not value:
+            continue
+        urls = value if isinstance(value, list) else [value]
+        for url in urls:
+            print(f\"{sample_name}\t{subdir}\t{basename(url)}\t{url}\")
 " "$SOURCES"
 }
 
@@ -162,8 +257,9 @@ Filter examples:
   --dataset 23andme --only "*v5*" Only the v5 23andMe file
 
 Datasets:
-  1k-genomes           GRCh38 reference genome + NA06985 high-coverage CRAM
+  1k-genomes           GRCh38 reference genome + NA06985 CRAM + cleaned NA06985 VCF
   23andme              23andMe SNP exports (v2-v5) from OpenMined biovault-data
+  dynamicdna           Dynamic DNA GSAv3-DTC synthetic export on GRCh38
 
 Data directory: ${DATA_DIR}/
 Cache directory: ${CACHE_ROOT}/
@@ -235,6 +331,7 @@ while IFS=$'\t' read -r dataset subdir filename url; do
   fi
 
   if materialize_local_file "$label" "$repo_path" "$cache_path"; then
+    reconstruct_split_archive "$cache_dir" "$repo_dir" "$filename"
     size=$(file_size "$cache_path")
     info "${label} ($(human_size "$size"))"
     present=$((present + 1))
@@ -253,7 +350,8 @@ while IFS=$'\t' read -r dataset subdir filename url; do
   echo "       ${url}"
 
   if curl -fSL --progress-bar --retry 3 --retry-delay 5 -o "$cache_path" "$url"; then
-    ensure_repo_symlink "$cache_path" "$repo_path"
+    ensure_repo_materialized "$cache_path" "$repo_path" "$filename"
+    reconstruct_split_archive "$cache_dir" "$repo_dir" "$filename"
     size=$(file_size "$cache_path")
     info "${label} ($(human_size "$size"))"
     downloaded=$((downloaded + 1))

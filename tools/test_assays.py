@@ -9,6 +9,7 @@ import html
 import io
 import json
 import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from fnmatch import fnmatch
 import shlex
 import shutil
@@ -25,6 +26,7 @@ from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+WORKSPACE_ROOT = REPO_ROOT.parent
 BS = REPO_ROOT / "bioscript" / "bs"
 ASSAY_DIR = REPO_ROOT / "assays"
 DATA_DIR = REPO_ROOT / "test-data"
@@ -236,7 +238,7 @@ def git_text(*args: str) -> str:
 
 
 def assay_version_metadata(assay_path: Path) -> dict[str, str]:
-    rel_path = assay_path.relative_to(REPO_ROOT).as_posix()
+    rel_path = os.path.relpath(assay_path, REPO_ROOT)
     commit = git_text("rev-parse", "HEAD")
     short_commit = git_text("rev-parse", "--short", "HEAD")
     status = git_text("status", "--short", "--", rel_path)
@@ -344,6 +346,32 @@ def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
     return VariantDefinition(name=safe_name, fields=fields, source=source_text)
 
 
+def yaml_to_panel_variant_definitions(yaml_path: Path) -> list[VariantDefinition]:
+    data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        return []
+    schema = data.get("schema", "")
+    if schema != "bioscript:panel:1.0":
+        return []
+    members = data.get("members", []) or []
+    if not isinstance(members, list):
+        return []
+    variants: list[VariantDefinition] = []
+    for member in members:
+        if not isinstance(member, dict):
+            continue
+        if member.get("kind") != "variant":
+            continue
+        path_value = member.get("path")
+        if not isinstance(path_value, str) or not path_value.strip():
+            continue
+        target = (yaml_path.parent / path_value).resolve()
+        vd = yaml_to_variant_definition(target)
+        if vd:
+            variants.append(vd)
+    return variants
+
+
 def extract_yaml_variant_definitions(directory: Path) -> list[VariantDefinition]:
     variants = []
     for yaml_file in sorted(directory.glob("*.yaml")):
@@ -351,6 +379,22 @@ def extract_yaml_variant_definitions(directory: Path) -> list[VariantDefinition]
         if vd:
             variants.append(vd)
     return variants
+
+
+def is_yaml_variant_file(path: Path) -> bool:
+    if not path.is_file():
+        return False
+    if path.suffix not in {".yaml", ".yml"}:
+        return False
+    return yaml_to_variant_definition(path) is not None
+
+
+def is_yaml_panel_file(path: Path) -> bool:
+    if not path.is_file():
+        return False
+    if path.suffix not in {".yaml", ".yml"}:
+        return False
+    return bool(yaml_to_panel_variant_definitions(path))
 
 
 def is_yaml_assay_dir(path: Path) -> bool:
@@ -444,6 +488,8 @@ def format_duration(ms: int) -> str:
 def summarize_output(rows: list[dict[str, str]]) -> str:
     if not rows:
         return ""
+    if len(rows) > 1:
+        return summarize_multirow_output(rows)
     row = rows[0]
     visible = {k: v for k, v in row.items() if k != "participant_id" and v not in ("", None)}
     if len(visible) == 1:
@@ -451,6 +497,38 @@ def summarize_output(rows: list[dict[str, str]]) -> str:
     if visible:
         return "; ".join(f"{key}={value}" for key, value in visible.items())
     return "; ".join(f"{key}={value}" for key, value in row.items() if value)
+
+
+def summarize_multirow_output(rows: list[dict[str, str]]) -> str:
+    matched = 0
+    unresolved = 0
+    sample_parts: list[str] = []
+    for row in rows:
+        state = classify_output_row(row)
+        if state == "matched":
+            matched += 1
+        else:
+            unresolved += 1
+        if len(sample_parts) < 3:
+            name = row.get("name") or row.get("variant_name") or row.get("rsid") or "variant"
+            genotype = normalize_evidence_value(row.get("genotype"))
+            sample_parts.append(f"{name}={genotype}")
+    summary = f"{len(rows)} rows; {matched} matched; {unresolved} unresolved"
+    if sample_parts:
+        summary += f"; sample: {', '.join(sample_parts)}"
+    return summary
+
+
+def classify_output_row(row: dict[str, str]) -> str:
+    genotype = normalize_evidence_value(row.get("genotype"))
+    if genotype != "MISSING":
+        return "matched"
+    matched_rsid = (row.get("matched_rsid") or "").strip()
+    if matched_rsid:
+        depth_text = (row.get("depth") or "").strip()
+        if depth_text.isdigit() and int(depth_text) > 0:
+            return "matched"
+    return "unresolved"
 
 
 def normalize_evidence_value(value: str | None) -> str:
@@ -526,6 +604,8 @@ def format_result_display(
     variants: list[VariantDefinition],
 ) -> str:
     if output_rows:
+        if len(output_rows) > 1:
+            return summarize_multirow_output(output_rows)
         row = output_rows[0]
         visible = {k: v for k, v in row.items() if k != "participant_id" and v not in ("", None)}
         if len(visible) == 1:
@@ -645,10 +725,11 @@ def maybe_reference_args(input_path: Path, runtime_root: Path) -> tuple[list[str
     return args, None
 
 
-def runtime_root_for(input_path: Path, output_path: Path) -> Path:
-    if str(input_path).startswith(str(REPO_ROOT)):
-        return REPO_ROOT
-    return Path(os.path.commonpath([str(input_path.parent), str(output_path.parent), str(REPO_ROOT)]))
+def runtime_root_for(assay_path: Path, input_path: Path, output_path: Path) -> Path:
+    roots = [str(input_path.parent), str(output_path.parent), str(WORKSPACE_ROOT)]
+    if str(assay_path).startswith(str(WORKSPACE_ROOT)):
+        roots.append(str(assay_path.parent))
+    return Path(os.path.commonpath(roots))
 
 
 def run_subprocess(cmd: list[str], timeout_seconds: int = HARD_TIMEOUT_SECONDS) -> tuple[int, str, str, int, bool]:
@@ -846,7 +927,7 @@ def run_probe(
     if detect_format(input_path) in {"zip", "text"}:
         return False, direct_error
     probe_script = ensure_probe_script(assay_path, variants)
-    runtime_root = runtime_root_for(input_path, output_path)
+    runtime_root = runtime_root_for(assay_path, input_path, output_path)
     cmd = [
         str(BIOSCRIPT_BINARY),
         str(probe_script),
@@ -1351,11 +1432,11 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
             stale_path.unlink()
 
     timestamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    runtime_root = runtime_root_for(input_path, output_path)
+    runtime_root = runtime_root_for(assay_path, input_path, output_path)
     version = assay_version_metadata(assay_path)
 
-    # For YAML directories, generate a probe script to run
-    if assay_path.is_dir():
+    # For YAML variant assays, generate a probe script; panel YAML runs directly in bioscript.
+    if assay_path.is_dir() or is_yaml_variant_file(assay_path):
         script_path = ensure_probe_script(assay_path, variants)
     else:
         script_path = assay_path
@@ -1373,12 +1454,13 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
         participant,
         "--trace-report",
         relative_to(trace_path, runtime_root),
-        "--auto-index",
         "--max-duration-ms",
         "30000",
         "--max-memory-bytes",
         str(64 * 1024 * 1024),
     ]
+    if detect_format(input_path) == "cram":
+        command.append("--auto-index")
     if debug:
         command.extend(["--timing-report", relative_to(timing_path, runtime_root)])
     reference_args, reference_error = maybe_reference_args(input_path, runtime_root)
@@ -1500,7 +1582,9 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run bioscript assays against local test data and generate static reports.")
+    parser.add_argument("assay_path", nargs="?", help="Single assay path to run (shorthand for --assay)")
     parser.add_argument("--assay", help="Single assay path to run")
+    parser.add_argument("--jobs", default="auto", help="Parallel jobs to run across independent assay x input tasks, or 'auto' for CPU count")
     parser.add_argument("-k", "--filter", help="Pytest-style keyword filter for discovered assays, e.g. 'apol1 and not glp1'")
     parser.add_argument("--ignore-assay", help="Comma-separated glob patterns to exclude discovered assay paths")
     parser.add_argument("--input", help="Input file or directory to run against")
@@ -1509,14 +1593,33 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--debug", action="store_true", help="Emit per-stage timing reports and include them in the output report")
     parser.add_argument("--list", action="store_true", help="List assays and test data")
     parser.add_argument("--report", action="store_true", help="Open the generated HTML report in the default browser after running")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.assay and args.assay_path and args.assay != args.assay_path:
+        parser.error("use either positional assay path or --assay, not both")
+    if not args.assay and args.assay_path:
+        args.assay = args.assay_path
+    return args
+
+
+def resolve_jobs(value: str) -> int:
+    if value.strip().lower() == "auto":
+        return max(1, os.cpu_count() or 1)
+    try:
+        jobs = int(value)
+    except ValueError as exc:
+        raise ValueError(f"invalid --jobs value {value!r}; expected integer or 'auto'") from exc
+    if jobs < 1:
+        raise ValueError(f"invalid --jobs value {value!r}; expected integer >= 1")
+    return jobs
 
 
 def resolve_assays(filter_assay: str | None, keyword_filter: str | None, ignore_assay: str | None) -> list[Path]:
     if filter_assay:
         path = Path(filter_assay)
         if not path.is_absolute():
-            path = REPO_ROOT / filter_assay
+            cwd_candidate = (Path.cwd() / path).resolve()
+            repo_candidate = (REPO_ROOT / path).resolve()
+            path = cwd_candidate if cwd_candidate.exists() else repo_candidate
         return [path.resolve()]
     assays = find_assays()
     if keyword_filter:
@@ -1621,7 +1724,7 @@ def resolve_inputs(filter_input: str | None, only: str | None, exclude: str | No
     if filter_input:
         path = Path(filter_input)
         target = path if path.is_absolute() else (REPO_ROOT / path)
-    target = target.resolve()
+    target = Path(os.path.abspath(target))
     inputs = [target] if target.is_file() else find_inputs(target)
     if only:
         inputs = [path for path in inputs if matches_any_pattern(path, only)]
@@ -1648,6 +1751,11 @@ def print_run_status(record: dict[str, Any]) -> None:
 
 def main(argv: list[str]) -> int:
     args = parse_args(argv)
+    try:
+        jobs = resolve_jobs(args.jobs)
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
     if not BS.exists():
         print(f"bioscript/bs not found at {BS}", file=sys.stderr)
         return 1
@@ -1676,6 +1784,7 @@ def main(argv: list[str]) -> int:
     print(f"Data:      {DATA_DIR}")
     print(f"Output:    {OUTPUT_DIR}")
     print(f"Report:    {REPORT_DIR}")
+    print(f"Jobs:      {jobs}")
     print("")
     print(f"[INFO] Running {len(assays)} assay(s) x {len(inputs)} input(s)")
     print("")
@@ -1689,17 +1798,32 @@ def main(argv: list[str]) -> int:
     for assay in assays:
         if assay.is_dir():
             variant_cache[assay] = extract_yaml_variant_definitions(assay)
+        elif is_yaml_variant_file(assay):
+            vd = yaml_to_variant_definition(assay)
+            variant_cache[assay] = [vd] if vd else []
+        elif is_yaml_panel_file(assay):
+            variant_cache[assay] = yaml_to_panel_variant_definitions(assay)
         else:
             variant_cache[assay] = extract_variant_definitions(assay)
+    task_specs = [
+        (assay_path, input_path, variant_cache[assay_path], args.debug)
+        for assay_path in assays
+        for input_path in inputs
+    ]
     records: list[dict[str, Any]] = []
     passed = failed = skipped = 0
 
-    for assay_path in assays:
-        assay_name = assay_name_from_path(assay_path)
-        print(f"--- {assay_name} ({relative_to(assay_path, REPO_ROOT)}) ---")
-        print("")
-        for input_path in inputs:
-            record = run_one(assay_path, input_path, variant_cache[assay_path], args.debug)
+    if jobs == 1:
+        current_assay: Path | None = None
+        for assay_path, input_path, variants, debug in task_specs:
+            if current_assay != assay_path:
+                if current_assay is not None:
+                    print("")
+                assay_name = assay_name_from_path(assay_path)
+                print(f"--- {assay_name} ({relative_to(assay_path, REPO_ROOT)}) ---")
+                print("")
+                current_assay = assay_path
+            record = run_one(assay_path, input_path, variants, debug)
             records.append(record)
             print_run_status(record)
             if record["status"] == "pass":
@@ -1708,7 +1832,26 @@ def main(argv: list[str]) -> int:
                 failed += 1
             else:
                 skipped += 1
+        if current_assay is not None:
+            print("")
+    else:
+        print(f"[INFO] Parallel mode enabled with {jobs} workers")
         print("")
+        future_to_index = {}
+        with ThreadPoolExecutor(max_workers=jobs) as executor:
+            for index, (assay_path, input_path, variants, debug) in enumerate(task_specs):
+                future = executor.submit(run_one, assay_path, input_path, variants, debug)
+                future_to_index[future] = index
+            ordered_records: list[dict[str, Any] | None] = [None] * len(task_specs)
+            for future in as_completed(future_to_index):
+                index = future_to_index[future]
+                record = future.result()
+                ordered_records[index] = record
+                print_run_status(record)
+        records = [record for record in ordered_records if record is not None]
+        passed = sum(1 for record in records if record["status"] == "pass")
+        failed = sum(1 for record in records if record["status"] == "fail")
+        skipped = sum(1 for record in records if record["status"] == "skip")
 
     write_results_csv(records)
     generate_report(records)
