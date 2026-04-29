@@ -1,0 +1,11 @@
+schema: "bioscript:panel:1.0"
+version: "1.0"
+name: "pgx-1"
+label: "PGx TSV Pharmacogenomics Panel"
+tags:
+  - "type:pgx"
+
+members:
+  - kind: "variant"
+    path: "variants/ABCB1/rs1128503.yaml"
+    version: "1.0"

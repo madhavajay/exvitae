@@ -1,0 +1,69 @@
+name: "ABCB1-pgx-rs1128503"
+version: "1.0"
+schema: "bioscript:variant:1.0"
+gene: "ABCB1"
+summary: "ABCB1 pharmacogenomics panel entry for rs1128503; ClinVar RCV001029394.2 reports the G allele for Tramadol response with clinical significance Drug-Response."
+
+identifiers:
+  rsids:
+    - "rs1128503"
+  aliases:
+    - "rs2032587"
+    - "rs2229105"
+    - "rs17276907"
+    - "rs28365046"
+    - "rs58257317"
+    - "rs116989428"
+    - "rs386518005"
+
+coordinates:
+  grch37:
+    chrom: "7"
+    pos: 87179601
+  grch38:
+    chrom: "7"
+    pos: 87550285
+
+alleles:
+  kind: "snv"
+  ref: "A"
+  alts:
+    - "C"
+    - "G"
+    - "T"
+
+findings:
+  - schema: "bioscript:pgx:1.0"
+    alt: "G"
+    notes: "ClinVar RCV001029394.2 reports rs1128503 for Tramadol response with clinical significance Drug-Response."
+
+provenance:
+  sources:
+    - kind: "database"
+      label: "dbSNP / NCBI variation services via exr rsid-lookup --store"
+      url: "https://www.ncbi.nlm.nih.gov/snp/rs1128503"
+      fields:
+        - "identifiers.rsids"
+        - "identifiers.aliases"
+        - "alleles"
+    - kind: "database"
+      label: "ClinVar RCV001029394.2"
+      url: "https://www.ncbi.nlm.nih.gov/clinvar/RCV001029394.2"
+      fields:
+        - "summary"
+        - "findings[0]"
+    - kind: "database"
+      label: "Ensembl GRCh37 via exr rsid-lookup --store"
+      url: "https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1128503"
+      fields:
+        - "coordinates.grch37"
+    - kind: "database"
+      label: "Ensembl GRCh38 via exr rsid-lookup --store"
+      url: "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1128503"
+      fields:
+        - "coordinates.grch38"
+    - kind: "database"
+      label: "PharmGKB/ClinPGx via exr pgx-lookup"
+      url: "https://www.pharmgkb.org/gene/ABCB1"
+      fields:
+        - "summary"
