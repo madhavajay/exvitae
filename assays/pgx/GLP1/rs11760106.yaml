@@ -24,7 +24,8 @@ alleles:
     - "T"
 
 findings:
-  - alt: "T"
+  - schema: "bioscript:pgx:1.0"
+    alt: "T"
     notes: "GLP1R locus index SNP for moderate-to-severe vomiting during GLP-1 therapy (p=2.5e-27, OR=1.57, GLP1RA cohort)"
 
 provenance:

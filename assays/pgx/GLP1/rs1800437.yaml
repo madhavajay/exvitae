@@ -28,7 +28,8 @@ alleles:
     - "C"
 
 findings:
-  - alt: "C"
+  - schema: "bioscript:pgx:1.0"
+    alt: "C"
     notes: "p.Glu354Gln missense — probable causal variant for vomiting/nausea in tirzepatide-treated individuals (p=5.1e-9, OR=1.83)"
 
 provenance:

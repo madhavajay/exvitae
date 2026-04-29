@@ -30,6 +30,9 @@ jobs:
             bioscript/rust
             bioscript/monty
 
+      - name: Validate assay schemas
+        run: ./validate.sh
+
       - name: Restore 23andMe test data cache
         id: cache-23andme-restore
         uses: actions/cache/restore@v4

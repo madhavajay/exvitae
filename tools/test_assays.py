@@ -35,6 +35,9 @@ RESULTS_CSV = OUTPUT_DIR / "results.csv"
 REPORT_DIR = OUTPUT_DIR / "report"
 REPORT_RUNS_DIR = REPORT_DIR / "runs"
 REPORT_DATA_DIR = REPORT_DIR / "data"
+AGGREGATE_OBSERVATIONS_TSV = REPORT_DATA_DIR / "observations.tsv"
+AGGREGATE_REPORTS_JSONL = REPORT_DATA_DIR / "reports.jsonl"
+AGGREGATE_REPORTS_JSON = REPORT_DATA_DIR / "reports.json"
 GENERATED_SCRIPT_DIR = REPORT_DIR / ".generated"
 DEFAULT_REF_FA = DATA_DIR / "1k-genomes" / "ref" / "GRCh38_full_analysis_set_plus_decoy_hla.fa"
 DEFAULT_REF_FAI = DATA_DIR / "1k-genomes" / "ref" / "GRCh38_full_analysis_set_plus_decoy_hla.fa.fai"
@@ -47,6 +50,39 @@ class VariantDefinition:
     name: str
     fields: dict[str, Any]
     source: str
+    path: Path | None = None
+    manifest_name: str | None = None
+
+
+OBSERVATION_HEADERS = [
+    "participant_id",
+    "assay_id",
+    "assay_version",
+    "variant_key",
+    "rsid",
+    "assembly",
+    "chrom",
+    "pos_start",
+    "pos_end",
+    "ref",
+    "alt",
+    "kind",
+    "match_status",
+    "coverage_status",
+    "call_status",
+    "genotype",
+    "genotype_display",
+    "zygosity",
+    "ref_count",
+    "alt_count",
+    "depth",
+    "genotype_quality",
+    "allele_balance",
+    "outcome",
+    "evidence_type",
+    "evidence_raw",
+    "facets",
+]
 
 
 def ensure_bioscript_binary() -> Path:
@@ -168,6 +204,14 @@ def timing_path_for(assay_path: Path, input_path: Path) -> Path:
     return REPORT_DATA_DIR / assay_name_from_path(assay_path) / detect_source(input_path) / f"{participant_from_path(input_path)}.timings.tsv"
 
 
+def observations_path_for(assay_path: Path, input_path: Path) -> Path:
+    return REPORT_DATA_DIR / assay_name_from_path(assay_path) / detect_source(input_path) / f"{participant_from_path(input_path)}.observations.tsv"
+
+
+def report_json_path_for(assay_path: Path, input_path: Path) -> Path:
+    return REPORT_DATA_DIR / assay_name_from_path(assay_path) / detect_source(input_path) / f"{participant_from_path(input_path)}.report.json"
+
+
 def details_json_path_for(assay_path: Path, input_path: Path) -> Path:
     return REPORT_DATA_DIR / assay_name_from_path(assay_path) / detect_source(input_path) / f"{participant_from_path(input_path)}.json"
 
@@ -285,8 +329,33 @@ def extract_variant_definitions(assay_path: Path) -> list[VariantDefinition]:
                 continue
             fields[keyword.arg] = literal_value(keyword.value)
         snippet = ast.get_source_segment(source, node) or target.id
-        variants.append(VariantDefinition(name=target.id, fields=fields, source=snippet))
+        variants.append(
+            VariantDefinition(
+                name=target.id,
+                fields=fields,
+                source=snippet,
+                path=assay_path,
+                manifest_name=target.id,
+            )
+        )
     return variants
+
+
+def safe_identifier(value: str) -> str:
+    chars = []
+    for char in value:
+        if char.isascii() and (char.isalnum() or char == "_"):
+            chars.append(char)
+        else:
+            chars.append("_")
+    identifier = "".join(chars).strip("_")
+    while "__" in identifier:
+        identifier = identifier.replace("__", "_")
+    if not identifier:
+        identifier = "variant"
+    if identifier[0].isdigit():
+        identifier = f"v_{identifier}"
+    return identifier
 
 
 def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
@@ -341,9 +410,15 @@ def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
         fields["kind"] = kind_map.get(kind, kind)
 
     name_str = data.get("name", "") or yaml_path.stem
-    safe_name = name_str.replace("-", "_").replace(".", "_").replace(" ", "_")
+    safe_name = safe_identifier(name_str)
     source_text = yaml_path.read_text(encoding="utf-8")
-    return VariantDefinition(name=safe_name, fields=fields, source=source_text)
+    return VariantDefinition(
+        name=safe_name,
+        fields=fields,
+        source=source_text,
+        path=yaml_path,
+        manifest_name=name_str,
+    )
 
 
 def yaml_to_panel_variant_definitions(yaml_path: Path) -> list[VariantDefinition]:
@@ -628,6 +703,416 @@ def format_result_display(
     return ""
 
 
+def observation_variant_key(variant: VariantDefinition) -> str:
+    return variant.manifest_name or variant.name
+
+
+def variant_lookup_keys(variant: VariantDefinition) -> set[str]:
+    keys = {variant.name, observation_variant_key(variant)}
+    rsid = variant.fields.get("rsid")
+    if isinstance(rsid, list):
+        keys.update(str(item) for item in rsid if item)
+    elif rsid:
+        keys.add(str(rsid))
+    if variant.path is not None:
+        keys.add(variant.path.name)
+        keys.add(variant.path.stem)
+        keys.add(variant.path.as_posix())
+        keys.add(relative_to(variant.path, REPO_ROOT))
+    return {key for key in keys if key}
+
+
+def build_variant_lookup(variants: list[VariantDefinition]) -> dict[str, VariantDefinition]:
+    lookup: dict[str, VariantDefinition] = {}
+    for variant in variants:
+        for key in variant_lookup_keys(variant):
+            lookup.setdefault(key, variant)
+    return lookup
+
+
+def variant_for_result_row(
+    row: dict[str, str],
+    variants: list[VariantDefinition],
+    lookup: dict[str, VariantDefinition],
+) -> VariantDefinition | None:
+    for key in [
+        row.get("name"),
+        row.get("variant_name"),
+        row.get("path"),
+        Path(row.get("path", "")).name if row.get("path") else "",
+        row.get("rsid"),
+        row.get("matched_rsid"),
+    ]:
+        if key and key in lookup:
+            return lookup[key]
+    return variants[0] if len(variants) == 1 else None
+
+
+def parse_locus(text: str | None) -> tuple[str, int, int] | None:
+    if not text or ":" not in text:
+        return None
+    chrom, rest = text.split(":", 1)
+    if "-" in rest:
+        start_text, end_text = rest.split("-", 1)
+    else:
+        start_text = end_text = rest
+    try:
+        return chrom, int(start_text), int(end_text)
+    except ValueError:
+        return None
+
+
+def preferred_locus(variant: VariantDefinition, row: dict[str, str]) -> tuple[str, str, int, int]:
+    assembly = (row.get("assembly") or "").strip()
+    if assembly.lower() == "grch37":
+        preferred = [("GRCh37", variant.fields.get("grch37")), ("GRCh38", variant.fields.get("grch38"))]
+    else:
+        preferred = [("GRCh38", variant.fields.get("grch38")), ("GRCh37", variant.fields.get("grch37"))]
+    for assembly_label, locus_text in preferred:
+        locus = parse_locus(str(locus_text or ""))
+        if locus:
+            chrom, start, end = locus
+            return assembly_label, chrom, start, end
+    return assembly.upper() if assembly else "unknown", "", 0, 0
+
+
+def observation_kind(variant: VariantDefinition, row: dict[str, str]) -> str:
+    raw = (row.get("kind") or variant.fields.get("kind") or "").strip().lower()
+    if raw == "variant":
+        raw = str(variant.fields.get("kind") or "").strip().lower()
+    return {
+        "snv": "snp",
+        "snp": "snp",
+        "insertion": "ins",
+        "ins": "ins",
+        "deletion": "del",
+        "del": "del",
+        "indel": "hybrid",
+    }.get(raw, raw or "snp")
+
+
+def parse_int_or_none(value: Any) -> int | None:
+    text = "" if value is None else str(value).strip()
+    if not text:
+        return None
+    try:
+        return int(text)
+    except ValueError:
+        return None
+
+
+def normalize_observation_genotype(raw: str, ref: str, alt: str, kind: str) -> tuple[str, str, str]:
+    display = normalize_evidence_value(raw)
+    if display == "MISSING":
+        return "./.", ".", "unknown"
+    if display in {"0/0", "0|0"}:
+        return "0/0", display, "hom_ref"
+    if display in {"0/1", "1/0", "0|1", "1|0"}:
+        return "0/1", display, "het"
+    if display in {"1/1", "1|1"}:
+        return "1/1", display, "hom_alt"
+
+    cleaned = display.upper().replace("/", "").replace("|", "")
+    ref_clean = ref.upper()
+    alt_clean = alt.upper()
+    if kind == "del" and cleaned == "ID":
+        return "0/1", display, "het"
+    if kind == "del" and cleaned == "DD":
+        return "1/1", display, "hom_alt"
+    if kind == "del" and cleaned in {"II", "--"}:
+        return "0/0", display, "hom_ref"
+    if ref_clean and cleaned == ref_clean * 2:
+        return "0/0", display, "hom_ref"
+    if alt_clean and cleaned == alt_clean * 2:
+        return "1/1", display, "hom_alt"
+    if ref_clean and alt_clean and ref_clean in cleaned and alt_clean in cleaned:
+        return "0/1", display, "het"
+    return display, display, "unknown"
+
+
+def evidence_type_for(input_format: str, row: dict[str, str]) -> str:
+    if not normalize_evidence_value(row.get("genotype")) == "MISSING":
+        if input_format == "vcf":
+            return "vcf_record"
+        if input_format == "cram":
+            return "mpileup"
+    return ""
+
+
+def facets_for_record(record: dict[str, Any]) -> str:
+    return ""
+
+
+def observation_from_row(
+    row: dict[str, str],
+    variant: VariantDefinition,
+    record: dict[str, Any],
+) -> dict[str, Any]:
+    assembly, chrom, pos_start, pos_end = preferred_locus(variant, row)
+    ref = str(row.get("ref") or variant.fields.get("ref") or "")
+    alt = str(row.get("alt") or variant.fields.get("alt") or "")
+    kind = observation_kind(variant, row)
+    genotype, genotype_display, zygosity = normalize_observation_genotype(
+        row.get("genotype", ""),
+        ref,
+        alt,
+        kind,
+    )
+    ref_count = parse_int_or_none(row.get("ref_count"))
+    alt_count = parse_int_or_none(row.get("alt_count"))
+    depth = parse_int_or_none(row.get("depth"))
+    genotype_missing = genotype == "./."
+    matched = bool((row.get("matched_rsid") or row.get("rsid") or "").strip()) or not genotype_missing
+    match_status = "found" if matched else "not_found"
+    coverage_status = "unknown"
+    if depth is not None:
+        coverage_status = "covered" if depth > 0 else "not_covered"
+    elif not genotype_missing:
+        coverage_status = "covered"
+    call_status = "called" if not genotype_missing else "no_call"
+    if coverage_status == "not_covered":
+        outcome = "not_covered"
+    elif genotype_missing:
+        outcome = "no_call"
+    elif zygosity == "hom_ref":
+        outcome = "reference"
+    elif zygosity in {"het", "hom_alt"}:
+        outcome = "variant"
+    else:
+        outcome = "unknown"
+    evidence_raw = row.get("evidence") or ""
+    if not evidence_raw and depth is not None:
+        evidence_raw = f"{chrom}:{pos_start}-{pos_end} depth={depth}"
+        if ref_count is not None:
+            evidence_raw += f" ref_count={ref_count}"
+        if alt_count is not None:
+            evidence_raw += f" alt_count={alt_count}"
+    rsid = row.get("matched_rsid") or row.get("rsid") or variant.fields.get("rsid")
+    if isinstance(rsid, list):
+        rsid = rsid[0] if rsid else ""
+    return {
+        "participant_id": record["participant"],
+        "assay_id": record["assay"],
+        "assay_version": "1.0",
+        "variant_key": observation_variant_key(variant),
+        "rsid": rsid or "",
+        "assembly": assembly,
+        "chrom": chrom,
+        "pos_start": pos_start or "",
+        "pos_end": pos_end or "",
+        "ref": ref,
+        "alt": alt,
+        "kind": kind,
+        "match_status": match_status,
+        "coverage_status": coverage_status,
+        "call_status": call_status,
+        "genotype": genotype,
+        "genotype_display": genotype_display,
+        "zygosity": zygosity,
+        "ref_count": ref_count if ref_count is not None else "",
+        "alt_count": alt_count if alt_count is not None else "",
+        "depth": depth if depth is not None else "",
+        "genotype_quality": "",
+        "allele_balance": (alt_count / depth) if alt_count is not None and depth else "",
+        "outcome": outcome,
+        "evidence_type": evidence_type_for(record["input_format"], row),
+        "evidence_raw": evidence_raw,
+        "facets": facets_for_record(record),
+    }
+
+
+def build_observations(
+    record: dict[str, Any],
+    output_rows: list[dict[str, str]],
+    genome_rows: list[dict[str, str]],
+    variants: list[VariantDefinition],
+) -> list[dict[str, Any]]:
+    lookup = build_variant_lookup(variants)
+    source_rows = output_rows if output_rows and len(output_rows) > 1 else genome_rows
+    observations = []
+    seen_keys: set[str] = set()
+    for row in source_rows:
+        variant = variant_for_result_row(row, variants, lookup)
+        if variant is None:
+            continue
+        observation = observation_from_row(row, variant, record)
+        observations.append(observation)
+        seen_keys.add(observation["variant_key"])
+    if not observations and variants:
+        for variant in variants:
+            observation = observation_from_row({}, variant, record)
+            observations.append(observation)
+            seen_keys.add(observation["variant_key"])
+    return observations
+
+
+def write_observations(path: Path, observations: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=OBSERVATION_HEADERS, delimiter="\t")
+        writer.writeheader()
+        for observation in observations:
+            writer.writerow({key: observation.get(key, "") for key in OBSERVATION_HEADERS})
+
+
+def read_observations(path: Path) -> list[dict[str, str]]:
+    return read_tsv_rows(path)
+
+
+def report_status_from(record: dict[str, Any], observations: list[dict[str, Any]]) -> str:
+    if record["status"] == "fail":
+        return "failed"
+    if record["status"] == "skip":
+        return "partial"
+    if any(observation.get("outcome") in {"no_call", "not_covered", "unknown", "partial"} for observation in observations):
+        return "partial"
+    return "complete"
+
+
+def input_profile(record: dict[str, Any]) -> dict[str, Any]:
+    input_source = str(record.get("input_source", "") or "")
+    input_format = str(record.get("input_format", "") or "")
+    parts = [part for part in input_source.split("/") if part]
+    provider = parts[0] if parts else ""
+    source_version = parts[1] if len(parts) > 1 else ""
+    source_label = provider
+    version_label = source_version
+    data_type = input_format
+
+    if input_format in {"zip", "text"}:
+        data_type = "snp_genotype"
+    elif input_format in {"vcf", "cram"}:
+        data_type = "sequencing"
+
+    if provider == "23andme" and source_version.startswith("v") and source_version[1:].isdigit():
+        source_label = "23andMe"
+        version_label = f"chip version {source_version[1:]}"
+    elif provider == "1k-genomes":
+        source_label = "1000 Genomes"
+        version_label = source_version
+    elif provider:
+        source_label = provider.replace("-", " ").title()
+
+    display_parts = []
+    if data_type:
+        display_parts.append(data_type.replace("_", " "))
+    if input_format:
+        display_parts.append(input_format)
+    if source_label:
+        source_text = source_label
+        if version_label:
+            source_text += f" {version_label}"
+        display_parts.append(source_text)
+
+    return {
+        "file_name": record.get("input_file", ""),
+        "file_path": record.get("input_file_path", ""),
+        "source": input_source,
+        "format": input_format,
+        "data_type": data_type,
+        "provider": provider,
+        "source_version": source_version,
+        "source_label": source_label,
+        "version_label": version_label,
+        "display": " · ".join(part for part in display_parts if part),
+    }
+
+
+def build_report_object(
+    record: dict[str, Any],
+    observations: list[dict[str, Any]],
+    started_at: str,
+    finished_at: str,
+    probe_duration_ms: int,
+) -> dict[str, Any]:
+    warnings = []
+    if record.get("error"):
+        warnings.append(record["error"])
+    if record.get("genome_reads_error"):
+        warnings.append(f"genome-reads probe: {record['genome_reads_error']}")
+    n_variant = sum(1 for observation in observations if observation.get("outcome") == "variant")
+    n_called = sum(1 for observation in observations if observation.get("call_status") == "called")
+    fields = [
+        {
+            "key": "result",
+            "label": "Result",
+            "value": record.get("result_display") or record.get("result") or "",
+            "value_type": "string",
+            "format": "plain_text",
+        },
+        {
+            "key": "summary",
+            "label": "Summary",
+            "value": summarize_output(read_tsv_rows(REPO_ROOT / record["output_file"])) if record.get("output_file") else "",
+            "value_type": "string",
+            "format": "plain_text",
+        },
+    ]
+    return {
+        "schema": "bioscript:report:1.0",
+        "version": "1.0",
+        "participant_id": record["participant"],
+        "assay_id": record["assay"],
+        "assay_version": "1.0",
+        "input": input_profile(record),
+        "report_status": report_status_from(record, observations),
+        "derived_from": [observation["variant_key"] for observation in observations],
+        "facets": facets_for_record(record) or None,
+        "timing": {
+            "started_at": started_at,
+            "finished_at": finished_at,
+            "duration_ms": record["duration_ms"],
+            "breakdown": {
+                "load_ms": None,
+                "query_ms": record["duration_ms"],
+                "compute_ms": probe_duration_ms if probe_duration_ms else None,
+                "write_ms": None,
+            },
+        },
+        "fields": fields,
+        "metrics": {
+            "n_variants": n_variant,
+            "n_sites_tested": len(observations),
+            "n_sites_called": n_called,
+            "n_sites_missing": max(0, len(observations) - n_called),
+        },
+        "warnings": warnings or None,
+        "notes": None,
+    }
+
+
+def write_aggregate_report_data(records: list[dict[str, Any]]) -> None:
+    REPORT_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    all_observations: list[dict[str, Any]] = []
+    reports: list[dict[str, Any]] = []
+    for record in records:
+        observations_file = record.get("observations_file")
+        if observations_file:
+            all_observations.extend(read_observations(REPO_ROOT / observations_file))
+        report_json_file = record.get("report_json_file")
+        if report_json_file:
+            report_path = REPO_ROOT / report_json_file
+            if report_path.exists():
+                reports.append(json.loads(report_path.read_text(encoding="utf-8")))
+
+    write_observations(AGGREGATE_OBSERVATIONS_TSV, all_observations)
+    with AGGREGATE_REPORTS_JSONL.open("w", encoding="utf-8") as handle:
+        for report in reports:
+            handle.write(json.dumps(report, ensure_ascii=True, sort_keys=True))
+            handle.write("\n")
+    AGGREGATE_REPORTS_JSON.write_text(
+        json.dumps(
+            {
+                "schema": "bioscript:report-set:1.0",
+                "version": "1.0",
+                "reports": reports,
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+
 def html_table(rows: list[dict[str, Any]], empty_message: str) -> str:
     if not rows:
         return f"<p>{html.escape(empty_message)}</p>"
@@ -663,6 +1148,81 @@ def markdown_table(rows: list[dict[str, Any]], empty_message: str) -> str:
     return "\n".join([head, sep, *body])
 
 
+def read_json_file(path: Path) -> Any:
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def report_value_display(value: Any) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, ensure_ascii=True, sort_keys=True)
+    return str(value)
+
+
+def render_report_html(report: dict[str, Any] | None) -> str:
+    if not report:
+        return "<p>No report JSON emitted.</p>"
+    fields = report.get("fields") if isinstance(report.get("fields"), list) else []
+    field_rows = [
+        {
+            "key": item.get("key", ""),
+            "label": item.get("label", ""),
+            "value": report_value_display(item.get("value")),
+            "value_type": item.get("value_type", ""),
+            "format": item.get("format", ""),
+        }
+        for item in fields
+        if isinstance(item, dict)
+    ]
+    metrics = report.get("metrics") if isinstance(report.get("metrics"), dict) else {}
+    metric_rows = [{"metric": key, "value": report_value_display(value)} for key, value in metrics.items()]
+    timing = report.get("timing") if isinstance(report.get("timing"), dict) else {}
+    breakdown = timing.get("breakdown") if isinstance(timing.get("breakdown"), dict) else {}
+    timing_rows = [
+        {"field": "started_at", "value": timing.get("started_at", "")},
+        {"field": "finished_at", "value": timing.get("finished_at", "")},
+        {"field": "duration_ms", "value": timing.get("duration_ms", "")},
+        {"field": "load_ms", "value": breakdown.get("load_ms", "")},
+        {"field": "query_ms", "value": breakdown.get("query_ms", "")},
+        {"field": "compute_ms", "value": breakdown.get("compute_ms", "")},
+        {"field": "write_ms", "value": breakdown.get("write_ms", "")},
+    ]
+    summary_rows = [
+        {"field": "schema", "value": report.get("schema", "")},
+        {"field": "version", "value": report.get("version", "")},
+        {"field": "participant_id", "value": report.get("participant_id", "")},
+        {"field": "assay_id", "value": report.get("assay_id", "")},
+        {"field": "assay_version", "value": report.get("assay_version", "")},
+        {"field": "report_status", "value": report.get("report_status", "")},
+        {"field": "derived_from", "value": ", ".join(str(item) for item in report.get("derived_from", []) or [])},
+        {"field": "facets", "value": report.get("facets", "") or ""},
+    ]
+    warning_rows = [{"warning": item} for item in report.get("warnings") or []]
+    note_rows = [{"note": item} for item in report.get("notes") or []]
+    raw_json = html.escape(json.dumps(report, indent=2, ensure_ascii=True, sort_keys=True))
+    return "\n".join(
+        [
+            "<h2>Report</h2>",
+            html_table(summary_rows, "No report summary."),
+            "<h2>Fields</h2>",
+            html_table(field_rows, "No report fields."),
+            "<h2>Metrics</h2>",
+            html_table(metric_rows, "No report metrics."),
+            "<h2>Timing</h2>",
+            html_table(timing_rows, "No report timing."),
+            "<h2>Warnings</h2>",
+            html_table(warning_rows, "No warnings."),
+            "<h2>Notes</h2>",
+            html_table(note_rows, "No notes."),
+            "<h2>Raw JSON</h2>",
+            f"<pre>{raw_json}</pre>",
+        ]
+    )
+
+
 def write_results_csv(records: list[dict[str, Any]]) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     fieldnames = [
@@ -683,6 +1243,8 @@ def write_results_csv(records: list[dict[str, Any]]) -> None:
         "output_file",
         "trace_file",
         "timing_file",
+        "observations_file",
+        "report_json_file",
         "details_file",
     ]
     with RESULTS_CSV.open("w", encoding="utf-8", newline="") as handle:
@@ -972,13 +1534,19 @@ def render_detail_html(record: dict[str, Any]) -> str:
         {"field": "output_file", "value": record["output_file"]},
         {"field": "trace_file", "value": record["trace_file"]},
         {"field": "timing_file", "value": record["timing_file"]},
+        {"field": "observations_file", "value": record.get("observations_file", "")},
+        {"field": "report_json_file", "value": record.get("report_json_file", "")},
     ]
     trace_rows = read_tsv_rows(REPO_ROOT / record["trace_file"]) if record["trace_file"] else []
     timing_rows = read_tsv_rows(REPO_ROOT / record["timing_file"]) if record["timing_file"] else []
     genome_rows = read_tsv_rows(REPO_ROOT / record["genome_reads_file"]) if record["genome_reads_file"] else []
+    observation_rows = read_tsv_rows(REPO_ROOT / record["observations_file"]) if record.get("observations_file") else []
     output_rows = read_tsv_rows(REPO_ROOT / record["output_file"]) if record["output_file"] else []
+    report_data = read_json_file(REPO_ROOT / record["report_json_file"]) if record.get("report_json_file") else None
     summary_table = html_table(summary_rows, "No summary available.")
+    report_table = render_report_html(report_data)
     genome_table = html_table(genome_rows, "No genome reads captured.")
+    observation_table = html_table(observation_rows, "No observations emitted.")
     output_table = html_table(output_rows, "No assay output.")
     trace_table = html_table(trace_rows, "No trace available.")
     timing_table = html_table(timing_rows, "No timing data available.")
@@ -1065,14 +1633,18 @@ def render_detail_html(record: dict[str, Any]) -> str:
     <div class="card">
       <div class="tabs">
         <button class="tab active" data-target="summary">Summary</button>
+        <button class="tab" data-target="report">Report</button>
         <button class="tab" data-target="genome">Genome Reads</button>
+        <button class="tab" data-target="observations">Observations</button>
         <button class="tab" data-target="output">Assay Output</button>
         <button class="tab" data-target="trace">Trace</button>
         <button class="tab" data-target="timings">Timings</button>
         <button class="tab" data-target="logs">Logs</button>
       </div>
       <section id="summary" class="panel active">{summary_table}</section>
+      <section id="report" class="panel">{report_table}</section>
       <section id="genome" class="panel">{genome_table}</section>
+      <section id="observations" class="panel">{observation_table}</section>
       <section id="output" class="panel">{output_table}</section>
       <section id="trace" class="panel">{trace_table}</section>
       <section id="timings" class="panel">{timing_table}</section>
@@ -1107,6 +1679,7 @@ def render_detail_markdown(record: dict[str, Any]) -> str:
     trace_rows = read_tsv_rows(REPO_ROOT / record["trace_file"]) if record["trace_file"] else []
     timing_rows = read_tsv_rows(REPO_ROOT / record["timing_file"]) if record["timing_file"] else []
     genome_rows = read_tsv_rows(REPO_ROOT / record["genome_reads_file"]) if record["genome_reads_file"] else []
+    observation_rows = read_tsv_rows(REPO_ROOT / record["observations_file"]) if record.get("observations_file") else []
     output_rows = read_tsv_rows(REPO_ROOT / record["output_file"]) if record["output_file"] else []
     lines = [
         f"# {record['assay']} / {record['participant']}",
@@ -1124,10 +1697,16 @@ def render_detail_markdown(record: dict[str, Any]) -> str:
         f"- Git status: `{record['git_status'] or 'clean'}`",
         f"- Trace file: `{record['trace_file']}`",
         f"- Timing file: `{record['timing_file']}`",
+        f"- Observations file: `{record.get('observations_file', '')}`",
+        f"- Report JSON file: `{record.get('report_json_file', '')}`",
         "",
         "## Genome Reads",
         "",
         markdown_table(genome_rows, "No genome reads captured."),
+        "",
+        "## Observations",
+        "",
+        markdown_table(observation_rows, "No observations emitted."),
         "",
         "## Assay Output",
         "",
@@ -1185,22 +1764,172 @@ def render_call_cell(text: str) -> str:
     return "; ".join(rendered)
 
 
-def render_index_html(records: list[dict[str, Any]]) -> str:
+def read_jsonl_file(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
     rows = []
-    for record in records:
-        status_class = f"status-{record['status']}"
-        rows.append(
-            f"""<tr>
-<td><span class="{status_class}">{html.escape(record['status'])}</span></td>
-<td>{html.escape(record['assay'])}</td>
-<td>{html.escape(record['participant'])}</td>
-<td>{render_call_cell(record['result_display'])}</td>
-<td>{render_call_cell(record['evidence_display'])}</td>
-<td>{html.escape(record['info_display'])}</td>
-<td>{html.escape(record['duration_display'])}</td>
-<td><a href="{html.escape(record['detail_href'])}">details</a></td>
-</tr>"""
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        value = json.loads(line)
+        if isinstance(value, dict):
+            rows.append(value)
+    return rows
+
+
+def render_report_field_item(field: dict[str, Any]) -> str:
+    key = html.escape(str(field.get("key", "")))
+    label = html.escape(str(field.get("label", "") or field.get("key", "")))
+    value = html.escape(report_value_display(field.get("value")))
+    value_type = html.escape(str(field.get("value_type", "")))
+    field_format = str(field.get("format", "plain_text"))
+    css = "report-field report-field-badge" if field_format == "badge" else "report-field"
+    return (
+        f'<div class="{css}">'
+        f'<div class="report-field-label">{label}</div>'
+        f'<div class="report-field-value">{value}</div>'
+        f'<div class="report-field-meta">{key} · {value_type} · {html.escape(field_format)}</div>'
+        "</div>"
+    )
+
+
+def render_report_card(report: dict[str, Any]) -> str:
+    fields = report.get("fields") if isinstance(report.get("fields"), list) else []
+    metrics = report.get("metrics") if isinstance(report.get("metrics"), dict) else {}
+    warnings = report.get("warnings") or []
+    notes = report.get("notes") or []
+    timing = report.get("timing") if isinstance(report.get("timing"), dict) else {}
+    input_info = report.get("input") if isinstance(report.get("input"), dict) else {}
+    field_items = "".join(
+        render_report_field_item(field)
+        for field in fields
+        if isinstance(field, dict)
+    ) or '<p class="meta">No report fields.</p>'
+    metric_items = "".join(
+        f'<span class="metric"><strong>{html.escape(str(key))}</strong> {html.escape(report_value_display(value))}</span>'
+        for key, value in metrics.items()
+    )
+    warning_items = "".join(f"<li>{html.escape(str(item))}</li>" for item in warnings)
+    note_items = "".join(f"<li>{html.escape(str(item))}</li>" for item in notes)
+    derived = ", ".join(str(item) for item in report.get("derived_from", []) or [])
+    status = str(report.get("report_status", ""))
+    status_class = f"report-status-{status.replace('_', '-')}" if status else ""
+    input_display = str(input_info.get("display") or "")
+    input_file = str(input_info.get("file_name") or "")
+    input_source = str(input_info.get("source") or "")
+    raw_json = html.escape(json.dumps(report, indent=2, ensure_ascii=True, sort_keys=True))
+    return f"""
+      <article class="report-card">
+        <div class="report-card-head">
+          <div>
+            <h3>{html.escape(str(report.get('participant_id', '')))}</h3>
+            <p class="meta">{html.escape(str(report.get('assay_id', '')))} · version {html.escape(str(report.get('assay_version', '')))}</p>
+          </div>
+          <span class="report-status {status_class}">{html.escape(status)}</span>
+        </div>
+        <div class="input-profile">
+          <span>{html.escape(input_display or 'unknown input')}</span>
+          <small>{html.escape(input_file)}{html.escape(' · ' + input_source if input_source else '')}</small>
+        </div>
+        <div class="report-fields">{field_items}</div>
+        <div class="metrics">{metric_items}</div>
+        <dl class="report-details">
+          <dt>Derived from</dt><dd>{html.escape(derived)}</dd>
+          <dt>Facets</dt><dd>{html.escape(str(report.get('facets') or ''))}</dd>
+          <dt>Timing</dt><dd>{html.escape(str(timing.get('duration_ms', '')))} ms</dd>
+        </dl>
+        {'<h4>Warnings</h4><ul>' + warning_items + '</ul>' if warning_items else ''}
+        {'<h4>Notes</h4><ul>' + note_items + '</ul>' if note_items else ''}
+        <details>
+          <summary>Raw report JSON</summary>
+          <pre>{raw_json}</pre>
+        </details>
+      </article>
+    """
+
+
+def rsid_link_html(rsid: str) -> str:
+    rsid = rsid.strip()
+    if not rsid.startswith("rs"):
+        return html.escape(rsid)
+    href = f"https://www.ncbi.nlm.nih.gov/snp/{html.escape(rsid)}"
+    return f'<a href="{href}" target="_blank" rel="noopener noreferrer">{html.escape(rsid)}</a>'
+
+
+def highlighted_genotype_html(genotype_display: str, alt: str) -> str:
+    genotype_display = str(genotype_display or "")
+    alt = str(alt or "")
+    if not genotype_display:
+        return ""
+    if not alt or alt.startswith("<") or len(alt) > len(genotype_display):
+        return html.escape(genotype_display)
+    rendered: list[str] = []
+    index = 0
+    while index < len(genotype_display):
+        if genotype_display[index : index + len(alt)].upper() == alt.upper():
+            rendered.append(f'<span class="alt-hit">{html.escape(genotype_display[index:index + len(alt)])}</span>')
+            index += len(alt)
+        else:
+            rendered.append(html.escape(genotype_display[index]))
+            index += 1
+    return "".join(rendered)
+
+
+def observation_cell_html(observation: dict[str, str], header: str, outcome_class: str) -> str:
+    value = str(observation.get(header, ""))
+    classes = [f"col-{header.replace('_', '-')}"]
+    if header == "outcome" and outcome_class:
+        classes.append(outcome_class)
+    class_attr = f' class="{" ".join(classes)}"'
+    if header == "rsid":
+        content = rsid_link_html(value)
+    elif header == "genotype_display":
+        content = highlighted_genotype_html(value, str(observation.get("alt", "")))
+    else:
+        content = html.escape(value)
+    return f"<td{class_attr}>{content}</td>"
+
+
+def render_index_html(records: list[dict[str, Any]]) -> str:
+    observation_rows = read_tsv_rows(AGGREGATE_OBSERVATIONS_TSV)
+    report_rows = read_jsonl_file(AGGREGATE_REPORTS_JSONL)
+    observation_html_rows = []
+    observation_headers = [
+        "participant_id",
+        "rsid",
+        "ref",
+        "alt",
+        "genotype_display",
+        "outcome",
+        "assay_id",
+        "variant_key",
+        "kind",
+        "genotype",
+        "zygosity",
+        "assembly",
+        "chrom",
+        "pos_start",
+        "pos_end",
+        "depth",
+        "allele_balance",
+        "facets",
+    ]
+    for observation in observation_rows:
+        outcome = observation.get("outcome", "")
+        outcome_class = f"outcome-{outcome.replace('_', '-')}" if outcome else ""
+        observation_html_rows.append(
+            "<tr>"
+            + "".join(
+                observation_cell_html(observation, header, outcome_class)
+                for header in observation_headers
+            )
+            + "</tr>"
         )
+    observation_header_cells = "".join(
+        f'<th class="col-{header.replace("_", "-")}"><button class="sort-button" data-column="{idx}" type="button">{html.escape(header)}</button></th>'
+        for idx, header in enumerate(observation_headers)
+    )
+    report_cards = "".join(render_report_card(report) for report in report_rows)
     total = len(records)
     passed = sum(record["status"] == "pass" for record in records)
     failed = sum(record["status"] == "fail" for record in records)
@@ -1255,6 +1984,37 @@ def render_index_html(records: list[dict[str, Any]]) -> str:
       padding: 0.9rem 1rem;
     }}
     .stat strong {{ display: block; font-size: 1.6rem; }}
+    .links {{ display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }}
+    .links a {{
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fffdfa;
+      padding: 0.55rem 0.85rem;
+      text-decoration: none;
+    }}
+    .view-tabs {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }}
+    .view-tab {{
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fffdfa;
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+      padding: 0.65rem 0.95rem;
+    }}
+    .view-tab.active {{
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }}
+    .view-panel {{ display: none; }}
+    .view-panel.active {{ display: block; }}
     .panel {{ padding: 1rem; }}
     input {{
       width: 100%;
@@ -1273,13 +2033,61 @@ def render_index_html(records: list[dict[str, Any]]) -> str:
     }}
     th, td {{
       text-align: left;
-      padding: 0.65rem 0.55rem;
+      padding: 0.55rem 0.45rem;
       border-bottom: 1px solid var(--line);
       vertical-align: top;
     }}
     th {{ background: #f3ebdd; position: sticky; top: 0; }}
+    .sort-button {{
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      font: inherit;
+      font-weight: 700;
+      padding: 0;
+      text-align: left;
+      width: 100%;
+    }}
+    .sort-button::after {{
+      color: var(--muted);
+      content: "";
+      font-size: 0.85rem;
+      line-height: 1;
+    }}
+    .sort-button.sorted-asc::after {{ content: "^"; }}
+    .sort-button.sorted-desc::after {{ content: "v"; }}
     a {{ color: var(--accent); }}
     .table-wrap {{ max-height: 72vh; overflow: auto; border-radius: 16px; }}
+    .col-participant-id {{
+      font-size: 0.74rem;
+      line-height: 1.2;
+      max-width: 8.5rem;
+      overflow-wrap: anywhere;
+    }}
+    .col-rsid {{ white-space: nowrap; }}
+    .col-ref, .col-alt {{
+      max-width: 4.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 1%;
+    }}
+    .col-genotype-display {{
+      font-weight: 700;
+      white-space: nowrap;
+    }}
+    .alt-hit {{
+      background: rgba(209, 120, 35, 0.28);
+      border-radius: 4px;
+      color: #8f4306;
+      display: inline-block;
+      padding: 0 0.22em;
+    }}
     .status-pass {{ color: var(--pass); font-weight: 700; }}
     .status-fail {{ color: var(--fail); font-weight: 700; }}
     .status-skip {{ color: var(--skip); font-weight: 700; }}
@@ -1303,6 +2111,109 @@ def render_index_html(records: list[dict[str, Any]]) -> str:
       border-radius: 4px;
       padding: 0 0.35em;
     }}
+    .outcome-variant {{ color: #a65412; font-weight: 700; }}
+    .outcome-reference {{ color: #0f6347; font-weight: 700; }}
+    .outcome-no-call, .outcome-not-covered, .outcome-unknown {{
+      color: #8a8277;
+      font-weight: 700;
+    }}
+    .report-grid {{
+      display: grid;
+      gap: 1rem;
+    }}
+    .report-card {{
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem;
+    }}
+    .report-card h3 {{ margin: 0; }}
+    .report-card h4 {{ margin: 1rem 0 0.4rem; }}
+    .report-card-head {{
+      align-items: flex-start;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+    }}
+    .report-status {{
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      font-weight: 700;
+      padding: 0.35rem 0.65rem;
+    }}
+    .report-status-complete {{ color: var(--pass); }}
+    .report-status-partial {{ color: var(--skip); }}
+    .report-status-failed {{ color: var(--fail); }}
+    .input-profile {{
+      align-items: baseline;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.75rem;
+      margin-top: 0.65rem;
+    }}
+    .input-profile span {{
+      background: #f3ebdd;
+      border-radius: 999px;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      font-size: 0.86rem;
+      padding: 0.3rem 0.6rem;
+    }}
+    .input-profile small {{
+      color: var(--muted);
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      overflow-wrap: anywhere;
+    }}
+    .report-fields {{
+      display: grid;
+      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin: 1rem 0;
+    }}
+    .report-field {{
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.75rem;
+    }}
+    .report-field-badge .report-field-value {{
+      background: rgba(20, 79, 138, 0.12);
+      border-radius: 999px;
+      display: inline-block;
+      font-weight: 700;
+      margin-top: 0.35rem;
+      padding: 0.3rem 0.65rem;
+    }}
+    .report-field-label {{ color: var(--muted); font-size: 0.9rem; }}
+    .report-field-value {{
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      margin-top: 0.25rem;
+      overflow-wrap: anywhere;
+    }}
+    .report-field-meta {{
+      color: var(--muted);
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      font-size: 0.75rem;
+      margin-top: 0.4rem;
+    }}
+    .metrics {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }}
+    .metric {{
+      background: #f3ebdd;
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+    }}
+    .report-details {{
+      display: grid;
+      gap: 0.35rem 1rem;
+      grid-template-columns: max-content 1fr;
+      margin: 0;
+    }}
+    .report-details dt {{ color: var(--muted); }}
+    .report-details dd {{ margin: 0; overflow-wrap: anywhere; }}
     p.meta {{ color: var(--muted); }}
   </style>
 </head>
@@ -1317,37 +2228,111 @@ def render_index_html(records: list[dict[str, Any]]) -> str:
         <div class="stat"><span>Failed</span><strong>{failed}</strong></div>
         <div class="stat"><span>Skipped</span><strong>{skipped}</strong></div>
       </div>
+      <div class="links">
+        <a href="{html.escape(relative_to(AGGREGATE_OBSERVATIONS_TSV, REPORT_DIR))}">Aggregate observations TSV</a>
+        <a href="{html.escape(relative_to(AGGREGATE_REPORTS_JSONL, REPORT_DIR))}">Aggregate reports JSONL</a>
+        <a href="{html.escape(relative_to(AGGREGATE_REPORTS_JSON, REPORT_DIR))}">Aggregate reports JSON</a>
+      </div>
     </section>
     <section class="panel">
-      <input id="filter" type="search" placeholder="Filter by status, assay, participant, result, evidence, info">
-      <div class="table-wrap">
-        <table id="runs">
-          <thead>
-            <tr>
-              <th>Status</th>
-              <th>Assay</th>
-              <th>Participant</th>
-              <th>Result</th>
-              <th>Evidence</th>
-              <th>Info</th>
-              <th>Duration</th>
-              <th>Detail</th>
-            </tr>
-          </thead>
-          <tbody>
-            {''.join(rows)}
-          </tbody>
-        </table>
+      <div class="view-tabs">
+        <button class="view-tab active" data-view="observations-view" type="button">Observations</button>
+        <button class="view-tab" data-view="reports-view" type="button">Reports</button>
+      </div>
+      <div id="observations-view" class="view-panel active">
+        <h2>Observations</h2>
+        <p class="meta">One row per participant, assay, and variant observation.</p>
+        <input id="observation-filter" type="search" placeholder="Filter observations by participant, assay, rsid, variant, genotype, outcome, facets">
+        <div class="table-wrap">
+          <table id="observations">
+            <thead>
+              <tr>
+                {observation_header_cells}
+              </tr>
+            </thead>
+            <tbody>
+              {''.join(observation_html_rows)}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="reports-view" class="view-panel">
+        <h2>Reports</h2>
+        <p class="meta">One report per participant and assay, rendered from bioscript:report:1.0 fields.</p>
+        <input id="report-filter" type="search" placeholder="Filter reports by participant, assay, status, field, value, metric">
+        <div id="reports" class="report-grid">
+          {report_cards or '<p class="meta">No reports emitted.</p>'}
+        </div>
       </div>
     </section>
   </main>
   <script>
-    const filter = document.getElementById('filter');
-    const tableRows = Array.from(document.querySelectorAll('#runs tbody tr'));
-    filter.addEventListener('input', () => {{
-      const query = filter.value.toLowerCase();
-      tableRows.forEach((row) => {{
+    const viewTabs = Array.from(document.querySelectorAll('.view-tab'));
+    const viewPanels = Array.from(document.querySelectorAll('.view-panel'));
+    viewTabs.forEach((tab) => {{
+      tab.addEventListener('click', () => {{
+        viewTabs.forEach((item) => item.classList.remove('active'));
+        viewPanels.forEach((item) => item.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.view).classList.add('active');
+      }});
+    }});
+
+    const observationFilter = document.getElementById('observation-filter');
+    const observationTable = document.getElementById('observations');
+    const observationBody = observationTable.querySelector('tbody');
+    const sortButtons = Array.from(observationTable.querySelectorAll('.sort-button'));
+    let observationRows = Array.from(observationBody.querySelectorAll('tr'));
+
+    function visibleObservationRows() {{
+      return observationRows.filter((row) => row.style.display !== 'none');
+    }}
+
+    observationFilter.addEventListener('input', () => {{
+      const query = observationFilter.value.toLowerCase();
+      observationRows.forEach((row) => {{
         row.style.display = row.textContent.toLowerCase().includes(query) ? '' : 'none';
+      }});
+    }});
+
+    function cellValue(row, column) {{
+      return (row.children[column]?.textContent || '').trim();
+    }}
+
+    function compareValues(left, right, direction) {{
+      const leftNumber = Number(left);
+      const rightNumber = Number(right);
+      const bothNumeric = left !== '' && right !== '' && Number.isFinite(leftNumber) && Number.isFinite(rightNumber);
+      const result = bothNumeric
+        ? leftNumber - rightNumber
+        : left.localeCompare(right, undefined, {{ numeric: true, sensitivity: 'base' }});
+      return direction === 'asc' ? result : -result;
+    }}
+
+    sortButtons.forEach((button) => {{
+      button.addEventListener('click', () => {{
+        const column = Number(button.dataset.column);
+        const current = button.dataset.direction || 'desc';
+        const direction = current === 'asc' ? 'desc' : 'asc';
+        sortButtons.forEach((item) => {{
+          item.classList.remove('sorted-asc', 'sorted-desc');
+          delete item.dataset.direction;
+        }});
+        button.dataset.direction = direction;
+        button.classList.add(direction === 'asc' ? 'sorted-asc' : 'sorted-desc');
+        observationRows = observationRows.sort((left, right) =>
+          compareValues(cellValue(left, column), cellValue(right, column), direction)
+        );
+        observationRows.forEach((row) => observationBody.appendChild(row));
+      }});
+    }});
+
+    const reportFilter = document.getElementById('report-filter');
+    const reportCards = Array.from(document.querySelectorAll('.report-card'));
+    reportFilter.addEventListener('input', () => {{
+      const query = reportFilter.value.toLowerCase();
+      reportCards.forEach((card) => {{
+        card.style.display = card.textContent.toLowerCase().includes(query) ? '' : 'none';
       }});
     }});
   </script>
@@ -1384,6 +2369,10 @@ def render_index_markdown(records: list[dict[str, Any]]) -> str:
             "",
             markdown_table(rows, "No runs."),
             "",
+            f"Aggregate observations TSV: `{relative_to(AGGREGATE_OBSERVATIONS_TSV, REPO_ROOT)}`",
+            f"Aggregate reports JSONL: `{relative_to(AGGREGATE_REPORTS_JSONL, REPO_ROOT)}`",
+            f"Aggregate reports JSON: `{relative_to(AGGREGATE_REPORTS_JSON, REPO_ROOT)}`",
+            "",
             f"HTML report: `{relative_to(REPORT_DIR / 'index.html', REPO_ROOT)}`",
         ]
     )
@@ -1393,6 +2382,7 @@ def generate_report(records: list[dict[str, Any]]) -> None:
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     REPORT_RUNS_DIR.mkdir(parents=True, exist_ok=True)
     REPORT_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    write_aggregate_report_data(records)
 
     index_html = REPORT_DIR / "index.html"
     index_md = REPORT_DIR / "README.md"
@@ -1419,6 +2409,8 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
     trace_path = trace_path_for(assay_path, input_path)
     genome_reads_path = genome_reads_path_for(assay_path, input_path)
     timing_path = timing_path_for(assay_path, input_path)
+    observations_path = observations_path_for(assay_path, input_path)
+    report_json_path = report_json_path_for(assay_path, input_path)
     detail_json_path = details_json_path_for(assay_path, input_path)
     detail_file = detail_page_path_for(assay_path, input_path)
     detail_markdown_file = detail_markdown_path_for(assay_path, input_path)
@@ -1426,12 +2418,15 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
     output_path.parent.mkdir(parents=True, exist_ok=True)
     trace_path.parent.mkdir(parents=True, exist_ok=True)
     genome_reads_path.parent.mkdir(parents=True, exist_ok=True)
+    observations_path.parent.mkdir(parents=True, exist_ok=True)
+    report_json_path.parent.mkdir(parents=True, exist_ok=True)
     detail_json_path.parent.mkdir(parents=True, exist_ok=True)
-    for stale_path in (output_path, trace_path, genome_reads_path, timing_path, detail_json_path, detail_file, detail_markdown_file):
+    for stale_path in (output_path, trace_path, genome_reads_path, timing_path, observations_path, report_json_path, detail_json_path, detail_file, detail_markdown_file):
         if stale_path.exists():
             stale_path.unlink()
 
-    timestamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    run_started_at = datetime.now(timezone.utc)
+    timestamp = run_started_at.replace(microsecond=0).isoformat().replace("+00:00", "Z")
     runtime_root = runtime_root_for(assay_path, input_path, output_path)
     version = assay_version_metadata(assay_path)
 
@@ -1489,6 +2484,8 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
             "trace_file": "",
             "timing_file": "",
             "genome_reads_file": "",
+            "observations_file": "",
+            "report_json_file": "",
             "details_file": relative_to(detail_json_path, REPO_ROOT),
             "detail_file": relative_to(detail_file, REPO_ROOT),
             "detail_markdown_file": relative_to(detail_markdown_file, REPO_ROOT),
@@ -1563,6 +2560,8 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
         "timing_file": relative_to(timing_path, REPO_ROOT) if debug and timing_path.exists() else "",
         "genome_reads_file": relative_to(genome_reads_path, REPO_ROOT) if probe_ok and genome_reads_path.exists() else "",
         "genome_reads_error": probe_error,
+        "observations_file": relative_to(observations_path, REPO_ROOT),
+        "report_json_file": relative_to(report_json_path, REPO_ROOT),
         "details_file": relative_to(detail_json_path, REPO_ROOT),
         "detail_file": relative_to(detail_file, REPO_ROOT),
         "detail_markdown_file": relative_to(detail_markdown_file, REPO_ROOT),
@@ -1576,6 +2575,17 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
         "git_commit_short": version["git_commit_short"],
         "git_status": version["git_status"],
     }
+    observations = build_observations(record, output_rows, genome_rows, variants)
+    write_observations(observations_path, observations)
+    finished_at = datetime.now(timezone.utc)
+    report_object = build_report_object(
+        record,
+        observations,
+        run_started_at.isoformat().replace("+00:00", "Z"),
+        finished_at.isoformat().replace("+00:00", "Z"),
+        probe_duration_ms,
+    )
+    report_json_path.write_text(json.dumps(report_object, indent=2), encoding="utf-8")
     detail_json_path.write_text(json.dumps(record, indent=2), encoding="utf-8")
     return record
 
@@ -1859,6 +2869,8 @@ def main(argv: list[str]) -> int:
     print("===========================")
     print(f"Results: {passed} passed, {failed} failed, {skipped} skipped")
     print(f"CSV:     {relative_to(RESULTS_CSV, REPO_ROOT)}")
+    print(f"OBS:     {relative_to(AGGREGATE_OBSERVATIONS_TSV, REPO_ROOT)}")
+    print(f"REPORTS: {relative_to(AGGREGATE_REPORTS_JSONL, REPO_ROOT)}")
     print(f"HTML:    {relative_to(REPORT_DIR / 'index.html', REPO_ROOT)}")
     print(f"MD:      {relative_to(REPORT_DIR / 'README.md', REPO_ROOT)}")
 

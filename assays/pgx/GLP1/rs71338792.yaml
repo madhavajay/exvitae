@@ -30,7 +30,8 @@ alleles:
     - "TTTTTTTTTTTTTTT"
 
 findings:
-  - alt: "*"
+  - schema: "bioscript:pgx:1.0"
+    alt: "*"
     notes: "GIPR locus index/tagging variant rs71338792 (shown as rs71338792:AT in the paper figure) is a multiallelic indel in dbSNP and is in high LD with rs1800437 (p.Glu354Gln). Associated with vomiting in tirzepatide-treated individuals; paper prioritizes rs1800437 as the probable causal variant."
 
 provenance:

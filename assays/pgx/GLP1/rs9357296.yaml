@@ -26,7 +26,8 @@ alleles:
     - "T"
 
 findings:
-  - alt: "G"
+  - schema: "bioscript:pgx:1.0"
+    alt: "G"
     notes: "GLP1R locus index SNP for nausea during GLP-1 therapy (p=2.6e-28, OR=1.36, GLP1RA cohort)"
 
 provenance:

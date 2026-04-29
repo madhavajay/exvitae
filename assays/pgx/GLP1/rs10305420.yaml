@@ -25,7 +25,8 @@ alleles:
     - "T"
 
 findings:
-  - alt: "T"
+  - schema: "bioscript:pgx:1.0"
+    alt: "T"
     notes: "p.Pro7Leu missense — associated with increased GLP-1 receptor agonist weight-loss efficacy (~0.76 kg per allele, p=2.9e-10, GLP1RA cohort)"
 
 provenance:
