@@ -1,0 +1,23 @@
+schema: "bioscript:panel:1.0"
+version: "1.0"
+name: "glp1"
+label: "GLP1 Pharmacogenomics Panel"
+tags:
+  - "type:pgx"
+
+members:
+  - kind: "variant"
+    path: "rs10305420.yaml"
+    version: "1.0"
+  - kind: "variant"
+    path: "rs11760106.yaml"
+    version: "1.0"
+  - kind: "variant"
+    path: "rs1800437.yaml"
+    version: "1.0"
+  - kind: "variant"
+    path: "rs71338792.yaml"
+    version: "1.0"
+  - kind: "variant"
+    path: "rs9357296.yaml"
+    version: "1.0"
