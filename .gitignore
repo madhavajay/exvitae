@@ -1,5 +1,5 @@
 **/settings.local.json
-test-data/
+./test-data/
 test-output/
 .bioscript-cache/
 tools/__pycache__/
