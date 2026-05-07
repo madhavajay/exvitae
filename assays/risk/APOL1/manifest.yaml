@@ -1,0 +1,44 @@
+schema: bioscript:assay:1.0
+version: "1.0"
+name: APOL1
+label: APOL1 Risk Assay
+summary: APOL1 assay that observes G1 and G2 sites and emits the derived APOL1 risk genotype.
+tags:
+  - type:risk
+  - gene:APOL1
+package:
+  schema: bioscript:package:1.0
+  publish: true
+  artifact: APOL1.zip
+members:
+  - kind: variant
+    path: rs73885319.yaml
+    version: "1.0"
+  - kind: variant
+    path: rs60910145.yaml
+    version: "1.0"
+  - kind: variant
+    path: rs71785313.yaml
+    version: "1.0"
+analyses:
+  - id: apol1_status
+    kind: bioscript
+    path: apol1.py
+    output_format: tsv
+    label: APOL1 risk genotype
+    derived_from:
+      - rs73885319.yaml
+      - rs60910145.yaml
+      - rs71785313.yaml
+    emits:
+      - key: apol1_status
+        label: APOL1 status
+        value_type: string
+        format: badge
+    logic:
+      source:
+        name: Existing APOL1 BioScript classifier
+        url: https://github.com/madhavajay/exvitae
+      description: >
+        APOL1 status is derived from the G1 haplotype sites rs73885319 and rs60910145 together with the G2 deletion
+        tagged by rs71785313. The script emits the participant's APOL1 G0/G1/G2 diplotype-style status.

@@ -1,0 +1,19 @@
+schema: bioscript:package-release:1.0
+version: "1.0"
+name: APOL1
+label: APOL1 Risk Assay
+package_version: "1.0"
+kind: assay
+created_at: "2026-05-07T05:30:55Z"
+entrypoint: manifest.yaml
+artifact:
+  path: APOL1.zip
+  sha256: 41d783270bfb0092b548984f41bd1c5fa33ded8720defe7b7cfa9439d62f75b5
+  size_bytes: 3301
+contents:
+  files:
+    - apol1.py
+    - manifest.yaml
+    - rs60910145.yaml
+    - rs71785313.yaml
+    - rs73885319.yaml
