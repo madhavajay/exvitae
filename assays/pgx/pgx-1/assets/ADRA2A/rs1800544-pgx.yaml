@@ -1,0 +1,258 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1800544.yaml
+gene: ADRA2A
+rsid: rs1800544
+variant_pa_id: PA166153974
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166153974/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183703019
+    label: rs1800544 / methylphenidate / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ADRA2A
+    variant: rs1800544
+    drugs:
+      - name: methylphenidate
+        pharmgkb_id: PA450464
+    phenotypes:
+      - Attention Deficit Disorder with Hyperactivity
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183703019"
+      url: https://www.clinpgx.org/summaryAnnotation/1183703019
+    notes: rs1800544 (ADRA2A); methylphenidate; Attention Deficit Disorder with Hyperactivity (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183703019_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients (mainly pediatric patients) with the CC genotype and attention deficit hyperactivity disorder (ADHD) may
+          have a poorer response to methylphenidate treatment as compared to patients with the CG or GG genotype. However, contradictory
+          evidence exists for this association. Studies used different scales to analyze improvement, e.g. CGI-I, ARS-IV, and
+          other. Other genetic and clinical factors may also influence response to methylphenidate.
+      - id: clinpgx_summary_1183703019_cg
+        label: CG
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CG.
+        text:
+          Patients (mainly pediatric patients) with the CG genotype and attention deficit hyperactivity disorder (ADHD) may
+          have a better response to methylphenidate treatment as compared to patients with the CC genotype. However, contradictory
+          evidence exists for this association. Studies used different scales to analyze improvement, e.g. CGI-I, ARS-IV, and
+          other. Other genetic and clinical factors may also influence response to methylphenidate.
+      - id: clinpgx_summary_1183703019_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients (mainly pediatric patients) with the GG genotype and attention deficit hyperactivity disorder (ADHD) may
+          have a better response to methylphenidate treatment as compared to patients with the CC genotype. However, contradictory
+          evidence exists for this association. Studies used different scales to analyze improvement, e.g. CGI-I, ARS-IV, and
+          other. Other genetic and clinical factors may also influence response to methylphenidate.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183490962
+    label: rs1800544 / dexmedetomidine / Other
+    authority_type: evidence_summary
+    genes:
+      - ADRA2A
+    variant: rs1800544
+    drugs:
+      - name: dexmedetomidine
+        pharmgkb_id: PA449256
+    phenotypes: []
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183490962"
+      url: https://www.clinpgx.org/summaryAnnotation/1183490962
+    notes: rs1800544 (ADRA2A); dexmedetomidine (level 3)
+    effects:
+      - id: clinpgx_summary_1183490962_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have an increased sedative response to dexmedetomidine as compared to patients
+          with the GG or GC genotype. Other genetic and clinical factors may also influence a patient's response to dexmedetomidine.
+      - id: clinpgx_summary_1183490962_gc
+        label: GC
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GC.
+        text:
+          Patients with the GC genotype may have a decreased sedative response to dexmedetomidine as compared to patients
+          with the CC genotype. Other genetic and clinical factors may also influence a patient's response to dexmedetomidine.
+      - id: clinpgx_summary_1183490962_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a decreased sedative response to dexmedetomidine as compared to patients
+          with the CC genotype. Other genetic and clinical factors may also influence a patient's response to dexmedetomidine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447953199
+    label: rs1800544 / milnacipran / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ADRA2A
+    variant: rs1800544
+    drugs:
+      - name: milnacipran
+        pharmgkb_id: PA164752812
+    phenotypes:
+      - Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447953199"
+      url: https://www.clinpgx.org/summaryAnnotation/1447953199
+    notes: rs1800544 (ADRA2A); milnacipran; Depressive Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1447953199_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and depressive disorder may have an increased response to milnacipran as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's risk of side effects
+          when treated with milnacipran
+      - id: clinpgx_summary_1447953199_cg
+        label: CG
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CG.
+        text:
+          Patients with the CG genotype and depressive disorder may have an increased response to milnacipran as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's risk of side effects
+          when treated with milnacipran
+      - id: clinpgx_summary_1447953199_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and depressive disorder may have a decreased response to milnacipran as compared to
+          patients with the CC and CG genotypes. Other genetic and clinical factors may also influence a patient's risk of side
+          effects when treated with milnacipran
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447953192
+    label: rs1800544 / selective serotonin reuptake inhibitors / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ADRA2A
+    variant: rs1800544
+    drugs:
+      - name: selective serotonin reuptake inhibitors
+        pharmgkb_id: PA164713257
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447953192"
+      url: https://www.clinpgx.org/summaryAnnotation/1447953192
+    notes: rs1800544 (ADRA2A); Selective serotonin reuptake inhibitors; Depressive Disorder, Major (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1447953192_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and major depressive disorder may have decreased response to selective serotonin reuptake
+          inhibitors as compared to patients with the CG genotype. Other genetic and clinical factors may also influence a patient's
+          response to SSRIs.
+      - id: clinpgx_summary_1447953192_cg
+        label: CG
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CG.
+        text:
+          Patients with the CG genotype and major depressive disorder may have an increased response to selective serotonin
+          reuptake inhibitors as compared to patients with the CC and GG genotypes. Other genetic and clinical factors may also
+          influence a patient's response to SSRIs.
+      - id: clinpgx_summary_1447953192_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800544.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and major depressive disorder may have decreased response to selective serotonin reuptake
+          inhibitors as compared to patients with the CG genotype. Other genetic and clinical factors may also influence a patient's
+          response to SSRIs.

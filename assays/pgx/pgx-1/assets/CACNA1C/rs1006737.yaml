@@ -1,0 +1,64 @@
+name: CACNA1C-pgx-rs1006737
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: CACNA1C
+summary:
+  CACNA1C pharmacogenomics panel entry for rs1006737 with detailed ClinPGx/PharmGKB summary annotations attached in
+  rs1006737-pgx.yaml.
+identifiers:
+  rsids:
+    - rs1006737
+  aliases:
+    - rs58172614
+    - rs60975541
+coordinates:
+  grch37:
+    chrom: "12"
+    pos: 2345295
+  grch38:
+    chrom: "12"
+    pos: 2236129
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+  observed_alts:
+    - A
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs1006737
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1006737
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1006737
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: ClinPGx / PharmGKB variant summary annotations PA166154507 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166154507/summaryAnnotation
+      fields:
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: cacna1c_pgx_rs1006737_pgx_sidecar
+    include: rs1006737-pgx.yaml
+    binding:
+      source: variant
+      variant: rs1006737.yaml
+      key: alt
+      operator: equals
+      value: A
+      description: Loads this sidecar when the participant carries the expected PGx-significant rs1006737 alt allele A.
+    notes: Detailed ClinPGx/PharmGKB summary findings are stored in the sidecar file.

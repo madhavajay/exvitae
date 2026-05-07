@@ -1,0 +1,67 @@
+schema: bioscript:assay:1.0
+version: "1.0"
+name: apoe_epsilon_pgx
+label: APOE Epsilon Genotype
+summary: Classify APOE epsilon status from rs429358 and rs7412; ClinPGx describes rs7412 together with rs429358 as defining APOE ε2, ε3, and ε4 alleles.
+tags:
+  - type:pgx
+  - gene:APOE
+members:
+  - kind: variant
+    path: rs429358.yaml
+    version: "1.0"
+  - kind: variant
+    path: rs7412.yaml
+    version: "1.0"
+analyses:
+  - id: apoe_epsilon
+    kind: bioscript
+    path: apoe.py
+    output_format: tsv
+    label: APOE epsilon genotype
+    derived_from:
+      - rs429358.yaml
+      - rs7412.yaml
+    emits:
+      - key: apoe_outcome
+        label: APOE outcome
+        value_type: string
+        format: badge
+      - key: apoe_status
+        label: APOE status
+        value_type: string
+        format: badge
+      - key: rs429358
+        label: rs429358 genotype
+        value_type: string
+      - key: rs7412
+        label: rs7412 genotype
+        value_type: string
+    logic:
+      source:
+        name: ClinPGx / PharmGKB
+        url: https://www.clinpgx.org/variant/PA166155341/overview
+      description: >
+        APOE epsilon status is derived from rs429358 and rs7412. ClinPGx describes these variants as defining the
+        epsilon2, epsilon3, and epsilon4 alleles: E2 is rs429358 T and rs7412 T, E3 is rs429358 T and rs7412 C, and
+        E4 is rs429358 C and rs7412 C.
+provenance:
+  sources:
+    - kind: database
+      label: ClinPGx rs7412 variant overview
+      url: https://www.clinpgx.org/variant/PA166155341/overview
+      fields:
+        - summary
+        - analyses[0].logic
+    - kind: database
+      label: ClinPGx / PharmGKB APOE drug-label sidecar
+      url: https://www.clinpgx.org/gene/APOE/labelAnnotation
+      fields:
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: apoe_epsilon_pgx_sidecar
+    include: apoe-pgx.yaml
+    notes:
+      Detailed APOE drug-label findings are stored in the sidecar file and bind to apoe_status emitted by the apoe_epsilon
+      analysis.

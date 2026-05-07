@@ -1,0 +1,1306 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs12979860.yaml
+gene: IFNL3
+rsid: rs12979860
+variant_pa_id: PA166155468
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166155468/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166155468/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166104801
+    label: Annotation of FDA Label for peginterferon alfa-2b and IFNL3
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+    variant: rs12979860
+    drugs:
+      - name: peginterferon alfa-2b
+        pharmgkb_id: PA164784024
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166104801
+      url: https://www.clinpgx.org/labelAnnotation/PA166104801
+    notes: Annotation of FDA Label for peginterferon alfa-2b and IFNL3
+    pgx_action_level: Informative PGx
+    summary:
+      "The FDA-approved drug label for peginterferon alfa-2b (PEGINTRON) states that a single nucleotide polymorphism
+      near the gene encoding interferon-lambda-3 (IL28B rs12979860 ) was associated with variable sustained viral response (SVR)
+      rates. SVR rates by rs12979860 genotype were as follows: CC 66% vs. CT 30% vs. TT 22%."
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Peginterferon_02_21_19_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166104855
+    label: Annotation of FDA Label for boceprevir and IFNL3
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+    variant: rs12979860
+    drugs:
+      - name: boceprevir
+        pharmgkb_id: PA165948902
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166104855
+      url: https://www.clinpgx.org/labelAnnotation/PA166104855
+    notes: Annotation of FDA Label for boceprevir and IFNL3
+    pgx_action_level: No Clinical PGx
+    summary: |-
+      The FDA-approved drug label for boceprevir (Victrelis) contains information regarding a genetic variant near the IFNL3 gene (IL28B, rs12979860 , a C to T change) which is a strong predictor of response to peginterferon alfa-2b (PegIntron) / ribavirin (Rebetol) treatment. Boceprevir must not be used as a monotherapy and should only be used in combination with these drugs for the treatment of chronic hepatitis C genotype 1.
+      July 2024: Please note that boceprevir is listed as discontinued by the FDA. However, this drug is still on the FDA Table of Pharmacogenomic Biomarkers in Drug Labeling. ClinPGx has therefore decided to keep this annotation active until the drug is removed from the FDA Biomarker table.
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Boceprevir_7_5_2017_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166104867
+    label: Annotation of FDA Label for telaprevir and IFNL3
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+    variant: rs12979860
+    drugs:
+      - name: telaprevir
+        pharmgkb_id: PA165958354
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166104867
+      url: https://www.clinpgx.org/labelAnnotation/PA166104867
+    notes: Annotation of FDA Label for telaprevir and IFNL3
+    pgx_action_level: Informative PGx
+    summary:
+      "Among both treatment-naïve and previous treatment failures patients with HCV genotype 1 infections, subjects of\
+      \ all IL28B genotypes appeared to have higher SVR rates with telaprevir (INCIVEK)-containing regimens compared to PEG-IFN\
+      \ \x01alpha and RBV only. Patients with the favorable IFNL3 genotype ( rs12979860 CC) tend to have higher response rates\
+      \ (SVR) as compared to patients with the CT or TT genotype with the protease inhibitor combination in treatment naïve\
+      \ patients.\nNovember 2024: Please note that telaprevir is shown as discontinued by the FDA. However, this drug is still\
+      \ listed on the FDA Table of Pharmacogenomic Biomarkers in Drug Labeling. ClinPGx has therefore decided to keep this annotation\
+      \ active until the drug is removed from the FDA Biomarker table."
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Telaprevir_12_14_17_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166122592
+    label: Annotation of FDA Label for simeprevir and IFNL3
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+    variant: rs12979860
+    drugs:
+      - name: simeprevir
+        pharmgkb_id: PA166122590
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166122592
+      url: https://www.clinpgx.org/labelAnnotation/PA166122592
+    notes: Annotation of FDA Label for simeprevir and IFNL3
+    pgx_action_level: Informative PGx
+    summary: |-
+      The FDA-approved drug label for simeprevir (OLYSIO) contains information regarding a genetic variant near the IFNL3 gene ( IL28B , rs12979860 , a C to T change) which is a strong predictor of response to peginterferon alfa and ribavirin treatment. Simeprevir must not be used as a monotherapy, and should be administered in combination with both peginterferon alfa and ribavirin for treatment of chronic hepatitis C genotype 1.
+      July 2024: Please note that simeprevir is listed as discontinued by the FDA. However, this drug is still on the FDA Table of Pharmacogenomic Biomarkers in Drug Labeling. ClinPGx has therefore decided to keep this annotation active until the drug is removed from the FDA Biomarker table.
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Simeprevir_04_18_2019_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166122594
+    label: Annotation of FDA Label for sofosbuvir and IFNL3
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+    variant: rs12979860
+    drugs:
+      - name: sofosbuvir
+        pharmgkb_id: PA166122593
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166122594
+      url: https://www.clinpgx.org/labelAnnotation/PA166122594
+    notes: Annotation of FDA Label for sofosbuvir and IFNL3
+    summary:
+      Sofosbuvir (SOVALDI) is indicated for the treatment of chronic hepatitis C in combination with ribavirin and/or
+      peg-interferon alfa. The FDA-approved drug label for sofosbuvir contains information regarding a genetic variant near
+      the IFNL3 gene (IL28B, rs12979860 , a C to T change). Though the sofosbuvir label itself does not discuss why this variant
+      is relevant, literature evidence has shown that this variant is a strong predictor of response to peginterferon alfa and
+      ribavirin treatment.
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Sofosbuvir_02_26_19_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166127710
+    label: Annotation of HCSC Label for simeprevir and IFNL3
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+    variant: rs12979860
+    drugs:
+      - name: simeprevir
+        pharmgkb_id: PA166122590
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166127710
+      url: https://www.clinpgx.org/labelAnnotation/PA166127710
+    notes: Annotation of HCSC Label for simeprevir and IFNL3
+    pgx_action_level: Informative PGx
+    summary: |-
+      The product monograph for simeprevir (GALEXOS) contains information regarding a genetic variant near the IFNL3 gene ( IL28B , rs12979860 ) which is a strong predictor of response to peginterferon alfa (PegIFN-alfa) and ribavirin (RBV) treatment. Simeprevir is only indicated in combination with PegIFN-alfa and RBV or with sofosbuvir, it is not indicated as a monotherapy.
+      Please note that as of July 2024, the HCSC database lists the marketing status of simeprevir as "Cancelled Post Market".
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166163417
+    label: Annotation of FDA Label for sofosbuvir / velpatasvir and IFNL3
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+    variant: rs12979860
+    drugs:
+      - name: sofosbuvir
+        pharmgkb_id: PA166163416
+      - name: velpatasvir
+        pharmgkb_id: PA166163416
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166163417
+      url: https://www.clinpgx.org/labelAnnotation/PA166163417
+    notes: Annotation of FDA Label for sofosbuvir / velpatasvir and IFNL3
+    summary:
+      EPCLUSA (sofosbuvir and velpatasvir) is indicated for the treatment of adult patients with chronic HCV genotype
+      1, 2, 3, 4, 5 or 6 infection without cirrhosis or with compensated cirrhosis, or with decompensated cirrhosis for use
+      in combination with ribavirin. Within the clinical studies section, the label mentions frequency of the rs12979860 non-CC
+      genotype.
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Sofosbuvir_velpatasvir_08_25_2017_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166184158
+    label: Annotation of Swissmedic Label for ombitasvir / paritaprevir / ritonavir and IFNL3, IFNL4
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: ombitasvir
+        pharmgkb_id: PA166163408
+      - name: paritaprevir
+        pharmgkb_id: PA166163408
+      - name: ritonavir
+        pharmgkb_id: PA166163408
+    regulatory_sources:
+      - Swissmedic
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166184158
+      url: https://www.clinpgx.org/labelAnnotation/PA166184158
+    notes: Annotation of Swissmedic Label for ombitasvir / paritaprevir / ritonavir and IFNL3, IFNL4
+    pgx_action_level: Actionable PGx
+    summary:
+      The Swiss drug label for Ombitasvir/Paritaprevir/Ritonavir (Viekirax) states that IFNL3/4 (previously known as
+      IL28B) genotypes may affect the efficacy of Viekirax.
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166184434
+    label: Annotation of Swissmedic Label for sofosbuvir and IFNL3, IFNL4
+    authority_type: regulatory_label
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: sofosbuvir
+        pharmgkb_id: PA166122593
+    regulatory_sources:
+      - Swissmedic
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166184434
+      url: https://www.clinpgx.org/labelAnnotation/PA166184434
+    notes: Annotation of Swissmedic Label for sofosbuvir and IFNL3, IFNL4
+    pgx_action_level: Actionable PGx
+    summary:
+      The Swiss drug label for sofosbuvir (Sovaldi) states that "consideration should be given to possibly extending
+      the duration of therapy beyond 12 weeks up to 24 weeks, in particular for subgroups with one or more of the previously
+      identified negative predictive factors associated in the past with lower response rates to interferon-containing therapies
+      (e.g. advanced fibrosis/cirrhosis, high initial viral load, black skin, IL28B-Non-CC genotype, earlier non-response to
+      peginterferon alfa and ribavirin)."
+    prescribing_information:
+      Consideration should be given to possibly extending the duration of therapy beyond 12 weeks up
+      to 24 weeks, in particular for subgroups with one or more of the previously identified negative predictive factors associated
+      in the past with lower response rates to interferon-containing therapies (e.g. advanced fibrosis/cirrhosis, high initial
+      viral load, black skin, IL28B-Non-CC genotype, earlier non-response to peginterferon alfa and ribavirin).
+    related_alleles:
+      - id: PA166155468
+        symbol: rs12979860
+        name: rs12979860
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444930850
+    label: rs12979860 / peginterferon alfa-2a, peginterferon alfa-2b, ribavirin, simeprevir / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: peginterferon alfa-2a
+        pharmgkb_id: PA164749390
+      - name: peginterferon alfa-2b
+        pharmgkb_id: PA164784024
+      - name: ribavirin
+        pharmgkb_id: PA451241
+      - name: simeprevir
+        pharmgkb_id: PA166122590
+    phenotypes:
+      - Chronic hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444930850"
+      url: https://www.clinpgx.org/summaryAnnotation/1444930850
+    notes:
+      rs12979860 (IFNL3, IFNL4); peginterferon alfa-2a, peginterferon alfa-2b, ribavirin and simeprevir; Hepatitis C, Chronic
+      (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444930850_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with CC genotype may have increased response to simeprevir and peginterferon alfa-2a, peginterferon alfa-2b,
+          ribavirin therapy in people with Hepatitis C, Chronic as compared to patients with genotype CT or TT. However, RVR and
+          SVR rates were higher in simeprevir treatment group than placebo for all genotypes suggesting the role of IFNL3 genotype
+          is modest for simeprevir therapy as compare to PEG-IFN/RBV therapy. Other genetic and clinical factors may also influence
+          the response to simeprevir based therapy.
+      - id: clinpgx_summary_1444930850_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with CT genotype may have decreased response to simeprevir and peginterferon alfa-2a, peginterferon alfa-2b,
+          ribavirin therapy in people with Hepatitis C, Chronic as compared to patients with genotype CC. However, RVR and SVR
+          rates were higher in simeprevir treatment group than placebo for all genotypes suggesting the role of IFNL3 genotype
+          is modest for simeprevir therapy as compare to PEG-IFN/RBV therapy. Other genetic and clinical factors may also influence
+          the response to simeprevir based therapy.
+      - id: clinpgx_summary_1444930850_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with TT genotype may have decreased response to simeprevir and peginterferon alfa-2a, peginterferon alfa-2b,
+          ribavirin therapy in people with Hepatitis C, Chronic as compared to patients with genotype CC. However, RVR and SVR
+          rates were higher in simeprevir treatment group than placebo for all genotypes suggesting the role of IFNL3 genotype
+          is modest for simeprevir therapy as compare to PEG-IFN/RBV therapy. Other genetic and clinical factors may also influence
+          the response to simeprevir based therapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444930908
+    label: rs12979860 / daclatasvir, peginterferon alfa-2a, peginterferon alfa-2b, ribavirin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: daclatasvir
+        pharmgkb_id: PA166128167
+      - name: peginterferon alfa-2a
+        pharmgkb_id: PA164749390
+      - name: peginterferon alfa-2b
+        pharmgkb_id: PA164784024
+      - name: ribavirin
+        pharmgkb_id: PA451241
+    phenotypes:
+      - Chronic hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444930908"
+      url: https://www.clinpgx.org/summaryAnnotation/1444930908
+    notes:
+      rs12979860 (IFNL3, IFNL4); daclatasvir, peginterferon alfa-2a, peginterferon alfa-2b or ribavirin; Hepatitis C, Chronic
+      (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444930908_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with genotype CC may have increased response to daclatasvir, peginterferon alfa-2a, peginterferon alfa-2b
+          and ribavirin in people with Hepatitis C, Chronic as compared to patients with the CT or TT genotypes. SVR24 rates are
+          higher in patients treated with the combination of daclatasvir and pegIFN-alfa/RBV than those receiving pegIFN-alfa/RBV
+          alone across all genotypes regardless of viral subtypes. Other genetic and clinical factors may also influence the response
+          to daclatasvir therapy.
+      - id: clinpgx_summary_1444930908_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with genotype CT may have decreased response to daclatasvir, peginterferon alfa-2a, peginterferon alfa-2b
+          and ribavirin in people with Hepatitis C, Chronic as compared to patients with the CC genotype. SVR24 rates are higher
+          in patients treated with the combination of daclatasvir and pegIFN-alfa/RBV than those receiving pegIFN-alfa/RBV alone
+          across all genotypes regardless of viral subtypes. Other genetic and clinical factors may also influence the response
+          to daclatasvir therapy.
+      - id: clinpgx_summary_1444930908_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with genotype TT may have decreased response to daclatasvir, peginterferon alfa-2a, peginterferon alfa-2b
+          and ribavirin in people with Hepatitis C, Chronic as compared to patients with the CC genotype. SVR24 rates are higher
+          in patients treated with the combination of daclatasvir and pegIFN-alfa/RBV than those receiving pegIFN-alfa/RBV alone
+          across all genotypes regardless of viral subtypes. Other genetic and clinical factors may also influence the response
+          to daclatasvir therapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444876859
+    label: rs12979860 / deleobuvir, faldaprevir / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: deleobuvir
+        pharmgkb_id: PA166128130
+      - name: faldaprevir
+        pharmgkb_id: PA166128132
+    phenotypes:
+      - Chronic hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444876859"
+      url: https://www.clinpgx.org/summaryAnnotation/1444876859
+    notes: rs12979860 (IFNL3, IFNL4); deleobuvir or faldaprevir; Hepatitis C, Chronic (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444876859_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have increased response to deleobuvir and faldaprevir in people with Hepatitis
+          C genotype 1 as compared to patients with genotype CT or TT. Other genetic and clinical factors may also influence the
+          response to deleobuvir and faldaprevir.
+      - id: clinpgx_summary_1444876859_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have decreased response to deleobuvir and faldaprevir in people with Hepatitis
+          C genotype 1 as compared to patients with genotype CC. Other genetic and clinical factors may also influence the response
+          to deleobuvir and faldaprevir.
+      - id: clinpgx_summary_1444876859_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have decreased response to deleobuvir and faldaprevir in people with Hepatitis
+          C genotype 1 as compared to patients with genotype CC. Other genetic and clinical factors may also influence the response
+          to deleobuvir and faldaprevir.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449147022
+    label: rs12979860 / sofosbuvir, velpatasvir, voxilaprevir / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: sofosbuvir
+        pharmgkb_id: PA166122593
+      - name: velpatasvir
+        pharmgkb_id: PA166163415
+      - name: voxilaprevir
+        pharmgkb_id: PA166171182
+    phenotypes:
+      - Chronic hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449147022"
+      url: https://www.clinpgx.org/summaryAnnotation/1449147022
+    notes: rs12979860 (IFNL3, IFNL4); sofosbuvir, velpatasvir and voxilaprevir; Hepatitis C, Chronic (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449147022_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with genotypes CC may have decreased likelihood of virological relapse when treated with sofosbuvir, velpatasvir
+          and voxilaprevir for 8 weeks in people with Hepatitis C as compared to patients with genotype TT or CT.
+      - id: clinpgx_summary_1449147022_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with genotypes CT may have increased likelihood of virological relapse when treated with sofosbuvir, velpatasvir
+          and voxilaprevir for 8 weeks in people with Hepatitis C as compared to patients with genotype CC.
+      - id: clinpgx_summary_1449147022_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with genotypes TT may have increased likelihood of virological relapse when treated with sofosbuvir, velpatasvir
+          and voxilaprevir for 8 weeks in people with Hepatitis C as compared to patients with genotype CC.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448532313
+    label: rs12979860 / ledipasvir, sofosbuvir / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: ledipasvir
+        pharmgkb_id: PA166128166
+      - name: sofosbuvir
+        pharmgkb_id: PA166122593
+    phenotypes:
+      - Chronic hepatitis C virus infection
+      - Recurrence
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448532313"
+      url: https://www.clinpgx.org/summaryAnnotation/1448532313
+    notes: rs12979860 (IFNL3, IFNL4); ledipasvir and sofosbuvir; Hepatitis C, Chronic and Recurrence (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1448532313_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with genotype CC may have decreased likelihood of relapse when treated with ledipasvir and sofosbuvir in
+          people with Hepatitis C, Chronic as compared to patients with genotype TT. Other genetic and clinical factors may also
+          influences response to  ledipasvir/sofosbuvir therapy.
+      - id: clinpgx_summary_1448532313_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with genotype CT may have increased likelihood of relapse when treated with ledipasvir and sofosbuvir in
+          people with Hepatitis C, Chronic as compared to patients with genotype CC. Other genetic and clinical factors may also
+          influences response to  ledipasvir/sofosbuvir therapy.
+      - id: clinpgx_summary_1448532313_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with genotype TT may have increased likelihood of relapse when treated with ledipasvir and sofosbuvir in
+          people with Hepatitis C, Chronic as compared to patients with genotype CC. Other genetic and clinical factors may also
+          influences response to  ledipasvir/sofosbuvir therapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444930642
+    label: rs12979860 / ledipasvir, sofosbuvir / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: ledipasvir
+        pharmgkb_id: PA166128166
+      - name: sofosbuvir
+        pharmgkb_id: PA166122593
+    phenotypes:
+      - Chronic hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444930642"
+      url: https://www.clinpgx.org/summaryAnnotation/1444930642
+    notes: rs12979860 (IFNL3, IFNL4); ledipasvir and sofosbuvir; Hepatitis C, Chronic (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444930642_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with Hepatitis C and the rs12979860 CC genotype may have an increased response to ledipasvir and sofosbuvir
+          as compared to patients with the CT or TT genotypes. Other genetic and clinical factors may also influence the response
+          to ledipasvir and sofosbuvir.
+      - id: clinpgx_summary_1444930642_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with Hepatitis C and the rs12979860 CT genotype may have a decreased response to ledipasvir and sofosbuvir
+          as compared to patients with the CC genotype. Other genetic and clinical factors may also influence the response to
+          ledipasvir and sofosbuvir.
+      - id: clinpgx_summary_1444930642_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with Hepatitis C and the rs12979860 TT genotype may have a decreased response to ledipasvir and sofosbuvir
+          as compared to patients with the CC genotype. Other genetic and clinical factors may also influence the response to
+          ledipasvir and sofosbuvir.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451217540
+    label: rs12979860 / interferons / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: interferons
+        pharmgkb_id: PA451999
+    phenotypes:
+      - Hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451217540"
+      url: https://www.clinpgx.org/summaryAnnotation/1451217540
+    notes: rs12979860 (IFNL3, IFNL4); interferons; Hepatitis C (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451217540_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with a HCV genotype I infection and the rs12979860 CC genotype may have an increased response to treatment
+          with interferons as compared to patients with the CT or TT genotypes. However, this association was not found in patients
+          with HCV genotype II infections. Other genetic and clinical factors may also affect response to treatment with interferons.
+      - id: clinpgx_summary_1451217540_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with a HCV genotype I infection and the rs12979860 CT genotype may have a decreased response to treatment
+          with interferons as compared to patients with the CC genotype. However, this association was not found in patients with
+          HCV genotype II infections. Other genetic and clinical factors may also affect response to treatment with interferons.
+      - id: clinpgx_summary_1451217540_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with a HCV genotype I infection and the rs12979860 TT genotype may have a decreased response to treatment
+          with interferons as compared to patients with the CC genotype. However, this association was not found in patients with
+          HCV genotype II infections. Other genetic and clinical factors may also affect response to treatment with interferons.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449164443
+    label: rs12979860 / peginterferon alfa-2a, peginterferon alfa-2b / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: peginterferon alfa-2a
+        pharmgkb_id: PA164749390
+      - name: peginterferon alfa-2b
+        pharmgkb_id: PA164784024
+    phenotypes:
+      - Myeloproliferative Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449164443"
+      url: https://www.clinpgx.org/summaryAnnotation/1449164443
+    notes:
+      rs12979860 (IFNL3, IFNL4); peginterferon alfa-2a or peginterferon alfa-2b; Myeloproliferative Disorders (level 3
+      Efficacy)
+    effects:
+      - id: clinpgx_summary_1449164443_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have increased hematologic response to interferon-alpha treatment in patients
+          with myeloproliferative neoplasms as compared to patients with genotypes CT + TT. Other genetic and clinical factors
+          may also influence the response to interferon-alpha.
+      - id: clinpgx_summary_1449164443_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have decreased hematologic response to interferon-alpha treatment in patients
+          with myeloproliferative neoplasms as compared to patients with genotypes CC. Other genetic and clinical factors may
+          also influence the response to interferon-alpha.
+      - id: clinpgx_summary_1449164443_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have decreased hematologic response to interferon-alpha treatment in patients
+          with myeloproliferative neoplasms as compared to patients with genotypes CC. Other genetic and clinical factors may
+          also influence the response to interferon-alpha.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452438880
+    label: rs12979860 / tenofovir / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: tenofovir
+        pharmgkb_id: PA10204
+    phenotypes:
+      - HIV infectious disease
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452438880"
+      url: https://www.clinpgx.org/summaryAnnotation/1452438880
+    notes: rs12979860 (IFNL3, IFNL4); tenofovir; HIV Infections (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1452438880_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with HIV and the rs12979860 CC genotype may have increased clearance of tenofovir as compared to patients
+          with the CT or TT genotypes. This annotation only covers the pharmacokinetic relationship between rs12979860 and tenofovir
+          and does not include evidence about clinical outcomes. Other genetic and clinical factors may also influence tenofovir
+          clearance.
+      - id: clinpgx_summary_1452438880_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with HIV and the rs12979860 CT genotype may have increased clearance of tenofovir as compared to patients
+          with the TT genotype but decreased clearance compared to the CC genotype. This annotation only covers the pharmacokinetic
+          relationship between rs12979860 and tenofovir and does not include evidence about clinical outcomes. Other genetic and
+          clinical factors may also influence tenofovir clearance.
+      - id: clinpgx_summary_1452438880_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with HIV and the rs12979860 TT genotype may have decreased clearance of tenofovir as compared to patients
+          with the CC or CT genotypes. This annotation only covers the pharmacokinetic relationship between rs12979860 and tenofovir
+          and does not include evidence about clinical outcomes. Other genetic and clinical factors may also influence tenofovir
+          clearance.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451217440
+    label: rs12979860 / peginterferon alfa-2a / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: peginterferon alfa-2a
+        pharmgkb_id: PA164749390
+    phenotypes:
+      - Hepatitis B, Chronic
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451217440"
+      url: https://www.clinpgx.org/summaryAnnotation/1451217440
+    notes: rs12979860 (IFNL3, IFNL4); peginterferon alfa-2a; Hepatitis B, Chronic (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451217440_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with hepatitis B and the CC genotype may have a decreased response to treatment with peginterferon-alpha
+          2a and/or 2b as compared to patients with the TT genotype. However, one study found this association in the opposite
+          direction, while another failed to find an association. Other genetic and clinical factors may also affect a patient's
+          response to treatment peginterferon-alpha 2a and/or 2b
+      - id: clinpgx_summary_1451217440_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with hepatitis B and the CT genotype may have a decreased response to treatment with peginterferon-alpha
+          2a and/or 2b as compared to patients with the TT genotype. However, one study found this association in the opposite
+          direction, while another failed to find an association. Other genetic and clinical factors may also affect a patient's
+          response to treatment peginterferon-alpha 2a and/or 2b
+      - id: clinpgx_summary_1451217440_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with hepatitis B and the TT genotype may have an increased response to treatment with peginterferon-alpha
+          2a and/or 2b as compared to patients with the CC or CT genotypes. However, one study found this association in the opposite
+          direction, while another failed to find an association. Other genetic and clinical factors may also affect a patient's
+          response to treatment peginterferon-alpha 2a and/or 2b
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451217520
+    label: rs12979860 / sofosbuvir / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: sofosbuvir
+        pharmgkb_id: PA166122593
+    phenotypes:
+      - Chronic hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451217520"
+      url: https://www.clinpgx.org/summaryAnnotation/1451217520
+    notes: rs12979860 (IFNL3, IFNL4); sofosbuvir; Hepatitis C, Chronic (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451217520_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have an increased response to treatment with sofosbuvir and ribavirin as compared
+          to patients with the CT or TT genotypes. Other genetic and clinical factors may also affect a patient's response to
+          treatment with sofosbuvir and ribavirin.
+      - id: clinpgx_summary_1451217520_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have a decreased response to treatment with sofosbuvir and ribavirin as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also affect a patient's response to treatment
+          with sofosbuvir and ribavirin.
+      - id: clinpgx_summary_1451217520_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have a decreased response to treatment with sofosbuvir and ribavirin as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also affect a patient's response to treatment
+          with sofosbuvir and ribavirin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451217560
+    label: rs12979860 / interferons / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: interferons
+        pharmgkb_id: PA451999
+    phenotypes:
+      - Hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451217560"
+      url: https://www.clinpgx.org/summaryAnnotation/1451217560
+    notes: rs12979860 (IFNL3, IFNL4); interferons; Hepatitis C (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451217560_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have an increased response to treatment with interferons and ribavirin as compared
+          to patients with the CT or TT genotypes. Other genetic and clinical factors may also affect a patient's response to
+          treatment with interferons and ribavirin.
+      - id: clinpgx_summary_1451217560_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have a decreased response to treatment with interferons and ribavirin as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also affect a patient's response to treatment
+          with interferons and ribavirin.
+      - id: clinpgx_summary_1451217560_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have a decreased response to treatment with interferons and ribavirin as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also affect a patient's response to treatment
+          with interferons and ribavirin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183888969
+    label: rs12979860 / peginterferon alfa-2a, peginterferon alfa-2b, ribavirin, telaprevir / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: peginterferon alfa-2a
+        pharmgkb_id: PA164749390
+      - name: peginterferon alfa-2b
+        pharmgkb_id: PA164784024
+      - name: ribavirin
+        pharmgkb_id: PA451241
+      - name: telaprevir
+        pharmgkb_id: PA165958354
+    phenotypes:
+      - Chronic hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183888969"
+      url: https://www.clinpgx.org/summaryAnnotation/1183888969
+    notes:
+      rs12979860 (IFNL3, IFNL4); peginterferon alfa-2a, peginterferon alfa-2b, ribavirin and telaprevir; Hepatitis C, Chronic
+      (level 1A Efficacy)
+    effects:
+      - id: clinpgx_summary_1183888969_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs12979860 CC genotype and hepatitis C infection may have higher response rates (SVR) to triple
+          therapy (telaprevir, peginterferon alfa-2a/b and ribavirin) as compared to patients with the CT or TT genotype.  However,
+          conflicting evidence has been reported. The impact of IL28B genotype may be dampened in patients with prior PegIFN/RBV
+          treatment failure. Other genetic and clinical factors may also influence response to HCV triple therapy.
+      - id: clinpgx_summary_1183888969_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs12979860 CT genotype and hepatitis C infection may have lower response rates (SVR) to triple
+          therapy (telaprevir, peginterferon alfa-2a/b and ribavirin) as compared to patients with the CC genotype. However, conflicting
+          evidence has been reported. The impact of IL28B genotype may be dampened in patients with prior PegIFN/RBV treatment
+          failure. Other genetic and clinical factors may also influence response to HCV triple therapy.
+      - id: clinpgx_summary_1183888969_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs12979860 TT genotype and hepatitis C infection may have lower response rates (SVR) to triple
+          therapy (telaprevir, peginterferon alfa-2a/b and ribavirin) as compared to patients with the CC genotype. However, conflicting
+          evidence has been reported. The impact of IL28B genotype may be dampened in patients with prior PegIFN/RBV treatment
+          failure. Other genetic and clinical factors may also influence response to HCV triple therapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_827862764
+    label: rs12979860 / peginterferon alfa-2a, peginterferon alfa-2b, ribavirin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: peginterferon alfa-2a
+        pharmgkb_id: PA164749390
+      - name: peginterferon alfa-2b
+        pharmgkb_id: PA164784024
+      - name: ribavirin
+        pharmgkb_id: PA451241
+    phenotypes:
+      - Hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "827862764"
+      url: https://www.clinpgx.org/summaryAnnotation/827862764
+    notes: rs12979860 (IFNL3, IFNL4); peginterferon alfa-2a, peginterferon alfa-2b and ribavirin; Hepatitis C (level 1A Efficacy)
+    effects:
+      - id: clinpgx_summary_827862764_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs12979860 CC genotype and hepatitis C infection may have increased response (typically assayed
+          as sustained virological response, SVR) when administered peg interferon alpha 2a or 2b in combination with ribavirin
+          as compared to patients with the CT or TT genotypes. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence response to peginterferon alpha and ribavirin.
+      - id: clinpgx_summary_827862764_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs12979860 CT genotype and hepatitis C infection may have decreased response (typically assayed
+          as sustained virological response, SVR) when administered peg interferon alpha 2a or 2b in combination with ribavirin
+          as compared to patients with the CC genotype, but an increased response as compared to patients with the TT genotype.
+          However, conflicting evidence has been reported. Other genetic and clinical factors may also influence response to peginterferon
+          alpha and ribavirin.
+      - id: clinpgx_summary_827862764_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs12979860 TT genotype and hepatitis C infection may have decreased response (typically assayed
+          as sustained virological response, SVR) when administered peg interferon alpha 2a or 2b in combination with ribavirin
+          as compared to patients with the CC or CT genotypes. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence a response to peginterferon alpha and ribavirin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183680546
+    label: rs12979860 / boceprevir, peginterferon alfa-2a, peginterferon alfa-2b, ribavirin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - IFNL3
+      - IFNL4
+    variant: rs12979860
+    drugs:
+      - name: boceprevir
+        pharmgkb_id: PA165948902
+      - name: peginterferon alfa-2a
+        pharmgkb_id: PA164749390
+      - name: peginterferon alfa-2b
+        pharmgkb_id: PA164784024
+      - name: ribavirin
+        pharmgkb_id: PA451241
+    phenotypes:
+      - Chronic hepatitis C virus infection
+    phenotype_categories:
+      - Efficacy
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183680546"
+      url: https://www.clinpgx.org/summaryAnnotation/1183680546
+    notes:
+      rs12979860 (IFNL3, IFNL4); boceprevir, peginterferon alfa-2a, peginterferon alfa-2b and ribavirin; Hepatitis C, Chronic
+      (level 1A Efficacy)
+    effects:
+      - id: clinpgx_summary_1183680546_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs12979860 CC genotype and hepatitis C infection may have increased response to triple therapy
+          (boceprevir, peginterferon alfa-2a/2b and ribavirin) as compared to patients with the CT or TT genotype. Other genetic
+          and clinical factors may also influence response to boceprevir-peginterferon based therapy.
+      - id: clinpgx_summary_1183680546_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs12979860 CT genotype and hepatitis C infection may have decreased response to triple therapy
+          (boceprevir, peginterferon alfa-2a/2b and ribavirin) as compared to patients with the CC genotype. Other genetic and
+          clinical factors may also influence response to boceprevir-peginterferon based therapy.
+      - id: clinpgx_summary_1183680546_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs12979860.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs12979860 TT genotype and hepatitis C infection may have decreased response to triple therapy
+          (boceprevir, peginterferon alfa-2a/2b and ribavirin) as compared to patients with the CC genotype. Other genetic and
+          clinical factors may also influence response to boceprevir-peginterferon based therapy.

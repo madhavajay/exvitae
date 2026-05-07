@@ -1,0 +1,66 @@
+name: CYP2C-pgx-rs12777823
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: CYP2C
+summary:
+  CYP2C rs12777823 pharmacogenomics panel entry with a ClinPGx level 1A warfarin dosage summary annotation attached
+  in rs12777823-pgx.yaml. This SNP is not a CYP star allele.
+identifiers:
+  rsids:
+    - rs12777823
+  aliases:
+    - rs56463295
+    - rs59201782
+coordinates:
+  grch37:
+    chrom: "10"
+    pos: 96405502
+  grch38:
+    chrom: "10"
+    pos: 94645745
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+  observed_alts:
+    - A
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs12777823
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs12777823
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs12777823
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: ClinPGx / PharmGKB variant summary annotation PA166154157
+      url: https://www.clinpgx.org/variant/PA166154157/summaryAnnotation
+      fields:
+        - summary
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: cyp2c_pgx_rs12777823_pgx_sidecar
+    include: rs12777823-pgx.yaml
+    binding:
+      source: variant
+      variant: rs12777823.yaml
+      key: alt
+      operator: equals
+      value: A
+      description: Loads this sidecar when the participant carries the expected PGx-significant rs12777823 alt allele A.
+    notes: Detailed ClinPGx/PharmGKB PGx findings are stored in the sidecar file.

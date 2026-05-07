@@ -1,0 +1,75 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1051375.yaml
+gene: CACNA1C
+rsid: rs1051375
+variant_pa_id: PA166154509
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154509/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_827863928
+    label: rs1051375 / atenolol, verapamil / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - CACNA1C
+    variant: rs1051375
+    drugs:
+      - name: atenolol
+        pharmgkb_id: PA448499
+      - name: verapamil
+        pharmgkb_id: PA451868
+    phenotypes:
+      - Coronary Artery Disease
+      - Hypertension
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "827863928"
+      url: https://www.clinpgx.org/summaryAnnotation/827863928
+    notes: rs1051375 (CACNA1C); atenolol or verapamil; Coronary Artery Disease and Hypertension (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_827863928_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1051375.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype, hypertension and stable coronary artery disease, are more likely to benefit from
+          treatment with verapamil compared to treatment with atenolol. Other genetic and clinical factors may also influence
+          a patient's response to treatment.
+      - id: clinpgx_summary_827863928_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1051375.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype, hypertension and stable coronary artery disease, may respond similarily to treatment
+          with atenolol or verapamil. Other genetic and clinical factors may also influence a patient's response to treatment.
+      - id: clinpgx_summary_827863928_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1051375.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype, hypertension and stable coronary artery disease, are more likely to benefit from
+          treatment with atenolol compared to treatment with verapamil. Other genetic and clinical factors may also influence
+          a patient's response to treatment.

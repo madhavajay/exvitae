@@ -1,0 +1,63 @@
+name: GRIK1-pgx-rs2832407
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: GRIK1
+summary: GRIK1 pharmacogenomics panel entry for rs2832407 with detailed ClinPGx/PharmGKB annotations attached in rs2832407-pgx.yaml.
+identifiers:
+  rsids:
+    - rs2832407
+  aliases:
+    - rs57193330
+coordinates:
+  grch37:
+    chrom: "21"
+    pos: 30967508
+  grch38:
+    chrom: "21"
+    pos: 29595188
+alleles:
+  kind: snv
+  ref: C
+  alts:
+    - A
+  observed_alts:
+    - A
+    - G
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs2832407
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2832407
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2832407
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: ClinPGx / PharmGKB variant summary annotations PA166156001 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166156001/summaryAnnotation
+      fields:
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: grik1_pgx_rs2832407_pgx_sidecar
+    include: rs2832407-pgx.yaml
+    binding:
+      source: variant
+      variant: rs2832407.yaml
+      key: alt
+      operator: equals
+      value: A
+      description: Loads this sidecar when the participant carries the expected PGx-significant rs2832407 alt allele A.
+    notes: Detailed ClinPGx/PharmGKB summary findings are stored in the sidecar file.

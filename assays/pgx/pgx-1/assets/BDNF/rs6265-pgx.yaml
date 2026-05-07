@@ -1,0 +1,583 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs6265.yaml
+gene: BDNF
+rsid: rs6265
+variant_pa_id: PA166154259
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154259/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1446896644
+    label: rs6265 / olanzapine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: olanzapine
+        pharmgkb_id: PA450688
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1446896644"
+      url: https://www.clinpgx.org/summaryAnnotation/1446896644
+    notes: rs6265 (BDNF); olanzapine; Schizophrenia (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1446896644_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and schizophrenia may have a better response when treated with olanzapine as compared
+          to patients with the CT or TT genotype. Other genetic and clinical factors may also influence response to olanzapine.
+      - id: clinpgx_summary_1446896644_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and schizophrenia may have a poorer response when treated with olanzapine as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also influence response to olanzapine.
+      - id: clinpgx_summary_1446896644_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and schizophrenia may have a poorer response when treated with olanzapine as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also influence response to olanzapine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184987488
+    label: rs6265 / analgesics, antiinflammatory agents, non-steroids, ergot alkaloids, opioids, sumatriptan / Other
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: analgesics
+        pharmgkb_id: PA164712362
+      - name: antiinflammatory agents, non-steroids
+        pharmgkb_id: PA164712462
+      - name: ergot alkaloids
+        pharmgkb_id: PA164712741
+      - name: opioids
+        pharmgkb_id: PA452618
+      - name: sumatriptan
+        pharmgkb_id: PA451566
+    phenotypes: []
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184987488"
+      url: https://www.clinpgx.org/summaryAnnotation/1184987488
+    notes:
+      rs6265 (BDNF); Analgesics, Antiinflammatory agents, non-steroids, Ergot alkaloids, opioids or sumatriptan (level
+      3)
+    effects:
+      - id: clinpgx_summary_1184987488_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype with substance withdrawal syndrome may have an increased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the TT genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+      - id: clinpgx_summary_1184987488_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype with substance withdrawal syndrome may have a decreased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the CC genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+      - id: clinpgx_summary_1184987488_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype with substance withdrawal syndrome may have a decreased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the CC genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183702964
+    label: rs6265 / antipsychotics / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183702964"
+      url: https://www.clinpgx.org/summaryAnnotation/1183702964
+    notes: rs6265 (BDNF); antipsychotics; Schizophrenia (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183702964_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and schizophrenia may show less resistance to treatment with antipsychotics as compared
+          to patients with the CT or TT genotype. Other genetic and clinical factors may also influence resistance to antipsychotics.
+      - id: clinpgx_summary_1183702964_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and schizophrenia may show greater resistance to treatment with antipsychotics as
+          compared to patients with the CC genotype. Other genetic and clinical factors may also influence resistance to antipsychotics.
+      - id: clinpgx_summary_1183702964_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and schizophrenia may show greater resistance to treatment with antipsychotics as
+          compared to patients with the CC genotype. Other genetic and clinical factors may also influence resistance to antipsychotics.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_982040494
+    label: rs6265 / paroxetine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: paroxetine
+        pharmgkb_id: PA450801
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "982040494"
+      url: https://www.clinpgx.org/summaryAnnotation/982040494
+    notes: rs6265 (BDNF); paroxetine; Depressive Disorder, Major (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_982040494_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and Depressive Disorder may be more likely to respond to paroxetine as compared to
+          patients with the TT genotype. However, contradictory findings are reported. Other genetic and clinical factors may
+          also influence a patient's response to paroxetine.
+      - id: clinpgx_summary_982040494_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and Depressive Disorder may be more likely to respond to paroxetine as compared to
+          patients with the TT genotype. However, contradictory findings are reported. Other genetic and clinical factors may
+          also influence a patient's response to paroxetine.
+      - id: clinpgx_summary_982040494_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and Depressive Disorder may be less likely to respond to paroxetine as compared to
+          patients with the CT or CC genotype. However, contradictory findings are reported. Other genetic and clinical factors
+          may also influence a patient's response to paroxetine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183619225
+    label: rs6265 / fluoxetine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: fluoxetine
+        pharmgkb_id: PA449673
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183619225"
+      url: https://www.clinpgx.org/summaryAnnotation/1183619225
+    notes: rs6265 (BDNF); fluoxetine; Depressive Disorder, Major (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1183619225_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and major depressive disorder who are treated with fluoxetine may have a higher likelihood
+          of side effects as compared to patients with the TT genotype. This SNP was not associated with response to fluoxetine.
+          Other genetic and clinical factors may also influence a patient's risk of fluoxetine-induced side effects.
+      - id: clinpgx_summary_1183619225_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and major depressive disorder who are treated with fluoxetine may have a higher likelihood
+          of side effects as compared to patients with the TT genotype or may have a reduced likelihood of side effects as compared
+          to patients with the CC genotype. This SNP was not associated with response to fluoxetine. Other genetic and clinical
+          factors may also influence a patient's risk of fluoxetine-induced side effects.
+      - id: clinpgx_summary_1183619225_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and major depressive disorder who are treated with fluoxetine may have a reduced likelihood
+          of side effects as compared to patients with the CC genotype. This SNP was not associated with response to fluoxetine.
+          Other genetic and clinical factors may also influence a patient's risk of fluoxetine-induced side effects.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183700891
+    label: rs6265 / heroin, methamphetamine / Other
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: heroin
+        pharmgkb_id: PA452619
+      - name: methamphetamine
+        pharmgkb_id: PA450403
+    phenotypes:
+      - Substance-Related Disorders
+    phenotype_categories:
+      - Other
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183700891"
+      url: https://www.clinpgx.org/summaryAnnotation/1183700891
+    notes: rs6265 (BDNF); heroin or methamphetamine; Substance-Related Disorders (level 4)
+    effects:
+      - id: clinpgx_summary_1183700891_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have a lower risk of dependence on methamphetamine or heroin as compared to patients
+          with the TT genotype. However, contradictory evidence exists. Other genetic and clinical factors may also influence
+          a patient's risk of addiction to methamphetamine or heroin.
+      - id: clinpgx_summary_1183700891_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have a greater risk of dependence on methamphetamine or heroin as compared to
+          patients with the CC genotype or may have a lower risk of dependence on methamphetamine or heroin as compared to patients
+          with the TT genotype. However, contradictory evidence exists. Other genetic and clinical factors may also influence
+          a patient's risk of addiction to methamphetamine or heroin.
+      - id: clinpgx_summary_1183700891_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have a greater risk of dependence on methamphetamine or heroin as compared to
+          patients with the CC genotype. However, contradictory evidence exists. Other genetic and clinical factors may also influence
+          a patient's risk of addiction to methamphetamine or heroin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450813988
+    label: rs6265 / methamphetamine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: methamphetamine
+        pharmgkb_id: PA450403
+    phenotypes:
+      - Methamphetamine dependence
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450813988"
+      url: https://www.clinpgx.org/summaryAnnotation/1450813988
+    notes: rs6265 (BDNF); methamphetamine; methamphetamine dependence (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450813988_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may be more likely to respond to treatment for methamphetamine dependence as compared
+          to patients with the CT or TT genotypes. This association was only observed in patients of European ancestry. Other
+          genetic or clinical factors may also affect a patient's response to treatment for methamphetamine dependence.
+      - id: clinpgx_summary_1450813988_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may be less likely to respond to treatment for methamphetamine dependence as compared
+          to patients with the CC genotype. This association was only observed in patients of European ancestry. Other genetic
+          or clinical factors may also affect a patient's response to treatment for methamphetamine dependence.
+      - id: clinpgx_summary_1450813988_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may be less likely to respond to treatment for methamphetamine dependence as compared
+          to patients with the CC genotype. This association was only observed in patients of European ancestry. Other genetic
+          or clinical factors may also affect a patient's response to treatment for methamphetamine dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1043858606
+    label: rs6265 / antidepressants, citalopram, paroxetine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: antidepressants
+        pharmgkb_id: PA452229
+      - name: citalopram
+        pharmgkb_id: PA449015
+      - name: paroxetine
+        pharmgkb_id: PA450801
+    phenotypes:
+      - Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1043858606"
+      url: https://www.clinpgx.org/summaryAnnotation/1043858606
+    notes: rs6265 (BDNF); antidepressants, citalopram or paroxetine; Depressive Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1043858606_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and Depressive Disorder may be more likely to respond to paroxetine but less likely
+          to respond to citalopram or antidepressants as compared to patients with the CT or TT genotype. However, contradictory
+          findings have been reported. Other genetic and clinical factors may also influence a patient's response to anti-depressants.
+      - id: clinpgx_summary_1043858606_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and Depressive Disorder may be more likely to respond to paroxetine or antidepressants
+          as compared to patients with the CC or TT genotype. However, contradictory findings have been reported. Other genetic
+          and clinical factors may also influence a patient's response to anti-depressants.
+      - id: clinpgx_summary_1043858606_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and Depressive Disorder may be less likely to respond to paroxetine or antidepressants
+          but more likely to respond to citalopram as compared to patients with the CC or CT genotype. However, contradictory
+          findings have been reported. Other genetic and clinical factors may also influence a patient's response to anti-depressants.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1446897191
+    label: rs6265 / antipsychotics / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - BDNF
+    variant: rs6265
+    drugs:
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1446897191"
+      url: https://www.clinpgx.org/summaryAnnotation/1446897191
+    notes: rs6265 (BDNF); antipsychotics; Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1446897191_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and schizophrenia may have greater weight gain when treated with antipsychotics as
+          compared to patients with the CT or TT genotype. Other genetic and clinical factors may also influence weight gain in
+          patients taking antipsychotics.
+      - id: clinpgx_summary_1446897191_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and schizophrenia may have lower weight gain when treated with antipsychotics as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also influence weight gain in patients taking
+          antipsychotics.
+      - id: clinpgx_summary_1446897191_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6265.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and schizophrenia may have lower weight gain when treated with antipsychotics as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also influence weight gain in patients taking
+          antipsychotics.

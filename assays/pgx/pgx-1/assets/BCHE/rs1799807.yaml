@@ -1,0 +1,69 @@
+name: BCHE-pgx-rs1799807
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: BCHE
+summary: BCHE pharmacogenomics panel entry for rs1799807 with detailed ClinPGx/PharmGKB annotations attached in rs1799807-pgx.yaml.
+identifiers:
+  rsids:
+    - rs1799807
+  aliases:
+    - rs52796585
+    - rs56541123
+    - rs386545549
+coordinates:
+  grch37:
+    chrom: "3"
+    pos: 165548529
+  grch38:
+    chrom: "3"
+    pos: 165830741
+alleles:
+  kind: snv
+  ref: T
+  alts:
+    - C
+  observed_alts:
+    - A
+    - C
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs1799807
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799807
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799807
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: ClinPGx / PharmGKB variant annotations PA166156327 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166156327/summaryAnnotation
+      fields:
+        - findings[0]
+    - kind: database
+      label: ClinPGx / PharmGKB variant drug label annotations PA166156327 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166156327/labelAnnotation
+      fields:
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: bche_pgx_rs1799807_pgx_sidecar
+    include: rs1799807-pgx.yaml
+    binding:
+      source: variant
+      variant: rs1799807.yaml
+      key: alt
+      operator: equals
+      value: C
+      description: Loads this sidecar when the participant carries the expected PGx-significant rs1799807 alt allele C.
+    notes: Detailed ClinPGx/PharmGKB summary and drug-label findings are stored in the sidecar file.

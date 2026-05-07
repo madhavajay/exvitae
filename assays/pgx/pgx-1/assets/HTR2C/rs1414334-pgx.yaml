@@ -1,0 +1,267 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1414334.yaml
+gene: HTR2C
+rsid: rs1414334
+variant_pa_id: PA166157862
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166157862/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451277440
+    label: rs1414334 / risperidone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - HTR2C
+    variant: rs1414334
+    drugs:
+      - name: risperidone
+        pharmgkb_id: PA451257
+    phenotypes:
+      - Metabolic Syndrome
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451277440"
+      url: https://www.clinpgx.org/summaryAnnotation/1451277440
+    notes: rs1414334 (HTR2C); risperidone; Metabolic Syndrome (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451277440_c
+        label: C
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype C.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome and the C genotype who are treated with risperidone may have an increased risk of
+          developing metabolic syndrome as compared to patients with the G genotype. Other genetic and clinical factors may also
+          influence a patient's risk for developing metabolic syndrome.
+      - id: clinpgx_summary_1451277440_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes and the CC genotype who are treated with risperidone may have an increased risk
+          of developing metabolic syndrome as compared to patients with the GG genotype. Other genetic and clinical factors may
+          also influence a patient's risk for developing metabolic syndrome. This gene is on the X chromosome therefore some individuals
+          may have only one allele.
+      - id: clinpgx_summary_1451277440_cg
+        label: CG
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CG.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes and the CG genotype who are treated with risperidone may have an increased risk
+          of developing metabolic syndrome as compared to patients with the GG genotype. Other genetic and clinical factors may
+          also influence a patient's risk for developing metabolic syndrome. This gene is on the X chromosome therefore some individuals
+          may have only one allele.
+      - id: clinpgx_summary_1451277440_g
+        label: G
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype G.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome and the G genotype who are treated with risperidone may have a decreased risk of
+          developing metabolic syndrome as compared to patients with the C genotype. This gene is on the X chromosome and males
+          have only one allele. Other genetic and clinical factors may also influence a patient's risk for developing metabolic
+          syndrome.
+      - id: clinpgx_summary_1451277440_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes and the GG genotype who are treated with risperidone may have a decreased, but not
+          absent, risk of developing metabolic syndrome as compared to patients with the CG and CC genotype. Other genetic and
+          clinical factors may also influence a patient's risk for developing metabolic syndrome. This gene is on the X chromosome
+          therefore some individuals may have only one allele.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385674
+    label: rs1414334 / clozapine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - HTR2C
+    variant: rs1414334
+    drugs:
+      - name: clozapine
+        pharmgkb_id: PA449061
+    phenotypes:
+      - Metabolic Syndrome
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385674"
+      url: https://www.clinpgx.org/summaryAnnotation/655385674
+    notes: rs1414334 (HTR2C); clozapine; Metabolic Syndrome and Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655385674_c
+        label: C
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype C.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome and the C genotype who are treated with clozapine may have an increased risk of developing
+          metabolic syndrome as compared to patients with the G genotype. Other genetic and clinical factors may also influence
+          a patient's risk for developing metabolic syndrome.
+      - id: clinpgx_summary_655385674_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes and the CC genotype who are treated with clozapine may have an increased risk of
+          developing metabolic syndrome as compared to patients with the GG genotype. Other genetic and clinical factors may also
+          influence a patient's risk for developing metabolic syndrome. This gene is on the X chromosome therefore some individuals
+          may have only one allele.
+      - id: clinpgx_summary_655385674_cg
+        label: CG
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CG.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes and the CG genotype who are treated with clozapine may have an increased risk of
+          developing metabolic syndrome as compared to patients with the GG genotype. Other genetic and clinical factors may also
+          influence a patient's risk for developing metabolic syndrome. This gene is on the X chromosome therefore some individuals
+          may have only one allele.
+      - id: clinpgx_summary_655385674_g
+        label: G
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype G.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome and the G genotype who are treated with clozapine may have a decreased risk of developing
+          metabolic syndrome as compared to patients with the C genotype. This gene is on the X chromosome and males have only
+          one allele. Other genetic and clinical factors may also influence a patient's risk for developing metabolic syndrome.
+      - id: clinpgx_summary_655385674_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes and the GG genotype who are treated with clozapine may have a decreased, but not
+          absent, risk of developing metabolic syndrome as compared to patients with the CG and CC genotype. Other genetic and
+          clinical factors may also influence a patient's risk for developing metabolic syndrome. This gene is on the X chromosome
+          therefore some individuals may have only one allele.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183615135
+    label: rs1414334 / olanzapine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - HTR2C
+    variant: rs1414334
+    drugs:
+      - name: olanzapine
+        pharmgkb_id: PA450688
+    phenotypes:
+      - Mental Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183615135"
+      url: https://www.clinpgx.org/summaryAnnotation/1183615135
+    notes: rs1414334 (HTR2C); olanzapine; Mental Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1183615135_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Women with the CC genotype and mental disorders (excluding schizophrenia) may have smaller weight gain when treated
+          with olanzapine as compared to women with the GG genotype. Other genetic and clinical factors may also influence weight
+          gain.
+      - id: clinpgx_summary_1183615135_cg
+        label: CG
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CG.
+        text:
+          Women with the CG genotype and mental disorders (excluding schizophrenia) may have greater weight gain when treated
+          with olanzapine as compared to women with the CC genotype, or smaller weight gain when treated with olanzapine as compared
+          to women with the GG genotype. Other genetic and clinical factors may also influence weight gain.
+      - id: clinpgx_summary_1183615135_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1414334.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Women with the GG genotype and mental disorders (excluding schizophrenia) may have greater weight gain when treated
+          with olanzapine as compared to women with the CC genotype. Other genetic and clinical factors may also influence weight
+          gain.

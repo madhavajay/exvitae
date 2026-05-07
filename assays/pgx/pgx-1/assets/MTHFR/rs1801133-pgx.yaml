@@ -1,0 +1,1385 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1801133.yaml
+gene: MTHFR
+rsid: rs1801133
+variant_pa_id: PA166153644
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166153644/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166153644/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166127695
+    label: Annotation of HCSC Label for ethinyl estradiol / norelgestromin and F2, F5, MTHFR, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - MTHFR
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs1801133
+    drugs:
+      - name: ethinyl estradiol
+        pharmgkb_id: PA165290929
+      - name: norelgestromin
+        pharmgkb_id: PA165290929
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166127695
+      url: https://www.clinpgx.org/labelAnnotation/PA166127695
+    notes: Annotation of HCSC Label for ethinyl estradiol / norelgestromin and F2, F5, MTHFR, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The product monograph for norelgestromin and ethinyl estradiol (EVRA) states that the drug is contraindicated in
+      women with Factor V Leiden mutation, antithrombin III deficiency, protein C deficiency, protein S deficiency, hyperhomocysteinemia
+      due to mutations in the MTHFR gene and prothrombin mutation G20210A (among other contraindications), due to the risk for
+      arterial or venous thrombosis.
+    prescribing_information: |-
+      Excerpt from the product monograph:
+      Contraindications. The EVRA(R) (norelgestromin and ethinyl estradiol) transdermal system should not be used in women with: presence of severe or multiple risk factor(s) for arterial or venous thrombosis such as:
+      hereditary or acquired predisposition for venous or arterial thrombosis, such as Factor V Leiden mutation and activated protein C (APC-) resistance, antithrombin-III-deficiency, protein C deficiency, protein S deficiency, hyperhomocysteinemia (e.g., due to MTHFR C677T, A1298 mutations), prothrombin mutation G20210A, and antiphospholipid antibodies (anticardiolipin antibodies, lupus anticoagulant)
+    prescribing_actions:
+      - Alternate Drug
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153643
+        symbol: rs1801131
+        name: rs1801131
+      - id: PA166153644
+        symbol: rs1801133
+        name: rs1801133
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183614499
+    label: rs1801133 / disulfiram / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: disulfiram
+        pharmgkb_id: PA449376
+    phenotypes:
+      - Cocaine dependence
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183614499"
+      url: https://www.clinpgx.org/summaryAnnotation/1183614499
+    notes: rs1801133 (MTHFR); disulfiram; Cocaine-Related Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183614499_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and cocaine dependence may have an increased response when treated with disulfiram
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence response to disulfiram.
+      - id: clinpgx_summary_1183614499_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and cocaine dependence may have an increased response when treated with disulfiram
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence response to disulfiram.
+      - id: clinpgx_summary_1183614499_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and cocaine dependence may have a decreased response when treated with disulfiram
+          as compared to patients with the AA or AG genotype. Other genetic and clinical factors may also influence response to
+          disulfiram.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183491775
+    label: rs1801133 / pravastatin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: pravastatin
+        pharmgkb_id: PA451089
+    phenotypes:
+      - Coronary Artery Disease
+      - Myocardial Infarction
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183491775"
+      url: https://www.clinpgx.org/summaryAnnotation/1183491775
+    notes: rs1801133 (MTHFR); pravastatin; Coronary Artery Disease and Myocardial Infarction (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183491775_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and Hypertension who are treated with pravastatin may have an increased risk of nonfatal
+          myocardial infarction and fatal coronary heart disease as compared to patients with the GG genotype. Other genetic and
+          clinical factors may also influence a patient's response to pravastatin treatment.
+      - id: clinpgx_summary_1183491775_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and Hypertension who are treated with pravastatin may have an increased risk of nonfatal
+          myocardial infarction and fatal coronary heart disease  as compared to patients with the GG genotype. Other genetic
+          and clinical factors may also influence a patient's response to pravastatin treatment.
+      - id: clinpgx_summary_1183491775_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and Hypertension who are treated with pravastatin may have a decreased risk of nonfatal
+          myocardial infarction and fatal coronary heart disease  as compared to patients with the AG or AA genotype. Other genetic
+          and clinical factors may also influence a patient's response to pravastatin treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_827848365
+    label: rs1801133 / methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+      - Drug Toxicity
+      - Leukopenia
+      - Lymphoma
+      - Mucositis
+      - Myelosuppression
+      - Neoplasms
+      - Neutropenia
+      - Osteosarcoma
+      - Primary central nervous system lymphoma
+      - Thrombocytopenia
+      - Toxic liver disease
+    phenotype_categories:
+      - Toxicity
+    evidence_level: 2A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "827848365"
+      url: https://www.clinpgx.org/summaryAnnotation/827848365
+    notes:
+      rs1801133 (MTHFR); methotrexate; Drug Toxicity, Leukopenia, Lymphoma, Mucositis, Myelosuppression, Neoplasms, Neutropenia,
+      Osteosarcoma, Precursor Cell Lymphoblastic Leukemia-Lymphoma, Primary central nervous system lymphoma, Thrombocytopenia
+      and Toxic liver disease (level 2A Toxicity)
+    effects:
+      - id: clinpgx_summary_827848365_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1801133 AA genotype and cancer who are treated with methotrexate may be at increased risk of
+          toxicity as compared to patients with the AG or GG genotype. However, conflicting evidence has been reported. Other
+          genetic and clinical factors may also influence risk of toxicity following methotrexate treatment. This drug-variant
+          pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_827848365_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1801133 AG genotype and cancer who are treated with methotrexate may be at increased risk of
+          toxicity as compared to patients with the GG genotype, and may be at decreased risk of toxicity compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          risk of toxicity following methotrexate treatment. This drug-variant pair has been assigned a “no recommendation” by
+          DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_827848365_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1801133 GG genotype and cancer who are treated with methotrexate may be at decreased risk of
+          toxicity as compared to patients with the AA or AG genotype. However, conflicting evidence has been reported. Other
+          genetic and clinical factors may also influence risk of toxicity following methotrexate treatment. This drug-variant
+          pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451476564
+    label: rs1801133 / cisplatin, doxorubicin, methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - CLCN6
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: cisplatin
+        pharmgkb_id: PA449014
+      - name: doxorubicin
+        pharmgkb_id: PA449412
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Nephrotoxicity
+      - Osteosarcoma
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451476564"
+      url: https://www.clinpgx.org/summaryAnnotation/1451476564
+    notes: rs1801133 (CLCN6, MTHFR); cisplatin, doxorubicin and methotrexate; nephrotoxicity and Osteosarcoma (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451476564_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with osteosarcoma and the rs1801133 AA genotype may be at an increased risk of developing nephrotoxicity
+          when treated with cisplatin, doxorubicin and methotrexate as compared to patients with the GG genotype. Other genetic
+          and clinical factors may also influence risk of developing nephrotoxicity when treated with cisplatin, doxorubicin and
+          methotrexate.
+      - id: clinpgx_summary_1451476564_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with osteosarcoma and the rs1801133 AG genotype may be at an increased risk of developing nephrotoxicity
+          when treated with cisplatin, doxorubicin and methotrexate as compared to patients with the GG genotype. Other genetic
+          and clinical factors may also influence risk of developing nephrotoxicity when treated with cisplatin, doxorubicin and
+          methotrexate.
+      - id: clinpgx_summary_1451476564_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with osteosarcoma and the rs1801133 GG genotype may be at a decreased risk of developing nephrotoxicity
+          when treated with cisplatin, doxorubicin and methotrexate as compared to patients with the AA or AG genotypes. Other
+          genetic and clinical factors may also influence risk of developing nephrotoxicity when treated with cisplatin, doxorubicin
+          and methotrexate.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447813969
+    label: rs1801133 / fluorouracil, leucovorin, oxaliplatin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: fluorouracil
+        pharmgkb_id: PA128406956
+      - name: leucovorin
+        pharmgkb_id: PA450198
+      - name: oxaliplatin
+        pharmgkb_id: PA131285527
+    phenotypes:
+      - Colonic Neoplasms
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447813969"
+      url: https://www.clinpgx.org/summaryAnnotation/1447813969
+    notes: rs1801133 (MTHFR); fluorouracil, leucovorin or oxaliplatin; Colonic Neoplasms (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1447813969_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with genotype AA and colorectal neoplasms may have an increased response to fluorouracil, leucovorin and
+          oxaliplatin (FOLFOX therapy) as compared to patients with the GG genotype. However, conflicting evidence exists.Other
+          genetic and clinical factors may also influence a patient's response to FOLFOX therapy.
+      - id: clinpgx_summary_1447813969_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with genotype AG and colorectal neoplasms may have an increased response to fluorouracil, leucovorin and
+          oxaliplatin (FOLFOX therapy) as compared to patients with the GG genotype. However, conflicting evidence exists.Other
+          genetic and clinical factors may also influence a patient's response to FOLFOX therapy.
+      - id: clinpgx_summary_1447813969_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with genotype GG and colorectal neoplasms may have a decreased response to fluorouracil, leucovorin and
+          oxaliplatin (FOLFOX therapy) as compared to patients with the AA or AG genotypes. However, conflicting evidence exists.Other
+          genetic and clinical factors may also influence a patient's response to FOLFOX therapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204975
+    label: rs1801133 / mercaptopurine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: mercaptopurine
+        pharmgkb_id: PA450379
+    phenotypes:
+      - Acute lymphoblastic leukemia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204975"
+      url: https://www.clinpgx.org/summaryAnnotation/981204975
+    notes: rs1801133 (MTHFR); mercaptopurine; Precursor Cell Lymphoblastic Leukemia-Lymphoma (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_981204975_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have increased likelihood of treatment interruptions when treated with mercaptopurine
+          in people with Precursor Cell Lymphoblastic Leukemia-Lymphoma as compared to patients with genotype GG. However, contradictory
+          finding has been reported. Other genetic and clinical factors may also influence a patient's risk for toxicity to mercaptopurine.
+      - id: clinpgx_summary_981204975_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have increased likelihood of treatment interruptions when treated with mercaptopurine
+          in people with Precursor Cell Lymphoblastic Leukemia-Lymphoma as compared to patients with genotype GG. However, contradictory
+          finding has been reported. Other genetic and clinical factors may also influence a patient's risk for toxicity to mercaptopurine.
+      - id: clinpgx_summary_981204975_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have decreased likelihood of treatment interruptions when treated with mercaptopurine
+          in people with Precursor Cell Lymphoblastic Leukemia-Lymphoma as compared to patients with genotype AA or AG. However,
+          contradictory finding has been reported. Other genetic and clinical factors may also influence a patient's risk for
+          toxicity to mercaptopurine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183615213
+    label: rs1801133 / benazepril / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: benazepril
+        pharmgkb_id: PA448561
+    phenotypes:
+      - Hypertension
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183615213"
+      url: https://www.clinpgx.org/summaryAnnotation/1183615213
+    notes: rs1801133 (MTHFR); benazepril; Hypertension (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183615213_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and hypertension may have a greater decrease in diastolic blood pressure when treated
+          with benazepril as compared to patients with the AG or GG genotype. No significant differences in systolic blood pressure
+          were seen. Other genetic and clinical factors may also influence change in diastolic blood pressure.
+      - id: clinpgx_summary_1183615213_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and hypertension may have a smaller decrease in diastolic blood pressure when treated
+          with benazepril as compared to patients with the AA genotype. No significant differences in systolic blood pressure
+          were seen. Other genetic and clinical factors may also influence change in diastolic blood pressure.
+      - id: clinpgx_summary_1183615213_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and hypertension may have a smaller decrease in diastolic blood pressure when treated
+          with benazepril as compared to patients with the AA genotype. No significant differences in systolic blood pressure
+          were seen. Other genetic and clinical factors may also influence change in diastolic blood pressure.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655386550
+    label: rs1801133 / antipsychotics / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - CLCN6
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655386550"
+      url: https://www.clinpgx.org/summaryAnnotation/655386550
+    notes: rs1801133 (CLCN6, MTHFR); antipsychotics; Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655386550_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype treated with antipsychotics may have increased risk for metabolic syndrome as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's risk for adverse
+          events.
+      - id: clinpgx_summary_655386550_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype treated with antipsychotics may have increased risk for metabolic syndrome as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's risk for adverse
+          events.
+      - id: clinpgx_summary_655386550_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          "Has average risk for metabolic syndrome when treated with antipsychotics.\r\nPatients with the GG genotype treated\
+          \ with antipsychotics may have decreased risk for metabolic syndrome as compared to patients with the AA or AG genotype.\
+          \ Patients with the GG genotype may still be at risk for adverse events when taking antipsychotics based on their genotype.\
+          \ Other genetic and clinical factors may also influence a patient's risk for adverse events."
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655387835
+    label: rs1801133 / nitrous oxide / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: nitrous oxide
+        pharmgkb_id: PA450645
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655387835"
+      url: https://www.clinpgx.org/summaryAnnotation/655387835
+    notes: rs1801133 (MTHFR); nitrous oxide (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655387835_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who undergo elective surgery with nitrous oxide anesthesia may have higher plasma
+          total homocysteine concentrations as compared to patients with the GG genotype. Other genetic and clinical factors may
+          also influence a patient's homocysteine levels after nitrous oxide anesthesia.
+      - id: clinpgx_summary_655387835_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the GA genotype who undergo elective surgery with nitrous oxide anesthesia may have higher plasma
+          total homocysteine concentrations as compared to patients with the GG genotype. Other genetic and clinical factors may
+          also influence a patient's homocysteine levels after nitrous oxide anesthesia.
+      - id: clinpgx_summary_655387835_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who undergo elective surgery with nitrous oxide anesthesia may have lower plasma total
+          homocysteine concentrations as compared to patients with the GA of AA genotype. Other genetic and clinical factors may
+          also influence a patient's homocysteine levels after nitrous oxide anesthesia.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183491364
+    label: rs1801133 / folic acid, vitamin b-complex, plain / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: folic acid
+        pharmgkb_id: PA449692
+      - name: vitamin b-complex, plain
+        pharmgkb_id: PA10505
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183491364"
+      url: https://www.clinpgx.org/summaryAnnotation/1183491364
+    notes: rs1801133 (MTHFR); folic acid or vitamin b-complex, plain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183491364_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Female patients with the AA genotype and Migraine who are treated with folic acid and a vitamin b-complex may have
+          an increased severity of pain lesser reduction in homocysteine as compared to patients with the AG or GG genotype. Other
+          genetic and clinical factors may also influence a patient's severity of pain. This drug-variant pair has been assigned
+          a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_1183491364_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Female patients with the AG genotype and Migraine who are treated with folic acid and a vitamin b-complex may have
+          a decreased severity of pain greater reduction in homocysteine as compared to patients with the AA genotype. Other genetic
+          and clinical factors may also influence a patient's severity of pain. This drug-variant pair has been assigned a “no
+          recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_1183491364_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Female patients with the GG genotype and Migraine who are treated with folic acid and a vitamin b-complex may have
+          a decreased severity of pain and greater reduction in homocysteine as compared to patients with the AA genotype. Other
+          genetic and clinical factors may also influence a patient's severity of pain. This drug-variant pair has been assigned
+          a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449296314
+    label: rs1801133 / folic acid / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: folic acid
+        pharmgkb_id: PA449692
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449296314"
+      url: https://www.clinpgx.org/summaryAnnotation/1449296314
+    notes: rs1801133 (MTHFR); folic acid (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1449296314_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have decreased metabolism of folic acid as compared to patients with the GG genotype.
+          Other genetic and clinical factors may also affect folic acid metabolism in patients. This annotation only covers the
+          pharmacokinetic relationship between rs1801133 and folic acid and does not include evidence about clinical outcomes.
+          This drug-variant pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_1449296314_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have decreased metabolism of folic acid as compared to patients with the GG genotype.
+          Other genetic and clinical factors may also affect folic acid metabolism in patients. This annotation only covers the
+          pharmacokinetic relationship between rs1801133 and folic acid and does not include evidence about clinical outcomes.
+          This drug-variant pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_1449296314_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have increased metabolism of folic acid as compared to patients with the AA or
+          AG genotypes. Other genetic and clinical factors may also affect folic acid metabolism in patients. This annotation
+          only covers the pharmacokinetic relationship between rs1801133 and folic acid and does not include evidence about clinical
+          outcomes. This drug-variant pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically
+          actionable.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451504901
+    label: rs1801133 / methotrexate / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+      - Burkitt Lymphoma
+      - Leukemia
+      - Lymphoma
+      - Lymphoma, T-Cell
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451504901"
+      url: https://www.clinpgx.org/summaryAnnotation/1451504901
+    notes:
+      rs1801133 (MTHFR); methotrexate; Burkitt Lymphoma, Leukemia, Lymphoma, Lymphoma, T-Cell and Precursor Cell Lymphoblastic
+      Leukemia-Lymphoma (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1451504901_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1801133 AA genotype may have increased concentrations of methotrexate as compared to the AG
+          or GG genotypes. However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic relationship
+          between rs1801133 and methotrexate and does not include evidence about clinical outcomes. Other genetic and clinical
+          factors may also influence methotrexate concentrations. This drug-variant pair has been assigned a “no recommendation”
+          by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_1451504901_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1801133 AG genotype may have increased concentrations of methotrexate as compared to the GG
+          genotype but decreased concentrations as compared to the AA genotype. However, conflicting evidence has been reported.
+          This annotation only covers the pharmacokinetic relationship between rs1801133 and methotrexate and does not include
+          evidence about clinical outcomes. Other genetic and clinical factors may also influence methotrexate concentrations.
+          This drug-variant pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_1451504901_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1801133 GG genotype may have decreased concentrations of methotrexate as compared to the AA
+          or AG genotypes. However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic relationship
+          between rs1801133 and methotrexate and does not include evidence about clinical outcomes. Other genetic and clinical
+          factors may also influence methotrexate concentrations. This drug-variant pair has been assigned a “no recommendation”
+          by DPWG, as it was determined to be not clinically actionable.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204912
+    label: rs1801133 / capecitabine, fluorouracil / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: capecitabine
+        pharmgkb_id: PA448771
+      - name: fluorouracil
+        pharmgkb_id: PA128406956
+    phenotypes:
+      - Neoplasms
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204912"
+      url: https://www.clinpgx.org/summaryAnnotation/981204912
+    notes: rs1801133 (MTHFR); capecitabine or fluorouracil; Neoplasms (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_981204912_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Cancer patients with the AA genotype may have increased risk of drug toxicities when treated with fluorouracil-
+          or capecitabine-based therapy as compared to patients with the AG or GG genotype, however this has been contradicted
+          in some studies. Other genetic and clinical factors may also influence a patient's risk of toxicities when taking these
+          drugs.
+      - id: clinpgx_summary_981204912_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Cancer patients with the AG genotype may have increased risk of drug toxicities when treated with fluorouracil-
+          or capecitabine-based therapy as compared to patients with the GG genotype, or a decreased risk of drug toxicities as
+          compared to patients with the AA genotype. This has been contradicted in some studies. Other genetic and clinical factors
+          may also influence a patient's risk of toxicities when taking these drugs.
+      - id: clinpgx_summary_981204912_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Cancer patients with the GG genotype may have a decreased risk of drug toxicities when treated with fluorouracil-
+          or capecitabine-based therapy as compared to patients with the AA or AG genotype, however this has been contradicted
+          in some studies. Other genetic and clinical factors may also influence a patient's risk of toxicities when taking these
+          drugs.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451223506
+    label: rs1801133 / methotrexate / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451223506"
+      url: https://www.clinpgx.org/summaryAnnotation/1451223506
+    notes: rs1801133 (MTHFR); methotrexate; Precursor Cell Lymphoblastic Leukemia-Lymphoma (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451223506_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1801133 AA genotype may have a decreased response to methotrexate as compared to patients with
+          the AG or GG genotypes. However, conflicting evidence has been reported. Other genetic and clinical factors may also
+          influence response to methotrexate. This drug-variant pair has been assigned a “no recommendation” by DPWG, as it was
+          determined to be not clinically actionable.
+      - id: clinpgx_summary_1451223506_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1801133 AG genotype may have a decreased response to methotrexate as compared to patients with
+          the GG genotype but an increased response compared to patients with the AA genotype. However, conflicting evidence has
+          been reported. Other genetic and clinical factors may also influence response to methotrexate. This drug-variant pair
+          has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_1451223506_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1801133 GG genotype may have an increased response to methotrexate as compared to patients with
+          the AA or AG genotypes. However, conflicting evidence has been reported. Other genetic and clinical factors may also
+          influence response to methotrexate. This drug-variant pair has been assigned a “no recommendation” by DPWG, as it was
+          determined to be not clinically actionable.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_978608464
+    label: rs1801133 / methotrexate / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Chronic myelogenous leukemia, BCR-ABL1 positive
+      - Graft vs Host Disease
+      - Leukemia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "978608464"
+      url: https://www.clinpgx.org/summaryAnnotation/978608464
+    notes:
+      rs1801133 (MTHFR); methotrexate; Graft vs Host Disease, Leukemia and Leukemia, Myelogenous, Chronic, BCR-ABL Positive
+      (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_978608464_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and leukemia who undergo hematopoietic cell transplant and are treated with methotrexate
+          may have a decreased risk of Graft vs Host disease as compared to patients with the GG genotype. Other genetic and clinical
+          factors may also influence a patient's risk Graft vs Host disease and efficacy of methotrexate treatment. This drug-variant
+          pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_978608464_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and leukemia who undergo hematopoietic cell transplant and are treated with methotrexate
+          may have a decreased risk of Graft vs Host disease as compared to patients with the GG genotype. Other genetic and clinical
+          factors may also influence a patient's risk Graft vs Host disease and efficacy of methotrexate treatment. This drug-variant
+          pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_978608464_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and leukemia who undergo hematopoietic cell transplant and are treated with methotrexate
+          may have an increased risk of Graft vs Host disease as compared to patients with the AA genotype. Other genetic and
+          clinical factors may also influence a patient's risk Graft vs Host disease and efficacy of methotrexate treatment. This
+          drug-variant pair has been assigned a “no recommendation” by DPWG, as it was determined to be not clinically actionable.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385307
+    label: rs1801133 / methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Arthritis, Psoriatic
+      - Drug Toxicity
+      - Juvenile Rheumatoid Arthritis
+      - Rheumatoid arthritis
+    phenotype_categories:
+      - Toxicity
+    evidence_level: 2A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385307"
+      url: https://www.clinpgx.org/summaryAnnotation/655385307
+    notes:
+      rs1801133 (MTHFR); methotrexate; Arthritis, Juvenile Rheumatoid, Arthritis, Psoriatic, Arthritis, Rheumatoid and
+      Drug Toxicity (level 2A Toxicity)
+    effects:
+      - id: clinpgx_summary_655385307_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1801133 AA genotype and Arthritis who are treated with methotrexate may have an increased risk
+          of toxicity as compared to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence methotrexate toxicity. This drug-variant pair has been assigned a “no recommendation”
+          by DPWG, as it was determined to be not clinically actionable.
+      - id: clinpgx_summary_655385307_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1801133 AG genotype and Arthritis who are treated with methotrexate may have an increased risk
+          of toxicity as compared to patients with the GG genotype, or may have a decreased risk of adverse events as compared
+          to patients with the AA genotype. However, conflicting evidence has been reported. Other genetic and clinical factors
+          may also influence methotrexate toxicity. This drug-variant pair has been assigned a “no recommendation” by DPWG, as
+          it was determined to be not clinically actionable.
+      - id: clinpgx_summary_655385307_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1801133 GG genotype and Arthritis who are treated with methotrexate may have a decreased risk
+          of toxicity as compared to patients with the AA genotype. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence methotrexate toxicity. This drug-variant pair has been assigned a “no recommendation”
+          by DPWG, as it was determined to be not clinically actionable.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450814430
+    label: rs1801133 / l-methylfolate, vitamin b-complex, incl. combinations / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: l-methylfolate
+        pharmgkb_id: PA166182939
+      - name: vitamin b-complex, incl. combinations
+        pharmgkb_id: PA164713398
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450814430"
+      url: https://www.clinpgx.org/summaryAnnotation/1450814430
+    notes: rs1801133 (MTHFR); l-methylfolate or Vitamin B-complex, Incl. Combinations; Depressive Disorder, Major (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450814430_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may show improved response to pharmacotherapy for depression when given folate supplements.
+          Please note that there is currently no evidence regarding the association between the GG genotype and response to folate
+          supplementation. Other genetic and clinical factors may also affect a patient's response to folate supplementation.
+      - id: clinpgx_summary_1450814430_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may show improved response to pharmacotherapy for depression when given folate supplements.
+          Please note that there is currently no evidence regarding the association between the GG genotype and response to folate
+          supplementation. Other genetic and clinical factors may also affect a patient's response to folate supplementation.
+      - id: clinpgx_summary_1450814430_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          There is currently no evidence regarding the association between the GG genotype and response to folate supplementation
+          in the context of pharmacotherapy for depression.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981220481
+    label: rs1801133 / cisplatin, oxaliplatin, platinum compounds / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: cisplatin
+        pharmgkb_id: PA449014
+      - name: oxaliplatin
+        pharmgkb_id: PA131285527
+      - name: platinum compounds
+        pharmgkb_id: PA164713176
+    phenotypes:
+      - Neoplasms
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981220481"
+      url: https://www.clinpgx.org/summaryAnnotation/981220481
+    notes: rs1801133 (MTHFR); cisplatin, oxaliplatin or Platinum compounds; Neoplasms (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_981220481_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with AA genotype may have an increased risk of drug toxicity when treated with platinum drugs as compared
+          to patients with the AG or GG genotype. Other genetic and clinical factors may also influence a patient's risk for toxicity
+          when receiving platinum-based chemotherapy.
+      - id: clinpgx_summary_981220481_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with AG genotype may have a decreased risk of drug toxicity when treated with platinum drugs as compared
+          to patients with the AA genotype. Other genetic and clinical factors may also influence a patient's risk for toxicity
+          when receiving platinum-based chemotherapy.
+      - id: clinpgx_summary_981220481_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with GG genotype may have a decreased risk of drug toxicity when treated with platinum drugs as compared
+          to patients with the AA genotype. Other genetic and clinical factors may also influence a patient's risk for toxicity
+          when receiving platinum-based chemotherapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444666763
+    label: rs1801133 / pemetrexed / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: pemetrexed
+        pharmgkb_id: PA10810
+    phenotypes:
+      - Mesothelioma
+      - Non-Small Cell Lung Carcinoma
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444666763"
+      url: https://www.clinpgx.org/summaryAnnotation/1444666763
+    notes: rs1801133 (MTHFR); pemetrexed; Carcinoma, Non-Small-Cell Lung and Mesothelioma (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444666763_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and lung cancer may be associated with overall survival when treated with pemetrexed
+          as compared to patients with the GG genotype. However, contradictory findings (better and poorer responses) have been
+          reported. Other genetic and clinical factors may also influence overall survival.
+      - id: clinpgx_summary_1444666763_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and lung cancer may be associated with overall survival when treated with pemetrexed
+          as compared to patients with the GG genotype. However, contradictory findings (better and poorer responses) have been
+          reported. Other genetic and clinical factors may also influence overall survival.
+      - id: clinpgx_summary_1444666763_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and lung cancer may be associated with overall survival when treated with pemetrexed
+          as compared to patients with the AA or AG genotype. However, contradictory findings (better and poorer responses) have
+          been reported. Other genetic and clinical factors may also influence overall survival.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451120280
+    label: rs1801133 / phenobarbital, phenytoin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801133
+    drugs:
+      - name: phenobarbital
+        pharmgkb_id: PA450911
+      - name: phenytoin
+        pharmgkb_id: PA450947
+    phenotypes:
+      - Epilepsy
+      - Psychotic Disorder
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451120280"
+      url: https://www.clinpgx.org/summaryAnnotation/1451120280
+    notes: rs1801133 (MTHFR); phenobarbital and phenytoin; Epilepsy and Psychotic Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451120280_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with epilepsy and the AA genotype may have an increased risk of developing psychosis following treatment
+          with phenytoin and phenobarbital as compared to patients with the GG genotype. Other genetic and clinical factors may
+          also affect a patient's risk of developing psychosis following phenytoin and phenobarbital treatment.
+      - id: clinpgx_summary_1451120280_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          There is currently no available evidence regarding the association between the AG genotype and a patient's rick
+          of developing psychosis following phenytoin and phenobarbital treatment.
+      - id: clinpgx_summary_1451120280_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801133.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with epilepsy and the GG genotype may have a decreased risk of developing psychosis following treatment
+          with phenytoin and phenobarbital as compared to patients with the AA genotype. Other genetic and clinical factors may
+          also affect a patient's risk of developing psychosis following phenytoin and phenobarbital treatment.

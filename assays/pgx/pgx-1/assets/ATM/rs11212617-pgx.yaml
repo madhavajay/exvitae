@@ -1,0 +1,78 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs11212617.yaml
+gene: ATM
+rsid: rs11212617
+variant_pa_id: PA166154450
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154450/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981237900
+    label: rs11212617 / metformin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ATM
+      - C11orf65
+    variant: rs11212617
+    drugs:
+      - name: metformin
+        pharmgkb_id: PA450395
+    phenotypes:
+      - Diabetes Mellitus, Type 2
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981237900"
+      url: https://www.clinpgx.org/summaryAnnotation/981237900
+    notes: rs11212617 (ATM, C11orf65); metformin; Diabetes Mellitus, Type 2 (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_981237900_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs11212617.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype with diabetes mellitus or polycystic ovarian syndrome who are treated with metformin
+          may have a decreased response to metformin as compared to patients with the CC genotype. An association with increased/decreased
+          response to metformin was not seen in people with impaired glucose tolerance. Other genetic and clinical factors may
+          also influence a patient's response to metformin.
+      - id: clinpgx_summary_981237900_ac
+        label: AC
+        binding:
+          source: variant
+          variant: rs11212617.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AC.
+        text:
+          Patients with the AC genotype with diabetes mellitus, or polycystic ovarian syndrome who are treated with metformin
+          may have an increased response to metformin as compared to patients with the AA genotype or may have a decreased response
+          to metformin as compared to patients with the CC genotype.  An association with increased/decreased response to metformin
+          was not seen in people with impaired glucose tolerance. Other genetic and clinical factors may also influence a patient's
+          response to metformin.
+      - id: clinpgx_summary_981237900_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs11212617.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype with diabetes mellitus, or polycystic ovarian syndrome who are treated with metformin
+          may have an increased response to metformin as compared to patients with the AA genotype.  An association with increased/decreased
+          response to metformin was not seen in people with impaired glucose tolerance. Other genetic and clinical factors may
+          also influence a patient's response to metformin.

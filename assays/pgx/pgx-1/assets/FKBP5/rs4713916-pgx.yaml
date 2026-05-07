@@ -1,0 +1,256 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs4713916.yaml
+gene: FKBP5
+rsid: rs4713916
+variant_pa_id: PA166157104
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166157104/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183617724
+    label: rs4713916 / antidepressants, selective serotonin reuptake inhibitors / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - FKBP5
+    variant: rs4713916
+    drugs:
+      - name: antidepressants
+        pharmgkb_id: PA452229
+      - name: selective serotonin reuptake inhibitors
+        pharmgkb_id: PA164713257
+    phenotypes:
+      - Depressive Disorder
+      - Mood Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183617724"
+      url: https://www.clinpgx.org/summaryAnnotation/1183617724
+    notes:
+      rs4713916 (FKBP5); antidepressants or Selective serotonin reuptake inhibitors; Depressive Disorder and Mood Disorders
+      (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183617724_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have a better response to antidepressants as compared to patients with the GG
+          genotype. Other genetic and clinical factors may also influence a patient's response to antidepressant treatment.
+      - id: clinpgx_summary_1183617724_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have a better response to antidepressants as compared to patients with the GG
+          genotype or may have a reduced response to antidepressants as compared to patients with the AA genotype. Other genetic
+          and clinical factors may also influence a patient's response to antidepressant treatment.
+      - id: clinpgx_summary_1183617724_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a reduced response to antidepressants as compared to patients with the AA
+          genotype. Other genetic and clinical factors may also influence a patient's response to antidepressant treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451398106
+    label: rs4713916 / fluoxetine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - FKBP5
+    variant: rs4713916
+    drugs:
+      - name: fluoxetine
+        pharmgkb_id: PA449673
+    phenotypes:
+      - Mood Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451398106"
+      url: https://www.clinpgx.org/summaryAnnotation/1451398106
+    notes: rs4713916 (FKBP5); fluoxetine; Mood Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451398106_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with mood disorders and the rs4713916 AA genotype may have an increased response to fluoxetine as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence response to fluoxetine.
+      - id: clinpgx_summary_1451398106_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with mood disorders and the rs4713916 AG genotype may have an increased response to fluoxetine as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence response to fluoxetine.
+      - id: clinpgx_summary_1451398106_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with mood disorders and the rs4713916 GG genotype may have a decreased response to fluoxetine as compared
+          to patients with the AA or AG genotypes. Other genetic and clinical factors may also influence response to fluoxetine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451398120
+    label: rs4713916 / mirtazapine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - FKBP5
+    variant: rs4713916
+    drugs:
+      - name: mirtazapine
+        pharmgkb_id: PA450522
+    phenotypes:
+      - Mood Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451398120"
+      url: https://www.clinpgx.org/summaryAnnotation/1451398120
+    notes: rs4713916 (FKBP5); mirtazapine; Mood Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451398120_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with mood disorders and the rs4713916 AA genotype may have an increased response to mirtazapine as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence response to mirtazapine.
+      - id: clinpgx_summary_1451398120_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with mood disorders and the rs4713916 AG genotype may have an increased response to mirtazapine as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence response to mirtazapine.
+      - id: clinpgx_summary_1451398120_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with mood disorders and the rs4713916 GG genotype may have a decreased response to mirtazapine as compared
+          to patients with the AA or AG genotypes. Other genetic and clinical factors may also influence response to mirtazapine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1146391450
+    label: rs4713916 / corticosteroids / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - FKBP5
+    variant: rs4713916
+    drugs:
+      - name: corticosteroids
+        pharmgkb_id: PA10832
+    phenotypes:
+      - Crohn Disease
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1146391450"
+      url: https://www.clinpgx.org/summaryAnnotation/1146391450
+    notes: rs4713916 (FKBP5); corticosteroids; Crohn Disease (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1146391450_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and Crohn Disease who are treated with corticosteroids may have an increased likelihood
+          of responsiveness as compared to patients with GG genotype. Other genetic and clinical factors may also influence a
+          patient's response to corticosteroids.
+      - id: clinpgx_summary_1146391450_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and Crohn Disease who are treated with corticosteroids may have an increased likelihood
+          of responsiveness as compared to patients with GG genotype. Other genetic and clinical factors may also influence a
+          patient's response to corticosteroids.
+      - id: clinpgx_summary_1146391450_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4713916.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and Crohn Disease who are treated with corticosteroids may have a decreased likelihood
+          of responsiveness as compared to patients with AA or AG genotype. Other genetic and clinical factors may also influence
+          a patient's response to corticosteroids.

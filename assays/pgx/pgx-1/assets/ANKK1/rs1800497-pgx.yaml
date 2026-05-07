@@ -1,0 +1,941 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1800497.yaml
+gene: ANKK1
+rsid: rs1800497
+variant_pa_id: PA166154339
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154339/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450823852
+    label: rs1800497 / nicotine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+      - DRD2
+    variant: rs1800497
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450823852"
+      url: https://www.clinpgx.org/summaryAnnotation/1450823852
+    notes: rs1800497 (ANKK1, DRD2); nicotine (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450823852_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Adolescents with the AA genotype may have increased nicotine cravings as compared to adolescents with the GG genotype.
+          Other genetic or clinical factors may also affect nicotine craving.
+      - id: clinpgx_summary_1450823852_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Adolescents with the AG genotype may have increased nicotine cravings as compared to adolescents with the GG genotype.
+          Other genetic or clinical factors may also affect nicotine craving.
+      - id: clinpgx_summary_1450823852_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Adolescents with the GG genotype may have decreased nicotine cravings as compared to adolescents with the AA or
+          AG genotypes. Other genetic or clinical factors may also affect nicotine craving.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450822790
+    label: rs1800497 / opioids / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+      - DRD2
+    variant: rs1800497
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450822790"
+      url: https://www.clinpgx.org/summaryAnnotation/1450822790
+    notes: rs1800497 (ANKK1, DRD2); opioids; Opioid-Related Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450822790_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have an increased risk of developing opioid dependence as compared to patients
+          with the GG genotype. However, another study did not find an association between this variant and opioid dependence.
+          Other genetic or clinical factors may also affect a patient's risk of developing opioid dependence.
+      - id: clinpgx_summary_1450822790_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have an increased risk of developing opioid dependence as compared to patients
+          with the GG genotype. However, another study did not find an association between this variant and opioid dependence.
+          Other genetic or clinical factors may also affect a patient's risk of developing opioid dependence.
+      - id: clinpgx_summary_1450822790_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a decreased risk of developing opioid dependence as compared to patients
+          with the AA or AG genotypes. However, another study did not find an association between this variant and opioid dependence.
+          Other genetic or clinical factors may also affect a patient's risk of developing opioid dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450813484
+    label: rs1800497 / nicotine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+      - DRD2
+    variant: rs1800497
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450813484"
+      url: https://www.clinpgx.org/summaryAnnotation/1450813484
+    notes: rs1800497 (ANKK1, DRD2); nicotine; Tobacco Use Disorder (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450813484_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have more severe nicotine dependence, as measured by mean pack years smoked, as
+          compared to patients with the GG genotype. However, other measures showed no significant difference between genotype
+          groups. Other genetic and clinical factors may also affect severity of nicotine dependence.
+      - id: clinpgx_summary_1450813484_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have more severe nicotine dependence, as measured by mean pack years smoked, as
+          compared to patients with the GG genotype. However, other measures showed no significant difference between genotype
+          groups. Other genetic and clinical factors may also affect severity of nicotine dependence.
+      - id: clinpgx_summary_1450813484_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have less severe nicotine dependence, as measured by mean pack years smoked, as
+          compared to patients with the AA or AG genotypes. However, other measures showed no significant difference between genotype
+          groups. Other genetic and clinical factors may also affect severity of nicotine dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450820856
+    label: rs1800497 / prochlorperazine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+      - DRD2
+    variant: rs1800497
+    drugs:
+      - name: prochlorperazine
+        pharmgkb_id: PA451114
+    phenotypes:
+      - Nausea
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450820856"
+      url: https://www.clinpgx.org/summaryAnnotation/1450820856
+    notes: rs1800497 (ANKK1, DRD2); prochlorperazine; Nausea (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450820856_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have an increased incidence of nausea following treatment with prochlorperazine
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also affect a patient's response
+          to prochlorperazine.
+      - id: clinpgx_summary_1450820856_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have an increased incidence of nausea following treatment with prochlorperazine
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also affect a patient's response
+          to prochlorperazine.
+      - id: clinpgx_summary_1450820856_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a decreased incidence of nausea following treatment with prochlorperazine
+          as compared to patients with the AA or AG genotypes. Other genetic and clinical factors may also affect a patient's
+          response to prochlorperazine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444607459
+    label: rs1800497 / olanzapine / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+    variant: rs1800497
+    drugs:
+      - name: olanzapine
+        pharmgkb_id: PA450688
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444607459"
+      url: https://www.clinpgx.org/summaryAnnotation/1444607459
+    notes: rs1800497 (ANKK1); olanzapine (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1444607459_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Individuals with the AA genotype may have increased area under the curve (AUC) of olanzapine as compared to individuals
+          with the GG genotype. Other genetic and clinical factors may also influence AUC of olanzapine.
+      - id: clinpgx_summary_1444607459_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Individuals with the AG genotype may have increased area under the curve (AUC) of olanzapine as compared to individuals
+          with the GG genotype. Other genetic and clinical factors may also influence AUC of olanzapine.
+      - id: clinpgx_summary_1444607459_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Individuals with the GG genotype may have decreased area under the curve (AUC) of olanzapine as compared to individuals
+          with the AA or AG genotype. Other genetic and clinical factors may also influence AUC of olanzapine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183490978
+    label: rs1800497 / disulfiram / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+    variant: rs1800497
+    drugs:
+      - name: disulfiram
+        pharmgkb_id: PA449376
+    phenotypes:
+      - Cocaine dependence
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183490978"
+      url: https://www.clinpgx.org/summaryAnnotation/1183490978
+    notes: rs1800497 (ANKK1); disulfiram; Cocaine-Related Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183490978_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have an increased likelihood of response when treated with disulfiram as compared
+          to patients with the GG. Other genetic and clinical factors may also influence a patient's response to disulfiram.
+      - id: clinpgx_summary_1183490978_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have an increased likelihood of response when treated with disulfiram as compared
+          to patients with the GG. Other genetic and clinical factors may also influence a patient's response to disulfiram.
+      - id: clinpgx_summary_1183490978_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a decreased likelihood of response when treated with disulfiram as compared
+          to patients with the AG or AA. Other genetic and clinical factors may also influence a patient's response to disulfiram.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655387688
+    label: rs1800497 / nemonapride / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+    variant: rs1800497
+    drugs:
+      - name: nemonapride
+        pharmgkb_id: PA151186253
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655387688"
+      url: https://www.clinpgx.org/summaryAnnotation/655387688
+    notes: rs1800497 (ANKK1); nemonapride; Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655387688_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Female patients with the AA genotype and schizophrenia treated with nemonapride may have a greater prolactin response
+          to nemonapride compared to female patients with the GG genotype and male patients. Other genetic and clinical factors
+          may also influence a patient's response to nemonapride.
+      - id: clinpgx_summary_655387688_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Female patients with the AG genotype and schizophrenia treated with nemonapride may have a greater prolactin response
+          to nemonapride compared to female patients with the GG genotype and male patients. Other genetic and clinical factors
+          may also influence a patient's response to nemonapride.
+      - id: clinpgx_summary_655387688_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Female patients with the GG genotype and schizophrenia treated with nemonapride may have a decreased, but not absent,
+          prolactin response to nemonapride compared to female patients with the AG and AA genotype and male patients. Other genetic
+          and clinical factors may also influence a patient's response to nemonapride.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445401399
+    label: rs1800497 / valproic acid / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+    variant: rs1800497
+    drugs:
+      - name: valproic acid
+        pharmgkb_id: PA451846
+    phenotypes:
+      - Epilepsy
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445401399"
+      url: https://www.clinpgx.org/summaryAnnotation/1445401399
+    notes: rs1800497 (ANKK1); valproic acid; Epilepsy (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1445401399_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and epilepsy may have lower weight gain when treated with valproic acid as compared
+          to patients with the AG or GG genotype. Other genetic and clinical factors may also influence weight gain.
+      - id: clinpgx_summary_1445401399_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and epilepsy may have greater weight gain when treated with valproic acid as compared
+          to patients with the AA genotype. Other genetic and clinical factors may also influence weight gain.
+      - id: clinpgx_summary_1445401399_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and epilepsy may have greater weight gain when treated with valproic acid as compared
+          to patients with the AA genotype. Other genetic and clinical factors may also influence weight gain.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204851
+    label: rs1800497 / nicotine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+    variant: rs1800497
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204851"
+      url: https://www.clinpgx.org/summaryAnnotation/981204851
+    notes: rs1800497 (ANKK1); nicotine; Tobacco Use Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_981204851_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with AA genotype may have an increased likelihood of smoking cessation when treated with nicotine replacement
+          therapy as compared to patients with the GG genotype. However, contradictory findings have been reported. Other genetic
+          and clinical factors may influence a patient's likelihood of smoking cessation.
+      - id: clinpgx_summary_981204851_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with AG genotype may have an increased likelihood of smoking cessation when treated with nicotine replacement
+          therapy as compared to patients with the GG genotype. However, contradictory findings have been reported. Other genetic
+          and clinical factors may influence a patient's likelihood of smoking cessation.
+      - id: clinpgx_summary_981204851_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with GG genotype may have a decreased likelihood of smoking cessation when treated with nicotine replacement
+          therapy as compared to patients with the AG and AA genotype. However, contradictory findings have been reported. Other
+          genetic and clinical factors may influence a patient's likelihood of smoking cessation.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385422
+    label: rs1800497 / bupropion / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+    variant: rs1800497
+    drugs:
+      - name: bupropion
+        pharmgkb_id: PA448687
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385422"
+      url: https://www.clinpgx.org/summaryAnnotation/655385422
+    notes: rs1800497 (ANKK1); bupropion; Tobacco Use Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_655385422_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who are treated with bupropion may be less likely to quit smoking as compared to patients
+          with the GG genotype, however contradictory findings about abstinence exist. Other genetic and clinical factors may
+          also influence a patient's chance for quitting smoking.
+      - id: clinpgx_summary_655385422_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who are treated with bupropion may be less likely to quit smoking as compared to patients
+          with the GG genotype, however contradictory findings about abstinence exist. Other genetic and clinical factors may
+          also influence a patient's chance for quitting smoking.
+      - id: clinpgx_summary_655385422_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who are treated with bupropion may be more likely to quit smoking as compared to patients
+          with the AA or AG genotypes, however contradictory findings about abstinence exist. Other genetic and clinical factors
+          may also influence a patient's chance for quitting smoking.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451566760
+    label: rs1800497 / bupropion, naltrexone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+      - DRD2
+    variant: rs1800497
+    drugs:
+      - name: bupropion
+        pharmgkb_id: PA448687
+      - name: naltrexone
+        pharmgkb_id: PA450588
+    phenotypes:
+      - Obesity
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451566760"
+      url: https://www.clinpgx.org/summaryAnnotation/1451566760
+    notes: rs1800497 (ANKK1, DRD2); bupropion and naltrexone; Obesity (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451566760_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1800497 AA genotype may have an increased weight loss response to buproprion and naltrexone
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence weight loss response
+          to buproprion and naltrexone.
+      - id: clinpgx_summary_1451566760_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1800497 AG genotype may have an increased weight loss response to buproprion and naltrexone
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence weight loss response
+          to buproprion and naltrexone.
+      - id: clinpgx_summary_1451566760_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1800497 GG genotype may have a decreased weight loss response to buproprion and naltrexone as
+          compared to patients with the AA or AG genotypes. Other genetic and clinical factors may also influence weight loss
+          response to buproprion and naltrexone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204890
+    label: rs1800497 / ethanol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+      - DRD2
+    variant: rs1800497
+    drugs:
+      - name: ethanol
+        pharmgkb_id: PA448073
+    phenotypes:
+      - Alcohol abuse
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204890"
+      url: https://www.clinpgx.org/summaryAnnotation/981204890
+    notes: rs1800497 (ANKK1, DRD2); ethanol; Alcoholism (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_981204890_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with AA genotype may have an increased risk for Alcoholism when exposed to ethanol as compared to patients
+          with the GG genotype. However, other studies have found no association. Other genetic and clinical factors may influence
+          a patient's risk for alcohol dependency.
+      - id: clinpgx_summary_981204890_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with AG genotype may have an increased risk for Alcoholism when exposed to ethanol as compared to patients
+          with the GG genotype. However, other studies have found no association. Other genetic and clinical factors may influence
+          a patient's risk for alcohol dependency.
+      - id: clinpgx_summary_981204890_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with GG genotype may have a decreased, but not absent, risk for Alcoholism when exposed to ethanol as compared
+          to patients with the AG and AA genotype. However, other studies have found no association. Other genetic and clinical
+          factors may influence a patient's risk for alcohol dependency.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447963042
+    label: rs1800497 / aripiprazole / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+    variant: rs1800497
+    drugs:
+      - name: aripiprazole
+        pharmgkb_id: PA10026
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447963042"
+      url: https://www.clinpgx.org/summaryAnnotation/1447963042
+    notes: rs1800497 (ANKK1); aripiprazole; Schizophrenia (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1447963042_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and schizophrenia may have a better response according to the Positive and Negative
+          Syndrome Scale when treated with aripiprazole as compared to patients with the GG genotype. Other genetic and clinical
+          factors may also influence response to aripiprazole.
+      - id: clinpgx_summary_1447963042_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and schizophrenia may have a better response according to the Positive and Negative
+          Syndrome Scale when treated with aripiprazole as compared to patients with the GG genotype. Other genetic and clinical
+          factors may also influence response to aripiprazole.
+      - id: clinpgx_summary_1447963042_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and schizophrenia may have a poorer response according to the Positive and Negative
+          Syndrome Scale when treated with aripiprazole as compared to patients with the AA or AG genotype. Other genetic and
+          clinical factors may also influence response to aripiprazole.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385054
+    label: rs1800497 / risperidone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+      - DRD2
+    variant: rs1800497
+    drugs:
+      - name: risperidone
+        pharmgkb_id: PA451257
+    phenotypes:
+      - Autism
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385054"
+      url: https://www.clinpgx.org/summaryAnnotation/655385054
+    notes: rs1800497 (ANKK1, DRD2); risperidone; Autism and Schizophrenia (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_655385054_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and schizophrenia may have an increased response to risperidone as compared to patients
+          with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          a patient's response to risperidone.
+      - id: clinpgx_summary_655385054_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and schizophrenia may have an increased response to risperidone as compared to patients
+          with the GG genotype or may have less improvement in symptoms as compared to patients with the AA genotype. However,
+          conflicting evidence has been reported. Other genetic and clinical factors may also influence a patient's response to
+          risperidone.
+      - id: clinpgx_summary_655385054_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and schizophrenia may have a decreased response to risperidone as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          a patient's response to risperidone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385495
+    label: rs1800497 / risperidone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ANKK1
+      - DRD2
+    variant: rs1800497
+    drugs:
+      - name: risperidone
+        pharmgkb_id: PA451257
+    phenotypes:
+      - Autism
+      - Hyperprolactinemia
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385495"
+      url: https://www.clinpgx.org/summaryAnnotation/655385495
+    notes: rs1800497 (ANKK1, DRD2); risperidone; Autism, Hyperprolactinemia and Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655385495_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have increased risk of hyperprolactinemia when treated with risperidone as compared
+          to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical factors
+          may also influence rsiperidone related hyperprolactinemia.
+      - id: clinpgx_summary_655385495_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have increased risk of hyperprolactinemia when treated with risperidone as compared
+          to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical factors
+          may also influence rsiperidone related hyperprolactinemia.
+      - id: clinpgx_summary_655385495_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1800497.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have decreased, but not absent, risk of hyperprolactinemia when treated with risperidone
+          as compared to patients with the AA or AG genotype. However, conflicting evidence has been reported. Other genetic and
+          clinical factors may also influence rsiperidone related hyperprolactinemia.

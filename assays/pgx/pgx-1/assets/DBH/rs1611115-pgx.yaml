@@ -1,0 +1,208 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1611115.yaml
+gene: DBH
+rsid: rs1611115
+variant_pa_id: PA166157734
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166157734/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184987471
+    label: rs1611115 / analgesics, antiinflammatory agents, non-steroids, ergot alkaloids, opioids, sumatriptan / Other
+    authority_type: evidence_summary
+    genes:
+      - DBH
+    variant: rs1611115
+    drugs:
+      - name: analgesics
+        pharmgkb_id: PA164712362
+      - name: antiinflammatory agents, non-steroids
+        pharmgkb_id: PA164712462
+      - name: ergot alkaloids
+        pharmgkb_id: PA164712741
+      - name: opioids
+        pharmgkb_id: PA452618
+      - name: sumatriptan
+        pharmgkb_id: PA451566
+    phenotypes:
+      - Substance Withdrawal Syndrome
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184987471"
+      url: https://www.clinpgx.org/summaryAnnotation/1184987471
+    notes:
+      rs1611115 (DBH); Analgesics, Antiinflammatory agents, non-steroids, Ergot alkaloids, opioids or sumatriptan; Substance
+      Withdrawal Syndrome (level 3)
+    effects:
+      - id: clinpgx_summary_1184987471_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype with substance withdrawal syndrome may have an increased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the TT genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+      - id: clinpgx_summary_1184987471_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype with substance withdrawal syndrome may have a decreased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the CC genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+      - id: clinpgx_summary_1184987471_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype with substance withdrawal syndrome may have a decreased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the CC genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444700874
+    label: rs1611115 / levodopa / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - DBH
+    variant: rs1611115
+    drugs:
+      - name: levodopa
+        pharmgkb_id: PA450213
+    phenotypes:
+      - Cocaine dependence
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444700874"
+      url: https://www.clinpgx.org/summaryAnnotation/1444700874
+    notes: rs1611115 (DBH); levodopa; Cocaine-Related Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444700874_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have a decreased response to levodopa in people with cocaine-related disorders
+          as compared to patients with the CT or TT genotype. Other genetic and clinical factors may also influence a patient's
+          response to levodopa.
+      - id: clinpgx_summary_1444700874_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have an increased response to levodopa in people with cocaine-related disorders
+          as compared to patients with the CC genotype. Other genetic and clinical factors may also influence a patient's response
+          to levodopa.
+      - id: clinpgx_summary_1444700874_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have an increased response to levodopa in people with cocaine-related disorders
+          as compared to patients with the CC genotype. Other genetic and clinical factors may also influence a patient's response
+          to levodopa.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445400917
+    label: rs1611115 / naltrexone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - DBH
+    variant: rs1611115
+    drugs:
+      - name: naltrexone
+        pharmgkb_id: PA450588
+    phenotypes:
+      - Alcohol abuse
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445400917"
+      url: https://www.clinpgx.org/summaryAnnotation/1445400917
+    notes: rs1611115 (DBH); naltrexone; Alcoholism (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1445400917_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype who are alcohol-dependent may have a poorer response to treatment with naltrexone
+          as compared to patients with the CT or TT genotype. Other genetic and clinical factors may also influence response to
+          naltrexone.
+      - id: clinpgx_summary_1445400917_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype who are alcohol-dependent may have a better response to treatment with naltrexone
+          as compared to patients with the CC genotype. Other genetic and clinical factors may also influence response to naltrexone.
+      - id: clinpgx_summary_1445400917_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1611115.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype who are alcohol-dependent may have a better response to treatment with naltrexone
+          as compared to patients with the CC genotype. Other genetic and clinical factors may also influence response to naltrexone.

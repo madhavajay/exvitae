@@ -1,0 +1,73 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs2058878.yaml
+gene: GRIN2B
+rsid: rs2058878
+variant_pa_id: PA166154524
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154524/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184988860
+    label: rs2058878 / acamprosate / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - GRIN2B
+    variant: rs2058878
+    drugs:
+      - name: acamprosate
+        pharmgkb_id: PA10344
+    phenotypes:
+      - Alcohol abuse
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184988860"
+      url: https://www.clinpgx.org/summaryAnnotation/1184988860
+    notes: rs2058878 (GRIN2B); acamprosate; Alcoholism (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1184988860_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs2058878.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and alcoholism may have an increased response to acamprosate as compared to patients
+          with the AT and TT genotypes. Other clinical and genetic factors may also influence response to acamprosate in patients
+          with alcoholism.
+      - id: clinpgx_summary_1184988860_at
+        label: AT
+        binding:
+          source: variant
+          variant: rs2058878.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AT.
+        text:
+          Patients with the AT genotype and alcoholism may have an increased response to acamprosate as compared to patients
+          with the TT genotype and a decreased response as compared to patients with the AA genotype. Other clinical and genetic
+          factors may also influence response to acamprosate in patients with alcoholism.
+      - id: clinpgx_summary_1184988860_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2058878.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and alcoholism may have a decreased response to acamprosate as compared to patients
+          with the AA or AT genotype. Other clinical and genetic factors may also influence response to acamprosate in patients
+          with alcoholism.

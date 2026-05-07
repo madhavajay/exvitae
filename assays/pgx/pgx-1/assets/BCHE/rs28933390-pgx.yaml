@@ -1,0 +1,72 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs28933390.yaml
+gene: BCHE
+rsid: rs28933390
+variant_pa_id: PA166156468
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156468/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184513898
+    label: rs28933390 / succinylcholine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - BCHE
+    variant: rs28933390
+    drugs:
+      - name: succinylcholine
+        pharmgkb_id: PA451522
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184513898"
+      url: https://www.clinpgx.org/summaryAnnotation/1184513898
+    notes: rs28933390 (BCHE); succinylcholine (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1184513898_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs28933390.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype have an increased risk of post anesthesia apnea when treated with succinylcholine
+          as compared to patients with the CC genotype. Other genetic and clinical factors may also influence risk of post anesthesia
+          apnea.
+      - id: clinpgx_summary_1184513898_ac
+        label: AC
+        binding:
+          source: variant
+          variant: rs28933390.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AC.
+        text:
+          Patients with the AC genotype have a decreased risk of post anesthesia apnea when treated with succinylcholine as
+          compared to patients with the AA genotype and an increased risk of post anesthesia apnea as compared to patients with
+          the CC genotype. Other genetic and clinical factors may also influence risk of post anesthesia apnea.
+      - id: clinpgx_summary_1184513898_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs28933390.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype have a decreased risk of post anesthesia apnea when treated with succinylcholine as
+          compared to patients with the T genotype. Other genetic and clinical factors may also influence risk of post anesthesia
+          apnea.

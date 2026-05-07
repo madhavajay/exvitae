@@ -1,0 +1,2768 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs4680.yaml
+gene: COMT
+rsid: rs4680
+variant_pa_id: PA166156024
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156024/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451226166
+    label: rs4680 / methadone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: methadone
+        pharmgkb_id: PA450401
+    phenotypes:
+      - Neonatal Abstinence Syndrome
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451226166"
+      url: https://www.clinpgx.org/summaryAnnotation/1451226166
+    notes: rs4680 (COMT); methadone; Neonatal Abstinence Syndrome (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451226166_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Infants who have been exposed to methadone in utero and who are born to women with the AA genotype may be more likely
+          to require treatment with at least two medications for neonatal abstinence syndrome as compared to infants born to women
+          with the AG or GG genotypes. Be aware that this annotation is on the mother's genotype, even though the phenotype is
+          observed in the infant and that this was not a statistically significant association. Other genetic and clinical factors
+          may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451226166_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Infants who have been exposed to methadone in utero and who are born to women with the AG genotype may be less likely
+          to require treatment with at least two medications for neonatal abstinence syndrome as compared to infants born to women
+          with the AA genotype. Be aware that this annotation is on the mother's genotype, even though the phenotype is observed
+          in the infant and that this was not a statistically significant association. Other genetic and clinical factors may
+          also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451226166_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Infants who have been exposed to methadone in utero and who are born to women with the GG genotype may be less likely
+          to require treatment with at least two medications for neonatal abstinence syndrome as compared to infants born to women
+          with the AA genotype. Be aware that this annotation is on the mother's genotype, even though the phenotype is observed
+          in the infant and that this was not a statistically significant association. Other genetic and clinical factors may
+          also affect severity of neonatal abstinence syndrome.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981202618
+    label: rs4680 / nicotine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981202618"
+      url: https://www.clinpgx.org/summaryAnnotation/981202618
+    notes: rs4680 (COMT); nicotine; Tobacco Use Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_981202618_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who are treated with nicotine replacement therapy may have an increased likelihood
+          of smoking cessation and decreased risk of relapse as compared to patients with the GG genotype. However, some contradictory
+          evidence exists. Other genetic and clinical factors may also influence a patient's response to nicotine replacement
+          therapy.
+      - id: clinpgx_summary_981202618_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who are treated with nicotine replacement therapy may have a decreased likelihood
+          of smoking cessation and increased risk of relapse as compared to patients with the AA genotype. However, some contradictory
+          evidence exists. Other genetic and clinical factors may also influence a patient's response to nicotine replacement
+          therapy.
+      - id: clinpgx_summary_981202618_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who are treated with nicotine replacement therapy may have a decreased likelihood
+          of smoking cessation and increased risk of relapse as compared to patients with the AA genotype. However, some contradictory
+          evidence exists. Other genetic and clinical factors may also influence a patient's response to nicotine replacement
+          therapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451246040
+    label: rs4680 / nicotine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451246040"
+      url: https://www.clinpgx.org/summaryAnnotation/1451246040
+    notes: rs4680 (COMT); nicotine; Tobacco Use Disorder (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451246040_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may experience a decreased severity of nicotine withdrawal as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also affect the severity of nicotine withdrawal.
+      - id: clinpgx_summary_1451246040_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may experience a decreased severity of nicotine withdrawal as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also affect the severity of nicotine withdrawal.
+      - id: clinpgx_summary_1451246040_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may experience an increased severity of nicotine withdrawal as compared to patients
+          with the AA or AG genotypes. Other genetic and clinical factors may also affect the severity of nicotine withdrawal.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451238460
+    label: rs4680 / buprenorphine, fentanyl, tramadol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: buprenorphine
+        pharmgkb_id: PA448685
+      - name: fentanyl
+        pharmgkb_id: PA449599
+      - name: tramadol
+        pharmgkb_id: PA451735
+    phenotypes:
+      - Exanthema
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451238460"
+      url: https://www.clinpgx.org/summaryAnnotation/1451238460
+    notes: rs4680 (COMT); buprenorphine, fentanyl and tramadol; Exanthema and Opioid-Related Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451238460_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype and who are being treated with buprenorphine with optional fentanyl and tramadol
+          for prescription opioid dependence may report more skin redness as compared to patients with the AG genotype. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. However,
+          the direction of this association was reversed after the deprescription programme had ended. Other genetic and clinical
+          factors may also affect the incidence of skin redness during treatment for opioid dependence.
+      - id: clinpgx_summary_1451238460_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype and who are being treated with buprenorphine with optional fentanyl and tramadol
+          for prescription opioid dependence may report less skin redness as compared to patients with the AA or GG genotypes.
+          This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          However, the direction of this association was reversed after the deprescription programme had ended. Other genetic
+          and clinical factors may also affect the incidence of skin redness during treatment for opioid dependence.
+      - id: clinpgx_summary_1451238460_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype and who are being treated with buprenorphine with optional fentanyl and tramadol
+          for prescription opioid dependence may report more skin redness as compared to patients with the AG genotype. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. However,
+          the direction of this association was reversed after the deprescription programme had ended. Other genetic and clinical
+          factors may also affect the incidence of skin redness during treatment for opioid dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451225360
+    label: rs4680 / buprenorphine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: buprenorphine
+        pharmgkb_id: PA448685
+    phenotypes:
+      - Neonatal Abstinence Syndrome
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451225360"
+      url: https://www.clinpgx.org/summaryAnnotation/1451225360
+    notes: rs4680 (COMT); buprenorphine; Neonatal Abstinence Syndrome (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451225360_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Infants who have been exposed to buprenorphine in utero and who have the rs4680 AA genotype may have an increased
+          severity of neonatal abstinence syndrome as compared to infants with the AG or GG genotypes. Other genetic and clinical
+          factors may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451225360_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Infants who have been exposed to buprenorphine in utero and who have the rs4680 AG genotype may have a decreased
+          severity of neonatal abstinence syndrome as compared to infants with the AA genotype. Other genetic and clinical factors
+          may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451225360_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Infants who have been exposed to buprenorphine in utero and who have the rs4680 GG genotype may have a decreased
+          severity of neonatal abstinence syndrome as compared to infants with the AA genotype. Other genetic and clinical factors
+          may also affect severity of neonatal abstinence syndrome.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451225320
+    label: rs4680 / buprenorphine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: buprenorphine
+        pharmgkb_id: PA448685
+    phenotypes:
+      - Neonatal Abstinence Syndrome
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451225320"
+      url: https://www.clinpgx.org/summaryAnnotation/1451225320
+    notes: rs4680 (COMT); buprenorphine; Neonatal Abstinence Syndrome (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451225320_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Infants who have been exposed to buprenorphine in utero and who are born to women with the rs4680 AA genotype may
+          be more likely to require treatment with at least two medications for neonatal abstinence syndrome as compared to infants
+          born to women with the AG or GG genotypes. Be aware that this annotation is on the mother's genotype, even though the
+          phenotype is observed in the infant and that this was not a statistically significant association. Other genetic and
+          clinical factors may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451225320_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Infants who have been exposed to buprenorphine in utero and who are born to women with the rs4680 AG genotype may
+          be less likely to require treatment with at least two medications for neonatal abstinence syndrome as compared to infants
+          born to women with the AA genotype. Be aware that this annotation is on the mother's genotype, even though the phenotype
+          is observed in the infant and that this was not a statistically significant association. Other genetic and clinical
+          factors may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451225320_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Infants who have been exposed to buprenorphine in utero and who are born to women with the rs4680 GG genotype may
+          be less likely to require treatment with at least two medications for neonatal abstinence syndrome as compared to infants
+          born to women with the AA genotype. Be aware that this annotation is on the mother's genotype, even though the phenotype
+          is observed in the infant and that this was not a statistically significant association. Other genetic and clinical
+          factors may also affect severity of neonatal abstinence syndrome.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451244869
+    label: rs4680 / fentanyl / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: fentanyl
+        pharmgkb_id: PA449599
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451244869"
+      url: https://www.clinpgx.org/summaryAnnotation/1451244869
+    notes: rs4680 (COMT); fentanyl; Pain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451244869_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may have a decreased analgesic response to fentanyl as compared to patients
+          with the AG or GG genotypes, However, this association was not found to be statistically significant. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also affect analgesic response to fentanyl.
+      - id: clinpgx_summary_1451244869_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may have an increased analgesic response to fentanyl as compared to patients
+          with the AA genotypes, However, this association was not found to be statistically significant. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also affect analgesic response to fentanyl.
+      - id: clinpgx_summary_1451244869_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may have an increased analgesic response to fentanyl as compared to patients
+          with the AA genotypes, However, this association was not found to be statistically significant. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also affect analgesic response to fentanyl.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450931828
+    label: rs4680 / fentanyl / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: fentanyl
+        pharmgkb_id: PA449599
+    phenotypes:
+      - Somnolence
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450931828"
+      url: https://www.clinpgx.org/summaryAnnotation/1450931828
+    notes: rs4680 (COMT); fentanyl; somnolence (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450931828_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may be less likely to experience somnolence following fentanyl administration
+          as compared to patients with the AG or GG genotypes. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect the
+          likelihood of experiencing fentanyl-induced somnolence.
+      - id: clinpgx_summary_1450931828_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may be more likely to experience somnolence following fentanyl administration
+          as compared to patients with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC,
+          as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect the likelihood
+          of experiencing fentanyl-induced somnolence.
+      - id: clinpgx_summary_1450931828_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may be more likely to experience somnolence following fentanyl administration
+          as compared to patients with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC,
+          as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect the likelihood
+          of experiencing fentanyl-induced somnolence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385205
+    label: rs4680 / morphine / Dosage
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385205"
+      url: https://www.clinpgx.org/summaryAnnotation/655385205
+    notes: rs4680 (COMT); morphine; Pain and Pain, Postoperative (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_655385205_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may have decreased morphine dose requirements as compared to patients with
+          the AG or GG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also affect morphine dose requirements.
+      - id: clinpgx_summary_655385205_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may have increased morphine dose requirements as compared to patients with
+          the AA genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect morphine
+          dose requirements.
+      - id: clinpgx_summary_655385205_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may have increased morphine dose requirements as compared to patients with
+          the AA genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect morphine
+          dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451244900
+    label: rs4680 / remifentanil / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: remifentanil
+        pharmgkb_id: PA451232
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451244900"
+      url: https://www.clinpgx.org/summaryAnnotation/1451244900
+    notes: rs4680 (COMT); remifentanil; Pain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451244900_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may have an increased analgesic response to remifentanil as compared to patients
+          with the AG or GG genotypes.  This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic and clinical factors may also affect response to remifentanil.
+      - id: clinpgx_summary_1451244900_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may have an increased analgesic response to remifentanil as compared to patients
+          with the GG genotype, but a decreased response as compared to patients with the AA genotype. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also affect response to remifentanil.
+      - id: clinpgx_summary_1451244900_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may have a decreased analgesic response to remifentanil as compared to patients
+          with the AA or AG genotypes. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic and clinical factors may also affect response to remifentanil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451245040
+    label: rs4680 / opioids / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451245040"
+      url: https://www.clinpgx.org/summaryAnnotation/1451245040
+    notes: rs4680 (COMT); opioids; Pain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451245040_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may have an increased analgesic response to opioids as compared to patients
+          with the GG genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic and clinical factors may also affect response to opioids.
+      - id: clinpgx_summary_1451245040_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may have an increased analgesic response to opioids as compared to patients
+          with the GG genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic and clinical factors may also affect response to opioids.
+      - id: clinpgx_summary_1451245040_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may have a decreased analgesic response to opioids as compared to patients
+          with the AA or AG genotypes. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic and clinical factors may also affect response to opioids.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451244980
+    label: rs4680 / oxycodone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: oxycodone
+        pharmgkb_id: PA450741
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451244980"
+      url: https://www.clinpgx.org/summaryAnnotation/1451244980
+    notes: rs4680 (COMT); oxycodone (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451244980_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may have an increased subjective response to oxycodone as compared to patients
+          with the GG genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic and clinical factors may also affect subjective response to oxycodone.
+      - id: clinpgx_summary_1451244980_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may have an increased subjective response to oxycodone as compared to patients
+          with the GG genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic and clinical factors may also affect subjective response to oxycodone.
+      - id: clinpgx_summary_1451244980_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may have a decreased subjective response to oxycodone as compared to patients
+          with the AA or AG genotypes. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic and clinical factors may also affect subjective response to oxycodone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451226160
+    label: rs4680 / methadone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: methadone
+        pharmgkb_id: PA450401
+    phenotypes:
+      - Neonatal Abstinence Syndrome
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451226160"
+      url: https://www.clinpgx.org/summaryAnnotation/1451226160
+    notes: rs4680 (COMT); methadone; Neonatal Abstinence Syndrome (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451226160_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Infants who have been exposed to methadone in utero and who have the rs4680 AA genotype may have an increased severity
+          of neonatal abstinence syndrome as compared to infants with the AG or GG genotypes. However, conflicting evidence has
+          been reported. Other genetic and clinical factors may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451226160_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Infants who have been exposed to methadone in utero and who have the rs4680 AG genotype may have a decreased severity
+          of neonatal abstinence syndrome as compared to infants with the AA genotype. However, conflicting evidence has been
+          reported. Other genetic and clinical factors may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451226160_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Infants who have been exposed to methadone in utero and who have the rs4680 GG genotype may have a decreased severity
+          of neonatal abstinence syndrome as compared to infants with the AA genotype. However, conflicting evidence has been
+          reported. Other genetic and clinical factors may also affect severity of neonatal abstinence syndrome.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451245004
+    label: rs4680 / opioids / Dosage
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451245004"
+      url: https://www.clinpgx.org/summaryAnnotation/1451245004
+    notes: rs4680 (COMT); opioids; Pain and Pain, Postoperative (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1451245004_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may have decreased opioid dose requirements as compared to patients with the
+          GG genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect opioid
+          dose requirements.
+      - id: clinpgx_summary_1451245004_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may have decreased opioid dose requirements as compared to patients with the
+          GG genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect opioid
+          dose requirements.
+      - id: clinpgx_summary_1451245004_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may have increased opioid dose requirements as compared to patients with the
+          AA or AG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also affect opioid dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451359886
+    label: rs4680 / propranolol / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: propranolol
+        pharmgkb_id: PA451145
+    phenotypes:
+      - Temporomandibular joint dysfunction syndrome
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451359886"
+      url: https://www.clinpgx.org/summaryAnnotation/1451359886
+    notes: rs4680 (COMT); propranolol; Temporomandibular joint-pain-dysfunction syndrome (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451359886_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with temporomandibular disorder (TMD) and the rs4680 AA genotype may have an increased response to propranolol
+          as compared to patients with the AG or GG genotypes. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence response to propranolol.
+      - id: clinpgx_summary_1451359886_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with temporomandibular disorder (TMD) and the rs4680 AG genotype may have a decreased response to propranolol
+          as compared to patients with the AA genotype. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence response to propranolol.
+      - id: clinpgx_summary_1451359886_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with temporomandibular disorder (TMD) and the rs4680 GG genotype may have a decreased response to propranolol
+          as compared to patients with the AA genotype. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence response to propranolol.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451244920
+    label: rs4680 / sufentanil / Dosage
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: sufentanil
+        pharmgkb_id: PA451527
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451244920"
+      url: https://www.clinpgx.org/summaryAnnotation/1451244920
+    notes: rs4680 (COMT); sufentanil (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1451244920_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may require decreased doses of sufentanil as compared to patients with the
+          AG or GG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also affect sufentanil dose requirements.
+      - id: clinpgx_summary_1451244920_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may require increased doses of sufentanil as compared to patients with the
+          AA genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect sufentanil
+          dose requirements.
+      - id: clinpgx_summary_1451244920_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may require increased doses of sufentanil as compared to patients with the
+          AA genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect sufentanil
+          dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444704400
+    label: rs4680 / entacapone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: entacapone
+        pharmgkb_id: PA164748726
+    phenotypes:
+      - Parkinson Disease
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444704400"
+      url: https://www.clinpgx.org/summaryAnnotation/1444704400
+    notes: rs4680 (COMT); entacapone; Parkinson Disease (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444704400_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and Parkinson Disease may have decreased response to entacapone as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also influence a patient's response to entacapone.
+      - id: clinpgx_summary_1444704400_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and Parkinson Disease may have increased response to entacapone as compared to patients
+          with the AA genotype or may have decreased response to entacapone as compared to patients with the GG genotype. Other
+          genetic and clinical factors may also influence a patient's response to entacapone.
+      - id: clinpgx_summary_1444704400_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and Parkinson Disease may have increased response to entacapone as compared to patients
+          with the AA genotype. Other genetic and clinical factors may also influence a patient's response to entacapone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184987573
+    label: rs4680 / analgesics, antiinflammatory agents, non-steroids, ergot alkaloids, opioids, sumatriptan / Other
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: analgesics
+        pharmgkb_id: PA164712362
+      - name: antiinflammatory agents, non-steroids
+        pharmgkb_id: PA164712462
+      - name: ergot alkaloids
+        pharmgkb_id: PA164712741
+      - name: opioids
+        pharmgkb_id: PA452618
+      - name: sumatriptan
+        pharmgkb_id: PA451566
+    phenotypes: []
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184987573"
+      url: https://www.clinpgx.org/summaryAnnotation/1184987573
+    notes:
+      rs4680 (COMT); Analgesics, Antiinflammatory agents, non-steroids, Ergot alkaloids, opioids or sumatriptan (level
+      3)
+    effects:
+      - id: clinpgx_summary_1184987573_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype with substance withdrawal syndrome may have a decreased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the AG and
+          GG genotypes. Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal
+          syndrome who discontinue the use of analgesics.
+      - id: clinpgx_summary_1184987573_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype with substance withdrawal syndrome may have an increased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the AA genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+      - id: clinpgx_summary_1184987573_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype with substance withdrawal syndrome may have an increased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the AA genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450807912
+    label: rs4680 / nicotine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450807912"
+      url: https://www.clinpgx.org/summaryAnnotation/1450807912
+    notes: rs4680 (COMT); nicotine; Tobacco Use Disorder (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450807912_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be at an increased risk of developing nicotine dependence as compared to patients
+          with the AG or GG genotypes. However, another study failed to find a significant association between this variant and
+          nicotine dependence. Other genetic or clinical factors may also affect a patient's risk of developing nicotine dependence.
+      - id: clinpgx_summary_1450807912_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may be at a decreased risk of developing nicotine dependence as compared to patients
+          with the AA genotype. However, another study failed to find a significant association between this variant and nicotine
+          dependence. Other genetic or clinical factors may also affect a patient's risk of developing nicotine dependence.
+      - id: clinpgx_summary_1450807912_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be at a decreased risk of developing nicotine dependence as compared to patients
+          with the AA genotype. However, another study failed to find a significant association between this variant and nicotine
+          dependence. Other genetic or clinical factors may also affect a patient's risk of developing nicotine dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451825220
+    label: rs4680 / naloxone, oxycodone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: naloxone
+        pharmgkb_id: PA450586
+      - name: oxycodone
+        pharmgkb_id: PA450741
+    phenotypes:
+      - Vomiting
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451825220"
+      url: https://www.clinpgx.org/summaryAnnotation/1451825220
+    notes: rs4680 (COMT); naloxone and oxycodone; Vomiting (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451825220_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may be more likely to experience vomiting when treated with oxycodone and naloxone
+          for pain as compared to patients with the AG or GG genotypes. Other genetic or clinical factors may also affect likelihood
+          of experiencing vomiting when treated with oxycodone and naloxone.
+      - id: clinpgx_summary_1451825220_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may be less likely to experience vomiting when treated with oxycodone and naloxone
+          for pain as compared to patients with the AA genotype. Other genetic or clinical factors may also affect likelihood
+          of experiencing vomiting when treated with oxycodone and naloxone.
+      - id: clinpgx_summary_1451825220_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may be less likely to experience vomiting when treated with oxycodone and naloxone
+          for pain as compared to patients with the AA genotype. Other genetic or clinical factors may also affect likelihood
+          of experiencing vomiting when treated with oxycodone and naloxone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451825226
+    label: rs4680 / naloxone, oxycodone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: naloxone
+        pharmgkb_id: PA450586
+      - name: oxycodone
+        pharmgkb_id: PA450741
+    phenotypes:
+      - Erythema
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451825226"
+      url: https://www.clinpgx.org/summaryAnnotation/1451825226
+    notes: rs4680 (COMT); naloxone and oxycodone; Erythema (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451825226_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may be less likely to experience erythema when treated with oxycodone and naloxone
+          for pain as compared to patients with the GG genotype. Other genetic or clinical factors may also affect likelihood
+          of experiencing erythema when treated with oxycodone and naloxone.
+      - id: clinpgx_summary_1451825226_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may be less likely to experience erythema when treated with oxycodone and naloxone
+          for pain as compared to patients with the GG genotype. Other genetic or clinical factors may also affect likelihood
+          of experiencing erythema when treated with oxycodone and naloxone.
+      - id: clinpgx_summary_1451825226_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may be more likely to experience erythema when treated with oxycodone and naloxone
+          for pain as compared to patients with the AG or AA genotypes. Other genetic or clinical factors may also affect likelihood
+          of experiencing erythema when treated with oxycodone and naloxone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1043880039
+    label: rs4680 / fluvoxamine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: fluvoxamine
+        pharmgkb_id: PA449690
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1043880039"
+      url: https://www.clinpgx.org/summaryAnnotation/1043880039
+    notes: rs4680 (COMT); fluvoxamine; Depressive Disorder, Major (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1043880039_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and major Depressive Disorder may have an increased response to fluvoxamine treatment
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's response
+          to fluvoxamine.
+      - id: clinpgx_summary_1043880039_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and major Depressive Disorder may have an increased response to fluvoxamine treatment
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's response
+          to fluvoxamine.
+      - id: clinpgx_summary_1043880039_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and major Depressive Disorder may have a decreased response to fluvoxamine treatment
+          as compared to patients with the AG or AA genotype. Other genetic and clinical factors may also influence a patient's
+          response to fluvoxamine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450932687
+    label: rs4680 / buprenorphine, fentanyl, tramadol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: buprenorphine
+        pharmgkb_id: PA448685
+      - name: fentanyl
+        pharmgkb_id: PA449599
+      - name: tramadol
+        pharmgkb_id: PA451735
+    phenotypes:
+      - adverse events
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450932687"
+      url: https://www.clinpgx.org/summaryAnnotation/1450932687
+    notes: rs4680 (COMT); buprenorphine, fentanyl and tramadol; adverse events and Opioid-Related Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450932687_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype and who are being treated with buprenorphine with optional fentanyl and tramadol
+          for prescription opioid dependence may report more adverse events as compared to patients with the AG or GG genotypes.
+          However, conflicting evidence has been reported. Other genetic and clinical factors may also affect the incidence of
+          adverse events during treatment for opioid dependence.
+      - id: clinpgx_summary_1450932687_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype and who are being treated with buprenorphine with optional fentanyl and tramadol
+          for prescription opioid dependence may report fewer adverse events as compared to patients with the AA or GG genotypes.
+          However, conflicting evidence has been reported. Other genetic and clinical factors may also affect the incidence of
+          adverse events during treatment for opioid dependence.
+      - id: clinpgx_summary_1450932687_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype and who are being treated with buprenorphine with optional fentanyl and tramadol
+          for prescription opioid dependence may report more adverse events as compared to patients with the AG genotype. However,
+          conflicting evidence has been reported. Other genetic and clinical factors may also affect the incidence of adverse
+          events during treatment for opioid dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451245081
+    label: rs4680 / morphine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451245081"
+      url: https://www.clinpgx.org/summaryAnnotation/1451245081
+    notes: rs4680 (COMT); morphine; Pain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451245081_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs4680 AA genotype may have an increased analgesic response to morphine as compared to patients
+          with the GG genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also affect response to morphine.
+      - id: clinpgx_summary_1451245081_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs4680 AG genotype may have an increased analgesic response to morphine as compared to patients
+          with the GG genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also affect response to morphine.
+      - id: clinpgx_summary_1451245081_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs4680 GG genotype may have a decreased analgesic response to morphine as compared to patients
+          with the AA or AG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also affect response to morphine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444706787
+    label: rs4680 / paroxetine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: paroxetine
+        pharmgkb_id: PA450801
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444706787"
+      url: https://www.clinpgx.org/summaryAnnotation/1444706787
+    notes: rs4680 (COMT); paroxetine; Depressive Disorder, Major (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444706787_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and major depression may have an increased response to paroxetine as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also influence a patient's response to paroxetine.
+      - id: clinpgx_summary_1444706787_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and major depression may have an increased response to paroxetine as compared to patients
+          with the GG genotype or may have a decreased response to paroxetine as compared to patients with the AA genotype. Other
+          genetic and clinical factors may also influence a patient's response to paroxetine.
+      - id: clinpgx_summary_1444706787_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and major depression may have a decreased response to paroxetine as compared to patients
+          with the AA genotype. Other genetic and clinical factors may also influence a patient's response to paroxetine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450813994
+    label: rs4680 / modafinil / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: modafinil
+        pharmgkb_id: PA450530
+    phenotypes:
+      - Methamphetamine dependence
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450813994"
+      url: https://www.clinpgx.org/summaryAnnotation/1450813994
+    notes: rs4680 (COMT); modafinil; methamphetamine dependence (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450813994_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have a decreased response to modafinil in the treatment of methamphetamine dependence
+          as compared to patients with the GG genotype. This association was only observed in Latino subjects. Other genetic and
+          clinical factors may also affect a patient's response to modafinil.
+      - id: clinpgx_summary_1450813994_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have a decreased response to modafinil in the treatment of methamphetamine dependence
+          as compared to patients with the GG genotype. This association was only observed in Latino subjects. Other genetic and
+          clinical factors may also affect a patient's response to modafinil.
+      - id: clinpgx_summary_1450813994_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have an increased response to modafinil in the treatment of methamphetamine dependence
+          as compared to patients with the AA or AG genotypes. This association was only observed in Latino subjects. Other genetic
+          and clinical factors may also affect a patient's response to modafinil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981202646
+    label: rs4680 / antipsychotics / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+    phenotypes:
+      - Tardive Dyskinesia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981202646"
+      url: https://www.clinpgx.org/summaryAnnotation/981202646
+    notes: rs4680 (COMT); antipsychotics; tardive dyskinesia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_981202646_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and Schizophrenia who are treated with antipsychotics may have a decreased risk of
+          tardive dyskinesia as compared to patients with the GG genotype. Other genetic and clinical factors may also influence
+          a patient's risk for tardive dyskinesia.
+      - id: clinpgx_summary_981202646_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and Schizophrenia who are treated with antipsychotics may have a decreased risk of
+          tardive dyskinesia as compared to patients with the GG genotype. Other genetic and clinical factors may also influence
+          a patient's risk for tardive dyskinesia.
+      - id: clinpgx_summary_981202646_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and Schizophrenia who are treated with antipsychotics may have an increased risk of
+          tardive dyskinesia as compared to patients with the AA or AG genotype. Other genetic and clinical factors may also influence
+          a patient's risk for tardive dyskinesia.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981202674
+    label: rs4680 / antipsychotics / Other
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981202674"
+      url: https://www.clinpgx.org/summaryAnnotation/981202674
+    notes: rs4680 (COMT); antipsychotics; Schizophrenia (level 3)
+    effects:
+      - id: clinpgx_summary_981202674_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and Schizophrenia who are treated with antipsychotics may have increased methylation
+          at sites within the COMT gene promoter as compared to patients with the GG genotype. Metabolic syndrome was also associated
+          with increased methylation. No significant difference was seen in levels of methylation of the COMT gene promoter in
+          patients with or without metabolic syndrome with the AA genotype. Other genetic and clinical factors may also influence
+          a patient's level of methylation of the COMT gene promoter when treated with antipsychotics.
+      - id: clinpgx_summary_981202674_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and Schizophrenia who are treated with antipsychotics may have increased methylation
+          at sites within the COMT gene promoter as compared to patients with the GG genotype or decreased methylation at sites
+          within the COMT gene promoter as compared to patients with the AA genotype. Metabolic syndrome was associated with increased
+          methylation. No significant difference was seen in levels of methylation of the COMT gene promoter in patients with
+          or without metabolic syndrome with the AG genotype. Other genetic and clinical factors may also influence a patient's
+          level of methylation of the COMT gene promoter when treated with antipsychotics.
+      - id: clinpgx_summary_981202674_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and Schizophrenia who are treated with antipsychotics may have decreased methylation
+          at sites within the COMT gene promoter as compared to patients with the AA genotype. Metabolic syndrome was associated
+          with increased methylation. Patients with the GG genotype who are treated with antipsychotics and have metabolic syndrome
+          may have similar levels of methylation at sites within the COMT gene promoter to those seen in patients with the AA
+          genotype without metabolic syndrome. Other genetic and clinical factors may also influence methylation of the COMT gene
+          promoter. Other genetic and clinical factors may also influence a patient's level of methylation of the COMT gene promoter
+          when treated with antipsychotics.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451678101
+    label: rs4680 / oxycodone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: oxycodone
+        pharmgkb_id: PA450741
+    phenotypes:
+      - adverse events
+      - Constipation
+      - Delirium
+      - Nausea
+      - Pruritus
+      - Somnolence
+      - Urinary Retention
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451678101"
+      url: https://www.clinpgx.org/summaryAnnotation/1451678101
+    notes:
+      rs4680 (COMT); oxycodone; adverse events, Constipation, Delirium, Nausea, Pruritus, somnolence and Urinary Retention
+      (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451678101_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 AA genotype and risk
+          of adverse events when treated with oxycodone. However, conflicting evidence has been reported. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with oxycodone.
+      - id: clinpgx_summary_1451678101_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 AG genotype and risk
+          of adverse events when treated with oxycodone. However, conflicting evidence has been reported. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with oxycodone.
+      - id: clinpgx_summary_1451678101_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 GG genotype and risk
+          of adverse events when treated with oxycodone. However, conflicting evidence has been reported. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with oxycodone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184233524
+    label: rs4680 / opioids / Other
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184233524"
+      url: https://www.clinpgx.org/summaryAnnotation/1184233524
+    notes: rs4680 (COMT); opioids; Pain (level 3)
+    effects:
+      - id: clinpgx_summary_1184233524_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be less likely to require postoperative intervention with opioids after adenotonsillectomy
+          as compared to patients with the AG or GG genotype. Other genetic and clinical factors may also influence a patient's
+          requirement for pain management.
+      - id: clinpgx_summary_1184233524_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may be more likely to require postoperative intervention with opioids after adenotonsillectomy
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence a patient's requirement
+          for pain management.
+      - id: clinpgx_summary_1184233524_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be more likely to require postoperative intervention with opioids after adenotonsillectomy
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence a patient's requirement
+          for pain management.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450376745
+    label: rs4680 / methylphenidate / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: methylphenidate
+        pharmgkb_id: PA450464
+    phenotypes:
+      - Attention Deficit Disorder with Hyperactivity
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450376745"
+      url: https://www.clinpgx.org/summaryAnnotation/1450376745
+    notes: rs4680 (COMT); methylphenidate; Attention Deficit Disorder with Hyperactivity (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450376745_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 AA genotype and response
+          to methylphenidate. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by DPWG, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also influence response to methylphenidate.
+      - id: clinpgx_summary_1450376745_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 AG genotype and response
+          to methylphenidate. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by DPWG, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also influence response to methylphenidate.
+      - id: clinpgx_summary_1450376745_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 GG genotype and response
+          to methylphenidate. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by DPWG, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also influence response to methylphenidate.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445401142
+    label: rs4680 / antipsychotics / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445401142"
+      url: https://www.clinpgx.org/summaryAnnotation/1445401142
+    notes: rs4680 (COMT); antipsychotics (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1445401142_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have increased blood pressure when treated with antipsychotics as compared to
+          patients with the GG genotype. Other genetic and clinical factors may also influence blood pressure in patients receiving
+          antipsychotics.
+      - id: clinpgx_summary_1445401142_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have increased blood pressure when treated with antipsychotics as compared to
+          patients with the GG genotype. Other genetic and clinical factors may also influence blood pressure in patients receiving
+          antipsychotics.
+      - id: clinpgx_summary_1445401142_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have decreased blood pressure when treated with antipsychotics as compared to
+          patients with the AA or AG genotype. Other genetic and clinical factors may also influence blood pressure in patients
+          receiving antipsychotics.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445401149
+    label: rs4680 / antipsychotics / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445401149"
+      url: https://www.clinpgx.org/summaryAnnotation/1445401149
+    notes: rs4680 (COMT); antipsychotics (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1445401149_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have increased fasting glucose levels when treated with antipsychotics as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence fasting glucose in patients
+          taking antipsychotics.
+      - id: clinpgx_summary_1445401149_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have increased fasting glucose levels when treated with antipsychotics as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence fasting glucose in patients
+          taking antipsychotics.
+      - id: clinpgx_summary_1445401149_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have reduced fasting glucose levels when treated with antipsychotics as compared
+          to patients with the AA or AG genotype. Other genetic and clinical factors may also influence fasting glucose in patients
+          taking antipsychotics.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1043880165
+    label: rs4680 / venlafaxine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: venlafaxine
+        pharmgkb_id: PA451866
+    phenotypes:
+      - Anxiety Disorders
+      - Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1043880165"
+      url: https://www.clinpgx.org/summaryAnnotation/1043880165
+    notes: rs4680 (COMT); venlafaxine; Anxiety Disorders and Depressive Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1043880165_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have increased response to venlafaxine in people with Anxiety Disorder but a decreased
+          response to venlafaxine in people with Depressive Disorders as compared to patients with the GG genotype, although this
+          has been contradicted in some studies. Other genetic and clinical factors may also influence a patient's response to
+          venlafaxine treatment.
+      - id: clinpgx_summary_1043880165_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have increased response to venlafaxine in people with Anxiety Disorder but a decreased
+          response to venlafaxine in people with Depressive Disorders as compared to patients with the GG genotype, although this
+          has been contradicted in some studies. Other genetic and clinical factors may also influence a patient's response to
+          venlafaxine treatment.
+      - id: clinpgx_summary_1043880165_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have increased response to venlafaxine in people with Depressive Disorder but
+          a decreased response to venlafaxine in people with Anxiety Disorders as compared to patients with the AA genotype, although
+          this has been contradicted in some studies. Other genetic and clinical factors may also influence a patient's response
+          to venlafaxine treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450928534
+    label: rs4680 / risperidone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: risperidone
+        pharmgkb_id: PA451257
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450928534"
+      url: https://www.clinpgx.org/summaryAnnotation/1450928534
+    notes: rs4680 (COMT); risperidone; Schizophrenia (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450928534_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with schizophrenia and the AA genotype may have a decreased response to risperidone as compared to patients
+          with the GG genotype. However, the association lost significance following correction for multiple testing while another
+          study failed to find an association. Other genetic or clinical factors may also affect a patient's response to risperidone.
+      - id: clinpgx_summary_1450928534_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with schizophrenia and the AG genotype may have a decreased response to risperidone as compared to patients
+          with the GG genotype. However, the association lost significance following correction for multiple testing while another
+          study failed to find an association. Other genetic or clinical factors may also affect a patient's response to risperidone.
+      - id: clinpgx_summary_1450928534_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with schizophrenia and the GG genotype may have an increased response to risperidone as compared to patients
+          with the AA or AG genotypes. However, the association lost significance following correction for multiple testing while
+          another study failed to find an association. Other genetic or clinical factors may also affect a patient's response
+          to risperidone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444673123
+    label: rs4680 / haloperidol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: haloperidol
+        pharmgkb_id: PA449841
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444673123"
+      url: https://www.clinpgx.org/summaryAnnotation/1444673123
+    notes: rs4680 (COMT); haloperidol; Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1444673123_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and schizophrenia may have a decreased risk for developing extrapyramidal symptoms
+          when treated with haloperidol as compared to patients with the AG genotype. Other genetic and clinical factors may also
+          influence risk for extrapyramidal symptoms when taking haloperidol.
+      - id: clinpgx_summary_1444673123_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and schizophrenia may have an increased risk for developing extrapyramidal symptoms
+          when treated with haloperidol as compared to patients with the AA or GG genotype. Other genetic and clinical factors
+          may also influence risk for extrapyramidal symptoms when taking haloperidol.
+      - id: clinpgx_summary_1444673123_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and schizophrenia may have a decreased risk for developing extrapyramidal symptoms
+          when treated with haloperidol as compared to patients with the AG genotype. Other genetic and clinical factors may also
+          influence risk for extrapyramidal symptoms when taking haloperidol.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451678087
+    label: rs4680 / morphine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes:
+      - adverse events
+      - Constipation
+      - Delirium
+      - Nausea
+      - Pruritus
+      - Somnolence
+      - Urinary Retention
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451678087"
+      url: https://www.clinpgx.org/summaryAnnotation/1451678087
+    notes:
+      rs4680 (COMT); morphine; adverse events, Constipation, Delirium, Nausea, Pruritus, somnolence and Urinary Retention
+      (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451678087_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 AA genotype and risk
+          of adverse events when treated with morphine. However, conflicting evidence has been reported. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with morphine.
+      - id: clinpgx_summary_1451678087_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 AG genotype and risk
+          of adverse events when treated with morphine. However, conflicting evidence has been reported. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with morphine.
+      - id: clinpgx_summary_1451678087_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs4680 GG genotype and risk
+          of adverse events when treated with morphine. However, conflicting evidence has been reported. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with morphine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445402111
+    label: rs4680 / clozapine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: clozapine
+        pharmgkb_id: PA449061
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445402111"
+      url: https://www.clinpgx.org/summaryAnnotation/1445402111
+    notes: rs4680 (COMT); clozapine; Schizophrenia (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1445402111_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and schizophrenia may have a poorer response when treated with clozapine as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence response to clozapine.
+      - id: clinpgx_summary_1445402111_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and schizophrenia may have a poorer response when treated with clozapine as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence response to clozapine.
+      - id: clinpgx_summary_1445402111_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and schizophrenia may have a better response when treated with clozapine as compared
+          to patients with the AA or AG genotype. Other genetic and clinical factors may also influence response to clozapine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451148520
+    label: rs4680 / opioids / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Hyperalgesia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451148520"
+      url: https://www.clinpgx.org/summaryAnnotation/1451148520
+    notes: rs4680 (COMT); opioids; Hyperalgesia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451148520_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with chronic pain and the AA genotype may be less likely to develop hyperalgesia when treated with long-term
+          opioids as compared to patients with the AG genotype. Other genetic and clinical factors may also affect a patient's
+          likelihood of developing hyperalgesia.
+      - id: clinpgx_summary_1451148520_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with chronic pain and the AG genotype may be more likely to develop hyperalgesia when treated with long-term
+          opioids as compared to patients with the AA or GG genotypes. Other genetic and clinical factors may also affect a patient's
+          likelihood of developing hyperalgesia.
+      - id: clinpgx_summary_1451148520_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with chronic pain and the GG genotype may be less likely to develop hyperalgesia when treated with long-term
+          opioids as compared to patients with the AG genotype. Other genetic and clinical factors may also affect a patient's
+          likelihood of developing hyperalgesia.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451212500
+    label: rs4680 / opioids / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Death
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451212500"
+      url: https://www.clinpgx.org/summaryAnnotation/1451212500
+    notes: rs4680 (COMT); opioids; Death and Opioid-Related Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451212500_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with opioid dependence and the AA genotype may be at a decreased risk of sudden death when using opioids
+          as compared to patients with the AG or GG genotypes. Other genetic and clinical factors may also affect risk of sudden
+          death when using opioids.
+      - id: clinpgx_summary_1451212500_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with opioid dependence and the AG genotype may be at an increased risk of sudden death when using opioids
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also affect risk of sudden death
+          when using opioids.
+      - id: clinpgx_summary_1451212500_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with opioid dependence and the GG genotype may be at an increased risk of sudden death when using opioids
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also affect risk of sudden death
+          when using opioids.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452569800
+    label: rs4680 / erenumab / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: erenumab
+        pharmgkb_id: PA166320921
+    phenotypes:
+      - Migraine with Aura
+      - Migraine without Aura
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452569800"
+      url: https://www.clinpgx.org/summaryAnnotation/1452569800
+    notes: rs4680 (COMT); erenumab; Migraine with Aura and Migraine without Aura (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452569800_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with migraine and the rs4680 AA genotype may have an increased response to erenumab as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also influence response to erenumab.
+      - id: clinpgx_summary_1452569800_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with migraine and the rs4680 AG genotype may have an increased response to erenumab as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also influence response to erenumab.
+      - id: clinpgx_summary_1452569800_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with migraine and the rs4680 GG genotype may have a decreased response to erenumab as compared to patients
+          with the AA or AG genotypes. Other genetic and clinical factors may also influence response to erenumab.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452569820
+    label: rs4680 / fremanezumab / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: fremanezumab
+        pharmgkb_id: PA166320903
+    phenotypes:
+      - Migraine with Aura
+      - Migraine without Aura
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452569820"
+      url: https://www.clinpgx.org/summaryAnnotation/1452569820
+    notes: rs4680 (COMT); fremanezumab; Migraine with Aura and Migraine without Aura (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452569820_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with migraine and the rs4680 AA genotype may have an increased response to fremanezumab as compared to
+          patients with the GG genotype. Other genetic and clinical factors may also influence response to fremanezumab.
+      - id: clinpgx_summary_1452569820_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with migraine and the rs4680 AG genotype may have an increased response to fremanezumab as compared to
+          patients with the GG genotype. Other genetic and clinical factors may also influence response to fremanezumab.
+      - id: clinpgx_summary_1452569820_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with migraine and the rs4680 GG genotype may have a decreased response to fremanezumab as compared to patients
+          with the AA or AG genotypes. Other genetic and clinical factors may also influence response to fremanezumab.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452569827
+    label: rs4680 / galcanezumab / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - COMT
+    variant: rs4680
+    drugs:
+      - name: galcanezumab
+        pharmgkb_id: PA166320904
+    phenotypes:
+      - Migraine with Aura
+      - Migraine without Aura
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452569827"
+      url: https://www.clinpgx.org/summaryAnnotation/1452569827
+    notes: rs4680 (COMT); galcanezumab; Migraine with Aura and Migraine without Aura (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452569827_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with migraine and the rs4680 AA genotype may have an increased response to galcanezumab as compared to
+          patients with the GG genotype. Other genetic and clinical factors may also influence response to galcanezumab.
+      - id: clinpgx_summary_1452569827_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with migraine and the rs4680 AG genotype may have an increased response to galcanezumab as compared to
+          patients with the GG genotype. Other genetic and clinical factors may also influence response to galcanezumab.
+      - id: clinpgx_summary_1452569827_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs4680.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with migraine and the rs4680 GG genotype may have a decreased response to galcanezumab as compared to patients
+          with the AA or AG genotypes. Other genetic and clinical factors may also influence response to galcanezumab.

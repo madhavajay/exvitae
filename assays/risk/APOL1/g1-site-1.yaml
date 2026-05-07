@@ -1,0 +1,45 @@
+name: "APOL1-G1-site-1-rs73885319"
+version: "1.0"
+schema: "bioscript:variant:1.0"
+gene: "APOL1"
+summary: "APOL1 G1 haplotype site 1 SNV used by the APOL1 classifier."
+
+identifiers:
+  rsids:
+    - "rs73885319"
+  aliases: []
+
+coordinates:
+  grch37:
+    chrom: "22"
+    pos: 36661906
+  grch38:
+    chrom: "22"
+    pos: 36265860
+
+alleles:
+  kind: "snv"
+  ref: "A"
+  alts:
+    - "G"
+
+findings:
+  - schema: "bioscript:risk:1.0"
+    alt: "G"
+    notes: "APOL1 G1 site 1; interpreted together with APOL1 G1 site 2 and G2 deletion by the APOL1 classifier."
+
+provenance:
+  sources:
+    - kind: "database"
+      label: "dbSNP"
+      url: "https://www.ncbi.nlm.nih.gov/snp/rs73885319"
+      fields:
+        - "identifiers.rsids"
+        - "coordinates"
+        - "alleles"
+    - kind: "bioscript"
+      label: "Existing APOL1 BioScript classifier"
+      url: "https://github.com/madhavajay/exvitae"
+      fields:
+        - "summary"
+        - "findings[0].notes"

@@ -1,0 +1,151 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+name: APOE-epsilon-pgx-findings
+variant: assay.yaml
+gene: APOE
+sources:
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/gene/APOE/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166104866
+    label: Annotation of FDA Label for pravastatin and APOE
+    authority_type: regulatory_label
+    binding:
+      source: analysis
+      analysis_id: apoe_epsilon
+      key: apoe_status
+      operator: equals
+      value: e2/e2
+    genes:
+      - APOE
+    drugs:
+      - name: pravastatin
+        aliases:
+          - PRAVACHOL
+        pharmgkb_id: PA451089
+    regulatory_sources:
+      - FDA
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166104866
+      url: https://www.clinpgx.org/labelAnnotation/PA166104866
+    notes:
+      The FDA-approved pravastatin label contains pharmacogenetic information regarding response results in patients with
+      APOE genotype E2/E2 and Fredrickson Type III dysbetalipoproteinemia.
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166313401
+    label: Annotation of FDA Label for lecanemab and APOE
+    authority_type: regulatory_label
+    binding:
+      source: analysis
+      analysis_id: apoe_epsilon
+      key: apoe_status
+      operator: equals
+      value: e4/e4
+    genes:
+      - APOE
+    drugs:
+      - name: lecanemab
+        aliases:
+          - LEQEMBI
+        pharmgkb_id: PA166313301
+    regulatory_sources:
+      - FDA
+    pgx_action_level: Testing Required
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166313401
+      url: https://www.clinpgx.org/labelAnnotation/PA166313401
+    notes:
+      The FDA label for lecanemab includes warnings that testing should be performed for ApoE E4/E4 because individuals
+      with ApoE E4/E4 have increased risk for amyloid related imaging abnormalities (ARIA) when treated with lecanemab.
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166350721
+    label: Annotation of FDA Label for aducanumab and APOE
+    authority_type: regulatory_label
+    binding:
+      source: analysis
+      analysis_id: apoe_epsilon
+      key: apoe_status
+      operator: equals
+      value: e4/e4
+    genes:
+      - APOE
+    drugs:
+      - name: aducanumab
+        aliases:
+          - ADUHELM
+        pharmgkb_id: PA166350685
+    regulatory_sources:
+      - FDA
+    pgx_action_level: Testing Required
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166350721
+      url: https://www.clinpgx.org/labelAnnotation/PA166350721
+    notes:
+      The FDA label for aducanumab includes warnings that testing should be performed for ApoE ε4/ε4 because individuals
+      with ApoE ε4/ε4 have increased risk for amyloid related imaging abnormalities (ARIA) when treated with aducanumab.
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166401161
+    label: Annotation of FDA Label for donanemab and APOE
+    authority_type: regulatory_label
+    binding:
+      source: analysis
+      analysis_id: apoe_epsilon
+      key: apoe_status
+      operator: equals
+      value: e4/e4
+    genes:
+      - APOE
+    drugs:
+      - name: donanemab
+        aliases:
+          - KISUNLA
+        pharmgkb_id: PA166400001
+    regulatory_sources:
+      - FDA
+    pgx_action_level: Testing Required
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166401161
+      url: https://www.clinpgx.org/labelAnnotation/PA166401161
+    notes:
+      The FDA label for donanemab includes warnings that ApoE ε4 status should be determined before treatment; individuals
+      homozygous for ApoE ε4 have increased risk for amyloid related imaging abnormalities (ARIA) when treated with donanemab.
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166401162
+    label: Annotation of EMA Label for donanemab and APOE
+    authority_type: regulatory_label
+    binding:
+      source: analysis
+      analysis_id: apoe_epsilon
+      key: apoe_status
+      operator: equals
+      value: e4/e4
+    genes:
+      - APOE
+    drugs:
+      - name: donanemab
+        aliases:
+          - KISUNLA
+        pharmgkb_id: PA166400001
+    regulatory_sources:
+      - EMA
+    pgx_action_level: Testing Required
+    prescribing_actions:
+      - Donanemab is not indicated in patients who are ApoE ε4 homozygotes.
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166401162
+      url: https://www.clinpgx.org/labelAnnotation/PA166401162
+    notes:
+      The EMA EPAR for donanemab says ApoE ε4 status should be determined before treatment, ApoE ε4 carriers have increased
+      ARIA frequency, and donanemab is not indicated in patients who are ApoE ε4 homozygotes.

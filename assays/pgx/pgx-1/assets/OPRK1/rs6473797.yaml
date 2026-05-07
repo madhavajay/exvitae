@@ -1,0 +1,60 @@
+name: OPRK1-pgx-rs6473797
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: OPRK1
+summary: OPRK1 pharmacogenomics panel entry for rs6473797 with detailed ClinPGx/PharmGKB annotations attached in rs6473797-pgx.yaml.
+identifiers:
+  rsids:
+    - rs6473797
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "8"
+    pos: 54152982
+  grch38:
+    chrom: "8"
+    pos: 53240422
+alleles:
+  kind: snv
+  ref: T
+  alts:
+    - C
+  observed_alts:
+    - C
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs6473797
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs6473797
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs6473797
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: ClinPGx / PharmGKB variant summary annotations PA166183884 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166183884/summaryAnnotation
+      fields:
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: oprk1_pgx_rs6473797_pgx_sidecar
+    include: rs6473797-pgx.yaml
+    binding:
+      source: variant
+      variant: rs6473797.yaml
+      key: alt
+      operator: equals
+      value: C
+      description: Loads this sidecar when the participant carries the expected PGx-significant rs6473797 alt allele C.
+    notes: Detailed ClinPGx/PharmGKB summary findings are stored in the sidecar file.

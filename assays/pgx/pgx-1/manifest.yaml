@@ -1,0 +1,116 @@
+schema: bioscript:panel:1.0
+version: "1.0"
+name: pgx-1
+label: PGx-1 Panel
+tags:
+  - type:pgx
+package:
+  schema: bioscript:package:1.0
+  publish: true
+  artifact: pgx-1.zip
+members:
+  - kind: variant
+    path: assets/ABCB1/rs1128503.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/ABCG2/rs2231142.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/ADRA2A/rs1800544.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/ANKK1/rs1800497.yaml
+    version: "1.0"
+  - kind: assay
+    path: assets/APOE/assay.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/ATM/rs11212617.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/BCHE/rs1799807.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/BCHE/rs1803274.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/BCHE/rs28933389.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/BCHE/rs28933390.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/BDNF/rs6265.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/CACNA1C/rs1006737.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/CACNA1C/rs1051375.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/COMT/rs4680.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/CYP2C/rs12777823.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/CYP4F2/rs2108622.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/DBH/rs1611115.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/DRD2/rs1799978.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/F2/rs1799963.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/F5/rs6025.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/FKBP5/rs1360780.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/FKBP5/rs4713916.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/GRIK1/rs2832407.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/GRIK4/rs1954787.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/GRIN2B/rs2058878.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/HTR2A/rs7997012.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/HTR2C/rs1414334.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/HTR2C/rs3813929.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/IFNL3/rs12979860.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/OPRD1/rs678849.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/OPRK1/rs6473797.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/OPRM1/rs1799971.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/UGT2B15/rs1902023.yaml
+    version: "1.0"
+  - kind: variant
+    path: assets/VKORC1/rs9923231.yaml
+    version: "1.0"
+  - kind: assay
+    path: assets/MTHFR/assay.yaml
+    version: "1.0"

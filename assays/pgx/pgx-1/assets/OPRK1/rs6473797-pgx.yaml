@@ -1,0 +1,130 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs6473797.yaml
+gene: OPRK1
+rsid: rs6473797
+variant_pa_id: PA166183884
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166183884/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450812247
+    label: rs6473797 / heroin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRK1
+    variant: rs6473797
+    drugs:
+      - name: heroin
+        pharmgkb_id: PA452619
+    phenotypes:
+      - Heroin Dependence
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450812247"
+      url: https://www.clinpgx.org/summaryAnnotation/1450812247
+    notes: rs6473797 (OPRK1); heroin; Heroin Dependence (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450812247_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6473797.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may be at a decreased risk of developing heroin dependence as compared to patients
+          with the TT genotype. Other genetic and clinical factors may also affect a patient's risk of developing heroin dependence.
+      - id: clinpgx_summary_1450812247_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6473797.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may be at a decreased risk of developing heroin dependence as compared to patients
+          with the TT genotype. Other genetic and clinical factors may also affect a patient's risk of developing heroin dependence.
+      - id: clinpgx_summary_1450812247_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6473797.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may be at an increased risk of developing heroin dependence as compared to patients
+          with the CC or CT genotypes. Other genetic and clinical factors may also affect a patient's risk of developing heroin
+          dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451103560
+    label: rs6473797 / ethanol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRK1
+    variant: rs6473797
+    drugs:
+      - name: ethanol
+        pharmgkb_id: PA448073
+    phenotypes:
+      - Alcohol abuse
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451103560"
+      url: https://www.clinpgx.org/summaryAnnotation/1451103560
+    notes: rs6473797 (OPRK1); ethanol; Alcoholism (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451103560_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6473797.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have an increased severity of alcohol dependence as compared to patients with
+          the TT genotype. Other genetic and clinical factors may also affect severity of alcohol dependence.
+      - id: clinpgx_summary_1451103560_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6473797.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have an increased severity of alcohol dependence as compared to patients with
+          the TT genotype. Other genetic and clinical factors may also affect severity of alcohol dependence.
+      - id: clinpgx_summary_1451103560_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6473797.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have a decreased severity of alcohol dependence as compared to patients with the
+          CC or CT genotypes. Other genetic and clinical factors may also affect severity of alcohol dependence.

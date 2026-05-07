@@ -1,0 +1,507 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs2108622.yaml
+gene: CYP4F2
+rsid: rs2108622
+variant_pa_id: PA166155381
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166155381/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184661194
+    label: rs2108622 / acenocoumarol / Dosage
+    authority_type: evidence_summary
+    genes:
+      - CYP4F2
+    variant: rs2108622
+    drugs:
+      - name: acenocoumarol
+        pharmgkb_id: PA452632
+    phenotypes:
+      - Atrial Fibrillation
+    phenotype_categories:
+      - Dosage
+    evidence_level: 2A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184661194"
+      url: https://www.clinpgx.org/summaryAnnotation/1184661194
+    notes: rs2108622 (CYP4F2); acenocoumarol; Atrial Fibrillation (level 2A Dosage)
+    effects:
+      - id: clinpgx_summary_1184661194_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs2108622 CC genotype who are treated with acenocoumarol may require a lower dose as compared
+          to patients with the CT or TT genotype. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence required acenocoumarol dose.
+      - id: clinpgx_summary_1184661194_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs2108622 CT genotype who are treated with acenocoumarol may require a lower dose as compared
+          to patients with the TT genotype or may require a higher dose as compared to patients with the CC genotype. However,
+          conflicting evidence has been reported. Other genetic and clinical factors may also influence required acenocoumarol
+          dose.
+      - id: clinpgx_summary_1184661194_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs2108622 TT genotype who are treated with acenocoumarol may require a higher dose as compared
+          to patients with the CC genotype. However, conflicting evidence has been reported. Other genetic and clinical factors
+          may also influence required acenocoumarol dose.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184661207
+    label: rs2108622 / phenprocoumon / Dosage
+    authority_type: evidence_summary
+    genes:
+      - CYP4F2
+    variant: rs2108622
+    drugs:
+      - name: phenprocoumon
+        pharmgkb_id: PA450921
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184661207"
+      url: https://www.clinpgx.org/summaryAnnotation/1184661207
+    notes: rs2108622 (CYP4F2); phenprocoumon (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1184661207_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype who are treated with phenprocoumon may require a lower dose as compared to patients
+          with the TT genotype. Other genetic and clinical factors may also influence a patient's required phenprocoumon dose.
+      - id: clinpgx_summary_1184661207_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype who are treated with phenprocoumon may require a higher dose as compared to patients
+          with the CC genotype or a lower dose as compared to patients with the TT genotype. Other genetic and clinical factors
+          may also influence a patient's required phenprocoumon dose.
+      - id: clinpgx_summary_1184661207_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype who are treated with phenprocoumon may require a higher dose as compared to patients
+          with the CC genotype. Other genetic and clinical factors may also influence a patient's required phenprocoumon dose.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184472841
+    label: rs2108622 / vitamin e / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - CYP4F2
+    variant: rs2108622
+    drugs:
+      - name: vitamin e
+        pharmgkb_id: PA451900
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184472841"
+      url: https://www.clinpgx.org/summaryAnnotation/1184472841
+    notes: rs2108622 (CYP4F2); vitamin e (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1184472841_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have decreased steady-state levels of vitamin E when taking vitamin E supplements
+          as compared to patients with the CT and TT genotypes. Other clinical and genetic factors may also influence steady-state
+          levels of vitamin E in patients taking vitamin E supplements.
+      - id: clinpgx_summary_1184472841_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have decreased steady-state levels of vitamin E when taking vitamin E supplements
+          as compared to patients with the TT genotypes, and increased steady-state levels as compared to patients with the CC
+          genotypes. Other clinical and genetic factors may also influence steady-state levels of vitamin E in patients taking
+          vitamin E supplements.
+      - id: clinpgx_summary_1184472841_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have increased steady-state levels of vitamin E when taking vitamin E supplements
+          as compared to patients with the CT and CC genotypes. Other clinical and genetic factors may also influence steady-state
+          levels of vitamin E in patients taking vitamin E supplements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448262901
+    label: rs2108622 / warfarin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - CYP4F2
+    variant: rs2108622
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448262901"
+      url: https://www.clinpgx.org/summaryAnnotation/1448262901
+    notes: rs2108622 (CYP4F2); warfarin (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1448262901_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have increased international normalized ratio variability (INR-var) when treated
+          with warfarin as compared to patients with genotype TT or CT in European-Americans after the warfarin dose-titration
+          phase. Other genetic and clinical factors may also influence the response to warfarin.
+      - id: clinpgx_summary_1448262901_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have decreased international normalized ratio variability (INR-var) when treated
+          with warfarin as compared to patients with genotype CC in European-Americans after the warfarin dose-titration phase.
+          Other genetic and clinical factors may also influence the response to warfarin.
+      - id: clinpgx_summary_1448262901_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have decreased international normalized ratio variability (INR-var) when treated
+          with warfarin as compared to patients with genotype CC in European-Americans after the warfarin dose-titration phase.
+          Other genetic and clinical factors may also influence the response to warfarin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444703346
+    label: rs2108622 / aspirin, clopidogrel / Other
+    authority_type: evidence_summary
+    genes:
+      - CYP4F2
+    variant: rs2108622
+    drugs:
+      - name: aspirin
+        pharmgkb_id: PA448497
+      - name: clopidogrel
+        pharmgkb_id: PA449053
+    phenotypes:
+      - Acute coronary syndrome
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444703346"
+      url: https://www.clinpgx.org/summaryAnnotation/1444703346
+    notes: rs2108622 (CYP4F2); aspirin or clopidogrel; Acute coronary syndrome (level 3)
+    effects:
+      - id: clinpgx_summary_1444703346_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and acute coronary syndrome may have decreased platelet aggregation with epinephrine
+          when treated with aspirin and clopidogrel as compared to patients with the CT genotype and a decreased response to aspirin
+          and clopidogrel in patients with the TT genotype. Other genetic and clinical factors may also influence a patient's
+          response to aspirin and clopidogrel.
+      - id: clinpgx_summary_1444703346_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and acute coronary syndrome may have increased platelet aggregation with epinephrine
+          when treated with aspirin and clopidogrel as compared to patients with the CC or TT genotype and and a decreased response
+          to aspirin and clopidogrel in patients with the TT genotype. Other genetic and clinical factors may also influence a
+          patient's response to aspirin and clopidogrel.
+      - id: clinpgx_summary_1444703346_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and acute coronary syndrome may have decreased platelet aggregation with epinephrine
+          when treated with aspirin and clopidogrel as compared to patients with the CT genotype and and an increased response
+          to aspirin and clopidogrel in patients with the CC or CT genotype. Other genetic and clinical factors may also influence
+          a patient's response to aspirin and clopidogrel.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449269960
+    label: rs2108622 / vitamin k and analogues / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - CYP4F2
+    variant: rs2108622
+    drugs:
+      - name: vitamin k and analogues
+        pharmgkb_id: PA164713404
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449269960"
+      url: https://www.clinpgx.org/summaryAnnotation/1449269960
+    notes: rs2108622 (CYP4F2); Vitamin K (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1449269960_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have decreased concentrations of Vitamin K as compared to patients with the CT
+          or TT genotype. Other clinical and genetic factors may also influence concentrations of Vitamin K.
+      - id: clinpgx_summary_1449269960_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have increased concentrations of Vitamin K as compared to patients with the CC.
+          Other clinical and genetic factors may also influence concentrations of Vitamin K.
+      - id: clinpgx_summary_1449269960_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have increased concentrations of Vitamin K as compared to patients with the CC
+          genotype. Other clinical and genetic factors may also influence concentrations of Vitamin K.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449269278
+    label: rs2108622 / warfarin / Other
+    authority_type: evidence_summary
+    genes:
+      - CYP4F2
+    variant: rs2108622
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes:
+      - over-anticoagulation
+    phenotype_categories:
+      - Other
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449269278"
+      url: https://www.clinpgx.org/summaryAnnotation/1449269278
+    notes: rs2108622 (CYP4F2); warfarin; over-anticoagulation (level 4)
+    effects:
+      - id: clinpgx_summary_1449269278_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype who are treated with warfarin may have an increased risk of over-anticoagulation as
+          compared to patients with the TT genotype, although not all studies support this. Other clinical factors such as target
+          INR, and dosage (which is also associated with this particular variant) and genetic factors may also influence risk
+          of over-anticoagulation in patients administered warfarin.
+      - id: clinpgx_summary_1449269278_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype who are treated with warfarin may have a decreased risk of over-anticoagulation as
+          compared to patients with the TT genotype, although not all studies support this. Other clinical factors such as target
+          INR, and dosage (which is also associated with this particular variant) and genetic factors may also influence risk
+          of over-anticoagulation in patients administered warfarin.
+      - id: clinpgx_summary_1449269278_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype who are treated with warfarin may have a decreased risk of over-anticoagulation as
+          compared to patients with the CT or CC genotype, although not all studies support this. Other clinical factors such
+          as target INR, and dosage (which is also associated with this particular variant) and genetic factors may also influence
+          risk of over-anticoagulation in patients administered warfarin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385400
+    label: rs2108622 / warfarin / Dosage
+    authority_type: evidence_summary
+    genes:
+      - CYP4F2
+    variant: rs2108622
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385400"
+      url: https://www.clinpgx.org/summaryAnnotation/655385400
+    notes: rs2108622 (CYP4F2); warfarin (level 1A Dosage)
+    effects:
+      - id: clinpgx_summary_655385400_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs2108622 CC genotype may have decreased warfarin dosage requirements as compared to patients
+          with the CT or TT genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may
+          also affect warfarin dosage requirements.
+      - id: clinpgx_summary_655385400_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs2108622 CT genotype may have increased warfarin dosage requirements as compared to patients
+          with the CC genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also affect
+          warfarin dosage requirements.
+      - id: clinpgx_summary_655385400_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2108622.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs2108622 TT genotype may have increased warfarin dosage requirements as compared to patients
+          with the CC or CT genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may
+          also affect warfarin dosage requirements.

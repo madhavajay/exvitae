@@ -1,0 +1,652 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs9923231.yaml
+gene: VKORC1
+rsid: rs9923231
+variant_pa_id: PA166155091
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166155091/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166155091/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166104776
+    label: Annotation of FDA Label for warfarin and CYP2C9, VKORC1
+    authority_type: regulatory_label
+    genes:
+      - CYP2C9
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166104776
+      url: https://www.clinpgx.org/labelAnnotation/PA166104776
+    notes: Annotation of FDA Label for warfarin and CYP2C9, VKORC1
+    pgx_action_level: Actionable PGx
+    summary:
+      Warfarin (COUMADIN) is an anticoagulant used as a prophylaxis and to treat venous thrombosis, pulmonary embolism,
+      thromboembolic complications from atrial fibrillation and cardiac valve replacement, and to reduce the recurrence of myocardial
+      infarction. Pharmacogenomics-related dosing information for CYP2C9 and VKORC1 variants is provided within the label.
+    prescribing_information:
+      Table 1 in the drug label provides ranges of expected maintenance daily doses of warfarin (COUMADIN)
+      based on CYP2C9*2, CYP2C9*3 and "VKORC1−1639G>A (rs9923231)" genotypes.
+    prescribing_actions:
+      - Dosing Info
+    related_alleles:
+      - id: PA165816542
+        symbol: CYP2C9*1
+        name: "*1"
+      - id: PA165816543
+        symbol: CYP2C9*2
+        name: "*2"
+      - id: PA165816544
+        symbol: CYP2C9*3
+        name: "*3"
+      - id: PA166155091
+        symbol: rs9923231
+        name: rs9923231
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Warfarin_03_01_19_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166127732
+    label: Annotation of HCSC Label for warfarin and CYP2C9, VKORC1
+    authority_type: regulatory_label
+    genes:
+      - CYP2C9
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166127732
+      url: https://www.clinpgx.org/labelAnnotation/PA166127732
+    notes: Annotation of HCSC Label for warfarin and CYP2C9, VKORC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The product monograph for warfarin notes that patients carrying one or two copies of the CYP2C9*2 or *3 alleles
+      may require a decreased mean daily warfarin dose, and have an increased bleeding risk, as compared to those homozygous
+      for the CYP2C9*1 allele. Additionally, variations in the VKORC1 gene, such as -1639G>A, are also associated with changes
+      in the dose requirement of warfarin.
+    prescribing_information:
+      It is recommended that APO-WARFARIN therapy be initiated with a dose of 2 to 5 mg per day with
+      dosage adjustments based on the results of PT/INR determinations. The lower initiation doses should be considered for
+      patients with certain genetic variations in CYP2C9 and VKORC1 enzymes [...]
+    prescribing_actions:
+      - Dosing Info
+    related_alleles:
+      - id: PA165816543
+        symbol: CYP2C9*2
+        name: "*2"
+      - id: PA165816544
+        symbol: CYP2C9*3
+        name: "*3"
+      - id: PA166155091
+        symbol: rs9923231
+        name: rs9923231
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449269910
+    label: rs9923231 / warfarin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes:
+      - Hemorrhage
+    phenotype_categories:
+      - Toxicity
+    evidence_level: 2A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449269910"
+      url: https://www.clinpgx.org/summaryAnnotation/1449269910
+    notes: rs9923231 (VKORC1); warfarin; Hemorrhage (level 2A Toxicity)
+    effects:
+      - id: clinpgx_summary_1449269910_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs9923231 CC genotype may have a decreased risk of bleeding when treated with warfarin as compared
+          to patients with the CT or TT genotypes. However, conflicting evidence has been reported. Other clinical and genetic
+          factors may also influence risk of warfarin-induced bleeding.
+      - id: clinpgx_summary_1449269910_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs9923231 CT genotype may have an increased risk of bleeding when treated with warfarin as compared
+          to patients with the CC genotypes. However, conflicting evidence has been reported. Other clinical and genetic factors
+          may also influence risk of warfarin-induced bleeding.
+      - id: clinpgx_summary_1449269910_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs9923231 TT genotype may have an increased risk of bleeding when treated with warfarin as compared
+          to the CC genotypes. However, conflicting evidence has been reported. Other clinical and genetic factors may also influence
+          risk of warfarin-induced bleeding.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451243676
+    label: rs9923231 / phenprocoumon / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: phenprocoumon
+        pharmgkb_id: PA450921
+    phenotypes:
+      - Hemorrhage
+      - over-anticoagulation
+      - time above therapeutic range
+    phenotype_categories:
+      - Toxicity
+    evidence_level: 2A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451243676"
+      url: https://www.clinpgx.org/summaryAnnotation/1451243676
+    notes: rs9923231 (VKORC1); phenprocoumon; Hemorrhage, over-anticoagulation and time above therapeutic range (level 2A Toxicity)
+    effects:
+      - id: clinpgx_summary_1451243676_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have a decreased risk of adverse events (bleeding, over-anticoagulation or increased
+          time above therapeutic range) when treated with phenprocoumon as compared to patients with the TT or CT genotype. Other
+          clinical and genetic factors may also influence risk of adverse events to phenprocoumon.
+      - id: clinpgx_summary_1451243676_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have an increased risk of adverse events (bleeding, over-anticoagulation or increased
+          time above therapeutic range) when treated with phenprocoumon as compared to patients with the CC genotype. Other clinical
+          and genetic factors may also influence risk of adverse events to phenprocoumon.
+      - id: clinpgx_summary_1451243676_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have an increased risk of adverse events (bleeding, over-anticoagulation or increased
+          time above therapeutic range) when treated with phenprocoumon as compared to patients with the CC genotype. Other clinical
+          and genetic factors may also influence risk of adverse events to phenprocoumon.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451243628
+    label: rs9923231 / acenocoumarol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: acenocoumarol
+        pharmgkb_id: PA452632
+    phenotypes:
+      - Hemorrhage
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451243628"
+      url: https://www.clinpgx.org/summaryAnnotation/1451243628
+    notes: rs9923231 (VKORC1); acenocoumarol; Hemorrhage (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451243628_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype who are treated with acenocoumarol may have a decreased risk of Hemorrhage as compared
+          to the CT or TT genotypes. Other clinical and genetic factors may also influence risk of hemorrhage in patients administered
+          acetacoumarol.
+      - id: clinpgx_summary_1451243628_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype who are treated with acenocoumarol may have an increased risk of Hemorrhage as compared
+          to the CC genotypes. Other clinical and genetic factors may also influence risk of hemorrhage in patients administered
+          acetacoumarol.
+      - id: clinpgx_summary_1451243628_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype who are treated with acenocoumarol may have an increased risk of Hemorrhage as compared
+          to the CC genotypes. Other clinical and genetic factors may also influence risk of hemorrhage in patients administered
+          acetacoumarol.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385012
+    label: rs9923231 / warfarin / Dosage
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385012"
+      url: https://www.clinpgx.org/summaryAnnotation/655385012
+    notes: rs9923231 (VKORC1); warfarin (level 1A Dosage)
+    effects:
+      - id: clinpgx_summary_655385012_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs9923231 CC genotype may require an increased dose of warfarin as compared to patients with the
+          CT or TT genotype. Other genetic and clinical factors may also influence warfarin dose requirement.
+      - id: clinpgx_summary_655385012_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs9923231 CT genotype may require a decreased dose of warfarin as compared to patients with the
+          CC genotype or an increased dose as compared to patients with the TT genotype.  Other genetic and clinical factors may
+          also influence warfarin dose requirement.
+      - id: clinpgx_summary_655385012_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs9923231 TT genotype may require a decreased dose of warfarin as compared to patients with the
+          CC or CT genotype.  Other genetic and clinical factors may also influence warfarin dose requirement.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451237940
+    label: rs9923231 / phenprocoumon / Dosage
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: phenprocoumon
+        pharmgkb_id: PA450921
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451237940"
+      url: https://www.clinpgx.org/summaryAnnotation/1451237940
+    notes: rs9923231 (VKORC1); phenprocoumon (level 1A Dosage)
+    effects:
+      - id: clinpgx_summary_1451237940_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs9923231 CC genotype may require a higher dose when treated with phenprocoumon as compared to
+          patients with the TT or CT genotype. Other genetic and clinical factors may also influence phenprocoumon dose.
+      - id: clinpgx_summary_1451237940_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs9923231 CT genotype may require a lower dose when treated with phenprocoumon as compared to
+          patients with the CC genotype. Other genetic and clinical factors may also influence phenprocoumon dose.
+      - id: clinpgx_summary_1451237940_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs9923231 TT genotype may require a lower dose when treated with phenprocoumon as compared to
+          patients with the CC genotype. Other genetic and clinical factors may also influence phenprocoumon dose.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204044
+    label: rs9923231 / acenocoumarol / Dosage
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: acenocoumarol
+        pharmgkb_id: PA452632
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204044"
+      url: https://www.clinpgx.org/summaryAnnotation/981204044
+    notes: rs9923231 (VKORC1); acenocoumarol (level 1A Dosage)
+    effects:
+      - id: clinpgx_summary_981204044_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs9923231 CC genotype may require an increased dose of acenocoumarol as compared to patients with
+          the TT and CT genotypes. However, conflicting evidence has been reported. Other genetic and clinical factors may also
+          influence acenocoumarol dose requirements.
+      - id: clinpgx_summary_981204044_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs9923231 CT genotype may require a decreased dose of acenocoumarol as compared to patients with
+          the CC genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          acenocoumarol dose requirements.
+      - id: clinpgx_summary_981204044_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs9923231 TT genotype may require a decreased dose as of acenocoumarol compared to patients with
+          the CC genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          acenocoumarol dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447673005
+    label: rs9923231 / warfarin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes:
+      - over-anticoagulation
+    phenotype_categories:
+      - Toxicity
+    evidence_level: 1B
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447673005"
+      url: https://www.clinpgx.org/summaryAnnotation/1447673005
+    notes: rs9923231 (VKORC1); warfarin; over-anticoagulation (level 1B Toxicity)
+    effects:
+      - id: clinpgx_summary_1447673005_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs9923231 CC genotype may have decreased risk of over-anticoagulation when treated with warfarin
+          as compared with patients with genotype TT or CT. However, conflicting evidence has been reported. Other genetic and
+          clinical factors may also influence the toxicity to warfarin.
+      - id: clinpgx_summary_1447673005_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs9923231 CT genotype may have increased risk of over-anticoagulation when treated with warfarin
+          as compared with patients with genotype CC. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the toxicity to warfarin.
+      - id: clinpgx_summary_1447673005_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs9923231 TT genotype may have increased risk of over-anticoagulation when treated with warfarin
+          as compared with patients with genotype CC. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the toxicity to warfarin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447672998
+    label: rs9923231 / warfarin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes:
+      - time to therapeutic inr
+    phenotype_categories:
+      - Efficacy
+    evidence_level: 2A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447672998"
+      url: https://www.clinpgx.org/summaryAnnotation/1447672998
+    notes: rs9923231 (VKORC1); warfarin; time to therapeutic inr (level 2A Efficacy)
+    effects:
+      - id: clinpgx_summary_1447672998_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs9923231 CC genotype may require longer time to therapeutic INR when treated with warfarin as
+          compared with patients with genotype TT or CT. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the response to warfarin.
+      - id: clinpgx_summary_1447672998_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs9923231 CT genotype may require shorter time to therapeutic INR when treated with warfarin as
+          compared with patients with genotype CC. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the response to warfarin.
+      - id: clinpgx_summary_1447672998_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs9923231 TT genotype may require shorter time to therapeutic INR when treated with warfarin as
+          compared with patients with genotype CC. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the response to warfarin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447673015
+    label: rs9923231 / warfarin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - VKORC1
+    variant: rs9923231
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes:
+      - time in therapeutic range
+    phenotype_categories:
+      - Efficacy
+    evidence_level: 2A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447673015"
+      url: https://www.clinpgx.org/summaryAnnotation/1447673015
+    notes: rs9923231 (VKORC1); warfarin; time in therapeutic range (level 2A Efficacy)
+    effects:
+      - id: clinpgx_summary_1447673015_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs9923231 CC genotype may spent more time in INR therapeutic range (TTR) when treated with warfarin
+          as compared with patients with genotype TT or CT. However, conflicting evidence has been reported. Other genetic and
+          clinical factors may also influence the response to warfarin.
+      - id: clinpgx_summary_1447673015_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs9923231 CT genotype may spent less time in INR therapeutic range (TTR) when treated with warfarin
+          as compared with patients with genotype CC. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the response to warfarin.
+      - id: clinpgx_summary_1447673015_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs9923231.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs9923231 TT genotype may spent less time in INR therapeutic range (TTR) when treated with warfarin
+          as compared with patients with genotype CC. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the response to warfarin.

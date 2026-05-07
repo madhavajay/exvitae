@@ -1,0 +1,409 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs429358.yaml
+gene: APOE
+rsid: rs429358
+variant_pa_id: PA166155351
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166155351/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166155351/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166313401
+    label: Annotation of FDA Label for lecanemab and APOE
+    authority_type: regulatory_label
+    genes:
+      - APOE
+    variant: rs429358
+    drugs:
+      - name: lecanemab
+        pharmgkb_id: PA166313301
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166313401
+      url: https://www.clinpgx.org/labelAnnotation/PA166313401
+    notes: Annotation of FDA Label for lecanemab and APOE
+    pgx_action_level: Testing Required
+    summary:
+      The FDA label for lecanemab includes warnings that testing should be performed for ApoE E4/E4 as individuals with
+      ApoE E4/E4 have increased risk for amyloid related imaging abnormalities (ARIA) when treated with lecanemab. The label
+      does not give details on the E4/E4 allele.
+    prescribing_information:
+      Testing for ApoE ε4 status should be performed prior to initiation of treatment to inform the risk
+      of developing ARIA. Prior to testing, prescribers should discuss with patients the risk of ARIA across genotypes and the
+      implications of genetic testing results.
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166155351
+        symbol: rs429358
+        name: rs429358
+      - id: PA166155341
+        symbol: rs7412
+        name: rs7412
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/lecanemab_FDA_2023_09_07.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166350721
+    label: Annotation of FDA Label for aducanumab and APOE
+    authority_type: regulatory_label
+    genes:
+      - APOE
+    variant: rs429358
+    drugs:
+      - name: aducanumab
+        pharmgkb_id: PA166350685
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166350721
+      url: https://www.clinpgx.org/labelAnnotation/PA166350721
+    notes: Annotation of FDA Label for aducanumab and APOE
+    pgx_action_level: Testing Required
+    summary:
+      The FDA label for aducanumab includes warnings that testing should be performed for ApoE ε4/ε4 as individuals with
+      ApoE ε4/ε4 have increased risk for amyloid related imaging abnormalities (ARIA) when treated with aducanumab. The label
+      does not give details on the ApoE ε4 allele.
+    prescribing_information:
+      Testing for ApoE ε4 status should be performed prior to initiation of treatment to inform the risk
+      of developing ARIA. Prior to testing, prescribers should discuss with patients the risk of ARIA across genotypes and the
+      implications of genetic testing results.
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166155351
+        symbol: rs429358
+        name: rs429358
+      - id: PA166155341
+        symbol: rs7412
+        name: rs7412
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Aducanumab-avwa_2024_09_09_FDA.pdf
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449269938
+    label: rs429358 / acenocoumarol, warfarin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - APOE
+    variant: rs429358
+    drugs:
+      - name: acenocoumarol
+        pharmgkb_id: PA452632
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes:
+      - Hemorrhage
+      - Venous thromboembolism
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449269938"
+      url: https://www.clinpgx.org/summaryAnnotation/1449269938
+    notes: rs429358 (APOE); acenocoumarol or warfarin; Hemorrhage and venous thromboembolism (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1449269938_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with thromboembolism and the CC genotype may have an increased risk of hemorrhage when treated with acenocoumarol
+          or warfarin as compared to patients with the CT or TT genotypes. Other clinical and genetic factors may also influence
+          risk of hemorrhage in patients with venous thromboembolism.
+      - id: clinpgx_summary_1449269938_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with thromboembolism and the CT genotype may have an increased risk of hemorrhage when treated with acenocoumarol
+          or warfarin as compared to patients with the TT genotypes and decreased risk as compared to patients with the CC genotype.
+          Other clinical and genetic factors may also influence risk of hemorrhage in patients with venous thromboembolism.
+      - id: clinpgx_summary_1449269938_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with thromboembolism and the TT genotype may have a decreased risk of hemorrhage when treated with acenocoumarol
+          or warfarin as compared to patients with the CT or CC genotypes. Other clinical and genetic factors may also influence
+          risk of hemorrhage in patients with venous thromboembolism.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655384666
+    label: rs429358 / antivirals for treatment of hiv infections, combinations, ritonavir / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - APOE
+    variant: rs429358
+    drugs:
+      - name: antivirals for treatment of hiv infections, combinations
+        pharmgkb_id: PA164712505
+      - name: ritonavir
+        pharmgkb_id: PA451260
+    phenotypes:
+      - HIV infectious disease
+      - Hyperlipidemias
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655384666"
+      url: https://www.clinpgx.org/summaryAnnotation/655384666
+    notes:
+      rs429358 (APOE); Antivirals for treatment of HIV infections, combinations or ritonavir; HIV Infections and Hyperlipidemias
+      (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655384666_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype who are treated with antiretrovirals for HIV such as ritonavir may have an increased
+          risk for elevated plasma lipids as compared to patients with the TT genotype. Other genetic and clinical factors, in
+          particular rs7412, may also influence a patient's risk for adverse events with ritonavir treatment.
+      - id: clinpgx_summary_655384666_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype who are treated with antiretrovirals for HIV such as ritonavir may have an increased
+          risk for elevated plasma lipids as compared to patients with the TT genotype. Other genetic and clinical factors, in
+          particular rs7412, may also influence a patient's risk for adverse events with ritonavir treatment.
+      - id: clinpgx_summary_655384666_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype who are treated with antiretrovirals for HIV such as ritonavir may have a decreased
+          but not non-existent risk for elevated plasma lipids as compared to patients with the CC or CT genotype. Other genetic
+          and clinical factors, in particular rs7412, may also influence a patient's risk for adverse events with ritonavir treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450824225
+    label: rs429358 / hmg-coa reductase inhibitors / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - APOE
+    variant: rs429358
+    drugs:
+      - name: hmg-coa reductase inhibitors
+        pharmgkb_id: PA133950441
+    phenotypes:
+      - Alzheimer Disease
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450824225"
+      url: https://www.clinpgx.org/summaryAnnotation/1450824225
+    notes: rs429358 (APOE); hmg coa reductase inhibitors; Alzheimer Disease (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450824225_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with Alzheimer's disease and the CC genotype (also known as ApoE E4/E4) may have an increased response
+          to treatment with statins, as measured by rate of cognitive decline, as compared to patients with the CT or TT genotypes.
+          Other genetic or clinical factors may also affect a patient's response to statin treatment for Alzheimer's disease.
+      - id: clinpgx_summary_1450824225_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with Alzheimer's disease and the CT genotype may have a decreased response to treatment with statins, as
+          measured by rate of cognitive decline, as compared to patients with the CC genotype (also known as ApoE E4/E4). Other
+          genetic or clinical factors may also affect a patient's response to statin treatment for Alzheimer's disease.
+      - id: clinpgx_summary_1450824225_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with Alzheimer's disease and the TT genotype may have a decreased response to treatment with statins, as
+          measured by rate of cognitive decline, as compared to patients with the CC genotype (also known as ApoE E4/E4). Other
+          genetic or clinical factors may also affect a patient's response to statin treatment for Alzheimer's disease.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450975180
+    label: rs429358 / warfarin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - APOE
+    variant: rs429358
+    drugs:
+      - name: warfarin
+        pharmgkb_id: PA451906
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450975180"
+      url: https://www.clinpgx.org/summaryAnnotation/1450975180
+    notes: rs429358 (APOE); warfarin (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450975180_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          African-American patients with the CC genotype (E4/E4) may require a shorter duration of time to reach a stable
+          warfarin dose as compared to African-American patients with the TT genotype (especially those who are APOE E3/E3, also
+          having rs7412 CC). Other genetic and clinical factors may also influence the response to warfarin.
+      - id: clinpgx_summary_1450975180_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          African-American patients with the CT genotype (carriers of E4) may require a shorter duration of time to reach
+          a stable warfarin dose as compared to African-American patients with the TT genotype (especially those who are APOE
+          E3/E3, also having rs7412 CC). Other genetic and clinical factors may also influence the response to warfarin.
+      - id: clinpgx_summary_1450975180_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          African-American patients with the TT genotype (especially those who are APOE E3/E3, also having rs7412 CC) may
+          require a longer duration of time to reach a stable warfarin dose as compared to African-American patients with the
+          CC or CT genotype (carriers of E4). Other genetic and clinical factors may also influence the response to warfarin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183532576
+    label: rs429358 / simvastatin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - APOE
+    variant: rs429358
+    drugs:
+      - name: simvastatin
+        pharmgkb_id: PA451363
+    phenotypes:
+      - Myocardial Infarction
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183532576"
+      url: https://www.clinpgx.org/summaryAnnotation/1183532576
+    notes: rs429358 (APOE); simvastatin; Myocardial Infarction (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183532576_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype (ApoE E4/E4) may have an increased risk of mortality after myocardial infarction as
+          compared to the TT genotype, which may be mitigated by simvastatin treatment. Therefore, these patients may actually
+          benefit more from simvastatin treatment.  Other genetic and clinical factors may also influence a patient's response
+          to simvastatin treatment.
+      - id: clinpgx_summary_1183532576_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype (ApoE E4 carriers) may have an increased risk of mortality after myocardial infarction
+          as compared to the TT genotype, which may be mitigated by simvastatin treatment. Therefore, these patients may actually
+          benefit more from simvastatin treatment.  Other genetic and clinical factors may also influence a patient's response
+          to simvastatin treatment.
+      - id: clinpgx_summary_1183532576_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs429358.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have a decreased risk of mortality after myocardial infarction as compared to
+          the CC or CT genotypes (ApoE E2 carriers), which may be mitigated by simvastatin treatment. Other genetic and clinical
+          factors may also influence a patient's response to simvastatin treatment.

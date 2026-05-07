@@ -38,6 +38,9 @@ REPORT_DATA_DIR = REPORT_DIR / "data"
 AGGREGATE_OBSERVATIONS_TSV = REPORT_DATA_DIR / "observations.tsv"
 AGGREGATE_REPORTS_JSONL = REPORT_DATA_DIR / "reports.jsonl"
 AGGREGATE_REPORTS_JSON = REPORT_DATA_DIR / "reports.json"
+AGGREGATE_ANALYSIS_OUTPUTS_TSV = REPORT_DATA_DIR / "analysis_outputs.tsv"
+AGGREGATE_ANALYSIS_OUTPUTS_JSONL = REPORT_DATA_DIR / "analysis_outputs.jsonl"
+AGGREGATE_ANALYSIS_OUTPUTS_JSON = REPORT_DATA_DIR / "analysis_outputs.json"
 GENERATED_SCRIPT_DIR = REPORT_DIR / ".generated"
 DEFAULT_REF_FA = DATA_DIR / "1k-genomes" / "ref" / "GRCh38_full_analysis_set_plus_decoy_hla.fa"
 DEFAULT_REF_FAI = DATA_DIR / "1k-genomes" / "ref" / "GRCh38_full_analysis_set_plus_decoy_hla.fa.fai"
@@ -52,6 +55,16 @@ class VariantDefinition:
     source: str
     path: Path | None = None
     manifest_name: str | None = None
+
+
+@dataclass
+class PanelInterpretation:
+    id: str
+    kind: str
+    path: Path
+    derived_from: list[str]
+    emits: list[dict[str, str]]
+    output_format: str = "tsv"
 
 
 OBSERVATION_HEADERS = [
@@ -118,8 +131,16 @@ def ensure_bioscript_binary() -> Path:
 
 
 def find_assays() -> list[Path]:
-    assays = sorted(ASSAY_DIR.rglob("*.py"))
+    assays = sorted(
+        path
+        for path in ASSAY_DIR.rglob("*.yaml")
+        if path.name == "assay.yaml" and is_yaml_assay_file(path)
+    )
     seen_dirs: set[Path] = {p.parent for p in assays}
+    for path in sorted(ASSAY_DIR.rglob("*.py")):
+        if path.parent not in seen_dirs:
+            assays.append(path)
+            seen_dirs.add(path.parent)
     for yaml_dir in sorted(ASSAY_DIR.rglob("*.yaml")):
         parent = yaml_dir.parent
         if parent not in seen_dirs and is_yaml_assay_dir(parent):
@@ -185,6 +206,13 @@ def participant_from_path(input_path: Path) -> str:
 
 
 def assay_name_from_path(assay_path: Path) -> str:
+    if assay_path.is_file() and assay_path.suffix in {".yaml", ".yml"}:
+        try:
+            data = yaml.safe_load(assay_path.read_text(encoding="utf-8"))
+            if isinstance(data, dict) and isinstance(data.get("name"), str) and data["name"].strip():
+                return safe_identifier(data["name"])
+        except (OSError, yaml.YAMLError):
+            pass
     return assay_path.stem
 
 
@@ -210,6 +238,17 @@ def observations_path_for(assay_path: Path, input_path: Path) -> Path:
 
 def report_json_path_for(assay_path: Path, input_path: Path) -> Path:
     return REPORT_DATA_DIR / assay_name_from_path(assay_path) / detect_source(input_path) / f"{participant_from_path(input_path)}.report.json"
+
+
+def interpretation_output_path_for(
+    assay_path: Path,
+    input_path: Path,
+    interpretation_id: str,
+    output_format: str = "tsv",
+) -> Path:
+    safe_id = safe_identifier(interpretation_id)
+    suffix = "json" if output_format == "json" else "tsv"
+    return REPORT_DATA_DIR / assay_name_from_path(assay_path) / detect_source(input_path) / f"{participant_from_path(input_path)}.{safe_id}.analysis.{suffix}"
 
 
 def details_json_path_for(assay_path: Path, input_path: Path) -> Path:
@@ -370,7 +409,12 @@ def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
     alleles_block = data.get("alleles", {}) or {}
     identifiers = data.get("identifiers", {}) or {}
     rsids = identifiers.get("rsids", []) or []
-    rsid = rsids[0] if rsids else None
+    aliases = identifiers.get("aliases", []) or []
+    lookup_rsids = [
+        value
+        for value in [*rsids, *aliases]
+        if isinstance(value, str) and value.strip()
+    ]
 
     def fmt_coord(c: dict) -> str | None:
         if not c:
@@ -390,8 +434,8 @@ def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
         return None
 
     fields: dict[str, Any] = {}
-    if rsid:
-        fields["rsid"] = rsid
+    if lookup_rsids:
+        fields["rsid"] = lookup_rsids if len(lookup_rsids) > 1 else lookup_rsids[0]
     grch37 = fmt_coord(coords.get("grch37", {}))
     grch38 = fmt_coord(coords.get("grch38", {}))
     if grch37:
@@ -408,6 +452,12 @@ def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
     if kind:
         kind_map = {"snv": "snp", "deletion": "deletion", "insertion": "insertion", "indel": "indel"}
         fields["kind"] = kind_map.get(kind, kind)
+    deletion_length = alleles_block.get("deletion_length")
+    if deletion_length is not None:
+        fields["deletion_length"] = deletion_length
+    motifs = alleles_block.get("motifs", [])
+    if isinstance(motifs, list) and motifs:
+        fields["motifs"] = motifs
 
     name_str = data.get("name", "") or yaml_path.stem
     safe_name = safe_identifier(name_str)
@@ -422,11 +472,15 @@ def yaml_to_variant_definition(yaml_path: Path) -> VariantDefinition | None:
 
 
 def yaml_to_panel_variant_definitions(yaml_path: Path) -> list[VariantDefinition]:
+    return yaml_to_manifest_variant_definitions(yaml_path)
+
+
+def yaml_to_manifest_variant_definitions(yaml_path: Path) -> list[VariantDefinition]:
     data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         return []
     schema = data.get("schema", "")
-    if schema != "bioscript:panel:1.0":
+    if schema not in {"bioscript:panel:1.0", "bioscript:assay:1.0"}:
         return []
     members = data.get("members", []) or []
     if not isinstance(members, list):
@@ -435,16 +489,127 @@ def yaml_to_panel_variant_definitions(yaml_path: Path) -> list[VariantDefinition
     for member in members:
         if not isinstance(member, dict):
             continue
-        if member.get("kind") != "variant":
+        path_value = member.get("path")
+        if not isinstance(path_value, str) or not path_value.strip():
+            continue
+        target = (yaml_path.parent / path_value).resolve()
+        if member.get("kind") == "variant":
+            vd = yaml_to_variant_definition(target)
+            if vd:
+                variants.append(vd)
+        elif member.get("kind") == "assay":
+            variants.extend(yaml_to_manifest_variant_definitions(target))
+    return variants
+
+
+def yaml_to_panel_interpretations(yaml_path: Path) -> list[PanelInterpretation]:
+    return yaml_to_manifest_interpretations(yaml_path)
+
+
+def manifest_analysis_items(data: dict[str, Any]) -> list[Any]:
+    items = data.get("analyses")
+    if items is None:
+        items = data.get("interpretations", [])
+    return items if isinstance(items, list) else []
+
+
+def yaml_to_manifest_interpretations(yaml_path: Path) -> list[PanelInterpretation]:
+    data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        return []
+    if data.get("schema") not in {"bioscript:panel:1.0", "bioscript:assay:1.0"}:
+        return []
+    results: list[PanelInterpretation] = []
+    for member in data.get("members", []) or []:
+        if not isinstance(member, dict) or member.get("kind") != "assay":
+            continue
+        path_value = member.get("path")
+        if not isinstance(path_value, str) or not path_value.strip():
+            continue
+        results.extend(yaml_to_manifest_interpretations((yaml_path.parent / path_value).resolve()))
+    for item in manifest_analysis_items(data):
+        if not isinstance(item, dict):
+            continue
+        interpretation_id = str(item.get("id", "") or "").strip()
+        kind = str(item.get("kind", "") or "").strip()
+        path_value = str(item.get("path", "") or "").strip()
+        if not interpretation_id or kind != "bioscript" or not path_value:
+            continue
+        output_format = str(item.get("output_format", "tsv") or "tsv").strip().lower()
+        if output_format not in {"tsv", "json"}:
+            output_format = "tsv"
+        derived_from = [
+            str(value)
+            for value in (item.get("derived_from", []) or [])
+            if isinstance(value, str) and value.strip()
+        ]
+        emits = [
+            {str(key): str(value) for key, value in emit.items() if value is not None}
+            for emit in (item.get("emits", []) or [])
+            if isinstance(emit, dict)
+        ]
+        results.append(
+            PanelInterpretation(
+                id=interpretation_id,
+                kind=kind,
+                path=(yaml_path.parent / path_value).resolve(),
+                derived_from=derived_from,
+                emits=emits,
+                output_format=output_format,
+            )
+        )
+    return results
+
+
+def yaml_to_manifest_findings(yaml_path: Path) -> list[dict[str, Any]]:
+    data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        return []
+    schema = data.get("schema", "")
+    if schema not in {
+        "bioscript:panel:1.0",
+        "bioscript:assay:1.0",
+        "bioscript:variant:1.0",
+        "bioscript:pgx-findings:1.0",
+    }:
+        return []
+
+    findings: list[dict[str, Any]] = []
+    for item in data.get("findings", []) or []:
+        if isinstance(item, dict):
+            copied = dict(item)
+            copied["_source_file"] = relative_to(yaml_path, REPO_ROOT)
+            include_path = copied.get("include")
+            if isinstance(include_path, str) and include_path.strip():
+                included_findings = yaml_to_manifest_findings((yaml_path.parent / include_path).resolve())
+                inherited_binding = copied.get("binding")
+                for included in included_findings:
+                    if (
+                        isinstance(inherited_binding, dict)
+                        and "binding" not in included
+                        and "effects" not in included
+                    ):
+                        included = dict(included)
+                        included["binding"] = dict(inherited_binding)
+                    findings.append(included)
+                continue
+            if "include" in copied:
+                continue
+            findings.append(copied)
+
+    if schema in {"bioscript:variant:1.0", "bioscript:pgx-findings:1.0"}:
+        return findings
+
+    for member in data.get("members", []) or []:
+        if not isinstance(member, dict):
             continue
         path_value = member.get("path")
         if not isinstance(path_value, str) or not path_value.strip():
             continue
         target = (yaml_path.parent / path_value).resolve()
-        vd = yaml_to_variant_definition(target)
-        if vd:
-            variants.append(vd)
-    return variants
+        if member.get("kind") in {"variant", "assay"}:
+            findings.extend(yaml_to_manifest_findings(target))
+    return findings
 
 
 def extract_yaml_variant_definitions(directory: Path) -> list[VariantDefinition]:
@@ -469,7 +634,26 @@ def is_yaml_panel_file(path: Path) -> bool:
         return False
     if path.suffix not in {".yaml", ".yml"}:
         return False
-    return bool(yaml_to_panel_variant_definitions(path))
+    return yaml_manifest_schema(path) == "bioscript:panel:1.0"
+
+
+def is_yaml_assay_file(path: Path) -> bool:
+    if not path.is_file():
+        return False
+    if path.suffix not in {".yaml", ".yml"}:
+        return False
+    return yaml_manifest_schema(path) == "bioscript:assay:1.0"
+
+
+def yaml_manifest_schema(path: Path) -> str:
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError):
+        return ""
+    if not isinstance(data, dict):
+        return ""
+    schema = data.get("schema", "")
+    return schema if isinstance(schema, str) else ""
 
 
 def is_yaml_assay_dir(path: Path) -> bool:
@@ -895,6 +1079,7 @@ def observation_from_row(
         "assay_id": record["assay"],
         "assay_version": "1.0",
         "variant_key": observation_variant_key(variant),
+        "_variant_path": relative_to(variant.path, REPO_ROOT) if variant.path else "",
         "rsid": rsid or "",
         "assembly": assembly,
         "chrom": chrom,
@@ -928,7 +1113,7 @@ def build_observations(
     variants: list[VariantDefinition],
 ) -> list[dict[str, Any]]:
     lookup = build_variant_lookup(variants)
-    source_rows = output_rows if output_rows and len(output_rows) > 1 else genome_rows
+    source_rows = output_rows if output_rows else genome_rows
     observations = []
     seen_keys: set[str] = set()
     for row in source_rows:
@@ -957,6 +1142,32 @@ def write_observations(path: Path, observations: list[dict[str, Any]]) -> None:
 
 def read_observations(path: Path) -> list[dict[str, str]]:
     return read_tsv_rows(path)
+
+
+def normalize_analysis_document(value: Any) -> tuple[Any, list[dict[str, Any]]]:
+    if isinstance(value, list):
+        rows = [item for item in value if isinstance(item, dict)]
+        return value, rows
+    if isinstance(value, dict):
+        rows_value = value.get("rows")
+        if isinstance(rows_value, list):
+            rows = [item for item in rows_value if isinstance(item, dict)]
+        else:
+            rows = [value]
+        return value, rows
+    return value, []
+
+
+def read_analysis_output(path: Path, output_format: str) -> tuple[Any, list[dict[str, Any]]]:
+    if not path.exists():
+        return None, []
+    if output_format == "json" or path.suffix == ".json":
+        try:
+            return normalize_analysis_document(json.loads(path.read_text(encoding="utf-8")))
+        except json.JSONDecodeError:
+            return None, []
+    rows = read_tsv_rows(path)
+    return {"rows": rows}, rows
 
 
 def report_status_from(record: dict[str, Any], observations: list[dict[str, Any]]) -> str:
@@ -1024,12 +1235,15 @@ def build_report_object(
     started_at: str,
     finished_at: str,
     probe_duration_ms: int,
+    interpretations: list[dict[str, Any]] | None = None,
+    findings: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     warnings = []
     if record.get("error"):
         warnings.append(record["error"])
     if record.get("genome_reads_error"):
         warnings.append(f"genome-reads probe: {record['genome_reads_error']}")
+    warnings.extend(record.get("interpretation_warnings") or [])
     n_variant = sum(1 for observation in observations if observation.get("outcome") == "variant")
     n_called = sum(1 for observation in observations if observation.get("call_status") == "called")
     fields = [
@@ -1048,6 +1262,9 @@ def build_report_object(
             "format": "plain_text",
         },
     ]
+    fields.extend(report_fields_from_interpretations(interpretations or []))
+    matched_findings = matching_findings(findings or [], observations, interpretations or [])
+    fields.extend(report_fields_from_findings(matched_findings))
     return {
         "schema": "bioscript:report:1.0",
         "version": "1.0",
@@ -1057,6 +1274,22 @@ def build_report_object(
         "input": input_profile(record),
         "report_status": report_status_from(record, observations),
         "derived_from": [observation["variant_key"] for observation in observations],
+        "analyses": [
+            {
+                "id": item.get("id"),
+                "path": item.get("path"),
+                "output_file": item.get("output_file"),
+                "output_format": item.get("output_format") or "tsv",
+                "derived_from": item.get("derived_from") or [],
+                "emits": item.get("emits") or [],
+                "rows": item.get("rows") or [],
+                "document": item.get("document"),
+                "status": item.get("status"),
+                "duration_ms": item.get("duration_ms"),
+            }
+            for item in (interpretations or [])
+        ],
+        "findings": matched_findings,
         "facets": facets_for_record(record) or None,
         "timing": {
             "started_at": started_at,
@@ -1081,6 +1314,353 @@ def build_report_object(
     }
 
 
+def report_fields_from_interpretations(interpretations: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    fields: list[dict[str, Any]] = []
+    for interpretation in interpretations:
+        if interpretation.get("status") != "pass":
+            continue
+        rows = interpretation.get("rows") or []
+        if not rows:
+            continue
+        row = rows[0]
+        emits_by_key = {
+            str(item.get("key")): item
+            for item in (interpretation.get("emits") or [])
+            if isinstance(item, dict) and item.get("key")
+        }
+        keys = list(emits_by_key) or [
+            key for key in row.keys() if key not in {"participant_id", "sample_id"}
+        ]
+        for key in keys:
+            if key not in row:
+                continue
+            metadata = emits_by_key.get(key, {})
+            fields.append(
+                {
+                    "key": key,
+                    "label": metadata.get("label") or key,
+                    "value": row.get(key, ""),
+                    "value_type": metadata.get("value_type") or "string",
+                    "format": metadata.get("format") or "plain_text",
+                    "source": f"analysis:{interpretation.get('id', '')}",
+                }
+            )
+    return fields
+
+
+def binding_matches_value(actual: Any, binding: dict[str, Any]) -> bool:
+    operator = str(binding.get("operator", "equals") or "equals")
+    if operator == "equals":
+        return str(actual) == str(binding.get("value", ""))
+    if operator == "in":
+        values = binding.get("values", [])
+        if not isinstance(values, list):
+            return False
+        return str(actual) in {str(value) for value in values}
+    return False
+
+
+def binding_matches_dosage(dosage: int | None, binding: dict[str, Any]) -> bool:
+    if dosage is None:
+        return False
+    operator = str(binding.get("operator", "") or "")
+    if operator == "dosage_equals":
+        try:
+            return dosage == int(binding.get("value"))
+        except (TypeError, ValueError):
+            return False
+    if operator == "dosage_in":
+        values = binding.get("values", [])
+        if not isinstance(values, list):
+            return False
+        parsed = set()
+        for value in values:
+            try:
+                parsed.add(int(value))
+            except (TypeError, ValueError):
+                continue
+        return dosage in parsed
+    return False
+
+
+def observation_allele_dosage(observation: dict[str, Any], allele: str) -> int | None:
+    allele = str(allele or "")
+    if not allele:
+        return None
+    ref = str(observation.get("ref") or "")
+    alt = str(observation.get("alt") or "")
+    zygosity = str(observation.get("zygosity") or "")
+    if allele == ref:
+        return {"hom_ref": 2, "het": 1, "hom_alt": 0}.get(zygosity)
+    if allele == alt:
+        return {"hom_ref": 0, "het": 1, "hom_alt": 2}.get(zygosity)
+
+    display = str(observation.get("genotype_display") or "").upper()
+    cleaned = display.replace("/", "").replace("|", "").replace(" ", "")
+    if len(allele) == 1 and cleaned:
+        return sum(1 for ch in cleaned if ch == allele.upper())
+    if allele.startswith("<DEL") and cleaned:
+        return sum(1 for ch in cleaned if ch == "D")
+    return None
+
+
+def analysis_binding_value(binding: dict[str, Any], interpretations: list[dict[str, Any]]) -> Any:
+    analysis_id = str(binding.get("analysis_id", "") or "")
+    key = str(binding.get("key", "") or "")
+    if not analysis_id or not key:
+        return None
+    for interpretation in interpretations:
+        if interpretation.get("id") != analysis_id or interpretation.get("status") != "pass":
+            continue
+        rows = interpretation.get("rows") or []
+        if rows and isinstance(rows[0], dict) and key in rows[0]:
+            return rows[0].get(key)
+        document = interpretation.get("document")
+        if isinstance(document, dict) and key in document:
+            return document.get(key)
+    return None
+
+
+def variant_binding_values(binding: dict[str, Any], observations: list[dict[str, Any]]) -> list[Any]:
+    key = str(binding.get("key", "") or "")
+    if not key:
+        return []
+    variant_ref = str(binding.get("variant", "") or binding.get("path", "") or "")
+    values: list[Any] = []
+    for observation in observations:
+        if variant_ref:
+            known_refs = {
+                str(observation.get("variant_key", "")),
+                str(observation.get("rsid", "")),
+                str(observation.get("_variant_path", "")),
+                Path(str(observation.get("_variant_path", ""))).name,
+            }
+            if variant_ref not in known_refs:
+                continue
+        if key in observation:
+            values.append(observation.get(key))
+    return values
+
+
+def finding_matches(
+    finding: dict[str, Any],
+    observations: list[dict[str, Any]],
+    interpretations: list[dict[str, Any]],
+) -> bool:
+    binding = finding.get("binding")
+    if not isinstance(binding, dict):
+        return False
+    source = str(binding.get("source", "") or "")
+    if source == "analysis":
+        return binding_matches_value(analysis_binding_value(binding, interpretations), binding)
+    if source == "variant":
+        operator = str(binding.get("operator", "") or "")
+        if operator in {"dosage_equals", "dosage_in"}:
+            allele = str(binding.get("allele", "") or "")
+            return any(
+                binding_matches_dosage(observation_allele_dosage(observation, allele), binding)
+                for observation in observations
+                if not variant_ref_mismatch(binding, observation)
+            )
+        return any(binding_matches_value(value, binding) for value in variant_binding_values(binding, observations))
+    return False
+
+
+def variant_ref_mismatch(binding: dict[str, Any], observation: dict[str, Any]) -> bool:
+    variant_ref = str(binding.get("variant", "") or binding.get("path", "") or "")
+    if not variant_ref:
+        return False
+    known_refs = {
+        str(observation.get("variant_key", "")),
+        str(observation.get("rsid", "")),
+        str(observation.get("_variant_path", "")),
+        Path(str(observation.get("_variant_path", ""))).name,
+    }
+    return variant_ref not in known_refs
+
+
+def matching_findings(
+    findings: list[dict[str, Any]],
+    observations: list[dict[str, Any]],
+    interpretations: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    matched = []
+    seen: set[tuple[str, str]] = set()
+    for finding in findings:
+        effects = finding.get("effects")
+        if isinstance(effects, list):
+            for effect in effects:
+                if not isinstance(effect, dict):
+                    continue
+                if finding_matches(effect, observations, interpretations):
+                    item = dict(finding)
+                    item.pop("effects", None)
+                    item["matched"] = True
+                    item["matched_effect"] = effect
+                    dedupe_key = finding_dedupe_key(item)
+                    if dedupe_key in seen:
+                        continue
+                    seen.add(dedupe_key)
+                    matched.append(item)
+            continue
+        if finding_matches(finding, observations, interpretations):
+            item = dict(finding)
+            item["matched"] = True
+            dedupe_key = finding_dedupe_key(item)
+            if dedupe_key in seen:
+                continue
+            seen.add(dedupe_key)
+            matched.append(item)
+    return matched
+
+
+def finding_dedupe_key(finding: dict[str, Any]) -> tuple[str, str]:
+    effect = finding.get("matched_effect")
+    effect_key = ""
+    if isinstance(effect, dict):
+        effect_key = str(effect.get("id") or effect.get("label") or effect.get("text") or "")
+    evidence = finding.get("evidence")
+    if isinstance(evidence, dict):
+        source = str(evidence.get("source") or "")
+        kind = str(evidence.get("kind") or "")
+        evidence_id = str(evidence.get("id") or "")
+        if source or kind or evidence_id:
+            return ("evidence", "|".join([source, kind, evidence_id, effect_key]))
+        url = str(evidence.get("url") or "")
+        if url:
+            return ("evidence_url", "|".join([url, effect_key]))
+    finding_id = str(finding.get("id") or "")
+    if finding_id:
+        return ("id", "|".join([finding_id, effect_key]))
+    parts = [
+        str(finding.get("schema") or ""),
+        str(finding.get("label") or ""),
+        str(finding.get("notes") or ""),
+        str(finding.get("genes") or ""),
+        str(finding.get("drugs") or ""),
+        str(finding.get("phenotypes") or ""),
+        effect_key,
+    ]
+    return ("content", "|".join(parts))
+
+
+def report_fields_from_findings(findings: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    fields: list[dict[str, Any]] = []
+    for finding in findings:
+        key = str(finding.get("id") or safe_identifier(str(finding.get("label") or "finding")))
+        effect = finding.get("matched_effect") if isinstance(finding.get("matched_effect"), dict) else {}
+        fields.append(
+            {
+                "key": key,
+                "label": finding.get("label") or key,
+                "value": effect.get("text") or finding.get("summary") or finding.get("notes") or finding.get("significance") or "matched",
+                "value_type": "string",
+                "format": "plain_text",
+                "source": f"finding:{finding.get('schema', '')}",
+            }
+        )
+    return fields
+
+
+def analysis_output_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    outputs: list[dict[str, Any]] = []
+    for record in records:
+        for analysis in record.get("interpretations") or []:
+            outputs.append(
+                {
+                    "schema": "bioscript:analysis-output:1.0",
+                    "version": "1.0",
+                    "participant_id": record.get("participant", ""),
+                    "assay_id": record.get("assay", ""),
+                    "assay_path": record.get("assay_path", ""),
+                    "input_file": record.get("input_file_path", ""),
+                    "input_source": record.get("input_source", ""),
+                    "analysis_id": analysis.get("id", ""),
+                    "analysis_path": analysis.get("path", ""),
+                    "output_file": analysis.get("output_file", ""),
+                    "output_format": analysis.get("output_format") or "tsv",
+                    "derived_from": analysis.get("derived_from") or [],
+                    "emits": analysis.get("emits") or [],
+                    "rows": analysis.get("rows") or [],
+                    "document": analysis.get("document"),
+                    "status": analysis.get("status", ""),
+                    "duration_ms": analysis.get("duration_ms", ""),
+                    "exit_code": analysis.get("exit_code", ""),
+                }
+            )
+    return outputs
+
+
+def write_aggregate_analysis_outputs(records: list[dict[str, Any]]) -> bool:
+    outputs = analysis_output_records(records)
+    if not outputs:
+        for path in [
+            AGGREGATE_ANALYSIS_OUTPUTS_JSONL,
+            AGGREGATE_ANALYSIS_OUTPUTS_JSON,
+            AGGREGATE_ANALYSIS_OUTPUTS_TSV,
+        ]:
+            if path.exists():
+                path.unlink()
+        return False
+
+    with AGGREGATE_ANALYSIS_OUTPUTS_JSONL.open("w", encoding="utf-8") as handle:
+        for output in outputs:
+            handle.write(json.dumps(output, ensure_ascii=True, sort_keys=True))
+            handle.write("\n")
+    AGGREGATE_ANALYSIS_OUTPUTS_JSON.write_text(
+        json.dumps(
+            {
+                "schema": "bioscript:analysis-output-set:1.0",
+                "version": "1.0",
+                "analysis_outputs": outputs,
+            },
+            indent=2,
+            ensure_ascii=True,
+        ),
+        encoding="utf-8",
+    )
+
+    flattened_rows: list[dict[str, Any]] = []
+    for output in outputs:
+        rows = output.get("rows") or []
+        if not rows:
+            rows = [{}]
+        for idx, row in enumerate(rows):
+            flattened_rows.append(
+                {
+                    "participant_id": output.get("participant_id", ""),
+                    "assay_id": output.get("assay_id", ""),
+                    "input_source": output.get("input_source", ""),
+                    "analysis_id": output.get("analysis_id", ""),
+                    "analysis_path": output.get("analysis_path", ""),
+                    "output_file": output.get("output_file", ""),
+                    "output_format": output.get("output_format", ""),
+                    "status": output.get("status", ""),
+                    "row_index": idx,
+                    "row_json": json.dumps(row, ensure_ascii=True, sort_keys=True),
+                }
+            )
+
+    fieldnames = [
+        "participant_id",
+        "assay_id",
+        "input_source",
+        "analysis_id",
+        "analysis_path",
+        "output_file",
+        "output_format",
+        "status",
+        "row_index",
+        "row_json",
+    ]
+    with AGGREGATE_ANALYSIS_OUTPUTS_TSV.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t")
+        writer.writeheader()
+        for row in flattened_rows:
+            writer.writerow({key: row.get(key, "") for key in fieldnames})
+    return True
+
+
 def write_aggregate_report_data(records: list[dict[str, Any]]) -> None:
     REPORT_DATA_DIR.mkdir(parents=True, exist_ok=True)
     all_observations: list[dict[str, Any]] = []
@@ -1096,6 +1676,7 @@ def write_aggregate_report_data(records: list[dict[str, Any]]) -> None:
                 reports.append(json.loads(report_path.read_text(encoding="utf-8")))
 
     write_observations(AGGREGATE_OBSERVATIONS_TSV, all_observations)
+    write_aggregate_analysis_outputs(records)
     with AGGREGATE_REPORTS_JSONL.open("w", encoding="utf-8") as handle:
         for report in reports:
             handle.write(json.dumps(report, ensure_ascii=True, sort_keys=True))
@@ -1516,6 +2097,79 @@ def run_probe(
         summary = stderr.strip().splitlines()[-1] if stderr.strip() else stdout.strip().splitlines()[-1] if stdout.strip() else "probe failed"
         return False, summary
     return True, ""
+
+
+def run_interpretations(
+    assay_path: Path,
+    input_path: Path,
+    participant: str,
+    runtime_root: Path,
+    interpretations: list[PanelInterpretation],
+) -> tuple[list[dict[str, Any]], list[str], int]:
+    outputs: list[dict[str, Any]] = []
+    warnings: list[str] = []
+    total_duration_ms = 0
+    for interpretation in interpretations:
+        output_path = interpretation_output_path_for(
+            assay_path,
+            input_path,
+            interpretation.id,
+            interpretation.output_format,
+        )
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        if output_path.exists():
+            output_path.unlink()
+        started = time.monotonic()
+        cmd = [
+            str(BIOSCRIPT_BINARY),
+            str(interpretation.path),
+            "--root",
+            str(runtime_root),
+            "--input-file",
+            relative_to(input_path, runtime_root),
+            "--output-file",
+            relative_to(output_path, runtime_root),
+            "--participant-id",
+            participant,
+            "--max-duration-ms",
+            "30000",
+            "--max-memory-bytes",
+            str(64 * 1024 * 1024),
+        ]
+        if detect_format(input_path) == "cram":
+            cmd.append("--auto-index")
+        reference_args, reference_error = maybe_reference_args(input_path, runtime_root)
+        if reference_error:
+            warnings.append(f"{interpretation.id}: {reference_error}")
+            continue
+        cmd.extend(reference_args)
+        code, stdout, stderr, duration_ms, timed_out = run_subprocess(cmd)
+        total_duration_ms += int((time.monotonic() - started) * 1000)
+        document, rows = read_analysis_output(output_path, interpretation.output_format)
+        outputs.append(
+            {
+                "id": interpretation.id,
+                "path": relative_to(interpretation.path, REPO_ROOT),
+                "output_file": relative_to(output_path, REPO_ROOT) if output_path.exists() else "",
+                "output_format": interpretation.output_format,
+                "derived_from": interpretation.derived_from,
+                "emits": interpretation.emits,
+                "document": document,
+                "rows": rows,
+                "duration_ms": duration_ms,
+                "exit_code": code,
+                "stdout": stdout,
+                "stderr": stderr,
+                "status": "pass" if code == 0 else "fail",
+            }
+        )
+        if code != 0:
+            lines = [line for line in (stderr or stdout).splitlines() if line.strip()]
+            message = lines[-1] if lines else "interpretation failed"
+            if timed_out:
+                message = f"timed out after {HARD_TIMEOUT_SECONDS}s"
+            warnings.append(f"{interpretation.id}: {message}")
+    return outputs, warnings, total_duration_ms
 
 
 def render_detail_html(record: dict[str, Any]) -> str:
@@ -2230,6 +2884,8 @@ def render_index_html(records: list[dict[str, Any]]) -> str:
       </div>
       <div class="links">
         <a href="{html.escape(relative_to(AGGREGATE_OBSERVATIONS_TSV, REPORT_DIR))}">Aggregate observations TSV</a>
+        <a href="{html.escape(relative_to(AGGREGATE_ANALYSIS_OUTPUTS_TSV, REPORT_DIR))}">Aggregate analysis TSV</a>
+        <a href="{html.escape(relative_to(AGGREGATE_ANALYSIS_OUTPUTS_JSONL, REPORT_DIR))}">Aggregate analysis JSONL</a>
         <a href="{html.escape(relative_to(AGGREGATE_REPORTS_JSONL, REPORT_DIR))}">Aggregate reports JSONL</a>
         <a href="{html.escape(relative_to(AGGREGATE_REPORTS_JSON, REPORT_DIR))}">Aggregate reports JSON</a>
       </div>
@@ -2370,6 +3026,9 @@ def render_index_markdown(records: list[dict[str, Any]]) -> str:
             markdown_table(rows, "No runs."),
             "",
             f"Aggregate observations TSV: `{relative_to(AGGREGATE_OBSERVATIONS_TSV, REPO_ROOT)}`",
+            f"Aggregate analysis outputs TSV: `{relative_to(AGGREGATE_ANALYSIS_OUTPUTS_TSV, REPO_ROOT)}`",
+            f"Aggregate analysis outputs JSONL: `{relative_to(AGGREGATE_ANALYSIS_OUTPUTS_JSONL, REPO_ROOT)}`",
+            f"Aggregate analysis outputs JSON: `{relative_to(AGGREGATE_ANALYSIS_OUTPUTS_JSON, REPO_ROOT)}`",
             f"Aggregate reports JSONL: `{relative_to(AGGREGATE_REPORTS_JSONL, REPO_ROOT)}`",
             f"Aggregate reports JSON: `{relative_to(AGGREGATE_REPORTS_JSON, REPO_ROOT)}`",
             "",
@@ -2378,11 +3037,14 @@ def render_index_markdown(records: list[dict[str, Any]]) -> str:
     )
 
 
-def generate_report(records: list[dict[str, Any]]) -> None:
+def generate_report(records: list[dict[str, Any]], html: bool = True) -> None:
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     REPORT_RUNS_DIR.mkdir(parents=True, exist_ok=True)
     REPORT_DATA_DIR.mkdir(parents=True, exist_ok=True)
     write_aggregate_report_data(records)
+
+    if not html:
+        return
 
     index_html = REPORT_DIR / "index.html"
     index_md = REPORT_DIR / "README.md"
@@ -2400,7 +3062,14 @@ def generate_report(records: list[dict[str, Any]]) -> None:
     index_md.write_text(render_index_markdown(records), encoding="utf-8")
 
 
-def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition], debug: bool) -> dict[str, Any]:
+def run_one(
+    assay_path: Path,
+    input_path: Path,
+    variants: list[VariantDefinition],
+    interpretations: list[PanelInterpretation],
+    findings: list[dict[str, Any]],
+    debug: bool,
+) -> dict[str, Any]:
     run_started = time.monotonic()
     assay = assay_name_from_path(assay_path)
     participant = participant_from_path(input_path)
@@ -2515,10 +3184,21 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
     probe_ok = False
     probe_error = ""
     probe_duration_ms = 0
+    interpretation_outputs: list[dict[str, Any]] = []
+    interpretation_warnings: list[str] = []
+    interpretation_duration_ms = 0
     if exit_code == 0:
         probe_started = time.monotonic()
         probe_ok, probe_error = run_probe(assay_path, input_path, participant, variants, genome_reads_path)
         probe_duration_ms = int((time.monotonic() - probe_started) * 1000)
+        if interpretations:
+            interpretation_outputs, interpretation_warnings, interpretation_duration_ms = run_interpretations(
+                assay_path,
+                input_path,
+                participant,
+                runtime_root,
+                interpretations,
+            )
     if debug:
         timing_path.parent.mkdir(parents=True, exist_ok=True)
         existing = timing_path.read_text(encoding="utf-8") if timing_path.exists() else "stage\tduration_ms\tdetail\n"
@@ -2527,6 +3207,8 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
         existing += f"runner_assay_subprocess\t{duration_ms}\tcommand execution wall clock\n"
         if exit_code == 0:
             existing += f"runner_genome_reads\t{probe_duration_ms}\tgenome reads extraction\n"
+        if interpretation_duration_ms:
+            existing += f"runner_interpretations\t{interpretation_duration_ms}\tpanel interpretation scripts\n"
         existing += f"runner_total\t{int((time.monotonic() - run_started) * 1000)}\tfull run_one wall clock\n"
         timing_path.write_text(existing, encoding="utf-8")
 
@@ -2560,6 +3242,8 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
         "timing_file": relative_to(timing_path, REPO_ROOT) if debug and timing_path.exists() else "",
         "genome_reads_file": relative_to(genome_reads_path, REPO_ROOT) if probe_ok and genome_reads_path.exists() else "",
         "genome_reads_error": probe_error,
+        "interpretations": interpretation_outputs,
+        "interpretation_warnings": interpretation_warnings,
         "observations_file": relative_to(observations_path, REPO_ROOT),
         "report_json_file": relative_to(report_json_path, REPO_ROOT),
         "details_file": relative_to(detail_json_path, REPO_ROOT),
@@ -2584,6 +3268,8 @@ def run_one(assay_path: Path, input_path: Path, variants: list[VariantDefinition
         run_started_at.isoformat().replace("+00:00", "Z"),
         finished_at.isoformat().replace("+00:00", "Z"),
         probe_duration_ms,
+        interpretation_outputs,
+        findings,
     )
     report_json_path.write_text(json.dumps(report_object, indent=2), encoding="utf-8")
     detail_json_path.write_text(json.dumps(record, indent=2), encoding="utf-8")
@@ -2603,6 +3289,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--debug", action="store_true", help="Emit per-stage timing reports and include them in the output report")
     parser.add_argument("--list", action="store_true", help="List assays and test data")
     parser.add_argument("--report", action="store_true", help="Open the generated HTML report in the default browser after running")
+    parser.add_argument("--no-html", action="store_true", help="Only write data outputs; skip HTML and Markdown report files")
     args = parser.parse_args(argv)
     if args.assay and args.assay_path and args.assay != args.assay_path:
         parser.error("use either positional assay path or --assay, not both")
@@ -2750,6 +3437,8 @@ def print_run_status(record: dict[str, Any]) -> None:
         print(f"[PASS] {label} ({record['duration_display']}){suffix}")
         if record.get("genome_reads_error"):
             print(f"       genome-reads probe: {record['genome_reads_error']}")
+        for warning in record.get("interpretation_warnings") or []:
+            print(f"       interpretation: {warning}")
     elif record["status"] == "skip":
         print(f"[SKIP] {label} ({record['error']})")
     else:
@@ -2805,18 +3494,39 @@ def main(argv: list[str]) -> int:
         RESULTS_CSV.unlink()
 
     variant_cache: dict[Path, list[VariantDefinition]] = {}
+    interpretation_cache: dict[Path, list[PanelInterpretation]] = {}
+    finding_cache: dict[Path, list[dict[str, Any]]] = {}
     for assay in assays:
         if assay.is_dir():
             variant_cache[assay] = extract_yaml_variant_definitions(assay)
+            interpretation_cache[assay] = []
+            finding_cache[assay] = []
         elif is_yaml_variant_file(assay):
             vd = yaml_to_variant_definition(assay)
             variant_cache[assay] = [vd] if vd else []
+            interpretation_cache[assay] = []
+            finding_cache[assay] = yaml_to_manifest_findings(assay)
         elif is_yaml_panel_file(assay):
-            variant_cache[assay] = yaml_to_panel_variant_definitions(assay)
+            variant_cache[assay] = yaml_to_manifest_variant_definitions(assay)
+            interpretation_cache[assay] = yaml_to_manifest_interpretations(assay)
+            finding_cache[assay] = yaml_to_manifest_findings(assay)
+        elif is_yaml_assay_file(assay):
+            variant_cache[assay] = yaml_to_manifest_variant_definitions(assay)
+            interpretation_cache[assay] = yaml_to_manifest_interpretations(assay)
+            finding_cache[assay] = yaml_to_manifest_findings(assay)
         else:
             variant_cache[assay] = extract_variant_definitions(assay)
+            interpretation_cache[assay] = []
+            finding_cache[assay] = []
     task_specs = [
-        (assay_path, input_path, variant_cache[assay_path], args.debug)
+        (
+            assay_path,
+            input_path,
+            variant_cache[assay_path],
+            interpretation_cache[assay_path],
+            finding_cache[assay_path],
+            args.debug,
+        )
         for assay_path in assays
         for input_path in inputs
     ]
@@ -2825,7 +3535,7 @@ def main(argv: list[str]) -> int:
 
     if jobs == 1:
         current_assay: Path | None = None
-        for assay_path, input_path, variants, debug in task_specs:
+        for assay_path, input_path, variants, interpretations, findings, debug in task_specs:
             if current_assay != assay_path:
                 if current_assay is not None:
                     print("")
@@ -2833,7 +3543,7 @@ def main(argv: list[str]) -> int:
                 print(f"--- {assay_name} ({relative_to(assay_path, REPO_ROOT)}) ---")
                 print("")
                 current_assay = assay_path
-            record = run_one(assay_path, input_path, variants, debug)
+            record = run_one(assay_path, input_path, variants, interpretations, findings, debug)
             records.append(record)
             print_run_status(record)
             if record["status"] == "pass":
@@ -2849,8 +3559,8 @@ def main(argv: list[str]) -> int:
         print("")
         future_to_index = {}
         with ThreadPoolExecutor(max_workers=jobs) as executor:
-            for index, (assay_path, input_path, variants, debug) in enumerate(task_specs):
-                future = executor.submit(run_one, assay_path, input_path, variants, debug)
+            for index, (assay_path, input_path, variants, interpretations, findings, debug) in enumerate(task_specs):
+                future = executor.submit(run_one, assay_path, input_path, variants, interpretations, findings, debug)
                 future_to_index[future] = index
             ordered_records: list[dict[str, Any] | None] = [None] * len(task_specs)
             for future in as_completed(future_to_index):
@@ -2864,21 +3574,24 @@ def main(argv: list[str]) -> int:
         skipped = sum(1 for record in records if record["status"] == "skip")
 
     write_results_csv(records)
-    generate_report(records)
+    generate_report(records, html=not args.no_html)
 
     print("===========================")
     print(f"Results: {passed} passed, {failed} failed, {skipped} skipped")
     print(f"CSV:     {relative_to(RESULTS_CSV, REPO_ROOT)}")
     print(f"OBS:     {relative_to(AGGREGATE_OBSERVATIONS_TSV, REPO_ROOT)}")
     print(f"REPORTS: {relative_to(AGGREGATE_REPORTS_JSONL, REPO_ROOT)}")
-    print(f"HTML:    {relative_to(REPORT_DIR / 'index.html', REPO_ROOT)}")
-    print(f"MD:      {relative_to(REPORT_DIR / 'README.md', REPO_ROOT)}")
+    if not args.no_html:
+        print(f"HTML:    {relative_to(REPORT_DIR / 'index.html', REPO_ROOT)}")
+        print(f"MD:      {relative_to(REPORT_DIR / 'README.md', REPO_ROOT)}")
 
-    if args.report:
+    if args.report and not args.no_html:
         report_url = (REPORT_DIR / "index.html").resolve().as_uri()
         print(f"Opening: {report_url}")
         import webbrowser
         webbrowser.open(report_url)
+    elif args.report and args.no_html:
+        print("[WARN] --report ignored because --no-html was set")
 
     return 1 if failed else 0
 

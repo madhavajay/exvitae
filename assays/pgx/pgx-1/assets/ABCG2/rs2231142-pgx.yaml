@@ -1,0 +1,1840 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs2231142.yaml
+gene: ABCG2
+rsid: rs2231142
+variant_pa_id: PA166156544
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156544/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166156544/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166184427
+    label: Annotation of Swissmedic Label for ezetimibe / rosuvastatin and ABCG2, SLCO1B1
+    authority_type: regulatory_label
+    genes:
+      - ABCG2
+      - SLCO1B1
+    variant: rs2231142
+    drugs:
+      - name: ezetimibe
+        pharmgkb_id: PA166184498
+      - name: rosuvastatin
+        pharmgkb_id: PA166184498
+    regulatory_sources:
+      - Swissmedic
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166184427
+      url: https://www.clinpgx.org/labelAnnotation/PA166184427
+    notes: Annotation of Swissmedic Label for ezetimibe / rosuvastatin and ABCG2, SLCO1B1
+    pgx_action_level: Actionable PGx
+    summary:
+      The Swiss drug label for ezetimibe/rosuvastatin (Ezetimib-Rosuvastatin-Mepha Kapseln) states that genetic polymorphisms
+      in SLCO1B1 and ABCG2  may lead to an increase in rosuvastatin exposure, a reduction in the dosage is recommended.
+    prescribing_information:
+      'Dosage: Specific types of genetic polymorphisms are known that may lead to an increase in rosuvastatin
+      exposure (see "Pharmacokinetics"). In patients in whom such a polymorphism is known, a reduction in the dosage of ezetimib-rosuvastatin
+      mepha is recommended.'
+    prescribing_actions:
+      - Dosing Info
+    related_alleles:
+      - id: PA166156544
+        symbol: rs2231142
+        name: rs2231142
+      - id: PA166154579
+        symbol: rs4149056
+        name: rs4149056
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166184499
+    label: Annotation of Swissmedic Label for rosuvastatin and ABCG2, SLCO1B1
+    authority_type: regulatory_label
+    genes:
+      - ABCG2
+      - SLCO1B1
+    variant: rs2231142
+    drugs:
+      - name: rosuvastatin
+        pharmgkb_id: PA134308647
+    regulatory_sources:
+      - Swissmedic
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166184499
+      url: https://www.clinpgx.org/labelAnnotation/PA166184499
+    notes: Annotation of Swissmedic Label for rosuvastatin and ABCG2, SLCO1B1
+    pgx_action_level: Actionable PGx
+    summary:
+      The Swiss drug label for rosuvastatin (Crestor) states that genetic polymorphisms in SLCO1B1 and ABCG2  may lead
+      to an increase in rosuvastatin exposure, a reduction in the dosage is recommended.
+    prescribing_information: |-
+      Increased plasma levels of rosuvastatin have been observed in Asians (see "Warnings and Precautions" and "Pharmacokinetics"). The recommended starting dose for Asians is 5 mg and the dose of 40 mg is contraindicated.
+      Genetic polymorphisms
+      Specific types of genetic polymorphisms are known that may lead to an increase in rosuvastatin exposure (see "Pharmacokinetics"). In patients known to have such a polymorphism, a reduction in the dosage of Crestor is recommended.
+      Genetic polymorphisms
+      Specific types of genetic polymorphisms are known that may lead to an increase in rosuvastatin exposure (see "Pharmacokinetics"). In patients in whom such a polymorphism is known, a reduction in the dosage of ezetimib-rosuvastatin mepha is recommended.
+    prescribing_actions:
+      - Dosing Info
+    related_alleles:
+      - id: PA166156544
+        symbol: rs2231142
+        name: rs2231142
+      - id: PA166154579
+        symbol: rs4149056
+        name: rs4149056
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166345301
+    label: Annotation of HCSC Label for rosuvastatin and ABCG2, SLCO1B1
+    authority_type: regulatory_label
+    genes:
+      - ABCG2
+      - SLCO1B1
+    variant: rs2231142
+    drugs:
+      - name: rosuvastatin
+        pharmgkb_id: PA134308647
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166345301
+      url: https://www.clinpgx.org/labelAnnotation/PA166345301
+    notes: Annotation of HCSC Label for rosuvastatin and ABCG2, SLCO1B1
+    pgx_action_level: Actionable PGx
+    summary:
+      The product monograph for rosuvastatin states that genetic variants in SLCO1B1 (OATP1B1) and ABCG2 (BCRP) have
+      been shown to be associated with an increase in rosuvastatin exposure. For patients known to have the SLCO1B1 c.521CC
+      or ABCG2 c.421AA genotype, a maximum once daily dose of 20 mg of ACH-Rosuvastatin is recommended.
+    prescribing_information:
+      "Genetic Polymorphisms: Genotypes of SLCO1B1 (OATP1B1) c.521CC and ABCG2 (BCRP) c.421AA have been
+      shown to be associated with an increase in rosuvastatin exposure (AUC) compared to SLCO1B1 c.521TT and ABCG2 c.421CC.
+      For patients known to have the c.521CC or c.421AA genotype, a maximum once daily dose of 20 mg of ACH-Rosuvastatin is
+      recommended."
+    prescribing_actions:
+      - Dosing Info
+    related_alleles:
+      - id: PA166156544
+        symbol: rs2231142
+        name: rs2231142
+      - id: PA166154579
+        symbol: rs4149056
+        name: rs4149056
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166353201
+    label: Annotation of FDA Label for resmetirom and ABCG2
+    authority_type: regulatory_label
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: resmetirom
+        pharmgkb_id: PA166353181
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166353201
+      url: https://www.clinpgx.org/labelAnnotation/PA166353201
+    notes: Annotation of FDA Label for resmetirom and ABCG2
+    pgx_action_level: No Clinical PGx
+    summary:
+      The FDA-approved drug label for resmetirom (REZDIFFRA) states that there were no clinically significant differences
+      in the pharmacokinetics based on ABCG2 genotype.
+    related_alleles:
+      - id: PA166156543
+        symbol: rs2231137
+        name: rs2231137
+      - id: PA166156544
+        symbol: rs2231142
+        name: rs2231142
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Resmetirom_2024_09_27_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166432221
+    label: Annotation of FDA Label for sepiapterin and ABCG2
+    authority_type: regulatory_label
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: sepiapterin
+        pharmgkb_id: PA166431804
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166432221
+      url: https://www.clinpgx.org/labelAnnotation/PA166432221
+    notes: Annotation of FDA Label for sepiapterin and ABCG2
+    pgx_action_level: No Clinical PGx
+    summary:
+      The FDA label for sepiapterin notes that ABCG2 genotype p.Gln141Lys (rs2231142G>T) has no clinical effect on the
+      drugs pharmacokinetics.
+    related_alleles:
+      - id: PA166156544
+        symbol: rs2231142
+        name: rs2231142
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Sepiapterin_FDA_2026_03_13.pdf
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448821500
+    label: rs2231142 / tenofovir / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: tenofovir
+        pharmgkb_id: PA10204
+    phenotypes:
+      - HIV infectious disease
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448821500"
+      url: https://www.clinpgx.org/summaryAnnotation/1448821500
+    notes: rs2231142 (ABCG2); tenofovir; HIV Infections (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1448821500_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and HIV may have decreased area under the concentration-time curve (AUC) of tenofovir
+          as compared to patients with the GT or TT genotype. Other genetic and clinical factors may also influence AUC of tenofovir.
+      - id: clinpgx_summary_1448821500_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and HIV may have increased area under the concentration-time curve (AUC) of tenofovir
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence AUC of tenofovir.
+      - id: clinpgx_summary_1448821500_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and HIV may have increased area under the concentration-time curve (AUC) of tenofovir
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence AUC of tenofovir.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444686803
+    label: rs2231142 / capecitabine, fluorouracil, leucovorin, oxaliplatin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: capecitabine
+        pharmgkb_id: PA448771
+      - name: fluorouracil
+        pharmgkb_id: PA128406956
+      - name: leucovorin
+        pharmgkb_id: PA450198
+      - name: oxaliplatin
+        pharmgkb_id: PA131285527
+    phenotypes:
+      - Colorectal Neoplasms
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444686803"
+      url: https://www.clinpgx.org/summaryAnnotation/1444686803
+    notes: rs2231142 (ABCG2); capecitabine, fluorouracil, leucovorin or oxaliplatin; Colorectal Neoplasms (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444686803_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and and colorectal cancer who are receiving FOLFOX/XELOX regimens may have a poorer
+          response rate as compared to patients with the GT or TT genotype. Other genetic and clinical factors may also influence
+          response to chemotherapy regimens.
+      - id: clinpgx_summary_1444686803_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and and colorectal cancer who are receiving FOLFOX/XELOX regimens may have a better
+          response rate as compared to patients with the GG genotype. Other genetic and clinical factors may also influence response
+          to chemotherapy regimens.
+      - id: clinpgx_summary_1444686803_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and and colorectal cancer who are receiving FOLFOX/XELOX regimens may have a better
+          response rate as compared to patients with the GG genotype. Other genetic and clinical factors may also influence response
+          to chemotherapy regimens.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444686824
+    label: rs2231142 / sulfasalazine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: sulfasalazine
+        pharmgkb_id: PA451547
+    phenotypes:
+      - Rheumatoid arthritis
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444686824"
+      url: https://www.clinpgx.org/summaryAnnotation/1444686824
+    notes: rs2231142 (ABCG2); sulfasalazine; Arthritis, Rheumatoid (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444686824_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and rheumatoid arthritis may have a lower likelihood of achieving remission when treated
+          with sulfasalazine as compared to patients with the GT or TT genotype. Other genetic and clinical factors may also influence
+          response to sulfasalazine.
+      - id: clinpgx_summary_1444686824_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and rheumatoid arthritis may have an increased likelihood of achieving remission when
+          treated with sulfasalazine as compared to patients with the GG genotype. Other genetic and clinical factors may also
+          influence response to sulfasalazine.
+      - id: clinpgx_summary_1444686824_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and rheumatoid arthritis may have an increased likelihood of achieving remission when
+          treated with sulfasalazine as compared to patients with the GG genotype. Other genetic and clinical factors may also
+          influence response to sulfasalazine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183614716
+    label: rs2231142 / efavirenz / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: efavirenz
+        pharmgkb_id: PA449441
+    phenotypes:
+      - HIV infectious disease
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183614716"
+      url: https://www.clinpgx.org/summaryAnnotation/1183614716
+    notes: rs2231142 (ABCG2); efavirenz; HIV Infections (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1183614716_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and HIV infection who are treated with efavirenz may have a reduced risk of abnormal
+          dreams as compared to patients with the GT or TT genotype. Other genetic and clinical factors may also influence a patient's
+          risk of efavirenz-induced side effects.
+      - id: clinpgx_summary_1183614716_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and HIV infection who are treated with efavirenz may have an increased risk of abnormal
+          dreams as compared to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's
+          risk of efavirenz-induced side effects.
+      - id: clinpgx_summary_1183614716_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and HIV infection who are treated with efavirenz may have an increased risk of abnormal
+          dreams as compared to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's
+          risk of efavirenz-induced side effects.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444700509
+    label: rs2231142 / imatinib / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: imatinib
+        pharmgkb_id: PA10804
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444700509"
+      url: https://www.clinpgx.org/summaryAnnotation/1444700509
+    notes: rs2231142 (ABCG2); imatinib (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1444700509_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and Neoplasms might have an increased metabolism of imatinib as compared to patients
+          with the GT genotype. Patients with GG genotype may have a decreased sensitivity to dasatinib or imatinib or nilotinib
+          as compared to patients with TT genotype. The association is based on in-vitro finding in K562 cells. Other genetic
+          and clinical factors may also influence a patient's response to dasatinib, imatinib or nilotinib.
+      - id: clinpgx_summary_1444700509_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and Neoplasms might have a decreased metabolism of imatinib as compared to patients
+          with the GG genotype. Patients with the GT genotype are not studied for sensitivity to imatinib, but based on in-vitro
+          experiments the T allele may have an association with increased sensitivity to dasatinib, imatinib or nilotinib as compared
+          to the G allele. Other genetic and clinical factors may also influence a patient's response to dasatinib, imatinib or
+          nilotinib.
+      - id: clinpgx_summary_1444700509_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and Neoplasms might have a decreased metabolism of imatinib as compared to patients
+          with the GG genotype based on the finding of the GT genotype being associated with decreased metabolism as compared
+          to the GG genotype. Patients with TT genotype may have an increased sensitivity to dasatinib or imatinib or nilotinib
+          as compared to patients with GG genotype. The association is based on in-vitro finding in K562 cells. Other genetic
+          and clinical factors may also influence a patient's response to dasatinib, imatinib or nilotinib.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444666110
+    label: rs2231142 / sunitinib / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: sunitinib
+        pharmgkb_id: PA162372840
+    phenotypes:
+      - Neoplasms
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444666110"
+      url: https://www.clinpgx.org/summaryAnnotation/1444666110
+    notes: rs2231142 (ABCG2); sunitinib; Neoplasms (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1444666110_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may decreased likelihood of toxicity when treated with sunitinib as compared to patients
+          with the TT genotype. Other genetic and clinical factors may also influence sunitinib toxicity.
+      - id: clinpgx_summary_1444666110_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype may decreased likelihood of toxicity when treated with sunitinib as compared to patients
+          with the TT genotype. Other genetic and clinical factors may also influence sunitinib toxicity.
+      - id: clinpgx_summary_1444666110_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may increased likelihood of toxicity when treated with sunitinib as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also influence sunitinib toxicity.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448100487
+    label: rs2231142 / lamotrigine / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: lamotrigine
+        pharmgkb_id: PA450164
+    phenotypes:
+      - Epilepsy
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448100487"
+      url: https://www.clinpgx.org/summaryAnnotation/1448100487
+    notes: rs2231142 (ABCG2); lamotrigine; Epilepsy (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1448100487_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs2231142 GG genotype and epilepsy may have decreased concentrations of lamotrigine compared to
+          patients with the GT and TT genotypes. However, conflicting evidence has been reported. This annotation only covers
+          the pharmacokinetic relationship between rs2231142 and lamotrigine and does not include evidence about clinical outcomes.
+          Other factors may affect lamotrigine concentrations.
+      - id: clinpgx_summary_1448100487_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the rs2231142 GT genotype and epilepsy may have increased concentrations of lamotrigine compared to
+          patients with the GG genotype.  However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic
+          relationship between rs2231142 and lamotrigine and does not include evidence about clinical outcomes. Other factors
+          may affect lamotrigine concentrations.
+      - id: clinpgx_summary_1448100487_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs2231142 TT genotype and epilepsy may have increased concentrations of lamotrigine compared to
+          patients with the GG genotype.  However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic
+          relationship between rs2231142 and lamotrigine and does not include evidence about clinical outcomes. Other factors
+          may affect lamotrigine concentrations.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1155598159
+    label: rs2231142 / atorvastatin / Other
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: atorvastatin
+        pharmgkb_id: PA448500
+    phenotypes: []
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1155598159"
+      url: https://www.clinpgx.org/summaryAnnotation/1155598159
+    notes: rs2231142 (ABCG2); atorvastatin (level 3)
+    effects:
+      - id: clinpgx_summary_1155598159_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have lower plasma concentrations of atorvastatin as compared to patients with
+          the TT genotype.  This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be
+          not clinically actionable. Other genetic and clinical factors may also influence pharmacokinetics of atorvastatin.
+      - id: clinpgx_summary_1155598159_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype may have lower plasma concentrations of atorvastatin as compared to patients with
+          the TT genotype.  This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be
+          not clinically actionable. Other genetic and clinical factors may also influence pharmacokinetics of atorvastatin.
+      - id: clinpgx_summary_1155598159_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have higher plasma concentrations of atorvastatin as compared to patients with
+          the GT or GG genotype.  This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic and clinical factors may also influence pharmacokinetics of atorvastatin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1156076089
+    label: rs2231142 / fluvastatin / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: fluvastatin
+        pharmgkb_id: PA449688
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1156076089"
+      url: https://www.clinpgx.org/summaryAnnotation/1156076089
+    notes: rs2231142 (ABCG2); fluvastatin (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1156076089_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have reduced exposure to fluvastatin as compared to patients with the TT genotype.  This
+          drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          Other genetic and clinical factors may also influence a patient's exposure to fluvastatin. This annotation only covers
+          the pharmacokinetic relationship between rs2231142 and fluvastatin and does not include evidence about clinical outcomes.
+      - id: clinpgx_summary_1156076089_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype may have reduced exposure to fluvastatin as compared to patients with the TT genotype.  This
+          drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          Other genetic and clinical factors may also influence a patient's exposure to fluvastatin. This annotation only covers
+          the pharmacokinetic relationship between rs2231142 and fluvastatin and does not include evidence about clinical outcomes.
+      - id: clinpgx_summary_1156076089_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have increased exposure to fluvastatin as compared to patients with the GT and
+          GG genotype.  This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not
+          clinically actionable. Other genetic and clinical factors may also influence a patient's exposure to fluvastatin. This
+          annotation only covers the pharmacokinetic relationship between rs2231142 and fluvastatin and does not include evidence
+          about clinical outcomes.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1156738774
+    label: rs2231142 / simvastatin / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: simvastatin
+        pharmgkb_id: PA451363
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1156738774"
+      url: https://www.clinpgx.org/summaryAnnotation/1156738774
+    notes: rs2231142 (ABCG2); simvastatin (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1156738774_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs2231142 GG genotype may have reduced exposure to simvastatin as compared to patients with the
+          TT genotype. This annotation only covers the pharmacokinetic relationship between rs2231142 and simvastatin and does
+          not include evidence about clinical outcomes.  This drug-variant pair has been assigned a “no recommendation” by CPIC,
+          as it was determined to be not clinically actionable. Other genetic and clinical factors may also influence exposure
+          to simvastatin.
+      - id: clinpgx_summary_1156738774_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the rs2231142 GT genotype may have reduced exposure to simvastatin as compared to patients with the
+          TT genotype. This annotation only covers the pharmacokinetic relationship between rs2231142 and simvastatin and does
+          not include evidence about clinical outcomes.  This drug-variant pair has been assigned a “no recommendation” by CPIC,
+          as it was determined to be not clinically actionable. Other genetic and clinical factors may also influence exposure
+          to simvastatin.
+      - id: clinpgx_summary_1156738774_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs2231142 TT genotype may have increased exposure to simvastatin as compared to patients with
+          the GT or GG genotypes. This annotation only covers the pharmacokinetic relationship between rs2231142 and simvastatin
+          and does not include evidence about clinical outcomes.  This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also influence
+          exposure to simvastatin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452138940
+    label: rs2231142 / atorvastatin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: atorvastatin
+        pharmgkb_id: PA448500
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452138940"
+      url: https://www.clinpgx.org/summaryAnnotation/1452138940
+    notes: rs2231142 (ABCG2); atorvastatin (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1452138940_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs2231142 GG genotype may have a decreased risk of drug-induced toxicity when treated with atorvastatin
+          as compared to patients with the TT or GT genotype. However, conflicting evidence has been reported. Other genetic and
+          clinical factors may also influence risk of developing drug-induced toxicity when treated with atorvastatin.
+      - id: clinpgx_summary_1452138940_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the rs2231142 GT genotype may have an increased risk of drug-induced toxicity when treated with atorvastatin
+          as compared to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence risk of developing drug-induced toxicity when treated with atorvastatin.
+      - id: clinpgx_summary_1452138940_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs2231142 TT genotype may have an increased risk of drug-induced toxicity when treated with atorvastatin
+          as compared to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence risk of developing drug-induced toxicity when treated with atorvastatin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451666660
+    label: rs2231142 / rosuvastatin / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: rosuvastatin
+        pharmgkb_id: PA134308647
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451666660"
+      url: https://www.clinpgx.org/summaryAnnotation/1451666660
+    notes: rs2231142 (ABCG2); rosuvastatin (level 1A Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1451666660_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The T allele of this variant, when measured on the plus chromosomal strand, is assigned decreased function by CPIC.
+          Patients with the rs2231142 GG genotype may have decreased plasma concentrations of rosuvastatin when treated with rosuvastatin
+          as compared to patients with the TT or GT genotype. Other genetic and clinical factors may also influence the metabolism
+          of rosuvastatin. This annotation only covers the pharmacokinetic relationship between rs2231142 and rosuvastatin and
+          does not include evidence about clinical outcomes.
+      - id: clinpgx_summary_1451666660_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          The T allele of this variant, when measured on the plus chromosomal strand, is assigned decreased function by CPIC.
+          Patients with the rs2231142 GT genotype may have increased plasma concentrations of rosuvastatin when treated with rosuvastatin
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence the metabolism of
+          rosuvastatin. This annotation only covers the pharmacokinetic relationship between rs2231142 and rosuvastatin and does
+          not include evidence about clinical outcomes.
+      - id: clinpgx_summary_1451666660_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          The T allele of this variant, when measured on the plus chromosomal strand, is assigned decreased function by CPIC.
+          Patients with the rs2231142 TT genotype may have increased plasma concentrations of rosuvastatin when treated with rosuvastatin
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence the metabolism of
+          rosuvastatin. This annotation only covers the pharmacokinetic relationship between rs2231142 and rosuvastatin and does
+          not include evidence about clinical outcomes.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449165034
+    label: rs2231142 / methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Rheumatoid arthritis
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449165034"
+      url: https://www.clinpgx.org/summaryAnnotation/1449165034
+    notes: rs2231142 (ABCG2); methotrexate; Arthritis, Rheumatoid (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1449165034_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and rheumatoid arthritis who are taking methotrexate may have an increased risk for
+          adverse events as compared to patients with the TT genotype. Other genetic and clinical factors may also influence methotrexate
+          toxicity.
+      - id: clinpgx_summary_1449165034_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and rheumatoid arthritis who are taking methotrexate may have an increased risk for
+          adverse events as compared to patients with the TT genotype, or a decreased risk as compared to patients with the GG
+          genotype. Other genetic and clinical factors may also influence methotrexate toxicity.
+      - id: clinpgx_summary_1449165034_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and rheumatoid arthritis who are taking methotrexate may have a decreased risk for
+          adverse events as compared to patients with the GG genotype. Other genetic and clinical factors may also influence methotrexate
+          toxicity.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447963662
+    label: rs2231142 / gefitinib / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: gefitinib
+        pharmgkb_id: PA131301952
+    phenotypes:
+      - Lung Neoplasms
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447963662"
+      url: https://www.clinpgx.org/summaryAnnotation/1447963662
+    notes: rs2231142 (ABCG2); gefitinib; Lung Neoplasms (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1447963662_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and lung cancer may have a decreased risk of diarrhea when treated with gefitinib
+          as compared to patients with the GT genotype. However, multiple studies find no association between this polymorphism
+          and gefitinib-related diarrhea or other adverse effects. Other genetic and clinical factors may also influence risk
+          of diarrhea.
+      - id: clinpgx_summary_1447963662_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and lung cancer may have an increased risk of diarrhea when treated with gefitinib
+          as compared to patients with the GG genotype. However, multiple studies find no association between this polymorphism
+          and gefitinib-related diarrhea or other adverse effects. Other genetic and clinical factors may also influence risk
+          of diarrhea.
+      - id: clinpgx_summary_1447963662_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          No patients with the TT genotype were available for analysis, but patients with the GT genotype and lung cancer
+          may have an increased risk of diarrhea when treated with gefitinib as compared to patients with the GG genotype. However,
+          multiple studies find no association between this polymorphism, including patients with the GG genotype, and gefitinib-related
+          diarrhea or other adverse effects. Other genetic and clinical factors may also influence risk of diarrhea.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449565060
+    label: rs2231142 / gemcitabine / Efficacy, Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: gemcitabine
+        pharmgkb_id: PA449748
+    phenotypes:
+      - Non-Small Cell Lung Carcinoma
+    phenotype_categories:
+      - Efficacy
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449565060"
+      url: https://www.clinpgx.org/summaryAnnotation/1449565060
+    notes: rs2231142 (ABCG2); gemcitabine; Carcinoma, Non-Small-Cell Lung (level 3 Efficacy, Toxicity)
+    effects:
+      - id: clinpgx_summary_1449565060_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and non-small cell lung cancer may have shorter progression-free survival, and decreased
+          severity of thrombocytopenia, as compared to patients with the GT and TT genotypes. There was no association between
+          genotype and overall survival, or severity of neutropenia. Other clinical and genetic factors may also influence response
+          to, and risk of thrombocytopenia in patients with non-small cell lung cancer who are treated with gemcitabine.
+      - id: clinpgx_summary_1449565060_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and non-small cell lung cancer may have longer progression-free survival, and increased
+          severity of thrombocytopenia, as compared to patients with the GG genotype. There was no association between genotype
+          and overall survival, or severity of neutropenia. Other clinical and genetic factors may also influence response to,
+          and risk of thrombocytopenia in patients with non-small cell lung cancer who are treated with gemcitabine.
+      - id: clinpgx_summary_1449565060_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and non-small cell lung cancer may have longer progression-free survival, and increased
+          severity of thrombocytopenia, as compared to patients with the GG genotype. There was no association between genotype
+          and overall survival, or severity of neutropenia. Other clinical and genetic factors may also influence response to,
+          and risk of thrombocytopenia in patients with non-small cell lung cancer who are treated with gemcitabine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448995134
+    label: rs2231142 / dolutegravir / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: dolutegravir
+        pharmgkb_id: PA166114961
+    phenotypes:
+      - HIV infectious disease
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448995134"
+      url: https://www.clinpgx.org/summaryAnnotation/1448995134
+    notes: rs2231142 (ABCG2); dolutegravir; HIV Infections (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1448995134_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have decreased plasma concentrations of dolutegravir as compared to patients with
+          the TT genotype. Other genetic and clinical factors may also influence response to dolutegravir.
+      - id: clinpgx_summary_1448995134_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the TG genotype may have decreased plasma concentrations of dolutegravir as compared to patients with
+          the TT genotype. Other genetic and clinical factors may also influence response to dolutegravir.
+      - id: clinpgx_summary_1448995134_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have increased plasma concentrations of dolutegravir as compared to patients with
+          the GT or GG genotype. Other genetic and clinical factors may also influence response to dolutegravir.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1446899372
+    label: rs2231142 / sulfasalazine / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: sulfasalazine
+        pharmgkb_id: PA451547
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1446899372"
+      url: https://www.clinpgx.org/summaryAnnotation/1446899372
+    notes: rs2231142 (ABCG2); sulfasalazine (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1446899372_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have improved clearance and metabolism of sulfasalazine as compared to patients
+          with the GT and TT genotypes. Other clinical and genetic factors may also influence clearance and metabolism of sulfasalazine.
+      - id: clinpgx_summary_1446899372_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype may have improved clearance of sulfasalazine as compared to patients with the TT genotypes.
+          Other clinical and genetic factors may also influence clearance and metabolism of sulfasalazine.
+      - id: clinpgx_summary_1446899372_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have decreased clearance and metabolism of sulfasalazine as compared to patients
+          with the GG genotypes. Other clinical and genetic factors may also influence clearance and metabolism of sulfasalazine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449269612
+    label: rs2231142 / apixaban / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: apixaban
+        pharmgkb_id: PA166163740
+    phenotypes:
+      - Atrial Fibrillation
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449269612"
+      url: https://www.clinpgx.org/summaryAnnotation/1449269612
+    notes: rs2231142 (ABCG2); apixaban; Atrial Fibrillation (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1449269612_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients atrial fibrillation and the GG genotype may have increased clearance and decreased concentrations of apixaban
+          as compared to patients with the TT genotype. Other clinical and genetic factors may also influence clearance and concentrations
+          of apixaban in patients with atrial fibrillation.
+      - id: clinpgx_summary_1449269612_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients atrial fibrillation and the GT genotype may have increased clearance and decreased concentrations of apixaban
+          as compared to patients with the TT genotype. Other clinical and genetic factors may also influence clearance and concentrations
+          of apixaban in patients with atrial fibrillation.
+      - id: clinpgx_summary_1449269612_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with atrial fibrillation and the TT genotype may have decreased clearance and increased concentrations
+          of apixaban as compared to patients with the GG and GT genotypes. Other clinical and genetic factors may also influence
+          clearance and concentrations of apixaban in patients with atrial fibrillation.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449718248
+    label: rs2231142 / cyclophosphamide, doxorubicin, fluorouracil / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: cyclophosphamide
+        pharmgkb_id: PA449165
+      - name: doxorubicin
+        pharmgkb_id: PA449412
+      - name: fluorouracil
+        pharmgkb_id: PA128406956
+    phenotypes:
+      - Breast Neoplasms
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449718248"
+      url: https://www.clinpgx.org/summaryAnnotation/1449718248
+    notes: rs2231142 (ABCG2); cyclophosphamide, doxorubicin or fluorouracil; Breast Neoplasms (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1449718248_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and breast cancer may have a decreased risk for anemia when treated with cyclophosphamide,
+          doxorubicin and fluorouracil (FAC) as compared to patients with the GT genotype. Other genetic and clinical factors
+          may also influence risk for anemia in patients taking FAC chemotherapy.
+      - id: clinpgx_summary_1449718248_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and breast cancer may have an increased risk for anemia when treated with cyclophosphamide,
+          doxorubicin and fluorouracil (FAC) as compared to patients with the GG genotype. Other genetic and clinical factors
+          may also influence risk for anemia in patients taking FAC chemotherapy.
+      - id: clinpgx_summary_1449718248_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          No patients with the TT genotype were included in the analysis, but patients with the GT genotype and breast cancer
+          may have an increased risk for anemia when treated with cyclophosphamide, doxorubicin and fluorouracil (FAC) as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence risk for anemia in patients
+          taking FAC chemotherapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451553602
+    label: rs2231142 / methotrexate / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+      - Burkitt Lymphoma
+      - Lymphoma, T-Cell
+      - Osteosarcoma
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451553602"
+      url: https://www.clinpgx.org/summaryAnnotation/1451553602
+    notes:
+      rs2231142 (ABCG2); methotrexate; Burkitt Lymphoma, Lymphoma, T-Cell, Osteosarcoma and Precursor Cell Lymphoblastic
+      Leukemia-Lymphoma (level 4 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1451553602_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs2231142 GG genotype and
+          exposure to methotrexate. However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic
+          relationship between rs2231142 and methotrexate and does not include evidence about clinical outcomes. Other genetic
+          and clinical factors may also influence methotrexate exposure.
+      - id: clinpgx_summary_1451553602_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs2231142 GT genotype and
+          exposure to methotrexate. However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic
+          relationship between rs2231142 and methotrexate and does not include evidence about clinical outcomes. Other genetic
+          and clinical factors may also influence methotrexate exposure.
+      - id: clinpgx_summary_1451553602_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs2231142 TT genotype and
+          exposure to methotrexate. However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic
+          relationship between rs2231142 and methotrexate and does not include evidence about clinical outcomes. Other genetic
+          and clinical factors may also influence methotrexate exposure.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449717941
+    label: rs2231142 / opioid anesthetics, other general anesthetics, volatile anesthetics / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: opioid anesthetics
+        pharmgkb_id: PA164712948
+      - name: other general anesthetics
+        pharmgkb_id: PA164713083
+      - name: volatile anesthetics
+        pharmgkb_id: PA166131630
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449717941"
+      url: https://www.clinpgx.org/summaryAnnotation/1449717941
+    notes: rs2231142 (ABCG2); Opioid anesthetics, Other general anesthetics or volatile anesthetics (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449717941_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a longer recovery time from general anesthesia as compared to patients with
+          the TT genotype. Other genetic and clinical factors may also affect a patient's recovery time from general anesthesia.
+      - id: clinpgx_summary_1449717941_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype may have a longer recovery time from general anesthesia as compared to patients with
+          the TT genotype. Other genetic and clinical factors may also affect a patient's recovery time from general anesthesia.
+      - id: clinpgx_summary_1449717941_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have a shorter recovery time from general anesthesia as compared to patients with
+          the GG or GT genotypes. Other genetic and clinical factors may also affect a patient's recovery time from general anesthesia.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451476500
+    label: rs2231142 / methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+      - Burkitt Lymphoma
+      - Drug Toxicity
+      - Lymphoma, T-Cell
+      - Osteosarcoma
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451476500"
+      url: https://www.clinpgx.org/summaryAnnotation/1451476500
+    notes:
+      rs2231142 (ABCG2); methotrexate; Burkitt Lymphoma, Drug Toxicity, Lymphoma, T-Cell, Osteosarcoma and Precursor Cell
+      Lymphoblastic Leukemia-Lymphoma (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451476500_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs2231142 GG genotype and
+          risk of experiencing drug toxicity when treated with methotrexate in patients with acute lymphoblastic leukemia (ALL).
+          However, conflicting evidence has been reported. Other genetic and clinical factors may also influence risk of experiencing
+          drug toxicity when treated with methotrexate.
+      - id: clinpgx_summary_1451476500_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs2231142 GT genotype and
+          risk of experiencing drug toxicity when treated with methotrexate in patients with acute lymphoblastic leukemia (ALL).
+          However, conflicting evidence has been reported. Other genetic and clinical factors may also influence risk of experiencing
+          drug toxicity when treated with methotrexate.
+      - id: clinpgx_summary_1451476500_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs2231142 TT genotype and
+          risk of experiencing drug toxicity when treated with methotrexate in patients with acute lymphoblastic leukemia (ALL).
+          However, conflicting evidence has been reported. Other genetic and clinical factors may also influence risk of experiencing
+          drug toxicity when treated with methotrexate.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451678225
+    label: rs2231142 / rosuvastatin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: rosuvastatin
+        pharmgkb_id: PA134308647
+    phenotypes:
+      - statin-related myopathy
+    phenotype_categories:
+      - Toxicity
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451678225"
+      url: https://www.clinpgx.org/summaryAnnotation/1451678225
+    notes: rs2231142 (ABCG2); rosuvastatin; statin-related myopathy (level 1A Toxicity)
+    effects:
+      - id: clinpgx_summary_1451678225_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The T allele of this variant, when measured on the plus chromosomal strand, is assigned decreased function by CPIC.
+          Patients with the rs2231142 GG genotype may have a lower risk of statin-related myopathy when treated with rosuvastatin
+          as compared to patients with the TT or GT genotype. However, conflicting evidence has been reported. Other genetic and
+          clinical factors may also influence the toxicity of rosuvastatin.
+      - id: clinpgx_summary_1451678225_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          The T allele of this variant, when measured on the plus chromosomal strand, is assigned decreased function by CPIC.
+          Patients with the rs2231142 GT genotype may have a higher risk of statin-related myopathy when treated with rosuvastatin
+          as compared to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the toxicity of rosuvastatin.
+      - id: clinpgx_summary_1451678225_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          The T allele of this variant, when measured on the plus chromosomal strand, is assigned decreased function by CPIC.
+          Patients with the rs2231142 TT genotype may have a higher risk of statin-related myopathy when treated with rosuvastatin
+          as compared to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence the toxicity of rosuvastatin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1154221922
+    label: rs2231142 / rosuvastatin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: rosuvastatin
+        pharmgkb_id: PA134308647
+    phenotypes:
+      - Hypercholesterolemia
+      - Myocardial Infarction
+    phenotype_categories:
+      - Efficacy
+    evidence_level: 2A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1154221922"
+      url: https://www.clinpgx.org/summaryAnnotation/1154221922
+    notes: rs2231142 (ABCG2); rosuvastatin; Hypercholesterolemia and Myocardial Infarction (level 2A Efficacy)
+    effects:
+      - id: clinpgx_summary_1154221922_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs2231142 GG genotype and who are treated with rosuvastatin may have a reduced response to treatment
+          as determined by a lower reduction in LDL-C as compared to patients with the GT or TT genotypes. Other genetic and clinical
+          factors may also influence response to rosuvastatin.
+      - id: clinpgx_summary_1154221922_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the rs2231142 GT genotype and who are treated with rosuvastatin may have a better response to treatment
+          as determined by a higher reduction in LDL-C as compared to patients with the GG genotype. Other genetic and clinical
+          factors may also influence response to rosuvastatin.
+      - id: clinpgx_summary_1154221922_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs2231142 TT genotype and who are treated with rosuvastatin may have a better response to treatment
+          as determined by a higher reduction in LDL-C as compared to patients with the GG genotype. Other genetic and clinical
+          factors may also influence response to rosuvastatin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451699360
+    label: rs2231142 / allopurinol / Dosage
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: allopurinol
+        pharmgkb_id: PA448320
+    phenotypes:
+      - Gout
+    phenotype_categories:
+      - Dosage
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451699360"
+      url: https://www.clinpgx.org/summaryAnnotation/1451699360
+    notes: rs2231142 (ABCG2); allopurinol; Gout (level 1A Dosage)
+    effects:
+      - id: clinpgx_summary_1451699360_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs2231142 GG genotype may require a decreased dose of allopurinol as compared to patients with
+          the GT or TT genotypes. Other genetic and clinical factors may also influence allopurinol dose requirements.
+      - id: clinpgx_summary_1451699360_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the rs2231142 GT genotype may require an increased dose of allopurinol as compared to patients with
+          the GG genotype. Other genetic and clinical factors may also influence allopurinol dose requirements.
+      - id: clinpgx_summary_1451699360_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs2231142 TT genotype may require an increased dose of allopurinol as compared to patients with
+          the GG genotype. Other genetic and clinical factors may also influence allopurinol dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447982582
+    label: rs2231142 / allopurinol / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCG2
+    variant: rs2231142
+    drugs:
+      - name: allopurinol
+        pharmgkb_id: PA448320
+    phenotypes:
+      - Gout
+    phenotype_categories:
+      - Efficacy
+    evidence_level: 1A
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447982582"
+      url: https://www.clinpgx.org/summaryAnnotation/1447982582
+    notes: rs2231142 (ABCG2); allopurinol; Gout (level 1A Efficacy)
+    effects:
+      - id: clinpgx_summary_1447982582_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs2231142 GG genotype and gout may have increased response when treated with allopurinol as compared
+          to patients with the GT or TT genotype. Other genetic and clinical factors may also influence allopurinol response.
+      - id: clinpgx_summary_1447982582_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the rs2231142 GT genotype and gout may have decreased response when treated with allopurinol as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence allopurinol response.
+      - id: clinpgx_summary_1447982582_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs2231142.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs2231142 TT genotype and gout may have decreased response when treated with allopurinol as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence allopurinol response.

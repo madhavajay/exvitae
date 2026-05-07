@@ -1,0 +1,73 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1954787.yaml
+gene: GRIK4
+rsid: rs1954787
+variant_pa_id: PA166154345
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154345/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_982030381
+    label: rs1954787 / antidepressants / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - GRIK4
+    variant: rs1954787
+    drugs:
+      - name: antidepressants
+        pharmgkb_id: PA452229
+    phenotypes:
+      - Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "982030381"
+      url: https://www.clinpgx.org/summaryAnnotation/982030381
+    notes: rs1954787 (GRIK4); antidepressants; Depressive Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_982030381_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1954787.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs1954787 CC genotype and depressive disorders may be more likely to respond to antidepressant
+          treatment as compared to patients with the CT or TT genotype. Other genetic and clinical factors may also influence
+          response to antidepressants.
+      - id: clinpgx_summary_982030381_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1954787.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs1954787 CT genotype and depressive disorders may be less likely to respond to antidepressant
+          treatment as compared to patients with the CC genotype. Other genetic and clinical factors may also influence response
+          to antidepressants.
+      - id: clinpgx_summary_982030381_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1954787.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs1954787 TT genotype and depressive disorders may be less likely to respond to antidepressant
+          treatment as compared to patients with the CC genotype. Other genetic and clinical factors may also influence response
+          to antidepressants.

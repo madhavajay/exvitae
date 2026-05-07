@@ -1,0 +1,11 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs12777823.yaml
+gene: CYP2C
+rsid: rs12777823
+variant_pa_id: PA166154157
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154157/summaryAnnotation
+findings: []

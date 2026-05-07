@@ -1,0 +1,498 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs6025.yaml
+gene: F5
+rsid: rs6025
+variant_pa_id: PA166153554
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166153554/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166153554/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166127666
+    label: Annotation of HCSC Label for drospirenone / ethinyl estradiol and F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: drospirenone
+        pharmgkb_id: PA165290928
+      - name: ethinyl estradiol
+        pharmgkb_id: PA165290928
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166127666
+      url: https://www.clinpgx.org/labelAnnotation/PA166127666
+    notes: Annotation of HCSC Label for drospirenone / ethinyl estradiol and F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The product monograph for drospirenone and ethinyl estradiol (YAZ) states that the drug is contraindicated in women
+      with Factor V Leiden mutation, antithrombin III deficiency, protein C deficiency and protein S deficiency (among other
+      contraindications), due to the risk for arterial or venous thrombosis.
+    prescribing_information: |-
+      The product monograph for drospirenone and ethinyl estradiol (YAZ) states:
+      YAZ should not be used in women with: presence of severe or multiple risk factor(s) for arterial or venous thrombosis: hereditary or acquired predisposition for venous or arterial thrombosis, such as Factor V Leiden mutation and activated protein C (APC-) resistance, antithrombin-III-deficiency, protein C deficiency, protein S deficiency, hyperhomocysteinemia and antiphospholipid-antibodies (anticardiolipin antibodies, lupus anticoagulant).
+    prescribing_actions:
+      - Alternate Drug
+    related_alleles:
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166127668
+    label: Annotation of HCSC Label for eltrombopag and F5, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F5
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: eltrombopag
+        pharmgkb_id: PA165981594
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166127668
+      url: https://www.clinpgx.org/labelAnnotation/PA166127668
+    notes: Annotation of HCSC Label for eltrombopag and F5, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The product monograph for eltrombopag (REVOLADE) states caution should be used in patients with known risk factors
+      for thromboembolism including but not limited to inherited (e.g. Factor V Leiden) or acquired risk factors (e.g. ATIII
+      deficiency, antiphospholipid syndrome and systemic lupus erythematosus).
+    prescribing_information: |-
+      Excerpt from the eltrombopag product monograph:
+      Caution should be used when administering REVOLADE to patients with known risk factors for thromboembolism including but not limited to inherited (e.g. Factor V Leiden) or acquired risk factors (e.g. ATIII deficiency, antiphospholipid syndrome and systemic lupus erythematosus), advanced age, patients with prolonged periods of immobilisation, malignancies, contraceptives and hormone replacement therapy, surgery/trauma, obesity and smoking. Platelet counts should be closely monitored and consideration given to reducing the dose or discontinuing REVOLADE if the platelet count exceeds the target levels. The risk-benefit balance should be considered in patients at risk of TEEs of any aetiology.
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166179855
+    label: Annotation of FDA Label for avatrombopag and F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: avatrombopag
+        pharmgkb_id: PA166179849
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166179855
+      url: https://www.clinpgx.org/labelAnnotation/PA166179855
+    notes: Annotation of FDA Label for avatrombopag and F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The FDA-approved drug label for avatrombopag (DOPTELET) states that the risk for thrombosis should be considered
+      in patients with risk factors for thromboembolism, including genetic prothrombotic conditions such as Factor V Leiden
+      (F5), Prothrombin 20210A (F2), Antithrombin deficiency (SERPINC1) or Protein C (PROC) or S (PROS1) deficiency.
+    prescribing_information:
+      Consider the potential increased thrombotic risk when administering DOPTELET to patients with known
+      risk factors for thromboembolism, including genetic prothrombotic conditions (e.g., Factor V Leiden, Prothrombin 20210A,
+      Antithrombin deficiency or Protein C or S deficiency).
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Avatrombopag_2024_07_11_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166182749
+    label: Annotation of FDA Label for lusutrombopag and F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: lusutrombopag
+        pharmgkb_id: PA166182748
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166182749
+      url: https://www.clinpgx.org/labelAnnotation/PA166182749
+    notes: Annotation of FDA Label for lusutrombopag and F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The FDA-approved drug label for lusutrombopag (MULPLETA) states that the potential increased risk for thrombosis
+      should be considered in patients with risk factors for thromboembolism, including genetic prothrombotic conditions such
+      as Factor V Leiden (F5), Prothrombin 20210A (F2), Antithrombin deficiency (SERPINC1) or Protein C (PROC) or S (PROS1)
+      deficiency.
+    prescribing_information:
+      Consider the potential increased thrombotic risk when administering MULPLETA to patients with known
+      risk factors for thromboembolism, including genetic pro-thrombotic conditions (Factor V Leiden, Prothrombin 20210A, Antithrombin
+      deficiency, or Protein C or S deficiency).
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/lusutrombopag_05_14_2019_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166240301
+    label: Annotation of EMA Label for avatrombopag and CYP2C9, F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - CYP2C9
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: avatrombopag
+        pharmgkb_id: PA166179849
+    regulatory_sources:
+      - EMA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166240301
+      url: https://www.clinpgx.org/labelAnnotation/PA166240301
+    notes: Annotation of EMA Label for avatrombopag and CYP2C9, F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The EMA European Public Assessment Report (EPAR) for avatrombopag (Doptelet) states that avatrombopag exposure
+      may increase in patients with CYP2C9*2 and/or CYP2C9*3 alleles, and that increased exposure may increase the risk of clinically-relevant
+      QTc prolongation. The label also states that potential increased thrombotic risk should be considered in patients with
+      deficiency in Factor V Leiden ( F5 ), prothrombin 20210A ( F2 ), antithrombin ( SERPINC1 ), protein C ( PROC ), or protein
+      S ( PROS1 ).
+    prescribing_information: |-
+      Caution must also be exercised in patients with loss-of-function polymorphisms of CYP2C9, as these can increase avatrombopag exposure.
+      Consider the potential increased thrombotic risk when administering Doptelet to patients with known risk factors for thromboembolism, including but not limited to genetic prothrombotic conditions (e.g. Factor V Leiden, Prothrombin 20210A, Antithrombin deficiency or Protein C or S deficiency), [...]
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA165816543
+        symbol: CYP2C9*2
+        name: "*2"
+      - id: PA165816544
+        symbol: CYP2C9*3
+        name: "*3"
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166343901
+    label: Annotation of HCSC Label for avatrombopag and CYP2C9, F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - CYP2C9
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: avatrombopag
+        pharmgkb_id: PA166179849
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166343901
+      url: https://www.clinpgx.org/labelAnnotation/PA166343901
+    notes: Annotation of HCSC Label for avatrombopag and CYP2C9, F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The HCSC-approved product monograph for avatrombopag (DOPTELET) states that avatrombopag exposure may increase
+      in patients with CYP2C9*2 and/or CYP2C9*3 alleles, and that increased exposure may increase the risk of clinically-relevant
+      QTc prolongation. The label also states that potential increased thrombotic risk should be considered in patients with
+      deficiency in Factor V Leiden (F5), prothrombin 20210A (F2), antithrombin (SERPINC1), protein C (PROC), or protein S (PROS1).
+    prescribing_information: |-
+      Caution must also be exercised in patients with loss-of-function polymorphisms of CYP2C9, as these can increase avatrombopag exposure.
+      Consider the potential increased thrombotic risk when administering DOPTELET to patients with known risk factors for thromboembolism, including but not limited to [...] genetic prothrombotic conditions (e.g., Factor V Leiden, Prothrombin 20210A, Antithrombin deficiency or Protein C or S deficiency).
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA165816543
+        symbol: CYP2C9*2
+        name: "*2"
+      - id: PA165816544
+        symbol: CYP2C9*3
+        name: "*3"
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166357881
+    label: Annotation of EMA Label for lusutrombopag and F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: lusutrombopag
+        pharmgkb_id: PA166182748
+    regulatory_sources:
+      - EMA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166357881
+      url: https://www.clinpgx.org/labelAnnotation/PA166357881
+    notes: Annotation of EMA Label for lusutrombopag and F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary: |-
+      The EMA-approved EPAR for lusutrombopag (Mulpleo) states that patients with congenital coagulopathy the risk for thrombosis or thromboembolism may increase. These patients should be clinically monitored when treated with lusutrombopag.
+      Although the EPAR does not mention specific genes, genetic prothrombotic conditions include Factor V Leiden (F5), Prothrombin 20210A (F2), Antithrombin deficiency (SERPINC1) or Protein C (PROC) or S (PROS1) deficiency.
+    prescribing_information:
+      In patients with thrombosis or thromboembolism, with a history of thrombosis or thromboembolism,
+      with absence of hepatopetal blood flow in the main trunk of the portal vein, or patients with congenital coagulopathy
+      the risk for thrombosis or thromboembolism may increase. These patients should be clinically monitored when treated with
+      lusutrombopag.
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166397701
+    label: Annotation of HCSC Label for relugolix / estradiol / norethindrone acetate and F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: relugolix
+        pharmgkb_id: PA166397682
+      - name: estradiol
+        pharmgkb_id: PA166397682
+      - name: norethindrone acetate
+        pharmgkb_id: PA166397682
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166397701
+      url: https://www.clinpgx.org/labelAnnotation/PA166397701
+    notes: Annotation of HCSC Label for relugolix / estradiol / norethindrone acetate and F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The product monograph for relugolix/estradiol/norethindrone acetate (MYFEMBREE) states that patients with a blood
+      clotting disorder such as protein C (PROC) deficiency, protein S (PROS1) deficiency, antithrombin-III (SERPINC1) deficiency,
+      or Factor V Leiden (F5) should not use the drug.
+    prescribing_information: |-
+      MYFEMBREE is contraindicated in patients who [...] have inherited or acquired hypercoagulopathies.
+      Do not use MYFEMBREE if [...] you have a blood clotting disorder. Examples such as protein C deficiency, protein S deficiency, antithrombin-III deficiency, or Factor V Leiden.
+    prescribing_actions:
+      - Alternate Drug
+    related_alleles:
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166397721
+    label: Annotation of FDA Label for relugolix / estradiol / norethindrone acetate and F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: relugolix
+        pharmgkb_id: PA166397682
+      - name: estradiol
+        pharmgkb_id: PA166397682
+      - name: norethindrone acetate
+        pharmgkb_id: PA166397682
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166397721
+      url: https://www.clinpgx.org/labelAnnotation/PA166397721
+    notes: Annotation of FDA Label for relugolix / estradiol / norethindrone acetate and F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The FDA-approved drug label for relugolix/estradiol/norethindrone acetate (MYFEMBREE) states that women who are
+      known to have inherited or acquired hypercoagulopathies should not use the drug. Specific inherited hypercoagulophathies
+      were not mentioned on the label, but include protein C (PROC) deficiency, protein S (PROS1) deficiency, antithrombin-III
+      (SERPINC1) deficiency, or Factor V Leiden (F5).
+    prescribing_information: |-
+      MYFEMBREE is contraindicated in women:
+      With a high risk of arterial, venous thrombotic, or thromboembolic disorders [...]. Examples include [...] women who are known to have [...] inherited or acquired hypercoagulopathies
+    prescribing_actions:
+      - Alternate Drug
+    related_alleles:
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Relugolix_estradiol_norethindroneacetate_2025_04_11_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166414701
+    label: Annotation of FDA Label for ethinyl estradiol / norelgestromin and F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs6025
+    drugs:
+      - name: ethinyl estradiol
+        pharmgkb_id: PA165290929
+      - name: norelgestromin
+        pharmgkb_id: PA165290929
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166414701
+      url: https://www.clinpgx.org/labelAnnotation/PA166414701
+    notes: Annotation of FDA Label for ethinyl estradiol / norelgestromin and F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      Norelgestromin and ethinyl estradiol transdermal system is contraindicated in patients who have inherited hypercoagulopathies,
+      among other contraindications. Although not mentioned on the drug label, known inherited hypercoagulopathies include deficiencies
+      of antithrombin (SERPINC1), protein C (PROC) and protein S (PROS1), and the resistance to APC (factor V Leiden).
+    prescribing_information:
+      Norelgestromin and ethinyl estradiol transdermal system is contraindicated in females who [...]
+      have inherited or acquired hypercoagulopathies
+    prescribing_actions:
+      - Alternate Drug
+    related_alleles:
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Norelgestromin_ethinyl_estradiol_2025_08_05_FDA.pdf
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183689558
+    label: rs6025 / hormonal contraceptives for systemic use / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - F5
+    variant: rs6025
+    drugs:
+      - name: hormonal contraceptives for systemic use
+        pharmgkb_id: PA452637
+    phenotypes:
+      - Thrombotic disease
+    phenotype_categories:
+      - Toxicity
+    evidence_level: 2B
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183689558"
+      url: https://www.clinpgx.org/summaryAnnotation/1183689558
+    notes: rs6025 (F5); hormonal contraceptives for systemic use; Thrombosis (level 2B Toxicity)
+    effects:
+      - id: clinpgx_summary_1183689558_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs6025.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs6025 CC genotype (normal Factor V) may have a decreased risk of experiencing thrombosis when
+          receiving oral contraceptives as compared to patients with the CT or TT genotype (carriers of Factor V Leiden). However,
+          conflicting evidence has been reported. Both Factor V Leiden and oral contraceptives have been found to independently
+          increase the risk for thrombosis, but together they may have a cumulative effect on thrombosis risk. Other genetic and
+          clinical factors may also influence risk of thrombosis.
+      - id: clinpgx_summary_1183689558_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs6025.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs6025 CT genotype (heterozygote for Factor V Leiden) may have an increased risk of experiencing
+          thrombosis when receiving oral contraceptives as compared to patients with the CC genotype (normal Factor V). However,
+          conflicting evidence has been reported. Both Factor V Leiden and oral contraceptives have been found to independently
+          increase the risk for thrombosis, but together they may have a cumulative effect on thrombosis risk. Other genetic and
+          clinical factors may also influence risk of thrombosis.
+      - id: clinpgx_summary_1183689558_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs6025.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs6025 TT genotype (homozygote for Factor V Leiden) may have an increased risk of experiencing
+          thrombosis when receiving oral contraceptives as compared to patients with the CC genotype (normal Factor V). However,
+          conflicting evidence has been reported. Both Factor V Leiden and oral contraceptives have been found to independently
+          increase the risk for thrombosis, but together they may have a cumulative effect on thrombosis risk. Other genetic and
+          clinical factors may also influence risk of thrombosis.

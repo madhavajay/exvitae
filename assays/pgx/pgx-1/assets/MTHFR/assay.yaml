@@ -1,0 +1,82 @@
+schema: bioscript:assay:1.0
+version: "1.0"
+name: mthfr_c677t_a1298c
+label: MTHFR C677T/A1298C Combined Genotype
+summary: Classify the combined MTHFR C677T/A1298C genotype from rs1801133 and rs1801131 for descriptive PGx reporting; clinical utility is limited for general screening.
+tags:
+  - type:pgx
+  - gene:MTHFR
+members:
+  - kind: variant
+    path: rs1801133.yaml
+    version: "1.0"
+  - kind: variant
+    path: rs1801131.yaml
+    version: "1.0"
+analyses:
+  - id: mthfr_combined
+    kind: bioscript
+    path: mthfr.py
+    output_format: tsv
+    label: MTHFR combined genotype
+    derived_from:
+      - rs1801133.yaml
+      - rs1801131.yaml
+    emits:
+      - key: mthfr_outcome
+        label: MTHFR outcome
+        value_type: string
+        format: badge
+      - key: mthfr_display
+        label: MTHFR display genotype
+        value_type: string
+      - key: rs1801131
+        label: rs1801131 genotype
+        value_type: string
+      - key: rs1801133
+        label: rs1801133 genotype
+        value_type: string
+      - key: mthfr_estimated_activity_pct
+        label: Estimated MTHFR enzyme activity percent
+        value_type: string
+      - key: mthfr_activity_note
+        label: MTHFR activity note
+        value_type: string
+      - key: mthfr_status
+        label: MTHFR status
+        value_type: string
+        format: badge
+      - key: mthfr_c677t_variant_dosage
+        label: MTHFR C677T variant dosage
+        value_type: integer
+      - key: mthfr_a1298c_variant_dosage
+        label: MTHFR A1298C variant dosage
+        value_type: integer
+      - key: mthfr_source
+        label: MTHFR source
+        value_type: url
+    logic:
+      source:
+        name: Castiglia et al. 2019, International Journal of Medical Sciences
+        url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6743281/
+      description: >
+        MTHFR combined status is derived from rs1801133 and rs1801131. These rsIDs are reported here using the current
+        reference-forward alleles from the variant definitions, while the common names use legacy protein/transcript
+        nomenclature. For rs1801133, the assayed REF->ALT is G->A and the ALT allele A corresponds to legacy 677T in
+        C677T, so GG maps to 677CC, GA/AG maps to 677CT, and AA maps to 677TT. For rs1801131, the assayed REF->ALT is
+        T->G and the ALT allele G corresponds to legacy 1298C in A1298C, so TT maps to 1298AA, TG/GT maps to 1298AC,
+        and GG maps to 1298CC. The cited review states that 677TT has no more than 30% of normal enzyme activity, 677CT
+        has 65% of normal enzyme activity, and A1298C heterozygous and homozygous carriers have 15% and 30% reductions
+        of enzymatic activity, respectively. The assay emits descriptive categories and activity fields when those values
+        are directly supported; combined genotype activity estimates are marked unknown when the cited source does not
+        provide a specific combined estimate. This is not intended to imply broad clinical utility for general population
+        screening.
+provenance:
+  sources:
+    - kind: paper
+      label: Castiglia et al. 2019 MTHFR C677T/A1298C study
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6743281/
+      fields:
+        - summary
+        - analyses[0].logic
+        - analyses[0].emits

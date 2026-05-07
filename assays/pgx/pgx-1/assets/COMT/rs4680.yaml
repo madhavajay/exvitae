@@ -1,0 +1,73 @@
+name: COMT-pgx-rs4680
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: COMT
+summary: COMT pharmacogenomics panel entry for rs4680 with detailed ClinPGx/PharmGKB summary annotations attached in rs4680-pgx.yaml.
+identifiers:
+  rsids:
+    - rs4680
+  aliases:
+    - rs165688
+    - rs1131157
+    - rs2070104
+    - rs3177905
+    - rs3190784
+    - rs3747070
+    - rs11544671
+    - rs17295216
+    - rs17349704
+    - rs17818178
+    - rs17849308
+    - rs17850006
+    - rs58002978
+coordinates:
+  grch37:
+    chrom: "22"
+    pos: 19951271
+  grch38:
+    chrom: "22"
+    pos: 19963748
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+  observed_alts:
+    - A
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs4680
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4680
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4680
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: ClinPGx / PharmGKB variant summary annotations PA166156024 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166156024/summaryAnnotation
+      fields:
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: comt_pgx_rs4680_pgx_sidecar
+    include: rs4680-pgx.yaml
+    binding:
+      source: variant
+      variant: rs4680.yaml
+      key: alt
+      operator: equals
+      value: A
+      description: Loads this sidecar when the participant carries the expected PGx-significant rs4680 alt allele A.
+    notes: Detailed ClinPGx/PharmGKB summary findings are stored in the sidecar file.

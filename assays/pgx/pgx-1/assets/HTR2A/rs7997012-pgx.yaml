@@ -1,0 +1,501 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs7997012.yaml
+gene: HTR2A
+rsid: rs7997012
+variant_pa_id: PA166154726
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154726/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385613
+    label: rs7997012 / olanzapine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - HTR2A
+    variant: rs7997012
+    drugs:
+      - name: olanzapine
+        pharmgkb_id: PA450688
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385613"
+      url: https://www.clinpgx.org/summaryAnnotation/655385613
+    notes: rs7997012 (HTR2A); olanzapine (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655385613_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and psychiatric disorders who are treated with olanzapine may have an increased risk
+          for more side effects as compared to patients with the AG and GG genotype. Other genetic and clinical factors may also
+          influence a patient's risk for side effects with olanzapine treatment.
+      - id: clinpgx_summary_655385613_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and psychiatric disorders who are treated with olanzapine may have a decreased, but
+          not absent, risk for more side effects as compared to patients with the AA genotype. Other genetic and clinical factors
+          may also influence a patient's risk for side effects with olanzapine treatment.
+      - id: clinpgx_summary_655385613_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and psychiatric disorders who are treated with olanzapine may have a decreased, but
+          not absent, risk for more side effects as compared to patients with the AA genotype. Other genetic and clinical factors
+          may also influence a patient's risk for side effects with olanzapine treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452050105
+    label: rs7997012 / escitalopram / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - HTR2A
+    variant: rs7997012
+    drugs:
+      - name: escitalopram
+        pharmgkb_id: PA10074
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452050105"
+      url: https://www.clinpgx.org/summaryAnnotation/1452050105
+    notes: rs7997012 (HTR2A); escitalopram; Depressive Disorder, Major (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452050105_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 AA genotype and response to
+          escitalopram. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          response to escitalopram.
+      - id: clinpgx_summary_1452050105_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 AG genotype and response to
+          escitalopram. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          response to escitalopram.
+      - id: clinpgx_summary_1452050105_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 GG genotype and response to
+          escitalopram. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          response to escitalopram.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452050600
+    label: rs7997012 / paroxetine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - HTR2A
+    variant: rs7997012
+    drugs:
+      - name: paroxetine
+        pharmgkb_id: PA450801
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452050600"
+      url: https://www.clinpgx.org/summaryAnnotation/1452050600
+    notes: rs7997012 (HTR2A); paroxetine; Depressive Disorder, Major (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452050600_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 AA genotype and response to
+          paroxetine. Other genetic and clinical factors may also influence response to paroxetine.
+      - id: clinpgx_summary_1452050600_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 AG genotype and response to
+          paroxetine. Other genetic and clinical factors may also influence response to paroxetine.
+      - id: clinpgx_summary_1452050600_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 GG genotype and response to
+          paroxetine. Other genetic and clinical factors may also influence response to paroxetine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_637880425
+    label: rs7997012 / citalopram / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - HTR2A
+    variant: rs7997012
+    drugs:
+      - name: citalopram
+        pharmgkb_id: PA449015
+    phenotypes:
+      - Depression
+      - Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "637880425"
+      url: https://www.clinpgx.org/summaryAnnotation/637880425
+    notes: rs7997012 (HTR2A); citalopram; Depression and Depressive Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_637880425_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs7997012 AA genotype and depression who are treated with citalopram may be more likely to have
+          improvement in symptoms as compared to patients with the GG genotype. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence response to citalopram.
+      - id: clinpgx_summary_637880425_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs7997012 AG genotype and depression who are treated with citalopram may be more likely to have
+          improvement in symptoms as compared to patients with the GG genotype. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence response to citalopram.
+      - id: clinpgx_summary_637880425_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs7997012 GG genotype and depression who are treated with citalopram may be less likely to have
+          improvement in symptoms as compared to patients with the AA or AG genotypes. However, conflicting evidence has been
+          reported. Other genetic and clinical factors may also influence response to citalopram.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452050620
+    label: rs7997012 / sertraline / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - HTR2A
+    variant: rs7997012
+    drugs:
+      - name: sertraline
+        pharmgkb_id: PA451333
+    phenotypes:
+      - Anxiety Disorders
+      - Depression
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452050620"
+      url: https://www.clinpgx.org/summaryAnnotation/1452050620
+    notes: rs7997012 (HTR2A); sertraline; Anxiety Disorders and Depression (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452050620_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 AA genotype and response to
+          sertraline. Other genetic and clinical factors may also influence response to sertraline.
+      - id: clinpgx_summary_1452050620_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 AG genotype and response to
+          sertraline. Other genetic and clinical factors may also influence response to sertraline.
+      - id: clinpgx_summary_1452050620_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no association between the rs7997012 GG genotype and response to
+          sertraline. Other genetic and clinical factors may also influence response to sertraline.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452050120
+    label: rs7997012 / fluoxetine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - HTR2A
+    variant: rs7997012
+    drugs:
+      - name: fluoxetine
+        pharmgkb_id: PA449673
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452050120"
+      url: https://www.clinpgx.org/summaryAnnotation/1452050120
+    notes: rs7997012 (HTR2A); fluoxetine; Depressive Disorder, Major (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452050120_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs7997012 AA genotype may have decreased clinical benefit to fluoxetine as compared to patients
+          with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          response to fluoxetine.
+      - id: clinpgx_summary_1452050120_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs7997012 AG genotype may have decreased clinical benefit to fluoxetine as compared to patients
+          with the GG genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          response to fluoxetine.
+      - id: clinpgx_summary_1452050120_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs7997012 GG genotype may have increased clinical benefit to fluoxetine as compared to patients
+          with the AA or AG genotypes. However, conflicting evidence has been reported. Other genetic and clinical factors may
+          also influence response to fluoxetine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451416434
+    label: rs7997012 / antidepressants / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - HTR2A
+    variant: rs7997012
+    drugs:
+      - name: antidepressants
+        pharmgkb_id: PA452229
+    phenotypes:
+      - Bipolar Disorder
+      - Depression
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451416434"
+      url: https://www.clinpgx.org/summaryAnnotation/1451416434
+    notes: rs7997012 (HTR2A); antidepressants; Bipolar Disorder, Depression and Depressive Disorder, Major (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451416434_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs7997012 AA genotype may have a decreased response to antidepressants as compared to patients
+          with the AG or GG genotypes. However, conflicting evidence has been reported. Other genetic and clinical factors may
+          also influence response to antidepressants.
+      - id: clinpgx_summary_1451416434_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs7997012 AG genotype may have and increased response to antidepressants as compared to patients
+          with the AA genotype but a decreased response as compared to patients with the GG genotype. However, conflicting evidence
+          has been reported. Other genetic and clinical factors may also influence response to antidepressants.
+      - id: clinpgx_summary_1451416434_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs7997012 GG genotype may have an increased response to antidepressants as compared to patients
+          with the AA or AG genotypes. However, conflicting evidence has been reported. Other genetic and clinical factors may
+          also influence response to antidepressants.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_982038273
+    label: rs7997012 / venlafaxine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - HTR2A
+    variant: rs7997012
+    drugs:
+      - name: venlafaxine
+        pharmgkb_id: PA451866
+    phenotypes:
+      - Anxiety Disorders
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "982038273"
+      url: https://www.clinpgx.org/summaryAnnotation/982038273
+    notes: rs7997012 (HTR2A); venlafaxine; Anxiety Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_982038273_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be less likely to respond to venlafaxine as compared to patients with the GA or
+          GG genotype. Other genetic and clinical factors may also influence a patient's response to venlafaxine.
+      - id: clinpgx_summary_982038273_ga
+        label: GA
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GA.
+        text:
+          Patients with the GA genotype may be more likely to respond to venlafaxine as compared to patients with the AA genotype.
+          Other genetic and clinical factors may also influence a patient's response to venlafaxine.
+      - id: clinpgx_summary_982038273_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs7997012.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be more likely to respond to venlafaxine as compared to patients with the AA genotype.
+          Other genetic and clinical factors may also influence a patient's response to venlafaxine.

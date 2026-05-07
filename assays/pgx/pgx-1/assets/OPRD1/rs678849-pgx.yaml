@@ -1,0 +1,259 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs678849.yaml
+gene: OPRD1
+rsid: rs678849
+variant_pa_id: PA166175994
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166175994/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450822690
+    label: rs678849 / cocaine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRD1
+    variant: rs678849
+    drugs:
+      - name: cocaine
+        pharmgkb_id: PA449072
+    phenotypes:
+      - Cocaine dependence
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450822690"
+      url: https://www.clinpgx.org/summaryAnnotation/1450822690
+    notes: rs678849 (OPRD1); cocaine; Cocaine-Related Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450822690_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may be at an increased risk of developing cocaine dependence as compared to patients
+          with the CT or TT genotypes. This association was only seen in African American participants. Other genetic or clinical
+          factors may also affect a patient's risk of developing cocaine dependence.
+      - id: clinpgx_summary_1450822690_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may be at a decreased risk of developing cocaine dependence as compared to patients
+          with the CC genotype. This association was only seen in African American participants. Other genetic or clinical factors
+          may also affect a patient's risk of developing cocaine dependence.
+      - id: clinpgx_summary_1450822690_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may be at a decreased risk of developing cocaine dependence as compared to patients
+          with the CC genotype. This association was only seen in African American participants. Other genetic or clinical factors
+          may also affect a patient's risk of developing cocaine dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449157278
+    label: rs678849 / buprenorphine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRD1
+    variant: rs678849
+    drugs:
+      - name: buprenorphine
+        pharmgkb_id: PA448685
+    phenotypes:
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449157278"
+      url: https://www.clinpgx.org/summaryAnnotation/1449157278
+    notes: rs678849 (OPRD1); buprenorphine; Opioid-Related Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449157278_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the rs678849 CC genotype may have a decreased response to buprenorphine when being treated for opioid
+          dependence, as compared to patients with the CT or TT genotype. However, conflicting evidence has been reported. Other
+          genetic and clinical factors may also influence response to buprenorphine.
+      - id: clinpgx_summary_1449157278_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the rs678849 CT genotype may have an increased response to buprenorphine when being treated for opioid
+          dependence, as compared to patients with the CC genotype. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence response to buprenorphine.
+      - id: clinpgx_summary_1449157278_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs678849 TT genotype may have an increased response to buprenorphine when being treated for opioid
+          dependence, as compared to patients with the CC genotype. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence response to buprenorphine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449157284
+    label: rs678849 / methadone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRD1
+    variant: rs678849
+    drugs:
+      - name: methadone
+        pharmgkb_id: PA450401
+    phenotypes:
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449157284"
+      url: https://www.clinpgx.org/summaryAnnotation/1449157284
+    notes: rs678849 (OPRD1); methadone; Opioid-Related Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449157284_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          African-American patients with the CC genotype may have an increased response to methadone when being treated for
+          opioid dependence, as compared to patients with the CT or TT genotypes. This association was not seen in European-American
+          patients. Response to methadone treatment was measured by the number of opioid-positive drug screens during treatment.
+          Other genetic and clinical factors may also affect a patient's response to methadone.
+      - id: clinpgx_summary_1449157284_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          African-American patients with the CT genotype may have a decreased response to methadone when being treated for
+          opioid dependence, as compared to patients with the CC genotype. This association was not seen in European-American
+          patients. Response to methadone treatment was measured by the number of opioid-positive drug screens during treatment.
+          Other genetic and clinical factors may also affect a patient's response to methadone.
+      - id: clinpgx_summary_1449157284_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          African-American patients with the TT genotype may have a decreased response to methadone when being treated for
+          opioid dependence, as compared to patients with the CC genotype. This association was not seen in European-American
+          patients. Response to methadone treatment was measured by the number of opioid-positive drug screens during treatment.
+          Other genetic and clinical factors may also affect a patient's response to methadone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451635460
+    label: rs678849 / disulfiram / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRD1
+    variant: rs678849
+    drugs:
+      - name: disulfiram
+        pharmgkb_id: PA449376
+    phenotypes:
+      - Cocaine dependence
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451635460"
+      url: https://www.clinpgx.org/summaryAnnotation/1451635460
+    notes: rs678849 (OPRD1); disulfiram; Cocaine-Related Disorders (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451635460_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with cocaine dependence and the rs678849 CC genotype may have an increased response to disulfiram as compared
+          to patients with the CT or TT genotypes. Other genetic and clinical factors may also influence response to disulfiram.
+      - id: clinpgx_summary_1451635460_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with cocaine dependence and the rs678849 CT genotype may have a decreased response to disulfiram as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also influence response to disulfiram.
+      - id: clinpgx_summary_1451635460_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs678849.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with cocaine dependence and the rs678849 TT genotype may have a decreased response to disulfiram as compared
+          to patients with the CC genotype. Other genetic and clinical factors may also influence response to disulfiram.

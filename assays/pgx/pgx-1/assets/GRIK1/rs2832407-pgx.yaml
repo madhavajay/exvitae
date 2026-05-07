@@ -1,0 +1,74 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs2832407.yaml
+gene: GRIK1
+rsid: rs2832407
+variant_pa_id: PA166156001
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156001/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444666308
+    label: rs2832407 / topiramate / Efficacy, Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - GRIK1
+    variant: rs2832407
+    drugs:
+      - name: topiramate
+        pharmgkb_id: PA451728
+    phenotypes:
+      - Alcohol-Related Disorders
+    phenotype_categories:
+      - Efficacy
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444666308"
+      url: https://www.clinpgx.org/summaryAnnotation/1444666308
+    notes: rs2832407 (GRIK1); topiramate; Alcohol-Related Disorders (level 3 Efficacy, Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1444666308_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs2832407.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and who are heavy drinkers or have an alcohol-use disorder may have higher concentrations
+          of topiramate, and a poorer response to treatment with the drug, as compared to patients with the CC genotype. Other
+          genetic and clinical factors may also influence response or concentrations of topiramate.
+      - id: clinpgx_summary_1444666308_ac
+        label: AC
+        binding:
+          source: variant
+          variant: rs2832407.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AC.
+        text:
+          Patients with the AC genotype and who are heavy drinkers or have an alcohol-use disorder may have higher concentrations
+          of topiramate, and a poorer response to treatment with the drug, as compared to patients with the CC genotype. Other
+          genetic and clinical factors may also influence response or concentrations of topiramate.
+      - id: clinpgx_summary_1444666308_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs2832407.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and who are heavy drinkers or have an alcohol-use disorder may have lower concentrations
+          of topiramate, and a better response to treatment with the drug, as compared to patients with the AA or AC genotype.
+          Other genetic and clinical factors may also influence response or concentrations of topiramate.

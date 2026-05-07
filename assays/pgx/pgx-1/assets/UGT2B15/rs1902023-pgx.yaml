@@ -1,0 +1,188 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1902023.yaml
+gene: UGT2B15
+rsid: rs1902023
+variant_pa_id: PA166156530
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156530/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826374
+    label: rs1902023 / lorazepam / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - UGT2B15
+    variant: rs1902023
+    drugs:
+      - name: lorazepam
+        pharmgkb_id: PA450267
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826374"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826374
+    notes: rs1902023 (UGT2B15); lorazepam (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1450826374_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Subjects with the AA genotype may have decreased clearance of lorazepam as compared to subjects with the CC genotype.
+          Other genetic and clinical factors may also influence the metabolism of lorazepam.
+      - id: clinpgx_summary_1450826374_ac
+        label: AC
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AC.
+        text:
+          Subjects with the AC genotype may have decreased clearance of lorazepam as compared to subjects with the CC genotype,
+          or increased clearance as compared to subjects with the AA genotype. Other genetic and clinical factors may also influence
+          the metabolism of lorazepam.
+      - id: clinpgx_summary_1450826374_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Subjects with the CC genotype may have increased clearance of lorazepam as compared to subjects with the AA genotype.
+          Other genetic and clinical factors may also influence the metabolism of lorazepam.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450374101
+    label: rs1902023 / acetaminophen / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - UGT2B15
+    variant: rs1902023
+    drugs:
+      - name: acetaminophen
+        pharmgkb_id: PA448015
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450374101"
+      url: https://www.clinpgx.org/summaryAnnotation/1450374101
+    notes: rs1902023 (UGT2B15); acetaminophen; Pain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450374101_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have an increased response to acetaminophen (paracetamol) as compared to patients
+          with the AC or CC genotypes. Other genetic and clinical factors may also affect a patient's response to acetaminophen.
+      - id: clinpgx_summary_1450374101_ac
+        label: AC
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AC.
+        text:
+          Patients with the AC genotype may have a decreased response to acetaminophen (paracetamol) as compared to patients
+          with the AA genotype. Other genetic and clinical factors may also affect a patient's response to acetaminophen.
+      - id: clinpgx_summary_1450374101_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have a decreased response to acetaminophen (paracetamol) as compared to patients
+          with the AA genotype. Other genetic and clinical factors may also affect a patient's response to acetaminophen.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655387798
+    label: rs1902023 / oxazepam / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - UGT2B15
+    variant: rs1902023
+    drugs:
+      - name: oxazepam
+        pharmgkb_id: PA450731
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655387798"
+      url: https://www.clinpgx.org/summaryAnnotation/655387798
+    notes: rs1902023 (UGT2B15); oxazepam (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_655387798_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Subjects with the AA genotype may have decreased clearance or glucuronidation of oxazepam as compared to subjects
+          with the CC genotype. Other genetic and clinical factors may also influence the metabolism of oxazepam.
+      - id: clinpgx_summary_655387798_ac
+        label: AC
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AC.
+        text:
+          Subjects with the AC genotype may have decreased clearance or glucuronidation of oxazepam as compared to subjects
+          with the CC genotype, or increased clearance or glucuronidation as compared to subjects with the AA genotype. Other
+          genetic and clinical factors may also influence the metabolism of oxazepam.
+      - id: clinpgx_summary_655387798_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1902023.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Subjects with the CC genotype may have increased clearance or glucuronidation of oxazepam as compared to subjects
+          with the AA genotype. Other genetic and clinical factors may also influence the metabolism of oxazepam.

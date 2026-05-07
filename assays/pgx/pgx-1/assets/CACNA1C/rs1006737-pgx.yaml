@@ -1,0 +1,74 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1006737.yaml
+gene: CACNA1C
+rsid: rs1006737
+variant_pa_id: PA166154507
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154507/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444704763
+    label: rs1006737 / citalopram / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - CACNA1C
+    variant: rs1006737
+    drugs:
+      - name: citalopram
+        pharmgkb_id: PA449015
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444704763"
+      url: https://www.clinpgx.org/summaryAnnotation/1444704763
+    notes: rs1006737 (CACNA1C); citalopram; Depressive Disorder, Major (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1444704763_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1006737.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and major depression may have increased risk for suicide when treated with citalopram
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's response
+          citalopram.
+      - id: clinpgx_summary_1444704763_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1006737.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and major depression may have increased risk for suicide when treated with citalopram
+          as compared to patients with the GG genotype or may have decreased, but not absent, risk for suicide when treated with
+          citalopram as compared to patients with the AA genotype. Other genetic and clinical factors may also influence a patient's
+          response citalopram.
+      - id: clinpgx_summary_1444704763_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1006737.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and major depression may have decreased, but not absent, risk for suicide when treated
+          with citalopram as compared to patients with the AA genotype. Other genetic and clinical factors may also influence
+          a patient's response citalopram.

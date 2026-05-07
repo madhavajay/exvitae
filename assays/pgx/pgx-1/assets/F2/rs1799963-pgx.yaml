@@ -1,0 +1,351 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1799963.yaml
+gene: F2
+rsid: rs1799963
+variant_pa_id: PA166154336
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154336/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166154336/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166127695
+    label: Annotation of HCSC Label for ethinyl estradiol / norelgestromin and F2, F5, MTHFR, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - MTHFR
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs1799963
+    drugs:
+      - name: ethinyl estradiol
+        pharmgkb_id: PA165290929
+      - name: norelgestromin
+        pharmgkb_id: PA165290929
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166127695
+      url: https://www.clinpgx.org/labelAnnotation/PA166127695
+    notes: Annotation of HCSC Label for ethinyl estradiol / norelgestromin and F2, F5, MTHFR, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The product monograph for norelgestromin and ethinyl estradiol (EVRA) states that the drug is contraindicated in
+      women with Factor V Leiden mutation, antithrombin III deficiency, protein C deficiency, protein S deficiency, hyperhomocysteinemia
+      due to mutations in the MTHFR gene and prothrombin mutation G20210A (among other contraindications), due to the risk for
+      arterial or venous thrombosis.
+    prescribing_information: |-
+      Excerpt from the product monograph:
+      Contraindications. The EVRA(R) (norelgestromin and ethinyl estradiol) transdermal system should not be used in women with: presence of severe or multiple risk factor(s) for arterial or venous thrombosis such as:
+      hereditary or acquired predisposition for venous or arterial thrombosis, such as Factor V Leiden mutation and activated protein C (APC-) resistance, antithrombin-III-deficiency, protein C deficiency, protein S deficiency, hyperhomocysteinemia (e.g., due to MTHFR C677T, A1298 mutations), prothrombin mutation G20210A, and antiphospholipid antibodies (anticardiolipin antibodies, lupus anticoagulant)
+    prescribing_actions:
+      - Alternate Drug
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153643
+        symbol: rs1801131
+        name: rs1801131
+      - id: PA166153644
+        symbol: rs1801133
+        name: rs1801133
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166179855
+    label: Annotation of FDA Label for avatrombopag and F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs1799963
+    drugs:
+      - name: avatrombopag
+        pharmgkb_id: PA166179849
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166179855
+      url: https://www.clinpgx.org/labelAnnotation/PA166179855
+    notes: Annotation of FDA Label for avatrombopag and F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The FDA-approved drug label for avatrombopag (DOPTELET) states that the risk for thrombosis should be considered
+      in patients with risk factors for thromboembolism, including genetic prothrombotic conditions such as Factor V Leiden
+      (F5), Prothrombin 20210A (F2), Antithrombin deficiency (SERPINC1) or Protein C (PROC) or S (PROS1) deficiency.
+    prescribing_information:
+      Consider the potential increased thrombotic risk when administering DOPTELET to patients with known
+      risk factors for thromboembolism, including genetic prothrombotic conditions (e.g., Factor V Leiden, Prothrombin 20210A,
+      Antithrombin deficiency or Protein C or S deficiency).
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Avatrombopag_2024_07_11_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166182749
+    label: Annotation of FDA Label for lusutrombopag and F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs1799963
+    drugs:
+      - name: lusutrombopag
+        pharmgkb_id: PA166182748
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166182749
+      url: https://www.clinpgx.org/labelAnnotation/PA166182749
+    notes: Annotation of FDA Label for lusutrombopag and F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The FDA-approved drug label for lusutrombopag (MULPLETA) states that the potential increased risk for thrombosis
+      should be considered in patients with risk factors for thromboembolism, including genetic prothrombotic conditions such
+      as Factor V Leiden (F5), Prothrombin 20210A (F2), Antithrombin deficiency (SERPINC1) or Protein C (PROC) or S (PROS1)
+      deficiency.
+    prescribing_information:
+      Consider the potential increased thrombotic risk when administering MULPLETA to patients with known
+      risk factors for thromboembolism, including genetic pro-thrombotic conditions (Factor V Leiden, Prothrombin 20210A, Antithrombin
+      deficiency, or Protein C or S deficiency).
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/lusutrombopag_05_14_2019_FDA.pdf
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166240301
+    label: Annotation of EMA Label for avatrombopag and CYP2C9, F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - CYP2C9
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs1799963
+    drugs:
+      - name: avatrombopag
+        pharmgkb_id: PA166179849
+    regulatory_sources:
+      - EMA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166240301
+      url: https://www.clinpgx.org/labelAnnotation/PA166240301
+    notes: Annotation of EMA Label for avatrombopag and CYP2C9, F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The EMA European Public Assessment Report (EPAR) for avatrombopag (Doptelet) states that avatrombopag exposure
+      may increase in patients with CYP2C9*2 and/or CYP2C9*3 alleles, and that increased exposure may increase the risk of clinically-relevant
+      QTc prolongation. The label also states that potential increased thrombotic risk should be considered in patients with
+      deficiency in Factor V Leiden ( F5 ), prothrombin 20210A ( F2 ), antithrombin ( SERPINC1 ), protein C ( PROC ), or protein
+      S ( PROS1 ).
+    prescribing_information: |-
+      Caution must also be exercised in patients with loss-of-function polymorphisms of CYP2C9, as these can increase avatrombopag exposure.
+      Consider the potential increased thrombotic risk when administering Doptelet to patients with known risk factors for thromboembolism, including but not limited to genetic prothrombotic conditions (e.g. Factor V Leiden, Prothrombin 20210A, Antithrombin deficiency or Protein C or S deficiency), [...]
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA165816543
+        symbol: CYP2C9*2
+        name: "*2"
+      - id: PA165816544
+        symbol: CYP2C9*3
+        name: "*3"
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166343901
+    label: Annotation of HCSC Label for avatrombopag and CYP2C9, F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - CYP2C9
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs1799963
+    drugs:
+      - name: avatrombopag
+        pharmgkb_id: PA166179849
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166343901
+      url: https://www.clinpgx.org/labelAnnotation/PA166343901
+    notes: Annotation of HCSC Label for avatrombopag and CYP2C9, F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The HCSC-approved product monograph for avatrombopag (DOPTELET) states that avatrombopag exposure may increase
+      in patients with CYP2C9*2 and/or CYP2C9*3 alleles, and that increased exposure may increase the risk of clinically-relevant
+      QTc prolongation. The label also states that potential increased thrombotic risk should be considered in patients with
+      deficiency in Factor V Leiden (F5), prothrombin 20210A (F2), antithrombin (SERPINC1), protein C (PROC), or protein S (PROS1).
+    prescribing_information: |-
+      Caution must also be exercised in patients with loss-of-function polymorphisms of CYP2C9, as these can increase avatrombopag exposure.
+      Consider the potential increased thrombotic risk when administering DOPTELET to patients with known risk factors for thromboembolism, including but not limited to [...] genetic prothrombotic conditions (e.g., Factor V Leiden, Prothrombin 20210A, Antithrombin deficiency or Protein C or S deficiency).
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA165816543
+        symbol: CYP2C9*2
+        name: "*2"
+      - id: PA165816544
+        symbol: CYP2C9*3
+        name: "*3"
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166357881
+    label: Annotation of EMA Label for lusutrombopag and F2, F5, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs1799963
+    drugs:
+      - name: lusutrombopag
+        pharmgkb_id: PA166182748
+    regulatory_sources:
+      - EMA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166357881
+      url: https://www.clinpgx.org/labelAnnotation/PA166357881
+    notes: Annotation of EMA Label for lusutrombopag and F2, F5, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary: |-
+      The EMA-approved EPAR for lusutrombopag (Mulpleo) states that patients with congenital coagulopathy the risk for thrombosis or thromboembolism may increase. These patients should be clinically monitored when treated with lusutrombopag.
+      Although the EPAR does not mention specific genes, genetic prothrombotic conditions include Factor V Leiden (F5), Prothrombin 20210A (F2), Antithrombin deficiency (SERPINC1) or Protein C (PROC) or S (PROS1) deficiency.
+    prescribing_information:
+      In patients with thrombosis or thromboembolism, with a history of thrombosis or thromboembolism,
+      with absence of hepatopetal blood flow in the main trunk of the portal vein, or patients with congenital coagulopathy
+      the risk for thrombosis or thromboembolism may increase. These patients should be clinically monitored when treated with
+      lusutrombopag.
+    prescribing_actions:
+      - Other Guidance
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153554
+        symbol: rs6025
+        name: rs6025
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444672766
+    label: rs1799963 / hormonal contraceptives for systemic use / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - F2
+    variant: rs1799963
+    drugs:
+      - name: hormonal contraceptives for systemic use
+        pharmgkb_id: PA452637
+    phenotypes:
+      - Stroke
+      - Venous Thrombosis
+    phenotype_categories:
+      - Toxicity
+    evidence_level: 2B
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444672766"
+      url: https://www.clinpgx.org/summaryAnnotation/1444672766
+    notes: rs1799963 (F2); hormonal contraceptives for systemic use; Stroke and Venous Thrombosis (level 2B Toxicity)
+    effects:
+      - id: clinpgx_summary_1444672766_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799963.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799963 AA genotype who are taking oral contraceptives (OCs) may have an increased risk for
+          deep vein thrombosis (DVT), as compared to patients with the AG or GG genotypes or those who are not taking oral contraceptives.
+          However, conflicting evidence has been reported. Other genetic and clinical factors may also influence risk for DVT
+          in patients taking oral contraceptives.
+      - id: clinpgx_summary_1444672766_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799963.yaml
+          allele: A
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799963 AG genotype who are taking oral contraceptives (OCs) may have an increased risk for
+          deep vein thrombosis (DVT), as compared to patients with the GG genotype or those who are not taking oral contraceptives
+          and a decreased risk of DVT as compared to patients with the AA genotype. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence risk for DVT in patients taking oral contraceptives.
+      - id: clinpgx_summary_1444672766_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799963.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799963 GG genotype who are taking oral contraceptives (OCs) may have a decreased risk for deep
+          vein thrombosis (DVT), as compared to patients with the AA or AG genotypes or those who are not taking oral contraceptives.
+          However, conflicting evidence has been reported. Other genetic and clinical factors may also influence risk for DVT
+          in patients taking oral contraceptives.

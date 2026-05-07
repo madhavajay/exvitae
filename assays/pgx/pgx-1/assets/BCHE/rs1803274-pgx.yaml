@@ -1,0 +1,266 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1803274.yaml
+gene: BCHE
+rsid: rs1803274
+variant_pa_id: PA166156332
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156332/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184513880
+    label: rs1803274 / succinylcholine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - BCHE
+    variant: rs1803274
+    drugs:
+      - name: succinylcholine
+        pharmgkb_id: PA451522
+    phenotypes:
+      - Butyrylcholinesterase deficiency
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184513880"
+      url: https://www.clinpgx.org/summaryAnnotation/1184513880
+    notes: rs1803274 (BCHE); succinylcholine; postanesthesia apnea (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1184513880_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype have a decreased risk of post anesthesia apnea when treated with succinylcholine as
+          compared to patients with the TT genotype. Other genetic and clinical factors may also influence risk of post anesthesia
+          apnea.
+      - id: clinpgx_summary_1184513880_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype have a decreased risk of post anesthesia apnea when treated with succinylcholine as
+          compared to patients with the TT genotype and an increased risk of post anesthesia apnea as compared to patients with
+          the CC genotype. Other genetic and clinical factors may also influence risk of post anesthesia apnea.
+      - id: clinpgx_summary_1184513880_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype have an increased risk of post anesthesia apnea when treated with succinylcholine
+          as compared to patients with the CC genotype. Other genetic and clinical factors may also influence risk of post anesthesia
+          apnea.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449564963
+    label: rs1803274 / donepezil / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - BCHE
+    variant: rs1803274
+    drugs:
+      - name: donepezil
+        pharmgkb_id: PA449394
+    phenotypes:
+      - Alzheimer Disease
+      - Cognitive disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449564963"
+      url: https://www.clinpgx.org/summaryAnnotation/1449564963
+    notes: rs1803274 (BCHE); donepezil; Alzheimer Disease and cognitive dysfunction (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449564963_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and and Alzheimer Disease may have an improved response to donepezil (slower cognitive
+          decline) as compared to patients with the CT and TT genotypes, although this is contradicted by another study which
+          showed the opposite, and another which showed no association between genotype and response to donepezil in patients
+          with Alzheimer Disease. Other clinical and genetic factors may also influence response to donepezil in patients with
+          Alzheimer Disease.
+      - id: clinpgx_summary_1449564963_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and and Alzheimer Disease may have an improved response to donepezil (slower cognitive
+          decline) as compared to patients with the TT genotypes, and worse response as compared to CC genotype. This is contradicted
+          by another study which showed the opposite, and another which showed no association between genotype and response to
+          donepezil in patients with Alzheimer Disease. Other clinical and genetic factors may also influence response to donepezil
+          in patients with Alzheimer Disease.
+      - id: clinpgx_summary_1449564963_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and and Alzheimer Disease may have a worse response to donepezil (faster cognitive
+          decline) as compared to patients with the CT and CC genotypes, although this is contradicted by another study which
+          showed the opposite, and another which showed no association between genotype and response to donepezil in patients
+          with Alzheimer Disease. Other clinical and genetic factors may also influence response to donepezil in patients with
+          Alzheimer Disease.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448097837
+    label: rs1803274 / cocaine / Other
+    authority_type: evidence_summary
+    genes:
+      - BCHE
+    variant: rs1803274
+    drugs:
+      - name: cocaine
+        pharmgkb_id: PA449072
+    phenotypes:
+      - Cocaine dependence
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448097837"
+      url: https://www.clinpgx.org/summaryAnnotation/1448097837
+    notes: rs1803274 (BCHE); cocaine; Cocaine-Related Disorders (level 3)
+    effects:
+      - id: clinpgx_summary_1448097837_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may be less likely to develop an addiction to crack cocaine as compared to patients
+          with the TT genotype. Other clinical and genetic factors may also be associated with addiction to crack cocaine.
+      - id: clinpgx_summary_1448097837_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may be less likely to develop an addiction to crack cocaine as compared to patients
+          with the TT genotype. Other clinical and genetic factors may also be associated with addiction to crack cocaine.
+      - id: clinpgx_summary_1448097837_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may be more likely to develop an addiction to crack cocaine as compared to patients
+          with the CC or CT genotype. Other clinical and genetic factors may also be associated with addiction to crack cocaine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447990050
+    label: rs1803274 / rivastigmine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - BCHE
+    variant: rs1803274
+    drugs:
+      - name: rivastigmine
+        pharmgkb_id: PA451262
+    phenotypes:
+      - Alzheimer Disease
+      - Lewy Body Disease
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447990050"
+      url: https://www.clinpgx.org/summaryAnnotation/1447990050
+    notes: rs1803274 (BCHE); rivastigmine; Alzheimer Disease and Lewy Body Disease (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1447990050_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and Lewy Body disease or Alzheimer's disease may have an improved response to rivastigmine
+          as compared to patients with the TT genotype, and as compared to patients with the CT genotype, although some studies
+          show contradictory results. Other clinical and genetic factors may also influence response to rivastigmine in patients
+          with Lewy Body disease or Alzheimer's disease.
+      - id: clinpgx_summary_1447990050_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and Lewy Body disease or Alzheimer's disease may have an improved response to rivastigmine
+          as compared to patients with the TT genotype, although some studies show contradictory results. Other clinical and genetic
+          factors may also influence response to rivastigmine in patients with Lewy Body disease or Alzheimer's disease.
+      - id: clinpgx_summary_1447990050_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1803274.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and Lewy Body disease or Alzheimer's disease may have worse response to rivastigmine
+          as compared to patients with the CC genotype, as well as the CT genotype, although some studies show contradictory results.
+          Other clinical and genetic factors may also influence response to rivastigmine in patients with Lewy Body disease or
+          Alzheimer's disease.

@@ -1,0 +1,256 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1799978.yaml
+gene: DRD2
+rsid: rs1799978
+variant_pa_id: PA166154337
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166154337/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655387652
+    label: rs1799978 / risperidone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - DRD2
+    variant: rs1799978
+    drugs:
+      - name: risperidone
+        pharmgkb_id: PA451257
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655387652"
+      url: https://www.clinpgx.org/summaryAnnotation/655387652
+    notes: rs1799978 (DRD2); risperidone; Schizophrenia (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_655387652_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and schizophrenia who are treated with risperidone may be less likely to have improvement
+          in symptoms as compared to patients with the CT or TT genotype. However, conflicting evidence has been reported. Other
+          genetic and clinical factors may also influence a patient's response to risperidone.
+      - id: clinpgx_summary_655387652_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and schizophrenia who are treated with risperidone may be less likely to have an improvement
+          in symptoms compared to TT carriers, and more likely to have improvement in symptoms as compared to patients with the
+          CC genotype. However, conflicting evidence has been reported. Other genetic and clinical factors may also influence
+          a patient's response to risperidone.
+      - id: clinpgx_summary_655387652_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and schizophrenia who are treated with risperidone may be more likely to have improvement
+          in symptoms as compared to patients with the CT or CC genotype. However, conflicting evidence has been reported. Other
+          genetic and clinical factors may also influence a patient's response to risperidone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447980677
+    label: rs1799978 / methadone / Dosage
+    authority_type: evidence_summary
+    genes:
+      - DRD2
+    variant: rs1799978
+    drugs:
+      - name: methadone
+        pharmgkb_id: PA450401
+    phenotypes:
+      - Heroin Dependence
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447980677"
+      url: https://www.clinpgx.org/summaryAnnotation/1447980677
+    notes: rs1799978 (DRD2); methadone; Heroin Dependence (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1447980677_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype who are heroin dependent may require a decreased dose of methadone as compared to
+          patients with the TT genotype. Other genetic and clinical factors may also influence methadone dose.
+      - id: clinpgx_summary_1447980677_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype who are heroin dependent may require a decreased dose of methadone as compared to
+          patients with the TT genotype, or an increased dose as compared to patients with the CC genotype. Other genetic and
+          clinical factors may also influence methadone dose.
+      - id: clinpgx_summary_1447980677_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype who are heroin dependent may require an increased dose of methadone as compared to
+          patients with the CC genotype. Other genetic and clinical factors may also influence methadone dose.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444703131
+    label: rs1799978 / olanzapine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - DRD2
+    variant: rs1799978
+    drugs:
+      - name: olanzapine
+        pharmgkb_id: PA450688
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444703131"
+      url: https://www.clinpgx.org/summaryAnnotation/1444703131
+    notes: rs1799978 (DRD2); olanzapine; Schizophrenia (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444703131_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and schizophrenia who are treated with olanzapine may have decreased time until response
+          as compared to patients with the TT genotype. Other genetic and clinical factors may also influence a patient's response
+          to olanzapine.
+      - id: clinpgx_summary_1444703131_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and schizophrenia who are treated with olanzapine may have decreased time until response
+          as compared to patients with the TT genotype. Other genetic and clinical factors may also influence a patient's response
+          to olanzapine.
+      - id: clinpgx_summary_1444703131_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and schizophrenia who are treated with olanzapine may have increased time until response
+          as compared to patients with the CC or CT genotype. Other genetic and clinical factors may also influence a patient's
+          response to olanzapine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655387672
+    label: rs1799978 / risperidone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - DRD2
+    variant: rs1799978
+    drugs:
+      - name: risperidone
+        pharmgkb_id: PA451257
+    phenotypes:
+      - Hyperprolactinemia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655387672"
+      url: https://www.clinpgx.org/summaryAnnotation/655387672
+    notes: rs1799978 (DRD2); risperidone; Hyperprolactinemia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655387672_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may have increased risk of hyperprolactinemia when treated with risperidone as compared
+          to patients with the TT genotype. Other genetic and clinical factors may also influence a patient's risk for hyperprolactinemia.
+      - id: clinpgx_summary_655387672_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may have increased risk of hyperprolactinemia when treated with risperidone as compared
+          to patients with the TT genotype. Other genetic and clinical factors may also influence a patient's risk for hyperprolactinemia.
+      - id: clinpgx_summary_655387672_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1799978.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have decreased but not absent, risk of hyperprolactinemia when treated with risperidone
+          as compared to patients with the CT or CC genotype.  Other genetic and clinical factors may also influence a patient's
+          risk for hyperprolactinemia.

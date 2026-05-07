@@ -1,0 +1,221 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1360780.yaml
+gene: FKBP5
+rsid: rs1360780
+variant_pa_id: PA166156983
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156983/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655384568
+    label: rs1360780 / antidepressants, citalopram, clomipramine, lithium, nefazodone, paroxetine, venlafaxine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - FKBP5
+    variant: rs1360780
+    drugs:
+      - name: antidepressants
+        pharmgkb_id: PA452229
+      - name: citalopram
+        pharmgkb_id: PA449015
+      - name: clomipramine
+        pharmgkb_id: PA449048
+      - name: lithium
+        pharmgkb_id: PA450243
+      - name: nefazodone
+        pharmgkb_id: PA450603
+      - name: paroxetine
+        pharmgkb_id: PA450801
+      - name: venlafaxine
+        pharmgkb_id: PA451866
+    phenotypes:
+      - Depression
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655384568"
+      url: https://www.clinpgx.org/summaryAnnotation/655384568
+    notes:
+      rs1360780 (FKBP5); antidepressants, citalopram, clomipramine, lithium, nefazodone, paroxetine or venlafaxine; Depression
+      (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_655384568_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype may 1) have decreased response to antidepressants 2) have decreased, but not absent,
+          risk for suicide ideation with paroxetine, venlafaxine, clomipramine, lithium, liothyronine or nefazodone as compared
+          to patients with the CT or TT genotype. However, contradictory findings regarding an association of the opposite allele
+          or no association with response have been reported. Other genetic and clinical factors may also influence a patient's
+          response to antidepressants.
+      - id: clinpgx_summary_655384568_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype may 1) have increased response to antidepressants 2) have increased risk for suicide
+          ideation with paroxetine, venlafaxine, clomipramine, lithium, liothyronine or nefazodone as compared to patients with
+          the CC genotype. However, contradictory findings regarding an association of the opposite allele or no association with
+          response have been reported. Other genetic and clinical factors may also influence a patient's response to antidepressants.
+      - id: clinpgx_summary_655384568_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may 1) have increased response to antidepressants 2) have increased risk for suicide
+          ideation with paroxetine, venlafaxine, clomipramine, lithium, liothyronine or nefazodone as compared to patients with
+          the CC genotype. However, contradictory findings regarding an association of the opposite allele or no association with
+          response have been reported. Other genetic and clinical factors may also influence a patient's response to antidepressants.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444700382
+    label: rs1360780 / clozapine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - FKBP5
+    variant: rs1360780
+    drugs:
+      - name: clozapine
+        pharmgkb_id: PA449061
+    phenotypes:
+      - Schizophrenia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444700382"
+      url: https://www.clinpgx.org/summaryAnnotation/1444700382
+    notes: rs1360780 (FKBP5); clozapine; Schizophrenia (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1444700382_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and Schizophrenia who are treated with clozapine may have an increased response to
+          clozapine as compared to patients with the TT genotype. Other genetic and clinical factors may also influence a patient's
+          response to clozapine.
+      - id: clinpgx_summary_1444700382_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and Schizophrenia who are treated with clozapine may have an increased response to
+          clozapine as compared to patients with the CC genotype. Other genetic and clinical factors may also influence a patient's
+          response to clozapine.
+      - id: clinpgx_summary_1444700382_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and Schizophrenia who are treated with clozapine may have a decreased response to
+          clozapine as compared to patients with the CT or CC genotype. Other genetic and clinical factors may also influence
+          a patient's response to clozapine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981238234
+    label: rs1360780 / clomipramine, nefazodone, paroxetine, venlafaxine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - FKBP5
+    variant: rs1360780
+    drugs:
+      - name: clomipramine
+        pharmgkb_id: PA449048
+      - name: nefazodone
+        pharmgkb_id: PA450603
+      - name: paroxetine
+        pharmgkb_id: PA450801
+      - name: venlafaxine
+        pharmgkb_id: PA451866
+    phenotypes:
+      - Depression
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981238234"
+      url: https://www.clinpgx.org/summaryAnnotation/981238234
+    notes: rs1360780 (FKBP5); clomipramine, nefazodone, paroxetine or venlafaxine; Depression (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_981238234_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype and depression who are treated with paroxetine, venlafaxine, clomipramine or nefazodone
+          have a decreased, but not absent, risk of suicidal ideation as compared to patients with the CT and TT genotype. Other
+          genetic and clinical factors may also influence a patient's response to paroxetine, venlafaxine, clomipramine or nefazodone.
+      - id: clinpgx_summary_981238234_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype and depression who are treated with paroxetine, venlafaxine, clomipramine or nefazodone
+          may have an increased risk of suicidal ideation as compared to patients with the CC genotype. Other genetic and clinical
+          factors may also influence a patient's response to paroxetine, venlafaxine, clomipramine or nefazodone.
+      - id: clinpgx_summary_981238234_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1360780.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and depression who are treated with paroxetine, venlafaxine, clomipramine or nefazodone
+          may have an increased risk of suicidal ideation as compared to patients with the CC genotype. Other genetic and clinical
+          factors may also influence a patient's response to paroxetine, venlafaxine, clomipramine or nefazodone.

@@ -1,0 +1,2696 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1128503.yaml
+gene: ABCB1
+rsid: rs1128503
+variant_pa_id: PA166157288
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166157288/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448427005
+    label: rs1128503 / gefitinib / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: gefitinib
+        pharmgkb_id: PA131301952
+    phenotypes:
+      - Non-Small Cell Lung Carcinoma
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448427005"
+      url: https://www.clinpgx.org/summaryAnnotation/1448427005
+    notes: rs1128503 (ABCB1); gefitinib; Carcinoma, Non-Small-Cell Lung (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1448427005_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and non-small cell lung cancer may have an increased risk for diarrhea and skin rash
+          when treated with gefitinib as compared to patients with the AG or GG genotype. Other genetic and clinical factors may
+          also influence drug toxicity risk in patients receiving gefitinib.
+      - id: clinpgx_summary_1448427005_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and non-small cell lung cancer may have a decreased risk for diarrhea and skin rash
+          when treated with gefitinib as compared to patients with the AA genotype. Other genetic and clinical factors may also
+          influence drug toxicity risk in patients receiving gefitinib.
+      - id: clinpgx_summary_1448427005_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and non-small cell lung cancer may have a decreased risk for diarrhea and skin rash
+          when treated with gefitinib as compared to patients with the AA genotype. Other genetic and clinical factors may also
+          influence drug toxicity risk in patients receiving gefitinib.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447962843
+    label: rs1128503 / simvastatin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: simvastatin
+        pharmgkb_id: PA451363
+    phenotypes:
+      - Hypercholesterolemia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447962843"
+      url: https://www.clinpgx.org/summaryAnnotation/1447962843
+    notes: rs1128503 (ABCB1); simvastatin; Hypercholesterolemia (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1447962843_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and hypercholesterolemia may greater reduction in LDL and total cholesterol when treated
+          with simvastatin as compared to patients with the GG genotype. Other genetic and clinical factors may also influence
+          cholesterol levels.
+      - id: clinpgx_summary_1447962843_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and hypercholesterolemia may greater reduction in LDL and total cholesterol when treated
+          with simvastatin as compared to patients with the GG genotype. Other genetic and clinical factors may also influence
+          cholesterol levels.
+      - id: clinpgx_summary_1447962843_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and hypercholesterolemia may lesser reduction in LDL and total cholesterol when treated
+          with simvastatin as compared to patients with the AA or AG genotype. Other genetic and clinical factors may also influence
+          cholesterol levels.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450811641
+    label: rs1128503 / methadone / Dosage
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: methadone
+        pharmgkb_id: PA450401
+    phenotypes:
+      - Heroin Dependence
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Dosage
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450811641"
+      url: https://www.clinpgx.org/summaryAnnotation/1450811641
+    notes: rs1128503 (ABCB1); methadone; Heroin Dependence and Opioid-Related Disorders (level 4 Dosage)
+    effects:
+      - id: clinpgx_summary_1450811641_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1128503 AA genotype and
+          methadone dose requirements. However, conflicting evidence has been reported. Other genetic and clinical factors may
+          also influence methadone dose requirements.
+      - id: clinpgx_summary_1450811641_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1128503 AG genotype and
+          methadone dose requirements. However, conflicting evidence has been reported. Other genetic and clinical factors may
+          also influence methadone dose requirements.
+      - id: clinpgx_summary_1450811641_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1128503 GG genotype and
+          methadone dose requirements. However, conflicting evidence has been reported. Other genetic and clinical factors may
+          also influence methadone dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448256881
+    label: rs1128503 / platinum compounds / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: platinum compounds
+        pharmgkb_id: PA164713176
+    phenotypes:
+      - Non-Small Cell Lung Carcinoma
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448256881"
+      url: https://www.clinpgx.org/summaryAnnotation/1448256881
+    notes: rs1128503 (ABCB1); Platinum compounds; Carcinoma, Non-Small-Cell Lung (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1448256881_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and non-small cell lung cancer may have increased risk of toxicities when treated
+          with platinum-based chemotherapy compared to patients with the AG and GG genotypes. Other clinical and genetic factors
+          may affect risk of toxicities in response to platinum-based chemotherapies.
+      - id: clinpgx_summary_1448256881_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and non-small cell lung cancer may have reduced risk of toxicities when treated with
+          platinum-based chemotherapy compared to patients with the AA genotype. Other clinical and genetic factors may affect
+          risk of toxicities in response to platinum-based chemotherapies.
+      - id: clinpgx_summary_1448256881_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and non-small cell lung cancer may have reduced risk of toxicities when treated with
+          platinum-based chemotherapy compared to patients with the AA genotype. Other clinical and genetic factors may affect
+          risk of toxicities in response to platinum-based chemotherapies.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981237922
+    label: rs1128503 / phenytoin / Other
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: phenytoin
+        pharmgkb_id: PA450947
+    phenotypes: []
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981237922"
+      url: https://www.clinpgx.org/summaryAnnotation/981237922
+    notes: rs1128503 (ABCB1); phenytoin (level 3)
+    effects:
+      - id: clinpgx_summary_981237922_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who receive phenytoin may have increased plasma drug levels of phenytoin as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's response to phenytoin.
+      - id: clinpgx_summary_981237922_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who receive phenytoin may have increased plasma drug levels of phenytoin as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence a patient's response to phenytoin.
+      - id: clinpgx_summary_981237922_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who receive phenytoin may have decreased plasma drug levels of phenytoin as compared
+          to patients with the AG and AA genotype. Other genetic and clinical factors may also influence a patient's response
+          to phenytoin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447943753
+    label: rs1128503 / modafinil / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: modafinil
+        pharmgkb_id: PA450530
+    phenotypes:
+      - Narcolepsy
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447943753"
+      url: https://www.clinpgx.org/summaryAnnotation/1447943753
+    notes: rs1128503 (ABCB1); modafinil; Narcolepsy (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1447943753_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with AA genotype and narcolepsy may have decreased response to modafinil compared to patients with AG genotype.
+          Other clinical and genetic factors may affect response to modafinil.
+      - id: clinpgx_summary_1447943753_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with AG genotype and narcolepsy may have increased response to modafinil compared to patients with AA or
+          GG genotype. Other clinical and genetic factors may affect response to modafinil.
+      - id: clinpgx_summary_1447943753_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with GG genotype and narcolepsy may have decreased response to modafinil compared to patients with AG genotype.
+          Other clinical and genetic factors may affect response to modafinil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447960874
+    label: rs1128503 / tipifarnib / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: tipifarnib
+        pharmgkb_id: PA165110778
+    phenotypes:
+      - Neoplasms
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447960874"
+      url: https://www.clinpgx.org/summaryAnnotation/1447960874
+    notes: rs1128503 (ABCB1); tipifarnib; Neoplasms (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1447960874_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and cancer may have increased exposure to tipifarnib as compared to patients with
+          the AG or GG genotype. Other genetic and clinical factors may also influence exposure to tipifarnib.
+      - id: clinpgx_summary_1447960874_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and cancer may have decreased exposure to tipifarnib as compared to patients with
+          the AA genotype. Other genetic and clinical factors may also influence exposure to tipifarnib.
+      - id: clinpgx_summary_1447960874_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and cancer may have decreased exposure to tipifarnib as compared to patients with
+          the AA genotype. Other genetic and clinical factors may also influence exposure to tipifarnib.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184472555
+    label: rs1128503 / hmg-coa reductase inhibitors / Other
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: hmg-coa reductase inhibitors
+        pharmgkb_id: PA133950441
+    phenotypes: []
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184472555"
+      url: https://www.clinpgx.org/summaryAnnotation/1184472555
+    notes: rs1128503 (ABCB1); hmg coa reductase inhibitors (level 3)
+    effects:
+      - id: clinpgx_summary_1184472555_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1128503 AA genotype may have increased serum creatine kinase levels when treated with hmg CoA
+          reductase inhibitors as compared to patients with the AG and GG genotypes. Other genetic and clinical factors may also
+          influence serum creatine kinase levels.
+      - id: clinpgx_summary_1184472555_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1128503 AG genotype may have decreased serum creatine kinase levels when treated with hmg CoA
+          reductase inhibitors as compared to patients with the AA genotype. Other genetic and clinical factors may also influence
+          serum creatine kinase levels.
+      - id: clinpgx_summary_1184472555_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1128503 GG genotype may have decreased serum creatine kinase levels when treated with hmg CoA
+          reductase inhibitors as compared to patients with the AA genotype. Other genetic and clinical factors may also influence
+          serum creatine kinase levels.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449005393
+    label: rs1128503 / remifentanil, sevoflurane / Efficacy, Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: remifentanil
+        pharmgkb_id: PA451232
+      - name: sevoflurane
+        pharmgkb_id: PA451341
+    phenotypes:
+      - tonsillectomy
+    phenotype_categories:
+      - Efficacy
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449005393"
+      url: https://www.clinpgx.org/summaryAnnotation/1449005393
+    notes: rs1128503 (ABCB1); remifentanil and sevoflurane; tonsillectomy (level 3 Efficacy, Toxicity)
+    effects:
+      - id: clinpgx_summary_1449005393_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Pediatric patients undergoing surgery with the AA genotype may have an increased likelihood of adverse events, as
+          well as a worse response to sevoflurane and remifentanil as compared to patients with the GG genotype. Other clinical
+          and genetic factors may also influence response to sevoflurane and remifentanil.
+      - id: clinpgx_summary_1449005393_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Pediatric patients undergoing surgery with the AG genotype may have an increased likelihood of adverse events, as
+          well as a worse response to sevoflurane and remifentanil as compared to patients with the GG genotype. Other clinical
+          and genetic factors may also influence response to sevoflurane and remifentanil.
+      - id: clinpgx_summary_1449005393_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Pediatric patients undergoing surgery with the GG genotype may have a decreased likelihood of adverse events, as
+          well as an improved response to sevoflurane and remifentanil as compared to patients with the AA or AG genotypes. Other
+          clinical and genetic factors may also influence response to sevoflurane and remifentanil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445401205
+    label: rs1128503 / imatinib / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: imatinib
+        pharmgkb_id: PA10804
+    phenotypes:
+      - Chronic myelogenous leukemia, BCR-ABL1 positive
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445401205"
+      url: https://www.clinpgx.org/summaryAnnotation/1445401205
+    notes: rs1128503 (ABCB1); imatinib; Leukemia, Myelogenous, Chronic, BCR-ABL Positive (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1445401205_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and chronic myeloid leukemia may have a poorer response to imatinib treatment as compared
+          to patients with the GG genotype, although this is contradicted in one study. Other genetic and clinical factors may
+          also influence response to imatinib.
+      - id: clinpgx_summary_1445401205_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and chronic myeloid leukemia may have a poorer response to imatinib treatment as compared
+          to patients with the GG genotype, although this is contradicted in one study.  Other genetic and clinical factors may
+          also influence response to imatinib.
+      - id: clinpgx_summary_1445401205_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and chronic myeloid leukemia may have a better response to imatinib treatment as compared
+          to patients with the AA or AG genotype, although this is contradicted in one study. Other genetic and clinical factors
+          may also influence response to imatinib.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448573615
+    label: rs1128503 / tacrolimus / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: tacrolimus
+        pharmgkb_id: PA451578
+    phenotypes:
+      - Ulcerative Colitis
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448573615"
+      url: https://www.clinpgx.org/summaryAnnotation/1448573615
+    notes: rs1128503 (ABCB1); tacrolimus; Colitis, Ulcerative (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1448573615_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and ulcerative colitis may have a decreased response when treated with tacrolimus
+          as compared to patients with the AG or GG genotype. Other genetic and clinical factors may also influence tacrolimus
+          response.
+      - id: clinpgx_summary_1448573615_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and ulcerative colitis may have an increased response when treated with tacrolimus
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence tacrolimus response.
+      - id: clinpgx_summary_1448573615_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and ulcerative colitis may have an increased response when treated with tacrolimus
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence tacrolimus response.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1448100712
+    label: rs1128503 / codeine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: codeine
+        pharmgkb_id: PA449088
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1448100712"
+      url: https://www.clinpgx.org/summaryAnnotation/1448100712
+    notes: rs1128503 (ABCB1); codeine; Pain (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1448100712_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Breast-feeding infants whose mothers have the AA genotype and are taking codeine may be at increased risk for CNS
+          depression as compared to those whose mothers have the GG genotype. Other genetic and clinical factors may also influence
+          the risk of CNS depression in breast-feeding infants.
+      - id: clinpgx_summary_1448100712_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Breast-feeding infants whose mothers have the AG genotype and are taking codeine may be at increased risk for CNS
+          depression as compared to those whose mothers have the GG genotype, or at decreased risk as compared to those whose
+          mothers have the AA genotype. Other genetic and clinical factors may also influence the risk of CNS depression in breast-feeding
+          infants.
+      - id: clinpgx_summary_1448100712_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Breast-feeding infants whose mothers have the GG genotype and are taking codeine may be at decreased risk for CNS
+          depression as compared to those whose mothers have the AA genotype. Other genetic and clinical factors may also influence
+          the risk of CNS depression in breast-feeding infants.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445402033
+    label: rs1128503 / cytarabine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: cytarabine
+        pharmgkb_id: PA449177
+    phenotypes:
+      - Leukemia, Myeloid, Acute
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445402033"
+      url: https://www.clinpgx.org/summaryAnnotation/1445402033
+    notes: rs1128503 (ABCB1); cytarabine; Leukemia, Myeloid, Acute (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1445402033_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and acute myeloid leukemia may have a better response when treated with cytarabine,
+          alone or in combination with daunorubicin, or dexrazoxane as compared to patients with the GG genotype, however some
+          evidence contradicts this. Other genetic and clinical factors may also influence response to cytarabine.
+      - id: clinpgx_summary_1445402033_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and acute myeloid leukemia may have a better response when treated with cytarabine,
+          alone or in combination with daunorubicin, or dexrazoxane as compared to patients with the GG genotype, however some
+          evidence contradicts this. Other genetic and clinical factors may also influence response to cytarabine.
+      - id: clinpgx_summary_1445402033_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and acute myeloid leukemia may have a poorer response when treated with cytarabine,
+          alone or in combination with daunorubicin, or dexrazoxane as compared to patients with the AA or AG genotype, however
+          some evidence contradicts this. Other genetic and clinical factors may also influence response to cytarabine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452426500
+    label: rs1128503 / antidepressants / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: antidepressants
+        pharmgkb_id: PA452229
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452426500"
+      url: https://www.clinpgx.org/summaryAnnotation/1452426500
+    notes: rs1128503 (ABCB1); antidepressants; Depressive Disorder, Major (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452426500_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1128503 AA genotype may have an increased response to antidepressants as compared to patients
+          with the AG or GG genotypes. Other genetic and clinical factors may also affect response to antidepressants.
+      - id: clinpgx_summary_1452426500_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1128503 AG genotype may have an increased response to antidepressants as compared to patients
+          with the GG genotype but a decreased response as compared to patients with the AA genotype. Other genetic and clinical
+          factors may also affect response to antidepressants.
+      - id: clinpgx_summary_1452426500_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1128503 GG genotype may have a decreased response to antidepressants as compared to patients
+          with the AA or AG genotypes. Other genetic and clinical factors may also affect response to antidepressants.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452426480
+    label: rs1128503 / aripiprazole / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: aripiprazole
+        pharmgkb_id: PA10026
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452426480"
+      url: https://www.clinpgx.org/summaryAnnotation/1452426480
+    notes: rs1128503 (ABCB1); aripiprazole; Depressive Disorder, Major (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1452426480_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1128503 AA genotype may have increased plasma concentrations of aripiprazole as compared to
+          patients with the AG or GG genotypes. Other genetic and clinical factors may also affect may also affect aripiprazole
+          concentrations. This annotation only covers the pharmacokinetic relationship between rs1128503 and aripiprazole and
+          does not include evidence about clinical outcomes.
+      - id: clinpgx_summary_1452426480_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1128503 AG genotype may have decreased plasma concentrations of aripiprazole as compared to
+          patients with the AA genotype. Other genetic and clinical factors may also affect may also affect aripiprazole concentrations.
+          This annotation only covers the pharmacokinetic relationship between rs1128503 and aripiprazole and does not include
+          evidence about clinical outcomes.
+      - id: clinpgx_summary_1452426480_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1128503 GG genotype may have decreased plasma concentrations of aripiprazole as compared to
+          patients with the AA genotype. Other genetic and clinical factors may also affect may also affect aripiprazole concentrations.
+          This annotation only covers the pharmacokinetic relationship between rs1128503 and aripiprazole and does not include
+          evidence about clinical outcomes.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451417123
+    label: rs1128503 / temozolomide / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: temozolomide
+        pharmgkb_id: PA451609
+    phenotypes:
+      - Glioma
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451417123"
+      url: https://www.clinpgx.org/summaryAnnotation/1451417123
+    notes: rs1128503 (ABCB1); temozolomide; Glioma (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1451417123_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with glioma and the rs1128503 AA genotype may have decreased concentrations of temozolomide as compared
+          to patients with the GG genotype. This annotation only covers the pharmacokinetic relationship between rs1128503 and
+          temozolomide and does not include evidence about clinical outcomes. Other genetic and clinical factors may also influence
+          temozolomide concentrations.
+      - id: clinpgx_summary_1451417123_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with glioma and the rs1128503 AG genotype may have decreased concentrations of temozolomide as compared
+          to patients with the GG genotype. This annotation only covers the pharmacokinetic relationship between rs1128503 and
+          temozolomide and does not include evidence about clinical outcomes. Other genetic and clinical factors may also influence
+          temozolomide concentrations.
+      - id: clinpgx_summary_1451417123_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with glioma and the rs1128503 GG genotype may have increased concentrations of temozolomide as compared
+          to patients with the AA or AG genotypes. This annotation only covers the pharmacokinetic relationship between rs1128503
+          and temozolomide and does not include evidence about clinical outcomes. Other genetic and clinical factors may also
+          influence temozolomide concentrations.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655387229
+    label: rs1128503 / risperidone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: risperidone
+        pharmgkb_id: PA451257
+    phenotypes:
+      - Autism
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655387229"
+      url: https://www.clinpgx.org/summaryAnnotation/655387229
+    notes: rs1128503 (ABCB1); risperidone; Autistic Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_655387229_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have lower Autism Treatment Evaluation Checklist (ATEC) scores, indicating improved
+          symptoms and response to risperidone in Children with Autism, than patients with the GG homozygotes. Other genetic and
+          clinical factors may also influence a patient's response.
+      - id: clinpgx_summary_655387229_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have lower Autism Treatment Evaluation Checklist (ATEC) scores, indicating improved
+          symptoms and response to risperidone in Children with Autism, than patients with the GG homozygotes. Other genetic and
+          clinical factors may also influence a patient's response.
+      - id: clinpgx_summary_655387229_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have poorer response to risperidone in Children with Autism, than patients with
+          AG or GG genotype. Other genetic and clinical factors may also influence a patient's response.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447962855
+    label: rs1128503 / simvastatin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: simvastatin
+        pharmgkb_id: PA451363
+    phenotypes:
+      - Hypercholesterolemia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447962855"
+      url: https://www.clinpgx.org/summaryAnnotation/1447962855
+    notes: rs1128503 (ABCB1); simvastatin; Hypercholesterolemia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1447962855_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and hypercholesterolemia may have a decreased risk for myalgia when treated with simvastatin
+          as compared to patients with the GG genotype. Other genetic and clinical factors may also influence risk for myalgia.
+      - id: clinpgx_summary_1447962855_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and hypercholesterolemia may have a decreased risk for myalgia when treated with simvastatin
+          as compared to patients with the GG genotype, or an increased risk as compared to patients with the AA genotype. Other
+          genetic and clinical factors may also influence risk for myalgia.
+      - id: clinpgx_summary_1447962855_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and hypercholesterolemia may have an increased risk for myalgia when treated with
+          simvastatin as compared to patients with the AA genotype. Other genetic and clinical factors may also influence risk
+          for myalgia.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449715928
+    label: rs1128503 / fentanyl / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: fentanyl
+        pharmgkb_id: PA449599
+    phenotypes:
+      - Hypoventilation
+      - Pain, Postoperative
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449715928"
+      url: https://www.clinpgx.org/summaryAnnotation/1449715928
+    notes: rs1128503 (ABCB1); fentanyl; Hypoventilation and Pain, Postoperative (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1449715928_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have an increased likelihood of experiencing respiratory depression as a result
+          of fentanyl as compared to patients with the AG or GG genotypes. Other genetic and clinical factors may also affect
+          the likelihood of a patient developing respiratory depression as a result of fentanyl.
+      - id: clinpgx_summary_1449715928_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have a decreased likelihood of experiencing respiratory depression as a result
+          of fentanyl as compared to patients with the AA genotype. Other genetic and clinical factors may also affect the likelihood
+          of a patient developing respiratory depression as a result of fentanyl.
+      - id: clinpgx_summary_1449715928_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a decreased likelihood of experiencing respiratory depression as a result
+          of fentanyl as compared to patients with the AA genotype. Other genetic and clinical factors may also affect the likelihood
+          of a patient developing respiratory depression as a result of fentanyl.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444672993
+    label: rs1128503 / tacrolimus / Dosage, Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: tacrolimus
+        pharmgkb_id: PA451578
+    phenotypes:
+      - Transplantation
+    phenotype_categories:
+      - Dosage
+      - Metabolism/PK
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444672993"
+      url: https://www.clinpgx.org/summaryAnnotation/1444672993
+    notes: rs1128503 (ABCB1); tacrolimus; Transplantation (level 4 Dosage, Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1444672993_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who are undergoing organ transplantation may have increased concentrations of tacrolimus
+          as compared to patients with the AG or GG genotype. However, the majority of the literature evidence shows no association
+          between this variant and tacrolimus concentrations, clearance or dose. Other genetic and clinical factors may also influence
+          concentrations of tacrolimus.
+      - id: clinpgx_summary_1444672993_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who are undergoing organ transplantation may have increased concentrations of tacrolimus
+          as compared to patients with the GG genotype. However, the majority of the literature evidence shows no association
+          between this variant and tacrolimus concentrations, clearance or dose. Other genetic and clinical factors may also influence
+          concentrations of tacrolimus.
+      - id: clinpgx_summary_1444672993_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who are undergoing organ transplantation may have decreased concentrations of tacrolimus
+          as compared to patients with the AA or AG genotype. However, the majority of the literature evidence shows no association
+          between this variant and tacrolimus concentrations, clearance or dose. Other genetic and clinical factors may also influence
+          concentrations of tacrolimus.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447964542
+    label: rs1128503 / capecitabine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: capecitabine
+        pharmgkb_id: PA448771
+    phenotypes:
+      - Colorectal Neoplasms
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447964542"
+      url: https://www.clinpgx.org/summaryAnnotation/1447964542
+    notes: rs1128503 (ABCB1); capecitabine; Colorectal Neoplasms (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1447964542_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and colorectal cancer may have a decreased risk of neutropenia or hand-foot syndrome
+          when treated with capecitabine as compared to patients with the GG genotype. Other genetic and clinical factors may
+          also influence risk of neutropenia or hand-foot syndrome.
+      - id: clinpgx_summary_1447964542_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and colorectal cancer may have a decreased risk of neutropenia or hand-foot syndrome
+          when treated with capecitabine as compared to patients with the GG genotype, or an increased risk as compared to patients
+          with the AA genotype. Other genetic and clinical factors may also influence risk of neutropenia or hand-foot syndrome.
+      - id: clinpgx_summary_1447964542_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and colorectal cancer may have an increased risk of neutropenia or hand-foot syndrome
+          when treated with capecitabine as compared to patients with the AA genotype. Other genetic and clinical factors may
+          also influence risk of neutropenia or hand-foot syndrome.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_982034869
+    label: rs1128503 / oxaliplatin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: oxaliplatin
+        pharmgkb_id: PA131285527
+    phenotypes:
+      - Colorectal Neoplasms
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "982034869"
+      url: https://www.clinpgx.org/summaryAnnotation/982034869
+    notes: rs1128503 (ABCB1); oxaliplatin; Colorectal Neoplasms (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_982034869_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and colorectal cancer may have an increased overall survival period when treated with
+          oxaliplatin-based chemotherapy as compared to patients with the GG genotype. Other genetic and clinical factors may
+          also influence a patient's response to treatment.
+      - id: clinpgx_summary_982034869_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and colorectal cancer may have an increased overall survival period when treated with
+          oxaliplatin-based chemotherapy as compared to patients with the GG genotype. Other genetic and clinical factors may
+          also influence a patient's response to treatment.
+      - id: clinpgx_summary_982034869_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and colorectal cancer may have a decreased overall survival period when treated with
+          oxaliplatin-based chemotherapy as compared to patients with the AA or AG genotype. Other genetic and clinical factors
+          may also influence a patient's response to treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183615535
+    label: rs1128503 / digoxin / Other
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: digoxin
+        pharmgkb_id: PA449319
+    phenotypes: []
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183615535"
+      url: https://www.clinpgx.org/summaryAnnotation/1183615535
+    notes: rs1128503 (ABCB1); digoxin (level 3)
+    effects:
+      - id: clinpgx_summary_1183615535_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have increased serum concentrations of digoxin as compared to patients with the
+          GG genotype. Other genetic and clinical factors may also impact serum concentrations of digoxin.
+      - id: clinpgx_summary_1183615535_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AA genotype may have increased serum concentrations of digoxin as compared to patients with the
+          GG genotype, or decreased serum concentrations of digoxin as compared to patients with the AA genotype. Other genetic
+          and clinical factors may also impact serum concentrations of digoxin.
+      - id: clinpgx_summary_1183615535_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have decreased serum concentrations of digoxin as compared to patients with the
+          AA genotype. Other genetic and clinical factors may also impact serum concentrations of digoxin.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183614761
+    label: rs1128503 / sirolimus / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: sirolimus
+        pharmgkb_id: PA451365
+    phenotypes:
+      - Kidney Transplantation
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183614761"
+      url: https://www.clinpgx.org/summaryAnnotation/1183614761
+    notes: rs1128503 (ABCB1); sirolimus; Kidney Transplantation (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1183614761_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who underwent kidney transplantation may have increased triglyceride levels when treated
+          with sirolimus as compared to patients with the AG or GG genotype. Other genetic and clinical factors may also influence
+          triglyceride levels.
+      - id: clinpgx_summary_1183614761_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who underwent kidney transplantation may have decreased triglyceride levels when treated
+          with sirolimus as compared to patients with the AA genotype. Other genetic and clinical factors may also influence triglyceride
+          levels.
+      - id: clinpgx_summary_1183614761_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who underwent kidney transplantation may have decreased triglyceride levels when treated
+          with sirolimus as compared to patients with the AA genotype. Other genetic and clinical factors may also influence triglyceride
+          levels.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449162912
+    label: rs1128503 / tramadol / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: tramadol
+        pharmgkb_id: PA451735
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449162912"
+      url: https://www.clinpgx.org/summaryAnnotation/1449162912
+    notes: rs1128503 (ABCB1); tramadol (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1449162912_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have an increased exposure to tramadol as compared to patients with the GG genotype.
+          Other genetic and clinical factors may also influence a patient's exposure to tramadol.
+      - id: clinpgx_summary_1449162912_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text: There is currently no evidence to show whether the AG genotype affects a patient's exposure to tramadol.
+      - id: clinpgx_summary_1449162912_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a decreased exposure to tramadol as compared to patients with the AA genotype.
+          Other genetic and clinical factors may also influence a patient's exposure to tramadol.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_982036604
+    label: rs1128503 / cisplatin, cyclophosphamide, doxorubicin, methotrexate, vincristine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: cisplatin
+        pharmgkb_id: PA449014
+      - name: cyclophosphamide
+        pharmgkb_id: PA449165
+      - name: doxorubicin
+        pharmgkb_id: PA449412
+      - name: methotrexate
+        pharmgkb_id: PA450428
+      - name: vincristine
+        pharmgkb_id: PA451879
+    phenotypes:
+      - Osteosarcoma
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "982036604"
+      url: https://www.clinpgx.org/summaryAnnotation/982036604
+    notes: rs1128503 (ABCB1); cisplatin, cyclophosphamide, doxorubicin, methotrexate or vincristine; Osteosarcoma (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_982036604_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and osteosarcoma may have a decreased risk of death when treated with cisplatin, cyclophosphamide,
+          doxorubicin, methotrexate, and vincristine as compared to patients with the AG or GG genotype. Other genetic and clinical
+          factors may also influence a patient's response.
+      - id: clinpgx_summary_982036604_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and osteosarcoma may have a decreased risk of death when treated with cisplatin, cyclophosphamide,
+          doxorubicin, methotrexate, and vincristine as compared to patients with the GG genotype, but an increased risk of death
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence a patient's response.
+      - id: clinpgx_summary_982036604_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and osteosarcoma may have an increased risk of death when treated with cisplatin,
+          cyclophosphamide, doxorubicin, methotrexate, and vincristine as compared to patients with the AA or AG genotype. Other
+          genetic and clinical factors may also influence a patient's response.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449716764
+    label: rs1128503 / fentanyl / Dosage, Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: fentanyl
+        pharmgkb_id: PA449599
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Dosage
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449716764"
+      url: https://www.clinpgx.org/summaryAnnotation/1449716764
+    notes: rs1128503 (ABCB1); fentanyl; Pain and Pain, Postoperative (level 3 Dosage, Efficacy)
+    effects:
+      - id: clinpgx_summary_1449716764_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have a decreased response to fentanyl and may therefore require an increased dose
+          as compared to patients with the AG or GG genotypes. However, one study failed to find a significant relationship between
+          this variant and dose of fentanyl. Other genetic and clinical factors may also affect a patient's response to fentanyl
+          and their dosage requirements.
+      - id: clinpgx_summary_1449716764_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have an increased response to fentanyl and may therefore require a decreased dose
+          as compared to patients with the AA genotype. However, one study failed to find a significant relationship between this
+          variant and dose of fentanyl. Other genetic and clinical factors may also affect a patient's response to fentanyl and
+          their dosage requirements.
+      - id: clinpgx_summary_1449716764_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have an increased response to fentanyl and may therefore require a decreased dose
+          as compared to patients with the AA genotype. However, one study failed to find a significant relationship between this
+          variant and dose of fentanyl. Other genetic and clinical factors may also affect a patient's response to fentanyl and
+          their dosage requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449311670
+    label: rs1128503 / propofol, remifentanil / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: propofol
+        pharmgkb_id: PA451141
+      - name: remifentanil
+        pharmgkb_id: PA451232
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449311670"
+      url: https://www.clinpgx.org/summaryAnnotation/1449311670
+    notes: rs1128503 (ABCB1); propofol and remifentanil (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449311670_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who are undergoing surgery may have a decreased response to propofol and remifentanil
+          administered as anesthesia as compared to patients with the GG genotype. Other genetic and clinical factors may also
+          affect a patient's response to propofol and remifentanil.
+      - id: clinpgx_summary_1449311670_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who are undergoing surgery may have a decreased response to propofol and remifentanil
+          administered as anesthesia as compared to patients with the GG genotype. Other genetic and clinical factors may also
+          affect a patient's response to propofol and remifentanil.
+      - id: clinpgx_summary_1449311670_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who are undergoing surgery may have an increased response to propofol and remifentanil
+          administered as anesthesia as compared to patients with the AA or AG genotypes. Other genetic and clinical factors may
+          also affect a patient's response to propofol and remifentanil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449003829
+    label: rs1128503 / clopidogrel / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: clopidogrel
+        pharmgkb_id: PA449053
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449003829"
+      url: https://www.clinpgx.org/summaryAnnotation/1449003829
+    notes: rs1128503 (ABCB1); clopidogrel (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449003829_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who are taking clopidogrel may have increased resistance to clopidogrel as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence resistance to clopidogrel in
+          patients.
+      - id: clinpgx_summary_1449003829_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who are taking clopidogrel may have increased resistance to clopidogrel as compared
+          to patients with the GG genotype. Other genetic and clinical factors may also influence resistance to clopidogrel in
+          patients.
+      - id: clinpgx_summary_1449003829_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who are taking clopidogrel may have decreased resistance to clopidogrel as compared
+          to patients with the AA or AG genotypes. Other genetic and clinical factors may also influence resistance to clopidogrel
+          in patients.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447987094
+    label: rs1128503 / carbamazepine / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: carbamazepine
+        pharmgkb_id: PA448785
+    phenotypes:
+      - Epilepsy
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447987094"
+      url: https://www.clinpgx.org/summaryAnnotation/1447987094
+    notes: rs1128503 (ABCB1); carbamazepine; Epilepsy (level 4 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1447987094_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          African American and white patients with the AA genotype and epilepsy may have increased clearance of carbamazepine
+          as compared to patients with the GG genotype. This association was not found in Chinese patients. Other genetic and
+          clinical factors may also influence clearance of carbamazepine.
+      - id: clinpgx_summary_1447987094_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          African American and white patients with the AG genotype and epilepsy may have increased clearance of carbamazepine
+          as compared to patients with the GG genotype. This association was not found in Chinese patients. Other genetic and
+          clinical factors may also influence clearance of carbamazepine.
+      - id: clinpgx_summary_1447987094_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          African American and white patients with the GG genotype and epilepsy may have decreased clearance of carbamazepine
+          as compared to patients with the AA or AG genotype. This association was not found in Chinese patients. Other genetic
+          and clinical factors may also influence clearance of carbamazepine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445401247
+    label: rs1128503 / rocuronium / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: rocuronium
+        pharmgkb_id: PA164754992
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445401247"
+      url: https://www.clinpgx.org/summaryAnnotation/1445401247
+    notes: rs1128503 (ABCB1); rocuronium (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1445401247_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who are placed under anesthesia may have a decreased response to rocuronium as compared
+          to patients with the AG or GG genotype. Other genetic and clinical factors may also influence response to rocuronium.
+      - id: clinpgx_summary_1445401247_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who are placed under anesthesia may have an increased response to rocuronium as compared
+          to patients with the AA genotype but a decreased response as compared to patients with the GG genotype. Other genetic
+          and clinical factors may also influence response to rocuronium.
+      - id: clinpgx_summary_1445401247_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who are placed under anesthesia may have an increased response to rocuronium as compared
+          to patients with the AA genotype. Other genetic and clinical factors may also influence response to rocuronium.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1446897675
+    label: rs1128503 / sunitinib / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: sunitinib
+        pharmgkb_id: PA162372840
+    phenotypes:
+      - Renal Cell Carcinoma
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1446897675"
+      url: https://www.clinpgx.org/summaryAnnotation/1446897675
+    notes: rs1128503 (ABCB1); sunitinib; Carcinoma, Renal Cell (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1446897675_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with renal cell carcinoma and the AA genotype who are treated with sunitinib may have a decreased risk
+          of  neutropenia, leukopenia, and diarrhea as compared to patients with the AG and GG genotypes, although this has been
+          contradicted by some studies. Other clinical and genetic factors may also influence risk of toxicity in patients with
+          renal cell carcinoma who are administered sunitinib.
+      - id: clinpgx_summary_1446897675_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with renal cell carcinoma and the AG genotype who are treated with sunitinib may have an increased risk
+          of  neutropenia, leukopenia as compared to patients with the AA genotypes and a decreased risk of diarrhea as compared
+          to patients with the GG genotype, although this has been contradicted by some studies. Other clinical and genetic factors
+          may also influence risk of toxicity in patients with renal cell carcinoma who are administered sunitinib.
+      - id: clinpgx_summary_1446897675_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with renal cell carcinoma and the GG genotype who are treated with sunitinib may have an increased risk
+          of  neutropenia, leukopenia, and diarrhea as compared to patients with the AA genotypes, although this has been contradicted
+          by some studies. Other clinical and genetic factors may also influence risk of toxicity in patients with renal cell
+          carcinoma who are administered sunitinib.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449748511
+    label: rs1128503 / tacrolimus / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: tacrolimus
+        pharmgkb_id: PA451578
+    phenotypes:
+      - Nephrotic Syndrome
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449748511"
+      url: https://www.clinpgx.org/summaryAnnotation/1449748511
+    notes: rs1128503 (ABCB1); tacrolimus; Nephrotic Syndrome (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449748511_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and nephrotic syndrome may have an increased response when treated with tacrolimus
+          as compared to patients with the AG or GG genotype. Other genetic and clinical factors may also influence response to
+          tacrolimus treatment in patients with nephrotic syndrome.
+      - id: clinpgx_summary_1449748511_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and nephrotic syndrome may have a decreased response when treated with tacrolimus
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence response to tacrolimus
+          treatment in patients with nephrotic syndrome.
+      - id: clinpgx_summary_1449748511_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and nephrotic syndrome may have a decreased response when treated with tacrolimus
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence response to tacrolimus
+          treatment in patients with nephrotic syndrome.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655384546
+    label: rs1128503 / cyclosporine / Dosage
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: cyclosporine
+        pharmgkb_id: PA449167
+    phenotypes:
+      - Kidney Transplantation
+      - Myasthenia Gravis
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655384546"
+      url: https://www.clinpgx.org/summaryAnnotation/655384546
+    notes: rs1128503 (ABCB1); cyclosporine; Kidney Transplantation and Myasthenia Gravis (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_655384546_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and myasthenia gravis or organ transplantation may have reduced clearance of cyclosporine
+          and therefore may require a decreased dose of cyclosporine, compared to patients with the GG genotype. Patients with
+          the AA genotype may also have an increased risk of infection as compared to those with the GG genotype. Other genetic
+          and clinical factors may also influence clearance and dose of cyclosporine.
+      - id: clinpgx_summary_655384546_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and myasthenia gravis or organ transplantation may have reduced clearance of cyclosporine
+          as compared to patients with the GG genotype, or increased clearance as compared to patients with the AA genotype, and
+          therefore may require an adjusted dose of the drug. Patients with the AG genotype may also have an increased risk of
+          infection as compared to those with the GG genotype. Other genetic and clinical factors may also influence clearance
+          and dose of cyclosporine.
+      - id: clinpgx_summary_655384546_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and myasthenia gravis or organ transplantation may have increased clearance of cyclosporine
+          and therefore may require an increased dose of cyclosporine, compared to patients with the AA genotype. Patients with
+          the GG genotype may also have a decreased risk of infection as compared to those with the AA or AG genotype. Other genetic
+          and clinical factors may also influence clearance and dose of cyclosporine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449140229
+    label: rs1128503 / sirolimus, temsirolimus / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: sirolimus
+        pharmgkb_id: PA451365
+      - name: temsirolimus
+        pharmgkb_id: PA164746890
+    phenotypes:
+      - Urinary Bladder Neoplasms
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449140229"
+      url: https://www.clinpgx.org/summaryAnnotation/1449140229
+    notes: rs1128503 (ABCB1); sirolimus or temsirolimus; Urinary Bladder Neoplasms (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1449140229_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and bladder cancer may have increased exposure to sirolimus and temsirolimus as compared
+          to patients with the GG genotypes. Other clinical and genetic factors may also influence exposure to sirolimus and temsirolimus
+          in patients with bladder cancer.
+      - id: clinpgx_summary_1449140229_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and bladder cancer may have increased exposure to sirolimus and temsirolimus as compared
+          to patients with the GG genotypes. Other clinical and genetic factors may also influence exposure to sirolimus and temsirolimus
+          in patients with bladder cancer.
+      - id: clinpgx_summary_1449140229_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and bladder cancer may have decreased exposure to sirolimus and temsirolimus as compared
+          to patients with the AG or AA genotypes. Other clinical and genetic factors may also influence exposure to sirolimus
+          and temsirolimus in patients with bladder cancer.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451621726
+    label: rs1128503 / methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+      - Lymphoma
+      - Mucositis
+      - Osteosarcoma
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451621726"
+      url: https://www.clinpgx.org/summaryAnnotation/1451621726
+    notes:
+      rs1128503 (ABCB1); methotrexate; Lymphoma, mucositis, Osteosarcoma and Precursor Cell Lymphoblastic Leukemia-Lymphoma
+      (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451621726_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1128503 AA genotype may be at an increased risk of experiencing side effects when treated with
+          methotrexate as compared to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence risk of side effects when treated with methotrexate.
+      - id: clinpgx_summary_1451621726_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1128503 AG genotype may be at an increased risk of experiencing side effects when treated with
+          methotrexate as compared to patients with the GG genotype. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence risk of side effects when treated with methotrexate.
+      - id: clinpgx_summary_1451621726_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1128503 GG genotype may be at a decreased risk of experiencing side effects when treated with
+          methotrexate as compared to patients with the AA or AG genotypes. However, conflicting evidence has been reported. Other
+          genetic and clinical factors may also influence risk of side effects when treated with methotrexate.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450944540
+    label: rs1128503 / cyclosporine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: cyclosporine
+        pharmgkb_id: PA449167
+    phenotypes:
+      - Hematopoietic stem cell transplantation
+      - Neurotoxicity Syndromes
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450944540"
+      url: https://www.clinpgx.org/summaryAnnotation/1450944540
+    notes: rs1128503 (ABCB1); cyclosporine; hematopoietic stem cell transplantation and Neurotoxicity Syndromes (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450944540_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be at a decreased risk of developing neurotoxicity after receiving cyclosporine
+          following hematopoietic stem cell transplant as compared to patients with the GG genotype. However, this association
+          was not statistically significant. Other genetic and clinical factors may also affect a patient's rick of developing
+          neurotoxicity following cyclosporine treatment.
+      - id: clinpgx_summary_1450944540_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may be at a decreased risk of developing neurotoxicity after receiving cyclosporine
+          following hematopoietic stem cell transplant as compared to patients with the GG genotype. However, this association
+          was not statistically significant. Other genetic and clinical factors may also affect a patient's rick of developing
+          neurotoxicity following cyclosporine treatment.
+      - id: clinpgx_summary_1450944540_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be at an increased risk of developing neurotoxicity after receiving cyclosporine
+          following hematopoietic stem cell transplant as compared to patients with the AA or AG genotypes. However, this association
+          was not statistically significant. Other genetic and clinical factors may also affect a patient's rick of developing
+          neurotoxicity following cyclosporine treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449165158
+    label: rs1128503 / methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Rheumatoid arthritis
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449165158"
+      url: https://www.clinpgx.org/summaryAnnotation/1449165158
+    notes: rs1128503 (ABCB1); methotrexate; Arthritis, Rheumatoid (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1449165158_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1128503 AA genotype and
+          risk of drug toxicity in patients with rheumatoid arthritis and treated with methotrexate. However, conflicting evidence
+          has been reported. Other genetic and clinical factors may also influence risk of drug toxicity when treated with methotrexate.
+      - id: clinpgx_summary_1449165158_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1128503 AG genotype and
+          risk of drug toxicity in patients with rheumatoid arthritis and treated with methotrexate. However, conflicting evidence
+          has been reported. Other genetic and clinical factors may also influence risk of drug toxicity when treated with methotrexate.
+      - id: clinpgx_summary_1449165158_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1128503 GG genotype and
+          risk of drug toxicity in patients with rheumatoid arthritis and treated with methotrexate. However, conflicting evidence
+          has been reported. Other genetic and clinical factors may also influence risk of drug toxicity when treated with methotrexate.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447943739
+    label: rs1128503 / efavirenz / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: efavirenz
+        pharmgkb_id: PA449441
+    phenotypes:
+      - HIV infectious disease
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447943739"
+      url: https://www.clinpgx.org/summaryAnnotation/1447943739
+    notes: rs1128503 (ABCB1); efavirenz; HIV Infections (level 4 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1447943739_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with AA genotype and HIV may have decreased concentrations of efavirenz in plasma compared to patients
+          with AG or GG genotypes. However, this association was not significant and has not been found in other studies. Other
+          clinical and genetic factors may affect efavirenz concentrations.
+      - id: clinpgx_summary_1447943739_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with AG genotype and HIV may have increased concentrations of efavirenz in plasma compared to patients
+          with AA genotype. However, this association was not significant and has not been found in other studies. Other clinical
+          and genetic factors may affect efavirenz concentrations.
+      - id: clinpgx_summary_1447943739_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with GG genotype and HIV may have increased concentrations of efavirenz in plasma compared to patients
+          with AA genotype. However, this association was not significant and has not been found in other studies.  Other clinical
+          and genetic factors may affect efavirenz concentrations.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451135400
+    label: rs1128503 / sufentanil / Dosage
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: sufentanil
+        pharmgkb_id: PA451527
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451135400"
+      url: https://www.clinpgx.org/summaryAnnotation/1451135400
+    notes: rs1128503 (ABCB1); sufentanil (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1451135400_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have increased sufentanil dose requirements as compared to patients with the GG
+          genotype. Other genetic and clinical factors may also affect a patient's sufentantil dose requirements.
+      - id: clinpgx_summary_1451135400_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have increased sufentanil dose requirements as compared to patients with the GG
+          genotype. Other genetic and clinical factors may also affect a patient's sufentantil dose requirements.
+      - id: clinpgx_summary_1451135400_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have decreased sufentanil dose requirements as compared to patients with the AA
+          or AG genotypes. Other genetic and clinical factors may also affect a patient's sufentantil dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451638961
+    label: rs1128503 / paclitaxel / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: paclitaxel
+        pharmgkb_id: PA450761
+    phenotypes:
+      - Breast Neoplasms
+      - Peripheral Nervous System Diseases
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451638961"
+      url: https://www.clinpgx.org/summaryAnnotation/1451638961
+    notes: rs1128503 (ABCB1); paclitaxel; Breast Neoplasms and Peripheral Nervous System Diseases (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451638961_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1128503 AA genotype may have increased severity of peripheral neuropathy when treated with paclitaxel
+          as compared to patients with the AG or GG genotypes. Other genetic and clinical factors may also influence severity
+          of peripheral neuropathy when treated with paclitaxel.
+      - id: clinpgx_summary_1451638961_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1128503 AG genotype may have decreased severity of peripheral neuropathy when treated with paclitaxel
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence severity of peripheral
+          neuropathy when treated with paclitaxel.
+      - id: clinpgx_summary_1451638961_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1128503 GG genotype may have decreased severity of peripheral neuropathy when treated with paclitaxel
+          as compared to patients with the AA genotype. Other genetic and clinical factors may also influence severity of peripheral
+          neuropathy when treated with paclitaxel.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451207020
+    label: rs1128503 / morphine / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451207020"
+      url: https://www.clinpgx.org/summaryAnnotation/1451207020
+    notes: rs1128503 (ABCB1); morphine (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1451207020_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have increased concentrations of morphine as compared to patients with the AG
+          or GG genotypes. However, one study failed to find this association. Other genetic and clinical factors may also affect
+          morphine concentrations in a patient.
+      - id: clinpgx_summary_1451207020_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have decreased concentrations of morphine as compared to patients with the AA
+          genotype. However, one study failed to find this association. Other genetic and clinical factors may also affect morphine
+          concentrations in a patient.
+      - id: clinpgx_summary_1451207020_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have decreased concentrations of morphine as compared to patients with the AA
+          genotype. However, one study failed to find this association. Other genetic and clinical factors may also affect morphine
+          concentrations in a patient.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447963979
+    label: rs1128503 / antiepileptics / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - ABCB1
+    variant: rs1128503
+    drugs:
+      - name: antiepileptics
+        pharmgkb_id: PA143485705
+    phenotypes:
+      - Epilepsy
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447963979"
+      url: https://www.clinpgx.org/summaryAnnotation/1447963979
+    notes: Clinical annotation for rs1128503 (ABCB1); antiepileptics; Epilepsy (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1447963979_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and specifically localization-related epilepsy syndrome may have an increased risk
+          for resistance to antiepileptic treatment as compared to patients with the GG genotype. However, all other studies of
+          people with epilepsy have found no association between this variant and antiepileptic resistance. Other genetic and
+          clinical factors may also influence resistance to antiepileptics.
+      - id: clinpgx_summary_1447963979_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and specifically localization-related epilepsy syndrome may have an increased risk
+          for resistance to antiepileptic treatment as compared to patients with the GG genotype, or a decreased risk as compared
+          to patients with the AA genotype. However, all other studies of people with epilepsy have found no association between
+          this variant and antiepileptic resistance. Other genetic and clinical factors may also influence resistance to antiepileptics.
+      - id: clinpgx_summary_1447963979_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1128503.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and specifically localization-related epilepsy syndrome may have a decreased risk
+          for resistance to antiepileptic treatment as compared to patients with the AA genotype. However, all other studies of
+          people with epilepsy have found no association between this variant and antiepileptic resistance. Other genetic and
+          clinical factors may also influence resistance to antiepileptics.

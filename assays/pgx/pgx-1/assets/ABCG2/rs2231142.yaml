@@ -1,0 +1,72 @@
+name: ABCG2-pgx-rs2231142
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: ABCG2
+summary: ABCG2 pharmacogenomics panel entry for rs2231142 with detailed ClinPGx/PharmGKB summary and drug-label annotations attached in rs2231142-pgx.yaml.
+identifiers:
+  rsids:
+    - rs2231142
+  aliases:
+    - rs3736117
+    - rs12721641
+    - rs28365035
+    - rs52809243
+    - rs58973676
+coordinates:
+  grch37:
+    chrom: "4"
+    pos: 89052323
+  grch38:
+    chrom: "4"
+    pos: 88131171
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - T
+  observed_alts:
+    - A
+    - C
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs2231142
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2231142
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2231142
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: ClinPGx / PharmGKB variant summary annotations PA166156544 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166156544/summaryAnnotation
+      fields:
+        - findings[0]
+    - kind: database
+      label: ClinPGx / PharmGKB drug label annotations PA166156544 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166156544/labelAnnotation
+      fields:
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: abcg2_pgx_rs2231142_pgx_sidecar
+    include: rs2231142-pgx.yaml
+    binding:
+      source: variant
+      variant: rs2231142.yaml
+      key: alt
+      operator: equals
+      value: T
+      description: Loads this sidecar when the participant carries the expected PGx-significant rs2231142 alt allele T.
+    notes: Detailed ClinPGx/PharmGKB summary and drug-label findings are stored in the sidecar file.

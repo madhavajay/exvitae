@@ -1,0 +1,62 @@
+name: HTR2C-pgx-rs3813929
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: HTR2C
+summary: HTR2C pharmacogenomics panel entry for rs3813929 with detailed ClinPGx/PharmGKB annotations attached in rs3813929-pgx.yaml.
+identifiers:
+  rsids:
+    - rs3813929
+  aliases:
+    - rs17326402
+coordinates:
+  grch37:
+    chrom: X
+    pos: 113818520
+  grch38:
+    chrom: X
+    pos: 114584047
+alleles:
+  kind: snv
+  ref: C
+  alts:
+    - T
+  observed_alts:
+    - G
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs3813929
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs3813929
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs3813929
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: ClinPGx / PharmGKB variant summary annotations PA166157875 via exr pgx-lookup --sidecar
+      url: https://www.clinpgx.org/variant/PA166157875/summaryAnnotation
+      fields:
+        - findings[0]
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: htr2c_pgx_rs3813929_pgx_sidecar
+    include: rs3813929-pgx.yaml
+    binding:
+      source: variant
+      variant: rs3813929.yaml
+      key: alt
+      operator: equals
+      value: T
+      description: Loads this sidecar when the participant carries the expected PGx-significant rs3813929 alt allele T.
+    notes: Detailed ClinPGx/PharmGKB summary findings are stored in the sidecar file.

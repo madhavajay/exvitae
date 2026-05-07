@@ -1,0 +1,780 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1801131.yaml
+gene: MTHFR
+rsid: rs1801131
+variant_pa_id: PA166153643
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166153643/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166153643/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166127695
+    label: Annotation of HCSC Label for ethinyl estradiol / norelgestromin and F2, F5, MTHFR, PROC, PROS1, SERPINC1
+    authority_type: regulatory_label
+    genes:
+      - F2
+      - F5
+      - MTHFR
+      - PROC
+      - PROS1
+      - SERPINC1
+    variant: rs1801131
+    drugs:
+      - name: ethinyl estradiol
+        pharmgkb_id: PA165290929
+      - name: norelgestromin
+        pharmgkb_id: PA165290929
+    regulatory_sources:
+      - HCSC
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166127695
+      url: https://www.clinpgx.org/labelAnnotation/PA166127695
+    notes: Annotation of HCSC Label for ethinyl estradiol / norelgestromin and F2, F5, MTHFR, PROC, PROS1, SERPINC1
+    pgx_action_level: Actionable PGx
+    summary:
+      The product monograph for norelgestromin and ethinyl estradiol (EVRA) states that the drug is contraindicated in
+      women with Factor V Leiden mutation, antithrombin III deficiency, protein C deficiency, protein S deficiency, hyperhomocysteinemia
+      due to mutations in the MTHFR gene and prothrombin mutation G20210A (among other contraindications), due to the risk for
+      arterial or venous thrombosis.
+    prescribing_information: |-
+      Excerpt from the product monograph:
+      Contraindications. The EVRA(R) (norelgestromin and ethinyl estradiol) transdermal system should not be used in women with: presence of severe or multiple risk factor(s) for arterial or venous thrombosis such as:
+      hereditary or acquired predisposition for venous or arterial thrombosis, such as Factor V Leiden mutation and activated protein C (APC-) resistance, antithrombin-III-deficiency, protein C deficiency, protein S deficiency, hyperhomocysteinemia (e.g., due to MTHFR C677T, A1298 mutations), prothrombin mutation G20210A, and antiphospholipid antibodies (anticardiolipin antibodies, lupus anticoagulant)
+    prescribing_actions:
+      - Alternate Drug
+    related_alleles:
+      - id: PA166154336
+        symbol: rs1799963
+        name: rs1799963
+      - id: PA166153643
+        symbol: rs1801131
+        name: rs1801131
+      - id: PA166153644
+        symbol: rs1801133
+        name: rs1801133
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_699639336
+    label: rs1801131 / methotrexate / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Rheumatoid arthritis
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "699639336"
+      url: https://www.clinpgx.org/summaryAnnotation/699639336
+    notes: rs1801131 (MTHFR); methotrexate; Arthritis, Rheumatoid (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_699639336_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who are treated with methotrexate may have a decreased likelihood of methotrexate
+          response as compared to patients with the GT and TT genotypes. This association has been contradicted by at least one
+          study, and other studies have found no association of this variant with methotrexate efficacy. Other genetic and clinical
+          factors may also influence a patient's response to methotrexate treatment.
+      - id: clinpgx_summary_699639336_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and Rheumatoid Arthritis who are treated with methotrexate may have an increased likelihood
+          of methotrexate response as compared to patients with the GG genotype, but decreased response as compared to patients
+          with the TT genotype. This association has been contradicted by at least one study, and other studies have found no
+          association of this variant with methotrexate efficacy. Other genetic and clinical factors may also influence a patient's
+          response to methotrexate treatment.
+      - id: clinpgx_summary_699639336_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype and Rheumatoid Arthritis who are treated with methotrexate may have an increased likelihood
+          of methotrexate response as compared to patients with the GT and GG genotypes. This association has been contradicted
+          by at least one study, and other studies have found no association of this variant with methotrexate efficacy. Other
+          genetic and clinical factors may also influence a patient's response to methotrexate treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451464245
+    label: rs1801131 / methotrexate / Dosage
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+    phenotype_categories:
+      - Dosage
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451464245"
+      url: https://www.clinpgx.org/summaryAnnotation/1451464245
+    notes: rs1801131 (MTHFR); methotrexate; Precursor Cell Lymphoblastic Leukemia-Lymphoma (level 4 Dosage)
+    effects:
+      - id: clinpgx_summary_1451464245_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 GG genotype and
+          methotrexate dosage in patients with ALL. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence methotrexate dose requirements.
+      - id: clinpgx_summary_1451464245_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 GT genotype and
+          methotrexate dosage in patients with ALL. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence methotrexate dose requirements.
+      - id: clinpgx_summary_1451464245_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 TT genotype and
+          methotrexate dosage in patients with ALL. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence methotrexate dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1445400939
+    label: rs1801131 / clozapine, olanzapine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: clozapine
+        pharmgkb_id: PA449061
+      - name: olanzapine
+        pharmgkb_id: PA450688
+    phenotypes:
+      - Schizoaffective disorder
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1445400939"
+      url: https://www.clinpgx.org/summaryAnnotation/1445400939
+    notes: rs1801131 (MTHFR); clozapine or olanzapine; schizoaffective disorder and Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1445400939_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and schizophrenia or schizoaffective disorder may have greater weight gain when treated
+          with clozapine or olanzapine as compared to patients with the GT genotype. Other genetic and clinical factors may also
+          influence weight gain when receiving clozapine or olanzapine.
+      - id: clinpgx_summary_1445400939_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype and schizophrenia or schizoaffective disorder may have less weight gain when treated
+          with clozapine or olanzapine as compared to patients with the GG genotype. Other genetic and clinical factors may also
+          influence weight gain when receiving clozapine or olanzapine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1183697575
+    label: rs1801131 / methotrexate / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1183697575"
+      url: https://www.clinpgx.org/summaryAnnotation/1183697575
+    notes: rs1801131 (MTHFR); methotrexate; Precursor Cell Lymphoblastic Leukemia-Lymphoma (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1183697575_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 GG genotype and
+          response to methotrexate in patients with blood cancers. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence response to methotrexate.
+      - id: clinpgx_summary_1183697575_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 GT genotype and
+          response to methotrexate in patients with blood cancers. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence response to methotrexate.
+      - id: clinpgx_summary_1183697575_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 TT genotype and
+          response to methotrexate in patients with blood cancers. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence response to methotrexate.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655387839
+    label: rs1801131 / nitrous oxide / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: nitrous oxide
+        pharmgkb_id: PA450645
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655387839"
+      url: https://www.clinpgx.org/summaryAnnotation/655387839
+    notes: rs1801131 (MTHFR); nitrous oxide (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655387839_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have higher homocysteine levels after nitrous oxide anesthesia as compared to
+          patients with the TG and TT genotype.Other genetic and clinical factors may also influence a patient's homocysteine
+          levels after nitrous oxide exposure.
+      - id: clinpgx_summary_655387839_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the TG genotype may have lower homocysteine levels after nitrous oxide anesthesia as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also influence a patient's homocysteine levels after nitrous
+          oxide exposure.
+      - id: clinpgx_summary_655387839_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype may have lower homocysteine levels after nitrous oxide anesthesia as compared to patients
+          with the GG genotype. Other genetic and clinical factors may also influence a patient's homocysteine levels after nitrous
+          oxide exposure.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204864
+    label: rs1801131 / capecitabine, fluorouracil, leucovorin, oxaliplatin / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: capecitabine
+        pharmgkb_id: PA448771
+      - name: fluorouracil
+        pharmgkb_id: PA128406956
+      - name: leucovorin
+        pharmgkb_id: PA450198
+      - name: oxaliplatin
+        pharmgkb_id: PA131285527
+    phenotypes:
+      - Neoplasms
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204864"
+      url: https://www.clinpgx.org/summaryAnnotation/981204864
+    notes: rs1801131 (MTHFR); capecitabine, fluorouracil, leucovorin or oxaliplatin; Neoplasms (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_981204864_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who have cancer may have an increased response to fluoropyrimidine-based chemotherapy
+          as compared to patients with the TT genotype. However, there is conflicting evidence with regards to the association
+          between this variant and event-free survival. Fluoropyrimidines are often used in combination chemotherapy such as FOLFOX
+          (fluorouracil, leucovorin and oxaliplatin). Other genetic and clinical factors may also influence response to fluoropyrimidine-based
+          chemotherapy.
+      - id: clinpgx_summary_981204864_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype who have cancer may have an increased response to fluoropyrimidine-based chemotherapy
+          as compared to patients with the TT genotype. However, there is conflicting evidence with regards to the association
+          between this variant and event-free survival. Fluoropyrimidines are often used in combination chemotherapy such as FOLFOX
+          (fluorouracil, leucovorin and oxaliplatin). Other genetic and clinical factors may also influence response to fluoropyrimidine-based
+          chemotherapy.
+      - id: clinpgx_summary_981204864_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype who have cancer may have a decreased response to fluoropyrimidine-based chemotherapy
+          as compared to patients with the GG or GT genotypes. However, there is conflicting evidence with regards to the association
+          between this variant and event-free survival. Fluoropyrimidines are often used in combination chemotherapy such as FOLFOX
+          (fluorouracil, leucovorin and oxaliplatin). Other genetic and clinical factors may also influence response to fluoropyrimidine-based
+          chemotherapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450814424
+    label: rs1801131 / l-methylfolate, vitamin b-complex, incl. combinations / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: l-methylfolate
+        pharmgkb_id: PA166182939
+      - name: vitamin b-complex, incl. combinations
+        pharmgkb_id: PA164713398
+    phenotypes:
+      - Major Depressive Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450814424"
+      url: https://www.clinpgx.org/summaryAnnotation/1450814424
+    notes: rs1801131 (MTHFR); l-methylfolate or Vitamin B-complex, Incl. Combinations; Depressive Disorder, Major (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450814424_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may show improved response to pharmacotherapy for depression when given folate supplements.
+          Please note that there is currently no evidence regarding the association between the TT genotype and response to folate
+          supplementation. Other genetic and clinical factors may also affect a patient's response to folate supplementation.
+      - id: clinpgx_summary_1450814424_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the GT genotype may show improved response to pharmacotherapy for depression when given folate supplements.
+          Please note that there is currently no evidence regarding the association between the TT genotype and response to folate
+          supplementation. Other genetic and clinical factors may also affect a patient's response to folate supplementation.
+      - id: clinpgx_summary_1450814424_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          There is currently no evidence regarding the association between the TT genotype and response to folate supplementation
+          in the context of pharmacotherapy for depression.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204525
+    label: rs1801131 / bevacizumab, carboplatin, cisplatin, cyanocobalamin, folic acid, pemetrexed / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: bevacizumab
+        pharmgkb_id: PA130232992
+      - name: carboplatin
+        pharmgkb_id: PA448803
+      - name: cisplatin
+        pharmgkb_id: PA449014
+      - name: cyanocobalamin
+        pharmgkb_id: PA451892
+      - name: folic acid
+        pharmgkb_id: PA449692
+      - name: pemetrexed
+        pharmgkb_id: PA10810
+    phenotypes:
+      - Neoplasms
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204525"
+      url: https://www.clinpgx.org/summaryAnnotation/981204525
+    notes:
+      rs1801131 (MTHFR); bevacizumab, carboplatin, cisplatin, cyanocobalamin, folic acid or pemetrexed; Neoplasms (level
+      3 Efficacy)
+    effects:
+      - id: clinpgx_summary_981204525_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Genotype GG may be associated with overall survival and progression free survival  in cancer patients treated with
+          pemetrexed and a few other anticancer drugs as compared to genotype TT. However, contradictory findings (better and
+          poorer responses) have been reported. Other genetic and clinical factors may influence a patient's response to pemetrexed.
+      - id: clinpgx_summary_981204525_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Genotype GT may be associated with overall survival and progression free survival  in cancer patients treated with
+          pemetrexed and a few other anticancer drugs as compared to genotype TT. However, contradictory findings (better and
+          poorer responses) have been reported. Other genetic and clinical factors may influence a patient's response to pemetrexed.
+      - id: clinpgx_summary_981204525_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Genotype TT may be associated with overall survival and progression free survival  in cancer patients treated with
+          pemetrexed and a few other anticancer drugs as compared to genotype GG and GT. However, contradictory findings (better
+          and poorer responses) have been reported. Other genetic and clinical factors may influence a patient's response to pemetrexed.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450932374
+    label: rs1801131 / capecitabine, fluorouracil, leucovorin, oxaliplatin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: capecitabine
+        pharmgkb_id: PA448771
+      - name: fluorouracil
+        pharmgkb_id: PA128406956
+      - name: leucovorin
+        pharmgkb_id: PA450198
+      - name: oxaliplatin
+        pharmgkb_id: PA131285527
+    phenotypes:
+      - Neoplasms
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450932374"
+      url: https://www.clinpgx.org/summaryAnnotation/1450932374
+    notes: rs1801131 (MTHFR); capecitabine, fluorouracil, leucovorin or oxaliplatin; Neoplasms (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450932374_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with cancer and the GG genotype may be at an increased risk of experiencing drug toxicity when treated
+          with fluoropyrimidine-based chemotherapy as compared to patients with the GT or TT genotypes. However, other studies
+          have not found an association between this variant and toxic side effects of fluoropyrimidine-based chemotherapy. Other
+          genetic and clinical factors may also affect a patient's risk of experiencing fluoropyrimidine-based chemotherapy-related
+          toxicity.
+      - id: clinpgx_summary_1450932374_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with cancer and the GT genotype may be at a decreased risk of experiencing drug toxicity when treated with
+          fluoropyrimidine-based chemotherapy as compared to patients with the GG genotype. However, other studies have not found
+          an association between this variant and toxic side effects of fluoropyrimidine-based chemotherapy. Other genetic and
+          clinical factors may also affect a patient's risk of experiencing fluoropyrimidine-based chemotherapy-related toxicity.
+      - id: clinpgx_summary_1450932374_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with cancer and the TT genotype may be at a decreased risk of experiencing drug toxicity when treated with
+          fluoropyrimidine-based chemotherapy as compared to patients with the GG genotype. However, other studies have not found
+          an association between this variant and toxic side effects of fluoropyrimidine-based chemotherapy. Other genetic and
+          clinical factors may also affect a patient's risk of experiencing fluoropyrimidine-based chemotherapy-related toxicity.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655386436
+    label: rs1801131 / methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Rheumatoid arthritis
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655386436"
+      url: https://www.clinpgx.org/summaryAnnotation/655386436
+    notes: rs1801131 (MTHFR); methotrexate; Arthritis, Rheumatoid (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655386436_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1801131 GG genotype and Rheumatoid Arthritis who are treated with methotrexate may have an increased
+          risk of drug toxicity and adverse events as compared to patients with the TT genotype. However, conflicting evidence
+          has been reported. Other genetic and clinical factors may also influence risk for adverse events with methotrexate treatment.
+      - id: clinpgx_summary_655386436_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          Patients with the rs1801131 GT genotype and Rheumatoid Arthritis who are treated with methotrexate may have a decreased,
+          but not absent, risk of drug toxicity and adverse events as compared to patients with the GG genotype or may have an
+          increased risk of drug toxicity and adverse events as compared to patients with the TT genotype.  However, conflicting
+          evidence has been reported. Other genetic and clinical factors may also influence risk for adverse events with methotrexate
+          treatment.
+      - id: clinpgx_summary_655386436_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the rs1801131 TT genotype and Rheumatoid Arthritis who are treated with methotrexate may have a decreased,
+          but not absent, risk of drug toxicity and adverse events as compared to patients with the GG genotype.  However, conflicting
+          evidence has been reported. Other genetic and clinical factors may also influence risk for adverse events with methotrexate
+          treatment.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_699639332
+    label: rs1801131 / methotrexate / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - MTHFR
+    variant: rs1801131
+    drugs:
+      - name: methotrexate
+        pharmgkb_id: PA450428
+    phenotypes:
+      - Acute lymphoblastic leukemia
+      - Burkitt Lymphoma
+      - Lymphoma, T-Cell
+      - Non-Hodgkin Lymphoma
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "699639332"
+      url: https://www.clinpgx.org/summaryAnnotation/699639332
+    notes:
+      rs1801131 (MTHFR); methotrexate; Burkitt Lymphoma, Lymphoma, Non-Hodgkin, Lymphoma, T-Cell and Precursor Cell Lymphoblastic
+      Leukemia-Lymphoma (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_699639332_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 GG genotype and
+          risk of drug toxicity when treated with methotrexate. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence risk of drug toxicity when treated with methotrexate.
+      - id: clinpgx_summary_699639332_gt
+        label: GT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype GT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 GT genotype and
+          risk of drug toxicity when treated with methotrexate. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence risk of drug toxicity when treated with methotrexate.
+      - id: clinpgx_summary_699639332_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1801131.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1801131 TT genotype and
+          risk of drug toxicity when treated with methotrexate. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence risk of drug toxicity when treated with methotrexate.

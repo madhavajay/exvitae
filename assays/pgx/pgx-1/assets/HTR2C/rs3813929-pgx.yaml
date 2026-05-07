@@ -1,0 +1,407 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs3813929.yaml
+gene: HTR2C
+rsid: rs3813929
+variant_pa_id: PA166157875
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166157875/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451256466
+    label: rs3813929 / clozapine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - HTR2C
+    variant: rs3813929
+    drugs:
+      - name: clozapine
+        pharmgkb_id: PA449061
+    phenotypes:
+      - Mental Disorders
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451256466"
+      url: https://www.clinpgx.org/summaryAnnotation/1451256466
+    notes: rs3813929 (HTR2C); clozapine; Mental Disorders and Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451256466_c
+        label: C
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype C.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome, the C genotype and psychiatric disorders who are treated with clozapine may have
+          an increased risk of weight gain as compared to patients with the T genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment.
+      - id: clinpgx_summary_1451256466_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the CC genotype and psychiatric disorders who are treated with clozapine may have
+          an increased risk of weight gain as compared to patients with the TT genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+      - id: clinpgx_summary_1451256466_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the CT genotype and psychiatric disorders who are treated with clozapine may have
+          a decreased, but not absent, risk of weight gain as compared to patients with the CC genotype. However, some studies
+          find no association with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight
+          gain with antipsychotic treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+      - id: clinpgx_summary_1451256466_t
+        label: T
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype T.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome, the T genotype and psychiatric disorders who are treated with clozapine may have
+          a decreased risk of weight gain as compared to patients with the C genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment.
+      - id: clinpgx_summary_1451256466_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the TT genotype and psychiatric disorders who are treated with clozapine may have
+          a decreased, but not absent, risk of weight gain as compared to patients with the CC genotype. However, some studies
+          find no association with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight
+          gain with antipsychotic treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451256440
+    label: rs3813929 / olanzapine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - HTR2C
+    variant: rs3813929
+    drugs:
+      - name: olanzapine
+        pharmgkb_id: PA450688
+    phenotypes:
+      - Mental Disorders
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451256440"
+      url: https://www.clinpgx.org/summaryAnnotation/1451256440
+    notes: rs3813929 (HTR2C); olanzapine; Mental Disorders and Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451256440_c
+        label: C
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype C.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome, the C genotype and psychiatric disorders who are treated with olanzapine may have
+          an increased risk of weight gain as compared to patients with the T genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment.
+      - id: clinpgx_summary_1451256440_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the CC genotype and psychiatric disorders who are treated with olanzapine may have
+          an increased risk of weight gain as compared to patients with the TT genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+      - id: clinpgx_summary_1451256440_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the CT genotype and psychiatric disorders who are treated with olanzapine may have
+          a decreased, but not absent, risk of weight gain as compared to patients with the CC genotype. However, some studies
+          find no association with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight
+          gain with antipsychotic treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+      - id: clinpgx_summary_1451256440_t
+        label: T
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype T.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome, the T genotype and psychiatric disorders who are treated with olanzapine may have
+          a decreased risk of weight gain as compared to patients with the C genotype. This gene is on the X chromosome and males
+          have only one allele. However, some studies find no association with weight gain. Other genetic and clinical factors
+          may also influence a patient's risk for weight gain with antipsychotic treatment.
+      - id: clinpgx_summary_1451256440_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the TT genotype and psychiatric disorders who are treated with olanzapine may have
+          a decreased, but not absent, risk of weight gain as compared to patients with the CC genotype. However, some studies
+          find no association with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight
+          gain with antipsychotic treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451256448
+    label: rs3813929 / risperidone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - HTR2C
+    variant: rs3813929
+    drugs:
+      - name: risperidone
+        pharmgkb_id: PA451257
+    phenotypes:
+      - Mental Disorders
+      - Schizophrenia
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451256448"
+      url: https://www.clinpgx.org/summaryAnnotation/1451256448
+    notes: rs3813929 (HTR2C); risperidone; Mental Disorders and Schizophrenia (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451256448_c
+        label: C
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype C.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome, the C genotype and psychiatric disorders who are treated with risperidone may have
+          an increased risk of weight gain as compared to patients with the T genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment.
+      - id: clinpgx_summary_1451256448_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the CC genotype and psychiatric disorders who are treated with risperidone may
+          have an increased risk of weight gain as compared to patients with the TT genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+      - id: clinpgx_summary_1451256448_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the CT genotype and psychiatric disorders who are treated with risperidone may
+          have a decreased, but not absent, risk of weight gain as compared to patients with the CC genotype. However, some studies
+          find no association with weight gain, or an association in the opposite direction. Other genetic and clinical factors
+          may also influence a patient's risk for weight gain with antipsychotic treatment. This gene is on the X chromosome therefore
+          some individuals may have only one allele.
+      - id: clinpgx_summary_1451256448_t
+        label: T
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype T.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome, the T genotype and psychiatric disorders who are treated with risperidone may have
+          a decreased risk of weight gain as compared to patients with the C genotype. This gene is on the X chromosome and males
+          have only one allele. However, some studies find no association with weight gain. Other genetic and clinical factors
+          may also influence a patient's risk for weight gain with antipsychotic treatment.
+      - id: clinpgx_summary_1451256448_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the TT genotype and psychiatric disorders who are treated with risperidone may
+          have a decreased, but not absent, risk of weight gain as compared to patients with the CC genotype. However, some studies
+          find no association with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight
+          gain with antipsychotic treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655384971
+    label: rs3813929 / antipsychotics / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - HTR2C
+    variant: rs3813929
+    drugs:
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+    phenotypes:
+      - Mental Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655384971"
+      url: https://www.clinpgx.org/summaryAnnotation/655384971
+    notes: rs3813929 (HTR2C); antipsychotics; Mental Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_655384971_c
+        label: C
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype C.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome, the C genotype and psychiatric disorders who are treated with antipsychotics may
+          have an increased risk of weight gain as compared to patients with the T genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment.
+      - id: clinpgx_summary_655384971_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the CC genotype and psychiatric disorders who are treated with antipsychotics may
+          have an increased risk of weight gain as compared to patients with the TT genotype. However, some studies find no association
+          with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight gain with antipsychotic
+          treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+      - id: clinpgx_summary_655384971_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the CT genotype and psychiatric disorders who are treated with antipsychotics may
+          have a decreased, but not absent, risk of weight gain as compared to patients with the CC genotype. However, some studies
+          find no association with weight gain. Other genetic and clinical factors may also influence a patient's risk for weight
+          gain with antipsychotic treatment. This gene is on the X chromosome therefore some individuals may have only one allele.
+      - id: clinpgx_summary_655384971_t
+        label: T
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype T.
+          chromosome_count: 1
+        text:
+          Patients with one X-chromosome, T genotype and psychiatric disorders who are treated with antipsychotics may have
+          a decreased risk of weight gain as compared to patients with the C genotype. Other genetic and clinical factors may
+          also influence a patient's risk for weight gain with antipsychotic treatment.
+      - id: clinpgx_summary_655384971_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs3813929.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+          chromosome_count: 2
+        text:
+          Patients with two X-chromosomes, the TT genotype and psychiatric disorders or schizophrenia who are treated with
+          antipsychotics may have a decreased, but not absent, risk of weight gain as compared to patients with the CC genotype.
+          However, some studies find no association with weight gain. Other genetic and clinical factors may also influence a
+          patient's risk for weight gain with antipsychotic treatment. This gene is on the X chromosome therefore some individuals
+          may have only one allele.

@@ -1,0 +1,114 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1799807.yaml
+gene: BCHE
+rsid: rs1799807
+variant_pa_id: PA166156327
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156327/summaryAnnotation
+  - kind: clinpgx_label_annotations
+    name: ClinPGx / PharmGKB drug label annotations
+    url: https://www.clinpgx.org/variant/PA166156327/labelAnnotation
+findings:
+  - schema: bioscript:pgx-label:1.0
+    id: clinpgx_label_PA166122970
+    label: Annotation of FDA Label for succinylcholine and BCHE, CACNA1S, RYR1
+    authority_type: regulatory_label
+    genes:
+      - BCHE
+      - CACNA1S
+      - RYR1
+    variant: rs1799807
+    drugs:
+      - name: succinylcholine
+        pharmgkb_id: PA451522
+    regulatory_sources:
+      - FDA
+    source_type: Drug Label
+    evidence:
+      source: ClinPGx
+      kind: label_annotation
+      id: PA166122970
+      url: https://www.clinpgx.org/labelAnnotation/PA166122970
+    notes: Annotation of FDA Label for succinylcholine and BCHE, CACNA1S, RYR1
+    pgx_action_level: Actionable PGx
+    summary:
+      Succinylcholine (QUELICIN) is rapid acting, depolarizing skeletal muscle relaxant indicated as an adjunct to general
+      anesthesia. The label warns that individuals who are carriers of the atypical variant of the plasma cholinesterase gene
+      ( BCHE ) are at risk of prolonged apnea if administered succinylcholine. The label also notes the risk for malignant hyperthermia.
+    prescribing_information: |-
+      Excerpts from the succinylcholine chloride (QUELICIN) drug label:
+      Succinylcholine is contraindicated in persons with personal or familial history of malignant hyperthermia, skeletal muscle myopathies, and known hypersensitivity to the drug.
+      Succinylcholine is metabolized by plasma cholinesterase and should be used with caution, if at all, in patients known to be or suspected of being homozygous for the atypical plasma cholinesterase gene.
+    prescribing_actions:
+      - Alternate Drug
+      - Other Guidance
+    related_alleles:
+      - id: PA166156327
+        symbol: rs1799807
+        name: rs1799807
+    highlighted_label_pdf: https://api.clinpgx.org/v1/download/file/attachment/Succinylcholine_20230402_FDA.pdf
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184513863
+    label: rs1799807 / succinylcholine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - BCHE
+    variant: rs1799807
+    drugs:
+      - name: succinylcholine
+        pharmgkb_id: PA451522
+    phenotypes:
+      - Butyrylcholinesterase deficiency
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184513863"
+      url: https://www.clinpgx.org/summaryAnnotation/1184513863
+    notes: rs1799807 (BCHE); succinylcholine; postanesthesia apnea (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1184513863_cc
+        label: CC
+        binding:
+          source: variant
+          variant: rs1799807.yaml
+          allele: C
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype CC.
+        text:
+          Patients with the CC genotype have an increased risk of post anesthesia apnea  when treated with succinylcholine
+          as compared to patients with the TT genotype. Other genetic and clinical factors may also influence risk of post anesthesia
+          apnea.
+      - id: clinpgx_summary_1184513863_ct
+        label: CT
+        binding:
+          source: variant
+          variant: rs1799807.yaml
+          allele: C
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype CT.
+        text:
+          Patients with the CT genotype have an increased risk of post anesthesia apnea  when treated with succinylcholine
+          as compared to patients with the TT genotype and a decreased risk of post anesthesia apnea as compared to patients with
+          the CC genotype. Other genetic and clinical factors may also influence risk of post anesthesia apnea.
+      - id: clinpgx_summary_1184513863_tt
+        label: TT
+        binding:
+          source: variant
+          variant: rs1799807.yaml
+          allele: T
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype TT.
+        text:
+          Patients with the TT genotype have a decreased risk of post anesthesia apnea as compared to patients with the CC
+          genotype when treated with succinylcholine. Other genetic and clinical factors may also influence risk of post anesthesia
+          apnea.

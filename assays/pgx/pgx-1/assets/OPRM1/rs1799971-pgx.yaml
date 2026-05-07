@@ -1,0 +1,3534 @@
+schema: bioscript:pgx-findings:1.0
+version: "1.0"
+variant: rs1799971.yaml
+gene: OPRM1
+rsid: rs1799971
+variant_pa_id: PA166156991
+sources:
+  - kind: clinpgx_summary_annotations
+    name: ClinPGx / PharmGKB summary annotations
+    url: https://www.clinpgx.org/variant/PA166156991/summaryAnnotation
+findings:
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826907
+    label: rs1799971 / alfentanil / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: alfentanil
+        pharmgkb_id: PA448084
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826907"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826907
+    notes: rs1799971 (OPRM1); alfentanil; Pain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450826907_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have an increased analgesic response to alfentanil as compared to patients
+          with the AG or GG genotypes. Note that one study reported a non-significant association. This drug-variant pair has
+          been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or
+          clinical factors may also affect a patient's response to alfentanil.
+      - id: clinpgx_summary_1450826907_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have a decreased analgesic response to alfentanil as compared to patients
+          with the AA genotype. Note that one study reported a non-significant association. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect a patient's response to alfentanil.
+      - id: clinpgx_summary_1450826907_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have a decreased analgesic response to alfentanil as compared to patients
+          with the AA genotype. Note that one study reported a non-significant association. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect a patient's response to alfentanil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449715626
+    label: rs1799971 / alfentanil / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: alfentanil
+        pharmgkb_id: PA448084
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449715626"
+      url: https://www.clinpgx.org/summaryAnnotation/1449715626
+    notes: rs1799971 (OPRM1); alfentanil (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1449715626_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may experience an increased severity of respiratory depression when treated
+          with alfentanil as compared to patients with the GG genotype. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect severity
+          of respiratory depression when treated with alfentanil.
+      - id: clinpgx_summary_1449715626_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may experience an increased severity of respiratory depression when treated
+          with alfentanil as compared to patients with the GG genotype. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect severity
+          of respiratory depression when treated with alfentanil.
+      - id: clinpgx_summary_1449715626_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may experience a decreased severity of respiratory depression when treated
+          with alfentanil as compared to patients with the AA or AG genotypes. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also affect severity of respiratory depression when treated with alfentanil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826913
+    label: rs1799971 / alfentanil / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: alfentanil
+        pharmgkb_id: PA448084
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826913"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826913
+    notes: rs1799971 (OPRM1); alfentanil; Pain (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1450826913_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have decreased plasma concentrations of alfentanil as compared to patients
+          with the AG or GG genotypes. However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic
+          relationship between rs1799971 and alfentanil and does not include evidence about clinical outcomes. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          or clinical factors may also affect plasma concentrations of alfentanil.
+      - id: clinpgx_summary_1450826913_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have increased plasma concentrations of alfentanil as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic
+          relationship between rs1799971 and alfentanil and does not include evidence about clinical outcomes. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          or clinical factors may also affect plasma concentrations of alfentanil.
+      - id: clinpgx_summary_1450826913_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have increased plasma concentrations of alfentanil as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. This annotation only covers the pharmacokinetic
+          relationship between rs1799971 and alfentanil and does not include evidence about clinical outcomes. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          or clinical factors may also affect plasma concentrations of alfentanil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826899
+    label: rs1799971 / alfentanil / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: alfentanil
+        pharmgkb_id: PA448084
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826899"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826899
+    notes: rs1799971 (OPRM1); alfentanil; Pain (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1450826899_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have reduced alfentanil dose requirements as compared to patients with
+          the AG or GG genotypes. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic or clinical factors may also affect a alfentanil dose requirements.
+      - id: clinpgx_summary_1450826899_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have increased alfentanil dose requirements as compared to patients
+          with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic or clinical factors may also affect a alfentanil dose requirements.
+      - id: clinpgx_summary_1450826899_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have increased alfentanil dose requirements as compared to patients
+          with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic or clinical factors may also affect a alfentanil dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450932674
+    label: rs1799971 / buprenorphine, fentanyl, tramadol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: buprenorphine
+        pharmgkb_id: PA448685
+      - name: fentanyl
+        pharmgkb_id: PA449599
+      - name: tramadol
+        pharmgkb_id: PA451735
+    phenotypes:
+      - adverse events
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450932674"
+      url: https://www.clinpgx.org/summaryAnnotation/1450932674
+    notes: rs1799971 (OPRM1); buprenorphine, fentanyl and tramadol; adverse events and Opioid-Related Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450932674_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype and who are being treated with buprenorphine with optional fentanyl and
+          tramadol for prescription opioid dependence may report more adverse events as compared to patients with the AG or GG
+          genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect the
+          incidence of adverse events during treatment for opioid dependence.
+      - id: clinpgx_summary_1450932674_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype and who are being treated with buprenorphine with optional fentanyl and
+          tramadol for prescription opioid dependence may report fewer adverse events as compared to patients with the AA genotype.
+          However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation” by CPIC,
+          as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect the incidence
+          of adverse events during treatment for opioid dependence.
+      - id: clinpgx_summary_1450932674_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype and who are being treated with buprenorphine with optional fentanyl and
+          tramadol for prescription opioid dependence may report fewer adverse events as compared to patients with the AA genotype.
+          However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation” by CPIC,
+          as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect the incidence
+          of adverse events during treatment for opioid dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450931822
+    label: rs1799971 / fentanyl / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: fentanyl
+        pharmgkb_id: PA449599
+    phenotypes:
+      - Somnolence
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450931822"
+      url: https://www.clinpgx.org/summaryAnnotation/1450931822
+    notes: rs1799971 (OPRM1); fentanyl; somnolence (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450931822_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may be less likely to experience somnolence following fentanyl administration
+          as compared to patients with the AG or GG genotypes. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect the
+          likelihood of fentanyl-induced somnolence.
+      - id: clinpgx_summary_1450931822_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may be more likely to experience somnolence following fentanyl administration
+          as compared to patients with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC,
+          as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect the likelihood
+          of fentanyl-induced somnolence.
+      - id: clinpgx_summary_1450931822_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may be more likely to experience somnolence following fentanyl administration
+          as compared to patients with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC,
+          as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect the likelihood
+          of fentanyl-induced somnolence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826949
+    label: rs1799971 / fentanyl / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: fentanyl
+        pharmgkb_id: PA449599
+    phenotypes:
+      - Pain
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826949"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826949
+    notes: rs1799971 (OPRM1); fentanyl; Pain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450826949_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have a decreased analgesic response to fentanyl as compared to patients
+          with the AG or GG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect response to fentanyl.
+      - id: clinpgx_summary_1450826949_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have an increased analgesic response to fentanyl as compared to patients
+          with the AA genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may
+          also affect response to fentanyl.
+      - id: clinpgx_summary_1450826949_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have an increased analgesic response to fentanyl as compared to patients
+          with the AA genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may
+          also affect response to fentanyl.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826931
+    label: rs1799971 / fentanyl / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: fentanyl
+        pharmgkb_id: PA449599
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826931"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826931
+    notes: rs1799971 (OPRM1); fentanyl; Pain and Pain, Postoperative (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1450826931_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have decreased fentanyl dose requirements as compared to patients with
+          the GG genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect fentanyl
+          dose requirements.
+      - id: clinpgx_summary_1450826931_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have decreased fentanyl dose requirements as compared to patients with
+          the GG genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect fentanyl
+          dose requirements.
+      - id: clinpgx_summary_1450826931_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have increased fentanyl dose requirements as compared to patients with
+          the AA or AG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect fentanyl dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1444607723
+    label: rs1799971 / hydrocodone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: hydrocodone
+        pharmgkb_id: PA449900
+    phenotypes:
+      - Constipation
+      - Dry mouth
+      - Respiratory Insufficiency
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1444607723"
+      url: https://www.clinpgx.org/summaryAnnotation/1444607723
+    notes: rs1799971 (OPRM1); hydrocodone; Constipation, dry mouth and Respiratory Insufficiency (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1444607723_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype who are receiving hydrocodone may have a decreased risk for experiencing
+          side effects as compared to patients with the AG or GG genotype. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also influence
+          risk of side effects when receiving hydrocodone.
+      - id: clinpgx_summary_1444607723_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype who are receiving hydrocodone may have an increased risk for experiencing
+          side effects as compared to patients with the AA genotype. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also influence
+          risk of side effects when receiving hydrocodone.
+      - id: clinpgx_summary_1444607723_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype who are receiving hydrocodone may have an increased risk for experiencing
+          side effects as compared to patients with the AA genotype. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also influence
+          risk of side effects when receiving hydrocodone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451223520
+    label: rs1799971 / morphine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes:
+      - Neonatal Abstinence Syndrome
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451223520"
+      url: https://www.clinpgx.org/summaryAnnotation/1451223520
+    notes: rs1799971 (OPRM1); morphine; Neonatal Abstinence Syndrome (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451223520_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Infants with the rs1799971 AA genotype may be more likely to require treatment with morphine for neonatal abstinence
+          syndrome as compared to infants with the AG or GG genotypes. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect severity
+          of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451223520_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Infants with the rs1799971 AG genotype may be less likely to require treatment with morphine for neonatal abstinence
+          syndrome as compared to infants with the AA genotype. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect severity
+          of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451223520_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Infants with the rs1799971 GG genotype may be less likely to require treatment with morphine for neonatal abstinence
+          syndrome as compared to infants with the AA genotype. This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may also affect severity
+          of neonatal abstinence syndrome.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826919
+    label: rs1799971 / codeine / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: codeine
+        pharmgkb_id: PA449088
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826919"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826919
+    notes: rs1799971 (OPRM1); codeine (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1450826919_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have decreased codeine dose requirements as compared to patients with
+          the AG genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be
+          not clinically actionable. Other genetic or clinical factors may also affect codeine dose requirements.
+      - id: clinpgx_summary_1450826919_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have increased codeine dose requirements as compared to patients with
+          the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be
+          not clinically actionable. Other genetic or clinical factors may also affect codeine dose requirements.
+      - id: clinpgx_summary_1450826919_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          There is currently no available evidence regarding the association between the rs1799971 GG genotype and codeine
+          dose requirements. However, patients with the rs1799971 AG genotype may have increased codeine dose requirements as
+          compared to patients with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as
+          it was determined to be not clinically actionable. Other genetic or clinical factors may also affect codeine dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826981
+    label: rs1799971 / acetaminophen, tramadol / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: acetaminophen
+        pharmgkb_id: PA448015
+      - name: tramadol
+        pharmgkb_id: PA451735
+    phenotypes:
+      - Neuropathic pain
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826981"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826981
+    notes: rs1799971 (OPRM1); acetaminophen and tramadol; neuropathic pain (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450826981_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have an increased response to combined acetaminophen and tramadol as
+          compared to patients with the AG or GG genotypes. Other genetic or clinical factors may also affect response to combined
+          acetaminophen and tramadol.
+      - id: clinpgx_summary_1450826981_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have a decreased response to combined acetaminophen and tramadol as
+          compared to patients with the AA genotype. Other genetic or clinical factors may also affect response to combined acetaminophen
+          and tramadol.
+      - id: clinpgx_summary_1450826981_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have a decreased response to combined acetaminophen and tramadol as
+          compared to patients with the AA genotype. Other genetic or clinical factors may also affect response to combined acetaminophen
+          and tramadol.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450812488
+    label: rs1799971 / opioids / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - adverse events
+      - Nausea
+      - Vomiting
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450812488"
+      url: https://www.clinpgx.org/summaryAnnotation/1450812488
+    notes: rs1799971 (OPRM1); opioids; adverse events, Nausea and Vomiting (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450812488_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may at an increased risk of experiencing opioid-induced adverse effects,
+          including nausea and vomiting, as compared to patients with the AG or GG genotypes. However, conflicting evidence has
+          been reported. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not
+          clinically actionable. Other genetic and clinical factors may also affect risk of experiencing opioid-induced adverse
+          effects.
+      - id: clinpgx_summary_1450812488_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may at a decreased risk of experiencing opioid-induced adverse effects,
+          as compared to patients with the AA genotype, but at an increased risk of experiencing opioid-induced nausea and vomiting
+          as compared to patients with the GG genotype. However, conflicting evidence has been reported. This drug-variant pair
+          has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also affect risk of experiencing opioid-induced adverse effects.
+      - id: clinpgx_summary_1450812488_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may at a decreased risk of experiencing adverse effects, including nausea
+          and vomiting, as a result of opioids as compared to patients with the AA or AG genotypes. However, conflicting evidence
+          has been reported. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be
+          not clinically actionable. Other genetic and clinical factors may also affect risk of experiencing opioid-induced adverse
+          effects.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826993
+    label: rs1799971 / opioids / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Pain, Postoperative
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826993"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826993
+    notes: rs1799971 (OPRM1); opioids; Pain, Postoperative (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450826993_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have an increased response to opioids as compared to patients with the
+          AG genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not
+          clinically actionable.  Other genetic or clinical factors may also affect response to opioids.
+      - id: clinpgx_summary_1450826993_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have a decreased response to opioids as compared to patients with the
+          AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not
+          clinically actionable. Other genetic or clinical factors may also affect response to opioids.
+      - id: clinpgx_summary_1450826993_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          There is currently no available evidence regarding the association between the rs1799971 GG genotype and response
+          to opioids. However, patients with the AG genotype may have a decreased response to opioids as compared to patients
+          with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic or clinical factors may also affect response to opioids.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451135100
+    label: rs1799971 / oxycodone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: oxycodone
+        pharmgkb_id: PA450741
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451135100"
+      url: https://www.clinpgx.org/summaryAnnotation/1451135100
+    notes: rs1799971 (OPRM1); oxycodone (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451135100_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have an increased analgesic response to oxycodone as compared to patients
+          with the AG or GG genotypes. However, another study failed to find an association. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also affect response to oxycodone.
+      - id: clinpgx_summary_1451135100_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have a decreased analgesic response to oxycodone as compared to patients
+          with the AA genotype. However, another study failed to find an association. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also affect response to oxycodone.
+      - id: clinpgx_summary_1451135100_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have a decreased analgesic response to oxycodone as compared to patients
+          with the AA genotype. However, another study failed to find an association. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also affect response to oxycodone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1447953270
+    label: rs1799971 / methadone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: methadone
+        pharmgkb_id: PA450401
+    phenotypes:
+      - Opioid-Related Disorders
+      - Sleep Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1447953270"
+      url: https://www.clinpgx.org/summaryAnnotation/1447953270
+    notes: rs1799971 (OPRM1); methadone; Opioid-Related Disorders and Sleep Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1447953270_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype and opioid dependence may have an increased severity of sleep disorders
+          when treated with methadone as compared to patients with the AG and GG genotypes. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also influence the severity of sleep disorders when treated with methadone.
+      - id: clinpgx_summary_1447953270_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype and opioid dependence may have decreased severity of sleep disorders when
+          treated with methadone as compared to patients with the AA genotype. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also influence the severity of sleep disorders when treated with methadone.
+      - id: clinpgx_summary_1447953270_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype and opioid dependence may have decreased severity of sleep disorders when
+          treated with methadone as compared to patients with the AA genotype. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors may
+          also influence the severity of sleep disorders when treated with methadone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451223500
+    label: rs1799971 / methadone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: methadone
+        pharmgkb_id: PA450401
+    phenotypes:
+      - Neonatal Abstinence Syndrome
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451223500"
+      url: https://www.clinpgx.org/summaryAnnotation/1451223500
+    notes: rs1799971 (OPRM1); methadone; Neonatal Abstinence Syndrome (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451223500_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Infants with the rs1799971 AA genotype may be more likely to require treatment with methadone for neonatal abstinence
+          syndrome as compared to infants with the AG or GG genotypes. However, conflicting evidence has been reported. Other
+          genetic and clinical factors may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451223500_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Infants with the rs1799971 AG genotype may be less likely to require treatment with methadone for neonatal abstinence
+          syndrome as compared to infants with the AA genotype. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also affect severity of neonatal abstinence syndrome.
+      - id: clinpgx_summary_1451223500_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Infants with the rs1799971 GG genotype may be less likely to require treatment with methadone for neonatal abstinence
+          syndrome as compared to infants with the AA genotype. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also affect severity of neonatal abstinence syndrome.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826987
+    label: rs1799971 / opioids / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826987"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826987
+    notes: rs1799971 (OPRM1); opioids; Pain and Pain, Postoperative (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1450826987_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have decreased opioid dose requirements as compared to patients with
+          the AG or GG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect opioid dose requirements.
+      - id: clinpgx_summary_1450826987_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have increased opioid dose requirements as compared to patients with
+          the AA genotype, but decreased opioid dose requirements as compared to patients with the GG genotype. However, conflicting
+          evidence has been reported. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic or clinical factors may also affect opioid dose requirements.
+      - id: clinpgx_summary_1450826987_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have increased opioid dose requirements as compared to patients with
+          the AA or AG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect opioid dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451350944
+    label: rs1799971 / morphine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes:
+      - Sleep Apnea Syndromes
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451350944"
+      url: https://www.clinpgx.org/summaryAnnotation/1451350944
+    notes: rs1799971 (OPRM1); morphine; Sleep Apnea Syndromes (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451350944_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have increased severity of sleep apnea when treated with morphine as
+          compared to patients with the AG genotype. Other genetic and clinical factors may also influence severity of sleep apnea
+          when treated with morphine.
+      - id: clinpgx_summary_1451350944_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have decreased severity of sleep apnea when treated with morphine as
+          compared to patients with the AA genotype. Other genetic and clinical factors may also influence severity of sleep apnea
+          when treated with morphine.
+      - id: clinpgx_summary_1451350944_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          There is currently no available evidence regarding the association between the rs1799971 GG genotype and severity
+          of sleep apnea when treated with morphine. However, patients with the rs1799971 AG genotype may have decreased severity
+          of sleep apnea when treated with morphine as compared to patients with the AA genotype. Other genetic and clinical factors
+          may also influence severity of sleep apnea when treated with morphine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451351160
+    label: rs1799971 / opioids / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Sleep Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451351160"
+      url: https://www.clinpgx.org/summaryAnnotation/1451351160
+    notes: rs1799971 (OPRM1); opioids; Sleep Disorders (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451351160_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype and chronic pain may experience increased quality of sleep when treated
+          with opioids as compared to patients with the GG genotype. Other genetic and clinical factors may also influence sleep
+          quality when treated with opioids.
+      - id: clinpgx_summary_1451351160_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype and chronic pain may experience increased quality of sleep when treated
+          with opioids as compared to patients with the GG genotype. Other genetic and clinical factors may also influence sleep
+          quality when treated with opioids.
+      - id: clinpgx_summary_1451351160_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype and chronic pain may experience decreased quality of sleep when treated
+          with opioids as compared to patients with the AA or AG genotypes. Other genetic and clinical factors may also influence
+          sleep quality when treated with opioids.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826975
+    label: rs1799971 / sufentanil / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: sufentanil
+        pharmgkb_id: PA451527
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826975"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826975
+    notes: rs1799971 (OPRM1); sufentanil; Pain and Pain, Postoperative (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1450826975_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have decreased sufentanil dose requirements as compared to patients
+          with the AG or GG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect sufentanil dose requirements.
+      - id: clinpgx_summary_1450826975_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have increased sufentanil dose requirements as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may
+          also affect sufentanil dose requirements.
+      - id: clinpgx_summary_1450826975_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have increased sufentanil dose requirements as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may
+          also affect sufentanil dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204641
+    label: rs1799971 / ethanol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: ethanol
+        pharmgkb_id: PA448073
+    phenotypes: []
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204641"
+      url: https://www.clinpgx.org/summaryAnnotation/981204641
+    notes: rs1799971 (OPRM1); ethanol (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_981204641_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have a decreased, but not absent, severity of intoxication and a decreased
+          response to ethanol as compared to patients with the AG and GG genotypes. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence response to ethanol.
+      - id: clinpgx_summary_981204641_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have an increased severity of intoxication and an increased response
+          when exposed to ethanol as compared to patients with the AA genotype. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence response to ethanol.
+      - id: clinpgx_summary_981204641_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have an increased severity of intoxication and an increased response
+          when exposed to ethanol as compared to patients with the AA genotype. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence response to ethanol.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204774
+    label: rs1799971 / drugs used in nicotine dependence, nicotine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: drugs used in nicotine dependence
+        pharmgkb_id: PA164712720
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204774"
+      url: https://www.clinpgx.org/summaryAnnotation/981204774
+    notes: rs1799971 (OPRM1); Drugs used in nicotine dependence or nicotine; Tobacco Use Disorder (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_981204774_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with AA genotype may have an increased likelihood of smoking cessation when treated with nicotine replacement
+          therapy (transdermal nicotine patch) as compared to patients with the AG and GG genotype. However, contradictory findings
+          reporting the opposite association for this genotype with decreased likelihood of smoking cessation have been published.
+          Other genetic and clinical factors may influence a patient's likelihood of smoking cessation.
+      - id: clinpgx_summary_981204774_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with AG genotype may have a decreased likelihood of smoking cessation when treated with nicotine replacement
+          therapy (transdermal nicotine patch) as compared to patients with the AA genotype. However, contradictory findings reporting
+          the opposite association for this genotype with increased likelihood of smoking cessation have been published. Other
+          genetic and clinical factors may influence a patient's likelihood of smoking cessation.
+      - id: clinpgx_summary_981204774_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with GG genotype may have a decreased likelihood of smoking cessation when treated with nicotine replacement
+          therapy (transdermal nicotine patch) as compared to patients with the AA genotype. However, contradictory findings reporting
+          the opposite association for this  genotype with increased likelihood of smoking cessation have been published. Other
+          genetic and clinical factors may influence a patient's likelihood of smoking cessation. Other genetic and clinical factors
+          may influence a patient's likelihood of smoking cessation.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451352420
+    label: rs1799971 / sufentanil / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: sufentanil
+        pharmgkb_id: PA451527
+    phenotypes:
+      - adverse events
+      - Pain, Postoperative
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451352420"
+      url: https://www.clinpgx.org/summaryAnnotation/1451352420
+    notes: rs1799971 (OPRM1); sufentanil; adverse events and Pain, Postoperative (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451352420_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          likelihood of experiencing adverse events when treated with sufentanil. However, conflicting evidence has been reported.
+          This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          Other genetic and clinical factors may also affect likelihood of experiencing adverse events when treated with sufentanil.
+      - id: clinpgx_summary_1451352420_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          likelihood of experiencing adverse events when treated with sufentanil. However, conflicting evidence has been reported.
+          This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          Other genetic and clinical factors may also affect likelihood of experiencing adverse events when treated with sufentanil.
+      - id: clinpgx_summary_1451352420_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          likelihood of experiencing adverse events when treated with sufentanil. However, conflicting evidence has been reported.
+          This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          Other genetic and clinical factors may also affect likelihood of experiencing adverse events when treated with sufentanil.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_981204695
+    label: rs1799971 / naltrexone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: naltrexone
+        pharmgkb_id: PA450588
+    phenotypes:
+      - Alcohol abuse
+      - Amplification of sexual behavior
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "981204695"
+      url: https://www.clinpgx.org/summaryAnnotation/981204695
+    notes: rs1799971 (OPRM1); naltrexone; Alcoholism, hypersexuality state and Tobacco Use Disorder (level 4 Efficacy)
+    effects:
+      - id: clinpgx_summary_981204695_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          response to naltrexone. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also influence response to naltrexone.
+      - id: clinpgx_summary_981204695_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          response to naltrexone. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also influence response to naltrexone.
+      - id: clinpgx_summary_981204695_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          response to naltrexone. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic and clinical factors
+          may also influence response to naltrexone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450811346
+    label: rs1799971 / nicotine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450811346"
+      url: https://www.clinpgx.org/summaryAnnotation/1450811346
+    notes: rs1799971 (OPRM1); nicotine; Tobacco Use Disorder (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450811346_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Female patients with the AA genotype may have an increased relative reinforcing value of nicotine as compared to
+          female patients with the AG or GG genotypes. This association is considered to be the result of a gender x genotype
+          interaction and was not replicated in male patients. Other genetic and clinical factors may also affect a patient's
+          response to nicotine.
+      - id: clinpgx_summary_1450811346_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Female patients with the AG genotype may have a decreased relative reinforcing value of nicotine as compared to
+          female patients with the AA genotype. This association is considered to be the result of a gender x genotype interaction
+          and was not replicated in male patients. Other genetic and clinical factors may also affect a patient's response to
+          nicotine.
+      - id: clinpgx_summary_1450811346_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Female patients with the GG genotype may have a decreased relative reinforcing value of nicotine as compared to
+          female patients with the AA genotype. This association is considered to be the result of a gender x genotype interaction
+          and was not replicated in male patients. Other genetic and clinical factors may also affect a patient's response to
+          nicotine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_982034197
+    label: rs1799971 / morphine / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "982034197"
+      url: https://www.clinpgx.org/summaryAnnotation/982034197
+    notes: rs1799971 (OPRM1); morphine; Pain and Pain, Postoperative (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_982034197_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have decreased morphine dose requirements as compared to patients with
+          the AG or GG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect morphine dose requirements.
+      - id: clinpgx_summary_982034197_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have increased morphine dose requirements as compared to patients with
+          the AA genotype, but decreased morphine dose requirements as compared to patients with the GG genotype. However, conflicting
+          evidence has been reported. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic or clinical factors may also affect morphine dose requirements.
+      - id: clinpgx_summary_982034197_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have increased morphine dose requirements as compared to patients with
+          the AA or AG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect morphine dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450822281
+    label: rs1799971 / nicotine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450822281"
+      url: https://www.clinpgx.org/summaryAnnotation/1450822281
+    notes: rs1799971 (OPRM1); nicotine; Tobacco Use Disorder (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450822281_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have decreased cravings for nicotine, both in general and following consumption
+          of alcohol, as compared to patients with the AG genotype. However, another study found no association between this variant
+          and nicotine craving. Other genetic or clinical factors may also affect nicotine cravings.
+      - id: clinpgx_summary_1450822281_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have increased cravings for nicotine, both in general and following consumption
+          of alcohol, as compared to patients with the AA genotype. However, another study found no association between this variant
+          and nicotine craving. Other genetic or clinical factors may also affect nicotine cravings.
+      - id: clinpgx_summary_1450822281_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text: There is currently no available evidence on the relationship between the GG genotype and nicotine craving.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449717935
+    label: rs1799971 / opioid anesthetics, other general anesthetics, volatile anesthetics / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: opioid anesthetics
+        pharmgkb_id: PA164712948
+      - name: other general anesthetics
+        pharmgkb_id: PA164713083
+      - name: volatile anesthetics
+        pharmgkb_id: PA166131630
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449717935"
+      url: https://www.clinpgx.org/summaryAnnotation/1449717935
+    notes: rs1799971 (OPRM1); Opioid anesthetics, Other general anesthetics or volatile anesthetics (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1449717935_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have a longer recovery time from general anesthesia as compared to patients with
+          the GG genotype. Other genetic and clinical factors may also affect a patient's recovery time from general anesthesia.
+      - id: clinpgx_summary_1449717935_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have a longer recovery time from general anesthesia as compared to patients with
+          the GG genotype. Other genetic and clinical factors may also affect a patient's recovery time from general anesthesia.
+      - id: clinpgx_summary_1449717935_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a shorter recovery time from general anesthesia as compared to patients with
+          the AA or AG genotypes. Other genetic and clinical factors may also affect a patient's recovery time from general anesthesia.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450807831
+    label: rs1799971 / cannabinoids, cocaine, ethanol, nicotine, opioids / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: cannabinoids
+        pharmgkb_id: PA131890620
+      - name: cocaine
+        pharmgkb_id: PA449072
+      - name: ethanol
+        pharmgkb_id: PA448073
+      - name: nicotine
+        pharmgkb_id: PA450626
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Substance-Related Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450807831"
+      url: https://www.clinpgx.org/summaryAnnotation/1450807831
+    notes: rs1799971 (OPRM1); cannabinoids, cocaine, ethanol, nicotine or opioids; Substance-Related Disorders (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450807831_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          risk of developing substance dependence. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence risk of developing substance dependence.
+      - id: clinpgx_summary_1450807831_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          risk of developing substance dependence. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence risk of developing substance dependence.
+      - id: clinpgx_summary_1450807831_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          risk of developing substance dependence. However, conflicting evidence has been reported. Other genetic and clinical
+          factors may also influence risk of developing substance dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450822023
+    label: rs1799971 / heroin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: heroin
+        pharmgkb_id: PA452619
+    phenotypes:
+      - Heroin Dependence
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450822023"
+      url: https://www.clinpgx.org/summaryAnnotation/1450822023
+    notes: rs1799971 (OPRM1); heroin; Heroin Dependence (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450822023_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have a decreased severity of heroin dependence as compared to patients with the
+          AG or GG genotypes. However, another study did not find an association between this variant and severity of heroin dependence.
+          Other genetic or clinical factors may also affect severity of heroin dependence.
+      - id: clinpgx_summary_1450822023_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have an increased severity of heroin dependence as compared to patients with the
+          AA genotype. However, another study did not find an association between this variant and severity of heroin dependence.
+          Other genetic or clinical factors may also affect severity of heroin dependence.
+      - id: clinpgx_summary_1450822023_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have an increased severity of heroin dependence as compared to patients with the
+          AA genotype. However, another study did not find an association between this variant and severity of heroin dependence.
+          Other genetic or clinical factors may also affect severity of heroin dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450822778
+    label: rs1799971 / antidepressants, antipsychotics, benzodiazepine derivatives, opioids, sympathomimetics / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: antidepressants
+        pharmgkb_id: PA452229
+      - name: antipsychotics
+        pharmgkb_id: PA452233
+      - name: benzodiazepine derivatives
+        pharmgkb_id: PA10402
+      - name: opioids
+        pharmgkb_id: PA452618
+      - name: sympathomimetics
+        pharmgkb_id: PA164713301
+    phenotypes:
+      - Cardiac Arrest
+      - Overdose
+      - Respiratory Insufficiency
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450822778"
+      url: https://www.clinpgx.org/summaryAnnotation/1450822778
+    notes:
+      rs1799971 (OPRM1); antidepressants, antipsychotics, benzodiazepine derivatives, opioids or Sympathomimetics; Heart
+      Arrest, Overdose and Respiratory Insufficiency (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450822778_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be at a decreased risk of suffering from cardiac arrest or respiratory arrest
+          following overdose of antidepressants, antipsychotics, benzodiazepines, opioids or sympathomimetics as compared to patients
+          with the AG or GG genotypes. Other genetic or clinical factors may also affect a patient's risk of cardiac arrest or
+          respiratory arrest following overdose.
+      - id: clinpgx_summary_1450822778_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may be at an increased risk of suffering from cardiac arrest or respiratory arrest
+          following overdose of antidepressants, antipsychotics, benzodiazepines, opioids or sympathomimetics as compared to patients
+          with the AA genotype. Other genetic or clinical factors may also affect a patient's risk of cardiac arrest or respiratory
+          arrest following overdose.
+      - id: clinpgx_summary_1450822778_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be at an increased risk of suffering from cardiac arrest or respiratory arrest
+          following overdose of antidepressants, antipsychotics, benzodiazepines, opioids or sympathomimetics as compared to patients
+          with the AA genotype. Other genetic or clinical factors may also affect a patient's risk of cardiac arrest or respiratory
+          arrest following overdose.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450823785
+    label: rs1799971 / cocaine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: cocaine
+        pharmgkb_id: PA449072
+    phenotypes:
+      - Cocaine dependence
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450823785"
+      url: https://www.clinpgx.org/summaryAnnotation/1450823785
+    notes: rs1799971 (OPRM1); cocaine; Cocaine-Related Disorders (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450823785_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be at an increased risk of developing cocaine dependence as compared to patients
+          with the AG or GG genotypes. However, this association was not significant and other studies have not found an association
+          between this variant and cocaine dependence. Other genetic or clinical factors may also affect a patient's risk of developing
+          cocaine dependence.
+      - id: clinpgx_summary_1450823785_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may be at a decreased risk of developing cocaine dependence as compared to patients
+          with the AA genotype. However, this association was not significant and other studies have not found an association
+          between this variant and cocaine dependence. Other genetic or clinical factors may also affect a patient's risk of developing
+          cocaine dependence.
+      - id: clinpgx_summary_1450823785_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be at a decreased risk of developing cocaine dependence as compared to patients
+          with the AA genotype. However, this association was not significant and other studies have not found an association
+          between this variant and cocaine dependence. Other genetic or clinical factors may also affect a patient's risk of developing
+          cocaine dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1184987460
+    label: rs1799971 / analgesics, antiinflammatory agents, non-steroids, ergot alkaloids, opioids, sumatriptan / Other
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: analgesics
+        pharmgkb_id: PA164712362
+      - name: antiinflammatory agents, non-steroids
+        pharmgkb_id: PA164712462
+      - name: ergot alkaloids
+        pharmgkb_id: PA164712741
+      - name: opioids
+        pharmgkb_id: PA452618
+      - name: sumatriptan
+        pharmgkb_id: PA451566
+    phenotypes:
+      - Substance Withdrawal Syndrome
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1184987460"
+      url: https://www.clinpgx.org/summaryAnnotation/1184987460
+    notes:
+      rs1799971 (OPRM1); Analgesics, Antiinflammatory agents, non-steroids, Ergot alkaloids, opioids or sumatriptan; Substance
+      Withdrawal Syndrome (level 3)
+    effects:
+      - id: clinpgx_summary_1184987460_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype with substance withdrawal syndrome may have a decreased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the GG genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+      - id: clinpgx_summary_1184987460_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype with substance withdrawal syndrome may have a decreased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the GG genotype.
+          Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal syndrome who
+          discontinue the use of analgesics.
+      - id: clinpgx_summary_1184987460_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype with substance withdrawal syndrome may have an increased likelihood of headache when
+          discontinuing the use of analgesics (such as opioids, NSAIDs, triptans, ergot) as compared to patients with the AA and
+          AG genotypes. Other clinical and genetic factors may also influence likelihood of headache in patients with withdrawal
+          syndrome who discontinue the use of analgesics.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450806626
+    label: rs1799971 / opioids / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: opioids
+        pharmgkb_id: PA452618
+    phenotypes:
+      - Opioid-Related Disorders
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450806626"
+      url: https://www.clinpgx.org/summaryAnnotation/1450806626
+    notes: rs1799971 (OPRM1); opioids; Opioid-Related Disorders (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450806626_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          risk of developing opioid dependence. However, conflicting evidence has been reported. Other genetic and clinical factors
+          may also influence risk of developing opioid dependence.
+      - id: clinpgx_summary_1450806626_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          risk of developing opioid dependence. However, conflicting evidence has been reported. Other genetic and clinical factors
+          may also influence risk of developing opioid dependence.
+      - id: clinpgx_summary_1450806626_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          risk of developing opioid dependence. However, conflicting evidence has been reported. Other genetic and clinical factors
+          may also influence risk of developing opioid dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450823791
+    label: rs1799971 / cannabinoids / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: cannabinoids
+        pharmgkb_id: PA131890620
+    phenotypes:
+      - Marijuana Abuse
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450823791"
+      url: https://www.clinpgx.org/summaryAnnotation/1450823791
+    notes: rs1799971 (OPRM1); cannabinoids; Marijuana Abuse (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450823791_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be at an increased risk of developing cannabis dependence as compared to patients
+          with the AG or GG genotypes. However, this association was not significant. Other genetic or clinical factors may also
+          affect a patient's risk of developing cannabis dependence.
+      - id: clinpgx_summary_1450823791_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may be at a decreased risk of developing cannabis dependence as compared to patients
+          with the AA genotype. However, this association was not significant. Other genetic or clinical factors may also affect
+          a patient's risk of developing cannabis dependence.
+      - id: clinpgx_summary_1450823791_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be at a decreased risk of developing cannabis dependence as compared to patients
+          with the AA genotype. However, this association was not significant. Other genetic or clinical factors may also affect
+          a patient's risk of developing cannabis dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451825200
+    label: rs1799971 / naloxone, oxycodone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: naloxone
+        pharmgkb_id: PA450586
+      - name: oxycodone
+        pharmgkb_id: PA450741
+    phenotypes:
+      - Erythema
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451825200"
+      url: https://www.clinpgx.org/summaryAnnotation/1451825200
+    notes: rs1799971 (OPRM1); naloxone and oxycodone; Erythema (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451825200_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may be more likely to experience erythema when treated with oxycodone and
+          naloxone for pain as compared to patients with the AG or GG genotypes. Other genetic or clinical factors may also affect
+          likelihood of experiencing erythema when treated with oxycodone and naloxone.
+      - id: clinpgx_summary_1451825200_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may be less likely to experience erythema when treated with oxycodone and
+          naloxone for pain as compared to patients with the AA genotype. Other genetic or clinical factors may also affect likelihood
+          of experiencing erythema when treated with oxycodone and naloxone.
+      - id: clinpgx_summary_1451825200_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may be less likely to experience erythema when treated with oxycodone and
+          naloxone for pain as compared to patients with the AA genotype. Other genetic or clinical factors may also affect likelihood
+          of experiencing erythema when treated with oxycodone and naloxone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451406523
+    label: rs1799971 / tramadol / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: tramadol
+        pharmgkb_id: PA451735
+    phenotypes:
+      - Pain, Postoperative
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451406523"
+      url: https://www.clinpgx.org/summaryAnnotation/1451406523
+    notes: rs1799971 (OPRM1); tramadol; Pain, Postoperative (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1451406523_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have a decreased analgesic response to tramadol as compared to patients
+          with the AG or GG genotypes. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined
+          to be not clinically actionable. Other genetic and clinical factors may also influence response to tramadol.
+      - id: clinpgx_summary_1451406523_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have an increased analgesic response to tramadol as compared to patients
+          with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic and clinical factors may also influence response to tramadol.
+      - id: clinpgx_summary_1451406523_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have an increased analgesic response to tramadol as compared to patients
+          with the AA genotype. This drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to
+          be not clinically actionable. Other genetic and clinical factors may also influence response to tramadol.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826957
+    label: rs1799971 / morphine / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826957"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826957
+    notes: rs1799971 (OPRM1); morphine; Pain and Pain, Postoperative (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_1450826957_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have an increased analgesic response to morphine as compared to patients
+          with the AG or GG genotypes. However, conflicting evidence has been reported. This drug-variant pair has been assigned
+          a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect response to morphine.
+      - id: clinpgx_summary_1450826957_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have a decreased analgesic response to morphine as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may
+          also affect response to morphine.
+      - id: clinpgx_summary_1450826957_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have a decreased analgesic response to morphine as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. This drug-variant pair has been assigned a “no
+          recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may
+          also affect response to morphine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450823773
+    label: rs1799971 / nicotine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes:
+      - Tobacco Use Disorder
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450823773"
+      url: https://www.clinpgx.org/summaryAnnotation/1450823773
+    notes: rs1799971 (OPRM1); nicotine; Tobacco Use Disorder (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450823773_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be at an increased risk of developing nicotine dependence as compared to patients
+          with the AG or GG genotypes. However, this association was not significant and other studies have not found an association
+          between this variant and nicotine dependence. Other genetic or clinical factors may also affect a patient's risk of
+          developing nicotine dependence.
+      - id: clinpgx_summary_1450823773_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may be at a decreased risk of developing nicotine dependence as compared to patients
+          with the AA genotype. However, this association was not significant and other studies have not found an association
+          between this variant and nicotine dependence. Other genetic or clinical factors may also affect a patient's risk of
+          developing nicotine dependence.
+      - id: clinpgx_summary_1450823773_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be at a decreased risk of developing nicotine dependence as compared to patients
+          with the AA genotype. However, this association was not significant and other studies have not found an association
+          between this variant and nicotine dependence. Other genetic or clinical factors may also affect a patient's risk of
+          developing nicotine dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450821418
+    label: rs1799971 / ethanol / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: ethanol
+        pharmgkb_id: PA448073
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450821418"
+      url: https://www.clinpgx.org/summaryAnnotation/1450821418
+    notes: rs1799971 (OPRM1); ethanol (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1450821418_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have decreased alcohol consumption as compared to patients with the AG or GG genotype.
+          Other studies have not found an association between this variant and alcohol consumption, while some studies have found
+          the opposite association. Other genetic or clinical factors may also affect a person's alcohol consumption.
+      - id: clinpgx_summary_1450821418_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have increased alcohol consumption as compared to patients with the AA genotype.
+          Other studies have not found an association between this variant and alcohol consumption, while some studies have found
+          the opposite association. Other genetic or clinical factors may also affect a person's alcohol consumption.
+      - id: clinpgx_summary_1450821418_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have increased alcohol consumption as compared to patients with the AA genotype.
+          Other studies have not found an association between this variant and alcohol consumption, while some studies have found
+          the opposite association. Other genetic or clinical factors may also affect a person's alcohol consumption.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826963
+    label: rs1799971 / morphine / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826963"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826963
+    notes: rs1799971 (OPRM1); morphine (level 4 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1450826963_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          plasma concentrations of morphine. However, conflicting evidence has been reported. This annotation only covers the
+          pharmacokinetic relationship between rs1799971 and morphine and does not include evidence about clinical outcomes. This
+          drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          Other genetic or clinical factors may also affect morphine dose requirements. Other genetic or clinical factors may
+          also affect plasma concentrations of morphine.
+      - id: clinpgx_summary_1450826963_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          plasma concentrations of morphine. However, conflicting evidence has been reported. This annotation only covers the
+          pharmacokinetic relationship between rs1799971 and morphine and does not include evidence about clinical outcomes. This
+          drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          Other genetic or clinical factors may also affect morphine dose requirements. Other genetic or clinical factors may
+          also affect plasma concentrations of morphine.
+      - id: clinpgx_summary_1450826963_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          plasma concentrations of morphine. However, conflicting evidence has been reported. This annotation only covers the
+          pharmacokinetic relationship between rs1799971 and morphine and does not include evidence about clinical outcomes. This
+          drug-variant pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable.
+          Other genetic or clinical factors may also affect morphine dose requirements. Other genetic or clinical factors may
+          also affect plasma concentrations of morphine.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_655385241
+    label: rs1799971 / naloxone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: naloxone
+        pharmgkb_id: PA450586
+    phenotypes: []
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "655385241"
+      url: https://www.clinpgx.org/summaryAnnotation/655385241
+    notes: rs1799971 (OPRM1); naloxone (level 3 Efficacy)
+    effects:
+      - id: clinpgx_summary_655385241_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype who are treated with naloxone may have lower cortisol response as compared to patients
+          with the AG or GG genotype. Other genetic and clinical factors may also influence the response to naloxone.
+      - id: clinpgx_summary_655385241_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype who are treated with naloxone may have increased peak cortisol response as compared
+          to patients with AA genotype.
+      - id: clinpgx_summary_655385241_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype who are treated with naloxone may have increased peak cortisol response as compared
+          to patients with AA genotype. Other genetic and clinical factors may also influence the response to naloxone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449188689
+    label: rs1799971 / cotinine, nicotine / Metabolism/PK
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: cotinine
+        pharmgkb_id: PA166114414
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes: []
+    phenotype_categories:
+      - Metabolism/PK
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449188689"
+      url: https://www.clinpgx.org/summaryAnnotation/1449188689
+    notes: rs1799971 (OPRM1); cotinine or nicotine (level 3 Metabolism/PK)
+    effects:
+      - id: clinpgx_summary_1449188689_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype and receiving methadone maintenance therapy may have increased plasma concentrations
+          of cotinine, a metabolite of nicotine, as compared to patients with the GG genotype. Other genetic and clinical factors
+          may also affect plasma concentrations of cotinine in patients receiving methadone maintenance therapy.
+      - id: clinpgx_summary_1449188689_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype and receiving methadone maintenance therapy may have increased plasma concentrations
+          of cotinine, a metabolite of nicotine, as compared to patients with the GG genotype. Other genetic and clinical factors
+          may also affect plasma concentrations of cotinine in patients receiving methadone maintenance therapy.
+      - id: clinpgx_summary_1449188689_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype and receiving methadone maintenance therapy may have decreased plasma concentrations
+          of cotinine, a metabolite of nicotine, as compared to patients with the AA or AG genotypes. Other genetic and clinical
+          factors may also affect plasma concentrations of cotinine in patients receiving methadone maintenance therapy.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826969
+    label: rs1799971 / oxycodone / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: oxycodone
+        pharmgkb_id: PA450741
+    phenotypes:
+      - Pain
+      - Pain, Postoperative
+    phenotype_categories:
+      - Dosage
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826969"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826969
+    notes: rs1799971 (OPRM1); oxycodone; Pain and Pain, Postoperative (level 3 Dosage)
+    effects:
+      - id: clinpgx_summary_1450826969_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may have decreased oxycodone dose requirements as compared to patients with
+          the GG genotype. However, conflicting evidence has been reported.  This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect oxycodone
+          dose requirements.
+      - id: clinpgx_summary_1450826969_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may have decreased oxycodone dose requirements as compared to patients with
+          the GG genotype. However, conflicting evidence has been reported.  This drug-variant pair has been assigned a “no recommendation”
+          by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors may also affect oxycodone
+          dose requirements.
+      - id: clinpgx_summary_1450826969_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may have increased oxycodone dose requirements as compared to patients with
+          the AA or AG genotypes. However, conflicting evidence has been reported.  This drug-variant pair has been assigned a
+          “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic or clinical factors
+          may also affect oxycodone dose requirements.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1451678080
+    label: rs1799971 / oxycodone / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: oxycodone
+        pharmgkb_id: PA450741
+    phenotypes:
+      - adverse events
+      - Constipation
+      - Delirium
+      - Nausea
+      - Pruritus
+      - Somnolence
+      - Urinary Retention
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1451678080"
+      url: https://www.clinpgx.org/summaryAnnotation/1451678080
+    notes:
+      rs1799971 (OPRM1); oxycodone; adverse events, Constipation, Delirium, Nausea, Pruritus, somnolence and Urinary Retention
+      (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1451678080_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          risk of adverse events when treated with oxycodone. However, conflicting evidence has been reported. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with oxycodone.
+      - id: clinpgx_summary_1451678080_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          risk of adverse events when treated with oxycodone. However, conflicting evidence has been reported. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with oxycodone.
+      - id: clinpgx_summary_1451678080_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          risk of adverse events when treated with oxycodone. However, conflicting evidence has been reported. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          and clinical factors may also influence risk of adverse events when treated with oxycodone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1452502940
+    label: rs1799971 / methadone / Efficacy
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: methadone
+        pharmgkb_id: PA450401
+    phenotypes:
+      - Heroin Dependence
+      - Opioid-Related Disorders
+      - Substance-Related Disorders
+    phenotype_categories:
+      - Efficacy
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1452502940"
+      url: https://www.clinpgx.org/summaryAnnotation/1452502940
+    notes:
+      rs1799971 (OPRM1); methadone; Heroin Dependence, Opioid-Related Disorders and Substance-Related Disorders (level
+      4 Efficacy)
+    effects:
+      - id: clinpgx_summary_1452502940_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          response to methadone in patients with substance-related disorders. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence response to methadone.
+      - id: clinpgx_summary_1452502940_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          response to methadone in patients with substance-related disorders. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence response to methadone.
+      - id: clinpgx_summary_1452502940_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          response to methadone in patients with substance-related disorders. However, conflicting evidence has been reported.
+          Other genetic and clinical factors may also influence response to methadone.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449188311
+    label: rs1799971 / ethanol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: ethanol
+        pharmgkb_id: PA448073
+    phenotypes:
+      - Alcohol abuse
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449188311"
+      url: https://www.clinpgx.org/summaryAnnotation/1449188311
+    notes: rs1799971 (OPRM1); ethanol; Alcoholism (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1449188311_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          risk of developing alcoholism when exposed to ethanol. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence risk of developing alcoholism.
+      - id: clinpgx_summary_1449188311_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          risk of developing alcoholism when exposed to ethanol. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence risk of developing alcoholism.
+      - id: clinpgx_summary_1449188311_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          risk of developing alcoholism when exposed to ethanol. However, conflicting evidence has been reported. Other genetic
+          and clinical factors may also influence risk of developing alcoholism.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450935171
+    label: rs1799971 / tianeptine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: tianeptine
+        pharmgkb_id: PA166186040
+    phenotypes:
+      - Major Depressive Disorder
+      - suicidal ideation
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450935171"
+      url: https://www.clinpgx.org/summaryAnnotation/1450935171
+    notes: rs1799971 (OPRM1); tianeptine; Depressive Disorder, Major and suicidal ideation (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450935171_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may be at an increased risk of developing treatment emergent suicidal ideation (TESI)
+          when treated with tianeptine as compared to patients with the AG or GG genotypes. Other genetic and clinical factors
+          may also affect suicidal ideation in patients.
+      - id: clinpgx_summary_1450935171_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may be at a decreased risk of developing treatment emergent suicidal ideation (TESI)
+          when treated with tianeptine as compared to patients with the AA genotype. Other genetic and clinical factors may also
+          affect suicidal ideation in patients.
+      - id: clinpgx_summary_1450935171_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may be at a decreased risk of developing treatment emergent suicidal ideation (TESI)
+          when treated with tianeptine as compared to patients with the AA genotype. Other genetic and clinical factors may also
+          affect suicidal ideation in patients.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1449275238
+    label: rs1799971 / heroin / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: heroin
+        pharmgkb_id: PA452619
+    phenotypes:
+      - Heroin Dependence
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1449275238"
+      url: https://www.clinpgx.org/summaryAnnotation/1449275238
+    notes: rs1799971 (OPRM1); heroin; Heroin Dependence (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1449275238_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may have a decreased risk of developing heroin dependence as compared to patients
+          with the AG or GG genotypes. However, other studies have found contradictory evidence or have failed to find a significant
+          association between this variant and heroin dependence. Other genetic or clinical factors may also affect a patient's
+          risk of developing heroin dependence.
+      - id: clinpgx_summary_1449275238_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may have a increased risk of developing heroin dependence as compared to patients
+          with the AA genotype. However, other studies have found contradictory evidence or have failed to find a significant
+          association between this variant and heroin dependence. Other genetic or clinical factors may also affect a patient's
+          risk of developing heroin dependence.
+      - id: clinpgx_summary_1449275238_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may have a increased risk of developing heroin dependence as compared to patients
+          with the AA genotype. However, other studies have found contradictory evidence or have failed to find a significant
+          association between this variant and heroin dependence. Other genetic or clinical factors may also affect a patient's
+          risk of developing heroin dependence.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826763
+    label: rs1799971 / nicotine / Dosage
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes: []
+    phenotype_categories:
+      - Dosage
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826763"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826763
+    notes: rs1799971 (OPRM1); nicotine (level 4 Dosage)
+    effects:
+      - id: clinpgx_summary_1450826763_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          nicotine consumption, as measured by the number of cigarettes smoked per day. However, conflicting evidence has been
+          reported. Other genetic and clinical factors may also influence nicotine consumption.
+      - id: clinpgx_summary_1450826763_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          nicotine consumption, as measured by the number of cigarettes smoked per day. However, conflicting evidence has been
+          reported. Other genetic and clinical factors may also influence nicotine consumption.
+      - id: clinpgx_summary_1450826763_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          nicotine consumption, as measured by the number of cigarettes smoked per day. However, conflicting evidence has been
+          reported. Other genetic and clinical factors may also influence nicotine consumption.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450823887
+    label: rs1799971 / nicotine / Other
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: nicotine
+        pharmgkb_id: PA450626
+    phenotypes: []
+    phenotype_categories:
+      - Other
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450823887"
+      url: https://www.clinpgx.org/summaryAnnotation/1450823887
+    notes: rs1799971 (OPRM1); nicotine (level 3)
+    effects:
+      - id: clinpgx_summary_1450823887_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the rs1799971 AA genotype may be less likely to engage in smoking behaviors as compared to patients
+          with the AG or GG genotypes. However, conflicting evidence has been reported. Other genetic or clinical factors may
+          also affect smoking behaviors.
+      - id: clinpgx_summary_1450823887_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the rs1799971 AG genotype may be more likely to engage in smoking behaviors as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. Other genetic or clinical factors may also affect
+          smoking behaviors.
+      - id: clinpgx_summary_1450823887_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the rs1799971 GG genotype may be more likely to engage in smoking behaviors as compared to patients
+          with the AA genotype. However, conflicting evidence has been reported. Other genetic or clinical factors may also affect
+          smoking behaviors.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450808823
+    label: rs1799971 / ethanol / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: ethanol
+        pharmgkb_id: PA448073
+    phenotypes:
+      - Alcohol abuse
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "3"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450808823"
+      url: https://www.clinpgx.org/summaryAnnotation/1450808823
+    notes: rs1799971 (OPRM1); ethanol; Alcoholism (level 3 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450808823_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          Patients with the AA genotype may show a decreased severity of alcoholism as compared to patients with the AG or
+          GG genotypes. However, other studies have not found a significant association between this locus and severity of alcoholism
+          while one found conflicting data. Other genetic and clinical factors may also affect severity of alcoholism.
+      - id: clinpgx_summary_1450808823_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          Patients with the AG genotype may show an increased severity of alcoholism in measures such as number of drinking
+          days per month and alcohol craving as compared to patients with the AA genotype. However, other studies have not found
+          a significant association between this locus and severity of alcoholism while one found conflicting data. Other genetic
+          and clinical factors may also affect severity of alcoholism.
+      - id: clinpgx_summary_1450808823_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          Patients with the GG genotype may show an increased severity of alcoholism in measures such as number of drinking
+          days per month and alcohol craving as compared to patients with the AA genotype. However, other studies have not found
+          a significant association between this locus and severity of alcoholism while one found conflicting data. Other genetic
+          and clinical factors may also affect severity of alcoholism.
+  - schema: bioscript:pgx-summary:1.0
+    id: clinpgx_summary_1450826857
+    label: rs1799971 / morphine / Toxicity
+    authority_type: evidence_summary
+    genes:
+      - OPRM1
+    variant: rs1799971
+    drugs:
+      - name: morphine
+        pharmgkb_id: PA450550
+    phenotypes:
+      - adverse events
+      - Constipation
+      - Delirium
+      - Dizziness
+      - Nausea
+      - Pain, Postoperative
+      - Postoperative Nausea and Vomiting
+      - Pruritus
+      - Respiratory Insufficiency
+      - Somnolence
+      - Urinary Retention
+      - Vomiting
+    phenotype_categories:
+      - Toxicity
+    evidence_level: "4"
+    source_type: Summary
+    evidence:
+      source: ClinPGx
+      kind: summary_annotation
+      id: "1450826857"
+      url: https://www.clinpgx.org/summaryAnnotation/1450826857
+    notes:
+      rs1799971 (OPRM1); morphine; adverse events, Constipation, Delirium, Dizziness, Nausea, Pain, Postoperative, Postoperative
+      Nausea and Vomiting, Pruritus, Respiratory Insufficiency, somnolence, Urinary Retention and Vomiting (level 4 Toxicity)
+    effects:
+      - id: clinpgx_summary_1450826857_aa
+        label: AA
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: A
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype AA.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AA genotype and
+          likelihood of adverse events when treated with morphine. However, conflicting evidence has been reported. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          or clinical factors may also affect likelihood of experiencing adverse events when treated with morphine.
+      - id: clinpgx_summary_1450826857_ag
+        label: AG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 1
+          description: Applies when the participant has genotype AG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 AG genotype and
+          likelihood of adverse events when treated with morphine. However, conflicting evidence has been reported. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          or clinical factors may also affect likelihood of experiencing adverse events when treated with morphine.
+      - id: clinpgx_summary_1450826857_gg
+        label: GG
+        binding:
+          source: variant
+          variant: rs1799971.yaml
+          allele: G
+          operator: dosage_equals
+          value: 2
+          description: Applies when the participant has genotype GG.
+        text:
+          The current evidence base suggests that there is no significant association between the rs1799971 GG genotype and
+          likelihood of adverse events when treated with morphine. However, conflicting evidence has been reported. This drug-variant
+          pair has been assigned a “no recommendation” by CPIC, as it was determined to be not clinically actionable. Other genetic
+          or clinical factors may also affect likelihood of experiencing adverse events when treated with morphine.
