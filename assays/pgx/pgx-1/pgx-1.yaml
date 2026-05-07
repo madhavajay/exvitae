@@ -4,16 +4,13 @@ name: pgx-1
 label: PGx-1 Panel
 package_version: "1.0"
 kind: panel
-created_at: "2026-05-07T04:14:08Z"
+created_at: "2026-05-07T06:47:18Z"
 entrypoint: manifest.yaml
 artifact:
   path: pgx-1.zip
-  sha256: ad01f287e250ce0b39073b00c3f4df29566726b661a52a3b899a4fc8ea277ea5
+  sha256: db90a3486ff430958def77e08258147f09c9d97b9b4a82a03c4f975cc21dac99
   size_bytes: 136401
 contents:
-  files_count: 80
-  members_count: 35
-  analyses_count: 0
   files:
     - assets/ABCB1/rs1128503-pgx.yaml
     - assets/ABCB1/rs1128503.yaml

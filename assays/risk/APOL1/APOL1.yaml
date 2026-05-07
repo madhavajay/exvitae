@@ -4,12 +4,12 @@ name: APOL1
 label: APOL1 Risk Assay
 package_version: "1.0"
 kind: assay
-created_at: "2026-05-07T05:30:55Z"
+created_at: "2026-05-07T06:32:14Z"
 entrypoint: manifest.yaml
 artifact:
   path: APOL1.zip
-  sha256: 41d783270bfb0092b548984f41bd1c5fa33ded8720defe7b7cfa9439d62f75b5
-  size_bytes: 3301
+  sha256: 15a6f233ae236f137425bed23871ad14f5f9ffa3f1a09c24c9f37d722c31713a
+  size_bytes: 4638
 contents:
   files:
     - apol1.py

@@ -37,9 +37,3 @@ provenance:
         - "identifiers.rsids"
         - "coordinates"
         - "alleles"
-    - kind: "bioscript"
-      label: "Existing APOL1 BioScript classifier"
-      url: "https://github.com/madhavajay/exvitae"
-      fields:
-        - "summary"
-        - "findings[0].notes"

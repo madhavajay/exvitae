@@ -2,7 +2,9 @@ schema: bioscript:assay:1.0
 version: "1.0"
 name: APOL1
 label: APOL1 Risk Assay
-summary: APOL1 assay that observes G1 and G2 sites and emits the derived APOL1 risk genotype.
+summary:
+  APOL1 assay that observes G1 and G2 sites and emits the derived APOL1 risk genotype for descriptive kidney-risk
+  reporting; this assay is not sufficient by itself for clinical management or kidney donor/recipient eligibility.
 tags:
   - type:risk
   - gene:APOL1
@@ -35,10 +37,126 @@ analyses:
         label: APOL1 status
         value_type: string
         format: badge
+      - key: rs73885319
+        label: rs73885319 G1 site 1
+        value_type: string
+      - key: rs60910145
+        label: rs60910145 G1 site 2
+        value_type: string
+      - key: apol1_g2_rs71785313
+        label: rs71785313 G2 deletion
+        value_type: string
     logic:
       source:
-        name: Existing APOL1 BioScript classifier
-        url: https://github.com/madhavajay/exvitae
+        name: Mayo Clinic Laboratories APOL1 genotype interpretation
+        url: https://www.mayocliniclabs.com/test-catalog/overview/605251#clinical-and-interpretive
       description: >
         APOL1 status is derived from the G1 haplotype sites rs73885319 and rs60910145 together with the G2 deletion
-        tagged by rs71785313. The script emits the participant's APOL1 G0/G1/G2 diplotype-style status.
+        tagged by rs71785313. G1 is represented by both G1 missense sites being present on a haplotype; G2 is
+        represented by a 6 bp deletion. The script emits the participant's APOL1 G0/G1/G2 diplotype-style status.
+        Mayo Clinic Laboratories describes increased APOL1-associated nephropathy risk as requiring two risk alleles
+        (G1/G1, G2/G2, or G1/G2), while individuals with one or no risk allele do not appear to have increased risk for
+        APOL1-associated nephropathy. Results should be interpreted with ancestry, kidney phenotype, family history, and
+        other clinical data; the test is not useful by itself for clinical management or kidney allograft donor/recipient
+        eligibility decisions.
+provenance:
+  sources:
+    - kind: clinical_reference
+      label: Mayo Clinic Laboratories APOL1 genotype clinical interpretation
+      url: https://www.mayocliniclabs.com/test-catalog/overview/605251#clinical-and-interpretive
+      fields:
+        - summary
+        - analyses[0].logic
+        - findings
+    - kind: paper
+      label: Genovese et al. 2010 APOL1 variants and kidney disease
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2980843/
+      fields:
+        - analyses[0].logic
+        - findings
+findings:
+  - schema: bioscript:risk-interpretation:1.0
+    id: apol1_no_risk_alleles
+    label: APOL1 no-risk-allele genotype
+    binding:
+      source: analysis
+      analysis_id: apol1_status
+      key: apol1_status
+      operator: equals
+      value: G0/G0
+    risk_category: no_apol1_risk_alleles_detected
+    diplotypes:
+      - G0/G0
+    summary: No APOL1 G1 or G2 risk alleles were detected by this assay.
+    clinical_significance:
+      No APOL1 G1 or G2 risk alleles were detected by this assay. Mayo Clinic Laboratories states that individuals with
+      one or no APOL1 risk alleles do not appear to have increased risk for APOL1-associated nephropathy.
+    cautions:
+      - Absence of an APOL1 risk genotype does not rule out kidney disease risk from other genetic, clinical, or environmental factors.
+      - This assay does not detect every variant associated with chronic kidney disease risk.
+  - schema: bioscript:risk-interpretation:1.0
+    id: apol1_one_risk_allele
+    label: APOL1 one-risk-allele genotype
+    binding:
+      source: analysis
+      analysis_id: apol1_status
+      key: apol1_status
+      operator: in
+      values:
+        - G1/G0
+        - G2/G0
+    risk_category: one_apol1_risk_allele_detected
+    diplotypes:
+      - G1/G0
+      - G2/G0
+    summary: One APOL1 G1 or G2 risk allele was detected; this is not the APOL1 two-risk-allele pattern.
+    clinical_significance:
+      One APOL1 G1 or G2 risk allele was detected. Mayo Clinic Laboratories states that individuals with one or no APOL1
+      risk alleles do not appear to have increased risk for APOL1-associated nephropathy.
+    cautions:
+      - This is not the APOL1 high-risk genotype pattern described for APOL1-associated nephropathy.
+      - Kidney disease risk should still be interpreted in the context of clinical findings, family history, ancestry, and other laboratory data.
+  - schema: bioscript:risk-interpretation:1.0
+    id: apol1_two_risk_alleles
+    label: APOL1 two-risk-allele genotype
+    binding:
+      source: analysis
+      analysis_id: apol1_status
+      key: apol1_status
+      operator: in
+      values:
+        - G1/G1
+        - G2/G2
+        - G2/G1
+    risk_category: apol1_high_risk_genotype
+    diplotypes:
+      - G1/G1
+      - G2/G2
+      - G2/G1
+    summary: Two APOL1 risk alleles were detected, matching the APOL1-associated nephropathy increased-risk genotype pattern.
+    clinical_significance:
+      Two APOL1 risk alleles were detected. Mayo Clinic Laboratories describes increased risk for APOL1-associated
+      nephropathy as occurring with two risk alleles, including G1/G1, G2/G2, or G1/G2, following an autosomal recessive
+      inheritance pattern. The clinical associations include nondiabetic chronic kidney diseases such as HIV-associated
+      nephropathy and focal segmental glomerulosclerosis with collapsing features.
+    cautions:
+      - Many people with two APOL1 risk alleles do not develop chronic kidney disease.
+      - There are currently no specific clinical management guidelines or specific treatments solely based on APOL1 risk genotype.
+      - APOL1 genotype alone should not determine kidney donor or recipient eligibility.
+      - Interpretation should include clinical findings, family history, ancestry, and other laboratory data.
+  - schema: bioscript:risk-interpretation:1.0
+    id: apol1_missing_or_unresolved
+    label: APOL1 unresolved genotype
+    binding:
+      source: analysis
+      analysis_id: apol1_status
+      key: apol1_status
+      operator: equals
+      value: G-/G-
+    risk_category: unresolved
+    diplotypes:
+      - G-/G-
+    summary: APOL1 risk genotype could not be resolved from the input data.
+    clinical_significance: The APOL1 risk genotype could not be resolved because the assayed G1/G2 sites were not observed in the input data.
+    cautions:
+      - No clinical inference should be made from an unresolved APOL1 result.

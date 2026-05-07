@@ -54,9 +54,7 @@ def count_non_ref(text, ref):
     return total
 
 
-def classify_apol1(genotypes):
-    site1, site2, g2 = genotypes.lookup_variants(APOL1_QUERY_PLAN)
-
+def apol1_status_from_counts(site1, site2, g2):
     if site1 is None and site2 is None and g2 is None:
         return "G-/G-"
 
@@ -83,15 +81,45 @@ def classify_apol1(genotypes):
     return "G0/G0"
 
 
+def genotype_or_missing(genotype):
+    if genotype is None:
+        return "missing"
+    return genotype
+
+
+def classify_apol1(genotypes):
+    site1, site2, g2 = genotypes.lookup_variants(APOL1_QUERY_PLAN)
+
+    d_count = count_char(g2, "D")
+    site1_variants = count_non_ref(site1, "A")
+    site2_variants = count_non_ref(site2, "T")
+
+    has_g1 = site1_variants > 0 and site2_variants > 0
+    if has_g1:
+        g1_total = site1_variants + site2_variants
+    else:
+        g1_total = 0
+
+    return {
+        "status": apol1_status_from_counts(site1, site2, g2),
+        "rs73885319": genotype_or_missing(site1),
+        "rs60910145": genotype_or_missing(site2),
+        "g2_genotype": genotype_or_missing(g2),
+    }
+
+
 def main():
     genotypes = bioscript.load_genotypes(input_file)
-    status = classify_apol1(genotypes)
+    result = classify_apol1(genotypes)
     rows = [{
         "participant_id": participant_id,
-        "apol1_status": status,
+        "apol1_status": result["status"],
+        "rs73885319": result["rs73885319"],
+        "rs60910145": result["rs60910145"],
+        "apol1_g2_rs71785313": result["g2_genotype"],
     }]
     bioscript.write_tsv(output_file, rows)
-    print(status)
+    print(result["status"])
 
 
 if __name__ == "__main__":
