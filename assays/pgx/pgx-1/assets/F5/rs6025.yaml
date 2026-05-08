@@ -13,6 +13,7 @@ coordinates:
   grch37:
     chrom: "1"
     pos: 169519049
+    assembly_ref: T
   grch38:
     chrom: "1"
     pos: 169549811
