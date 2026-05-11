@@ -2,6 +2,12 @@
 test-data/*
 test-output/
 .bioscript-cache/
+.nextflow/
+.nextflow.log
+**/.nextflow/
+**/.nextflow.log
+**/.biovault-runtime.config
+**/work/
 tools/__pycache__/
 tools/*.pyc
 samples.private.yaml

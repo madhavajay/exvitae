@@ -2,5 +2,4 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-exec uv run --project "${REPO_ROOT}/tools" python "${SCRIPT_DIR}/tools/test_assays.py" "$@"
+exec uv run --with pyyaml python "${SCRIPT_DIR}/tools/test_assays.py" "$@"
