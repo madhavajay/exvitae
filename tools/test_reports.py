@@ -16,7 +16,7 @@ import yaml
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-BS = REPO_ROOT / "bioscript" / "bs"
+BS = Path(os.environ.get("BIOSCRIPT_BIN", REPO_ROOT / "bioscript" / "bs"))
 DEFAULT_SAMPLES = REPO_ROOT / "samples.yaml"
 DEFAULT_PRIVATE_SAMPLES = REPO_ROOT / "samples.private.yaml"
 
