@@ -6,6 +6,18 @@ summary: Classify the combined MTHFR C677T/A1298C genotype from rs1801133 and rs
 tags:
   - type:pgx
   - gene:MTHFR
+support:
+  input:
+    - cram
+    - vcf
+    - snp:23andme
+    - snp:23andme:v2
+    - snp:23andme:v3
+    - snp:23andme:v4
+    - snp:23andme:v5
+    - snp:ancestrydna
+    - snp:dynamicdna
+    - snp:genesforgood
 members:
   - kind: variant
     path: rs1801133.yaml

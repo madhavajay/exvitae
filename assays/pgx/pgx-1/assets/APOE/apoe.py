@@ -42,6 +42,14 @@ def normalize_genotype(gt):
     return text
 
 
+def display_genotype(gt):
+    if gt is None:
+        return "missing"
+    if gt == "":
+        return "missing"
+    return gt
+
+
 def classify_apoe(rs429358_gt, rs7412_gt):
     g429 = normalize_genotype(rs429358_gt)
     g7412 = normalize_genotype(rs7412_gt)
@@ -99,8 +107,8 @@ def main():
         "participant_id": participant_id,
         "apoe_outcome": outcome,
         "apoe_status": apoe_status,
-        "rs429358": rs429358_gt,
-        "rs7412": rs7412_gt,
+        "rs429358": display_genotype(rs429358_gt),
+        "rs7412": display_genotype(rs7412_gt),
         "notes": report_notes(apoe_status, outcome),
     }]
     bioscript.write_tsv(output_file, rows)

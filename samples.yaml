@@ -1,0 +1,74 @@
+# Public/local-cache report test samples. If samples.private.yaml exists, test.sh
+# loads it after this file and runs those samples too.
+defaults:
+  output_dir: test-output/report-tests
+  analysis_max_duration_ms: 30000
+  detect_sex: true
+  html: true
+  assertions:
+    observations:
+      min_rows: 1
+    reports:
+      min_rows: 1
+      require_status:
+        - complete
+        - partial
+
+assays:
+  - assays/pgx/pgx-1/manifest.yaml
+
+samples:
+  - id: 23andme-v2-hu0199C8
+    input_file: test-data/23andme/v2/hu0199C8/23data20100526.txt.zip
+
+  - id: 23andme-v3-huE4DAE4
+    input_file: test-data/23andme/v3/huE4DAE4/huE4DAE4_20120522224129.txt.zip
+
+  - id: 23andme-v4-huE18D82
+    input_file: test-data/23andme/v4/huE18D82/genome__v4_Full_2016.txt.zip
+
+  - id: 23andme-v5-hu50B3F5
+    input_file: test-data/23andme/v5/hu50B3F5/genome_hu50B3F5_v5_Full.zip
+
+  - id: dynamicdna-100001-synthetic
+    input_file: test-data/dynamicdna/100001-synthetic/100001_X_X_GSAv3-DTC_GRCh38-07-12-2025.txt.zip
+
+  - id: ancestrydna-huE922FC
+    input_file: test-data/ancestrydna/huE922FC/AncestryDNA.txt.zip
+
+  - id: familytreedna-hu17B792
+    input_file: test-data/familytreedna/hu17B792/2017-04-29_Family_Tree_DNA_Data.csv.zip
+
+  - id: genesforgood-hu80B047
+    input_file: test-data/genesforgood/hu80B047/GFG0_filtered_imputed_genotypes_noY_noMT_23andMe.txt.zip
+
+  - id: myheritage-hu33515F
+    input_file: test-data/myheritage/hu33515F/MyHeritage_raw_dna_data.zip
+
+  - id: NA06985-cram
+    input_file: test-data/1k-genomes/aligned/NA06985.final.cram
+    input_index: test-data/1k-genomes/aligned/NA06985.final.cram.crai
+    reference_file: test-data/1k-genomes/ref/GRCh38_full_analysis_set_plus_decoy_hla.fa
+    reference_index: test-data/1k-genomes/ref/GRCh38_full_analysis_set_plus_decoy_hla.fa.fai
+    allow_md5_mismatch: true
+
+  - id: NA06985-vcf
+    input_file: test-data/1k-genomes/vcf/NA06985.clean.vcf.gz
+    input_index: test-data/1k-genomes/vcf/NA06985.clean.vcf.gz.tbi
+    input_format: vcf
+    assertions:
+      observations:
+        min_rows: 1
+        rows:
+          - rsid: rs1128503
+            genotype_display: GG
+          - rsid: rs2231142
+            genotype_display: GT
+      reports:
+        min_rows: 1
+        require_status: complete
+        contains:
+          - path: analyses[].analysis_id
+            equals: apoe_epsilon
+          - path: analyses[].analysis_id
+            equals: mthfr_combined

@@ -1,6 +1,7 @@
 **/settings.local.json
-./test-data/
+test-data/*
 test-output/
 .bioscript-cache/
 tools/__pycache__/
 tools/*.pyc
+samples.private.yaml

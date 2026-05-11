@@ -4,7 +4,7 @@ name: APOL1
 label: APOL1 Risk Assay
 package_version: "1.0"
 kind: assay
-created_at: "2026-05-07T06:32:14Z"
+created_at: "2026-05-08T02:38:29Z"
 entrypoint: manifest.yaml
 artifact:
   path: APOL1.zip
