@@ -11,7 +11,7 @@ spec:
     kind: nextflow
     entrypoint: main.nf
     template: dynamic-nextflow
-    image: exvitae:local
+    image: ghcr.io/openmined/bioscript:0.2.0
   inputs:
     - name: participants
       type: List[GenotypeRecord]

@@ -40,7 +40,7 @@ workflow USER {
 }
 
 process exvitae_pgx_report {
-    container 'exvitae:local'
+    container 'ghcr.io/openmined/bioscript:0.2.0'
     stageInMode 'copy'
     tag { participant_id }
     errorStrategy { params.nextflow.error_strategy }
