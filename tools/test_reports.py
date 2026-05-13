@@ -16,7 +16,11 @@ import yaml
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-BS = Path(os.environ.get("BIOSCRIPT_BIN", REPO_ROOT / "bioscript" / "bs"))
+# Default: the bioscript shell wrapper nested next to this tools/ dir. Can be
+# overridden via `--bioscript /path/to/bs` or `BIOSCRIPT_BIN=/path/to/bs`,
+# which lets the same sample suite run against any bioscript checkout (e.g.
+# a working branch in another workspace) for parity testing.
+DEFAULT_BS = REPO_ROOT / "bioscript" / "bs"
 DEFAULT_SAMPLES = REPO_ROOT / "samples.yaml"
 DEFAULT_PRIVATE_SAMPLES = REPO_ROOT / "samples.private.yaml"
 
@@ -49,7 +53,15 @@ def main() -> int:
     parser.add_argument("--keep-going", action="store_true", help="Continue after failures.")
     parser.add_argument("--dry-run", action="store_true", help="Print commands without running them.")
     parser.add_argument("--generate-only", action="store_true", help="Run reports but skip YAML assertions.")
+    parser.add_argument(
+        "--bioscript",
+        default=os.environ.get("BIOSCRIPT_BIN", str(DEFAULT_BS)),
+        help="Path to the bioscript binary/wrapper to run (env: BIOSCRIPT_BIN).",
+    )
     args = parser.parse_args()
+    # Stash on env so run_case can read it without threading the path through
+    # every helper. This keeps the diff to test_reports.py minimal.
+    os.environ["BIOSCRIPT_BIN_RESOLVED"] = args.bioscript
 
     config_files = [Path(args.samples)]
     private_path = Path(args.private_samples)
@@ -158,7 +170,7 @@ def run_case(case: TestCase, dry_run: bool = False, assert_results: bool = True)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     cmd = [
-        str(BS),
+        os.environ.get("BIOSCRIPT_BIN_RESOLVED", str(DEFAULT_BS)),
         "report",
         str(case.assay),
         "--root",
