@@ -3,17 +3,18 @@ version: "1.0"
 name: thalassemia
 label: Thalassemia Variant Classifier
 package_version: "1.0"
-kind: assay
-created_at: "2026-05-15T04:12:52Z"
+kind: panel
+created_at: "2026-05-15T04:29:24Z"
 entrypoint: manifest.yaml
 artifact:
   path: thalassemia.zip
-  sha256: 8e275c9fbb3e6035f5b569f77182236751c2c1af4045e0a07ec4d43c8156c310
-  size_bytes: 167808
+  sha256: a7029ad27e043742db3f6f4fa32c6999c07f2474200787beb2738090d9e711a1
+  size_bytes: 168222
 contents:
   files:
     - assay.yaml
     - catalogue/findings.tsv
     - catalogue/variants.tsv
     - catalogue/variants.yaml
+    - manifest.yaml
     - thalassemia.py

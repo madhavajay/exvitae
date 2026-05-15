@@ -2,7 +2,7 @@ schema: bioscript:variant-catalogue:1.0
 version: "1.0"
 name: thalassemia-variants
 label: Thalassemia Variant Catalogue
-summary: Compact TSV-backed catalogue generated from ./variants
+summary: Compact TSV-backed catalogue generated from /Users/madhavajay/dev/exvitae-data/exvitae/assays/risk/thalassemia/variants.
 variants:
   source: variants.tsv
   format: tsv

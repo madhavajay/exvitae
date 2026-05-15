@@ -1,0 +1,21 @@
+schema: "bioscript:panel:1.0"
+version: "1.0"
+name: "thalassemia"
+label: "Thalassemia Variant Classifier"
+summary: "Screening panel that summarizes observed IthaGenes catalogue variants by alpha-globin, beta-globin, and other globin/modifier categories. This is not a diagnostic genotype-phasing assay."
+tags:
+  - "type:risk"
+  - "gene:HBA1"
+  - "gene:HBA2"
+  - "gene:HBB"
+package:
+  schema: "bioscript:package:1.0"
+  publish: true
+  artifact: "thalassemia.zip"
+members:
+  - kind: "variant-catalogue"
+    path: "catalogue/variants.yaml"
+    version: "1.0"
+  - kind: "assay"
+    path: "assay.yaml"
+    version: "1.0"

@@ -1,7 +1,7 @@
 schema: "bioscript:assay:1.0"
 version: "1.0"
-name: "thalassemia"
-label: "Thalassemia Variant Classifier"
+name: "thalassemia_status"
+label: "Thalassemia Screening Assay"
 summary: "Screening classifier that summarizes observed IthaGenes catalogue variants by alpha-globin, beta-globin, and other globin/modifier categories. This is not a diagnostic genotype-phasing assay."
 tags:
   - "type:risk"
