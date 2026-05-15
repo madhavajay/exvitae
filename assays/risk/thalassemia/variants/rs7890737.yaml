@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-GPM6B-rs7890737
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: GPM6B
+identifiers:
+  rsids:
+  - rs7890737
+  aliases:
+  - rs17300779
+  - rs60611912
+coordinates:
+  grch37:
+    chrom: X
+    pos: 13916954
+  grch38:
+    chrom: X
+    pos: 13898835
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs7890737 (NG_011988.1:g.44878C>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: GPM6B_rs7890737_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011988.1:g.44878C>T / NG_011988.1:g.44878C>T;
+    IthaID: 2723.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011988.1%3Ag.44878C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7890737

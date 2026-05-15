@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TOX-rs10504269
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TOX
+identifiers:
+  rsids:
+  - rs10504269
+  aliases:
+  - rs17298088
+  - rs60362617
+coordinates:
+  grch37:
+    chrom: '8'
+    pos: 59842670
+  grch38:
+    chrom: '8'
+    pos: 58930111
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+  observed_alts:
+  - C
+  - T
+summary: 'IthaGenes rs10504269 (NG_011993.1:g.194098T>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TOX_rs10504269_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011993.1:g.194098T>G / NG_011993.1:g.194098T>G;
+    IthaID: 2689.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011993.1%3Ag.194098T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10504269

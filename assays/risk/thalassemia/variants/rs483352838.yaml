@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KLF1-rs483352838
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KLF1
+identifiers:
+  rsids:
+  - rs483352838
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '19'
+    start: 12996519
+    end: 12996528
+  grch38:
+    chrom: '19'
+    start: 12885705
+    end: 12885714
+alleles:
+  kind: indel
+  ref: GGCGCCGGGC
+  alts:
+  - GGCGCCGGGCGCCGGGC
+summary: 'IthaGenes CD 175/176 (+7bp): (+CGGCGCC) (c.519_525dupCGGCGCC, p.Gly176Argfs*179) (NG_013087.1:g.6493_6499dupCGGCGCC);
+  reported phenotype: Hb F levels, Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KLF1_rs483352838_finding_1
+  alt: GGCGCCGGGCGCCGGGC
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Anaemia; HGVS: NG_013087.1:g.6493_6499dupCGGCGCC / NG_013087.1:g.6493_6499dupCGGCGCC;
+    IthaID: 2085.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_013087.1%3Ag.6493_6499dupCGGCGCC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs483352838

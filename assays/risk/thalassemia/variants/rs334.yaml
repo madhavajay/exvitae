@@ -1,0 +1,61 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs334
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs334
+  aliases:
+  - rs3168321
+  - rs34315575
+  - rs77121243
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248232
+  grch38:
+    chrom: '11'
+    pos: 5227002
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - A
+  - G
+  - C
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes CD 6 GAG>GTG [Glu>Val] (Sickle-cell) (HBB:c.20A>T); reported phenotype: β-chain variant, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs334_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, Haemolytic anaemia; HGVS: HBB:c.20A>T / NG_000007.3:g.70614A>T;
+    IthaID: 824.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs334_finding_2
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.20A>C / NG_000007.3:g.70614A>C; IthaID:
+    826.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs334_finding_3
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.20A>G / NG_000007.3:g.70614A>G; IthaID:
+    827.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70614A%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs334

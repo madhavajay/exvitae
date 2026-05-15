@@ -1,0 +1,7 @@
+# Build steps run by package.sh before the package is collected and zipped.
+# Each step's `run` command executes with the working directory set to this
+# folder. `exr` is resolved from the nearest ancestor repo that ships the
+# ./exr shim, so this works wherever the project is copied.
+steps:
+  - name: regenerate variant catalogue from per-variant YAML
+    run: exr variant-catalogue from-yaml variants catalogue

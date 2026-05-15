@@ -1,0 +1,49 @@
+name: thalassemia-ADAR-rs17843865
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ADAR
+summary: 'IthaGenes rs17843865 (NG_011844.2:g.38134A>G); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs17843865
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 154570903
+  grch38:
+    chrom: '1'
+    pos: 154598427
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_011844.2:g.38134A>G / NG_011844.2:g.38134A>G;
+    IthaID: 3451.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011844.2%3Ag.38134A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs17843865
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

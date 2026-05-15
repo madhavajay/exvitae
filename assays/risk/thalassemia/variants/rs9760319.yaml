@@ -1,0 +1,50 @@
+name: thalassemia-NC_000004.12-rs9760319
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000004.12
+summary: 'IthaGenes rs9760319 (NC_000004.12:g.137491375A>G); reported phenotype: Abnormal white blood cell count.'
+identifiers:
+  rsids:
+  - rs9760319
+  aliases:
+  - rs57352854
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 138412529
+  grch38:
+    chrom: '4'
+    pos: 137491375
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal white blood cell count; HGVS: NC_000004.12:g.137491375A>G
+    / NC_000004.12:g.137491375A>G; IthaID: 3526.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000004.12%3Ag.137491375A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9760319
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

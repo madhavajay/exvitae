@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HMOX1-rs2071746
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HMOX1
+identifiers:
+  rsids:
+  - rs2071746
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '22'
+    pos: 35776672
+  grch38:
+    chrom: '22'
+    pos: 35380679
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+summary: 'IthaGenes -495 (A>T)  (rs2071746) (NG_023030.1:g.4613A>T); reported phenotype: Hb F levels, Stroke, Vaso-occlusive
+  crisis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HMOX1_rs2071746_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Stroke, Vaso-occlusive crisis; HGVS: NG_023030.1:g.4613A>T
+    / NG_023030.1:g.4613A>T; IthaID: 2120.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_023030.1%3Ag.4613A%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2071746

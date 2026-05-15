@@ -1,0 +1,56 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs713040
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs713040
+  aliases:
+  - rs3168322
+  - rs16911889
+  - rs16911891
+  - rs17850157
+  - rs60382384
+  - rs118179151
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248243
+  grch38:
+    chrom: '11'
+    pos: 5227013
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: IthaGenes CD 2 CAC>CAT [His>His] (NG_000007.3:g.70603T>C).
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs713040_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: NG_000007.3:g.70603T>C / NG_000007.3:g.70603T>C; IthaID:
+    2041.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs713040_finding_2
+  alt: G
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: NG_059281.1:g.5059T>C / NG_059281.1:g.5059T>C; IthaID: 3007.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70603T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs713040

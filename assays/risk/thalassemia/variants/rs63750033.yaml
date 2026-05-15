@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG1-rs63750033
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG1
+identifiers:
+  rsids:
+  - rs63750033
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5271298
+  grch38:
+    chrom: '11'
+    pos: 5250068
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes -211 C>T (Venezuelan non-deletional HPFH) (HBG1:c.-264C>T); reported phenotype: HPFH, Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG1_rs63750033_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: HPFH, Hb F levels; HGVS: HBG1:c.-264C>T / NG_000007.3:g.47548C>T;
+    IthaID: 1565.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.47548C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750033

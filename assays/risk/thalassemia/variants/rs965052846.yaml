@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KLF1-rs965052846
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KLF1
+identifiers:
+  rsids:
+  - rs965052846
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '19'
+    pos: 12995802
+  grch38:
+    chrom: '19'
+    pos: 12884988
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes CD 329 (CAC>CGC) (NG_013087.1:g.7216A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KLF1_rs965052846_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_013087.1:g.7216A>G / NG_013087.1:g.7216A>G;
+    IthaID: 2558.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_013087.1%3Ag.7216A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs965052846

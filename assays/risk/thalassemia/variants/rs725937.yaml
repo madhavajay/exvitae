@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SPARC-rs725937
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SPARC
+identifiers:
+  rsids:
+  - rs725937
+  aliases:
+  - rs17661963
+  - rs60323897
+coordinates:
+  grch37:
+    chrom: '5'
+    pos: 151056711
+  grch38:
+    chrom: '5'
+    pos: 151677150
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs725937 (NG_042174.1:g.14905A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SPARC_rs725937_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_042174.1:g.14905A>G / NG_042174.1:g.14905A>G;
+    IthaID: 2629.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_042174.1%3Ag.14905A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs725937

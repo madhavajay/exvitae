@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-EPAS1-rs4953354
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: EPAS1
+identifiers:
+  rsids:
+  - rs4953354
+  aliases:
+  - rs57469910
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 46575388
+  grch38:
+    chrom: '2'
+    pos: 46348249
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs4953354 (NG_016000.1:g.55848A>G); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: EPAS1_rs4953354_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NG_016000.1:g.55848A>G / NG_016000.1:g.55848A>G; IthaID:
+    2926.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_016000.1%3Ag.55848A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4953354

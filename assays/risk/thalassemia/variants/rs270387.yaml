@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMP6-rs270387
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMP6
+identifiers:
+  rsids:
+  - rs270387
+  aliases:
+  - rs60440142
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 7772992
+  grch38:
+    chrom: '6'
+    pos: 7772759
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs270387 (NC_000006.12:g.7772759A>G); reported phenotype: Bacteremia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMP6_rs270387_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Bacteremia; HGVS: NC_000006.12:g.7772759A>G / NC_000006.12:g.7772759A>G;
+    IthaID: 2680.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.7772759A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs270387

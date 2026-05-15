@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000011.10-rs12793110
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000011.10
+identifiers:
+  rsids:
+  - rs12793110
+  aliases:
+  - rs58307674
+  - rs118067127
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5231565
+  grch38:
+    chrom: '11'
+    pos: 5210335
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs12793110 (NC_000011.10:g.5210335C>T); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000011.10_rs12793110_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NC_000011.10:g.5210335C>T / NC_000011.10:g.5210335C>T;
+    IthaID: 3190.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5210335C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs12793110

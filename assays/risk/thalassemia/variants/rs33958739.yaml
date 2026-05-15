@@ -1,0 +1,51 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs33958739
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs33958739
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246946
+  grch38:
+    chrom: '11'
+    pos: 5225716
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - A
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes CD 108 AAC>ATC (HBB:c.326A>T); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs33958739_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.326A>T / NG_000007.3:g.71900A>T; IthaID:
+    1172.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33958739_finding_2
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, Haemolytic anaemia; HGVS: HBB:c.326A>G / NG_000007.3:g.71900A>G;
+    IthaID: 1173.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71900A%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33958739

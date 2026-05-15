@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs63750010
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs63750010
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 223496
+  grch38:
+    chrom: '16'
+    pos: 173497
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+summary: 'IthaGenes CD 108 ACC>AAC [Thr>Asn] (HBA2:c.326C>A); reported phenotype: α-chain variant, α-thalassaemia, Haemolytic
+  anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs63750010_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant, α-thalassaemia, Haemolytic anaemia; HGVS: HBA2:c.326C>A
+    / NG_000006.1:g.34360C>A; IthaID: 397.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs63750010_finding_2
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA1:c.326C>A / NG_000006.1:g.34360C>A; IthaID:
+    2991.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34360C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750010

@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-HBBP1-rs4910736
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD-HBBP1
+identifiers:
+  rsids:
+  - rs4910736
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5258989
+  grch38:
+    chrom: '11'
+    pos: 5237759
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs4910736 (NG_000007.3:g.59857G>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD-HBBP1_rs4910736_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_000007.3:g.59857G>T / NG_000007.3:g.59857G>T;
+    IthaID: 2828.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.59857G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4910736

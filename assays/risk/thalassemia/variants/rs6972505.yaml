@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SLC26A5-rs6972505
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SLC26A5
+identifiers:
+  rsids:
+  - rs6972505
+  aliases:
+  - rs61420093
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 103064037
+  grch38:
+    chrom: '7'
+    pos: 103423590
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs6972505 (NC_000007.14:g.103423590C>G); reported phenotype: Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SLC26A5_rs6972505_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Severity; HGVS: NC_000007.14:g.103423590C>G / NC_000007.14:g.103423590C>G;
+    IthaID: 2783.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000007.14%3Ag.103423590C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6972505

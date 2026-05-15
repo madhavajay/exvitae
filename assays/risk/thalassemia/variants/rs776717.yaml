@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000015.10-rs776717
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000015.10
+identifiers:
+  rsids:
+  - rs776717
+  aliases:
+  - rs1712425
+  - rs59220092
+  - rs386613019
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 42401652
+  grch38:
+    chrom: '15'
+    pos: 42109454
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs776717 (NC_000015.10:g.42109454T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000015.10_rs776717_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000015.10:g.42109454T>C / NC_000015.10:g.42109454T>C;
+    IthaID: 2777.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000015.10%3Ag.42109454T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs776717

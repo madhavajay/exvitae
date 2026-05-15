@@ -1,0 +1,47 @@
+name: thalassemia-PKD1L1-rs11972142
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PKD1L1
+summary: 'IthaGenes rs11972142 (NG_052801.1:g.73041A>G); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs11972142
+  aliases:
+  - rs60399858
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 47930180
+  grch38:
+    chrom: '7'
+    pos: 47890582
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_052801.1:g.73041A>G / NG_052801.1:g.73041A>G;
+    IthaID: 3462.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_052801.1%3Ag.73041A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11972142
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

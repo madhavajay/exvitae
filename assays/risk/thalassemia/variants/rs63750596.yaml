@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs63750596
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs63750596
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246953
+  grch38:
+    chrom: '11'
+    pos: 5225723
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+summary: 'IthaGenes CD 106 (CTG >GTG) Leu to Val (Hb Federico II) (HBB:c.319C>G); reported phenotype: β-thalassaemia, β-chain
+  variant, Haemolytic anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs63750596_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, β-chain variant, Haemolytic anaemia, Ineffective
+    erythropoiesis; HGVS: HBB:c.319C>G / NG_000007.3:g.71893C>G; IthaID: 229.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71893C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750596

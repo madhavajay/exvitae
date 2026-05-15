@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-OR51B5-rs1391619
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OR51B5
+identifiers:
+  rsids:
+  - rs1391619
+  aliases:
+  - rs56445781
+  - rs58768152
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5455929
+  grch38:
+    chrom: '11'
+    pos: 5434699
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs1391619 (NC_000011.10:g.5434699G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: OR51B5_rs1391619_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000011.10:g.5434699G>A / NC_000011.10:g.5434699G>A;
+    IthaID: 2796.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5434699G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1391619

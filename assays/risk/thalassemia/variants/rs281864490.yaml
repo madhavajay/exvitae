@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG1-rs281864490
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG1
+identifiers:
+  rsids:
+  - rs281864490
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5269637
+  grch38:
+    chrom: '11'
+    pos: 5248407
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes CD 131 CAG>CAT [Gln>His] (HBG1:c.396G>T); reported phenotype: γ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG1_rs281864490_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: γ-chain variant; HGVS: HBG1:c.396G>T / NG_000007.3:g.49209G>T; IthaID:
+    1489.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.49209G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864490

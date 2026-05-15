@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000006.12-rs9399137
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000006.12
+identifiers:
+  rsids:
+  - rs9399137
+  aliases:
+  - rs61446782
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135419018
+  grch38:
+    chrom: '6'
+    pos: 135097880
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs9399137 (NC_000006.12:g.135097880T>C); reported phenotype: Hb F levels, Acute chest syndrome, Pain,
+  Abnormal platelet count, Abnormal red blood cell count.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000006.12_rs9399137_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Acute chest syndrome, Pain, Abnormal platelet count,
+    Abnormal red blood cell count; HGVS: NC_000006.12:g.135097880T>C / NC_000006.12:g.135097880T>C; IthaID: 2096.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135097880T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9399137

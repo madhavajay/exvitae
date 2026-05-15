@@ -1,0 +1,48 @@
+name: thalassemia-HBE1-rs3834466
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBE1
+summary: IthaGenes rs3834466 (NG_000007.3:g.27282dup).
+identifiers:
+  rsids:
+  - rs3834466
+  aliases:
+  - rs77526129
+  - rs113040651
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5291564
+  grch38:
+    chrom: '11'
+    pos: 5270334
+alleles:
+  kind: insertion
+  ref: T
+  alts:
+  - TT
+findings:
+- schema: bioscript:trait:1.0
+  alt: TT
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: NG_000007.3:g.27282dup / NG_000007.3:g.27282dup; IthaID:
+    3573.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.27282dup/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3834466
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LOC105372421-rs28567737
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LOC105372421
+identifiers:
+  rsids:
+  - rs28567737
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '19'
+    pos: 46531219
+  grch38:
+    chrom: '19'
+    pos: 46027961
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs28567737 (NC_000019.10:g.46027961T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LOC105372421_rs28567737_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000019.10:g.46027961T>C / NC_000019.10:g.46027961T>C;
+    IthaID: 3156.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000019.10%3Ag.46027961T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs28567737

@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-rs35518301
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+identifiers:
+  rsids:
+  - rs35518301
+  aliases:
+  - rs386583719
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5255744
+  grch38:
+    chrom: '11'
+    pos: 5234514
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes -31 (A>G) (HBD:c.-81A>G); reported phenotype: δ-thalassaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD_rs35518301_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-thalassaemia; HGVS: HBD:c.-81A>G / NG_000007.3:g.63102A>G; IthaID:
+    1328.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63102A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35518301

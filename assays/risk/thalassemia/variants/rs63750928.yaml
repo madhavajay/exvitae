@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs63750928
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs63750928
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5248228
+    end: 5248233
+  grch38:
+    chrom: '11'
+    start: 5226998
+    end: 5227003
+alleles:
+  kind: indel
+  ref: CTCCTC
+  alts:
+  - CTC
+summary: 'IthaGenes CD 7 (-GAG) [-Glu]  (Hb Xinyi) (HBB:c.22_24delGAG); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs63750928_finding_1
+  alt: CTC
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.22_24delGAG / NG_000007.3:g.70616_70618delGAG;
+    IthaID: 828.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70616_70618delGAG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750928

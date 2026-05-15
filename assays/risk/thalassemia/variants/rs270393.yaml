@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMP6-rs270393
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMP6
+identifiers:
+  rsids:
+  - rs270393
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 7768852
+  grch38:
+    chrom: '6'
+    pos: 7768619
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs270393 (NC_000006.12:g.7768619G>C); reported phenotype: Leg ulcers, Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMP6_rs270393_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Leg ulcers, Osteonecrosis/Avascular necrosis; HGVS: NC_000006.12:g.7768619G>C
+    / NC_000006.12:g.7768619G>C; IthaID: 2760.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.7768619G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs270393

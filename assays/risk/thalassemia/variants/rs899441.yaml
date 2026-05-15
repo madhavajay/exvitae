@@ -1,0 +1,46 @@
+name: thalassemia-MYBBP1A-rs899441
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MYBBP1A
+summary: 'IthaGenes rs899441 (NG_047119.1:g.14532A>G); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs899441
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 4449150
+  grch38:
+    chrom: '17'
+    pos: 4545855
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_047119.1:g.14532A>G / NG_047119.1:g.14532A>G;
+    IthaID: 3460.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_047119.1%3Ag.14532A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs899441
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

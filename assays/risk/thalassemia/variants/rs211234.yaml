@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KL-rs211234
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KL
+identifiers:
+  rsids:
+  - rs211234
+  aliases:
+  - rs529231
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33595128
+  grch38:
+    chrom: '13'
+    pos: 33020990
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs211234 (NG_011485.1:g.9558G>A); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KL_rs211234_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NG_011485.1:g.9558G>A / NG_011485.1:g.9558G>A;
+    IthaID: 2586.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.9558G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs211234

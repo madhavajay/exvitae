@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ε-rs7130110
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ε
+identifiers:
+  rsids:
+  - rs7130110
+  aliases:
+  - rs58593335
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5296104
+  grch38:
+    chrom: '11'
+    pos: 5274874
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+summary: 'IthaGenes rs7130110 (NG_000007.3:g.22742C>G); reported phenotype: Hb F levels, Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ε_rs7130110_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Hb F response to hydroxyurea; HGVS: NG_000007.3:g.22742C>G
+    / NG_000007.3:g.22742C>G; IthaID: 2718.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.22742C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7130110

@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-GJC1-rs1122109
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: GJC1
+identifiers:
+  rsids:
+  - rs1122109
+  aliases:
+  - rs4602076
+  - rs17683638
+  - rs386517577
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 42884538
+  grch38:
+    chrom: '17'
+    pos: 44807170
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs1122109 (NC_000017.11:g.44807170C>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: GJC1_rs1122109_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000017.11:g.44807170C>A / NC_000017.11:g.44807170C>A;
+    IthaID: 2775.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000017.11%3Ag.44807170C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1122109

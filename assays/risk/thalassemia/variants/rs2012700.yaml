@@ -1,0 +1,50 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-PEX7-rs2012700
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PEX7
+identifiers:
+  rsids:
+  - rs2012700
+  aliases:
+  - rs3823172
+  - rs17724430
+  - rs58691801
+  - rs386552538
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 137179387
+  grch38:
+    chrom: '6'
+    pos: 136858249
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs2012700 (NG_008462.1:g.40670G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: PEX7_rs2012700_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_008462.1:g.40670G>A / NG_008462.1:g.40670G>A;
+    IthaID: 2891.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008462.1%3Ag.40670G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2012700

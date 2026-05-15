@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG2-rs7482144
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG2
+identifiers:
+  rsids:
+  - rs7482144
+  aliases:
+  - rs41322148
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5276169
+  grch38:
+    chrom: '11'
+    pos: 5254939
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes -158 C>T (XmnI, rs7482144) (NG_000007.3:g.42677C>T); reported phenotype: Hb F levels, Pain, Hb F response
+  to hydroxyurea, F-cell numbers, Anaemia, Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG2_rs7482144_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Pain, Hb F response to hydroxyurea, F-cell numbers, Anaemia,
+    Severity; HGVS: NG_000007.3:g.42677C>T / NG_000007.3:g.42677C>T; IthaID: 2127.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.42677C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7482144

@@ -1,0 +1,54 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-rs35433207
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+identifiers:
+  rsids:
+  - rs35433207
+  aliases:
+  - rs112315605
+  - rs386583627
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5255656
+  grch38:
+    chrom: '11'
+    pos: 5234426
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - A
+  - C
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes CD 2 CAT>CTT (HBD:c.8A>T); reported phenotype: δ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD_rs35433207_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-chain variant; HGVS: HBD:c.8A>T / NG_000007.3:g.63190A>T; IthaID:
+    1348.'
+- schema: bioscript:trait:1.0
+  id: HBD_rs35433207_finding_2
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-chain variant; HGVS: HBD:c.8A>G / NG_000007.3:g.63190A>G; IthaID:
+    1349.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63190A%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35433207

@@ -1,0 +1,59 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs41397847
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs41397847
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 223547
+  grch38:
+    chrom: '16'
+    pos: 173548
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  - G
+  - A
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes CD 125 CTG>CCG [Leu>Pro] (HBA2:c.377T>C); reported phenotype: α-thalassaemia, α-chain variant, Haemolytic
+  anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs41397847_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, α-chain variant, Haemolytic anaemia; HGVS: HBA2:c.377T>C
+    / NG_000006.1:g.34411T>C; IthaID: 408.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs41397847_finding_2
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, α-chain variant, Haemolytic anaemia; HGVS: HBA2:c.377T>G
+    / NG_000006.1:g.34411T>G; IthaID: 409.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs41397847_finding_3
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant, Haemolytic anaemia; HGVS: HBA2:c.377T>A / NG_000006.1:g.34411T>A;
+    IthaID: 736.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34411T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs41397847

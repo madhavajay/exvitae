@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000007.14-rs10244884
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000007.14
+identifiers:
+  rsids:
+  - rs10244884
+  aliases:
+  - rs17711009
+  - rs59064800
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 30971795
+  grch38:
+    chrom: '7'
+    pos: 30932180
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes rs10244884 (NC_000007.14:g.30932180T>C); reported phenotype: Priapism.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000007.14_rs10244884_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Priapism; HGVS: NC_000007.14:g.30932180T>C / NC_000007.14:g.30932180T>C;
+    IthaID: 2766.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000007.14%3Ag.30932180T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10244884

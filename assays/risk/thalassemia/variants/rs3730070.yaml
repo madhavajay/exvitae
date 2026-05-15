@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ADCY6-rs3730070
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ADCY6
+identifiers:
+  rsids:
+  - rs3730070
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 49168848
+  grch38:
+    chrom: '12'
+    pos: 48775065
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  observed_alts:
+  - C
+  - T
+summary: 'IthaGenes rs3730070 (NG_042166.1:g.19032C>G); reported phenotype: Haemolytic anaemia, RBC adhesion.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ADCY6_rs3730070_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Haemolytic anaemia, RBC adhesion; HGVS: NG_042166.1:g.19032C>G / NG_042166.1:g.19032C>G;
+    IthaID: 2687.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_042166.1%3Ag.19032C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3730070

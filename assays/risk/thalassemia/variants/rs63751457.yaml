@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs63751457
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs63751457
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 222980
+  grch38:
+    chrom: '16'
+    pos: 172981
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes CD 22 GGC>GGT new donor consensus (HBA2:c.69C>T); reported phenotype: α-thalassaemia, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs63751457_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, Haemolytic anaemia; HGVS: HBA2:c.69C>T / NG_000006.1:g.33844C>T;
+    IthaID: 352.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33844C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63751457

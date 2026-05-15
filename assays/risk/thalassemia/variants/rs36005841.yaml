@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs36005841
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs36005841
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5247962
+  grch38:
+    chrom: '11'
+    pos: 5226732
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes CD 53 GCT>ACT (HBB:c.160G>A); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs36005841_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.160G>A / NG_000007.3:g.70884G>A; IthaID:
+    982.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70884G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs36005841

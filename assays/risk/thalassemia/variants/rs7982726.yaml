@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KL-rs7982726
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KL
+identifiers:
+  rsids:
+  - rs7982726
+  aliases:
+  - rs59685248
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33610711
+  grch38:
+    chrom: '13'
+    pos: 33036574
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs7982726 (NG_011485.1:g.25141T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KL_rs7982726_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011485.1:g.25141T>C / NG_011485.1:g.25141T>C;
+    IthaID: 2748.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.25141T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7982726

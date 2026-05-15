@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MYH9-rs4820230
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MYH9
+identifiers:
+  rsids:
+  - rs4820230
+  aliases:
+  - rs57819202
+  - rs74277053
+coordinates:
+  grch37:
+    chrom: '22'
+    pos: 36709539
+  grch38:
+    chrom: '22'
+    pos: 36313494
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes rs4820230 (NG_011884.2:g.79525C>T); reported phenotype: Focal segmental glomerulosclerosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MYH9_rs4820230_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Focal segmental glomerulosclerosis; HGVS: NG_011884.2:g.79525C>T /
+    NG_011884.2:g.79525C>T; IthaID: 2645.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011884.2%3Ag.79525C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4820230

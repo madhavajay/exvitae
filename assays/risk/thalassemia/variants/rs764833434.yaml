@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SP1-rs764833434
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SP1
+identifiers:
+  rsids:
+  - rs764833434
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 53776384
+  grch38:
+    chrom: '12'
+    pos: 53382600
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs764833434 (R218Q) (NG_030361.1:g.7406G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SP1_rs764833434_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_030361.1:g.7406G>A / NG_030361.1:g.7406G>A;
+    IthaID: 3213.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_030361.1%3Ag.7406G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs764833434

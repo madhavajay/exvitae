@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMP6-rs1225934
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMP6
+identifiers:
+  rsids:
+  - rs1225934
+  aliases:
+  - rs17674376
+  - rs59083399
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 7877419
+  grch38:
+    chrom: '6'
+    pos: 7877186
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs1225934 (NC_000006.12:g.7877186A>C); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMP6_rs1225934_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NC_000006.12:g.7877186A>C
+    / NC_000006.12:g.7877186A>C; IthaID: 2763.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.7877186A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1225934

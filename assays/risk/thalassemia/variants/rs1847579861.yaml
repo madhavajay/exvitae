@@ -1,0 +1,47 @@
+name: thalassemia-HBB-rs1847579861
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+summary: 'IthaGenes CD 30 (-A) or IVS I (-2) AGG>-GG (HBB:c.91delA); reported phenotype: β-thalassaemia, Haemolytic anaemia,
+  Ineffective erythropoiesis.'
+identifiers:
+  rsids:
+  - rs1847579861
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248161
+  grch38:
+    chrom: '11'
+    pos: 5226931
+alleles:
+  kind: indel
+  ref: T
+  alts:
+  - '-'
+findings:
+- schema: bioscript:trait:1.0
+  alt: '-'
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.91delA / NG_000007.3:g.70685delA; IthaID: 3484.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70685delA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1847579861
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

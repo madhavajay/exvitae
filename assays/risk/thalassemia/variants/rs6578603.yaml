@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000011.10-rs6578603
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000011.10
+identifiers:
+  rsids:
+  - rs6578603
+  aliases:
+  - rs56463372
+  - rs59158877
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5342404
+  grch38:
+    chrom: '11'
+    pos: 5321174
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs6578603 (NC_000011.10:g.5321174C>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000011.10_rs6578603_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000011.10:g.5321174C>T / NC_000011.10:g.5321174C>T;
+    IthaID: 3109.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5321174C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6578603

@@ -1,0 +1,49 @@
+name: thalassemia-FLG-AS1-rs12568784
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: FLG-AS1
+summary: 'IthaGenes rs12568784 (NC_000001.11:g.152350656G>T); reported phenotype: Leg ulcers.'
+identifiers:
+  rsids:
+  - rs12568784
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 152323132
+  grch38:
+    chrom: '1'
+    pos: 152350656
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Leg ulcers; HGVS: NC_000001.11:g.152350656G>T / NC_000001.11:g.152350656G>T;
+    IthaID: 3438.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000001.11%3Ag.152350656G%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs12568784
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

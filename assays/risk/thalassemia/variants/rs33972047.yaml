@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs33972047
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs33972047
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248193
+  grch38:
+    chrom: '11'
+    pos: 5226963
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes CD 19 AAC>AGC [Asn>Ser] (HBB:c.59A>G); reported phenotype: β-chain variant, β-thalassaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs33972047_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, β-thalassaemia; HGVS: HBB:c.59A>G / NG_000007.3:g.70653A>G;
+    IthaID: 79.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70653A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33972047

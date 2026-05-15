@@ -1,0 +1,46 @@
+name: thalassemia-RPS24-rs7899453
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: RPS24
+summary: 'IthaGenes rs7899453 (NG_012633.1:g.11442C>A); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs7899453
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 79799959
+  grch38:
+    chrom: '10'
+    pos: 78040201
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_012633.1:g.11442C>A / NG_012633.1:g.11442C>A; IthaID:
+    3506.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012633.1%3Ag.11442C%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7899453
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

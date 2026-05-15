@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000015.10-rs7170421
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000015.10
+identifiers:
+  rsids:
+  - rs7170421
+  aliases:
+  - rs60274950
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 60634146
+  grch38:
+    chrom: '15'
+    pos: 60341947
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+summary: 'IthaGenes rs7170421 (hCV11770326) (NC_000015.10:g.60341947C>G); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000015.10_rs7170421_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NC_000015.10:g.60341947C>G
+    / NC_000015.10:g.60341947C>G; IthaID: 2751.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000015.10%3Ag.60341947C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7170421

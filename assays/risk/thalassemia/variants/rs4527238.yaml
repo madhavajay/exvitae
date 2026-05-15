@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ANTXR1-rs4527238
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ANTXR1
+identifiers:
+  rsids:
+  - rs4527238
+  aliases:
+  - rs61535838
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 69319791
+  grch38:
+    chrom: '2'
+    pos: 69092659
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs4527238 (NG_012649.1:g.84516T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ANTXR1_rs4527238_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_012649.1:g.84516T>C / NG_012649.1:g.84516T>C;
+    IthaID: 3172.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012649.1%3Ag.84516T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4527238

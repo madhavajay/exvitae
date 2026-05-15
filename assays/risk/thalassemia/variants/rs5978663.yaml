@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-GPM6B-rs5978663
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: GPM6B
+identifiers:
+  rsids:
+  - rs5978663
+  aliases:
+  - rs6527972
+  - rs58745893
+coordinates:
+  grch37:
+    chrom: X
+    pos: 13803960
+  grch38:
+    chrom: X
+    pos: 13785841
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes rs5978663 (NG_011988.1:g.157872G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: GPM6B_rs5978663_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011988.1:g.157872G>A / NG_011988.1:g.157872G>A;
+    IthaID: 2722.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011988.1%3Ag.157872G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs5978663

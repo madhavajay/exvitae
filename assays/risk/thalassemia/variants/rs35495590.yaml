@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-FAM221A-rs35495590
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: FAM221A
+identifiers:
+  rsids:
+  - rs35495590
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 23728931
+  grch38:
+    chrom: '7'
+    pos: 23689312
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs35495590 (NC_000007.14:g.23689312T>C); reported phenotype: Abnormal neutrophil cell number, Abnormal
+  white blood cell count.'
+findings:
+- schema: bioscript:trait:1.0
+  id: FAM221A_rs35495590_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal neutrophil cell number, Abnormal white blood cell count;
+    HGVS: NC_000007.14:g.23689312T>C / NC_000007.14:g.23689312T>C; IthaID: 3354.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000007.14%3Ag.23689312T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35495590

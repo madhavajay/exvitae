@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CEBPE-rs45496295
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CEBPE
+identifiers:
+  rsids:
+  - rs45496295
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '14'
+    pos: 23587055
+  grch38:
+    chrom: '14'
+    pos: 23117846
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs45496295 (NG_009617.1:g.6420G>A); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CEBPE_rs45496295_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NG_009617.1:g.6420G>A / NG_009617.1:g.6420G>A; IthaID:
+    3157.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009617.1%3Ag.6420G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs45496295

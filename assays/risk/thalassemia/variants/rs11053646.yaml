@@ -1,0 +1,48 @@
+name: thalassemia-OLR1-rs11053646
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OLR1
+summary: 'IthaGenes rs11053646 (NG_016743.1:g.16343G>C); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs11053646
+  aliases:
+  - rs35996025
+  - rs60209320
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 10313448
+  grch38:
+    chrom: '12'
+    pos: 10160849
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_016743.1:g.16343G>C / NG_016743.1:g.16343G>C;
+    IthaID: 3453.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_016743.1%3Ag.16343G%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11053646
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

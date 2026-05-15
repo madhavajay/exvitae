@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CD81-rs708564
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CD81
+identifiers:
+  rsids:
+  - rs708564
+  aliases:
+  - rs1182166
+  - rs57500019
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 2410099
+  grch38:
+    chrom: '11'
+    pos: 2388869
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs708564 (NG_023386.1:g.16553C>T); reported phenotype: Red blood cell alloimmunisation.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CD81_rs708564_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Red blood cell alloimmunisation; HGVS: NG_023386.1:g.16553C>T / NG_023386.1:g.16553C>T;
+    IthaID: 2129.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_023386.1%3Ag.16553C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs708564

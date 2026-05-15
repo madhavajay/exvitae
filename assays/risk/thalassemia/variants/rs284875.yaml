@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TGFBR3-rs284875
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TGFBR3
+identifiers:
+  rsids:
+  - rs284875
+  aliases:
+  - rs3767570
+  - rs9440009
+  - rs59795589
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 92170708
+  grch38:
+    chrom: '1'
+    pos: 91705151
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs284875 (NG_027757.1:g.205852T>C); reported phenotype: Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TGFBR3_rs284875_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NG_027757.1:g.205852T>C / NG_027757.1:g.205852T>C; IthaID:
+    2610.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_027757.1%3Ag.205852T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs284875

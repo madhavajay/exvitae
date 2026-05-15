@@ -1,0 +1,49 @@
+name: thalassemia-HBA1-rs556086584
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+summary: 'IthaGenes IVS I-38 C>T (HBA1:c.95+38C>T); reported phenotype: α-thalassaemia.'
+identifiers:
+  rsids:
+  - rs556086584
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 226848
+  grch38:
+    chrom: '16'
+    pos: 176849
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia; HGVS: HBA1:c.95+38C>T / NG_000006.1:g.37712C>T; IthaID:
+    3431.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.37712C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs556086584
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

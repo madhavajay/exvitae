@@ -1,0 +1,49 @@
+name: thalassemia-NR3C1-rs33389
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NR3C1
+summary: 'IthaGenes rs33389 (NG_009062.1:g.119579G>A); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs33389
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '5'
+    pos: 142700499
+  grch38:
+    chrom: '5'
+    pos: 143320934
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_009062.1:g.119579G>A / NG_009062.1:g.119579G>A; IthaID:
+    3590.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009062.1%3Ag.119579G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33389
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

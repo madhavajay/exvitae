@@ -1,0 +1,51 @@
+name: thalassemia-CCDC162P-rs11153167
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CCDC162P
+summary: 'IthaGenes rs11153167 (NC_000006.12:g.109301379A>T); reported phenotype: Abnormal red blood cell count.'
+identifiers:
+  rsids:
+  - rs11153167
+  aliases:
+  - rs58187333
+  - rs60276676
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 109622582
+  grch38:
+    chrom: '6'
+    pos: 109301379
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal red blood cell count; HGVS: NC_000006.12:g.109301379A>T /
+    NC_000006.12:g.109301379A>T; IthaID: 3517.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.109301379A%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11153167
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

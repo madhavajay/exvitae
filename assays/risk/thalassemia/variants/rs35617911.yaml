@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG2-rs35617911
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG2
+identifiers:
+  rsids:
+  - rs35617911
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5276213
+  grch38:
+    chrom: '11'
+    pos: 5254983
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes -202 C>G (Black non-deletional HPFH) (HBG2:c.-255C>G); reported phenotype: HPFH, Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG2_rs35617911_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: HPFH, Hb F levels; HGVS: HBG2:c.-255C>G / NG_000007.3:g.42633C>G;
+    IthaID: 1555.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.42633C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35617911

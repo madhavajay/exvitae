@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TLR2-rs4696480
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TLR2
+identifiers:
+  rsids:
+  - rs4696480
+  aliases:
+  - rs5743686
+  - rs61645525
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 154607126
+  grch38:
+    chrom: '4'
+    pos: 153685974
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - A
+summary: 'IthaGenes rs4696480 (NG_016229.1:g.6686T>A); reported phenotype: Recurrent respiratory infections.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TLR2_rs4696480_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Recurrent respiratory infections; HGVS: NG_016229.1:g.6686T>A / NG_016229.1:g.6686T>A;
+    IthaID: 3245.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_016229.1%3Ag.6686T%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4696480

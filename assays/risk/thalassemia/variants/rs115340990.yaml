@@ -1,0 +1,46 @@
+name: thalassemia-SAR1A-rs115340990
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SAR1A
+summary: 'IthaGenes rs115340990 (NC_000010.11:g.70151008A>G); reported phenotype: Response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs115340990
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 71910764
+  grch38:
+    chrom: '10'
+    pos: 70151008
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Response to hydroxyurea; HGVS: NC_000010.11:g.70151008A>G / NC_000010.11:g.70151008A>G;
+    IthaID: 3539.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000010.11%3Ag.70151008A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs115340990
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

@@ -1,0 +1,47 @@
+name: thalassemia-NPY-rs5576
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NPY
+summary: 'IthaGenes rs5576 (NG_016148.1:g.12545A>G); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs5576
+  aliases:
+  - rs3025114
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 24331351
+  grch38:
+    chrom: '7'
+    pos: 24291732
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NG_016148.1:g.12545A>G / NG_016148.1:g.12545A>G;
+    IthaID: 3474.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_016148.1%3Ag.12545A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs5576
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

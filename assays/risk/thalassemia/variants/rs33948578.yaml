@@ -1,0 +1,58 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs33948578
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs33948578
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248024
+  grch38:
+    chrom: '11'
+    pos: 5226794
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  - T
+  - C
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes CD 32 CTG>CCG (HBB:c.98T>C); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs33948578_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.98T>C / NG_000007.3:g.70822T>C; IthaID:
+    912.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33948578_finding_2
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, Haemolytic anaemia; HGVS: HBB:c.98T>A / NG_000007.3:g.70822T>A;
+    IthaID: 913.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33948578_finding_3
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.98T>G / NG_000007.3:g.70822T>G; IthaID:
+    915.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70822T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33948578

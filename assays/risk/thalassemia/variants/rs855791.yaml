@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TMPRSS6-rs855791
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TMPRSS6
+identifiers:
+  rsids:
+  - rs855791
+  aliases:
+  - rs17749938
+  - rs59898578
+coordinates:
+  grch37:
+    chrom: '22'
+    pos: 37462936
+  grch38:
+    chrom: '22'
+    pos: 37066896
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs855791 (NG_012856.2:g.47668T>C); reported phenotype: Abnormal hepcidin level.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TMPRSS6_rs855791_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal hepcidin level; HGVS: NG_012856.2:g.47668T>C / NG_012856.2:g.47668T>C;
+    IthaID: 3084.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012856.2%3Ag.47668T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs855791

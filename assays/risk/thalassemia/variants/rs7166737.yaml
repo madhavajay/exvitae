@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SIN3A-rs7166737
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SIN3A
+identifiers:
+  rsids:
+  - rs7166737
+  aliases:
+  - rs58278582
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 75682513
+  grch38:
+    chrom: '15'
+    pos: 75390172
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs7166737 (NC_000015.10:g.75390172A>G); reported phenotype: Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SIN3A_rs7166737_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000015.10:g.75390172A>G / NC_000015.10:g.75390172A>G;
+    IthaID: 3174.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000015.10%3Ag.75390172A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7166737

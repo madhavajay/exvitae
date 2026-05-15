@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KL-rs565587
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KL
+identifiers:
+  rsids:
+  - rs565587
+  aliases:
+  - rs17694489
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33599659
+  grch38:
+    chrom: '13'
+    pos: 33025521
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs565587 (NG_011485.1:g.14089A>G); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KL_rs565587_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NG_011485.1:g.14089A>G / NG_011485.1:g.14089A>G;
+    IthaID: 2584.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.14089A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs565587

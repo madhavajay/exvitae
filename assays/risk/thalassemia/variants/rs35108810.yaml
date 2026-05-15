@@ -1,0 +1,46 @@
+name: thalassemia-N4BP2L2-rs35108810
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: N4BP2L2
+summary: 'IthaGenes rs35108810 (NC_000013.11:g.32443800T>A); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs35108810
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33017937
+  grch38:
+    chrom: '13'
+    pos: 32443800
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000013.11:g.32443800T>A / NC_000013.11:g.32443800T>A;
+    IthaID: 3447.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000013.11%3Ag.32443800T%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35108810
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

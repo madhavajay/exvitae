@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs281864808
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs281864808
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 222945
+  grch38:
+    chrom: '16'
+    pos: 172946
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+summary: 'IthaGenes CD 11 AAG>CAG [Lys>Gln] (HBA2:c.34A>C); reported phenotype: α-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864808_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.34A>C / NG_000006.1:g.33809A>C; IthaID:
+    458.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33809A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864808

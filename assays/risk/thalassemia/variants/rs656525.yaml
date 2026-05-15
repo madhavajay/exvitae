@@ -1,0 +1,51 @@
+name: thalassemia-KL-rs656525
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KL
+summary: 'IthaGenes rs656525 (NG_011485.1:g.37107A>C); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs656525
+  aliases:
+  - rs4485225
+  - rs60633658
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33622677
+  grch38:
+    chrom: '13'
+    pos: 33048540
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+  observed_alts:
+  - C
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NG_011485.1:g.37107A>C / NG_011485.1:g.37107A>C;
+    IthaID: 3543.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.37107A%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs656525
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

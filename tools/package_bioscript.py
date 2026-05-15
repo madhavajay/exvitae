@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import hashlib
+import os
 import subprocess
 import sys
 import zipfile
@@ -13,7 +14,15 @@ from typing import Any
 import yaml
 
 
-RUNNABLE_SCHEMAS = {"bioscript:panel:1.0", "bioscript:assay:1.0", "bioscript:variant:1.0", "bioscript:variant"}
+RUNNABLE_SCHEMAS = {
+    "bioscript:panel:1.0",
+    "bioscript:assay:1.0",
+    "bioscript:variant:1.0",
+    "bioscript:variant",
+    "bioscript:variant-catalogue:1.0",
+}
+
+EXBUILD_FILENAME = ".exbuild"
 
 EXCLUDE_DIRS = {
     ".bioscript-cache",
@@ -72,6 +81,13 @@ def add_yaml_closure(package_root: Path, yaml_file: Path, out: set[Path]) -> Non
     collect_includes(package_root, yaml_file, data, out)
 
     schema = str(data.get("schema", ""))
+    if schema == "bioscript:variant-catalogue:1.0":
+        for table_key in ("variants", "findings"):
+            table = data.get(table_key)
+            if isinstance(table, dict) and isinstance(table.get("source"), str):
+                add_file(package_root, resolve_package_path(package_root, yaml_file, table["source"]), out)
+        return
+
     if schema not in {"bioscript:panel:1.0", "bioscript:assay:1.0"}:
         return
 
@@ -119,6 +135,8 @@ def validate_entrypoint(entrypoint: Path, entrypoint_schema: str, bioscript: Pat
     elif entrypoint_schema == "bioscript:assay:1.0":
         subprocess.run([str(bioscript), "validate-assays", str(entrypoint)], check=True)
     elif entrypoint_schema in {"bioscript:variant:1.0", "bioscript:variant"}:
+        subprocess.run([str(bioscript), "validate-variants", str(entrypoint)], check=True)
+    elif entrypoint_schema == "bioscript:variant-catalogue:1.0":
         subprocess.run([str(bioscript), "validate-variants", str(entrypoint)], check=True)
     else:
         raise ValueError(f"{entrypoint} has unsupported schema: {entrypoint_schema}")
@@ -186,6 +204,36 @@ def write_release_yaml(manifest: dict[str, Any], files: list[Path], zip_path: Pa
     return release_path
 
 
+def find_exr_dir(start: Path) -> Path | None:
+    for directory in (start.resolve(), *start.resolve().parents):
+        candidate = directory / "exr"
+        if candidate.is_file() and os.access(candidate, os.X_OK):
+            return directory
+    return None
+
+
+def run_exbuild(package_root: Path) -> None:
+    exbuild_path = package_root / EXBUILD_FILENAME
+    if not exbuild_path.exists():
+        return
+    config = load_yaml(exbuild_path)
+    steps = config.get("steps") or []
+    if not isinstance(steps, list):
+        raise ValueError(f"{exbuild_path}: 'steps' must be a list")
+
+    env = os.environ.copy()
+    exr_dir = find_exr_dir(package_root)
+    if exr_dir is not None:
+        env["PATH"] = f"{exr_dir}{os.pathsep}{env.get('PATH', '')}"
+
+    for index, step in enumerate(steps):
+        if not isinstance(step, dict) or not isinstance(step.get("run"), str):
+            raise ValueError(f"{exbuild_path}: step {index} must have a string 'run'")
+        name = step.get("name", step["run"])
+        print(f"build [{package_root.name}]: {name}")
+        subprocess.run(step["run"], shell=True, cwd=package_root, env=env, check=True)
+
+
 def package_manifest(
     manifest_path: Path,
     bioscript: Path,
@@ -195,6 +243,7 @@ def package_manifest(
 ) -> Path:
     manifest_path = manifest_path.resolve()
     package_root = manifest_path.parent
+    run_exbuild(package_root)
     manifest = load_yaml(manifest_path)
     entrypoint = package_entrypoint(manifest_path, manifest, package_root)
 

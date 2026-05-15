@@ -1,0 +1,51 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA1-rs34883113
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+identifiers:
+  rsids:
+  - rs34883113
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 226927
+  grch38:
+    chrom: '16'
+    pos: 176928
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes IVS I-117 GCAGGA>GCAAGA acceptor (HBA1:c.96-1G>A); reported phenotype: α-thalassaemia, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA1_rs34883113_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, Haemolytic anaemia; HGVS: HBA1:c.96-1G>A / NG_000006.1:g.37791G>A;
+    IthaID: 364.'
+- schema: bioscript:trait:1.0
+  id: HBA1_rs34883113_finding_2
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia; HGVS: HBA1:c.96-1G>C / NG_000006.1:g.37791G>C; IthaID:
+    3251.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.37791G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34883113

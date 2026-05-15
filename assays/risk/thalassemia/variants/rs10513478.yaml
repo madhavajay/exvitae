@@ -1,0 +1,48 @@
+name: thalassemia-PLCH1-rs10513478
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PLCH1
+summary: 'IthaGenes rs10513478 (NC_000003.12:g.155522876C>T); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs10513478
+  aliases:
+  - rs17411659
+  - rs59975900
+coordinates:
+  grch37:
+    chrom: '3'
+    pos: 155240665
+  grch38:
+    chrom: '3'
+    pos: 155522876
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NC_000003.12:g.155522876C>T / NC_000003.12:g.155522876C>T;
+    IthaID: 3499.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000003.12%3Ag.155522876C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10513478
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

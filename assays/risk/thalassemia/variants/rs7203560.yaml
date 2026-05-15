@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NPRL3-rs7203560
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NPRL3
+identifiers:
+  rsids:
+  - rs7203560
+  aliases:
+  - rs61210232
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 184390
+  grch38:
+    chrom: '16'
+    pos: 134391
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+summary: 'IthaGenes rs7203560 (NG_029669.1:g.9308A>C); reported phenotype: Haemolytic anaemia, Bilirubin levels, Reticulocytopenia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NPRL3_rs7203560_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Haemolytic anaemia, Bilirubin levels, Reticulocytopenia; HGVS: NG_029669.1:g.9308A>C
+    / NG_029669.1:g.9308A>C; IthaID: 2782.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029669.1%3Ag.9308A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7203560

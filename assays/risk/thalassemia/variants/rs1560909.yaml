@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMPR1B-rs1560909
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMPR1B
+identifiers:
+  rsids:
+  - rs1560909
+  aliases:
+  - rs61296286
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 96020228
+  grch38:
+    chrom: '4'
+    pos: 95099077
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs1560909 (NG_009245.1:g.346101A>G); reported phenotype: Leg ulcers.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMPR1B_rs1560909_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Leg ulcers; HGVS: NG_009245.1:g.346101A>G / NG_009245.1:g.346101A>G;
+    IthaID: 2618.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009245.1%3Ag.346101A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1560909

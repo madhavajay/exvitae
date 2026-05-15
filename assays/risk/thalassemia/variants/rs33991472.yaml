@@ -1,0 +1,51 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs33991472
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs33991472
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5247946
+  grch38:
+    chrom: '11'
+    pos: 5226716
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+  - C
+  observed_alts:
+  - C
+  - T
+summary: 'IthaGenes CD 58 CCT>CAT [Pro>His] (HBB:c.176C>A); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs33991472_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.176C>A / NG_000007.3:g.70900C>A; IthaID:
+    994.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33991472_finding_2
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.176C>G / NG_000007.3:g.70900C>G; IthaID:
+    995.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70900C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33991472

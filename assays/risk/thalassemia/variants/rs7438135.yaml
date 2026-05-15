@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-UGT2B7-rs7438135
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: UGT2B7
+identifiers:
+  rsids:
+  - rs7438135
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 69961339
+  grch38:
+    chrom: '4'
+    pos: 69095621
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes -840 G>A (rs7438135) (NC_000004.12:g.69095621G>A); reported phenotype: Morphine glucuronidation.'
+findings:
+- schema: bioscript:trait:1.0
+  id: UGT2B7_rs7438135_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Morphine glucuronidation; HGVS: NC_000004.12:g.69095621G>A / NC_000004.12:g.69095621G>A;
+    IthaID: 2915.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000004.12%3Ag.69095621G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7438135

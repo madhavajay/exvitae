@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000011.10-rs7951206
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000011.10
+identifiers:
+  rsids:
+  - rs7951206
+  aliases:
+  - rs60643407
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 4611654
+  grch38:
+    chrom: '11'
+    pos: 4590424
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs7951206 (NC_000011.10:g.4590424G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000011.10_rs7951206_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000011.10:g.4590424G>A / NC_000011.10:g.4590424G>A;
+    IthaID: 2879.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.4590424G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7951206

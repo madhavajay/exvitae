@@ -1,0 +1,46 @@
+name: thalassemia-HBA2-rs121909803
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+summary: 'IthaGenes Init CD ATG>GTG [Met>Pro] (HBA2:c.1A>G); reported phenotype: α-thalassaemia.'
+identifiers:
+  rsids:
+  - rs121909803
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 222912
+  grch38:
+    chrom: '16'
+    pos: 172913
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia; HGVS: HBA2:c.1A>G / NG_000006.1:g.33776A>G; IthaID:
+    3604.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33776A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs121909803
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

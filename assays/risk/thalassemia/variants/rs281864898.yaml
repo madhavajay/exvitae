@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs281864898
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs281864898
+  aliases:
+  - rs63751402
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5248178
+    end: 5248185
+  grch38:
+    chrom: '11'
+    start: 5226948
+    end: 5226955
+alleles:
+  kind: deletion
+  ref: CCAACTTC
+  alts:
+  - C
+summary: 'IthaGenes CD 22-24 ( -7 bp): (-AAGTTGG) (HBB:c.68_74delAAGTTGG); reported phenotype: β-thalassaemia, Haemolytic
+  anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs281864898_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.68_74delAAGTTGG / NG_000007.3:g.70662_70668delAAGTTGG; IthaID: 84.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70662_70668delAAGTTGG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864898

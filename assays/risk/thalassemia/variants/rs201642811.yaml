@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG1-rs201642811
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG1
+identifiers:
+  rsids:
+  - rs201642811
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5269572
+  grch38:
+    chrom: '11'
+    pos: 5248342
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+summary: 'IthaGenes rs201642811 (NG_000007.3:g.49274T>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG1_rs201642811_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_000007.3:g.49274T>G / NG_000007.3:g.49274T>G;
+    IthaID: 3159.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.49274T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs201642811

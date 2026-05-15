@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TNF-rs1800629
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TNF
+identifiers:
+  rsids:
+  - rs1800629
+  aliases:
+  - rs3091256
+  - rs4134777
+  - rs36205298
+  - rs59729336
+  - rs116610137
+  - rs117441802
+  - rs148958203
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 31543031
+  grch38:
+    chrom: '6'
+    pos: 31575254
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs1800629 (–308G>A) (NG_007462.1:g.4682G>A); reported phenotype: Stroke, Decreased serum ferritin.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TNF_rs1800629_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke, Decreased serum ferritin; HGVS: NG_007462.1:g.4682G>A / NG_007462.1:g.4682G>A;
+    IthaID: 2668.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_007462.1%3Ag.4682G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1800629

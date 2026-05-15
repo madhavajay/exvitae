@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NW_003315959.1-rs10468869
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NW_003315959.1
+identifiers:
+  rsids:
+  - rs10468869
+  aliases: []
+coordinates:
+  grch37:
+    chrom: HSCHR18_2_CTG1_1
+    pos: 49327855
+  grch38:
+    chrom: '18'
+    pos: 51795403
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs10468869 (NW_003315959.1:g.26240C>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NW_003315959.1_rs10468869_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NW_003315959.1:g.26240C>T / NW_003315959.1:g.26240C>T;
+    IthaID: 3155.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NW_003315959.1%3Ag.26240C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10468869

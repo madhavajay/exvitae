@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs111710394
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs111710394
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246693
+  grch38:
+    chrom: '11'
+    pos: 5225463
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+summary: IthaGenes TTS +1 T>A     (+1609 T>A, HBB:c.*135T>A) (NG_000007.3:g.72153T>A).
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs111710394_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: NG_000007.3:g.72153T>A / NG_000007.3:g.72153T>A; IthaID:
+    2064.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.72153T%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs111710394

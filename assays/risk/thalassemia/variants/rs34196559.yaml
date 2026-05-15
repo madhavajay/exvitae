@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs34196559
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs34196559
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5248258
+    end: 5248263
+  grch38:
+    chrom: '11'
+    start: 5227028
+    end: 5227033
+alleles:
+  kind: indel
+  ref: TGTTTG
+  alts:
+  - TG
+summary: 'IthaGenes CAP +41 to +44 (-AACA) (CAP +40 to +43 (-AAAC)) (HBB:c.-10_-7delAACA); reported phenotype: β-thalassaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs34196559_finding_1
+  alt: TG
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia; HGVS: HBB:c.-10_-7delAACA / NG_000007.3:g.70585_70588delAACA;
+    IthaID: 40.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70585_70588delAACA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34196559

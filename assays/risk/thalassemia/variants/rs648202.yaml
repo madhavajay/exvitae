@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KL-rs648202
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KL
+identifiers:
+  rsids:
+  - rs648202
+  aliases:
+  - rs56612247
+  - rs58756061
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33635463
+  grch38:
+    chrom: '13'
+    pos: 33061326
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs648202 (NG_011485.1:g.49893T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KL_rs648202_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011485.1:g.49893T>C / NG_011485.1:g.49893T>C;
+    IthaID: 2750.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.49893T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs648202

@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LOC105378010-rs6920211
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LOC105378010
+identifiers:
+  rsids:
+  - rs6920211
+  aliases:
+  - rs17777358
+  - rs59885207
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135431318
+  grch38:
+    chrom: '6'
+    pos: 135110180
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes rs6920211 (NC_000006.12:g.135110180T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LOC105378010_rs6920211_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000006.12:g.135110180T>C / NC_000006.12:g.135110180T>C;
+    IthaID: 3337.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135110180T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6920211

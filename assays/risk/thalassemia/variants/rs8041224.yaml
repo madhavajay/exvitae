@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-IGF1R-rs8041224
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: IGF1R
+identifiers:
+  rsids:
+  - rs8041224
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 99297665
+  grch38:
+    chrom: '15'
+    pos: 98754436
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs8041224 (NG_009492.1:g.109905T>C); reported phenotype: Bacteremia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: IGF1R_rs8041224_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Bacteremia; HGVS: NG_009492.1:g.109905T>C / NG_009492.1:g.109905T>C;
+    IthaID: 2673.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009492.1%3Ag.109905T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs8041224

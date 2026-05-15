@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-PROC-rs146922325
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PROC
+identifiers:
+  rsids:
+  - rs146922325
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 128183690
+  grch38:
+    chrom: '2'
+    pos: 127426114
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs146922325 (NG_016323.1:g.12695C>T); reported phenotype: Thromboembolism.'
+findings:
+- schema: bioscript:trait:1.0
+  id: PROC_rs146922325_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Thromboembolism; HGVS: NG_016323.1:g.12695C>T / NG_016323.1:g.12695C>T;
+    IthaID: 3096.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_016323.1%3Ag.12695C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs146922325

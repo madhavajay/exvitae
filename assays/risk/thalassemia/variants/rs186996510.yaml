@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-EGLN1-rs186996510
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: EGLN1
+identifiers:
+  rsids:
+  - rs186996510
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 231557623
+  grch38:
+    chrom: '1'
+    pos: 231421877
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+summary: 'IthaGenes rs186996510 (12C>G) (NG_015865.1:g.8168C>G); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: EGLN1_rs186996510_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NG_015865.1:g.8168C>G / NG_015865.1:g.8168C>G; IthaID:
+    2925.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_015865.1%3Ag.8168C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs186996510

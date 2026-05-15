@@ -1,0 +1,46 @@
+name: thalassemia-TTLL10-rs113596156
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TTLL10
+summary: 'IthaGenes rs113596156 (NC_000001.11:g.1179319G>A); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs113596156
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 1114699
+  grch38:
+    chrom: '1'
+    pos: 1179319
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000001.11:g.1179319G>A / NC_000001.11:g.1179319G>A;
+    IthaID: 3458.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000001.11%3Ag.1179319G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs113596156
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-OR51B5-rs5006884
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OR51B5
+identifiers:
+  rsids:
+  - rs5006884
+  aliases:
+  - rs52827715
+  - rs57078839
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5373251
+  grch38:
+    chrom: '11'
+    pos: 5352021
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs5006884 (NC_000011.10:g.5352021C>T); reported phenotype: Hb F levels, Acute chest syndrome.'
+findings:
+- schema: bioscript:trait:1.0
+  id: OR51B5_rs5006884_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Acute chest syndrome; HGVS: NC_000011.10:g.5352021C>T
+    / NC_000011.10:g.5352021C>T; IthaID: 2829.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5352021C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs5006884

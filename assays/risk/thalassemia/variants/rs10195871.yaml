@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BCL11A-rs10195871
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BCL11A
+identifiers:
+  rsids:
+  - rs10195871
+  aliases:
+  - rs57600883
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60720589
+  grch38:
+    chrom: '2'
+    pos: 60493454
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs10195871 (NG_011968.1:g.65045T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BCL11A_rs10195871_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011968.1:g.65045T>C / NG_011968.1:g.65045T>C;
+    IthaID: 2821.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011968.1%3Ag.65045T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10195871

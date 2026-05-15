@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-OR51B5-rs2340653
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OR51B5
+identifiers:
+  rsids:
+  - rs2340653
+  aliases:
+  - rs3935859
+  - rs56513003
+  - rs58418552
+  - rs59665896
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5451761
+  grch38:
+    chrom: '11'
+    pos: 5430531
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs2340653 (NC_000011.10:g.5430531G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: OR51B5_rs2340653_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000011.10:g.5430531G>A / NC_000011.10:g.5430531G>A;
+    IthaID: 2877.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5430531G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2340653

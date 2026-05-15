@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMPR1B-rs1434549
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMPR1B
+identifiers:
+  rsids:
+  - rs1434549
+  aliases:
+  - rs17413244
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 96010909
+  grch38:
+    chrom: '4'
+    pos: 95089758
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs1434549 (NG_009245.1:g.336782T>C); reported phenotype: Abnormal GFR.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMPR1B_rs1434549_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal GFR; HGVS: NG_009245.1:g.336782T>C / NG_009245.1:g.336782T>C;
+    IthaID: 2617.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009245.1%3Ag.336782T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1434549

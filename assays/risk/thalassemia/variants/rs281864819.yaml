@@ -1,0 +1,58 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs281864819
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs281864819
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 222981
+  grch38:
+    chrom: '16'
+    pos: 172982
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+  - C
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes CD 23 GAG>TAG [Glu>STOP] (HBA2:c.70G>T); reported phenotype: α-thalassaemia, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864819_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, Haemolytic anaemia; HGVS: HBA2:c.70G>T / NG_000006.1:g.33845G>T;
+    IthaID: 354.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864819_finding_2
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.70G>C / NG_000006.1:g.33845G>C; IthaID:
+    484.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864819_finding_3
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.70G>A / NG_000006.1:g.33845G>A; IthaID:
+    485.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33845G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864819

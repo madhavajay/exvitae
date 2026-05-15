@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs2685121
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs2685121
+  aliases:
+  - rs58372014
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 223735
+  grch38:
+    chrom: '16'
+    pos: 173736
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: IthaGenes TTS +26 A>G (HBA2:c.*136A>G).
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs2685121_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: HBA2:c.*136A>G / NG_000006.1:g.34599A>G; IthaID: 3301.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34599A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2685121

@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MAP7-rs3778314
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MAP7
+identifiers:
+  rsids:
+  - rs3778314
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 136838061
+  grch38:
+    chrom: '6'
+    pos: 136516923
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes rs3778314 (NC_000006.12:g.136516923T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MAP7_rs3778314_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000006.12:g.136516923T>C / NC_000006.12:g.136516923T>C;
+    IthaID: 2890.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.136516923T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3778314

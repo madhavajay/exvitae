@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs587776826
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs587776826
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    start: 223146
+    end: 223152
+  grch38:
+    chrom: '16'
+    start: 173147
+    end: 173153
+alleles:
+  kind: indel
+  ref: ACCAAGA
+  alts:
+  - TACTTC
+summary: 'IthaGenes CD 39-41 (-9 bp, + 8 bp) (NG_000006.1:g.34010_34018delinsTACTTCCC); reported phenotype: α-thalassaemia,
+  Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs587776826_finding_1
+  alt: TACTTC
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, Haemolytic anaemia; HGVS: NG_000006.1:g.34010_34018delinsTACTTCCC
+    / NG_000006.1:g.34010_34018delinsTACTTCCC; IthaID: 372.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34010_34018delinsTACTTCCC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs587776826

@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-rs34289459
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+identifiers:
+  rsids:
+  - rs34289459
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5255583
+  grch38:
+    chrom: '11'
+    pos: 5234353
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes CD 26 GAG>GAC (HBD:c.81G>C); reported phenotype: δ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD_rs34289459_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-chain variant; HGVS: HBD:c.81G>C / NG_000007.3:g.63263G>C; IthaID:
+    1361.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63263G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34289459

@@ -1,0 +1,51 @@
+name: thalassemia-CDK6-rs11981340
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CDK6
+summary: 'IthaGenes rs11981340 (NG_015888.1:g.155282A>G); reported phenotype: Abnormal white blood cell count.'
+identifiers:
+  rsids:
+  - rs11981340
+  aliases:
+  - rs57535174
+  - rs112631511
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 92315660
+  grch38:
+    chrom: '7'
+    pos: 92686346
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal white blood cell count; HGVS: NG_015888.1:g.155282A>G / NG_015888.1:g.155282A>G;
+    IthaID: 3522.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_015888.1%3Ag.155282A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11981340
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

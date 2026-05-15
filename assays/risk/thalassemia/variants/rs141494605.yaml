@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBM-rs141494605
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBM
+identifiers:
+  rsids:
+  - rs141494605
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 216593
+  grch38:
+    chrom: '16'
+    pos: 166594
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs141494605 (NG_000006.1:g.27457T>C); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBM_rs141494605_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NG_000006.1:g.27457T>C / NG_000006.1:g.27457T>C; IthaID:
+    3192.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.27457T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs141494605

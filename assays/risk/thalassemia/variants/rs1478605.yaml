@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-THBS1-rs1478605
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: THBS1
+identifiers:
+  rsids:
+  - rs1478605
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 39873284
+  grch38:
+    chrom: '15'
+    pos: 39581083
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs1478605 (NC_000015.10:g.39581083G>A); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: THBS1_rs1478605_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NC_000015.10:g.39581083G>A
+    / NC_000015.10:g.39581083G>A; IthaID: 3196.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000015.10%3Ag.39581083G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1478605

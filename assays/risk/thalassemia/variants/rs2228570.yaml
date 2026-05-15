@@ -1,0 +1,53 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-VDR-rs2228570
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: VDR
+identifiers:
+  rsids:
+  - rs2228570
+  aliases:
+  - rs8179174
+  - rs10735810
+  - rs17881966
+  - rs52811041
+  - rs56641119
+  - rs57067622
+  - rs117559231
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 48272895
+  grch38:
+    chrom: '12'
+    pos: 47879112
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes  rs2228570 (NG_008731.1:g.30920T>C); reported phenotype: Osteoporosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: VDR_rs2228570_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteoporosis; HGVS: NG_008731.1:g.30920T>C / NG_008731.1:g.30920T>C;
+    IthaID: 2944.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008731.1%3Ag.30920T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2228570

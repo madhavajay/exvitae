@@ -1,0 +1,46 @@
+name: thalassemia-HBD-rs186432678
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+summary: 'IthaGenes -130 A>G (HBD:c.-180A>G); reported phenotype: δ-thalassaemia.'
+identifiers:
+  rsids:
+  - rs186432678
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5255843
+  grch38:
+    chrom: '11'
+    pos: 5234613
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-thalassaemia; HGVS: HBD:c.-180A>G / NG_000007.3:g.63003A>G; IthaID:
+    3601.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63003A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs186432678
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

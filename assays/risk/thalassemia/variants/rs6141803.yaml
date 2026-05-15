@@ -1,0 +1,49 @@
+name: thalassemia-NC_000020.11-rs6141803
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000020.11
+summary: 'IthaGenes rs6141803 (NC_000020.11:g.32752550T>C); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs6141803
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '20'
+    pos: 31340356
+  grch38:
+    chrom: '20'
+    pos: 32752550
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NC_000020.11:g.32752550T>C / NC_000020.11:g.32752550T>C;
+    IthaID: 3479.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000020.11%3Ag.32752550T%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6141803
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

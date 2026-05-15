@@ -1,0 +1,50 @@
+name: thalassemia-LY6G5C-rs9469032
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LY6G5C
+summary: 'IthaGenes rs9469032 (NC_000006.12:g.31677649C>G); reported phenotype: Abnormal platelet count.'
+identifiers:
+  rsids:
+  - rs9469032
+  aliases:
+  - rs148655692
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 31645426
+  grch38:
+    chrom: '6'
+    pos: 31677649
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal platelet count; HGVS: NC_000006.12:g.31677649C>G / NC_000006.12:g.31677649C>G;
+    IthaID: 3529.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.31677649C%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9469032
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

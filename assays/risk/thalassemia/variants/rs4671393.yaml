@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BCL11A-rs4671393
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BCL11A
+identifiers:
+  rsids:
+  - rs4671393
+  aliases:
+  - rs52835308
+  - rs118120356
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60720951
+  grch38:
+    chrom: '2'
+    pos: 60493816
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs4671393 (NG_011968.1:g.64683T>C); reported phenotype: Hb F levels, Acute chest syndrome, F-cell numbers.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BCL11A_rs4671393_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Acute chest syndrome, F-cell numbers; HGVS: NG_011968.1:g.64683T>C
+    / NG_011968.1:g.64683T>C; IthaID: 2066.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011968.1%3Ag.64683T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4671393

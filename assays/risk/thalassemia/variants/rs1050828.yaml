@@ -1,0 +1,46 @@
+name: thalassemia-G6PD-rs1050828
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: G6PD
+summary: 'IthaGenes rs1050828 (NG_009015.2:g.16571G>A); reported phenotype: Stroke.'
+identifiers:
+  rsids:
+  - rs1050828
+  aliases:
+  - rs1894404
+  - rs2230034
+  - rs3191188
+coordinates:
+  grch38:
+    chrom: X
+    pos: 154536002
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NG_009015.2:g.16571G>A / NG_009015.2:g.16571G>A; IthaID:
+    3580.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009015.2%3Ag.16571G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1050828
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

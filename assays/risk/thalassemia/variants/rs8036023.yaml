@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MAP2K1-rs8036023
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MAP2K1
+identifiers:
+  rsids:
+  - rs8036023
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 66731285
+  grch38:
+    chrom: '15'
+    pos: 66438947
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+summary: 'IthaGenes rs8036023 (NG_008305.1:g.57075G>C); reported phenotype: Leg ulcers.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MAP2K1_rs8036023_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Leg ulcers; HGVS: NG_008305.1:g.57075G>C / NG_008305.1:g.57075G>C;
+    IthaID: 2626.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008305.1%3Ag.57075G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs8036023

@@ -1,0 +1,45 @@
+name: thalassemia-HBB-rs753444453
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+summary: IthaGenes IVS I-13 G>T (HBB:c.92+13G>T).
+identifiers:
+  rsids:
+  - rs753444453
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248147
+  grch38:
+    chrom: '11'
+    pos: 5226917
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: HBB:c.92+13G>T / NG_000007.3:g.70699G>T; IthaID: 3445.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70699G%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs753444453
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

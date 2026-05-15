@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-IL4R-rs1805015
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: IL4R
+identifiers:
+  rsids:
+  - rs1805015
+  aliases:
+  - rs17513769
+  - rs60163518
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 27374180
+  grch38:
+    chrom: '16'
+    pos: 27362859
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs1805015 (NG_012086.1:g.53930T>C); reported phenotype: Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: IL4R_rs1805015_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NG_012086.1:g.53930T>C / NG_012086.1:g.53930T>C; IthaID:
+    2660.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012086.1%3Ag.53930T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1805015

@@ -1,0 +1,54 @@
+name: thalassemia-ADGRV1-rs10942625
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ADGRV1
+summary: 'IthaGenes rs10942625 (NG_007083.2:g.590532G>A); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs10942625
+  aliases:
+  - rs17636035
+  - rs56456312
+  - rs59479146
+  - rs61574465
+coordinates:
+  grch37:
+    chrom: '5'
+    pos: 90410692
+  grch38:
+    chrom: '5'
+    pos: 91114875
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_007083.2:g.590532G>A / NG_007083.2:g.590532G>A; IthaID:
+    3503.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_007083.2%3Ag.590532G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10942625
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

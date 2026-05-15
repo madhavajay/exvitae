@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMP6-rs449853
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMP6
+identifiers:
+  rsids:
+  - rs449853
+  aliases:
+  - rs3778346
+  - rs61675140
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 7872352
+  grch38:
+    chrom: '6'
+    pos: 7872119
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs449853 (NC_000006.12:g.7872119C>T); reported phenotype: Osteonecrosis/Avascular necrosis, Stroke, Bacteremia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMP6_rs449853_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis, Stroke, Bacteremia; HGVS: NC_000006.12:g.7872119C>T
+    / NC_000006.12:g.7872119C>T; IthaID: 2683.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.7872119C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs449853

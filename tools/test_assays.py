@@ -64,6 +64,7 @@ class PanelInterpretation:
     path: Path
     derived_from: list[str]
     emits: list[dict[str, str]]
+    assets: dict[str, Path]
     output_format: str = "tsv"
 
 
@@ -548,6 +549,14 @@ def yaml_to_manifest_interpretations(yaml_path: Path) -> list[PanelInterpretatio
             for emit in (item.get("emits", []) or [])
             if isinstance(emit, dict)
         ]
+        assets: dict[str, Path] = {}
+        for asset in item.get("assets", []) or []:
+            if not isinstance(asset, dict):
+                continue
+            asset_id = str(asset.get("id", "") or "").strip()
+            asset_path = str(asset.get("path", "") or "").strip()
+            if asset_id and asset_path:
+                assets[asset_id] = (yaml_path.parent / asset_path).resolve()
         results.append(
             PanelInterpretation(
                 id=interpretation_id,
@@ -555,6 +564,7 @@ def yaml_to_manifest_interpretations(yaml_path: Path) -> list[PanelInterpretatio
                 path=(yaml_path.parent / path_value).resolve(),
                 derived_from=derived_from,
                 emits=emits,
+                assets=assets,
                 output_format=output_format,
             )
         )
@@ -2104,6 +2114,7 @@ def run_interpretations(
     input_path: Path,
     participant: str,
     runtime_root: Path,
+    observations_path: Path,
     interpretations: list[PanelInterpretation],
 ) -> tuple[list[dict[str, Any]], list[str], int]:
     outputs: list[dict[str, Any]] = []
@@ -2129,6 +2140,8 @@ def run_interpretations(
             relative_to(input_path, runtime_root),
             "--output-file",
             relative_to(output_path, runtime_root),
+            "--observations-file",
+            relative_to(observations_path, runtime_root),
             "--participant-id",
             participant,
             "--max-duration-ms",
@@ -2138,6 +2151,8 @@ def run_interpretations(
         ]
         if detect_format(input_path) == "cram":
             cmd.append("--auto-index")
+        for asset_id, asset_path in sorted(interpretation.assets.items()):
+            cmd.extend(["--asset", f"{asset_id}={relative_to(asset_path, runtime_root)}"])
         reference_args, reference_error = maybe_reference_args(input_path, runtime_root)
         if reference_error:
             warnings.append(f"{interpretation.id}: {reference_error}")
@@ -3191,14 +3206,6 @@ def run_one(
         probe_started = time.monotonic()
         probe_ok, probe_error = run_probe(assay_path, input_path, participant, variants, genome_reads_path)
         probe_duration_ms = int((time.monotonic() - probe_started) * 1000)
-        if interpretations:
-            interpretation_outputs, interpretation_warnings, interpretation_duration_ms = run_interpretations(
-                assay_path,
-                input_path,
-                participant,
-                runtime_root,
-                interpretations,
-            )
     if debug:
         timing_path.parent.mkdir(parents=True, exist_ok=True)
         existing = timing_path.read_text(encoding="utf-8") if timing_path.exists() else "stage\tduration_ms\tdetail\n"
@@ -3261,6 +3268,17 @@ def run_one(
     }
     observations = build_observations(record, output_rows, genome_rows, variants)
     write_observations(observations_path, observations)
+    if exit_code == 0 and interpretations:
+        interpretation_outputs, interpretation_warnings, interpretation_duration_ms = run_interpretations(
+            assay_path,
+            input_path,
+            participant,
+            runtime_root,
+            observations_path,
+            interpretations,
+        )
+        record["interpretations"] = interpretation_outputs
+        record["interpretation_warnings"] = interpretation_warnings
     finished_at = datetime.now(timezone.utc)
     report_object = build_report_object(
         record,

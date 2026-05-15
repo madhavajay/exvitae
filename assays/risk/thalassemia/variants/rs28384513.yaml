@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBS1L-rs28384513
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBS1L
+identifiers:
+  rsids:
+  - rs28384513
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135376209
+  grch38:
+    chrom: '6'
+    pos: 135055071
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes rs28384513 (NG_012002.1:g.4828A>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBS1L_rs28384513_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_012002.1:g.4828A>C / NG_012002.1:g.4828A>C;
+    IthaID: 2094.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012002.1%3Ag.4828A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs28384513

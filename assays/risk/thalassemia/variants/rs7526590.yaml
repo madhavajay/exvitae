@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TGFBR3-rs7526590
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TGFBR3
+identifiers:
+  rsids:
+  - rs7526590
+  aliases:
+  - rs56725610
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 92221454
+  grch38:
+    chrom: '1'
+    pos: 91755897
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs7526590 (NG_027757.1:g.155106T>A); reported phenotype: Priapism, Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TGFBR3_rs7526590_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Priapism, Pulmonary arterial hypertension; HGVS: NG_027757.1:g.155106T>A
+    / NG_027757.1:g.155106T>A; IthaID: 2607.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_027757.1%3Ag.155106T%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7526590

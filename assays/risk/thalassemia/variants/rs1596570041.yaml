@@ -1,0 +1,48 @@
+name: thalassemia-HBA2-rs1596570041
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+summary: 'IthaGenes CD 89-93 (-13bp): (-CACAAGCTTCGGG) (HBA2:c.268_280delCACAAGCTTCGGG); reported phenotype: α-thalassaemia.'
+identifiers:
+  rsids:
+  - rs1596570041
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    start: 223295
+    end: 223308
+  grch38:
+    chrom: '16'
+    start: 173296
+    end: 173309
+alleles:
+  kind: deletion
+  ref: GCACAAGCTTCGGG
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia; HGVS: HBA2:c.268_280delCACAAGCTTCGGG / NG_000006.1:g.34160_34172delCACAAGCTTCGGG;
+    IthaID: 3569.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34160_34172delCACAAGCTTCGGG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1596570041
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

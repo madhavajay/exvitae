@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ERG-rs979091
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ERG
+identifiers:
+  rsids:
+  - rs979091
+  aliases:
+  - rs3787895
+  - rs56422721
+  - rs61185309
+coordinates:
+  grch37:
+    chrom: '21'
+    pos: 39797764
+  grch38:
+    chrom: '21'
+    pos: 38425842
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+summary: 'IthaGenes rs979091 (NG_029732.1:g.240941G>T); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ERG_rs979091_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NG_029732.1:g.240941G>T /
+    NG_029732.1:g.240941G>T; IthaID: 2595.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029732.1%3Ag.240941G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs979091

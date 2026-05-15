@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG1-HBG2-rs2855126
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG1-HBG2
+identifiers:
+  rsids:
+  - rs2855126
+  aliases:
+  - rs56605756
+  - rs57887287
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5273147
+  grch38:
+    chrom: '11'
+    pos: 5251917
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs2855126 (NG_000007.3:g.45699G>C); reported phenotype: Hb F levels, Hyperuricemia, Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG1-HBG2_rs2855126_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Hyperuricemia, Severity; HGVS: NG_000007.3:g.45699G>C
+    / NG_000007.3:g.45699G>C; IthaID: 2802.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.45699G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2855126

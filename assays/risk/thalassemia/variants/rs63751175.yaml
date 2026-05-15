@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs63751175
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs63751175
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5247081
+  grch38:
+    chrom: '11'
+    pos: 5225851
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes IVS II-726 A>G (HBB:c.316-125A>G); reported phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective
+  erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs63751175_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.316-125A>G / NG_000007.3:g.71765A>G; IthaID: 213.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71765A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63751175

@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MYH9-rs16996648
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MYH9
+identifiers:
+  rsids:
+  - rs16996648
+  aliases:
+  - rs61090741
+coordinates:
+  grch37:
+    chrom: '22'
+    pos: 36692752
+  grch38:
+    chrom: '22'
+    pos: 36296706
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs16996648 (NG_011884.2:g.96313A>G); reported phenotype: Proteinuria.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MYH9_rs16996648_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Proteinuria; HGVS: NG_011884.2:g.96313A>G / NG_011884.2:g.96313A>G;
+    IthaID: 2636.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011884.2%3Ag.96313A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs16996648

@@ -1,0 +1,52 @@
+name: thalassemia-HBB-rs773343845
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+summary: IthaGenes IVS II-579 G>T (HBB:c.316-272G>T).
+identifiers:
+  rsids:
+  - rs773343845
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5247228
+  grch38:
+    chrom: '11'
+    pos: 5225998
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  - G
+  observed_alts:
+  - A
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: HBB:c.316-272G>T / NG_000007.3:g.71618G>T; IthaID: 3446.'
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: HBB:c.316-272G>C / NG_000007.3:g.71618G>C; IthaID: 3582.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71618G%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs773343845
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

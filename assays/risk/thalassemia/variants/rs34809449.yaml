@@ -1,0 +1,58 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG2-rs34809449
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG2
+identifiers:
+  rsids:
+  - rs34809449
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5276125
+  grch38:
+    chrom: '11'
+    pos: 5254895
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  - T
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes -114 C>G (Australian non-deletional HPFH) (HBG2:c.-167C>G); reported phenotype: HPFH, Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG2_rs34809449_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: HPFH, Hb F levels; HGVS: HBG2:c.-167C>G / NG_000007.3:g.42721C>G;
+    IthaID: 1559.'
+- schema: bioscript:trait:1.0
+  id: HBG2_rs34809449_finding_2
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: HPFH, Hb F levels; HGVS: HBG2:c.-167C>A / NG_000007.3:g.42721C>A;
+    IthaID: 1560.'
+- schema: bioscript:trait:1.0
+  id: HBG2_rs34809449_finding_3
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: HPFH, Hb F levels; HGVS: HBG2:c.-167C>T / NG_000007.3:g.42721C>T;
+    IthaID: 1561.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.42721C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34809449

@@ -1,0 +1,46 @@
+name: thalassemia-HBD-rs568957767
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+summary: 'IthaGenes -44 G>A (HBD:c.-94G>A); reported phenotype: δ-thalassaemia.'
+identifiers:
+  rsids:
+  - rs568957767
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5255757
+  grch38:
+    chrom: '11'
+    pos: 5234527
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-thalassaemia; HGVS: HBD:c.-94G>A / NG_000007.3:g.63089G>A; IthaID:
+    3602.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63089G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs568957767
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

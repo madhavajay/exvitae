@@ -1,0 +1,46 @@
+name: thalassemia-NC_000004.12-rs3115229
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000004.12
+summary: 'IthaGenes rs3115229 (NC_000004.12:g.122088578T>C); reported phenotype: Vaso-occlusive crisis.'
+identifiers:
+  rsids:
+  - rs3115229
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 123009733
+  grch38:
+    chrom: '4'
+    pos: 122088578
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Vaso-occlusive crisis; HGVS: NC_000004.12:g.122088578T>C / NC_000004.12:g.122088578T>C;
+    IthaID: 3579.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000004.12%3Ag.122088578T%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3115229
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

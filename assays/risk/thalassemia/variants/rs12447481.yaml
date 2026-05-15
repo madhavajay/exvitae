@@ -1,0 +1,50 @@
+name: thalassemia-FTO-rs12447481
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: FTO
+summary: 'IthaGenes rs12447481 (NG_012969.1:g.16095T>G); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs12447481
+  aliases:
+  - rs59653796
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 53748969
+  grch38:
+    chrom: '16'
+    pos: 53715057
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NG_012969.1:g.16095T>G / NG_012969.1:g.16095T>G;
+    IthaID: 3478.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012969.1%3Ag.16095T%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs12447481
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

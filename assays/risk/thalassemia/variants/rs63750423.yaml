@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-rs63750423
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+identifiers:
+  rsids:
+  - rs63750423
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5255324
+  grch38:
+    chrom: '11'
+    pos: 5234094
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes CD 70 GCC>GGC [Ala>Gly] (Cubstitution of Ala with Gly at helical position E14, which is in contact with
+  heme.) (HBD:c.212C>G); reported phenotype: δ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD_rs63750423_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-chain variant; HGVS: HBD:c.212C>G / NG_000007.3:g.63522C>G; IthaID:
+    1373.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63522C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750423

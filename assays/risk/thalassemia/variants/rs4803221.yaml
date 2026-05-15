@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-IFNL4-rs4803221
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: IFNL4
+identifiers:
+  rsids:
+  - rs4803221
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '19'
+    pos: 39739129
+  grch38:
+    chrom: '19'
+    pos: 39248489
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs4803221 (NG_042193.1:g.1483G>C); reported phenotype: Response to Hepatitis C treatment.'
+findings:
+- schema: bioscript:trait:1.0
+  id: IFNL4_rs4803221_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Response to Hepatitis C treatment; HGVS: NG_042193.1:g.1483G>C / NG_042193.1:g.1483G>C;
+    IthaID: 2786.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_042193.1%3Ag.1483G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4803221

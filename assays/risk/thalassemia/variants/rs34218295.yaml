@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-rs34218295
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+identifiers:
+  rsids:
+  - rs34218295
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5254223
+    end: 5254226
+  grch38:
+    chrom: '11'
+    start: 5232993
+    end: 5232996
+alleles:
+  kind: deletion
+  ref: CCAC
+  alts:
+  - C
+summary: 'IthaGenes CD 137 -GTG [-Val] (Hb Anti-Lepore Lincoln Park) (HBD:c.412_414delGTG); reported phenotype: δ-chain variant,
+  Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD_rs34218295_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-chain variant, Haemolytic anaemia; HGVS: HBD:c.412_414delGTG /
+    NG_000007.3:g.64620_64622delGTG; IthaID: 2482.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.64620_64622delGTG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34218295

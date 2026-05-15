@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-βLCR-rs11036634
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: βLCR
+identifiers:
+  rsids:
+  - rs11036634
+  aliases:
+  - rs56780807
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5308728
+  grch38:
+    chrom: '11'
+    pos: 5287498
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs11036634 (NG_000007.3:g.10118G>A); reported phenotype: Hb F levels, Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: βLCR_rs11036634_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Severity; HGVS: NG_000007.3:g.10118G>A / NG_000007.3:g.10118G>A;
+    IthaID: 3106.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.10118G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11036634

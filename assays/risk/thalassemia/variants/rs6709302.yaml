@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BCL11A-rs6709302
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BCL11A
+identifiers:
+  rsids:
+  - rs6709302
+  aliases:
+  - rs17535284
+  - rs58359099
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60727629
+  grch38:
+    chrom: '2'
+    pos: 60500494
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs6709302 (NG_011968.1:g.58005C>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BCL11A_rs6709302_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011968.1:g.58005C>T / NG_011968.1:g.58005C>T;
+    IthaID: 2823.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011968.1%3Ag.58005C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6709302

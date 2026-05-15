@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000001.11-rs3027045
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000001.11
+identifiers:
+  rsids:
+  - rs3027045
+  aliases:
+  - rs58819552
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 159182095
+  grch38:
+    chrom: '1'
+    pos: 159212305
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs3027045 (NC_000001.11:g.159212305C>T); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000001.11_rs3027045_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NC_000001.11:g.159212305C>T
+    / NC_000001.11:g.159212305C>T; IthaID: 2896.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000001.11%3Ag.159212305C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3027045

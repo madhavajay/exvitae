@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-IL1B-rs1143634
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: IL1B
+identifiers:
+  rsids:
+  - rs1143634
+  aliases:
+  - rs3730338
+  - rs11541230
+  - rs17598550
+  - rs57848697
+  - rs386518185
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 113590390
+  grch38:
+    chrom: '2'
+    pos: 112832813
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs1143634 (+3954 C>T) (NG_008851.1:g.8967C>T); reported phenotype: Osteonecrosis/Avascular necrosis, Pulmonary
+  arterial hypertension, Reticulocytopenia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: IL1B_rs1143634_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis, Pulmonary arterial hypertension,
+    Reticulocytopenia; HGVS: NG_008851.1:g.8967C>T / NG_008851.1:g.8967C>T; IthaID: 2921.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008851.1%3Ag.8967C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1143634

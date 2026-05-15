@@ -1,0 +1,58 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs281864858
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs281864858
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 223254
+  grch38:
+    chrom: '16'
+    pos: 173255
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  - C
+  - T
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes CD 75 GAC>AAC [Asp>Asn] (HBA2:c.226G>A); reported phenotype: α-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864858_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.226G>A / NG_000006.1:g.34118G>A; IthaID:
+    612.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864858_finding_2
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.226G>C / NG_000006.1:g.34118G>C; IthaID:
+    613.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864858_finding_3
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.226G>T / NG_000006.1:g.34118G>T; IthaID:
+    614.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34118G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864858

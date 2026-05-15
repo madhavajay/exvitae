@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA1-rs141514155
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+identifiers:
+  rsids:
+  - rs141514155
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 227456
+  grch38:
+    chrom: '16'
+    pos: 177457
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes 3''UTR +46 C>A (HBA1:c.*46C>A); reported phenotype: α-thalassaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA1_rs141514155_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia; HGVS: HBA1:c.*46C>A / NG_000006.1:g.38320C>A; IthaID:
+    3302.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.38320C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs141514155

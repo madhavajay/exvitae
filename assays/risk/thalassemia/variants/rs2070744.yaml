@@ -1,0 +1,51 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOS3-rs2070744
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOS3
+identifiers:
+  rsids:
+  - rs2070744
+  aliases:
+  - rs10333298
+  - rs34629525
+  - rs61324345
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 150690079
+  grch38:
+    chrom: '7'
+    pos: 150992991
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs2070744 (-786T>C, T786C) (NG_011992.1:g.6933C>T); reported phenotype: Acute chest syndrome, Bilirubin
+  levels, Retinopathy, Delayed menarche, Increased lactate dehydrogenase activity, Reticulocytosis, Recurrent upper respiratory
+  tract infections.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOS3_rs2070744_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome, Bilirubin levels, Retinopathy, Delayed menarche,
+    Increased lactate dehydrogenase activity, Reticulocytosis, Recurrent upper respiratory tract infections; HGVS: NG_011992.1:g.6933C>T
+    / NG_011992.1:g.6933C>T; IthaID: 2650.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011992.1%3Ag.6933C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2070744

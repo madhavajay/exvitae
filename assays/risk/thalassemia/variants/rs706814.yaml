@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ACVRL1-rs706814
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ACVRL1
+identifiers:
+  rsids:
+  - rs706814
+  aliases:
+  - rs57094725
+  - rs61201607
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 52310843
+  grch38:
+    chrom: '12'
+    pos: 51917059
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs706814 (NG_009549.1:g.14642A>T); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ACVRL1_rs706814_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NG_009549.1:g.14642A>T / NG_009549.1:g.14642A>T;
+    IthaID: 2649.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009549.1%3Ag.14642A%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs706814

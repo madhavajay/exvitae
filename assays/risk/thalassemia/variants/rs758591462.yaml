@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs758591462
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs758591462
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246896
+  grch38:
+    chrom: '11'
+    pos: 5225666
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+  observed_alts:
+  - C
+summary: 'IthaGenes CD 125 CCA>ACA [Pro>Thr] (HBB:c.376C>A); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs758591462_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.376C>A / NG_000007.3:g.71950C>A; IthaID:
+    3313.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71950C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs758591462

@@ -1,0 +1,46 @@
+name: thalassemia-NC_000008.11-rs16887645
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000008.11
+summary: 'IthaGenes rs16887645 (NC_000008.11:g.115685828C>A); reported phenotype: Abnormal red blood cell count.'
+identifiers:
+  rsids:
+  - rs16887645
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '8'
+    pos: 116698055
+  grch38:
+    chrom: '8'
+    pos: 115685828
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal red blood cell count; HGVS: NC_000008.11:g.115685828C>A /
+    NC_000008.11:g.115685828C>A; IthaID: 3524.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000008.11%3Ag.115685828C%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs16887645
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs41392146
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs41392146
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 223174
+  grch38:
+    chrom: '16'
+    pos: 173175
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes CD 48 CTG>CGG [Leu>Arg] (HBA2:c.146T>G); reported phenotype: α-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs41392146_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.146T>G / NG_000006.1:g.34038T>G; IthaID:
+    546.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34038T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs41392146

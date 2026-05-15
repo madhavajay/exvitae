@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BCL11A-rs1896296
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BCL11A
+identifiers:
+  rsids:
+  - rs1896296
+  aliases:
+  - rs58712804
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60724087
+  grch38:
+    chrom: '2'
+    pos: 60496952
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+summary: 'IthaGenes rs1896296 (NG_011968.1:g.61547C>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BCL11A_rs1896296_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011968.1:g.61547C>A / NG_011968.1:g.61547C>A;
+    IthaID: 3218.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011968.1%3Ag.61547C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1896296

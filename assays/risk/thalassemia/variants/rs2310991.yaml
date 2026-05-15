@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SAR1A-rs2310991
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SAR1A
+identifiers:
+  rsids:
+  - rs2310991
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 71931646
+  grch38:
+    chrom: '10'
+    pos: 70171890
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+summary: 'IthaGenes rs2310991 (NC_000010.11:g.70171890C>A); reported phenotype: Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SAR1A_rs2310991_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000010.11:g.70171890C>A / NC_000010.11:g.70171890C>A;
+    IthaID: 2917.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000010.11%3Ag.70171890C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2310991

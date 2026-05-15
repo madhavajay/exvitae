@@ -1,0 +1,46 @@
+name: thalassemia-REL-rs34661029
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: REL
+summary: 'IthaGenes rs34661029 (NC_000002.12:g.60921853C>G); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs34661029
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 61148988
+  grch38:
+    chrom: '2'
+    pos: 60921853
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NC_000002.12:g.60921853C>G / NC_000002.12:g.60921853C>G;
+    IthaID: 3467.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000002.12%3Ag.60921853C%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34661029
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

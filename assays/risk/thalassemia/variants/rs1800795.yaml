@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-IL6-rs1800795
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: IL6
+identifiers:
+  rsids:
+  - rs1800795
+  aliases:
+  - rs17777058
+  - rs36215460
+  - rs56588968
+  - rs58302852
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 22766645
+  grch38:
+    chrom: '7'
+    pos: 22727026
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs1800795 (-174G>C) (NG_011640.1:g.4880C>G); reported phenotype: Leg ulcers, Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: IL6_rs1800795_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Leg ulcers, Stroke; HGVS: NG_011640.1:g.4880C>G / NG_011640.1:g.4880C>G;
+    IthaID: 2923.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011640.1%3Ag.4880C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1800795

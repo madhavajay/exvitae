@@ -1,0 +1,53 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs33916541
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs33916541
+  aliases:
+  - rs34792532
+  - rs121909804
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5247899
+  grch38:
+    chrom: '11'
+    pos: 5226669
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes CD 74 GGC>AGC [Gly>Ser] (HBB:c.223G>A); reported phenotype: β-chain variant, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs33916541_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, Haemolytic anaemia; HGVS: HBB:c.223G>A / NG_000007.3:g.70947G>A;
+    IthaID: 1045.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33916541_finding_2
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, Haemolytic anaemia; HGVS: HBB:c.223G>C / NG_000007.3:g.70947G>C;
+    IthaID: 1046.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70947G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33916541

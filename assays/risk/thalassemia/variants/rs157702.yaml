@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MAP3K7-rs157702
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MAP3K7
+identifiers:
+  rsids:
+  - rs157702
+  aliases:
+  - rs3823244
+  - rs17672817
+  - rs34739735
+  - rs61588389
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 91227681
+  grch38:
+    chrom: '6'
+    pos: 90517962
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs157702 (NG_011966.2:g.74227G>A); reported phenotype: Leg ulcers.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MAP3K7_rs157702_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Leg ulcers; HGVS: NG_011966.2:g.74227G>A / NG_011966.2:g.74227G>A;
+    IthaID: 2620.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011966.2%3Ag.74227G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs157702

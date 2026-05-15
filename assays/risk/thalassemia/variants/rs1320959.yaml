@@ -1,0 +1,46 @@
+name: thalassemia-NC_000006.12-rs1320959
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000006.12
+summary: 'IthaGenes rs1320959 (NC_000006.12:g.135116248T>C); reported phenotype: Hb F levels.'
+identifiers:
+  rsids:
+  - rs1320959
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135437386
+  grch38:
+    chrom: '6'
+    pos: 135116248
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000006.12:g.135116248T>C / NC_000006.12:g.135116248T>C;
+    IthaID: 3422.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135116248T%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1320959
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA1-rs33973086
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+identifiers:
+  rsids:
+  - rs33973086
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 227399
+  grch38:
+    chrom: '16'
+    pos: 177400
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes CD 139 AAA>GAA [Ala>Glu] (HBA1:c.418A>G); reported phenotype: α-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA1_rs33973086_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA1:c.418A>G / NG_000006.1:g.38263A>G; IthaID:
+    771.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.38263A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33973086

@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SMAD3-rs10518707
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SMAD3
+identifiers:
+  rsids:
+  - rs10518707
+  aliases:
+  - rs17213117
+  - rs61419502
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 67365622
+  grch38:
+    chrom: '15'
+    pos: 67073284
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs10518707 (NG_011990.1:g.12428A>G); reported phenotype: Bacteremia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SMAD3_rs10518707_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Bacteremia; HGVS: NG_011990.1:g.12428A>G / NG_011990.1:g.12428A>G;
+    IthaID: 2684.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011990.1%3Ag.12428A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10518707

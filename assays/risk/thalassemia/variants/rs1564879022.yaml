@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-rs1564879022
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+identifiers:
+  rsids:
+  - rs1564879022
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5255261
+  grch38:
+    chrom: '11'
+    pos: 5234031
+alleles:
+  kind: insertion
+  ref: A
+  alts:
+  - AA
+summary: 'IthaGenes CD 91 (+T) (HBD:c.275dupT); reported phenotype: δ-thalassaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD_rs1564879022_finding_1
+  alt: AA
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-thalassaemia; HGVS: HBD:c.275dupT / NG_000007.3:g.63585dupT; IthaID:
+    1338.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63585dupT/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1564879022

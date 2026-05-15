@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000006.11-rs1547247
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000006.11
+identifiers:
+  rsids:
+  - rs1547247
+  aliases:
+  - rs17706590
+  - rs56863042
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135390836
+  grch38:
+    chrom: '6'
+    pos: 135069698
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs1547247 (NC_000006.11:g.135390836G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000006.11_rs1547247_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000006.11:g.135390836G>A / NC_000006.11:g.135390836G>A;
+    IthaID: 3331.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.11%3Ag.135390836G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1547247

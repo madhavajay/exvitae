@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-VDR-rs1544410
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: VDR
+identifiers:
+  rsids:
+  - rs1544410
+  aliases:
+  - rs56495123
+  - rs56911380
+  - rs386536760
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 48239835
+  grch38:
+    chrom: '12'
+    pos: 47846052
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes BsmI polymorphism (rs1544410) (NG_008731.1:g.63980G>A); reported phenotype: Osteoporosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: VDR_rs1544410_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteoporosis; HGVS: NG_008731.1:g.63980G>A / NG_008731.1:g.63980G>A;
+    IthaID: 2910.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008731.1%3Ag.63980G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1544410

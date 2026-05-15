@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-OR51B5-rs2647579
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OR51B5
+identifiers:
+  rsids:
+  - rs2647579
+  aliases:
+  - rs60020923
+  - rs386571191
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5440287
+  grch38:
+    chrom: '11'
+    pos: 5419057
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs2647579 (NC_000011.10:g.5419057A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: OR51B5_rs2647579_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000011.10:g.5419057A>G / NC_000011.10:g.5419057A>G;
+    IthaID: 2878.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5419057A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2647579

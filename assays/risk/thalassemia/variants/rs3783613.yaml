@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-VCAM1-rs3783613
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: VCAM1
+identifiers:
+  rsids:
+  - rs3783613
+  aliases:
+  - rs52804692
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 101196787
+  grch38:
+    chrom: '1'
+    pos: 100731231
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs3783613 (G1238C) (NG_023034.2:g.16491G>C); reported phenotype: Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: VCAM1_rs3783613_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NG_023034.2:g.16491G>C / NG_023034.2:g.16491G>C; IthaID:
+    2667.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_023034.2%3Ag.16491G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3783613

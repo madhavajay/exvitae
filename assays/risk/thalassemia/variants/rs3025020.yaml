@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-VEGFA-rs3025020
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: VEGFA
+identifiers:
+  rsids:
+  - rs3025020
+  aliases:
+  - rs3799954
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 43749110
+  grch38:
+    chrom: '6'
+    pos: 43781373
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs3025020 (NG_008732.1:g.16158C>T); reported phenotype: Vaso-occlusive crisis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: VEGFA_rs3025020_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Vaso-occlusive crisis; HGVS: NG_008732.1:g.16158C>T / NG_008732.1:g.16158C>T;
+    IthaID: 3177.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008732.1%3Ag.16158C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3025020

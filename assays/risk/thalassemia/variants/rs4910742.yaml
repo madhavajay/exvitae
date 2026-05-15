@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-βLCR-rs4910742
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: βLCR
+identifiers:
+  rsids:
+  - rs4910742
+  aliases:
+  - rs17690709
+  - rs57076488
+  - rs57294837
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5306509
+  grch38:
+    chrom: '11'
+    pos: 5285279
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs4910742 (NG_000007.3:g.12337C>T); reported phenotype: Hb F levels, Abnormal red blood cell count.'
+findings:
+- schema: bioscript:trait:1.0
+  id: βLCR_rs4910742_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Abnormal red blood cell count; HGVS: NG_000007.3:g.12337C>T
+    / NG_000007.3:g.12337C>T; IthaID: 2792.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.12337C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4910742

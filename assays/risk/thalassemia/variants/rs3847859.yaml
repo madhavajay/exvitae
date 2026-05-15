@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000012.12-rs3847859
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000012.12
+identifiers:
+  rsids:
+  - rs3847859
+  aliases:
+  - rs57593965
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 52293500
+  grch38:
+    chrom: '12'
+    pos: 51899716
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs3847859 (NC_000012.12:g.51899716G>A); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000012.12_rs3847859_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NC_000012.12:g.51899716G>A
+    / NC_000012.12:g.51899716G>A; IthaID: 2770.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000012.12%3Ag.51899716G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3847859

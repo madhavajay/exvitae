@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-GSTM1-rs4025935
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: GSTM1
+identifiers:
+  rsids:
+  - rs4025935
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '1'
+    start: 110229440
+    end: 110229442
+  grch38:
+    chrom: '1'
+    start: 109686818
+    end: 109686820
+alleles:
+  kind: deletion
+  ref: TGT
+  alts:
+  - T
+summary: 'IthaGenes rs4025935 (NG_009246.1:g.4023_4024delTG); reported phenotype: Cardiac iron load, Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: GSTM1_rs4025935_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Cardiac iron load, Anaemia; HGVS: NG_009246.1:g.4023_4024delTG / NG_009246.1:g.4023_4024delTG;
+    IthaID: 3332.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009246.1%3Ag.4023_4024delTG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4025935

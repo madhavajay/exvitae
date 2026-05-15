@@ -1,0 +1,54 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CSF2-rs25882
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CSF2
+identifiers:
+  rsids:
+  - rs25882
+  aliases:
+  - rs630043
+  - rs1126706
+  - rs1801712
+  - rs2229043
+  - rs3181894
+  - rs3854262
+  - rs17414791
+  - rs52812898
+coordinates:
+  grch37:
+    chrom: '5'
+    pos: 131411460
+  grch38:
+    chrom: '5'
+    pos: 132075767
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes rs25882 (NG_033024.1:g.6976T>C); reported phenotype: Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CSF2_rs25882_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NG_033024.1:g.6976T>C / NG_033024.1:g.6976T>C; IthaID:
+    2781.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_033024.1%3Ag.6976T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs25882

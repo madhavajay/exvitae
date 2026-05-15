@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-VEGFA-rs2146323
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: VEGFA
+identifiers:
+  rsids:
+  - rs2146323
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 43745095
+  grch38:
+    chrom: '6'
+    pos: 43777358
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+summary: 'IthaGenes rs2146323 (NG_008732.1:g.12143C>A); reported phenotype: Hb F levels, Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: VEGFA_rs2146323_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Hb F response to hydroxyurea; HGVS: NG_008732.1:g.12143C>A
+    / NG_008732.1:g.12143C>A; IthaID: 3339.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008732.1%3Ag.12143C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2146323

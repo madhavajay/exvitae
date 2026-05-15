@@ -1,0 +1,47 @@
+name: thalassemia-PIK3CG-rs12536620
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PIK3CG
+summary: 'IthaGenes rs12536620 (NG_050579.1:g.44506A>G); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs12536620
+  aliases:
+  - rs56849268
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 106545228
+  grch38:
+    chrom: '7'
+    pos: 106904783
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NG_050579.1:g.44506A>G / NG_050579.1:g.44506A>G;
+    IthaID: 3545.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_050579.1%3Ag.44506A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs12536620
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

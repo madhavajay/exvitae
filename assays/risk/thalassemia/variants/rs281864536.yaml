@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA1-rs281864536
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+identifiers:
+  rsids:
+  - rs281864536
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    start: 227313
+    end: 227326
+  grch38:
+    chrom: '16'
+    start: 177314
+    end: 177327
+alleles:
+  kind: deletion
+  ref: CCGCCCACCTCCCC
+  alts:
+  - C
+summary: 'IthaGenes CD 110-114 (-13 bp) (HBA1:c.333_345delCGCCCACCTCCCC); reported phenotype: α-thalassaemia, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA1_rs281864536_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, Haemolytic anaemia; HGVS: HBA1:c.333_345delCGCCCACCTCCCC
+    / NG_000006.1:g.38178_38190delCGCCCACCTCCCC; IthaID: 2224.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.38178_38190delCGCCCACCTCCCC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864536

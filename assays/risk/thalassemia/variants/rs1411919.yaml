@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000006.12-rs1411919
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000006.12
+identifiers:
+  rsids:
+  - rs1411919
+  aliases:
+  - rs58973350
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135432061
+  grch38:
+    chrom: '6'
+    pos: 135110923
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes rs1411919 (NC_000006.12:g.135110923A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000006.12_rs1411919_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000006.12:g.135110923A>G / NC_000006.12:g.135110923A>G;
+    IthaID: 2849.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135110923A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1411919

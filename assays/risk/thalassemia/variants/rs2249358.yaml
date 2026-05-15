@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KL-rs2249358
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KL
+identifiers:
+  rsids:
+  - rs2249358
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33623164
+  grch38:
+    chrom: '13'
+    pos: 33049027
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs2249358 (NG_011485.1:g.37594G>A); reported phenotype: Priapism.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KL_rs2249358_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Priapism; HGVS: NG_011485.1:g.37594G>A / NG_011485.1:g.37594G>A; IthaID:
+    2647.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.37594G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2249358

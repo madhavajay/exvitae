@@ -1,0 +1,47 @@
+name: thalassemia-CCND3-rs3218108
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CCND3
+summary: 'IthaGenes rs3218108 (NG_041939.1:g.118978G>A); reported phenotype: Abnormal red blood cell count.'
+identifiers:
+  rsids:
+  - rs3218108
+  aliases:
+  - rs386581093
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 41902655
+  grch38:
+    chrom: '6'
+    pos: 41934917
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal red blood cell count; HGVS: NG_041939.1:g.118978G>A / NG_041939.1:g.118978G>A;
+    IthaID: 3493.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_041939.1%3Ag.118978G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3218108
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

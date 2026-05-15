@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SLC12A6-rs426634
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SLC12A6
+identifiers:
+  rsids:
+  - rs426634
+  aliases:
+  - rs57688486
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 34571924
+  grch38:
+    chrom: '15'
+    pos: 34279723
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs426634 (NG_007951.1:g.63342G>A); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SLC12A6_rs426634_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NG_007951.1:g.63342G>A / NG_007951.1:g.63342G>A;
+    IthaID: 2902.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_007951.1%3Ag.63342G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs426634

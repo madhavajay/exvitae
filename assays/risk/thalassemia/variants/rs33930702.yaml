@@ -1,0 +1,58 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs33930702
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs33930702
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248249
+  grch38:
+    chrom: '11'
+    pos: 5227019
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  - T
+  - A
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes Init CD  ATG>ATC (HBB:c.3G>C); reported phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs33930702_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.3G>C / NG_000007.3:g.70597G>C; IthaID: 47.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33930702_finding_2
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.3G>A / NG_000007.3:g.70597G>A; IthaID: 48.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33930702_finding_3
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.3G>T / NG_000007.3:g.70597G>T; IthaID: 49.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70597G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33930702

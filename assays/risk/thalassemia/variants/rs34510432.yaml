@@ -1,0 +1,49 @@
+name: thalassemia-COPE-rs34510432
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: COPE
+summary: 'IthaGenes rs34510432 (NC_000019.10:g.18911007C>T); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs34510432
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '19'
+    pos: 19021816
+  grch38:
+    chrom: '19'
+    pos: 18911007
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000019.10:g.18911007C>T / NC_000019.10:g.18911007C>T;
+    IthaID: 3455.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000019.10%3Ag.18911007C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34510432
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

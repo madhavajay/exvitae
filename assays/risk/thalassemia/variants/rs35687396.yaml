@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG2-rs35687396
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG2
+identifiers:
+  rsids:
+  - rs35687396
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5275882
+  grch38:
+    chrom: '11'
+    pos: 5254652
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes CD 25 GGA>GAA (HBG2:c.77G>A); reported phenotype: γ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG2_rs35687396_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: γ-chain variant; HGVS: HBG2:c.77G>A / NG_000007.3:g.42964G>A; IthaID:
+    1422.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.42964G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35687396

@@ -1,0 +1,49 @@
+name: thalassemia-HBA2-rs771452784
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+summary: 'IthaGenes CD 113 CTC>TTC [Leu>Phe] (HBA2:c.340C>T); reported phenotype: α-chain variant.'
+identifiers:
+  rsids:
+  - rs771452784
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 223510
+  grch38:
+    chrom: '16'
+    pos: 173511
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.340C>T / NG_000006.1:g.34374C>T; IthaID:
+    3482.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34374C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs771452784
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

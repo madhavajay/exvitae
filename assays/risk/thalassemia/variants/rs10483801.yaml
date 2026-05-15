@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ARG2-rs10483801
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ARG2
+identifiers:
+  rsids:
+  - rs10483801
+  aliases:
+  - rs17836835
+  - rs59480794
+coordinates:
+  grch37:
+    chrom: '14'
+    pos: 68117006
+  grch38:
+    chrom: '14'
+    pos: 67650289
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+summary: 'IthaGenes rs10483801 (NG_011964.1:g.35428C>A); reported phenotype: Hb F levels, Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ARG2_rs10483801_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Hb F response to hydroxyurea; HGVS: NG_011964.1:g.35428C>A
+    / NG_011964.1:g.35428C>A; IthaID: 2274.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011964.1%3Ag.35428C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10483801

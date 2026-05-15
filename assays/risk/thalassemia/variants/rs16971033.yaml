@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-EFTUD2-rs16971033
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: EFTUD2
+identifiers:
+  rsids:
+  - rs16971033
+  aliases:
+  - rs74252792
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 42932474
+  grch38:
+    chrom: '17'
+    pos: 44855106
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs16971033 (NG_032674.1:g.49520T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: EFTUD2_rs16971033_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_032674.1:g.49520T>C / NG_032674.1:g.49520T>C;
+    IthaID: 2631.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_032674.1%3Ag.49520T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs16971033

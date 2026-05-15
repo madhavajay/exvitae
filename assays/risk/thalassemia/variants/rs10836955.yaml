@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MMP26-rs10836955
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MMP26
+identifiers:
+  rsids:
+  - rs10836955
+  aliases:
+  - rs17337964
+  - rs60799317
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 4945631
+  grch38:
+    chrom: '11'
+    pos: 4924401
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs10836955 (NC_000011.10:g.4924401G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MMP26_rs10836955_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000011.10:g.4924401G>A / NC_000011.10:g.4924401G>A;
+    IthaID: 2875.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.4924401G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10836955

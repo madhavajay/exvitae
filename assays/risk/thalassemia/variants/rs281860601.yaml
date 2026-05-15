@@ -1,0 +1,52 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG1-rs281860601
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG1
+identifiers:
+  rsids:
+  - rs281860601
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5271201
+  grch38:
+    chrom: '11'
+    pos: 5249971
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  - C
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes -114 C>T (Georgian non-deletional HPFH) (HBG1:c.-167C>T); reported phenotype: HPFH, Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG1_rs281860601_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: HPFH, Hb F levels; HGVS: HBG1:c.-167C>T / NG_000007.3:g.47645C>T;
+    IthaID: 1575.'
+- schema: bioscript:trait:1.0
+  id: HBG1_rs281860601_finding_2
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: HPFH, Hb F levels; HGVS: HBG1:c.-167C>G / NG_000007.3:g.47645C>G;
+    IthaID: 3025.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.47645C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281860601

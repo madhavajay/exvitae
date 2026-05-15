@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG1-rs770330940
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG1
+identifiers:
+  rsids:
+  - rs770330940
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5269656
+  grch38:
+    chrom: '11'
+    pos: 5248426
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+summary: 'IthaGenes CD 125 GAG>GCG [Glu>Ala] (HBG1:c.377A>C); reported phenotype: γ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG1_rs770330940_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: γ-chain variant; HGVS: HBG1:c.377A>C / NG_000007.3:g.49190A>C; IthaID:
+    2453.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.49190A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs770330940

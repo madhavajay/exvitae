@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LOC124903151-rs398655
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LOC124903151
+identifiers:
+  rsids:
+  - rs398655
+  aliases:
+  - rs45629627
+  - rs56728506
+  - rs111169176
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33587652
+  grch38:
+    chrom: '13'
+    pos: 33013514
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs398655 (NG_011485.1:g.2082A>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LOC124903151_rs398655_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011485.1:g.2082A>C / NG_011485.1:g.2082A>C;
+    IthaID: 2774.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.2082A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs398655

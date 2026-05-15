@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs1135101
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs1135101
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248018
+  grch38:
+    chrom: '11'
+    pos: 5226788
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes CD 34 GTC>GAC (HBB:c.104T>A); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs1135101_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.104T>A / NG_000007.3:g.70828T>A; IthaID:
+    921.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70828T%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1135101

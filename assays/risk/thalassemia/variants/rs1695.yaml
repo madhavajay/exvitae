@@ -1,0 +1,54 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-GSTP1-rs1695
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: GSTP1
+identifiers:
+  rsids:
+  - rs1695
+  aliases:
+  - rs4609
+  - rs947894
+  - rs1138257
+  - rs2230827
+  - rs11553891
+  - rs17353321
+  - rs17856342
+  - rs56971933
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 67352689
+  grch38:
+    chrom: '11'
+    pos: 67585218
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs1695 (GSTP1 Ile105Val) (NG_012075.1:g.6624A>G); reported phenotype: Hb F levels, Osteoporosis, Increased
+  Hb A2 levels, Abnormal red blood cell count, Reticulocytopenia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: GSTP1_rs1695_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Osteoporosis, Increased Hb A2 levels, Abnormal red blood
+    cell count, Reticulocytopenia; HGVS: NG_012075.1:g.6624A>G / NG_012075.1:g.6624A>G; IthaID: 2941.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012075.1%3Ag.6624A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1695

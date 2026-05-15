@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BCL11A-rs10189857
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BCL11A
+identifiers:
+  rsids:
+  - rs10189857
+  aliases:
+  - rs17535046
+  - rs56727968
+  - rs117485942
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60713235
+  grch38:
+    chrom: '2'
+    pos: 60486100
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: IthaGenes rs10189857 (NG_011968.1:g.72399T>C).
+findings:
+- schema: bioscript:trait:1.0
+  id: BCL11A_rs10189857_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: N/A; HGVS: NG_011968.1:g.72399T>C / NG_011968.1:g.72399T>C; IthaID:
+    2069.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011968.1%3Ag.72399T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10189857

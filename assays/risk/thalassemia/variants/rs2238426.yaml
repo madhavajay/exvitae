@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ADCY9-rs2238426
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ADCY9
+identifiers:
+  rsids:
+  - rs2238426
+  aliases:
+  - rs17794297
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 4003733
+  grch38:
+    chrom: '16'
+    pos: 3953732
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs2238426 (NC_000016.10:g.3953732A>G); reported phenotype: Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ADCY9_rs2238426_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NC_000016.10:g.3953732A>G / NC_000016.10:g.3953732A>G;
+    IthaID: 2773.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000016.10%3Ag.3953732A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2238426

@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-βLCR-rs4601817
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: βLCR
+identifiers:
+  rsids:
+  - rs4601817
+  aliases:
+  - rs59954900
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5312401
+  grch38:
+    chrom: '11'
+    pos: 5291171
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs4601817 (NG_000007.3:g.6445T>C); reported phenotype: Hb F levels, Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: βLCR_rs4601817_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Severity; HGVS: NG_000007.3:g.6445T>C / NG_000007.3:g.6445T>C;
+    IthaID: 3107.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.6445T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4601817

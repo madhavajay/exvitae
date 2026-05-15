@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs36008922
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs36008922
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5247920
+  grch38:
+    chrom: '11'
+    pos: 5226690
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes CD 67 GTG>ATG [Val>Met] (Hb Bristol-Alesha, Hb Bristol) (HBB:c.202G>A); reported phenotype: β-chain variant,
+  Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs36008922_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, Haemolytic anaemia; HGVS: HBB:c.202G>A / NG_000007.3:g.70926G>A;
+    IthaID: 1021.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70926G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs36008922

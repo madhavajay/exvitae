@@ -1,0 +1,48 @@
+name: thalassemia-NR3C1-rs9324918
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NR3C1
+summary: 'IthaGenes rs9324918 (NG_009062.1:g.52918A>G); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs9324918
+  aliases:
+  - rs56845286
+  - rs386621713
+coordinates:
+  grch37:
+    chrom: '5'
+    pos: 142767160
+  grch38:
+    chrom: '5'
+    pos: 143387595
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_009062.1:g.52918A>G / NG_009062.1:g.52918A>G; IthaID:
+    3592.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009062.1%3Ag.52918A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9324918
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

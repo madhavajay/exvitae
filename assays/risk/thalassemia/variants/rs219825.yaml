@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SMURF1-rs219825
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SMURF1
+identifiers:
+  rsids:
+  - rs219825
+  aliases:
+  - rs1636028
+  - rs10380845
+  - rs57747980
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 98645565
+  grch38:
+    chrom: '7'
+    pos: 99047942
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+summary: 'IthaGenes rs219825 (NC_000007.14:g.99047942C>G); reported phenotype: Leg ulcers.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SMURF1_rs219825_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Leg ulcers; HGVS: NC_000007.14:g.99047942C>G / NC_000007.14:g.99047942C>G;
+    IthaID: 2768.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000007.14%3Ag.99047942C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs219825

@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-COL1A1-rs1800012
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: COL1A1
+identifiers:
+  rsids:
+  - rs1800012
+  aliases:
+  - rs8179177
+  - rs58312232
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 48277749
+  grch38:
+    chrom: '17'
+    pos: 50200388
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+summary: 'IthaGenes Sp1 polymorphism (rs1800012) (NG_007400.1:g.6252G>T); reported phenotype: Osteoporosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: COL1A1_rs1800012_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteoporosis; HGVS: NG_007400.1:g.6252G>T / NG_007400.1:g.6252G>T;
+    IthaID: 2911.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_007400.1%3Ag.6252G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1800012

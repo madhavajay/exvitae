@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NPRL3-rs570013781
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NPRL3
+identifiers:
+  rsids:
+  - rs570013781
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 149539
+  grch38:
+    chrom: '16'
+    pos: 99541
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs570013781 (NG_029669.1:g.44159C>T); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NPRL3_rs570013781_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NG_029669.1:g.44159C>T / NG_029669.1:g.44159C>T; IthaID:
+    3194.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029669.1%3Ag.44159C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs570013781

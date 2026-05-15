@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-VEGFA-rs3024997
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: VEGFA
+identifiers:
+  rsids:
+  - rs3024997
+  aliases:
+  - rs56507495
+  - rs59912369
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 43745107
+  grch38:
+    chrom: '6'
+    pos: 43777370
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs3024997 (NG_008732.1:g.12155G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: VEGFA_rs3024997_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_008732.1:g.12155G>A / NG_008732.1:g.12155G>A;
+    IthaID: 3338.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008732.1%3Ag.12155G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3024997

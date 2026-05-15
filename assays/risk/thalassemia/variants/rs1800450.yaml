@@ -1,0 +1,49 @@
+name: thalassemia-MBL2-rs1800450
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MBL2
+summary: 'IthaGenes rs1800450 (NG_008196.1:g.5226G>A); reported phenotype: Recurrent infections.'
+identifiers:
+  rsids:
+  - rs1800450
+  aliases:
+  - rs52803813
+  - rs60780172
+  - rs386545582
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 54531235
+  grch38:
+    chrom: '10'
+    pos: 52771475
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Recurrent infections; HGVS: NG_008196.1:g.5226G>A / NG_008196.1:g.5226G>A;
+    IthaID: 3553.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008196.1%3Ag.5226G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1800450
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

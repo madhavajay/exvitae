@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOS1-rs816361
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOS1
+identifiers:
+  rsids:
+  - rs816361
+  aliases:
+  - rs17508540
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 117655131
+  grch38:
+    chrom: '12'
+    pos: 117217326
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+summary: 'IthaGenes rs816361 (NG_011991.2:g.149452G>C); reported phenotype: Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOS1_rs816361_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_011991.2:g.149452G>C / NG_011991.2:g.149452G>C;
+    IthaID: 2166.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011991.2%3Ag.149452G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs816361

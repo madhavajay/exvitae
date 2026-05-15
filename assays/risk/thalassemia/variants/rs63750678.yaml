@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs63750678
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs63750678
+  aliases:
+  - rs374002189
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 222913
+  grch38:
+    chrom: '16'
+    pos: 172914
+alleles:
+  kind: indel
+  ref: T
+  alts:
+  - '-'
+summary: 'IthaGenes Init CD ATG>A-G (HBA2:c.2delT); reported phenotype: α-thalassaemia, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs63750678_finding_1
+  alt: '-'
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, Haemolytic anaemia; HGVS: HBA2:c.2delT / NG_000006.1:g.33777delT;
+    IthaID: 343.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33777delT/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750678

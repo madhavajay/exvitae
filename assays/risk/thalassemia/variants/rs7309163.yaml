@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOS1-rs7309163
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOS1
+identifiers:
+  rsids:
+  - rs7309163
+  aliases:
+  - rs17617714
+  - rs58569102
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 117729274
+  grch38:
+    chrom: '12'
+    pos: 117291469
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs7309163 (NG_011991.2:g.75309G>A); reported phenotype: Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOS1_rs7309163_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_011991.2:g.75309G>A / NG_011991.2:g.75309G>A;
+    IthaID: 2144.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011991.2%3Ag.75309G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7309163

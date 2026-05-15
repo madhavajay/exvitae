@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-IL1A-rs1800587
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: IL1A
+identifiers:
+  rsids:
+  - rs1800587
+  aliases:
+  - rs3783523
+  - rs17860496
+  - rs36214467
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 113542960
+  grch38:
+    chrom: '2'
+    pos: 112785383
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs1800587 (NG_008850.1:g.5012C>T); reported phenotype: Pain.'
+findings:
+- schema: bioscript:trait:1.0
+  id: IL1A_rs1800587_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_008850.1:g.5012C>T / NG_008850.1:g.5012C>T; IthaID:
+    3146.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008850.1%3Ag.5012C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1800587

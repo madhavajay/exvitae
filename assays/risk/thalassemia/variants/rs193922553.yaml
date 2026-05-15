@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs193922553
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs193922553
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5247921
+    end: 5247923
+  grch38:
+    chrom: '11'
+    start: 5226691
+    end: 5226693
+alleles:
+  kind: indel
+  ref: TTT
+  alts:
+  - TT
+summary: 'IthaGenes CD 66 -A (HBB:c.201delA); reported phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs193922553_finding_1
+  alt: TT
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.201delA / NG_000007.3:g.70925delA; IthaID: 2188.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70925delA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs193922553

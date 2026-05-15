@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-IL6-rs1800797
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: IL6
+identifiers:
+  rsids:
+  - rs1800797
+  aliases:
+  - rs10366646
+  - rs36215816
+  - rs60859197
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 22766221
+  grch38:
+    chrom: '7'
+    pos: 22726602
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs1800797 (-597G>A) (NG_011640.1:g.4456A>G); reported phenotype: Retinopathy.'
+findings:
+- schema: bioscript:trait:1.0
+  id: IL6_rs1800797_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Retinopathy; HGVS: NG_011640.1:g.4456A>G / NG_011640.1:g.4456A>G;
+    IthaID: 2922.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011640.1%3Ag.4456A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1800797

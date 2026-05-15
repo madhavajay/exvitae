@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMPR2-rs17199249
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMPR2
+identifiers:
+  rsids:
+  - rs17199249
+  aliases:
+  - rs52798090
+  - rs56550780
+  - rs60332596
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 203426668
+  grch38:
+    chrom: '2'
+    pos: 202561945
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+summary: 'IthaGenes rs17199249 (NG_009363.1:g.190619T>G); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMPR2_rs17199249_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NG_009363.1:g.190619T>G / NG_009363.1:g.190619T>G;
+    IthaID: 2885.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009363.1%3Ag.190619T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs17199249

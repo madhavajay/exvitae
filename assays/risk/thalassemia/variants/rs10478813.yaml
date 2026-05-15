@@ -1,0 +1,46 @@
+name: thalassemia-FBN2-rs10478813
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: FBN2
+summary: 'IthaGenes rs10478813 (NG_008750.1:g.47471C>G); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs10478813
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '5'
+    pos: 127831265
+  grch38:
+    chrom: '5'
+    pos: 128495572
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NG_008750.1:g.47471C>G / NG_008750.1:g.47471C>G;
+    IthaID: 3473.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008750.1%3Ag.47471C%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10478813
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

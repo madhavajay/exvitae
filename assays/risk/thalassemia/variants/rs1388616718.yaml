@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-rs1388616718
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+identifiers:
+  rsids:
+  - rs1388616718
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5254195
+  grch38:
+    chrom: '11'
+    pos: 5232965
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes CD 147 TGA>TTA (HBD:c.443G>T); reported phenotype: δ-thalassaemia, δ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD_rs1388616718_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-thalassaemia, δ-chain variant; HGVS: HBD:c.443G>T / NG_000007.3:g.64651G>T;
+    IthaID: 2520.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.64651G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1388616718

@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NEDD4L-rs1624292
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NEDD4L
+identifiers:
+  rsids:
+  - rs1624292
+  aliases:
+  - rs58410356
+coordinates:
+  grch37:
+    chrom: '18'
+    pos: 55772235
+  grch38:
+    chrom: '18'
+    pos: 58105003
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs1624292 (NG_029954.1:g.65626T>C); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NEDD4L_rs1624292_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NG_029954.1:g.65626T>C / NG_029954.1:g.65626T>C;
+    IthaID: 2908.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029954.1%3Ag.65626T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1624292

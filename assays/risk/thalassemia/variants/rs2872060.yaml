@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-IGF1R-rs2872060
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: IGF1R
+identifiers:
+  rsids:
+  - rs2872060
+  aliases:
+  - rs17714321
+  - rs58419487
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 99499493
+  grch38:
+    chrom: '15'
+    pos: 98956264
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs2872060 (NG_009492.1:g.311733G>T); reported phenotype: Bacteremia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: IGF1R_rs2872060_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Bacteremia; HGVS: NG_009492.1:g.311733G>T / NG_009492.1:g.311733G>T;
+    IthaID: 2674.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009492.1%3Ag.311733G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2872060

@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs41417446
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs41417446
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5247993
+    end: 5247995
+  grch38:
+    chrom: '11'
+    start: 5226763
+    end: 5226765
+alleles:
+  kind: deletion
+  ref: AAA
+  alts:
+  - '-'
+summary: 'IthaGenes CD 42 (-TTT) (HBB:c.127_129delTTT); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs41417446_finding_1
+  alt: '-'
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.127_129delTTT / NG_000007.3:g.70851_70853delTTT;
+    IthaID: 945.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70851_70853delTTT/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs41417446

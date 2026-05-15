@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBS1L-rs11754265
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBS1L
+identifiers:
+  rsids:
+  - rs11754265
+  aliases:
+  - rs56499138
+  - rs59239230
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135356216
+  grch38:
+    chrom: '6'
+    pos: 135035078
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs11754265 (NG_012002.1:g.24821C>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBS1L_rs11754265_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_012002.1:g.24821C>G / NG_012002.1:g.24821C>G;
+    IthaID: 3184.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012002.1%3Ag.24821C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11754265

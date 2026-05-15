@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-UGT1A10-rs6742078
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: UGT1A10
+identifiers:
+  rsids:
+  - rs6742078
+  aliases:
+  - rs34902870
+  - rs61135950
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 234672639
+  grch38:
+    chrom: '2'
+    pos: 233763993
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+summary: 'IthaGenes rs6742078 (NG_002601.2:g.179250G>T); reported phenotype: Gallstones, Bilirubin levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: UGT1A10_rs6742078_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Gallstones, Bilirubin levels; HGVS: NG_002601.2:g.179250G>T / NG_002601.2:g.179250G>T;
+    IthaID: 2861.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_002601.2%3Ag.179250G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6742078

@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG1-rs63750509
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG1
+identifiers:
+  rsids:
+  - rs63750509
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5271189
+    end: 5271209
+  grch38:
+    chrom: '11'
+    start: 5249959
+    end: 5249979
+alleles:
+  kind: indel
+  ref: GTCAAGGCTATTGGTCAAGGC
+  alts:
+  - GTCAAGGC
+summary: 'IthaGenes -114 to -102 (13 bp deletion , Black non-deletional HPFH) (HBG1:c.-167_-155delCAATAGCCTTGAC); reported
+  phenotype: HPFH, Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG1_rs63750509_finding_1
+  alt: GTCAAGGC
+  notes: 'IthaGenes functionality: Causative; phenotype: HPFH, Hb F levels; HGVS: HBG1:c.-167_-155delCAATAGCCTTGAC / NG_000007.3:g.47645_47657delCAATAGCCTTGAC;
+    IthaID: 1574.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.47645_47657delCAATAGCCTTGAC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750509

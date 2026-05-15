@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SERPINC1-rs2227617
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SERPINC1
+identifiers:
+  rsids:
+  - rs2227617
+  aliases:
+  - rs59031770
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 173874059
+  grch38:
+    chrom: '1'
+    pos: 173904921
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs2227617 (NG_012462.1:g.17458C>T); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SERPINC1_rs2227617_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NG_012462.1:g.17458C>T / NG_012462.1:g.17458C>T;
+    IthaID: 3329.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012462.1%3Ag.17458C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2227617

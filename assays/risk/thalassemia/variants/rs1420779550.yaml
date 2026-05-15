@@ -1,0 +1,49 @@
+name: thalassemia-HBB-rs1420779550
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+summary: 'IthaGenes 3''UTR +132 C>T (HBB:c.*132C>T); reported phenotype: β-thalassaemia.'
+identifiers:
+  rsids:
+  - rs1420779550
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246696
+  grch38:
+    chrom: '11'
+    pos: 5225466
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia; HGVS: HBB:c.*132C>T / NG_000007.3:g.72150C>T; IthaID:
+    3605.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.72150C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1420779550
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

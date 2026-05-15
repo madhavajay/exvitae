@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LARGE1-rs111661215
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LARGE1
+identifiers:
+  rsids:
+  - rs111661215
+  aliases:
+  - rs145368384
+  - rs374534626
+coordinates:
+  grch37:
+    chrom: '22'
+    start: 33862331
+    end: 33862339
+  grch38:
+    chrom: '22'
+    start: 33466345
+    end: 33466353
+alleles:
+  kind: indel
+  ref: TTTTTTTTT
+  alts:
+  - TTTTTT
+  - TTTTTTT
+  - TTTTTTTT
+  - TTTTTTTTTT
+summary: 'IthaGenes rs557939075 (NG_009929.2:g.459084_459085insA); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LARGE1_rs111661215_finding_1
+  alt: TTTTTT
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_009929.2:g.459084_459085insA / NG_009929.2:g.459084_459085insA;
+    IthaID: 3219.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009929.2%3Ag.459084_459085insA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs111661215

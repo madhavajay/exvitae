@@ -1,0 +1,52 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs35485099
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs35485099
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246925
+  grch38:
+    chrom: '11'
+    pos: 5225695
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+  - A
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes CD 115 (GCC>GAC) Ala to Asp (HBB:c.347C>A); reported phenotype: β-thalassaemia, β-chain variant, Haemolytic
+  anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs35485099_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, β-chain variant, Haemolytic anaemia, Ineffective
+    erythropoiesis; HGVS: HBB:c.347C>A / NG_000007.3:g.71921C>A; IthaID: 239.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs35485099_finding_2
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, Haemolytic anaemia; HGVS: HBB:c.347C>T / NG_000007.3:g.71921C>T;
+    IthaID: 1193.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71921C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35485099

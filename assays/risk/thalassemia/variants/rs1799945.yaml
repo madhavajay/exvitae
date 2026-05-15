@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HFE-rs1799945
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HFE
+identifiers:
+  rsids:
+  - rs1799945
+  aliases:
+  - rs17515604
+  - rs60366842
+  - rs112961043
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 26091179
+  grch38:
+    chrom: '6'
+    pos: 26090951
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes  rs1799945 (NG_008720.2:g.8671C>G); reported phenotype: Increased serum iron, Elevated transferrin saturation,
+  Increased serum ferritin.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HFE_rs1799945_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Increased serum iron, Elevated transferrin saturation, Increased serum
+    ferritin; HGVS: NG_008720.2:g.8671C>G / NG_008720.2:g.8671C>G; IthaID: 3120.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008720.2%3Ag.8671C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1799945

@@ -1,0 +1,47 @@
+name: thalassemia-SEC31B-rs11819496
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SEC31B
+summary: 'IthaGenes rs11819496 (NC_000010.11:g.100499576C>G); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs11819496
+  aliases:
+  - rs52806260
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 102259333
+  grch38:
+    chrom: '10'
+    pos: 100499576
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000010.11:g.100499576C>G /
+    NC_000010.11:g.100499576C>G; IthaID: 3454.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000010.11%3Ag.100499576C%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11819496
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

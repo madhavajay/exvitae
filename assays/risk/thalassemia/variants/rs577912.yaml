@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KL-rs577912
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KL
+identifiers:
+  rsids:
+  - rs577912
+  aliases:
+  - rs60279845
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33610151
+  grch38:
+    chrom: '13'
+    pos: 33036014
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+summary: 'IthaGenes rs577912 (NG_011485.1:g.24581T>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KL_rs577912_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011485.1:g.24581T>G / NG_011485.1:g.24581T>G;
+    IthaID: 2747.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.24581T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs577912

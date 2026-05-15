@@ -1,0 +1,49 @@
+name: thalassemia-SAR1A-rs56303718
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SAR1A
+summary: 'IthaGenes rs56303718 (NC_000010.11:g.70170898C>A); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs56303718
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 71930654
+  grch38:
+    chrom: '10'
+    pos: 70170898
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000010.11:g.70170898C>A / NC_000010.11:g.70170898C>A;
+    IthaID: 3533.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000010.11%3Ag.70170898C%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs56303718
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

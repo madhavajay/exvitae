@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMPR1A-rs6586039
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMPR1A
+identifiers:
+  rsids:
+  - rs6586039
+  aliases:
+  - rs59117358
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 88568565
+  grch38:
+    chrom: '10'
+    pos: 86808808
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs6586039 (NG_009362.1:g.57170G>A); reported phenotype: Bacteremia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMPR1A_rs6586039_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Bacteremia; HGVS: NG_009362.1:g.57170G>A / NG_009362.1:g.57170G>A;
+    IthaID: 2675.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009362.1%3Ag.57170G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6586039

@@ -1,0 +1,47 @@
+name: thalassemia-KLF10-rs3191333
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KLF10
+summary: 'IthaGenes rs3191333 (NG_033271.1:g.10912C>T); reported phenotype: Hb F levels, Response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs3191333
+  aliases:
+  - rs17773772
+coordinates:
+  grch37:
+    chrom: '8'
+    pos: 103662219
+  grch38:
+    chrom: '8'
+    pos: 102649991
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Response to hydroxyurea; HGVS: NG_033271.1:g.10912C>T
+    / NG_033271.1:g.10912C>T; IthaID: 3550.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_033271.1%3Ag.10912C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3191333
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

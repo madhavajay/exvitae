@@ -1,0 +1,46 @@
+name: thalassemia-RSPH3-rs61750777
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: RSPH3
+summary: 'IthaGenes rs61750777 (NG_051819.1:g.5672C>T); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs61750777
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 159420548
+  grch38:
+    chrom: '6'
+    pos: 158999516
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_051819.1:g.5672C>T / NG_051819.1:g.5672C>T;
+    IthaID: 3452.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_051819.1%3Ag.5672C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs61750777
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

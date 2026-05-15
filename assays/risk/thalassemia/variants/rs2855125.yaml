@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG1-HBG2-rs2855125
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG1-HBG2
+identifiers:
+  rsids:
+  - rs2855125
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5273687
+  grch38:
+    chrom: '11'
+    pos: 5252457
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - A
+  - G
+summary: 'IthaGenes rs2855125 (NG_000007.3:g.45159A>C); reported phenotype: Hb F levels, Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG1-HBG2_rs2855125_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Severity; HGVS: NG_000007.3:g.45159A>C / NG_000007.3:g.45159A>C;
+    IthaID: 2803.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.45159A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2855125

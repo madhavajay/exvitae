@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs34383403
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs34383403
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5246839
+    end: 5246847
+  grch38:
+    chrom: '11'
+    start: 5225609
+    end: 5225617
+alleles:
+  kind: deletion
+  ref: TGTGGGCCA
+  alts:
+  - '-'
+summary: 'IthaGenes CD 141-144 (-TGGCCCACA) (HBB:c.425_433delTGGCCCACA); reported phenotype: β-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs34383403_finding_1
+  alt: '-'
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.425_433delTGGCCCACA / NG_000007.3:g.71999_72007delTGGCCCACA;
+    IthaID: 1288.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71999_72007delTGGCCCACA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34383403

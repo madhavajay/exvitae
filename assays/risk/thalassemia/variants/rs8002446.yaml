@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-FLT1-rs8002446
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: FLT1
+identifiers:
+  rsids:
+  - rs8002446
+  aliases:
+  - rs17627306
+  - rs59160757
+  - rs60616362
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 28997400
+  grch38:
+    chrom: '13'
+    pos: 28423263
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes rs8002446 (NG_012003.1:g.76866C>T); reported phenotype: Hb F levels, Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: FLT1_rs8002446_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Hb F response to hydroxyurea; HGVS: NG_012003.1:g.76866C>T
+    / NG_012003.1:g.76866C>T; IthaID: 2162.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012003.1%3Ag.76866C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs8002446

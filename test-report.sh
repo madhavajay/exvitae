@@ -29,12 +29,16 @@ assay/panel aliases:
   apol1-zip
   pgx-1
   pgx-1-zip
+  thalassemia
+  thalassemia-zip
+  clingen
 
 examples:
   ./test-report.sh 23andme apol1
   ./test-report.sh sequencing apol1-zip
   ./test-report.sh carigenetics-vcf /Users/madhavajay/dev/exvitae-data/exvitae/assays/risk/APOL1/APOL1.zip
   ./test-report.sh carika /Users/madhavajay/dev/exvitae-data/projects/pgx-1/manifest.yaml -- --analysis-max-duration-ms 60000
+  ./test-report.sh 23andme_v5 clingen --no-open -- --html
 USAGE
 }
 
@@ -71,6 +75,15 @@ resolve_manifest() {
       ;;
     pgx-1-zip)
       printf '%s\n' "$PROJECTS/pgx-1/pgx-1.zip"
+      ;;
+    thalassemia)
+      printf '%s\n' "$PROJECTS/thalassemia/thalassemia.yaml"
+      ;;
+    thalassemia-zip)
+      printf '%s\n' "$PROJECTS/thalassemia/thalassemia.zip"
+      ;;
+    clingen)
+      printf '%s\n' "$PROJECTS/clingen/assay.yaml"
       ;;
     *)
       printf '%s\n' "$value"

@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-PEX7-rs1342645
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PEX7
+identifiers:
+  rsids:
+  - rs1342645
+  aliases:
+  - rs59941301
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 137207304
+  grch38:
+    chrom: '6'
+    pos: 136886166
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes rs1342645 (NG_008462.1:g.68587G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: PEX7_rs1342645_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_008462.1:g.68587G>A / NG_008462.1:g.68587G>A;
+    IthaID: 2893.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008462.1%3Ag.68587G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1342645

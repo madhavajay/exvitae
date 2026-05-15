@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-PEX7-rs3799476
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PEX7
+identifiers:
+  rsids:
+  - rs3799476
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 137184073
+  grch38:
+    chrom: '6'
+    pos: 136862935
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs3799476 (NG_008462.1:g.45356G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: PEX7_rs3799476_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_008462.1:g.45356G>A / NG_008462.1:g.45356G>A;
+    IthaID: 2892.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008462.1%3Ag.45356G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3799476

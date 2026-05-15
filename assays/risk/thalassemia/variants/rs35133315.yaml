@@ -1,0 +1,50 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs35133315
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs35133315
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5247984
+    end: 5247986
+  grch38:
+    chrom: '11'
+    start: 5226754
+    end: 5226756
+alleles:
+  kind: indel
+  ref: AAA
+  alts:
+  - AA
+  - AAAA
+summary: 'IthaGenes CD 45 (-T) (HBB:c.138delT); reported phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs35133315_finding_1
+  alt: AA
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.138delT / NG_000007.3:g.70862delT; IthaID: 152.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs35133315_finding_2
+  alt: AA
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.138dupT / NG_000007.3:g.70862dupT; IthaID: 153.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70862delT/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35133315

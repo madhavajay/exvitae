@@ -1,0 +1,49 @@
+name: thalassemia-RHPN2-rs28626308
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: RHPN2
+summary: 'IthaGenes rs28626308 (NC_000019.10:g.33026609C>T); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs28626308
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '19'
+    pos: 33517515
+  grch38:
+    chrom: '19'
+    pos: 33026609
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000019.10:g.33026609C>T / NC_000019.10:g.33026609C>T;
+    IthaID: 3450.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000019.10%3Ag.33026609C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs28626308
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

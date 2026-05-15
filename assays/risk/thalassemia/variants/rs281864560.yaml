@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs281864560
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs281864560
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    start: 223001
+    end: 223004
+  grch38:
+    chrom: '16'
+    start: 173002
+    end: 173005
+alleles:
+  kind: deletion
+  ref: GGAG
+  alts:
+  - G
+summary: 'IthaGenes CD 30 -GAG [-Glu] (HBA2:c.91_93delGAG); reported phenotype: α-thalassaemia, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864560_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, Haemolytic anaemia; HGVS: HBA2:c.91_93delGAG / NG_000006.1:g.33866_33868delGAG;
+    IthaID: 357.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33866_33868delGAG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864560

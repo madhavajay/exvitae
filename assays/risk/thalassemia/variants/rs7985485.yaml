@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000013.11-rs7985485
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000013.11
+identifiers:
+  rsids:
+  - rs7985485
+  aliases:
+  - rs60444561
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33360474
+  grch38:
+    chrom: '13'
+    pos: 32786336
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs7985485 (hCV3118898) (NC_000013.11:g.32786336C>A); reported phenotype: Leg ulcers, Osteonecrosis/Avascular
+  necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000013.11_rs7985485_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Leg ulcers, Osteonecrosis/Avascular necrosis; HGVS: NC_000013.11:g.32786336C>A
+    / NC_000013.11:g.32786336C>A; IthaID: 2746.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000013.11%3Ag.32786336C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7985485

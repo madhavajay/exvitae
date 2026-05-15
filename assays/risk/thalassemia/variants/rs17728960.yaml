@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NFATC2-rs17728960
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NFATC2
+identifiers:
+  rsids:
+  - rs17728960
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '20'
+    pos: 50129716
+  grch38:
+    chrom: '20'
+    pos: 51513177
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs17728960 (NC_000020.11:g.51513177T>C); reported phenotype: Acute chest syndrome.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NFATC2_rs17728960_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NC_000020.11:g.51513177T>C / NC_000020.11:g.51513177T>C;
+    IthaID: 2679.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000020.11%3Ag.51513177T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs17728960

@@ -1,0 +1,52 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs41328049
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs41328049
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 223206
+  grch38:
+    chrom: '16'
+    pos: 173207
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes CD 59 GGC>CGC [Gly>Arg] (HBA2:c.178G>C); reported phenotype: α-chain variant, α-thalassaemia, Haemolytic
+  anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs41328049_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant, α-thalassaemia, Haemolytic anaemia; HGVS: HBA2:c.178G>C
+    / NG_000006.1:g.34070G>C; IthaID: 379.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs41328049_finding_2
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.178G>A / NG_000006.1:g.34070G>A; IthaID:
+    2409.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.34070G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs41328049

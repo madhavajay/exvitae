@@ -1,0 +1,47 @@
+name: thalassemia-CDHR3-rs6967330
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CDHR3
+summary: 'IthaGenes rs6967330 (NC_000007.14:g.106018005G>A); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs6967330
+  aliases:
+  - rs58478557
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 105658451
+  grch38:
+    chrom: '7'
+    pos: 106018005
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000007.14:g.106018005G>A /
+    NC_000007.14:g.106018005G>A; IthaID: 3456.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000007.14%3Ag.106018005G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6967330
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-OR51B2-rs11036815
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OR51B2
+identifiers:
+  rsids:
+  - rs11036815
+  aliases:
+  - rs52816306
+  - rs60406440
+  - rs117513488
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5344681
+  grch38:
+    chrom: '11'
+    pos: 5323451
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs11036815 (NC_000011.10:g.5323451G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: OR51B2_rs11036815_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000011.10:g.5323451G>A / NC_000011.10:g.5323451G>A;
+    IthaID: 3110.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5323451G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11036815

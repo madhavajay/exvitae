@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs2142017740
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs2142017740
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 223005
+  grch38:
+    chrom: '16'
+    pos: 173006
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes CD 31 AGG>GGG [Arg>Gly] (HBA2:c.94A>G); reported phenotype: α-chain variant, α-thalassaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs2142017740_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant, α-thalassaemia; HGVS: HBA2:c.94A>G / NG_000006.1:g.33869A>G;
+    IthaID: 2487.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33869A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2142017740

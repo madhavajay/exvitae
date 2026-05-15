@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MAP3K7-rs1145729
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MAP3K7
+identifiers:
+  rsids:
+  - rs1145729
+  aliases:
+  - rs1782429
+  - rs17673848
+  - rs34389301
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 91255334
+  grch38:
+    chrom: '6'
+    pos: 90545615
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs1145729 (NG_011966.2:g.46574C>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MAP3K7_rs1145729_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011966.2:g.46574C>T / NG_011966.2:g.46574C>T;
+    IthaID: 2621.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011966.2%3Ag.46574C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1145729

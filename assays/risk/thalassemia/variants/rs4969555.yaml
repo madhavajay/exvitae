@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-EIF2S3-rs4969555
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: EIF2S3
+identifiers:
+  rsids:
+  - rs4969555
+  aliases:
+  - rs17265378
+coordinates:
+  grch37:
+    chrom: X
+    pos: 24074581
+  grch38:
+    chrom: X
+    pos: 24056464
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs4969555 (NG_016387.1:g.6517A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: EIF2S3_rs4969555_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_016387.1:g.6517A>G / NG_016387.1:g.6517A>G;
+    IthaID: 2118.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_016387.1%3Ag.6517A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4969555

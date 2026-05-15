@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOS3-rs743507
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOS3
+identifiers:
+  rsids:
+  - rs743507
+  aliases:
+  - rs10358805
+  - rs56729499
+  - rs386610132
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 150707488
+  grch38:
+    chrom: '7'
+    pos: 151010400
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs743507 (NG_011992.1:g.24342C>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOS3_rs743507_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011992.1:g.24342C>T / NG_011992.1:g.24342C>T;
+    IthaID: 2736.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011992.1%3Ag.24342C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs743507

@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs41474145
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs41474145
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    start: 223004
+    end: 223012
+  grch38:
+    chrom: '16'
+    start: 173005
+    end: 173013
+alleles:
+  kind: indel
+  ref: GAGGTGAGG
+  alts:
+  - GAGG
+summary: 'IthaGenes IVS I-2 (-5 bp) GAGGTGAGG>GAGG----- donor (α-5nt) (HBA2:c.95+2_95+6delTGAGG); reported phenotype: α-thalassaemia,
+  Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs41474145_finding_1
+  alt: GAGG
+  notes: 'IthaGenes functionality: Causative; phenotype: α-thalassaemia, Haemolytic anaemia; HGVS: HBA2:c.95+2_95+6delTGAGG
+    / NG_000006.1:g.33872_33876delTGAGG; IthaID: 359.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33872_33876delTGAGG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs41474145

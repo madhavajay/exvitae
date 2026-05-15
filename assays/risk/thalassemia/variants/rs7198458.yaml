@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-RRAD-rs7198458
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: RRAD
+identifiers:
+  rsids:
+  - rs7198458
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 66958886
+  grch38:
+    chrom: '16'
+    pos: 66924983
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+summary: 'IthaGenes rs7198458 (NC_000016.10:g.66924983T>G); reported phenotype: Abnormal neutrophil cell number, Abnormal
+  white blood cell count.'
+findings:
+- schema: bioscript:trait:1.0
+  id: RRAD_rs7198458_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal neutrophil cell number, Abnormal white blood cell count;
+    HGVS: NC_000016.10:g.66924983T>G / NC_000016.10:g.66924983T>G; IthaID: 3346.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000016.10%3Ag.66924983T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7198458

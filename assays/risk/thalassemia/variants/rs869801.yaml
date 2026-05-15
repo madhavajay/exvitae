@@ -1,0 +1,51 @@
+name: thalassemia-DOCK1-rs869801
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: DOCK1
+summary: 'IthaGenes rs869801 (NG_033919.2:g.546967G>A); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs869801
+  aliases:
+  - rs2229602
+  - rs17777746
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 129245684
+  grch38:
+    chrom: '10'
+    pos: 127447420
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_033919.2:g.546967G>A / NG_033919.2:g.546967G>A;
+    IthaID: 3459.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_033919.2%3Ag.546967G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs869801
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

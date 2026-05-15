@@ -1,0 +1,52 @@
+name: thalassemia-HTR3B-rs1176758
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HTR3B
+summary: 'IthaGenes rs1176758 (NC_000011.10:g.113899633G>A); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs1176758
+  aliases:
+  - rs1672674
+  - rs61415657
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 113770355
+  grch38:
+    chrom: '11'
+    pos: 113899633
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NC_000011.10:g.113899633G>A / NC_000011.10:g.113899633G>A;
+    IthaID: 3475.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.113899633G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1176758
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

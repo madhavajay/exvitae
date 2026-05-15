@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-GP6-rs1613662
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: GP6
+identifiers:
+  rsids:
+  - rs1613662
+  aliases:
+  - rs17699914
+  - rs58160599
+coordinates:
+  grch37:
+    chrom: HSCHR19LRC_COX1_CTG1
+    pos: 55457512
+  grch38:
+    chrom: '19'
+    pos: 55025227
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs1613662 (NG_031963.2:g.18038C>T); reported phenotype: Thromboembolism.'
+findings:
+- schema: bioscript:trait:1.0
+  id: GP6_rs1613662_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Thromboembolism; HGVS: NG_031963.2:g.18038C>T / NG_031963.2:g.18038C>T;
+    IthaID: 3118.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_031963.2%3Ag.18038C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1613662

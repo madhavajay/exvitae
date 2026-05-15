@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MMP3-rs35068180
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MMP3
+identifiers:
+  rsids:
+  - rs35068180
+  aliases:
+  - rs141680807
+coordinates:
+  grch38:
+    chrom: '11'
+    start: 102845217
+    end: 102845221
+alleles:
+  kind: indel
+  ref: AAAAA
+  alts:
+  - AAAA
+  - AAAAAA
+  - AAAAAAA
+summary: 'IthaGenes rs3025058 (MMP3 -1171insA , -1171 5A/6A MMP-3) (NG_012100.1:g.3394_3395insT); reported phenotype: Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MMP3_rs35068180_finding_1
+  alt: AAAA
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NG_012100.1:g.3394_3395insT / NG_012100.1:g.3394_3395insT;
+    IthaID: 2666.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012100.1%3Ag.3394_3395insT/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35068180

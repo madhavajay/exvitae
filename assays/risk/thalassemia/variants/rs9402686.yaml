@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LOC105378010-rs9402686
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LOC105378010
+identifiers:
+  rsids:
+  - rs9402686
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135427817
+  grch38:
+    chrom: '6'
+    pos: 135106679
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs9402686 (NC_000006.12:g.135106679G>A); reported phenotype: Hb F levels, Acute chest syndrome.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LOC105378010_rs9402686_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Acute chest syndrome; HGVS: NC_000006.12:g.135106679G>A
+    / NC_000006.12:g.135106679G>A; IthaID: 2101.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135106679G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9402686

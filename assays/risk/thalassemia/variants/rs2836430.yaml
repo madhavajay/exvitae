@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ERG-rs2836430
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ERG
+identifiers:
+  rsids:
+  - rs2836430
+  aliases:
+  - rs3787902
+  - rs17193948
+  - rs60295450
+coordinates:
+  grch37:
+    chrom: '21'
+    pos: 39849553
+  grch38:
+    chrom: '21'
+    pos: 38477630
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+summary: 'IthaGenes rs2836430 (NG_029732.1:g.189152A>C); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ERG_rs2836430_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NG_029732.1:g.189152A>C /
+    NG_029732.1:g.189152A>C; IthaID: 2596.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029732.1%3Ag.189152A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2836430

@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LOC105378010-rs9376092
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LOC105378010
+identifiers:
+  rsids:
+  - rs9376092
+  aliases:
+  - rs56499296
+  - rs57231418
+  - rs111194878
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135427144
+  grch38:
+    chrom: '6'
+    pos: 135106006
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+summary: 'IthaGenes rs9376092 (NC_000006.12:g.135106006C>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LOC105378010_rs9376092_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000006.12:g.135106006C>A / NC_000006.12:g.135106006C>A;
+    IthaID: 2837.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135106006C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9376092

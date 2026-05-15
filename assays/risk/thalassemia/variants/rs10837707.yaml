@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG2-HBE1-rs10837707
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG2-HBE1
+identifiers:
+  rsids:
+  - rs10837707
+  aliases:
+  - rs60065314
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5286808
+  grch38:
+    chrom: '11'
+    pos: 5265578
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs10837707 (NG_000007.3:g.32038A>G); reported phenotype: Hb F levels, Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG2-HBE1_rs10837707_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Severity; HGVS: NG_000007.3:g.32038A>G / NG_000007.3:g.32038A>G;
+    IthaID: 2814.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.32038A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10837707

@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CYP4V2-rs13146272
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CYP4V2
+identifiers:
+  rsids:
+  - rs13146272
+  aliases:
+  - rs17857504
+  - rs52830594
+  - rs60991502
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 187120211
+  grch38:
+    chrom: '4'
+    pos: 186199057
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes rs13146272 (NG_007965.1:g.12538C>A); reported phenotype: Thromboembolism.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CYP4V2_rs13146272_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Thromboembolism; HGVS: NG_007965.1:g.12538C>A / NG_007965.1:g.12538C>A;
+    IthaID: 3119.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_007965.1%3Ag.12538C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs13146272

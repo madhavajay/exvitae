@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TGFBR3-rs2007686
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TGFBR3
+identifiers:
+  rsids:
+  - rs2007686
+  aliases:
+  - rs3767581
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 92162443
+  grch38:
+    chrom: '1'
+    pos: 91696886
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs2007686 (NG_027757.1:g.214117G>A); reported phenotype: Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TGFBR3_rs2007686_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NG_027757.1:g.214117G>A / NG_027757.1:g.214117G>A; IthaID:
+    2612.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_027757.1%3Ag.214117G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2007686

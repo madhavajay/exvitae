@@ -1,0 +1,46 @@
+name: thalassemia-HBB-rs193922558
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+summary: 'IthaGenes IVS II-821 (A>C) (HBB:c.316-30A>C); reported phenotype: β-thalassaemia.'
+identifiers:
+  rsids:
+  - rs193922558
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246986
+  grch38:
+    chrom: '11'
+    pos: 5225756
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia; HGVS: HBB:c.316-30A>C / NG_000007.3:g.71860A>C; IthaID:
+    3558.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71860A%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs193922558
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

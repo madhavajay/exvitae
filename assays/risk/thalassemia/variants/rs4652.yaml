@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LGALS3-rs4652
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LGALS3
+identifiers:
+  rsids:
+  - rs4652
+  aliases:
+  - rs1042188
+  - rs2075600
+  - rs17349557
+  - rs17857427
+  - rs59032052
+coordinates:
+  grch37:
+    chrom: '14'
+    pos: 55605036
+  grch38:
+    chrom: '14'
+    pos: 55138318
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+summary: 'IthaGenes rs4652 (+292 ACT>CCT [Thr>Pro]) (NG_017089.1:g.14102A>C); reported phenotype: Vaso-occlusive crisis, Recurrent
+  respiratory infections.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LGALS3_rs4652_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Vaso-occlusive crisis, Recurrent respiratory infections; HGVS: NG_017089.1:g.14102A>C
+    / NG_017089.1:g.14102A>C; IthaID: 3144.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_017089.1%3Ag.14102A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4652

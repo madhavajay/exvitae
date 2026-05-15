@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-HBBP1-rs10837643
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD-HBBP1
+identifiers:
+  rsids:
+  - rs10837643
+  aliases:
+  - rs17689665
+  - rs61648447
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5258038
+  grch38:
+    chrom: '11'
+    pos: 5236808
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes rs10837643 (NG_000007.3:g.60808A>T); reported phenotype: Hb F levels, Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD-HBBP1_rs10837643_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Severity; HGVS: NG_000007.3:g.60808A>T / NG_000007.3:g.60808A>T;
+    IthaID: 2807.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.60808A%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10837643

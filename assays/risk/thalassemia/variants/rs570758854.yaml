@@ -1,0 +1,46 @@
+name: thalassemia-HBD-rs570758854
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+summary: 'IthaGenes CD 89 AGT>AAT [Ser>Asn] (HBD:c.269G>A); reported phenotype: δ-chain variant.'
+identifiers:
+  rsids:
+  - rs570758854
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5255267
+  grch38:
+    chrom: '11'
+    pos: 5234037
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-chain variant; HGVS: HBD:c.269G>A / NG_000007.3:g.63579G>A; IthaID:
+    3547.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63579G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs570758854
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

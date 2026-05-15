@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs1847587930
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs1847587930
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5248229
+    end: 5248274
+  grch38:
+    chrom: '11'
+    start: 5226999
+    end: 5227044
+alleles:
+  kind: indel
+  ref: TCCTCAGGAGTCAGATGCACCATGGTGTCTGTTTGAGGTTGCTAGT
+  alts:
+  - TCCTCAGGAGTCAGATGCACCATGGTGTCTGTTTGAGGTTGCTAGTCCTCAGGAGTCAGATGCACCATGGTGTCTGTTTGAGGTTGCTAGT
+summary: 'IthaGenes -22 to +23 (+45 bp duplication) (NG_000007.3:g.70573_70617dup); reported phenotype: β-thalassaemia, Haemolytic
+  anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs1847587930_finding_1
+  alt: TCCTCAGGAGTCAGATGCACCATGGTGTCTGTTTGAGGTTGCTAGTCCTCAGGAGTCAGATGCACCATGGTGTCTGTTTGAGGTTGCTAGT
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    NG_000007.3:g.70573_70617dup / NG_000007.3:g.70573_70617dup; IthaID: 33.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70573_70617dup/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1847587930

@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TRPA1-rs920829
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TRPA1
+identifiers:
+  rsids:
+  - rs920829
+  aliases:
+  - rs52810580
+coordinates:
+  grch37:
+    chrom: '8'
+    pos: 72977703
+  grch38:
+    chrom: '8'
+    pos: 72065468
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs920829 (NG_033890.1:g.15117G>A); reported phenotype: Pain.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TRPA1_rs920829_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_033890.1:g.15117G>A / NG_033890.1:g.15117G>A; IthaID:
+    3349.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_033890.1%3Ag.15117G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs920829

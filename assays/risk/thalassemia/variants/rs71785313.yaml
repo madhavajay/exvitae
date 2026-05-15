@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-APOL1-rs71785313
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: APOL1
+identifiers:
+  rsids:
+  - rs71785313
+  aliases:
+  - rs143830837
+coordinates:
+  grch37:
+    chrom: '22'
+    start: 36662042
+    end: 36662051
+  grch38:
+    chrom: '22'
+    start: 36265996
+    end: 36266005
+alleles:
+  kind: indel
+  ref: ATAATTATAA
+  alts:
+  - ATAA
+summary: 'IthaGenes rs71785313 (APOL1 G2) (NG_023228.1:g.17930_17935delTTATAA); reported phenotype: Abnormal GFR, Proteinuria,
+  Albuminuria.'
+findings:
+- schema: bioscript:trait:1.0
+  id: APOL1_rs71785313_finding_1
+  alt: ATAA
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal GFR, Proteinuria, Albuminuria; HGVS: NG_023228.1:g.17930_17935delTTATAA
+    / NG_023228.1:g.17930_17935delTTATAA; IthaID: 3206.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_023228.1%3Ag.17930_17935delTTATAA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs71785313

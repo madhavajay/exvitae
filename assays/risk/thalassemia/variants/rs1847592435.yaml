@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs1847592435
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs1847592435
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248377
+  grch38:
+    chrom: '11'
+    pos: 5227147
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+summary: 'IthaGenes -76 C>A (HBB:c.-126C>A); reported phenotype: β-thalassaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs1847592435_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia; HGVS: HBB:c.-126C>A / NG_000007.3:g.70469C>A; IthaID:
+    3386.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70469C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1847592435

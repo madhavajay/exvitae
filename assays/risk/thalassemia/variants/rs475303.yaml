@@ -1,0 +1,50 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-STARD13-rs475303
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: STARD13
+identifiers:
+  rsids:
+  - rs475303
+  aliases:
+  - rs10284809
+  - rs17694929
+  - rs60810173
+  - rs386595125
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33680044
+  grch38:
+    chrom: '13'
+    pos: 33105907
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes rs475303 (NG_029752.2:g.575929A>G); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: STARD13_rs475303_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NG_029752.2:g.575929A>G /
+    NG_029752.2:g.575929A>G; IthaID: 2602.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029752.2%3Ag.575929A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs475303

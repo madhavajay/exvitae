@@ -1,0 +1,47 @@
+name: thalassemia-KLF4-rs2236599
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KLF4
+summary: 'IthaGenes rs2236599 (NC_000009.12:g.107487224C>T); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs2236599
+  aliases:
+  - rs17789424
+coordinates:
+  grch37:
+    chrom: '9'
+    pos: 110249505
+  grch38:
+    chrom: '9'
+    pos: 107487224
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000009.12:g.107487224C>T /
+    NC_000009.12:g.107487224C>T; IthaID: 3584.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000009.12%3Ag.107487224C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2236599
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

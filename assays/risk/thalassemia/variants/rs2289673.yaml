@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-EFTUD2-rs2289673
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: EFTUD2
+identifiers:
+  rsids:
+  - rs2289673
+  aliases:
+  - rs57298954
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 42929970
+  grch38:
+    chrom: '17'
+    pos: 44852602
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs2289673 (NG_032674.1:g.52024A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: EFTUD2_rs2289673_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_032674.1:g.52024A>G / NG_032674.1:g.52024A>G;
+    IthaID: 2632.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_032674.1%3Ag.52024A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2289673

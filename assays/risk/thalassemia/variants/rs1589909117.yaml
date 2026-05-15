@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG2-rs1589909117
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG2
+identifiers:
+  rsids:
+  - rs1589909117
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5275713
+  grch38:
+    chrom: '11'
+    pos: 5254483
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes CD 41 TTC>CTC [Phe>Leu] (HBG2:c.124T>C); reported phenotype: γ-chain variant, Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG2_rs1589909117_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: γ-chain variant, Hb F levels; HGVS: HBG2:c.124T>C / NG_000007.3:g.43133T>C;
+    IthaID: 2427.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.43133T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1589909117

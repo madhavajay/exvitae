@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000015.10-rs9920494
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000015.10
+identifiers:
+  rsids:
+  - rs9920494
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 60605914
+  grch38:
+    chrom: '15'
+    pos: 60313715
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes rs9920494 (hCV1571628) (NC_000015.10:g.60313715T>G); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000015.10_rs9920494_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NC_000015.10:g.60313715T>G
+    / NC_000015.10:g.60313715T>G; IthaID: 2758.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000015.10%3Ag.60313715T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9920494

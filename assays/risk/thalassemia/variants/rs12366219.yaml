@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-OR10G9-rs12366219
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OR10G9
+identifiers:
+  rsids:
+  - rs12366219
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 123894119
+  grch38:
+    chrom: '11'
+    pos: 124023412
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs12366219 (NC_000011.10:g.124023412A>G); reported phenotype: Abnormal neutrophil cell number, Abnormal
+  white blood cell count.'
+findings:
+- schema: bioscript:trait:1.0
+  id: OR10G9_rs12366219_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal neutrophil cell number, Abnormal white blood cell count;
+    HGVS: NC_000011.10:g.124023412A>G / NC_000011.10:g.124023412A>G; IthaID: 3356.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.124023412A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs12366219

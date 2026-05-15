@@ -1,0 +1,43 @@
+name: thalassemia-LOC124907824-rs540006
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LOC124907824
+summary: 'IthaGenes rs540006 (NG_029975.1:g.2726A>G); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs540006
+  aliases: []
+coordinates:
+  grch38:
+    chrom: '2'
+    pos: 70556290
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_029975.1:g.2726A>G / NG_029975.1:g.2726A>G; IthaID:
+    3481.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029975.1%3Ag.2726A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs540006
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

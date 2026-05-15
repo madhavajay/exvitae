@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TOX-rs7821556
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TOX
+identifiers:
+  rsids:
+  - rs7821556
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '8'
+    pos: 59732049
+  grch38:
+    chrom: '8'
+    pos: 58819490
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs7821556 (NG_011993.1:g.304719A>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TOX_rs7821556_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011993.1:g.304719A>T / NG_011993.1:g.304719A>T;
+    IthaID: 2697.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011993.1%3Ag.304719A%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7821556

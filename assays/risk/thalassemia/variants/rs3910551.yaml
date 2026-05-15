@@ -1,0 +1,50 @@
+name: thalassemia-ALCAM-rs3910551
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ALCAM
+summary: 'IthaGenes rs3910551 (NG_029729.1:g.96079G>C); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs3910551
+  aliases:
+  - rs59860634
+coordinates:
+  grch37:
+    chrom: '3'
+    pos: 105176635
+  grch38:
+    chrom: '3'
+    pos: 105457791
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  observed_alts:
+  - C
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NG_029729.1:g.96079G>C / NG_029729.1:g.96079G>C;
+    IthaID: 3471.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029729.1%3Ag.96079G%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3910551
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-HBBP1-rs968856
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD-HBBP1
+identifiers:
+  rsids:
+  - rs968856
+  aliases:
+  - rs17689894
+  - rs57037585
+  - rs386624284
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5260576
+  grch38:
+    chrom: '11'
+    pos: 5239346
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes rs968856 (NG_000007.3:g.58270A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD-HBBP1_rs968856_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_000007.3:g.58270A>G / NG_000007.3:g.58270A>G;
+    IthaID: 2870.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.58270A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs968856

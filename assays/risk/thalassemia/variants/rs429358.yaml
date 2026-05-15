@@ -1,0 +1,49 @@
+name: thalassemia-APOE-rs429358
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: APOE
+summary: 'IthaGenes APOE ε4 (rs429358, rs7412) (NG_007084.2:g.[7903T>C;8041C>T]); reported phenotype: Left ventricular diastolic
+  dysfunction.'
+identifiers:
+  rsids:
+  - rs429358
+  aliases:
+  - rs630496
+  - rs61228756
+coordinates:
+  grch37:
+    chrom: '19'
+    pos: 45411941
+  grch38:
+    chrom: '19'
+    pos: 44908684
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Left ventricular diastolic dysfunction; HGVS: NG_007084.2:g.[7903T>C;8041C>T]
+    / NG_007084.2:g.[7903T>C;8041C>T]; IthaID: 3552.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_007084.2%3Ag.%5B7903T%3EC%3B8041C%3ET%5D/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs429358
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

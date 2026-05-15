@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOS3-rs1008140
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOS3
+identifiers:
+  rsids:
+  - rs1008140
+  aliases:
+  - rs3793339
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 150705610
+  grch38:
+    chrom: '7'
+    pos: 151008522
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs1008140 (NG_011992.1:g.22464T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOS3_rs1008140_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011992.1:g.22464T>C / NG_011992.1:g.22464T>C;
+    IthaID: 2735.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011992.1%3Ag.22464T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1008140

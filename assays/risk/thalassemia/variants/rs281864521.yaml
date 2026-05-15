@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs281864521
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs281864521
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5247794
+    end: 5247808
+  grch38:
+    chrom: '11'
+    start: 5226564
+    end: 5226578
+alleles:
+  kind: indel
+  ref: CCCATAGACTCACCC
+  alts:
+  - CCC
+summary: 'IthaGenes IVS II-2 -TGAGTCTATGGG (HBB:c.315+2_315+13delTGAGTCTATGGG); reported phenotype: β-thalassaemia, Haemolytic
+  anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs281864521_finding_1
+  alt: CCC
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.315+2_315+13delTGAGTCTATGGG / NG_000007.3:g.71041_71052delTGAGTCTATGGG; IthaID: 2182.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71041_71052delTGAGTCTATGGG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864521

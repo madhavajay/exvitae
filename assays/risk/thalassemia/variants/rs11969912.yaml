@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-F13A1-rs11969912
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: F13A1
+identifiers:
+  rsids:
+  - rs11969912
+  aliases:
+  - rs17375250
+  - rs60479357
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 6175975
+  grch38:
+    chrom: '6'
+    pos: 6175742
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs11969912 (hcv1860621) (NG_008107.1:g.149950C>T); reported phenotype: Priapism.'
+findings:
+- schema: bioscript:trait:1.0
+  id: F13A1_rs11969912_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Priapism; HGVS: NG_008107.1:g.149950C>T / NG_008107.1:g.149950C>T;
+    IthaID: 2909.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008107.1%3Ag.149950C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11969912

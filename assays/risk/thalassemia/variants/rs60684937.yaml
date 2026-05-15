@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MAP2K6-rs60684937
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MAP2K6
+identifiers:
+  rsids:
+  - rs60684937
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 67419130
+  grch38:
+    chrom: '17'
+    pos: 69422989
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+summary: 'IthaGenes rs60684937 (NC_000017.11:g.69422989T>C); reported phenotype: EPO levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MAP2K6_rs60684937_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: EPO levels; HGVS: NC_000017.11:g.69422989T>C / NC_000017.11:g.69422989T>C;
+    IthaID: 3139.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000017.11%3Ag.69422989T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs60684937

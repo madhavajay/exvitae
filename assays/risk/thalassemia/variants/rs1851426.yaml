@@ -1,0 +1,52 @@
+name: thalassemia-CYP3A4-rs1851426
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CYP3A4
+summary: 'IthaGenes rs1851426 (NG_008421.1:g.3873T>C); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs1851426
+  aliases:
+  - rs56476282
+  - rs57950778
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 99382936
+  grch38:
+    chrom: '7'
+    pos: 99785313
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_008421.1:g.3873T>C / NG_008421.1:g.3873T>C; IthaID:
+    3504.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008421.1%3Ag.3873T%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1851426
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

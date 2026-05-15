@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LOC102724142-rs888082
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LOC102724142
+identifiers:
+  rsids:
+  - rs888082
+  aliases:
+  - rs17402751
+  - rs56562092
+  - rs61705827
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60629609
+  grch38:
+    chrom: '2'
+    pos: 60402474
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs888082 (NC_000002.12:g.60402474G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LOC102724142_rs888082_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000002.12:g.60402474G>A / NC_000002.12:g.60402474G>A;
+    IthaID: 2880.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000002.12%3Ag.60402474G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs888082

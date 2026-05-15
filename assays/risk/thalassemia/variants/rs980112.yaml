@@ -1,0 +1,49 @@
+name: thalassemia-KLF10-rs980112
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KLF10
+summary: 'IthaGenes rs980112 (NG_033271.1:g.7618G>A); reported phenotype: Hb F levels.'
+identifiers:
+  rsids:
+  - rs980112
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '8'
+    pos: 103665513
+  grch38:
+    chrom: '8'
+    pos: 102653285
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_033271.1:g.7618G>A / NG_033271.1:g.7618G>A;
+    IthaID: 3585.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_033271.1%3Ag.7618G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs980112
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

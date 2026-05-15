@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ITGAV-rs3768780
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ITGAV
+identifiers:
+  rsids:
+  - rs3768780
+  aliases:
+  - rs13011606
+  - rs57776614
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 187478500
+  grch38:
+    chrom: '2'
+    pos: 186613773
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs3768780 (NC_000002.12:g.186613773A>G); reported phenotype: Priapism.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ITGAV_rs3768780_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Priapism; HGVS: NC_000002.12:g.186613773A>G / NC_000002.12:g.186613773A>G;
+    IthaID: 2767.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000002.12%3Ag.186613773A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3768780

@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CD163-rs61729510
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CD163
+identifiers:
+  rsids:
+  - rs61729510
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 7640395
+  grch38:
+    chrom: '12'
+    pos: 7487799
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs61729510 (NG_029826.1:g.21020G>A); reported phenotype: Abnormal GFR.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CD163_rs61729510_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal GFR; HGVS: NG_029826.1:g.21020G>A / NG_029826.1:g.21020G>A;
+    IthaID: 3212.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029826.1%3Ag.21020G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs61729510

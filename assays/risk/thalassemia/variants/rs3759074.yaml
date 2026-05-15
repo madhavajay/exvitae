@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-δ-rs3759074
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: δ
+identifiers:
+  rsids:
+  - rs3759074
+  aliases:
+  - rs17689628
+  - rs52805077
+  - rs116993746
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5257778
+  grch38:
+    chrom: '11'
+    pos: 5236548
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs3759074 (NG_000007.3:g.61068C>T); reported phenotype: Hb F levels, Severity.'
+findings:
+- schema: bioscript:trait:1.0
+  id: δ_rs3759074_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Severity; HGVS: NG_000007.3:g.61068C>T / NG_000007.3:g.61068C>T;
+    IthaID: 2806.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.61068C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3759074

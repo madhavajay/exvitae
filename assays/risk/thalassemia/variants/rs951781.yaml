@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NES-rs951781
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NES
+identifiers:
+  rsids:
+  - rs951781
+  aliases:
+  - rs17393839
+  - rs57478265
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 156641537
+  grch38:
+    chrom: '1'
+    pos: 156671745
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs951781 (NG_012300.1:g.10653G>A); reported phenotype: Abnormal neutrophil cell number, Abnormal white
+  blood cell count.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NES_rs951781_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal neutrophil cell number, Abnormal white blood cell count;
+    HGVS: NG_012300.1:g.10653G>A / NG_012300.1:g.10653G>A; IthaID: 3352.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012300.1%3Ag.10653G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs951781

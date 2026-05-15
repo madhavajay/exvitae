@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-FUCA2-rs9496646
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: FUCA2
+identifiers:
+  rsids:
+  - rs9496646
+  aliases:
+  - rs59519876
+  - rs60174671
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 143821047
+  grch38:
+    chrom: '6'
+    pos: 143499910
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs9496646 (NG_027676.1:g.16974T>C); reported phenotype: Left ventricular diastolic dysfunction.'
+findings:
+- schema: bioscript:trait:1.0
+  id: FUCA2_rs9496646_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Left ventricular diastolic dysfunction; HGVS: NG_027676.1:g.16974T>C
+    / NG_027676.1:g.16974T>C; IthaID: 3176.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_027676.1%3Ag.16974T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9496646

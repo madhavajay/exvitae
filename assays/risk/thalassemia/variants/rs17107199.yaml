@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMPR1A-rs17107199
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMPR1A
+identifiers:
+  rsids:
+  - rs17107199
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 88678807
+  grch38:
+    chrom: '10'
+    pos: 86919050
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes rs17107199 (hCV1663921) (NG_009362.1:g.167412C>T); reported phenotype: Bacteremia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMPR1A_rs17107199_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Bacteremia; HGVS: NG_009362.1:g.167412C>T / NG_009362.1:g.167412C>T;
+    IthaID: 2676.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_009362.1%3Ag.167412C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs17107199

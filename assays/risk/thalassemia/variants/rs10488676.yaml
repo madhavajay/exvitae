@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-Aγ-rs10488676
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: Aγ
+identifiers:
+  rsids:
+  - rs10488676
+  aliases:
+  - rs60278317
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5268797
+  grch38:
+    chrom: '11'
+    pos: 5247567
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs10488676 (NG_000007.3:g.50049C>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: Aγ_rs10488676_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_000007.3:g.50049C>T / NG_000007.3:g.50049C>T;
+    IthaID: 3103.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.50049C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10488676

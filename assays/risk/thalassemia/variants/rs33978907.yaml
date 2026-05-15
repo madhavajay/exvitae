@@ -1,0 +1,54 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs33978907
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs33978907
+  aliases:
+  - rs34851913
+  - rs193922548
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246718
+  grch38:
+    chrom: '11'
+    pos: 5225488
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes Poly A (T>C) AATAAA>AACAAA (HBB:c.*110T>C); reported phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective
+  erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs33978907_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.*110T>C / NG_000007.3:g.72128T>C; IthaID: 272.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33978907_finding_2
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.*110T>A / NG_000007.3:g.72128T>A; IthaID: 273.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.72128T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33978907

@@ -1,0 +1,52 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA2-rs281864806
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA2
+identifiers:
+  rsids:
+  - rs281864806
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 222930
+  grch38:
+    chrom: '16'
+    pos: 172931
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  - T
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes CD 6 GAC>CAC [Asp>His] (HBA2:c.19G>C); reported phenotype: α-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864806_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.19G>C / NG_000006.1:g.33794G>C; IthaID:
+    445.'
+- schema: bioscript:trait:1.0
+  id: HBA2_rs281864806_finding_2
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA2:c.19G>T / NG_000006.1:g.33794G>T; IthaID:
+    3038.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.33794G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864806

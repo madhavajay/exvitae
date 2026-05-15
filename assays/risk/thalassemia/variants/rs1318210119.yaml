@@ -1,0 +1,46 @@
+name: thalassemia-HBA1-rs1318210119
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+summary: 'IthaGenes CD 87 CAC>CAG [His>Gln] (HBA1:c.264C>G); reported phenotype: α-chain variant.'
+identifiers:
+  rsids:
+  - rs1318210119
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 227096
+  grch38:
+    chrom: '16'
+    pos: 177097
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA1:c.264C>G / NG_000006.1:g.37960C>G; IthaID:
+    3434.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.37960C%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1318210119
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

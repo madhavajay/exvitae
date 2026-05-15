@@ -1,0 +1,47 @@
+name: thalassemia-OR51B5-rs7948471
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OR51B5
+summary: 'IthaGenes rs7948471 (NC_000011.10:g.5450516G>A); reported phenotype: Haemolytic anaemia.'
+identifiers:
+  rsids:
+  - rs7948471
+  aliases:
+  - rs56847931
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5471746
+  grch38:
+    chrom: '11'
+    pos: 5450516
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Haemolytic anaemia; HGVS: NC_000011.10:g.5450516G>A / NC_000011.10:g.5450516G>A;
+    IthaID: 3542.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5450516G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7948471
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

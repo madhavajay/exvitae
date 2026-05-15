@@ -1,0 +1,52 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA1-rs35816645
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+identifiers:
+  rsids:
+  - rs35816645
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 226761
+  grch38:
+    chrom: '16'
+    pos: 176762
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  - T
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes CD 15 GGT>CGT [Gly>Arg] (Hb Siam) (HBA1:c.46G>C); reported phenotype: α-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA1_rs35816645_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA1:c.46G>C / NG_000006.1:g.37625G>C; IthaID:
+    465.'
+- schema: bioscript:trait:1.0
+  id: HBA1_rs35816645_finding_2
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant; HGVS: HBA1:c.46G>T / NG_000006.1:g.37625G>T; IthaID:
+    2365.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.37625G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35816645

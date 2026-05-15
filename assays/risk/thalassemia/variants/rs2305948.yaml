@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KDR-rs2305948
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KDR
+identifiers:
+  rsids:
+  - rs2305948
+  aliases:
+  - rs52830740
+  - rs56532927
+  - rs56973163
+  - rs386564519
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 55979558
+  grch38:
+    chrom: '4'
+    pos: 55113391
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+summary: 'IthaGenes rs2305948 (NG_012004.1:g.17205G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KDR_rs2305948_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_012004.1:g.17205G>A / NG_012004.1:g.17205G>A;
+    IthaID: 2745.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012004.1%3Ag.17205G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2305948

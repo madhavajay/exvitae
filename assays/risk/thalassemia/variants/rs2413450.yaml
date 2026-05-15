@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TMPRSS6-rs2413450
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TMPRSS6
+identifiers:
+  rsids:
+  - rs2413450
+  aliases:
+  - rs57076622
+coordinates:
+  grch37:
+    chrom: '22'
+    pos: 37470224
+  grch38:
+    chrom: '22'
+    pos: 37074184
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+  - G
+summary: 'IthaGenes rs2413450 (NG_012856.2:g.40380A>G); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TMPRSS6_rs2413450_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NG_012856.2:g.40380A>G / NG_012856.2:g.40380A>G; IthaID:
+    3082.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012856.2%3Ag.40380A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2413450

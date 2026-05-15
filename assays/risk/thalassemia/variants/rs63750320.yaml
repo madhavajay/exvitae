@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs63750320
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs63750320
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5246875
+    end: 5246877
+  grch38:
+    chrom: '11'
+    start: 5225645
+    end: 5225647
+alleles:
+  kind: deletion
+  ref: TCT
+  alts:
+  - T
+summary: 'IthaGenes CD 131-132 (-GA) >138aa (HBB:c.396_397delGA); reported phenotype: β-thalassaemia, β-chain variant, Haemolytic
+  anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs63750320_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, β-chain variant, Haemolytic anaemia, Ineffective
+    erythropoiesis; HGVS: HBB:c.396_397delGA / NG_000007.3:g.71970_71971delGA; IthaID: 260.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71970_71971delGA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750320

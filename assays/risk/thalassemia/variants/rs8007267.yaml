@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000014.9-rs8007267
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000014.9
+identifiers:
+  rsids:
+  - rs8007267
+  aliases:
+  - rs57810441
+  - rs386614709
+coordinates:
+  grch37:
+    chrom: '14'
+    pos: 55378991
+  grch38:
+    chrom: '14'
+    pos: 54912273
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs8007267 (NC_000014.9:g.54912273C>T); reported phenotype: Pain.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000014.9_rs8007267_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NC_000014.9:g.54912273C>T / NC_000014.9:g.54912273C>T;
+    IthaID: 2678.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000014.9%3Ag.54912273C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs8007267

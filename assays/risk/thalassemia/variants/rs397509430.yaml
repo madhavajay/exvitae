@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs397509430
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs397509430
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5248331
+  grch38:
+    chrom: '11'
+    pos: 5227101
+alleles:
+  kind: indel
+  ref: A
+  alts:
+  - '-'
+summary: 'IthaGenes -30  (-T) (HBB:c.-80delT); reported phenotype: β-thalassaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs397509430_finding_1
+  alt: '-'
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia; HGVS: HBB:c.-80delT / NG_000007.3:g.70515delT; IthaID:
+    3062.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70515delT/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs397509430

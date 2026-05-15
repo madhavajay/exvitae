@@ -1,0 +1,53 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBD-rs33971270
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+identifiers:
+  rsids:
+  - rs33971270
+  aliases:
+  - rs113121906
+  - rs386582043
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5254289
+  grch38:
+    chrom: '11'
+    pos: 5233059
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes CD 116 CGC>TGC [Arg>Cys] (HBD:c.349C>T); reported phenotype: δ-thalassaemia, δ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBD_rs33971270_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-thalassaemia, δ-chain variant; HGVS: HBD:c.349C>T / NG_000007.3:g.64557C>T;
+    IthaID: 1384.'
+- schema: bioscript:trait:1.0
+  id: HBD_rs33971270_finding_2
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-thalassaemia; HGVS: HBD:c.349C>G / NG_000007.3:g.64557C>G; IthaID:
+    3229.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.64557C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33971270

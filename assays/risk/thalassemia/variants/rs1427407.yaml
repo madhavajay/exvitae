@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BCL11A-rs1427407
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BCL11A
+identifiers:
+  rsids:
+  - rs1427407
+  aliases:
+  - rs61361884
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60718043
+  grch38:
+    chrom: '2'
+    pos: 60490908
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes rs1427407 (NG_011968.1:g.67591A>C); reported phenotype: Hb F levels, Pain, Stroke, Hb F response to hydroxyurea,
+  Vaso-occlusive crisis, Bilirubin levels, F-cell numbers, Abnormal platelet count, Abnormal white blood cell count, Reticulocytosis,
+  Reticulocytopenia, Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BCL11A_rs1427407_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Pain, Stroke, Hb F response to hydroxyurea, Vaso-occlusive
+    crisis, Bilirubin levels, F-cell numbers, Abnormal platelet count, Abnormal white blood cell count, Reticulocytosis, Reticulocytopenia,
+    Anaemia; HGVS: NG_011968.1:g.67591A>C / NG_011968.1:g.67591A>C; IthaID: 2071.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011968.1%3Ag.67591A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1427407

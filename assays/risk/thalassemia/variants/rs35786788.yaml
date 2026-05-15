@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000006.12-rs35786788
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000006.12
+identifiers:
+  rsids:
+  - rs35786788
+  aliases:
+  - rs60771753
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135419042
+  grch38:
+    chrom: '6'
+    pos: 135097904
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs35786788 (NC_000006.12:g.135097904G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000006.12_rs35786788_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000006.12:g.135097904G>A / NC_000006.12:g.135097904G>A;
+    IthaID: 2841.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135097904G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs35786788

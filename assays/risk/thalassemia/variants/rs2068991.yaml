@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SMAD1-rs2068991
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SMAD1
+identifiers:
+  rsids:
+  - rs2068991
+  aliases:
+  - rs57644485
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 146423515
+  grch38:
+    chrom: '4'
+    pos: 145502363
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - A
+  - G
+summary: 'IthaGenes rs2068991 (NG_042284.1:g.25565T>G); reported phenotype: Acute chest syndrome.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SMAD1_rs2068991_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NG_042284.1:g.25565T>G / NG_042284.1:g.25565T>G;
+    IthaID: 2906.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_042284.1%3Ag.25565T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2068991

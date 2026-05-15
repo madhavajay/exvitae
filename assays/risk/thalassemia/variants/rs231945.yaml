@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOX3-rs231945
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOX3
+identifiers:
+  rsids:
+  - rs231945
+  aliases:
+  - rs59541683
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 155739924
+  grch38:
+    chrom: '6'
+    pos: 155418790
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs231945 (NG_011995.1:g.42114G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOX3_rs231945_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011995.1:g.42114G>A / NG_011995.1:g.42114G>A;
+    IthaID: 2739.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011995.1%3Ag.42114G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs231945

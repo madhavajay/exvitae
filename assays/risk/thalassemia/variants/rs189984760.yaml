@@ -1,0 +1,46 @@
+name: thalassemia-BCL11A-rs189984760
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BCL11A
+summary: 'IthaGenes rs189984760 (NG_011968.1:g.47126T>C); reported phenotype: Hb F levels.'
+identifiers:
+  rsids:
+  - rs189984760
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60738508
+  grch38:
+    chrom: '2'
+    pos: 60511373
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011968.1:g.47126T>C / NG_011968.1:g.47126T>C;
+    IthaID: 3418.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011968.1%3Ag.47126T%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs189984760
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

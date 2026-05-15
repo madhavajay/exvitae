@@ -1,0 +1,53 @@
+name: thalassemia-DHFRP2-rs2523554
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: DHFRP2
+summary: 'IthaGenes rs2523554 (NG_001113.6:g.3014G>A); reported phenotype: Abnormal Hb.'
+identifiers:
+  rsids:
+  - rs2523554
+  aliases:
+  - rs58092639
+  - rs113356590
+  - rs116534973
+  - rs117259078
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 31331829
+  grch38:
+    chrom: '6'
+    pos: 31364052
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal Hb; HGVS: NG_001113.6:g.3014G>A / NG_001113.6:g.3014G>A;
+    IthaID: 3518.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_001113.6%3Ag.3014G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2523554
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

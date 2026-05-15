@@ -1,0 +1,47 @@
+name: thalassemia-MRM2-rs55904231
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MRM2
+summary: 'IthaGenes rs55904231 (NC_000007.14:g.2239684G>A); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs55904231
+  aliases:
+  - rs62001056
+coordinates:
+  grch37:
+    chrom: '7'
+    pos: 2279319
+  grch38:
+    chrom: '7'
+    pos: 2239684
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000007.14:g.2239684G>A / NC_000007.14:g.2239684G>A;
+    IthaID: 3449.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000007.14%3Ag.2239684G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs55904231
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

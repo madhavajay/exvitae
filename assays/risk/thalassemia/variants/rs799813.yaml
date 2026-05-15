@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-GALNT13-rs799813
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: GALNT13
+identifiers:
+  rsids:
+  - rs799813
+  aliases:
+  - rs1082661
+  - rs1310549
+  - rs60921562
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 155211178
+  grch38:
+    chrom: '2'
+    pos: 154354666
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs799813 (NC_000002.12:g.154354666C>G); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: GALNT13_rs799813_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NC_000002.12:g.154354666C>G
+    / NC_000002.12:g.154354666C>G; IthaID: 2933.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000002.12%3Ag.154354666C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs799813

@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs63750040
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs63750040
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5246935
+    end: 5246946
+  grch38:
+    chrom: '11'
+    start: 5225705
+    end: 5225716
+alleles:
+  kind: deletion
+  ref: AGACCAGCACGT
+  alts:
+  - '-'
+summary: 'IthaGenes CD 108-112 (-12 bp) Asn-Val-Leu-Val-Cys to Ser (HBB:c.326_337delACGTGCTGGTCT); reported phenotype: β-chain
+  variant, β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs63750040_finding_1
+  alt: '-'
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant, β-thalassaemia, Haemolytic anaemia, Ineffective
+    erythropoiesis; HGVS: HBB:c.326_337delACGTGCTGGTCT / NG_000007.3:g.71900_71911delACGTGCTGGTCT; IthaID: 232.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71900_71911delACGTGCTGGTCT/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750040

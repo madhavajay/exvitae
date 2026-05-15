@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MIR4432HG-rs243081
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MIR4432HG
+identifiers:
+  rsids:
+  - rs243081
+  aliases:
+  - rs17330750
+  - rs56720359
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 60613776
+  grch38:
+    chrom: '2'
+    pos: 60386641
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs243081 (NC_000002.12:g.60386641G>A); reported phenotype: F-cell numbers.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MIR4432HG_rs243081_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: F-cell numbers; HGVS: NC_000002.12:g.60386641G>A / NC_000002.12:g.60386641G>A;
+    IthaID: 2887.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000002.12%3Ag.60386641G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs243081

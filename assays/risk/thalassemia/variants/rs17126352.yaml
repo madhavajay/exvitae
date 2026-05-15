@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-PAPLN-rs17126352
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PAPLN
+identifiers:
+  rsids:
+  - rs17126352
+  aliases:
+  - rs57117755
+coordinates:
+  grch37:
+    chrom: '14'
+    pos: 73721245
+  grch38:
+    chrom: '14'
+    pos: 73254537
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs17126352 (NC_000014.9:g.73254537G>A); reported phenotype: Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: PAPLN_rs17126352_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000014.9:g.73254537G>A / NC_000014.9:g.73254537G>A;
+    IthaID: 3128.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000014.9%3Ag.73254537G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs17126352

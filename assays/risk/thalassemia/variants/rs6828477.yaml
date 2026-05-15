@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KDR-rs6828477
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KDR
+identifiers:
+  rsids:
+  - rs6828477
+  aliases:
+  - rs17710353
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 55966801
+  grch38:
+    chrom: '4'
+    pos: 55100634
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs6828477 (NG_012004.1:g.29962G>A); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KDR_rs6828477_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_012004.1:g.29962G>A / NG_012004.1:g.29962G>A;
+    IthaID: 2743.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012004.1%3Ag.29962G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6828477

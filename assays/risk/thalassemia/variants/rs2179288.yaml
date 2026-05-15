@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-MAP7-rs2179288
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MAP7
+identifiers:
+  rsids:
+  - rs2179288
+  aliases:
+  - rs17795766
+  - rs60843071
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 136689430
+  grch38:
+    chrom: '6'
+    pos: 136368292
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs2179288 (NC_000006.12:g.136368292A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: MAP7_rs2179288_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NC_000006.12:g.136368292A>G / NC_000006.12:g.136368292A>G;
+    IthaID: 2888.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.136368292A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2179288

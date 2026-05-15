@@ -1,0 +1,50 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-BMP6-rs267201
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: BMP6
+identifiers:
+  rsids:
+  - rs267201
+  aliases:
+  - rs267837
+  - rs3799529
+  - rs17674304
+  - rs58862384
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 7853591
+  grch38:
+    chrom: '6'
+    pos: 7853358
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes rs267201 (NC_000006.12:g.7853358A>G); reported phenotype: Osteonecrosis/Avascular necrosis, Stroke, Pulmonary
+  arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: BMP6_rs267201_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis, Stroke, Pulmonary arterial hypertension;
+    HGVS: NC_000006.12:g.7853358A>G / NC_000006.12:g.7853358A>G; IthaID: 2762.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.7853358A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs267201

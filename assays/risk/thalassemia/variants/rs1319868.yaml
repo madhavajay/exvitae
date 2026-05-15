@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000015.10-rs1319868
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000015.10
+identifiers:
+  rsids:
+  - rs1319868
+  aliases:
+  - rs56972110
+coordinates:
+  grch37:
+    chrom: '15'
+    pos: 99186979
+  grch38:
+    chrom: '15'
+    pos: 98643750
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+summary: 'IthaGenes rs1319868 (NC_000015.10:g.98643750G>T); reported phenotype: Bacteremia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000015.10_rs1319868_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Bacteremia; HGVS: NC_000015.10:g.98643750G>T / NC_000015.10:g.98643750G>T;
+    IthaID: 2677.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000015.10%3Ag.98643750G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1319868

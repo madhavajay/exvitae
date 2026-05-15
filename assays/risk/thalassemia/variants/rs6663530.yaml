@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CR1-rs6663530
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CR1
+identifiers:
+  rsids:
+  - rs6663530
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 207761441
+  grch38:
+    chrom: '1'
+    pos: 207588096
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs6663530 (NG_007481.1:g.96969G>A); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CR1_rs6663530_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NG_007481.1:g.96969G>A / NG_007481.1:g.96969G>A;
+    IthaID: 2895.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_007481.1%3Ag.96969G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6663530

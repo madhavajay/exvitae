@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CTLA4-rs5742909
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CTLA4
+identifiers:
+  rsids:
+  - rs5742909
+  aliases:
+  - rs16840273
+  - rs56677596
+  - rs60071088
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 204732347
+  grch38:
+    chrom: '2'
+    pos: 203867624
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs5742909 (-318 C/T) (NG_011502.1:g.4839C>T); reported phenotype: Red blood cell alloimmunisation.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CTLA4_rs5742909_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Red blood cell alloimmunisation; HGVS: NG_011502.1:g.4839C>T / NG_011502.1:g.4839C>T;
+    IthaID: 3254.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011502.1%3Ag.4839C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs5742909

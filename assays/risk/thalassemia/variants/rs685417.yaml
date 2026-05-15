@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-KL-rs685417
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KL
+identifiers:
+  rsids:
+  - rs685417
+  aliases:
+  - rs58792778
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33613132
+  grch38:
+    chrom: '13'
+    pos: 33038995
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs685417 (NG_011485.1:g.27562G>A); reported phenotype: Hb F levels, Leg ulcers, Osteonecrosis/Avascular
+  necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: KL_rs685417_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Leg ulcers, Osteonecrosis/Avascular necrosis; HGVS: NG_011485.1:g.27562G>A
+    / NG_011485.1:g.27562G>A; IthaID: 2581.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011485.1%3Ag.27562G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs685417

@@ -1,0 +1,46 @@
+name: thalassemia-MCM6-rs3729569
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MCM6
+summary: 'IthaGenes rs3729569 (NG_008958.1:g.35707C>A); reported phenotype: Abnormal white blood cell count.'
+identifiers:
+  rsids:
+  - rs3729569
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 136603305
+  grch38:
+    chrom: '2'
+    pos: 135845735
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal white blood cell count; HGVS: NG_008958.1:g.35707C>A / NG_008958.1:g.35707C>A;
+    IthaID: 3525.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008958.1%3Ag.35707C%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3729569
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

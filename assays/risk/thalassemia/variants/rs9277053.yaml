@@ -1,0 +1,51 @@
+name: thalassemia-NC_000006.12-rs9277053
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000006.12
+summary: 'IthaGenes rs9277053 (NC_000006.12:g.33038445G>A); reported phenotype: Abnormal platelet count.'
+identifiers:
+  rsids:
+  - rs9277053
+  aliases:
+  - rs17509427
+  - rs60450337
+  - rs113309226
+  - rs115126566
+  - rs116965391
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 33006222
+  grch38:
+    chrom: '6'
+    pos: 33038445
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal platelet count; HGVS: NC_000006.12:g.33038445G>A / NC_000006.12:g.33038445G>A;
+    IthaID: 3531.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.33038445G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9277053
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

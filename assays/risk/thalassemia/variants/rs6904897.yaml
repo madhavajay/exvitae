@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-LOC124901405-rs6904897
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LOC124901405
+identifiers:
+  rsids:
+  - rs6904897
+  aliases:
+  - rs17706561
+  - rs59210441
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135382980
+  grch38:
+    chrom: '6'
+    pos: 135061842
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - A
+  - G
+summary: 'IthaGenes rs6904897 (NC_000006.12:g.135061842T>G); reported phenotype: F-cell numbers.'
+findings:
+- schema: bioscript:trait:1.0
+  id: LOC124901405_rs6904897_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: F-cell numbers; HGVS: NC_000006.12:g.135061842T>G / NC_000006.12:g.135061842T>G;
+    IthaID: 2103.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135061842T%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6904897

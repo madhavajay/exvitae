@@ -1,0 +1,46 @@
+name: thalassemia-KLF1-rs2072596
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: KLF1
+summary: 'IthaGenes CD 182 TTC>CTC [Phe>Leu] (rs2072596, p.F182L) (NG_013087.1:g.6518T>C); reported phenotype: Hb F levels.'
+identifiers:
+  rsids:
+  - rs2072596
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '19'
+    pos: 12996500
+  grch38:
+    chrom: '19'
+    pos: 12885686
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_013087.1:g.6518T>C / NG_013087.1:g.6518T>C;
+    IthaID: 3485.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_013087.1%3Ag.6518T%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2072596
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

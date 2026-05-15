@@ -1,0 +1,49 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ENPP1-rs1044498
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ENPP1
+identifiers:
+  rsids:
+  - rs1044498
+  aliases:
+  - rs1801642
+  - rs3184275
+  - rs17847048
+  - rs52820331
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 132172368
+  grch38:
+    chrom: '6'
+    pos: 131851228
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes rs1044498 (K173Q) (NG_008206.1:g.48213A>C); reported phenotype: Stroke.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ENPP1_rs1044498_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Stroke; HGVS: NG_008206.1:g.48213A>C / NG_008206.1:g.48213A>C; IthaID:
+    2931.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008206.1%3Ag.48213A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1044498

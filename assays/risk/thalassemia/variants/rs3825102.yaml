@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOS1-rs3825102
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOS1
+identifiers:
+  rsids:
+  - rs3825102
+  aliases:
+  - rs17584144
+  - rs57568924
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 117720185
+  grch38:
+    chrom: '12'
+    pos: 117282380
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - A
+summary: 'IthaGenes rs3825102 (NG_011991.2:g.84398G>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOS1_rs3825102_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011991.2:g.84398G>T / NG_011991.2:g.84398G>T;
+    IthaID: 2706.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011991.2%3Ag.84398G%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3825102

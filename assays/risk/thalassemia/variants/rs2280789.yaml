@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CCL5-rs2280789
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CCL5
+identifiers:
+  rsids:
+  - rs2280789
+  aliases:
+  - rs386563492
+coordinates:
+  grch37:
+    chrom: HG385_PATCH
+    pos: 34207018
+  grch38:
+    chrom: '17'
+    pos: 35879999
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs2280789 (g.In1.+1T>C) (NG_015990.1:g.5375T>C); reported phenotype: Recurrent infections.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CCL5_rs2280789_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Recurrent infections; HGVS: NG_015990.1:g.5375T>C / NG_015990.1:g.5375T>C;
+    IthaID: 2940.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_015990.1%3Ag.5375T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2280789

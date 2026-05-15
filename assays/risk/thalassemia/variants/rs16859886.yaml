@@ -1,0 +1,52 @@
+name: thalassemia-ADCY10-rs16859886
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ADCY10
+summary: 'IthaGenes rs16859886 (NG_016139.1:g.22583C>T); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs16859886
+  aliases:
+  - rs56700393
+  - rs57602799
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 167865871
+  grch38:
+    chrom: '1'
+    pos: 167896633
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_016139.1:g.22583C>T / NG_016139.1:g.22583C>T;
+    IthaID: 3463.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_016139.1%3Ag.22583C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs16859886
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

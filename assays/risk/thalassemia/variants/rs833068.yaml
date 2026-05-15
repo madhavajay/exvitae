@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-VEGFA-rs833068
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: VEGFA
+identifiers:
+  rsids:
+  - rs833068
+  aliases:
+  - rs3778494
+  - rs16896789
+  - rs52820538
+  - rs60553704
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 43742527
+  grch38:
+    chrom: '6'
+    pos: 43774790
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs833068 (G398A) (NG_008732.1:g.9575G>A); reported phenotype: Vaso-occlusive crisis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: VEGFA_rs833068_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Vaso-occlusive crisis; HGVS: NG_008732.1:g.9575G>A / NG_008732.1:g.9575G>A;
+    IthaID: 3179.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008732.1%3Ag.9575G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs833068

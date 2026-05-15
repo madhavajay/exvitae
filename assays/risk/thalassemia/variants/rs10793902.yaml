@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ASS1-rs10793902
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ASS1
+identifiers:
+  rsids:
+  - rs10793902
+  aliases:
+  - rs58909175
+coordinates:
+  grch37:
+    chrom: '9'
+    pos: 133377910
+  grch38:
+    chrom: '9'
+    pos: 130502523
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs10793902 (NG_011542.1:g.62817C>T); reported phenotype: Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ASS1_rs10793902_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_011542.1:g.62817C>T / NG_011542.1:g.62817C>T;
+    IthaID: 2947.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011542.1%3Ag.62817C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10793902

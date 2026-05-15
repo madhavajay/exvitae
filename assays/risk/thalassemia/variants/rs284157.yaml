@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TGFBR3-rs284157
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TGFBR3
+identifiers:
+  rsids:
+  - rs284157
+  aliases:
+  - rs9440233
+  - rs17515120
+  - rs17880961
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 92271920
+  grch38:
+    chrom: '1'
+    pos: 91806363
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs284157 (NG_027757.1:g.104640G>A); reported phenotype: Acute chest syndrome, Osteonecrosis/Avascular
+  necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TGFBR3_rs284157_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome, Osteonecrosis/Avascular necrosis; HGVS: NG_027757.1:g.104640G>A
+    / NG_027757.1:g.104640G>A; IthaID: 2606.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_027757.1%3Ag.104640G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs284157

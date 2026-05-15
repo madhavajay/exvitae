@@ -1,0 +1,49 @@
+name: thalassemia-SORCS1-rs11817401
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SORCS1
+summary: 'IthaGenes rs11817401 (NG_029120.1:g.95564G>A); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs11817401
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '10'
+    pos: 108833903
+  grch38:
+    chrom: '10'
+    pos: 107074145
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_029120.1:g.95564G>A / NG_029120.1:g.95564G>A; IthaID:
+    3507.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029120.1%3Ag.95564G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11817401
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

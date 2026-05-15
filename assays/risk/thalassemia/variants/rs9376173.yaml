@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-PDE7B-rs9376173
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PDE7B
+identifiers:
+  rsids:
+  - rs9376173
+  aliases:
+  - rs58819672
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 136359446
+  grch38:
+    chrom: '6'
+    pos: 136038308
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - C
+  observed_alts:
+  - C
+  - G
+  - T
+summary: 'IthaGenes rs9376173 (NG_011994.1:g.191613A>C); reported phenotype: Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: PDE7B_rs9376173_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_011994.1:g.191613A>C / NG_011994.1:g.191613A>C;
+    IthaID: 2136.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011994.1%3Ag.191613A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9376173

@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-ZFPM1-rs141006889
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ZFPM1
+identifiers:
+  rsids:
+  - rs141006889
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    pos: 88601281
+  grch38:
+    chrom: '16'
+    pos: 88534873
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs141006889 (NC_000016.10:g.88534873A>G); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: ZFPM1_rs141006889_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NC_000016.10:g.88534873A>G / NC_000016.10:g.88534873A>G;
+    IthaID: 3181.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000016.10%3Ag.88534873A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs141006889

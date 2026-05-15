@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000017.11-rs7208480
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000017.11
+identifiers:
+  rsids:
+  - rs7208480
+  aliases:
+  - rs60613760
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 15673784
+  grch38:
+    chrom: '17'
+    pos: 15770470
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+summary: 'IthaGenes rs7208480 (NC_000017.11:g.15770470C>T); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000017.11_rs7208480_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NC_000017.11:g.15770470C>T
+    / NC_000017.11:g.15770470C>T; IthaID: 2938.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000017.11%3Ag.15770470C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7208480

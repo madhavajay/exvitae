@@ -1,0 +1,52 @@
+name: thalassemia-HTR2A-rs6309
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HTR2A
+summary: 'IthaGenes rs6309 (NG_013011.1:g.5570T>A); reported phenotype: Acute chest syndrome.'
+identifiers:
+  rsids:
+  - rs6309
+  aliases:
+  - rs36212785
+  - rs57206201
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 47470600
+  grch38:
+    chrom: '13'
+    pos: 46896465
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - T
+  observed_alts:
+  - C
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Acute chest syndrome; HGVS: NG_013011.1:g.5570T>A / NG_013011.1:g.5570T>A;
+    IthaID: 3476.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_013011.1%3Ag.5570T%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6309
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

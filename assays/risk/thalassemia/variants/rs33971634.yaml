@@ -1,0 +1,59 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs33971634
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs33971634
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5246890
+  grch38:
+    chrom: '11'
+    pos: 5225660
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  - T
+  - C
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes CD 127 CAG>TAG [Gln>STOP] (HBB:c.382C>T); reported phenotype: β-thalassaemia, β-chain variant, Haemolytic
+  anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs33971634_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, β-chain variant, Haemolytic anaemia, Ineffective
+    erythropoiesis; HGVS: HBB:c.382C>T / NG_000007.3:g.71956C>T; IthaID: 255.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33971634_finding_2
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.382C>A / NG_000007.3:g.71956C>A; IthaID:
+    1236.'
+- schema: bioscript:trait:1.0
+  id: HBB_rs33971634_finding_3
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: β-chain variant; HGVS: HBB:c.382C>G / NG_000007.3:g.71956C>G; IthaID:
+    1237.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71956C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs33971634

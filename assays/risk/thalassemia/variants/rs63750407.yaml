@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs63750407
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs63750407
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5248239
+    end: 5248244
+  grch38:
+    chrom: '11'
+    start: 5227009
+    end: 5227014
+alleles:
+  kind: indel
+  ref: TCAGAT
+  alts:
+  - ACTTCTCCTCAGGCAGACTTCACCTCAG
+summary: 'IthaGenes CD 2-4  (-9 bp, +31 bp) (HBB:c.7_15delinsCCTGAGGTGAAGTCTGCCTGAGGAGAAGTCT); reported phenotype: β-thalassaemia,
+  Haemolytic anaemia, Ineffective erythropoiesis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs63750407_finding_1
+  alt: ACTTCTCCTCAGGCAGACTTCACCTCAG
+  notes: 'IthaGenes functionality: Causative; phenotype: β-thalassaemia, Haemolytic anaemia, Ineffective erythropoiesis; HGVS:
+    HBB:c.7_15delinsCCTGAGGTGAAGTCTGCCTGAGGAGAAGTCT / NG_000007.3:g.70601_70609delinsCCTGAGGTGAAGTCTGCCTGAGGAGAAGTCT; IthaID:
+    51.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.70601_70609delinsCCTGAGGTGAAGTCTGCCTGAGGAGAAGTCT/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs63750407

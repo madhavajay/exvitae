@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOX3-rs9371889
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOX3
+identifiers:
+  rsids:
+  - rs9371889
+  aliases:
+  - rs17822064
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 155742646
+  grch38:
+    chrom: '6'
+    pos: 155421512
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs9371889 (NG_011995.1:g.39392T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOX3_rs9371889_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011995.1:g.39392T>C / NG_011995.1:g.39392T>C;
+    IthaID: 2740.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011995.1%3Ag.39392T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs9371889

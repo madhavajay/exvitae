@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-SPARC-rs6874468
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: SPARC
+identifiers:
+  rsids:
+  - rs6874468
+  aliases:
+  - rs59043395
+coordinates:
+  grch37:
+    chrom: '5'
+    pos: 151055695
+  grch38:
+    chrom: '5'
+    pos: 151676134
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs6874468 (NG_042174.1:g.15921C>T); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: SPARC_rs6874468_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_042174.1:g.15921C>T / NG_042174.1:g.15921C>T;
+    IthaID: 2630.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_042174.1%3Ag.15921C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs6874468

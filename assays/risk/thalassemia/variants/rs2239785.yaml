@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-APOL1-rs2239785
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: APOL1
+identifiers:
+  rsids:
+  - rs2239785
+  aliases:
+  - rs52809722
+  - rs60256333
+coordinates:
+  grch37:
+    chrom: '22'
+    pos: 36661330
+  grch38:
+    chrom: '22'
+    pos: 36265284
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs2239785 (NG_023228.1:g.17214G>A); reported phenotype: Focal segmental glomerulosclerosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: APOL1_rs2239785_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Focal segmental glomerulosclerosis; HGVS: NG_023228.1:g.17214G>A /
+    NG_023228.1:g.17214G>A; IthaID: 2594.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_023228.1%3Ag.17214G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2239785

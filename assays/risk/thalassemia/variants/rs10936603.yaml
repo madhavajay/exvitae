@@ -1,0 +1,51 @@
+name: thalassemia-LRRIQ4-rs10936603
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: LRRIQ4
+summary: 'IthaGenes rs10936603 (NC_000003.12:g.169827864G>T); reported phenotype: Abnormal white blood cell count.'
+identifiers:
+  rsids:
+  - rs10936603
+  aliases:
+  - rs57919798
+coordinates:
+  grch37:
+    chrom: '3'
+    pos: 169545652
+  grch38:
+    chrom: '3'
+    pos: 169827864
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+  observed_alts:
+  - A
+  - C
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal white blood cell count; HGVS: NC_000003.12:g.169827864G>T
+    / NC_000003.12:g.169827864G>T; IthaID: 3521.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000003.12%3Ag.169827864G%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs10936603
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

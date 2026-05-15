@@ -1,0 +1,69 @@
+schema: bioscript:variant-catalogue:1.0
+version: "1.0"
+name: thalassemia-variants
+label: Thalassemia Variant Catalogue
+summary: Compact TSV-backed catalogue generated from ./variants
+variants:
+  source: variants.tsv
+  format: tsv
+  key: variant_id
+  columns:
+    variant_id:
+      role: id
+      required: true
+    name:
+      role: name
+    gene:
+      role: gene
+    rsid:
+      role: identifier.rsid
+    aliases:
+      role: identifier.aliases
+      list_separator: "|"
+    kind:
+      role: alleles.kind
+    ref:
+      role: alleles.ref
+    alts:
+      role: alleles.alts
+      list_separator: "|"
+    grch37_chrom:
+      role: coordinates.grch37.chrom
+    grch37_pos:
+      role: coordinates.grch37.pos
+      type: integer
+    grch37_start:
+      role: coordinates.grch37.start
+      type: integer
+    grch37_end:
+      role: coordinates.grch37.end
+      type: integer
+    grch38_chrom:
+      role: coordinates.grch38.chrom
+    grch38_pos:
+      role: coordinates.grch38.pos
+      type: integer
+    grch38_start:
+      role: coordinates.grch38.start
+      type: integer
+    grch38_end:
+      role: coordinates.grch38.end
+      type: integer
+findings:
+  source: findings.tsv
+  format: tsv
+  key: variant_id
+provenance:
+  sources:
+    - id: ithagenes
+      kind: database
+      label: IthaGenes
+      url: https://www.ithanet.eu/db/ithagenes?action=list
+    - id: ncbi_variation
+      kind: database
+      label: NCBI Variation Services
+      url_template: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/{genomic_hgvs}/contextuals
+    - id: dbsnp
+      kind: database
+      label: dbSNP
+      url_template: https://www.ncbi.nlm.nih.gov/snp/{rsid}

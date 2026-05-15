@@ -1,0 +1,52 @@
+name: thalassemia-PNPLA3-rs1977081
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PNPLA3
+summary: 'IthaGenes rs1977081 (NG_008631.1:g.15510T>C); reported phenotype: Abnormal platelet count.'
+identifiers:
+  rsids:
+  - rs1977081
+  aliases:
+  - rs2281136
+  - rs61088783
+coordinates:
+  grch37:
+    chrom: '22'
+    pos: 44330128
+  grch38:
+    chrom: '22'
+    pos: 43934248
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+  - G
+findings:
+- schema: bioscript:trait:1.0
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal platelet count; HGVS: NG_008631.1:g.15510T>C / NG_008631.1:g.15510T>C;
+    IthaID: 3527.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008631.1%3Ag.15510T%3EC/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1977081
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

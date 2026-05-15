@@ -1,0 +1,53 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TMPRSS6-rs60484081
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TMPRSS6
+identifiers:
+  rsids:
+  - rs60484081
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '22'
+    start: 37465386
+    end: 37465417
+  grch38:
+    chrom: '22'
+    start: 37069346
+    end: 37069377
+alleles:
+  kind: indel
+  ref: TGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTG
+  alts:
+  - TGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTG
+  - TGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTGGGGTG
+summary: 'IthaGenes rs200434923 (NG_012856.2:g.45214_45218delCCCCA); reported phenotype: Abnormal hepcidin level.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TMPRSS6_rs60484081_finding_1
+  alt: TGGGGTGGGGTG
+  notes: 'IthaGenes functionality: Modifier; phenotype: Abnormal hepcidin level; HGVS: NG_012856.2:g.45214_45218delCCCCA /
+    NG_012856.2:g.45214_45218delCCCCA; IthaID: 3085.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012856.2%3Ag.45214_45218delCCCCA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs60484081

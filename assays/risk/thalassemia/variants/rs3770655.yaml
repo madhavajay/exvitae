@@ -1,0 +1,51 @@
+name: thalassemia-ETAA1-rs3770655
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: ETAA1
+summary: 'IthaGenes rs3770655 (NC_000002.12:g.67404993C>T); reported phenotype: Hb F response to hydroxyurea.'
+identifiers:
+  rsids:
+  - rs3770655
+  aliases:
+  - rs52826099
+  - rs60544664
+coordinates:
+  grch37:
+    chrom: '2'
+    pos: 67632125
+  grch38:
+    chrom: '2'
+    pos: 67404993
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NC_000002.12:g.67404993C>T / NC_000002.12:g.67404993C>T;
+    IthaID: 3457.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000002.12%3Ag.67404993C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs3770655
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

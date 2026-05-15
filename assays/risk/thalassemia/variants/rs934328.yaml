@@ -1,0 +1,48 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TGFBR2-rs934328
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TGFBR2
+identifiers:
+  rsids:
+  - rs934328
+  aliases:
+  - rs57583156
+  - rs117337241
+coordinates:
+  grch37:
+    chrom: '3'
+    pos: 30707744
+  grch38:
+    chrom: '3'
+    pos: 30666252
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+  - T
+summary: 'IthaGenes rs934328 (NG_007490.1:g.64751G>A); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TGFBR2_rs934328_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NG_007490.1:g.64751G>A / NG_007490.1:g.64751G>A;
+    IthaID: 2605.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_007490.1%3Ag.64751G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs934328

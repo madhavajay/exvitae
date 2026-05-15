@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-OR51V1-HBB-rs11036338
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: OR51V1-HBB
+identifiers:
+  rsids:
+  - rs11036338
+  aliases:
+  - rs57834394
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5242698
+  grch38:
+    chrom: '11'
+    pos: 5221468
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+summary: 'IthaGenes rs11036338 (NG_000007.3:g.76148C>G); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: OR51V1-HBB_rs11036338_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NG_000007.3:g.76148C>G / NG_000007.3:g.76148C>G; IthaID:
+    3191.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.76148C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11036338

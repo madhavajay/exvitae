@@ -1,0 +1,51 @@
+name: thalassemia-NC_000011.10-rs2445284
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000011.10
+summary: 'IthaGenes rs2445284 (NC_000011.10:g.5008473C>T); reported phenotype: Haemolytic anaemia.'
+identifiers:
+  rsids:
+  - rs2445284
+  aliases:
+  - rs17257129
+  - rs58294302
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5029703
+  grch38:
+    chrom: '11'
+    pos: 5008473
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - A
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Haemolytic anaemia; HGVS: NC_000011.10:g.5008473C>T / NC_000011.10:g.5008473C>T;
+    IthaID: 3465.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000011.10%3Ag.5008473C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2445284
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

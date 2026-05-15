@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBA1-rs281864473
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBA1
+identifiers:
+  rsids:
+  - rs281864473
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '16'
+    start: 227385
+    end: 227386
+  grch38:
+    chrom: '16'
+    start: 177386
+    end: 177387
+alleles:
+  kind: deletion
+  ref: CC
+  alts:
+  - C
+summary: 'IthaGenes CD 134 -C (HBA1:c.404delC); reported phenotype: α-chain variant, Haemolytic anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBA1_rs281864473_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Causative; phenotype: α-chain variant, Haemolytic anaemia; HGVS: HBA1:c.404delC / NG_000006.1:g.38249delC;
+    IthaID: 760.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000006.1%3Ag.38249delC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs281864473

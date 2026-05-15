@@ -1,0 +1,42 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBG2-rs34264694
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBG2
+identifiers:
+  rsids:
+  - rs34264694
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5275638
+  grch38:
+    chrom: '11'
+    pos: 5254408
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+summary: 'IthaGenes CD 66 AAG>CAG (HBG2:c.199A>C); reported phenotype: γ-chain variant.'
+findings:
+- schema: bioscript:trait:1.0
+  id: HBG2_rs34264694_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Causative; phenotype: γ-chain variant; HGVS: HBG2:c.199A>C / NG_000007.3:g.43208A>C; IthaID:
+    1435.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.43208A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34264694

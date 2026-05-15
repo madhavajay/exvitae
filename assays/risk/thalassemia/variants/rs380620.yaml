@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TOX-rs380620
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TOX
+identifiers:
+  rsids:
+  - rs380620
+  aliases:
+  - rs57825341
+coordinates:
+  grch37:
+    chrom: '8'
+    pos: 59982532
+  grch38:
+    chrom: '8'
+    pos: 59069973
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+  observed_alts:
+  - A
+  - G
+  - T
+summary: 'IthaGenes rs380620 (NG_011993.1:g.54236G>C); reported phenotype: Hb F levels, Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TOX_rs380620_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Hb F response to hydroxyurea; HGVS: NG_011993.1:g.54236G>C
+    / NG_011993.1:g.54236G>C; IthaID: 2143.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011993.1%3Ag.54236G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs380620

@@ -1,0 +1,49 @@
+name: thalassemia-HBD-rs34224604
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBD
+summary: 'IthaGenes CD 59 AAG>A-G (δ0 59 (-A)) (HBD:c.179delA); reported phenotype: δ-thalassaemia.'
+identifiers:
+  rsids:
+  - rs34224604
+  aliases:
+  - rs606231215
+coordinates:
+  grch37:
+    chrom: '11'
+    start: 5255357
+    end: 5255358
+  grch38:
+    chrom: '11'
+    start: 5234127
+    end: 5234128
+alleles:
+  kind: deletion
+  ref: TT
+  alts:
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Causative; phenotype: δ-thalassaemia; HGVS: HBD:c.179delA / NG_000007.3:g.63489delA; IthaID:
+    3441.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.63489delA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs34224604
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

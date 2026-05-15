@@ -1,0 +1,50 @@
+name: thalassemia-FAM193A-rs11732673
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: FAM193A
+summary: 'IthaGenes rs11732673 (NC_000004.12:g.2681328A>G); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs11732673
+  aliases:
+  - rs57096707
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 2683055
+  grch38:
+    chrom: '4'
+    pos: 2681328
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NC_000004.12:g.2681328A>G / NC_000004.12:g.2681328A>G;
+    IthaID: 3500.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000004.12%3Ag.2681328A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11732673
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

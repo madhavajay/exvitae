@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-DRD2-rs4274224
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: DRD2
+identifiers:
+  rsids:
+  - rs4274224
+  aliases:
+  - rs60794782
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 113319452
+  grch38:
+    chrom: '11'
+    pos: 113448730
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs4274224 (NG_008841.1:g.31550C>T); reported phenotype: Vaso-occlusive crisis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: DRD2_rs4274224_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Vaso-occlusive crisis; HGVS: NG_008841.1:g.31550C>T / NG_008841.1:g.31550C>T;
+    IthaID: 3303.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_008841.1%3Ag.31550C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs4274224

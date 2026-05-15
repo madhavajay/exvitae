@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000017.11-rs12103880
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000017.11
+identifiers:
+  rsids:
+  - rs12103880
+  aliases:
+  - rs59073756
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 9698342
+  grch38:
+    chrom: '17'
+    pos: 9795025
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs12103880 (NC_000017.11:g.9795025G>A); reported phenotype: Hb F levels, Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000017.11_rs12103880_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels, Hb F response to hydroxyurea; HGVS: NC_000017.11:g.9795025G>A
+    / NC_000017.11:g.9795025G>A; IthaID: 2119.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000017.11%3Ag.9795025G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs12103880

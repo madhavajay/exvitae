@@ -1,0 +1,46 @@
+name: thalassemia-MTNR1A-rs13113915
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: MTNR1A
+summary: 'IthaGenes rs13113915 (NC_000004.12:g.186544810G>A); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs13113915
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '4'
+    pos: 187465964
+  grch38:
+    chrom: '4'
+    pos: 186544810
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+findings:
+- schema: bioscript:trait:1.0
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NC_000004.12:g.186544810G>A / NC_000004.12:g.186544810G>A;
+    IthaID: 3502.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000004.12%3Ag.186544810G%3EA/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs13113915
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000006.12-rs7776054
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000006.12
+identifiers:
+  rsids:
+  - rs7776054
+  aliases:
+  - rs58166922
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 135418916
+  grch38:
+    chrom: '6'
+    pos: 135097778
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+summary: 'IthaGenes rs7776054 (NC_000006.12:g.135097778A>G); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000006.12_rs7776054_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NC_000006.12:g.135097778A>G / NC_000006.12:g.135097778A>G;
+    IthaID: 2095.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000006.12%3Ag.135097778A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7776054

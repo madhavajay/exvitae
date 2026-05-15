@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NOS1-rs1483757
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NOS1
+identifiers:
+  rsids:
+  - rs1483757
+  aliases:
+  - rs17430903
+  - rs58917685
+coordinates:
+  grch37:
+    chrom: '12'
+    pos: 117761540
+  grch38:
+    chrom: '12'
+    pos: 117323735
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs1483757 (NG_011991.2:g.43043T>C); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NOS1_rs1483757_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011991.2:g.43043T>C / NG_011991.2:g.43043T>C;
+    IthaID: 2707.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011991.2%3Ag.43043T%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs1483757

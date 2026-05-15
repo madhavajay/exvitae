@@ -1,0 +1,43 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-NC_000013.11-rs648464
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: NC_000013.11
+identifiers:
+  rsids:
+  - rs648464
+  aliases:
+  - rs59054292
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 33667465
+  grch38:
+    chrom: '13'
+    pos: 33093328
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - A
+summary: 'IthaGenes rs648464 (NC_000013.11:g.33093328G>A); reported phenotype: Osteonecrosis/Avascular necrosis.'
+findings:
+- schema: bioscript:trait:1.0
+  id: NC_000013.11_rs648464_finding_1
+  alt: A
+  notes: 'IthaGenes functionality: Modifier; phenotype: Osteonecrosis/Avascular necrosis; HGVS: NC_000013.11:g.33093328G>A
+    / NC_000013.11:g.33093328G>A; IthaID: 2603.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000013.11%3Ag.33093328G%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs648464

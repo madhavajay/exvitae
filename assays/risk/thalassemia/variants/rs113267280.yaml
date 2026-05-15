@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-CCND3-rs113267280
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: CCND3
+identifiers:
+  rsids:
+  - rs113267280
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 41952511
+  grch38:
+    chrom: '6'
+    pos: 41984773
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+summary: 'IthaGenes rs113267280 (NG_041939.1:g.69122A>C); reported phenotype: Anaemia.'
+findings:
+- schema: bioscript:trait:1.0
+  id: CCND3_rs113267280_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Anaemia; HGVS: NG_041939.1:g.69122A>C / NG_041939.1:g.69122A>C; IthaID:
+    3182.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_041939.1%3Ag.69122A%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs113267280

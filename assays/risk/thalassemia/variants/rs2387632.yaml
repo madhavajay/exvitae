@@ -1,0 +1,47 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-FLT1-rs2387632
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: FLT1
+identifiers:
+  rsids:
+  - rs2387632
+  aliases:
+  - rs17536534
+  - rs60354406
+coordinates:
+  grch37:
+    chrom: '13'
+    pos: 28916343
+  grch38:
+    chrom: '13'
+    pos: 28342206
+alleles:
+  kind: snv
+  ref: T
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs2387632 (NG_012003.1:g.157923A>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: FLT1_rs2387632_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_012003.1:g.157923A>G / NG_012003.1:g.157923A>G;
+    IthaID: 2709.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_012003.1%3Ag.157923A%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2387632

@@ -1,0 +1,41 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-HBB-rs78815705
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: HBB
+identifiers:
+  rsids:
+  - rs78815705
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '11'
+    pos: 5247329
+  grch38:
+    chrom: '11'
+    pos: 5226099
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - T
+summary: IthaGenes IVS II-478 C>A (HBB:c.316-373C>A).
+findings:
+- schema: bioscript:trait:1.0
+  id: HBB_rs78815705_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Neutral; phenotype: N/A; HGVS: HBB:c.316-373C>A / NG_000007.3:g.71517C>A; IthaID: 2495.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_000007.3%3Ag.71517C%3EA/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs78815705

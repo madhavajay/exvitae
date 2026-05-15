@@ -1,0 +1,51 @@
+name: thalassemia-UBE2O-rs445683
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: UBE2O
+summary: 'IthaGenes rs445683 (NC_000017.11:g.76405440C>T); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs445683
+  aliases:
+  - rs16968915
+  - rs60059798
+coordinates:
+  grch37:
+    chrom: '17'
+    pos: 74401522
+  grch38:
+    chrom: '17'
+    pos: 76405440
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NC_000017.11:g.76405440C>T / NC_000017.11:g.76405440C>T;
+    IthaID: 3510.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NC_000017.11%3Ag.76405440C%3ET/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs445683
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

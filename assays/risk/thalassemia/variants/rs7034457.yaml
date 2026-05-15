@@ -1,0 +1,50 @@
+name: thalassemia-PCSK5-rs7034457
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PCSK5
+summary: 'IthaGenes rs7034457 (NG_029445.1:g.117539A>G); reported phenotype: Pain.'
+identifiers:
+  rsids:
+  - rs7034457
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '9'
+    pos: 78618098
+  grch38:
+    chrom: '9'
+    pos: 76003182
+alleles:
+  kind: snv
+  ref: A
+  alts:
+  - G
+  observed_alts:
+  - C
+  - G
+  - T
+findings:
+- schema: bioscript:trait:1.0
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pain; HGVS: NG_029445.1:g.117539A>G / NG_029445.1:g.117539A>G; IthaID:
+    3505.'
+provenance:
+  sources:
+  - kind: database
+    label: IthaGenes TSV import
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+    fields:
+    - summary
+    - findings
+  - kind: database
+    label: NCBI Variation Services HGVS to SPDI to rsID
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_029445.1%3Ag.117539A%3EG/contextuals
+    fields:
+    - identifiers.rsids
+  - kind: database
+    label: dbSNP / Ensembl via exr rsid-lookup
+    url: https://www.ncbi.nlm.nih.gov/snp/rs7034457
+    fields:
+    - coordinates
+    - alleles
+    - identifiers.aliases

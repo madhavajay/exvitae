@@ -1,0 +1,44 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TGFBR3-rs17443164
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TGFBR3
+identifiers:
+  rsids:
+  - rs17443164
+  aliases:
+  - rs58465287
+  - rs118196416
+coordinates:
+  grch37:
+    chrom: '1'
+    pos: 92246048
+  grch38:
+    chrom: '1'
+    pos: 91780491
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - G
+summary: 'IthaGenes rs17443164 (NG_027757.1:g.130512G>C); reported phenotype: Pulmonary arterial hypertension.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TGFBR3_rs17443164_finding_1
+  alt: G
+  notes: 'IthaGenes functionality: Modifier; phenotype: Pulmonary arterial hypertension; HGVS: NG_027757.1:g.130512G>C / NG_027757.1:g.130512G>C;
+    IthaID: 2904.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_027757.1%3Ag.130512G%3EC/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs17443164

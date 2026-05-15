@@ -1,0 +1,45 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-PDE7B-rs11154849
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: PDE7B
+identifiers:
+  rsids:
+  - rs11154849
+  aliases: []
+coordinates:
+  grch37:
+    chrom: '6'
+    pos: 136353305
+  grch38:
+    chrom: '6'
+    pos: 136032167
+alleles:
+  kind: snv
+  ref: C
+  alts:
+  - T
+  observed_alts:
+  - G
+  - T
+summary: 'IthaGenes rs11154849 (NG_011994.1:g.185472C>T); reported phenotype: Hb F response to hydroxyurea.'
+findings:
+- schema: bioscript:trait:1.0
+  id: PDE7B_rs11154849_finding_1
+  alt: T
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F response to hydroxyurea; HGVS: NG_011994.1:g.185472C>T / NG_011994.1:g.185472C>T;
+    IthaID: 2135.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011994.1%3Ag.185472C%3ET/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs11154849

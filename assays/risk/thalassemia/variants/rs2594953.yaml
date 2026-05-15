@@ -1,0 +1,46 @@
+# Generated from variant catalogue TSV files. Do not edit directly.
+name: thalassemia-TOX-rs2594953
+version: '1.0'
+schema: bioscript:variant:1.0
+gene: TOX
+identifiers:
+  rsids:
+  - rs2594953
+  aliases:
+  - rs59774638
+coordinates:
+  grch37:
+    chrom: '8'
+    pos: 59790210
+  grch38:
+    chrom: '8'
+    pos: 58877651
+alleles:
+  kind: snv
+  ref: G
+  alts:
+  - C
+  observed_alts:
+  - A
+  - C
+summary: 'IthaGenes rs2594953 (NG_011993.1:g.246558C>G); reported phenotype: Hb F levels.'
+findings:
+- schema: bioscript:trait:1.0
+  id: TOX_rs2594953_finding_1
+  alt: C
+  notes: 'IthaGenes functionality: Modifier; phenotype: Hb F levels; HGVS: NG_011993.1:g.246558C>G / NG_011993.1:g.246558C>G;
+    IthaID: 2702.'
+provenance:
+  sources:
+  - id: ithagenes
+    kind: database
+    label: IthaGenes
+    url: https://www.ithanet.eu/db/ithagenes?action=list
+  - id: ncbi_variation
+    kind: database
+    label: NCBI Variation Services
+    url: https://api.ncbi.nlm.nih.gov/variation/v0/hgvs/NG_011993.1%3Ag.246558C%3EG/contextuals
+  - id: dbsnp
+    kind: database
+    label: dbSNP
+    url: https://www.ncbi.nlm.nih.gov/snp/rs2594953
