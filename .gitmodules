@@ -1,3 +1,4 @@
 [submodule "bioscript"]
 	path = bioscript
 	url = https://github.com/openmined/bioscript
+	branch = madhava/libs
