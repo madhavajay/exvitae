@@ -105,6 +105,9 @@ def add_yaml_closure(package_root: Path, yaml_file: Path, out: set[Path]) -> Non
         for derived in analysis.get("derived_from", []) or []:
             if isinstance(derived, str):
                 add_yaml_closure(package_root, resolve_package_path(package_root, yaml_file, derived), out)
+        for asset in analysis.get("assets", []) or []:
+            if isinstance(asset, dict) and isinstance(asset.get("path"), str):
+                add_file(package_root, resolve_package_path(package_root, yaml_file, asset["path"]), out)
 
 
 def yaml_files(files: set[Path]) -> list[Path]:
