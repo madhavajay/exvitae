@@ -1,0 +1,21 @@
+schema: bioscript:panel:1.0
+version: "1.0"
+name: glp1
+label: GLP1 Genetic Predictors Test
+summary:
+  Based on the 2026 23andMe Nature paper GWAS study, this research-use panel checks selected GLP1R and GIPR variants
+  linked to GLP-1 medication weight-loss response and nausea or vomiting signals, providing genetic context that may help
+  frame a data-informed conversation with a clinician.
+summary_url: https://blog.23andme.com/articles/glp-1-medications-why-your-dna-matters
+tags:
+  - type:pgx
+  - type:trait
+  - topic:glp1
+package:
+  schema: bioscript:package:1.0
+  publish: true
+  artifact: glp1.zip
+members:
+  - kind: assay
+    path: assay.yaml
+    version: "1.0"

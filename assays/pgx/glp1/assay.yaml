@@ -1,0 +1,69 @@
+schema: bioscript:assay:1.0
+version: "1.0"
+name: glp1_medication_response
+label: GLP-1 Medication Response Interpretation
+summary:
+  Interprets selected GLP1R and GIPR markers reported in the 2026 23andMe Nature paper GWAS study for GLP-1 medication
+  weight-loss response and nausea or vomiting associations.
+tags:
+  - type:pgx
+  - type:trait
+  - topic:glp1
+  - gene:GLP1R
+  - gene:GIPR
+members:
+  - kind: variant
+    path: variants/rs10305420.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs1800437.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs11760106.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs9357296.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs71338792.yaml
+    version: "1.0"
+analyses:
+  - id: glp1_nature_findings
+    kind: bioscript
+    path: glp1.py
+    output_format: tsv
+    label: GLP-1 medication response findings
+    derived_from:
+      - variants/rs10305420.yaml
+      - variants/rs1800437.yaml
+      - variants/rs11760106.yaml
+      - variants/rs9357296.yaml
+      - variants/rs71338792.yaml
+    emits:
+      - key: rsid
+        label: Variant
+        value_type: string
+      - key: info
+        label: Finding and your result
+        value_type: string
+    logic:
+      source:
+        name: 2026 23andMe Nature paper GWAS study
+        url: https://www.nature.com/articles/s41586-026-10330-z
+      description: >
+        The analysis reads the assay member observation rows, checks whether each participant genotype contains the
+        paper-reported effect allele or marker allele, and emits one row per GLP1R or GIPR marker with the corresponding
+        GWAS association summary. Association rows describe cohort-level findings and are not treatment recommendations.
+provenance:
+  sources:
+    - kind: paper
+      label: 2026 23andMe Nature paper GWAS study
+      url: https://www.nature.com/articles/s41586-026-10330-z
+      fields:
+        - summary
+        - analyses[0].logic
+    - kind: article
+      label: 23andMe GLP-1 medications blog
+      url: https://blog.23andme.com/articles/glp-1-medications-why-your-dna-matters
+      fields:
+        - summary

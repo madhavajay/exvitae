@@ -1,0 +1,22 @@
+schema: bioscript:package-release:1.0
+version: "1.0"
+name: glp1
+label: GLP1 Genetic Predictors Test
+package_version: "1.0"
+kind: panel
+created_at: "2026-05-21T07:01:14Z"
+entrypoint: manifest.yaml
+artifact:
+  path: glp1.zip
+  sha256: 40afd03cab9f697c932201e91c83e8834dcf6842c3070bcb9125ca45d918181c
+  size_bytes: 7820
+contents:
+  files:
+    - assay.yaml
+    - glp1.py
+    - manifest.yaml
+    - variants/rs10305420.yaml
+    - variants/rs11760106.yaml
+    - variants/rs1800437.yaml
+    - variants/rs71338792.yaml
+    - variants/rs9357296.yaml

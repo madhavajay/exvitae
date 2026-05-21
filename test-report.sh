@@ -13,6 +13,10 @@ usage:
   ./test-report.sh --list
 
 data aliases:
+  all
+  * (quote or escape it: '*' or \*)
+  all-nocram
+  *-nocram (quote or escape it: '*-nocram' or \*-nocram)
   23andme
   23andme_v5
   carika
@@ -29,9 +33,15 @@ assay/panel aliases:
   apol1-zip
   pgx-1
   pgx-1-zip
+  glp1
+  glp1-zip
   thalassemia
   thalassemia-zip
   clingen
+  longevity
+  longevity-zip
+  prostate-prs
+  prostate-prs-zip
 
 examples:
   ./test-report.sh 23andme apol1
@@ -39,11 +49,59 @@ examples:
   ./test-report.sh carigenetics-vcf /Users/madhavajay/dev/exvitae-data/exvitae/assays/risk/APOL1/APOL1.zip
   ./test-report.sh carika /Users/madhavajay/dev/exvitae-data/projects/pgx-1/manifest.yaml -- --analysis-max-duration-ms 60000
   ./test-report.sh 23andme_v5 clingen --no-open -- --html
+  ./test-report.sh sequencing-vcf longevity --no-open
+  ./test-report.sh 23andme_v5 glp1 --no-open -- --html
 USAGE
 }
 
 list_aliases() {
   usage
+}
+
+DATA_ALIASES=(
+  23andme
+  23andme_v5
+  carika
+  sequencing
+  sequencing-vcf
+  sequencing-dv-vcf
+  carigenetics
+  carigenetics-vcf
+  NA06985
+  NA06985-vcf
+)
+
+DATA_ALIASES_NOCRAM=(
+  23andme
+  23andme_v5
+  carika
+  sequencing-vcf
+  sequencing-dv-vcf
+  carigenetics-vcf
+  NA06985-vcf
+)
+
+is_all_data_alias() {
+  [[ "$1" == "all" || "$1" == "*" ]]
+}
+
+is_group_data_alias() {
+  [[ "$1" == "all" || "$1" == "*" || "$1" == "all-nocram" || "$1" == "*-nocram" ]]
+}
+
+data_alias_group() {
+  local group="$1"
+  case "$group" in
+    all | "*")
+      printf '%s\n' "${DATA_ALIASES[@]}"
+      ;;
+    all-nocram | "*-nocram")
+      printf '%s\n' "${DATA_ALIASES_NOCRAM[@]}"
+      ;;
+    *)
+      return 1
+      ;;
+  esac
 }
 
 sanitize_name() {
@@ -76,6 +134,12 @@ resolve_manifest() {
     pgx-1-zip)
       printf '%s\n' "$PROJECTS/pgx-1/pgx-1.zip"
       ;;
+    glp1)
+      printf '%s\n' "$REPO/assays/pgx/glp1/manifest.yaml"
+      ;;
+    glp1-zip)
+      printf '%s\n' "$REPO/assays/pgx/glp1/glp1.zip"
+      ;;
     thalassemia)
       printf '%s\n' "$PROJECTS/thalassemia/thalassemia.yaml"
       ;;
@@ -85,8 +149,30 @@ resolve_manifest() {
     clingen)
       printf '%s\n' "$PROJECTS/clingen/assay.yaml"
       ;;
+    longevity)
+      printf '%s\n' "$REPO/assays/risk/longevity/manifest.yaml"
+      ;;
+    longevity-zip)
+      printf '%s\n' "$REPO/assays/risk/longevity/longevity.zip"
+      ;;
+    prostate-prs)
+      printf '%s\n' "$REPO/assays/risk/prostate-cancer-prs/panel.yaml"
+      ;;
+    prostate-prs-zip)
+      printf '%s\n' "$REPO/assays/risk/prostate-cancer-prs/prostate-cancer-prs.zip"
+      ;;
     *)
-      printf '%s\n' "$value"
+      if [[ -d "$value" ]]; then
+        if [[ -f "$value/manifest.yaml" ]]; then
+          printf '%s\n' "$value/manifest.yaml"
+        elif [[ -f "$value/assay.yaml" ]]; then
+          printf '%s\n' "$value/assay.yaml"
+        else
+          printf '%s\n' "$value/manifest.yaml"
+        fi
+      else
+        printf '%s\n' "$value"
+      fi
       ;;
   esac
 }
@@ -236,7 +322,6 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-configure_data_alias "$DATA_ALIAS"
 MANIFEST="$(resolve_manifest "$MANIFEST_ARG")"
 
 if [[ ! -e "$MANIFEST" ]]; then
@@ -244,82 +329,107 @@ if [[ ! -e "$MANIFEST" ]]; then
   exit 1
 fi
 
-if [[ ! -f "$INPUT_FILE" ]]; then
-  echo "input file does not exist for alias '$DATA_ALIAS': $INPUT_FILE" >&2
-  exit 1
-fi
+run_report_for_alias() {
+  local data_alias="$1"
+  local output_dir="$OUTPUT_DIR"
 
-if [[ "$NEED_VCF_INDEX" == "true" && ! -f "$INPUT_INDEX" ]]; then
-  bcftools index -t "$INPUT_FILE"
-fi
+  ROOT="/Users/madhavajay/dev"
+  configure_data_alias "$data_alias"
 
-if [[ -n "$INPUT_INDEX" && ! -f "$INPUT_INDEX" ]]; then
-  echo "input index does not exist for alias '$DATA_ALIAS': $INPUT_INDEX" >&2
-  exit 1
-fi
+  if [[ ! -f "$INPUT_FILE" ]]; then
+    echo "input file does not exist for alias '$data_alias': $INPUT_FILE" >&2
+    return 1
+  fi
 
-if [[ -n "$REFERENCE_FILE" && ! -f "$REFERENCE_FILE" ]]; then
-  echo "reference file does not exist for alias '$DATA_ALIAS': $REFERENCE_FILE" >&2
-  exit 1
-fi
+  if [[ "$NEED_VCF_INDEX" == "true" && ! -f "$INPUT_INDEX" ]]; then
+    bcftools index -t "$INPUT_FILE"
+  fi
 
-if [[ -n "$REFERENCE_INDEX" && ! -f "$REFERENCE_INDEX" ]]; then
-  echo "reference index does not exist for alias '$DATA_ALIAS': $REFERENCE_INDEX" >&2
-  exit 1
-fi
+  if [[ -n "$INPUT_INDEX" && ! -f "$INPUT_INDEX" ]]; then
+    echo "input index does not exist for alias '$data_alias': $INPUT_INDEX" >&2
+    return 1
+  fi
 
-if [[ -z "$OUTPUT_DIR" ]]; then
-  OUTPUT_DIR="${REPO#"$ROOT/"}/test-output/app-$(sanitize_name "$MANIFEST_ARG")-$(sanitize_name "$DATA_ALIAS")"
-else
-  OUTPUT_DIR="$(root_relative_path "$OUTPUT_DIR")"
-fi
+  if [[ -n "$REFERENCE_FILE" && ! -f "$REFERENCE_FILE" ]]; then
+    echo "reference file does not exist for alias '$data_alias': $REFERENCE_FILE" >&2
+    return 1
+  fi
 
-cmd=(
-  "$REPO/bioscript/bs" report "$MANIFEST"
-  --root "$ROOT"
-  --input-file "$INPUT_FILE"
-  --detect-sex
-  --output-dir "$OUTPUT_DIR"
-)
+  if [[ -n "$REFERENCE_INDEX" && ! -f "$REFERENCE_INDEX" ]]; then
+    echo "reference index does not exist for alias '$data_alias': $REFERENCE_INDEX" >&2
+    return 1
+  fi
 
-if [[ -n "$INPUT_INDEX" ]]; then
-  cmd+=(--input-index "$INPUT_INDEX")
-fi
+  if [[ -z "$output_dir" ]]; then
+    output_dir="${REPO#"$ROOT/"}/test-output/app-$(sanitize_name "$MANIFEST_ARG")-$(sanitize_name "$data_alias")"
+  elif is_group_data_alias "$DATA_ALIAS"; then
+    output_dir="$(root_relative_path "$output_dir/$(sanitize_name "$data_alias")")"
+  else
+    output_dir="$(root_relative_path "$output_dir")"
+  fi
 
-if [[ -n "$INPUT_FORMAT" ]]; then
-  cmd+=(--input-format "$INPUT_FORMAT")
-fi
+  local cmd=(
+    "$REPO/bioscript/bs" report "$MANIFEST"
+    --root "$ROOT"
+    --input-file "$INPUT_FILE"
+    --detect-sex
+    --output-dir "$output_dir"
+  )
 
-if [[ -n "$REFERENCE_FILE" ]]; then
-  cmd+=(--reference-file "$REFERENCE_FILE")
-fi
+  if [[ -n "$INPUT_INDEX" ]]; then
+    cmd+=(--input-index "$INPUT_INDEX")
+  fi
 
-if [[ -n "$REFERENCE_INDEX" ]]; then
-  cmd+=(--reference-index "$REFERENCE_INDEX")
-fi
+  if [[ -n "$INPUT_FORMAT" ]]; then
+    cmd+=(--input-format "$INPUT_FORMAT")
+  fi
 
-if [[ "$ALLOW_MD5_MISMATCH" == "true" ]]; then
-  cmd+=(--allow-md5-mismatch)
-fi
+  if [[ -n "$REFERENCE_FILE" ]]; then
+    cmd+=(--reference-file "$REFERENCE_FILE")
+  fi
 
-if [[ -n "$SAMPLE_SEX" ]]; then
-  cmd+=(--sample-sex "$SAMPLE_SEX")
-fi
+  if [[ -n "$REFERENCE_INDEX" ]]; then
+    cmd+=(--reference-index "$REFERENCE_INDEX")
+  fi
 
-if [[ -n "$DEFAULT_ANALYSIS_MAX_DURATION_MS" ]]; then
-  cmd+=(--analysis-max-duration-ms "$DEFAULT_ANALYSIS_MAX_DURATION_MS")
-fi
+  if [[ "$ALLOW_MD5_MISMATCH" == "true" ]]; then
+    cmd+=(--allow-md5-mismatch)
+  fi
 
-if [[ "$OPEN_REPORT" == "true" ]]; then
-  cmd+=(--open)
-fi
+  if [[ -n "$SAMPLE_SEX" ]]; then
+    cmd+=(--sample-sex "$SAMPLE_SEX")
+  fi
 
-if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
-  cmd+=("${EXTRA_ARGS[@]}")
-fi
+  if [[ -n "$DEFAULT_ANALYSIS_MAX_DURATION_MS" ]]; then
+    cmd+=(--analysis-max-duration-ms "$DEFAULT_ANALYSIS_MAX_DURATION_MS")
+  fi
+
+  if [[ "$OPEN_REPORT" == "true" ]]; then
+    cmd+=(--open)
+  fi
+
+  if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
+    cmd+=("${EXTRA_ARGS[@]}")
+  fi
+
+  printf 'running:'
+  printf ' %q' "${cmd[@]}"
+  printf '\n'
+  "${cmd[@]}"
+}
 
 cd "$REPO"
-printf 'running:'
-printf ' %q' "${cmd[@]}"
-printf '\n'
-exec "${cmd[@]}"
+
+if is_group_data_alias "$DATA_ALIAS"; then
+  failures=0
+  while IFS= read -r alias; do
+    printf '\n===== %s =====\n' "$alias"
+    if ! run_report_for_alias "$alias"; then
+      failures=$((failures + 1))
+      printf 'FAILED %s\n' "$alias" >&2
+    fi
+  done < <(data_alias_group "$DATA_ALIAS")
+  exit "$failures"
+fi
+
+run_report_for_alias "$DATA_ALIAS"

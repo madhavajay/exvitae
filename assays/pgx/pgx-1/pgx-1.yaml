@@ -4,7 +4,7 @@ name: pgx-1
 label: PGx-1 Panel
 package_version: "1.0"
 kind: panel
-created_at: "2026-05-15T04:00:08Z"
+created_at: "2026-05-15T04:29:06Z"
 entrypoint: manifest.yaml
 artifact:
   path: pgx-1.zip
