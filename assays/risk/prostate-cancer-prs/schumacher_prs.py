@@ -50,6 +50,31 @@ def index_variants(variants):
     return by_rsid
 
 
+def variant_rsids(variant):
+    rsids = []
+    primary = row_value(variant, "rsid")
+    if primary != "":
+        rsids.append(primary)
+    for alias in split_list(row_value(variant, "aliases")):
+        if alias not in rsids:
+            rsids.append(alias)
+    return rsids
+
+
+def find_observation_for_variant(observations_by_rsid, variant, preferred_rsid):
+    lookup_order = []
+    if preferred_rsid != "":
+        lookup_order.append(preferred_rsid)
+    for rsid in variant_rsids(variant):
+        if rsid not in lookup_order:
+            lookup_order.append(rsid)
+    for rsid in lookup_order:
+        obs = observations_by_rsid.get(rsid)
+        if obs is not None:
+            return obs
+    return None
+
+
 def genotype_tokens(genotype):
     if genotype == "":
         return []
@@ -113,9 +138,11 @@ def score_prs(observations, variants, prs_rows, participant):
         chosen_dose = None
         for row in candidates[primary]:
             observed = row_value(row, "observed_rsid")
-            obs = observations_by_rsid.get(observed)
             variant = variants_by_rsid.get(observed)
-            if obs is None or variant is None:
+            if variant is None:
+                continue
+            obs = find_observation_for_variant(observations_by_rsid, variant, observed)
+            if obs is None:
                 continue
             dose = allele_dose(obs, variant, row_value(row, "observed_effect_allele"))
             if dose is None:

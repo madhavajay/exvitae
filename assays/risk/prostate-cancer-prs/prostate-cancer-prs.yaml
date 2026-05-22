@@ -4,12 +4,12 @@ name: prostate-cancer-prs
 label: Prostate Cancer PRS Panel
 package_version: "1.0"
 kind: panel
-created_at: "2026-05-20T20:59:57Z"
+created_at: "2026-05-22T02:35:15Z"
 entrypoint: manifest.yaml
 artifact:
   path: prostate-cancer-prs.zip
-  sha256: c0ab9b2f2d66b4d799e2e24723364b588826f99ecd9f0704fb0d1d64699763ea
-  size_bytes: 35725
+  sha256: f67baea42b952e9f331fcf89083a267c0192523918bef244b7c7e2f337eb8047
+  size_bytes: 35881
 contents:
   files:
     - assay.yaml
