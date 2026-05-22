@@ -1,0 +1,70 @@
+name: FOXO3_rs2802292
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: FOXO3
+summary: FOXO3 intronic variant rs2802292 studied in human longevity and cellular-aging research.
+identifiers:
+  rsids:
+    - rs2802292
+  aliases:
+    - rs60311040
+coordinates:
+  grch37:
+    chrom: "6"
+    pos: 108908518
+  grch38:
+    chrom: "6"
+    pos: 108587315
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - T
+  observed_alts:
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs2802292
+      fields:
+        [identifiers.rsids, identifiers.aliases, alleles, alleles.observed_alts]
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2802292
+      fields: [coordinates.grch37]
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2802292
+      fields: [coordinates.grch38]
+    - kind: literature
+      label: Zeng et al. Scientific Reports 2015
+      url: https://doi.org/10.1038/srep09852
+      fields: [findings]
+    - kind: literature
+      label: Torigoe et al. npj Aging 2024
+      url: https://doi.org/10.1038/s41514-024-00142-8
+      fields: [findings]
+findings:
+  - schema: bioscript:trait:1.0
+    label: FOXO3 longevity association
+    binding:
+      source: variant
+      variant: rs2802292.yaml
+      allele: G
+      operator: dosage_in
+      values: [1, 2]
+      description: Applies when the participant carries one or two copies of the literature-supported rs2802292 G allele; G is the reference allele in this catalogue.
+    summary: Zeng et al. reported rs2802292*G was associated with longevity in an Asian-stratified meta-analysis.
+    notes: In Zeng et al., rs2802292*G had OR = 1.207 in the Southern Chinese case-control study but did not remain significant after Bonferroni correction; their meta-analysis reported association in Asians with OR = 1.385 (95% CI 1.204-1.593). This marker is retained because rs2802292 also has replicated and mechanistic FOXO3 longevity evidence.
+  - schema: bioscript:trait:1.0
+    label: FOXO3 cellular aging mechanism
+    binding:
+      source: variant
+      variant: rs2802292.yaml
+      allele: G
+      operator: dosage_in
+      values: [1, 2]
+      description: Applies when the participant carries one or two copies of the literature-supported rs2802292 G allele; G is the reference allele in this catalogue.
+    summary: Torigoe et al. studied rs2802292 and reported protective cellular-aging associations for carriers of the FOXO3 G allele in Okinawan adults.
+    notes: The abstract reports protection against telomere shortening, higher telomerase activity in older G-allele carriers, and sex-specific inflammatory cytokine associations.

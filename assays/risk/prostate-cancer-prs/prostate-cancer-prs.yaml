@@ -1,0 +1,21 @@
+schema: bioscript:package-release:1.0
+version: "1.0"
+name: prostate-cancer-prs
+label: Prostate Cancer PRS Panel
+package_version: "1.0"
+kind: panel
+created_at: "2026-05-20T20:59:57Z"
+entrypoint: manifest.yaml
+artifact:
+  path: prostate-cancer-prs.zip
+  sha256: c0ab9b2f2d66b4d799e2e24723364b588826f99ecd9f0704fb0d1d64699763ea
+  size_bytes: 35725
+contents:
+  files:
+    - assay.yaml
+    - catalogue/findings.tsv
+    - catalogue/schumacher_prs.tsv
+    - catalogue/variants.tsv
+    - catalogue/variants.yaml
+    - panel.yaml
+    - schumacher_prs.py

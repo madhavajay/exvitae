@@ -1,0 +1,71 @@
+schema: bioscript:assay:1.0
+version: "1.0"
+name: foxo3_longevity
+label: FOXO3 Longevity Markers
+summary: Summarizes high-confidence FOXO3 longevity markers and reports each marker as variant when the participant carries the literature-supported beneficial allele, otherwise normal.
+tags:
+  - type:longevity
+  - gene:FOXO3
+support:
+  input:
+    - cram
+    - vcf
+    - snp:23andme
+    - snp:23andme:v3
+    - snp:23andme:v4
+    - snp:23andme:v5
+    - snp:genesforgood
+members:
+  - kind: variant
+    path: rs2802292.yaml
+    version: "1.0"
+  - kind: variant
+    path: rs2802288.yaml
+    version: "1.0"
+  - kind: variant
+    path: rs13217795.yaml
+    version: "1.0"
+analyses:
+  - id: foxo3_longevity_summary
+    kind: bioscript
+    path: foxo3.py
+    output_format: tsv
+    label: FOXO3 longevity summary
+    derived_from:
+      - rs2802292.yaml
+      - rs2802288.yaml
+      - rs13217795.yaml
+    emits:
+      - key: foxo3_outcome
+        label: FOXO3 outcome
+        value_type: string
+        format: badge
+      - key: rsid
+        label: rsID
+        value_type: string
+      - key: genotype
+        label: Your genotype
+        value_type: string
+    logic:
+      source:
+        name: Zeng et al. Scientific Reports 2015 and Torigoe et al. npj Aging 2024
+        url: https://doi.org/10.1038/srep09852
+      description: >
+        The selected FOXO3 markers are summarized individually from variant observation rows. For these markers, the
+        literature-supported beneficial allele is the reference allele in the stored variant definition: rs2802292 G,
+        rs2802288 A, and rs13217795 C. The analysis labels one or two copies of the literature-supported allele as
+        variant, zero copies as normal, and missing data as unknown; it does not label the alternate alleles as harmful.
+provenance:
+  sources:
+    - kind: literature
+      label: Zeng et al. Scientific Reports 2015
+      url: https://doi.org/10.1038/srep09852
+      fields:
+        - summary
+        - analyses[0].logic
+    - kind: literature
+      label: Torigoe et al. npj Aging 2024
+      url: https://doi.org/10.1038/s41514-024-00142-8
+      fields:
+        - summary
+        - analyses[0].logic

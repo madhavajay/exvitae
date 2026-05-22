@@ -1,0 +1,24 @@
+schema: bioscript:package-release:1.0
+version: "1.0"
+name: longevity
+label: Longevity Panel
+package_version: "1.0"
+kind: panel
+created_at: "2026-05-21T07:15:29Z"
+entrypoint: manifest.yaml
+artifact:
+  path: longevity.zip
+  sha256: ead9238f0c47ac9818dd56ccc42ed751a774857e27cd59671879d52f68773c95
+  size_bytes: 10175
+contents:
+  files:
+    - assets/APOE/apoe.py
+    - assets/APOE/assay.yaml
+    - assets/APOE/rs429358.yaml
+    - assets/APOE/rs7412.yaml
+    - assets/FOXO3/assay.yaml
+    - assets/FOXO3/foxo3.py
+    - assets/FOXO3/rs13217795.yaml
+    - assets/FOXO3/rs2802288.yaml
+    - assets/FOXO3/rs2802292.yaml
+    - manifest.yaml

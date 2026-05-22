@@ -1,0 +1,88 @@
+schema: bioscript:variant-catalogue:1.0
+version: "1.0"
+name: prostate-cancer-prs-schumacher-variants
+label: Prostate Cancer PRS Schumacher Variant Catalogue
+summary: Compact TSV-backed catalogue of rsIDs used as Schumacher prostate cancer PRS primary or proxy markers in Kim et al. 2022 Additional file 1 Table S1. Variant coordinates, alleles, aliases, and gene attribution come from exr rsid-lookup/dbSNP/Ensembl.
+tags:
+  - "type:risk"
+  - "condition:prostate-cancer"
+  - "prs:schumacher"
+variants:
+  source: variants.tsv
+  format: tsv
+  key: variant_id
+  columns:
+    variant_id:
+      role: id
+      required: true
+    name:
+      role: name
+    label:
+      role: label
+    summary:
+      role: summary
+    gene:
+      role: gene
+    rsid:
+      role: identifier.rsid
+    aliases:
+      role: identifier.aliases
+      list_separator: "|"
+    kind:
+      role: alleles.kind
+    ref:
+      role: alleles.ref
+    alts:
+      role: alleles.alts
+      list_separator: "|"
+    observed_alts:
+      role: alleles.observed_alts
+      list_separator: "|"
+    grch37_chrom:
+      role: coordinates.grch37.chrom
+    grch37_pos:
+      role: coordinates.grch37.pos
+      type: integer
+    grch37_start:
+      role: coordinates.grch37.start
+      type: integer
+    grch37_end:
+      role: coordinates.grch37.end
+      type: integer
+    grch38_chrom:
+      role: coordinates.grch38.chrom
+    grch38_pos:
+      role: coordinates.grch38.pos
+      type: integer
+    grch38_start:
+      role: coordinates.grch38.start
+      type: integer
+    grch38_end:
+      role: coordinates.grch38.end
+      type: integer
+findings:
+  source: findings.tsv
+  format: tsv
+  key: variant_id
+provenance:
+  sources:
+    - id: kim_2022_genome_biology
+      kind: paper
+      label: Kim et al. 2022 Genome Biology prostate cancer PRS generalizability study
+      url: https://link.springer.com/article/10.1186/s13059-022-02766-z
+    - id: kim_2022_additional_file_1_table_s1
+      kind: supplementary_table
+      label: Additional file 1 Table S1, details about PRS variants and proxies used in this paper
+      url: https://link.springer.com/article/10.1186/s13059-022-02766-z#Sec16
+    - id: dbsnp
+      kind: database
+      label: dbSNP via exr rsid-lookup --store
+      url_template: https://www.ncbi.nlm.nih.gov/snp/{rsid}
+    - id: ensembl_grch37
+      kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.rest.ensembl.org
+    - id: ensembl_grch38
+      kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://rest.ensembl.org

@@ -1,0 +1,44 @@
+name: APOE_rs7412
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: APOE
+summary: APOE epsilon-defining variant rs7412; interpreted together with rs429358 by the APOE epsilon assay.
+identifiers:
+  rsids:
+    - rs7412
+  aliases:
+    - rs3200542
+coordinates:
+  grch37:
+    chrom: "19"
+    pos: 45412079
+  grch38:
+    chrom: "19"
+    pos: 44908822
+alleles:
+  kind: snv
+  ref: C
+  alts:
+    - T
+  observed_alts:
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs7412
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+        - alleles.observed_alts
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs7412
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs7412
+      fields:
+        - coordinates.grch38

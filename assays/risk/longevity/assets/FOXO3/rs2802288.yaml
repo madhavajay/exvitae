@@ -1,0 +1,57 @@
+name: FOXO3_rs2802288
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: FOXO3
+summary: FOXO3 intronic variant rs2802288 studied in Southern Chinese longevity and meta-analysis.
+identifiers:
+  rsids:
+    - rs2802288
+  aliases:
+    - rs59033794
+coordinates:
+  grch37:
+    chrom: "6"
+    pos: 108896215
+  grch38:
+    chrom: "6"
+    pos: 108575012
+alleles:
+  kind: snv
+  ref: A
+  alts:
+    - G
+    - T
+  observed_alts:
+    - G
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs2802288
+      fields:
+        [identifiers.rsids, identifiers.aliases, alleles, alleles.observed_alts]
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2802288
+      fields: [coordinates.grch37]
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2802288
+      fields: [coordinates.grch38]
+    - kind: literature
+      label: Zeng et al. Scientific Reports 2015
+      url: https://doi.org/10.1038/srep09852
+      fields: [findings]
+findings:
+  - schema: bioscript:trait:1.0
+    label: FOXO3 longevity association
+    binding:
+      source: variant
+      variant: rs2802288.yaml
+      allele: A
+      operator: dosage_in
+      values: [1, 2]
+      description: Applies when the participant carries one or two copies of the literature-supported rs2802288 A allele; A is the reference allele in this catalogue.
+    summary: Zeng et al. reported rs2802288*A was associated with longevity in Southern Chinese and in the meta-analysis.
+    notes: The paper reports rs2802288*A with OR = 1.266 in the Southern Chinese case-control study; this association remained significant after Bonferroni correction. The meta-analysis reported a pooled OR = 1.146 (95% CI 1.065-1.233).

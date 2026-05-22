@@ -1,0 +1,67 @@
+schema: "bioscript:assay:1.0"
+version: "1.0"
+name: "prostate_cancer_prs_schumacher"
+label: "Prostate Cancer PRS - Schumacher"
+summary: "BioScript assay for the Schumacher prostate cancer PRS markers as represented in Kim et al. 2022, using direct primary markers first and shared proxies as fallbacks. Outputs observed primary markers, proxies, missing markers needing baseline imputation, and an observed-only unstandardized score."
+tags:
+  - "type:risk"
+  - "condition:prostate-cancer"
+  - "prs:schumacher"
+
+members:
+  - kind: "variant-catalogue"
+    path: "catalogue/variants.yaml"
+    version: "1.0"
+
+analyses:
+  - id: "schumacher_prs_score"
+    kind: "bioscript"
+    path: "schumacher_prs.py"
+    output_format: "tsv"
+    label: "Schumacher prostate cancer PRS score"
+    derived_from:
+      - "catalogue/variants.yaml"
+    assets:
+      - id: "variants"
+        path: "catalogue/variants.tsv"
+      - id: "prs_metadata"
+        path: "catalogue/schumacher_prs.tsv"
+    emits:
+      - key: "primary_rsids_found_count"
+        label: "Primary rsIDs found"
+        value_type: "integer"
+      - key: "primary_rsids_found"
+        label: "Primary rsID details"
+        value_type: "string"
+      - key: "proxies_found_count"
+        label: "Proxy rsIDs found"
+        value_type: "integer"
+      - key: "proxies_found"
+        label: "Proxy rsID details"
+        value_type: "string"
+      - key: "missing_baseline_count"
+        label: "Markers requiring baseline imputation"
+        value_type: "integer"
+      - key: "missing_baseline_markers"
+        label: "Missing markers"
+        value_type: "string"
+      - key: "baseline_imputation"
+        label: "Baseline imputation status"
+        value_type: "string"
+      - key: "total_score"
+        label: "Total PRS score"
+        value_type: "number"
+      - key: "score_units"
+        label: "Score units"
+        value_type: "string"
+    logic:
+      source:
+        name: "Kim et al. 2022 Genome Biology"
+        url: "https://link.springer.com/article/10.1186/s13059-022-02766-z"
+      description: >
+        The paper describes counting risk-allele dose, weighting by adjusted effect sizes that include proxy r2,
+        and summing across loci. It also states that missing genotype data were filled using study-site mean risk
+        allele counts to avoid downward bias from missingness. The local Schumacher proxy tables provide rsIDs,
+        effect alleles, beta values, proxy alleles, and r2 values, but not study-site mean counts; therefore this
+        first implementation emits an observed-only unstandardized score and explicitly lists markers for which
+        baseline imputation would be needed.

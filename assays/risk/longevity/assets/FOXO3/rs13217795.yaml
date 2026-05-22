@@ -1,0 +1,56 @@
+name: FOXO3_rs13217795
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: FOXO3
+summary: FOXO3 intronic variant rs13217795 genotyped in the Zeng et al. Southern Chinese longevity study.
+identifiers:
+  rsids:
+    - rs13217795
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "6"
+    pos: 108974098
+  grch38:
+    chrom: "6"
+    pos: 108652895
+alleles:
+  kind: snv
+  ref: C
+  alts:
+    - G
+    - T
+  observed_alts:
+    - G
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs13217795
+      fields:
+        [identifiers.rsids, identifiers.aliases, alleles, alleles.observed_alts]
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs13217795
+      fields: [coordinates.grch37]
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs13217795
+      fields: [coordinates.grch38]
+    - kind: literature
+      label: Zeng et al. Scientific Reports 2015
+      url: https://doi.org/10.1038/srep09852
+      fields: [findings]
+findings:
+  - schema: bioscript:trait:1.0
+    label: FOXO3 Southern Chinese longevity study
+    binding:
+      source: variant
+      variant: rs13217795.yaml
+      allele: C
+      operator: dosage_in
+      values: [1, 2]
+      description: Applies when the participant carries one or two copies of the literature-supported rs13217795 C allele; C is the reference allele in this catalogue.
+    summary: Zeng et al. reported rs13217795*C had a higher minor allele frequency in longevity subjects in the Southern Chinese case-control study.
+    notes: The paper reports p < 0.001 and OR = 1.358 for rs13217795*C; it remained significant after Bonferroni correction.

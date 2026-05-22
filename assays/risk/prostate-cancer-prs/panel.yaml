@@ -1,0 +1,18 @@
+schema: "bioscript:panel:1.0"
+version: "1.0"
+name: "prostate-cancer-prs"
+label: "Prostate Cancer PRS Panel"
+summary: "Panel wrapper for the Schumacher prostate cancer PRS assay from Kim et al. 2022."
+tags:
+  - "type:risk"
+  - "condition:prostate-cancer"
+  - "prs:schumacher"
+package:
+  schema: "bioscript:package:1.0"
+  publish: true
+  artifact: "prostate-cancer-prs.zip"
+
+members:
+  - kind: "assay"
+    path: "assay.yaml"
+    version: "1.0"

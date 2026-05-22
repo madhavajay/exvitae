@@ -1,0 +1,33 @@
+schema: bioscript:panel:1.0
+version: "1.0"
+name: longevity
+label: Longevity Panel
+summary: >
+  Longevity-focused panel covering APOE epsilon status and high-confidence FOXO3 longevity markers. APOE is reported as
+  a two-variant epsilon genotype assay; the Tokyo Centenarian Study reported APOE epsilon2 was more frequent and epsilon4
+  less frequent in centenarians than controls, concluding epsilon2 was positively and epsilon4 negatively associated with
+  longevity. FOXO3 is reported as a marker summary assay; the retained FOXO3 literature-supported alleles are rs2802292 G,
+  rs2802288 A, and rs13217795 C, and each is the reference allele in this catalogue. FOXO3 markers with only nominal Zeng
+  2015 association before Bonferroni correction, or no highlighted longevity association, were removed from the runnable panel.
+tags:
+  - type:longevity
+package:
+  schema: bioscript:package:1.0
+  publish: true
+  artifact: longevity.zip
+support:
+  input:
+    - cram
+    - vcf
+    - snp:23andme
+    - snp:23andme:v3
+    - snp:23andme:v4
+    - snp:23andme:v5
+    - snp:genesforgood
+members:
+  - kind: assay
+    path: assets/APOE/assay.yaml
+    version: "1.0"
+  - kind: assay
+    path: assets/FOXO3/assay.yaml
+    version: "1.0"
