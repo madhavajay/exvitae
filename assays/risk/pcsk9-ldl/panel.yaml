@@ -1,0 +1,59 @@
+schema: bioscript:panel:1.0
+version: "1.0"
+name: pcsk9-ldl
+label: PCSK9 LDL-Lowering Variant Panel
+summary: >
+  Research-use panel for three naturally occurring PCSK9 LDL-lowering variants highlighted by Cohen et al. 2006:
+  R46L, Y142X, and C679X.
+summary_url: https://www.nejm.org/doi/full/10.1056/NEJMoa054013
+tags:
+  - type:trait
+  - topic:ldl
+  - gene:PCSK9
+package:
+  schema: bioscript:package:1.0
+  publish: true
+  artifact: pcsk9-ldl.zip
+members:
+  - kind: variant
+    path: variants/rs11591147.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs67608943.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs28362286.yaml
+    version: "1.0"
+analyses:
+  - id: pcsk9_ldl_status
+    kind: bioscript
+    path: pcsk9.py
+    output_format: tsv
+    label: PCSK9 LDL-lowering status
+    derived_from:
+      - variants/rs11591147.yaml
+      - variants/rs67608943.yaml
+      - variants/rs28362286.yaml
+    emits:
+      - key: pcsk9_status
+        label: PCSK9 status
+        value_type: string
+        format: badge
+      - key: status_label
+        label: Result
+        value_type: string
+      - key: protective_allele_count
+        label: Protective allele copies
+        value_type: string
+      - key: interpretation
+        label: Interpretation
+        value_type: string
+    logic:
+      source:
+        name: Cohen et al. 2006 PCSK9 NEJM study
+        url: https://www.nejm.org/doi/full/10.1056/NEJMoa054013
+      description: >
+        The analysis reads the observed genotypes for rs11591147, rs67608943, and rs28362286, counts the curated
+        LDL-lowering alleles, and emits an overall PCSK9 status with research-use context. The variant alleles are
+        described as favorable only in the narrow sense that carrier groups in the cited population study had lower
+        LDL-C and lower coronary heart disease risk.

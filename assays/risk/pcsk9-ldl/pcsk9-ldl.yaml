@@ -1,0 +1,19 @@
+schema: bioscript:package-release:1.0
+version: "1.0"
+name: pcsk9-ldl
+label: PCSK9 LDL-Lowering Variant Panel
+package_version: "1.0"
+kind: panel
+created_at: "2026-05-26T03:03:17Z"
+entrypoint: panel.yaml
+artifact:
+  path: pcsk9-ldl.zip
+  sha256: 14097d1a1fefde5508ee12cfb334d2d1b139eb6e0f771d91d9ad17b9c7684ba4
+  size_bytes: 5808
+contents:
+  files:
+    - panel.yaml
+    - pcsk9.py
+    - variants/rs11591147.yaml
+    - variants/rs28362286.yaml
+    - variants/rs67608943.yaml

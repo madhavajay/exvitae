@@ -1,0 +1,82 @@
+name: pcsk9-ldl-rs11591147-G-T
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: PCSK9
+tags:
+  - type:trait
+  - topic:ldl
+  - gene:PCSK9
+  - validated:23andme
+  - validated:dynamicdna
+  - validated:vcf
+summary:
+  PCSK9 R46L / Arg46Leu, represented by c.137G>T, is a naturally occurring PCSK9 sequence variant associated in
+  Cohen et al. 2006 with lower LDL cholesterol and lower coronary heart disease risk among white ARIC participants.
+identifiers:
+  rsids:
+    - rs11591147
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "1"
+    pos: 55505647
+  grch38:
+    chrom: "1"
+    pos: 55039974
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - T
+  observed_alts:
+    - A
+    - T
+findings:
+  - schema: bioscript:trait:1.0
+    alt: T
+    label: PCSK9 R46L LDL-lowering allele
+    summary:
+      Carrier status marks the PCSK9 R46L allele used in Cohen et al. 2006 as a human genetics example of lower LDL-C
+      and reduced coronary heart disease risk.
+    notes:
+      Cohen et al. reported that 3.2 percent of white ARIC participants had a PCSK9 sequence variant associated with
+      15 percent lower LDL cholesterol and 47 percent lower coronary heart disease risk.
+provenance:
+  sources:
+    - kind: paper
+      label: Cohen et al. 2006, Sequence Variations in PCSK9, Low LDL, and Protection against Coronary Heart Disease
+      url: https://www.nejm.org/doi/full/10.1056/NEJMoa054013
+      fields:
+        - summary
+        - findings[0]
+    - kind: database
+      label: PubMed abstract for Cohen et al. 2006
+      url: https://pubmed.ncbi.nlm.nih.gov/16554528/
+      fields:
+        - findings[0].notes
+    - kind: database
+      label: ClinVar RCV002381236
+      url: https://www.ncbi.nlm.nih.gov/clinvar/RCV002381236/
+      fields:
+        - summary
+        - alleles.alts
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs11591147
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - coordinates.grch37
+        - coordinates.grch38
+        - alleles
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs11591147
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs11591147
+      fields:
+        - coordinates.grch38
+        - alleles.kind

@@ -19,6 +19,7 @@ data aliases:
   *-nocram (quote or escape it: '*-nocram' or \*-nocram)
   23andme
   23andme_v5
+  23andme_r6
   carika
   sequencing
   sequencing-vcf
@@ -42,6 +43,8 @@ assay/panel aliases:
   longevity-zip
   prostate-prs
   prostate-prs-zip
+  pcsk9-ldl
+  pcsk9-ldl-zip
 
 examples:
   ./test-report.sh 23andme apol1
@@ -51,6 +54,7 @@ examples:
   ./test-report.sh 23andme_v5 clingen --no-open -- --html
   ./test-report.sh sequencing-vcf longevity --no-open
   ./test-report.sh 23andme_v5 glp1 --no-open -- --html
+  ./test-report.sh 23andme_v5 pcsk9-ldl --no-open -- --html
 USAGE
 }
 
@@ -61,6 +65,7 @@ list_aliases() {
 DATA_ALIASES=(
   23andme
   23andme_v5
+  23andme_r6
   carika
   sequencing
   sequencing-vcf
@@ -74,6 +79,7 @@ DATA_ALIASES=(
 DATA_ALIASES_NOCRAM=(
   23andme
   23andme_v5
+  23andme_r6
   carika
   sequencing-vcf
   sequencing-dv-vcf
@@ -161,6 +167,12 @@ resolve_manifest() {
     prostate-prs-zip)
       printf '%s\n' "$REPO/assays/risk/prostate-cancer-prs/prostate-cancer-prs.zip"
       ;;
+    pcsk9-ldl)
+      printf '%s\n' "$REPO/assays/risk/pcsk9-ldl/panel.yaml"
+      ;;
+    pcsk9-ldl-zip)
+      printf '%s\n' "$REPO/assays/risk/pcsk9-ldl/pcsk9-ldl.zip"
+      ;;
     *)
       if [[ -d "$value" ]]; then
         if [[ -f "$value/manifest.yaml" ]]; then
@@ -196,6 +208,10 @@ configure_data_alias() {
     23andme_v5)
       ROOT="/Users/madhavajay"
       INPUT_FILE="$REPO/test-data/23andme/v5/hu50B3F5/genome_hu50B3F5_v5_Full.zip"
+      DEFAULT_ANALYSIS_MAX_DURATION_MS="30000"
+      ;;
+    23andme_r6)
+      INPUT_FILE="$PRIVATE_DNA/23andme.com/imputed_genotype_data_r6_Madhava_Jay.zip"
       DEFAULT_ANALYSIS_MAX_DURATION_MS="30000"
       ;;
     carika)
