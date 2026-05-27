@@ -673,6 +673,11 @@ The generated release YAML records:
 - zip size
 - exact file list
 
+You can use the packaged assay in BioVault in two ways:
+
+- Drag `APOL1.zip` into `https://app.biovault.net`.
+- Upload either the package zip or the package files to a URL, then import the `manifest.yaml` URL or `.zip` URL into `https://app.biovault.net`.
+
 Dry run without writing a zip:
 
 ```bash

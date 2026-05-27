@@ -2,6 +2,11 @@
 
 Making Genomics Research into Secure Code that runs Everywhere.
 
+## Guides
+
+- [How to make a panel and an assay](docs/how-to-make-a-panel-and-assay.md): human-friendly tutorial for creating BioScript variants, assays, panels, tests, and package zips.
+- [Agent skill](docs/SKILL.md): concise agent-facing workflow for building and validating assays in this repository.
+
 ## Project Notice
 
 ExVitae is intended for assay development, validation, research, educational, and informational use. The materials and outputs in this repository are not medical advice, are not intended to diagnose, treat, cure, prevent, or monitor any disease or health condition, and should not be used for those purposes. This repository should only be used by researchers or by qualified, licensed physicians and other appropriately credentialed healthcare professionals acting within the scope of their training, licensure, and applicable law.
