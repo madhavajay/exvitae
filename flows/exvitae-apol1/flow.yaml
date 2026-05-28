@@ -1,0 +1,19 @@
+apiVersion: syftbox.openmined.org/v1alpha1
+kind: Flow
+metadata:
+  name: exvitae-apol1
+  version: 0.1.0
+spec:
+  inputs:
+    samplesheet:
+      type: List[GenotypeRecord]
+  steps:
+    - id: apol1
+      uses: ./
+      with:
+        participants: inputs.samplesheet
+      publish:
+        participant_reports: Directory(participants)
+        observations: File(observations.tsv)
+        reports: File(reports.jsonl)
+        analysis: File(analysis.jsonl)

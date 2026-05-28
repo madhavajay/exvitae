@@ -1,0 +1,49 @@
+apiVersion: syftbox.openmined.org/v1alpha1
+kind: Module
+metadata:
+  name: exvitae-apol1
+  version: 0.1.0
+  authors:
+    - madhava@openmined.org
+  description: Run the packaged ExVitae APOL1 BioScript risk report for genotype files.
+spec:
+  runner:
+    kind: nextflow
+    entrypoint: main.nf
+    template: dynamic-nextflow
+    image: ghcr.io/openmined/bioscript:0.2.0
+  inputs:
+    - name: participants
+      type: List[GenotypeRecord]
+      description: CSV/TSV with participant_id and genotype_file columns.
+      format:
+        kind: csv
+        mapping:
+          participant_id: participant_id
+          genotype_file: genotype_file
+  outputs:
+    - name: participant_reports
+      type: Directory
+      description: Per-participant BioScript report directories, each containing its own index.html and raw report files.
+      path: participants
+    - name: observations
+      type: File
+      description: Variant observation rows emitted by BioScript.
+      format:
+        kind: tsv
+      path: observations.tsv
+    - name: reports
+      type: File
+      description: Report records emitted by BioScript.
+      format:
+        kind: jsonl
+      path: reports.jsonl
+    - name: analysis
+      type: File
+      description: Analysis records emitted by BioScript.
+      format:
+        kind: jsonl
+      path: analysis.jsonl
+  parameters: []
+  assets:
+    - path: APOL1.zip
