@@ -2,7 +2,7 @@ apiVersion: syftbox.openmined.org/v1alpha1
 kind: Module
 metadata:
   name: exvitae-apol1
-  version: 0.1.0
+  version: 0.2.2
   authors:
     - madhava@openmined.org
   description: Run the packaged ExVitae APOL1 BioScript risk report for genotype files.
@@ -11,7 +11,7 @@ spec:
     kind: nextflow
     entrypoint: main.nf
     template: dynamic-nextflow
-    image: ghcr.io/openmined/bioscript:0.2.0
+    image: ghcr.io/openmined/bioscript:0.2.2
   inputs:
     - name: participants
       type: List[GenotypeRecord]

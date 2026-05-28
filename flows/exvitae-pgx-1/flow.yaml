@@ -2,14 +2,14 @@ apiVersion: syftbox.openmined.org/v1alpha1
 kind: Flow
 metadata:
   name: exvitae-pgx-1
-  version: 0.1.0
+  version: 0.2.2
 spec:
   inputs:
     samplesheet:
       type: List[GenotypeRecord]
   steps:
     - id: pgx_1
-      uses: ./
+      uses: ./module.yaml
       with:
         participants: inputs.samplesheet
       publish:
