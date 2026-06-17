@@ -24,7 +24,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: namespace-profile-default
+    runs-on: namespace-profile-linux-medium
     steps:
       - name: Checkout
         uses: actions/checkout@v4
