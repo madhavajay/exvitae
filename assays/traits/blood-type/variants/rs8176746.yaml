@@ -1,0 +1,47 @@
+name: blood-type-ABO-rs8176746-B-marker
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: ABO
+summary:
+  ABO coding marker used here as a common B-associated marker; the genomic T allele corresponds to the c.796C>A change
+  listed for ABO*B.01 in ISBT nomenclature.
+identifiers:
+  rsids:
+    - rs8176746
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "9"
+    pos: 136131322
+  grch38:
+    chrom: "9"
+    pos: 133255935
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - T
+  observed_alts:
+    - A
+    - C
+    - T
+findings:
+  - schema: bioscript:trait:1.0
+    alt: T
+    label: ABO B-associated marker
+    summary: Used with rs8176719 to classify common ABO A/O/B/AB patterns.
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP rs8176746
+      url: https://www.ncbi.nlm.nih.gov/snp/rs8176746
+      fields:
+        - identifiers.rsids
+        - coordinates
+        - alleles
+    - kind: database
+      label: ISBT Blood Group Database
+      url: https://blooddatabase.isbtweb.org/
+      fields:
+        - summary
+        - findings

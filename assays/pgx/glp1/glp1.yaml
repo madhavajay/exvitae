@@ -4,11 +4,11 @@ name: glp1
 label: GLP1 Genetic Predictors Test
 package_version: "1.0"
 kind: panel
-created_at: "2026-05-21T07:01:14Z"
+created_at: "2026-06-17T06:54:14Z"
 entrypoint: manifest.yaml
 artifact:
   path: glp1.zip
-  sha256: 40afd03cab9f697c932201e91c83e8834dcf6842c3070bcb9125ca45d918181c
+  sha256: ff6013f12d310bd8dd7d58636426d9dc99b293e84bd5784d00ca12e3ddd81728
   size_bytes: 7820
 contents:
   files:

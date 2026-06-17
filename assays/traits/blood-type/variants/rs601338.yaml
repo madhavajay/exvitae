@@ -1,0 +1,41 @@
+name: blood-type-FUT2-rs601338-secretor
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: FUT2
+summary: FUT2 c.428G>A W143X marker. A is the common loss-of-function non-secretor allele in many European-ancestry cohorts.
+identifiers:
+  rsids:
+    - rs601338
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "19"
+    pos: 49206674
+  grch38:
+    chrom: "19"
+    pos: 48703417
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+findings:
+  - schema: bioscript:trait:1.0
+    alt: A
+    label: FUT2 W143X non-secretor marker
+    summary: Homozygous A is interpreted as the common FUT2 non-secretor genotype for this marker.
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP rs601338
+      url: https://www.ncbi.nlm.nih.gov/snp/rs601338
+      fields:
+        - identifiers.rsids
+        - coordinates
+        - alleles
+    - kind: database
+      label: ISBT Blood Group Database
+      url: https://blooddatabase.isbtweb.org/
+      fields:
+        - summary
+        - findings

@@ -51,7 +51,12 @@ COPY . /app
 ENV BIOSCRIPT_BIN=/usr/local/bin/bioscript
 ENV UV_CACHE_DIR=/opt/uv-cache
 
-RUN uv run --with pyyaml python -c "import yaml"
+WORKDIR /app
+RUN uv run --with pyyaml python -c "import yaml" \
+    && BIOSCRIPT_BIN=/usr/local/bin/bioscript FORMATTER=/usr/bin/true ./build-assay-zips.sh --self-contained \
+    && mkdir -p /opt/exvitae/assays \
+    && find assays -name '*.zip' -type f -exec cp {} /opt/exvitae/assays/ \;
+COPY --chmod=0755 docker/exvitae-report /usr/local/bin/exvitae-report
 
 WORKDIR /workspace
 

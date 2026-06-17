@@ -1,0 +1,41 @@
+name: blood-type-ACKR1-rs12075-Fya-Fyb
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: ACKR1
+summary: Duffy Fy(a)/Fy(b) coding marker. G is treated as FY*A and A as FY*B in the common Duffy interpretation.
+identifiers:
+  rsids:
+    - rs12075
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "1"
+    pos: 159175354
+  grch38:
+    chrom: "1"
+    pos: 159205564
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+findings:
+  - schema: bioscript:trait:1.0
+    alt: A
+    label: Duffy FY*B marker
+    summary: Used with rs2814778 to predict common Duffy red-cell antigen patterns.
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP rs12075
+      url: https://www.ncbi.nlm.nih.gov/snp/rs12075
+      fields:
+        - identifiers.rsids
+        - coordinates
+        - alleles
+    - kind: database
+      label: ISBT Blood Group Database
+      url: https://blooddatabase.isbtweb.org/
+      fields:
+        - summary
+        - findings

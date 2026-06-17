@@ -1,0 +1,45 @@
+name: blood-type-SLC14A1-rs1058396-Kidd
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: SLC14A1
+summary: Kidd JK*01/JK*02 marker. G is treated as JK*01/Jk(a) and A as JK*02/Jk(b) in the common Kidd interpretation.
+identifiers:
+  rsids:
+    - rs1058396
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "18"
+    pos: 43319519
+  grch38:
+    chrom: "18"
+    pos: 45739554
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+  observed_alts:
+    - A
+    - C
+    - T
+findings:
+  - schema: bioscript:trait:1.0
+    alt: A
+    label: Kidd JK*02 marker
+    summary: Used to predict the common Jk(a)/Jk(b) phenotype.
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP rs1058396
+      url: https://www.ncbi.nlm.nih.gov/snp/rs1058396
+      fields:
+        - identifiers.rsids
+        - coordinates
+        - alleles
+    - kind: database
+      label: ISBT Blood Group Database
+      url: https://blooddatabase.isbtweb.org/
+      fields:
+        - summary
+        - findings

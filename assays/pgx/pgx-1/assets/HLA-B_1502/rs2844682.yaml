@@ -1,0 +1,50 @@
+name: HLA-B*1502-pgx-rs2844682
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: HLA-B*1502
+summary: HLA-B*1502 pharmacogenomics panel entry for rs2844682.
+identifiers:
+  rsids:
+    - rs2844682
+  aliases:
+    - rs60077366
+    - rs115766652
+    - rs117711722
+coordinates:
+  grch37:
+    chrom: "6"
+    pos: 30946148
+  grch38:
+    chrom: "6"
+    pos: 30978371
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+    - C
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs2844682
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2844682
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2844682
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: PharmGKB/ClinPGx via exr pgx-lookup
+      url: https://www.pharmgkb.org/gene/HLA-B*1502
+      fields:
+        - summary

@@ -1,0 +1,52 @@
+name: HLA-B*5801-pgx-rs9263726
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: HLA-B*5801
+summary: HLA-B*5801 pharmacogenomics panel entry for rs9263726. dbSNP/Ensembl lookup reports the physical locus gene as PSORS1C1.
+identifiers:
+  rsids:
+    - rs9263726
+  aliases:
+    - rs52792269
+    - rs61603795
+    - rs112940667
+    - rs114541727
+    - rs117673022
+    - rs186562789
+coordinates:
+  grch37:
+    chrom: "6"
+    pos: 31106499
+  grch38:
+    chrom: "6"
+    pos: 31138722
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+    - C
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs9263726
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs9263726
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs9263726
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: PharmGKB/ClinPGx via exr pgx-lookup
+      url: https://www.pharmgkb.org/gene/HLA-B*5801
+      fields:
+        - summary

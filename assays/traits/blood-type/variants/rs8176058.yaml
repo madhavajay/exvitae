@@ -1,0 +1,47 @@
+name: blood-type-KEL-rs8176058-K-k
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: KEL
+summary:
+  Kell K/k marker. The genomic A allele corresponds to the KEL*01 c.578C>T K antigen marker; genomic G corresponds to
+  the common KEL*02 k allele in this simplified rule set.
+identifiers:
+  rsids:
+    - rs8176058
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "7"
+    pos: 142655008
+  grch38:
+    chrom: "7"
+    pos: 142957921
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - A
+  observed_alts:
+    - A
+    - C
+    - T
+findings:
+  - schema: bioscript:trait:1.0
+    alt: A
+    label: Kell K antigen marker
+    summary: Used to predict the common KEL*01/KEL*02 K/k phenotype.
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP rs8176058
+      url: https://www.ncbi.nlm.nih.gov/snp/rs8176058
+      fields:
+        - identifiers.rsids
+        - coordinates
+        - alleles
+    - kind: database
+      label: ISBT Blood Group Database
+      url: https://blooddatabase.isbtweb.org/
+      fields:
+        - summary
+        - findings

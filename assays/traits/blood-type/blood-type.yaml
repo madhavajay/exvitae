@@ -1,0 +1,25 @@
+schema: bioscript:package-release:1.0
+version: "1.0"
+name: blood-type
+label: Blood Type Research Assay
+package_version: "1.0"
+kind: panel
+created_at: "2026-06-17T06:54:25Z"
+entrypoint: manifest.yaml
+artifact:
+  path: blood-type.zip
+  sha256: ef59cd23c8aaf8677e8b329cf282ed2cd1113e4e86901678ff84f88efdc1f7a7
+  size_bytes: 10050
+contents:
+  files:
+    - assay.yaml
+    - blood_type.py
+    - manifest.yaml
+    - variants/rs1058396.yaml
+    - variants/rs12075.yaml
+    - variants/rs2814778.yaml
+    - variants/rs590787.yaml
+    - variants/rs601338.yaml
+    - variants/rs8176058.yaml
+    - variants/rs8176719.yaml
+    - variants/rs8176746.yaml

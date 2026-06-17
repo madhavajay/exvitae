@@ -1,0 +1,46 @@
+name: blood-type-ABO-rs8176719-261delG
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: ABO
+summary:
+  ABO common O allele marker. The hg38 reference is the common O deletion state; non-O alleles carry an inserted C at
+  NC_000009.12:133257521T>TC.
+identifiers:
+  rsids:
+    - rs8176719
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "9"
+    pos: 136132908
+  grch38:
+    chrom: "9"
+    pos: 133257521
+alleles:
+  kind: insertion
+  ref: T
+  alts:
+    - TC
+  insertion_sequence: C
+  notes:
+    - The no-insertion state corresponds to the common ABO*O.01 c.261delG marker.
+findings:
+  - schema: bioscript:trait:1.0
+    alt: TC
+    label: ABO non-O insertion marker
+    summary: Presence of the insertion supports an intact non-O ABO allele at the common c.261 site.
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP rs8176719
+      url: https://www.ncbi.nlm.nih.gov/snp/rs8176719
+      fields:
+        - identifiers.rsids
+        - coordinates
+        - alleles
+    - kind: database
+      label: ISBT Blood Group Database
+      url: https://blooddatabase.isbtweb.org/
+      fields:
+        - summary
+        - findings

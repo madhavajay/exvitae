@@ -1,0 +1,18 @@
+schema: bioscript:panel:1.0
+version: "1.0"
+name: blood-type
+label: Blood Type Research Assay
+summary:
+  Exploratory blood-group trait panel for ABO, RhD proxy, Kell K/k, Duffy, Kidd, and FUT2 secretor status from selected
+  common markers. These genotype-derived calls are not clinical blood typing.
+tags:
+  - type:trait
+  - topic:blood-type
+package:
+  schema: bioscript:package:1.0
+  publish: true
+  artifact: blood-type.zip
+members:
+  - kind: assay
+    path: assay.yaml
+    version: "1.0"

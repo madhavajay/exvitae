@@ -1,0 +1,111 @@
+schema: bioscript:assay:1.0
+version: "1.0"
+name: hla_proxy_combined_genotype
+label: HLA Proxy Marker Combined Genotype
+summary:
+  Descriptive assay that emits a stable combined genotype key for five HLA proxy markers. These SNPs are tag/proxy
+  markers and are not treated as definitive HLA allele typing because linkage disequilibrium and predictive performance
+  vary by ancestry and marker.
+tags:
+  - type:pgx
+  - gene:HLA
+  - method:proxy-marker
+support:
+  input:
+    - cram
+    - vcf
+    - snp:23andme
+    - snp:23andme:v2
+    - snp:23andme:v3
+    - snp:23andme:v4
+    - snp:23andme:v5
+    - snp:ancestrydna
+    - snp:dynamicdna
+    - snp:genesforgood
+members:
+  - kind: variant
+    path: ../HLA-A_3101/rs1061235.yaml
+    version: "1.0"
+  - kind: variant
+    path: ../HLA-B_1502/rs3909184.yaml
+    version: "1.0"
+  - kind: variant
+    path: ../HLA-B_1502/rs2844682.yaml
+    version: "1.0"
+  - kind: variant
+    path: ../HLA-B_5701/rs2395029.yaml
+    version: "1.0"
+  - kind: variant
+    path: ../HLA-B_5801/rs9263726.yaml
+    version: "1.0"
+analyses:
+  - id: hla_proxy_combined
+    kind: bioscript
+    path: hla_proxy.py
+    output_format: tsv
+    label: HLA proxy marker combined genotype
+    derived_from:
+      - ../HLA-A_3101/rs1061235.yaml
+      - ../HLA-B_1502/rs3909184.yaml
+      - ../HLA-B_1502/rs2844682.yaml
+      - ../HLA-B_5701/rs2395029.yaml
+      - ../HLA-B_5801/rs9263726.yaml
+    emits:
+      - key: hla_proxy_status
+        label: HLA proxy status
+        value_type: string
+        format: badge
+      - key: hla_proxy_key
+        label: HLA proxy combined genotype key
+        value_type: string
+      - key: hla_proxy_observed_marker_count
+        label: HLA proxy observed marker count
+        value_type: integer
+      - key: rs1061235
+        label: rs1061235 genotype
+        value_type: string
+      - key: rs3909184
+        label: rs3909184 genotype
+        value_type: string
+      - key: rs2844682
+        label: rs2844682 genotype
+        value_type: string
+      - key: rs2395029
+        label: rs2395029 genotype
+        value_type: string
+      - key: rs9263726
+        label: rs9263726 genotype
+        value_type: string
+    logic:
+      description: >
+        The script normalizes each observed SNP genotype by removing separators and sorting allele characters, so TA and AT
+        are emitted as AT. It then concatenates the five ordered marker calls into a stable key such as
+        rs1061235_AT_rs3909184_CG_rs2844682_AG_rs2395029_GT_rs9263726_AG. Missing markers are retained as
+        rsid_missing so cohort/group statistics can count complete and incomplete keys deterministically. No phasing or
+        direct HLA allele call is inferred from this key.
+provenance:
+  sources:
+    - kind: paper
+      label: HLA-A*31:01 proxy SNV performance varies by population
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9046591/
+      fields:
+        - summary
+        - analyses[0].logic
+    - kind: paper
+      label: rs2844682 and rs3909184 are not reliable HLA-B*15:02 identifiers
+      url: https://pubmed.ncbi.nlm.nih.gov/26036218/
+      fields:
+        - summary
+        - analyses[0].logic
+    - kind: paper
+      label: rs2395029 can tag HLA-B*57:01 in some populations but is not universal
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3700656/
+      fields:
+        - summary
+        - analyses[0].logic
+    - kind: paper
+      label: rs9263726 HLA-B*58:01 surrogate performance is population-dependent
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6136375/
+      fields:
+        - summary
+        - analyses[0].logic

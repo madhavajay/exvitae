@@ -96,6 +96,9 @@ members:
   - kind: variant
     path: assets/GRIN2B/rs2058878.yaml
     version: "1.0"
+  - kind: assay
+    path: assets/HLA_PROXY/assay.yaml
+    version: "1.0"
   - kind: variant
     path: assets/HTR2A/rs7997012.yaml
     version: "1.0"

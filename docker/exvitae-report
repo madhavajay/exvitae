@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat >&2 <<'EOF'
+usage: exvitae-report <assay-id|zip-path> [bioscript report args...]
+
+Known assay ids:
+  apol1
+  pgx-1
+  glp1
+  longevity
+  pcsk9-ldl
+  prostate-cancer-prs
+  thalassemia
+EOF
+}
+
+if [[ $# -lt 1 ]]; then
+  usage
+  exit 2
+fi
+
+ASSAY="$1"
+shift
+
+case "$ASSAY" in
+  apol1|APOL1)
+    PACKAGE="/opt/exvitae/assays/APOL1.zip"
+    ;;
+  pgx-1|pgx_1|pgx)
+    PACKAGE="/opt/exvitae/assays/pgx-1.zip"
+    ;;
+  glp1)
+    PACKAGE="/opt/exvitae/assays/glp1.zip"
+    ;;
+  longevity)
+    PACKAGE="/opt/exvitae/assays/longevity.zip"
+    ;;
+  pcsk9-ldl)
+    PACKAGE="/opt/exvitae/assays/pcsk9-ldl.zip"
+    ;;
+  prostate-cancer-prs|prostate-prs)
+    PACKAGE="/opt/exvitae/assays/prostate-cancer-prs.zip"
+    ;;
+  thalassemia)
+    PACKAGE="/opt/exvitae/assays/thalassemia.zip"
+    ;;
+  *.zip|/*)
+    PACKAGE="$ASSAY"
+    ;;
+  *)
+    echo "unknown assay id: $ASSAY" >&2
+    usage
+    exit 2
+    ;;
+esac
+
+if [[ ! -f "$PACKAGE" ]]; then
+  echo "assay package not found: $PACKAGE" >&2
+  exit 1
+fi
+
+exec bs report "$PACKAGE" "$@"

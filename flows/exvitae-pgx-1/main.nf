@@ -2,6 +2,27 @@
 
 nextflow.enable.dsl=2
 
+def EXVITAE_CONTAINER = 'ghcr.io/openmined/exvitae:0.2.3'
+
+def countryValue(record) {
+    def facets = record.facets ?: [:]
+    return (
+        record.country ?:
+        record.Country ?:
+        record.country_code ?:
+        record.countryCode ?:
+        facets.country ?:
+        facets.Country ?:
+        facets.country_code ?:
+        facets.countryCode ?:
+        ''
+    ).toString().trim()
+}
+
+def shellQuote(value) {
+    return "'" + value.toString().replace("'", "'\"'\"'") + "'"
+}
+
 def envInt = { name, fallback ->
     def raw = System.getenv(name)
     if (raw && raw.isInteger()) {
@@ -19,28 +40,24 @@ workflow USER {
         participants
 
     main:
-        def assetsDir = context.assets_dir
-        if (!assetsDir) {
-            throw new IllegalStateException("Missing assets directory in context")
-        }
-
-        def assayPackage = file("${assetsDir}/pgx-1.zip")
+        def assayPackage = params.assay_package ?: '/opt/exvitae/assays/pgx-1.zip'
         def assayPackageCh = Channel.value(assayPackage)
         def participantItems = participants.map { record ->
-            tuple(record.participant_id.toString(), file(record.genotype_file))
+            tuple(record.participant_id.toString(), countryValue(record), file(record.genotype_file))
         }
         def perParticipantReports = exvitae_pgx_report(assayPackageCh, participantItems)
         def report_outputs = aggregate_reports(perParticipantReports.report_dir.collect())
 
     emit:
         participant_reports = report_outputs.participant_reports
+        country_aggregates = report_outputs.country_aggregates
         observations = report_outputs.observations
         reports = report_outputs.reports
         analysis = report_outputs.analysis
 }
 
 process exvitae_pgx_report {
-    container 'ghcr.io/openmined/bioscript:0.2.2'
+    container EXVITAE_CONTAINER
     stageInMode 'copy'
     tag { participant_id }
     errorStrategy { params.nextflow.error_strategy }
@@ -48,21 +65,23 @@ process exvitae_pgx_report {
     maxForks REPORT_MAX_FORKS
 
     input:
-        path assay_package
-        tuple val(participant_id), path(input_file)
+        val assay_package
+        tuple val(participant_id), val(country), path(input_file)
 
     output:
         path "${participant_id}", emit: report_dir
 
     script:
     """
-    bs report "\${PWD}/${assay_package}" \
+    bs report "${assay_package}" \
       --root "\${PWD}" \
       --input-file "\${PWD}/${input_file}" \
       --output-dir "${participant_id}" \
       --detect-sex \
       --html \
       --analysis-max-duration-ms 30000
+    { printf 'participant_id\\tcountry\\n'; printf '%s\\t%s\\n' ${shellQuote(participant_id)} ${shellQuote(country)}; } \
+      > "${participant_id}/metadata.tsv"
     """
 }
 
@@ -79,40 +98,100 @@ process aggregate_reports {
         path "observations.tsv", emit: observations
         path "reports.jsonl", emit: reports
         path "analysis.jsonl", emit: analysis
+        path "countries", emit: country_aggregates
 
     script:
     """
     set -euo pipefail
 
-    mkdir -p participants
-    : > reports.jsonl
-    : > analysis.jsonl
-    first_observations=1
+    python3 - <<'PY'
+import re
+import shutil
+from pathlib import Path
 
-    for report_dir in \$(find . -maxdepth 1 -mindepth 1 -type d ! -name participants | sort); do
-      name="\$(basename "\${report_dir}")"
-      cp -R "\${report_dir}" "participants/\${name}"
+OBS_HEADER = "participant_id\\tassay_id\\tassay_version\\tvariant_key\\trsid\\tassembly\\tchrom\\tpos_start\\tpos_end\\tref\\talt\\tkind\\tmatch_status\\tcoverage_status\\tcall_status\\tgenotype\\tgenotype_display\\tzygosity\\tref_count\\talt_count\\tdepth\\tgenotype_quality\\tallele_balance\\toutcome\\tevidence_type\\tevidence_raw\\tfacets\\n"
 
-      if [ -f "\${report_dir}/observations.tsv" ]; then
-        if [ "\${first_observations}" = "1" ]; then
-          cat "\${report_dir}/observations.tsv" > observations.tsv
-          first_observations=0
-        else
-          tail -n +2 "\${report_dir}/observations.tsv" >> observations.tsv
-        fi
-      fi
+def safe_id(value):
+    safe = re.sub(r"[^A-Za-z0-9_.-]+", "_", value.strip())
+    return safe.strip("._") or "unknown"
 
-      if [ -f "\${report_dir}/reports.jsonl" ]; then
-        cat "\${report_dir}/reports.jsonl" >> reports.jsonl
-      fi
+def read_country(report_dir):
+    path = report_dir / "metadata.tsv"
+    if not path.is_file():
+        return ""
+    for line in path.read_text(encoding="utf-8").splitlines()[1:2]:
+        parts = line.split("\\t")
+        return parts[1].strip() if len(parts) > 1 else ""
+    return ""
 
-      if [ -f "\${report_dir}/analysis.jsonl" ]; then
-        cat "\${report_dir}/analysis.jsonl" >> analysis.jsonl
-      fi
-    done
+report_dirs = sorted(
+    path for path in Path(".").iterdir()
+    if path.is_dir() and path.name not in {"participants", "countries"}
+)
 
-    if [ ! -f observations.tsv ]; then
-      printf "participant_id\\tassay_id\\tassay_version\\tvariant_key\\trsid\\tassembly\\tchrom\\tpos_start\\tpos_end\\tref\\talt\\tkind\\tmatch_status\\tcoverage_status\\tcall_status\\tgenotype\\tgenotype_display\\tzygosity\\tref_count\\talt_count\\tdepth\\tgenotype_quality\\tallele_balance\\toutcome\\tevidence_type\\tevidence_raw\\tfacets\\n" > observations.tsv
-    fi
+Path("participants").mkdir(exist_ok=True)
+Path("countries").mkdir(exist_ok=True)
+reports = Path("reports.jsonl").open("w", encoding="utf-8")
+analysis = Path("analysis.jsonl").open("w", encoding="utf-8")
+obs = Path("observations.tsv").open("w", encoding="utf-8")
+obs.write(OBS_HEADER)
+country_obs_started = {}
+
+for report_dir in report_dirs:
+    name = report_dir.name
+    target = Path("participants") / name
+    if target.exists():
+        shutil.rmtree(target)
+    shutil.copytree(report_dir, target)
+
+    obs_path = report_dir / "observations.tsv"
+    if obs_path.is_file():
+        lines = obs_path.read_text(encoding="utf-8").splitlines()
+        for line in lines[1:]:
+            if line:
+                obs.write(line + "\\n")
+
+    for source, handle in ((report_dir / "reports.jsonl", reports), (report_dir / "analysis.jsonl", analysis)):
+        if source.is_file():
+            text = source.read_text(encoding="utf-8")
+            if text:
+                handle.write(text)
+                if not text.endswith("\\n"):
+                    handle.write("\\n")
+
+    country = read_country(report_dir)
+    if not country:
+        continue
+    country_root = Path("countries") / safe_id(country)
+    country_participants = country_root / "participants"
+    country_participants.mkdir(parents=True, exist_ok=True)
+    country_target = country_participants / name
+    if country_target.exists():
+        shutil.rmtree(country_target)
+    shutil.copytree(report_dir, country_target)
+
+    country_obs = country_root / "observations.tsv"
+    if not country_obs_started.get(country_root):
+        country_obs.write_text(OBS_HEADER, encoding="utf-8")
+        country_obs_started[country_root] = True
+    if obs_path.is_file():
+        with country_obs.open("a", encoding="utf-8") as handle:
+            for line in obs_path.read_text(encoding="utf-8").splitlines()[1:]:
+                if line:
+                    handle.write(line + "\\n")
+    for filename in ("reports.jsonl", "analysis.jsonl"):
+        source = report_dir / filename
+        if source.is_file():
+            text = source.read_text(encoding="utf-8")
+            if text:
+                with (country_root / filename).open("a", encoding="utf-8") as handle:
+                    handle.write(text)
+                    if not text.endswith("\\n"):
+                        handle.write("\\n")
+
+reports.close()
+analysis.close()
+obs.close()
+PY
     """
 }

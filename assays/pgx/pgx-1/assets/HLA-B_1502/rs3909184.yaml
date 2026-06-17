@@ -1,0 +1,48 @@
+name: HLA-B*1502-pgx-rs3909184
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: HLA-B*1502
+summary: HLA-B*1502 pharmacogenomics panel entry for rs3909184. dbSNP/Ensembl lookup reports the physical locus gene as FLOT1.
+identifiers:
+  rsids:
+    - rs3909184
+  aliases:
+    - rs115153408
+    - rs118099270
+coordinates:
+  grch37:
+    chrom: "6"
+    pos: 30699384
+  grch38:
+    chrom: "6"
+    pos: 30731607
+alleles:
+  kind: snv
+  ref: G
+  alts:
+    - C
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs3909184
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs3909184
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs3909184
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: PharmGKB/ClinPGx via exr pgx-lookup
+      url: https://www.pharmgkb.org/gene/HLA-B*1502
+      fields:
+        - summary

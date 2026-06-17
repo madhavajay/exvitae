@@ -1,0 +1,49 @@
+name: HLA-B*5701-pgx-rs2395029
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: HLA-B*5701
+summary: HLA-B*5701 pharmacogenomics panel entry for rs2395029. dbSNP/Ensembl lookup reports the physical locus gene as HCP5.
+identifiers:
+  rsids:
+    - rs2395029
+  aliases:
+    - rs3997925
+    - rs60378661
+    - rs111645003
+    - rs114783691
+coordinates:
+  grch37:
+    chrom: "6"
+    pos: 31431780
+  grch38:
+    chrom: "6"
+    pos: 31464003
+alleles:
+  kind: snv
+  ref: T
+  alts:
+    - G
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs2395029
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2395029
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2395029
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: PharmGKB/ClinPGx via exr pgx-lookup
+      url: https://www.pharmgkb.org/gene/HLA-B*5701
+      fields:
+        - summary

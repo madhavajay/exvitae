@@ -1,0 +1,46 @@
+name: blood-type-ACKR1-rs2814778-erythroid-silent
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: ACKR1
+summary:
+  ACKR1 erythroid promoter marker. The C allele is the c.-67T>C GATA-box change associated with erythroid Duffy-null
+  expression when homozygous.
+identifiers:
+  rsids:
+    - rs2814778
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "1"
+    pos: 159174683
+  grch38:
+    chrom: "1"
+    pos: 159204893
+alleles:
+  kind: snv
+  ref: T
+  alts:
+    - C
+  observed_alts:
+    - A
+    - C
+findings:
+  - schema: bioscript:trait:1.0
+    alt: C
+    label: Erythroid Duffy-silent promoter marker
+    summary: Homozygous C is interpreted as a common erythroid Duffy-null promoter genotype.
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP rs2814778
+      url: https://www.ncbi.nlm.nih.gov/snp/rs2814778
+      fields:
+        - identifiers.rsids
+        - coordinates
+        - alleles
+    - kind: database
+      label: ISBT Blood Group Database
+      url: https://blooddatabase.isbtweb.org/
+      fields:
+        - summary
+        - findings

@@ -1,0 +1,50 @@
+name: HLA-A*3101-pgx-rs1061235
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: HLA-A*3101
+summary: HLA-A*3101 pharmacogenomics panel entry for rs1061235. dbSNP/Ensembl lookup reports the physical locus gene as HLA-A.
+identifiers:
+  rsids:
+    - rs1061235
+  aliases:
+    - rs3173409
+    - rs3823348
+    - rs41559417
+    - rs114782388
+    - rs117115314
+coordinates:
+  grch37:
+    chrom: "6"
+    pos: 29913298
+  grch38:
+    chrom: "6"
+    pos: 29945521
+alleles:
+  kind: snv
+  ref: A
+  alts:
+    - T
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP / NCBI variation services via exr rsid-lookup --store
+      url: https://www.ncbi.nlm.nih.gov/snp/rs1061235
+      fields:
+        - identifiers.rsids
+        - identifiers.aliases
+        - alleles
+    - kind: database
+      label: Ensembl GRCh37 via exr rsid-lookup --store
+      url: https://grch37.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1061235
+      fields:
+        - coordinates.grch37
+    - kind: database
+      label: Ensembl GRCh38 via exr rsid-lookup --store
+      url: https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1061235
+      fields:
+        - coordinates.grch38
+    - kind: database
+      label: PharmGKB/ClinPGx via exr pgx-lookup
+      url: https://www.pharmgkb.org/gene/HLA-A*3101
+      fields:
+        - summary

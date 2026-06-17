@@ -1,0 +1,41 @@
+name: blood-type-RHD-rs590787-proxy
+version: "1.0"
+schema: bioscript:variant:1.0
+gene: RHD
+summary: RHD-region marker used only as a low-confidence RhD presence proxy. This marker is not a definitive RhD genotype.
+identifiers:
+  rsids:
+    - rs590787
+  aliases: []
+coordinates:
+  grch37:
+    chrom: "1"
+    pos: 25629943
+  grch38:
+    chrom: "1"
+    pos: 25303452
+alleles:
+  kind: snv
+  ref: A
+  alts:
+    - C
+    - G
+findings:
+  - schema: bioscript:trait:1.0
+    alt: C
+    label: RhD proxy marker
+    summary: Alternate alleles at this RHD-region site are interpreted only as part of a low-confidence proxy rule.
+  - schema: bioscript:trait:1.0
+    alt: G
+    label: RhD proxy marker
+    summary: Alternate alleles at this RHD-region site are interpreted only as part of a low-confidence proxy rule.
+provenance:
+  sources:
+    - kind: database
+      label: dbSNP rs590787
+      url: https://www.ncbi.nlm.nih.gov/snp/rs590787
+      fields:
+        - identifiers.rsids
+        - coordinates
+        - alleles
+        - gene

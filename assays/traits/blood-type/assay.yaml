@@ -1,0 +1,117 @@
+schema: bioscript:assay:1.0
+version: "1.0"
+name: blood_type
+label: Blood Type Research Interpretation
+summary:
+  Combines common blood-group markers into exploratory ABO, RhD proxy, Kell, Duffy, Kidd, and FUT2 secretor predictions.
+  Results are for research and education only and do not replace serologic blood typing or clinical molecular testing.
+tags:
+  - type:trait
+  - topic:blood-type
+  - gene:ABO
+  - gene:RHD
+  - gene:KEL
+  - gene:ACKR1
+  - gene:SLC14A1
+  - gene:FUT2
+members:
+  - kind: variant
+    path: variants/rs8176719.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs8176746.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs590787.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs8176058.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs12075.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs2814778.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs1058396.yaml
+    version: "1.0"
+  - kind: variant
+    path: variants/rs601338.yaml
+    version: "1.0"
+analyses:
+  - id: blood_type_prediction
+    kind: bioscript
+    path: blood_type.py
+    output_format: tsv
+    label: Blood type marker predictions
+    derived_from:
+      - variants/rs8176719.yaml
+      - variants/rs8176746.yaml
+      - variants/rs590787.yaml
+      - variants/rs8176058.yaml
+      - variants/rs12075.yaml
+      - variants/rs2814778.yaml
+      - variants/rs1058396.yaml
+      - variants/rs601338.yaml
+    emits:
+      - key: system
+        label: Blood group system
+        value_type: string
+      - key: phenotype
+        label: Predicted phenotype
+        value_type: string
+      - key: genotype_interpretation
+        label: Genotype interpretation
+        value_type: string
+      - key: confidence
+        label: Confidence
+        value_type: string
+      - key: genotypes
+        label: Marker genotypes
+        value_type: string
+      - key: limitations
+        label: Limitations
+        value_type: string
+    logic:
+      source:
+        name: ISBT Blood Group Database and dbSNP marker records
+        url: https://blooddatabase.isbtweb.org/
+      description: >
+        The analysis reads the member observation rows, normalizes unphased SNP and insertion/deletion genotype strings,
+        and applies explicit common-marker rules. ABO is based on rs8176719, the common ABO*O.01 261delG marker, and
+        rs8176746, a B-associated ABO coding marker. RhD is reported only as a low-confidence rs590787 proxy because the
+        RHD/RHCE region requires copy-number and hybrid-allele assessment for reliable typing. Kell, Duffy, Kidd, and FUT2
+        use common marker mappings documented in ISBT/dbSNP records.
+provenance:
+  sources:
+    - kind: database
+      label: ISBT Blood Group Database
+      url: https://blooddatabase.isbtweb.org/
+      fields:
+        - summary
+        - analyses[0].logic
+    - kind: database
+      label: dbSNP RefSNP records
+      url: https://www.ncbi.nlm.nih.gov/snp/
+      fields:
+        - members
+        - analyses[0].logic
+findings:
+  - schema: bioscript:trait:1.0
+    id: blood_type_research_only
+    label: Blood type genotype-derived research result
+    binding:
+      source: analysis
+      analysis_id: blood_type_prediction
+      key: confidence
+      operator: in
+      values:
+        - high
+        - moderate
+        - low
+    summary: Genotype-derived exploratory blood-group result.
+    notes:
+      These predictions are not clinical blood typing. RhD is a population- and platform-dependent proxy, mostly useful in
+      European-ancestry contexts, and does not detect RHD deletion structure, RHD-RHCE hybrids, weak D, partial D, or DEL
+      alleles.

@@ -4,11 +4,11 @@ name: thalassemia
 label: Thalassemia Variant Classifier
 package_version: "1.0"
 kind: panel
-created_at: "2026-05-15T04:29:24Z"
+created_at: "2026-06-17T06:54:24Z"
 entrypoint: manifest.yaml
 artifact:
   path: thalassemia.zip
-  sha256: a7029ad27e043742db3f6f4fa32c6999c07f2474200787beb2738090d9e711a1
+  sha256: d3a38c4a341ce875df55d30c6bece46ada17d5718259519420e0eaf3156b3c78
   size_bytes: 168222
 contents:
   files:

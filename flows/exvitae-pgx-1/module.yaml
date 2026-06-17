@@ -2,7 +2,7 @@ apiVersion: syftbox.openmined.org/v1alpha1
 kind: Module
 metadata:
   name: exvitae-pgx-1
-  version: 0.2.2
+  version: 0.2.3
   authors:
     - madhava@openmined.org
   description: Run the packaged ExVitae PGX-1 BioScript report for genotype files.
@@ -11,11 +11,11 @@ spec:
     kind: nextflow
     entrypoint: main.nf
     template: dynamic-nextflow
-    image: ghcr.io/openmined/bioscript:0.2.2
+    image: ghcr.io/openmined/exvitae:0.2.3
   inputs:
     - name: participants
       type: List[GenotypeRecord]
-      description: CSV/TSV with participant_id and genotype_file columns.
+      description: CSV/TSV with participant_id and genotype_file columns, plus an optional country facet for grouped aggregates.
       format:
         kind: csv
         mapping:
@@ -26,6 +26,10 @@ spec:
       type: Directory
       description: Per-participant BioScript report directories, each containing its own index.html and raw report files.
       path: participants
+    - name: country_aggregates
+      type: Directory
+      description: Optional per-country aggregate directories. Empty when no country facet is supplied.
+      path: countries
     - name: observations
       type: File
       description: Variant observation rows emitted by BioScript.
@@ -44,6 +48,8 @@ spec:
       format:
         kind: jsonl
       path: analysis.jsonl
-  parameters: []
-  assets:
-    - path: pgx-1.zip
+  parameters:
+    - name: assay_package
+      type: String
+      default: /opt/exvitae/assays/pgx-1.zip
+      description: Absolute path to the PGX-1 package inside the ExVitae container.
