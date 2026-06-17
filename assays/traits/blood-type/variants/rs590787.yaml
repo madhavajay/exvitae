@@ -18,17 +18,15 @@ alleles:
   kind: snv
   ref: A
   alts:
+    - G
+  observed_alts:
     - C
     - G
 findings:
   - schema: bioscript:trait:1.0
-    alt: C
-    label: RhD proxy marker
-    summary: Alternate alleles at this RHD-region site are interpreted only as part of a low-confidence proxy rule.
-  - schema: bioscript:trait:1.0
     alt: G
     label: RhD proxy marker
-    summary: Alternate alleles at this RHD-region site are interpreted only as part of a low-confidence proxy rule.
+    summary: The G allele at this RHD-region site is interpreted only as part of a low-confidence proxy rule.
 provenance:
   sources:
     - kind: database

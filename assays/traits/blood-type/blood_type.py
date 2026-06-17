@@ -25,10 +25,24 @@ def observation_for_rsid(rows, rsid):
     return None
 
 
+def has_allele_letters(genotype):
+    if genotype is None:
+        return False
+    for ch in genotype.upper():
+        if ch in "ACGTDI":
+            return True
+    return False
+
+
 def raw_genotype(row):
     if row is None:
         return "missing"
-    genotype = row.get("genotype_display") or row.get("genotype") or ""
+    genotype = row.get("genotype") or ""
+    display = row.get("genotype_display") or ""
+    if has_allele_letters(display) and not has_allele_letters(genotype):
+        genotype = display
+    elif genotype == "" and display != "":
+        genotype = display
     if genotype == "" or genotype == "./." or genotype == ".|.":
         return "missing"
     return genotype
@@ -86,15 +100,22 @@ def normalize_snv_genotype(genotype):
 
 def insertion_state(row, genotype):
     text = normalize_genotype(genotype)
-    count = alt_count(row)
 
     if text in ("DD", "DI", "II"):
         return text
-    if count == 0:
+    if text == "TT":
         return "DD"
-    if count == 1:
+    if text == "TTC":
         return "DI"
-    if count == 2:
+    if text == "CT" or text == "TCTC":
+        return "II"
+
+    zygosity = row.get("zygosity") or ""
+    if zygosity == "hom_ref":
+        return "DD"
+    if zygosity == "het":
+        return "DI"
+    if zygosity == "hom_alt":
         return "II"
 
     if "/" in genotype or "|" in genotype:
@@ -115,6 +136,14 @@ def insertion_state(row, genotype):
             if insertion_count == 2:
                 return "II"
 
+    count = alt_count(row)
+    if count == 0:
+        return "DD"
+    if count == 1:
+        return "DI"
+    if count == 2:
+        return "II"
+
     return ""
 
 
@@ -122,6 +151,7 @@ def make_result(system, phenotype, genotype_interpretation, confidence, genotype
     return {
         "participant_id": participant_id,
         "system": system,
+        "blood_type": "",
         "phenotype": phenotype,
         "genotype_interpretation": genotype_interpretation,
         "confidence": confidence,
@@ -130,6 +160,45 @@ def make_result(system, phenotype, genotype_interpretation, confidence, genotype
         "limitations": limitations,
         "notes": GENERAL_NOTE,
     }
+
+
+def blood_type_summary(abo_result, rhd_result):
+    abo = abo_result["phenotype"]
+    rhd = rhd_result["phenotype"]
+    genotypes = abo_result["genotypes"] + "; " + rhd_result["genotypes"]
+    limitations = (
+        "Combined ABO/RhD summary uses the common-marker ABO prediction plus the low-confidence rs590787 RhD proxy. "
+        "This is not clinical blood typing and should not be used for transfusion, pregnancy, donor, or medication safety decisions."
+    )
+
+    if abo not in ("A", "B", "AB", "O"):
+        blood_type = "Unresolved"
+        phenotype = "Unresolved ABO/RhD summary"
+        interpretation = "ABO was unresolved, so a combined ABO/RhD label was not emitted."
+    elif rhd == "Likely RhD positive proxy":
+        blood_type = abo + "+ (RhD proxy)"
+        phenotype = blood_type
+        interpretation = "Predicted " + abo + " with a low-confidence RhD-positive proxy."
+    elif rhd == "Possibly RhD negative proxy":
+        blood_type = abo + "- (RhD proxy)"
+        phenotype = blood_type
+        interpretation = "Predicted " + abo + " with a low-confidence RhD-negative proxy."
+    else:
+        blood_type = abo + " RhD unresolved"
+        phenotype = blood_type
+        interpretation = "Predicted ABO group " + abo + ", but RhD proxy status was unresolved."
+
+    result = make_result(
+        "ABO/RhD summary",
+        phenotype,
+        abo_result["genotype_interpretation"] + "; " + rhd_result["genotype_interpretation"],
+        "low",
+        genotypes,
+        limitations,
+        interpretation,
+    )
+    result["blood_type"] = blood_type
+    return result
 
 
 def genotype_summary(calls, rsids):
@@ -329,9 +398,12 @@ def main():
     for rsid in MARKERS:
         calls[rsid] = raw_genotype(observation_for_rsid(rows, rsid))
 
+    abo = predict_abo(rows, calls)
+    rhd = predict_rhd(calls)
     output_rows = [
-        predict_abo(rows, calls),
-        predict_rhd(calls),
+        blood_type_summary(abo, rhd),
+        abo,
+        rhd,
         predict_kell(calls),
         predict_duffy(calls),
         predict_kidd(calls),

@@ -4,12 +4,12 @@ name: blood-type
 label: Blood Type Research Assay
 package_version: "1.0"
 kind: panel
-created_at: "2026-06-17T06:54:25Z"
+created_at: "2026-06-17T10:31:48Z"
 entrypoint: manifest.yaml
 artifact:
   path: blood-type.zip
-  sha256: ef59cd23c8aaf8677e8b329cf282ed2cd1113e4e86901678ff84f88efdc1f7a7
-  size_bytes: 10050
+  sha256: 0293e253ad4b98e858451bc90e0ebc2167ce9acde6e95407a608766045d322d4
+  size_bytes: 10562
 contents:
   files:
     - assay.yaml

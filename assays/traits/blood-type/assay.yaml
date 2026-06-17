@@ -58,6 +58,9 @@ analyses:
       - key: system
         label: Blood group system
         value_type: string
+      - key: blood_type
+        label: Combined ABO/RhD summary
+        value_type: string
       - key: phenotype
         label: Predicted phenotype
         value_type: string

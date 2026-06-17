@@ -21,9 +21,11 @@ data aliases:
   23andme_v5
   23andme_r6
   carika
+  carika2
   sequencing
   sequencing-vcf
   sequencing-dv-vcf
+  emma-vcf
   carigenetics
   carigenetics-vcf
   NA06985
@@ -36,6 +38,8 @@ assay/panel aliases:
   pgx-1-zip
   glp1
   glp1-zip
+  blood-type
+  blood-type-zip
   thalassemia
   thalassemia-zip
   clingen
@@ -50,10 +54,11 @@ examples:
   ./test-report.sh 23andme apol1
   ./test-report.sh sequencing apol1-zip
   ./test-report.sh carigenetics-vcf /Users/madhavajay/dev/exvitae-data/exvitae/assays/risk/APOL1/APOL1.zip
-  ./test-report.sh carika /Users/madhavajay/dev/exvitae-data/projects/pgx-1/manifest.yaml -- --analysis-max-duration-ms 60000
+  ./test-report.sh carika /Users/madhavajay/dev/exvitae-data/exvitae/assays/pgx/pgx-1/manifest.yaml -- --analysis-max-duration-ms 60000
   ./test-report.sh 23andme_v5 clingen --no-open -- --html
   ./test-report.sh sequencing-vcf longevity --no-open
   ./test-report.sh 23andme_v5 glp1 --no-open -- --html
+  ./test-report.sh 23andme_v5 blood-type --no-open -- --html
   ./test-report.sh 23andme_v5 pcsk9-ldl --no-open -- --html
 USAGE
 }
@@ -67,9 +72,11 @@ DATA_ALIASES=(
   23andme_v5
   23andme_r6
   carika
+  carika2
   sequencing
   sequencing-vcf
   sequencing-dv-vcf
+  emma-vcf
   carigenetics
   carigenetics-vcf
   NA06985
@@ -81,8 +88,10 @@ DATA_ALIASES_NOCRAM=(
   23andme_v5
   23andme_r6
   carika
+  carika2
   sequencing-vcf
   sequencing-dv-vcf
+  emma-vcf
   carigenetics-vcf
   NA06985-vcf
 )
@@ -135,16 +144,22 @@ resolve_manifest() {
       printf '%s\n' "$REPO/assays/risk/APOL1/APOL1.zip"
       ;;
     pgx-1)
-      printf '%s\n' "$PROJECTS/pgx-1/manifest.yaml"
+      printf '%s\n' "$REPO/assays/pgx/pgx-1/manifest.yaml"
       ;;
     pgx-1-zip)
-      printf '%s\n' "$PROJECTS/pgx-1/pgx-1.zip"
+      printf '%s\n' "$REPO/assays/pgx/pgx-1/pgx-1.zip"
       ;;
     glp1)
       printf '%s\n' "$REPO/assays/pgx/glp1/manifest.yaml"
       ;;
     glp1-zip)
       printf '%s\n' "$REPO/assays/pgx/glp1/glp1.zip"
+      ;;
+    blood-type)
+      printf '%s\n' "$REPO/assays/traits/blood-type/manifest.yaml"
+      ;;
+    blood-type-zip)
+      printf '%s\n' "$REPO/assays/traits/blood-type/blood-type.zip"
       ;;
     thalassemia)
       printf '%s\n' "$PROJECTS/thalassemia/thalassemia.yaml"
@@ -218,6 +233,10 @@ configure_data_alias() {
       INPUT_FILE="$PRIVATE_DNA/dynamicdnalabs.com/carika.txt"
       DEFAULT_ANALYSIS_MAX_DURATION_MS="30000"
       ;;
+    carika2)
+      INPUT_FILE="/Users/madhavajay/dev/my_private_data/carika/M0033180NW.txt"
+      DEFAULT_ANALYSIS_MAX_DURATION_MS="30000"
+      ;;
     sequencing)
       local data_dir="$PRIVATE_DNA/sequencing.com"
       INPUT_FILE="$data_dir/MadhavaJay-SQA28U66-30x-WGS-Sequencing_com.recal.cram"
@@ -237,6 +256,14 @@ configure_data_alias() {
     sequencing-dv-vcf)
       local data_dir="$PRIVATE_DNA/sequencing.com"
       INPUT_FILE="$data_dir/MadhavaJay-SQA28U66-30x-WGS-Sequencing_com.deepvariant.vcf.gz"
+      INPUT_INDEX="$INPUT_FILE.tbi"
+      INPUT_FORMAT="vcf"
+      NEED_VCF_INDEX="true"
+      DEFAULT_ANALYSIS_MAX_DURATION_MS="30000"
+      ;;
+    emma-vcf)
+      local data_dir="$PRIVATE_DNA/emma-sequencing.com/variant_calling/deepvariant/EmmaJay-SQU3J223"
+      INPUT_FILE="$data_dir/EmmaJay-SQU3J223.deepvariant.vcf.gz"
       INPUT_INDEX="$INPUT_FILE.tbi"
       INPUT_FORMAT="vcf"
       NEED_VCF_INDEX="true"
@@ -388,9 +415,12 @@ run_report_for_alias() {
     "$REPO/bioscript/bs" report "$MANIFEST"
     --root "$ROOT"
     --input-file "$INPUT_FILE"
-    --detect-sex
     --output-dir "$output_dir"
   )
+
+  if [[ -z "$SAMPLE_SEX" ]]; then
+    cmd+=(--detect-sex)
+  fi
 
   if [[ -n "$INPUT_INDEX" ]]; then
     cmd+=(--input-index "$INPUT_INDEX")
