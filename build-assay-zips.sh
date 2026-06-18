@@ -11,6 +11,7 @@ SELF_CONTAINED_PACKAGES=(
   assays/risk/APOL1/manifest.yaml
   assays/pgx/pgx-1/manifest.yaml
   assays/pgx/glp1/manifest.yaml
+  assays/traits/blood-type/manifest.yaml
   assays/risk/longevity/manifest.yaml
   assays/risk/pcsk9-ldl/panel.yaml
   assays/risk/prostate-cancer-prs/panel.yaml

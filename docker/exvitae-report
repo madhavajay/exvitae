@@ -9,6 +9,7 @@ Known assay ids:
   apol1
   pgx-1
   glp1
+  blood-type
   longevity
   pcsk9-ldl
   prostate-cancer-prs
@@ -33,6 +34,9 @@ case "$ASSAY" in
     ;;
   glp1)
     PACKAGE="/opt/exvitae/assays/glp1.zip"
+    ;;
+  blood-type|blood_type)
+    PACKAGE="/opt/exvitae/assays/blood-type.zip"
     ;;
   longevity)
     PACKAGE="/opt/exvitae/assays/longevity.zip"
