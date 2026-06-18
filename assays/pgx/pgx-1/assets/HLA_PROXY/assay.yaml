@@ -3,9 +3,9 @@ version: "1.0"
 name: hla_proxy_combined_genotype
 label: HLA Proxy Marker Combined Genotype
 summary:
-  Descriptive assay that emits a stable combined genotype key for five HLA proxy markers. These SNPs are tag/proxy
-  markers and are not treated as definitive HLA allele typing because linkage disequilibrium and predictive performance
-  vary by ancestry and marker.
+  Descriptive assay that emits a single stable combined genotype key for five HLA proxy markers. These SNPs are captured
+  together as a fingerprint rather than interpreted as definitive HLA allele typing because linkage disequilibrium and
+  predictive performance vary by ancestry and marker.
 tags:
   - type:pgx
   - gene:HLA
@@ -80,9 +80,9 @@ analyses:
       description: >
         The script normalizes each observed SNP genotype by removing separators and sorting allele characters, so TA and AT
         are emitted as AT. It then concatenates the five ordered marker calls into a stable key such as
-        rs1061235_AT_rs3909184_CG_rs2844682_AG_rs2395029_GT_rs9263726_AG. Missing markers are retained as
-        rsid_missing so cohort/group statistics can count complete and incomplete keys deterministically. No phasing or
-        direct HLA allele call is inferred from this key.
+        HLA-A*3101_rs1061235:AT_HLA-B*1502_rs3909184:CG_HLA-B*1502_rs2844682:AG_HLA-B*5701_rs2395029:GT_HLA-B*5801_rs9263726:AG.
+        Missing markers are retained as HLA allele + rsid + missing segments so cohort/group statistics can count complete
+        and incomplete keys deterministically. No phasing or direct HLA allele call is inferred from this key.
 provenance:
   sources:
     - kind: paper

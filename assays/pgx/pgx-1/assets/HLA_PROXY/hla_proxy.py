@@ -44,14 +44,14 @@ RS9263726 = bioscript.variant(
 )
 
 HLA_PROXY_MARKERS = [
-    ("rs1061235", RS1061235),
-    ("rs3909184", RS3909184),
-    ("rs2844682", RS2844682),
-    ("rs2395029", RS2395029),
-    ("rs9263726", RS9263726),
+    ("HLA-A*3101", "rs1061235", RS1061235),
+    ("HLA-B*1502", "rs3909184", RS3909184),
+    ("HLA-B*1502", "rs2844682", RS2844682),
+    ("HLA-B*5701", "rs2395029", RS2395029),
+    ("HLA-B*5801", "rs9263726", RS9263726),
 ]
 
-HLA_PROXY_QUERY_PLAN = bioscript.query_plan([marker[1] for marker in HLA_PROXY_MARKERS])
+HLA_PROXY_QUERY_PLAN = bioscript.query_plan([marker[2] for marker in HLA_PROXY_MARKERS])
 
 
 def normalize_genotype(genotype):
@@ -83,19 +83,21 @@ def hla_proxy_status(calls):
     return "partial"
 
 
-def combined_key(marker_ids, calls):
+def combined_key(markers, calls):
     parts = []
-    for index in range(len(marker_ids)):
-        parts.append(marker_ids[index])
-        parts.append(calls[index])
+    for index in range(len(markers)):
+        hla_allele = markers[index][0]
+        rsid = markers[index][1]
+        parts.append(hla_allele + "_" + rsid + ":" + calls[index])
     return "_".join(parts)
 
 
 def report_notes(status, key):
     return (
         "HLA proxy marker key " + key + " emitted with status " + status + ". "
-        "This is a deterministic combined SNP genotype key for grouping and cohort statistics; it does not infer phase or "
-        "definitively classify HLA-A or HLA-B allele carriage."
+        "This is a deterministic combined SNP genotype key for grouping and cohort statistics. "
+        "The five proxy marker genotypes are captured together because this assay does not yet infer phase or "
+        "classify HLA-A or HLA-B allele carriage."
     )
 
 
@@ -103,7 +105,6 @@ def main():
     genotypes = bioscript.load_genotypes(input_file)
     raw_calls = genotypes.lookup_variants(HLA_PROXY_QUERY_PLAN)
 
-    marker_ids = [marker[0] for marker in HLA_PROXY_MARKERS]
     calls = []
     for raw_call in raw_calls:
         calls.append(normalize_genotype(raw_call))
@@ -114,7 +115,7 @@ def main():
         if call != "missing":
             observed_count = observed_count + 1
 
-    key = combined_key(marker_ids, calls)
+    key = combined_key(HLA_PROXY_MARKERS, calls)
 
     rows = [{
         "participant_id": participant_id,

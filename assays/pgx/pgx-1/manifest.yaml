@@ -96,21 +96,6 @@ members:
   - kind: variant
     path: assets/GRIN2B/rs2058878.yaml
     version: "1.0"
-  - kind: variant
-    path: assets/HLA-A_3101/rs1061235.yaml
-    version: "1.0"
-  - kind: variant
-    path: assets/HLA-B_1502/rs3909184.yaml
-    version: "1.0"
-  - kind: variant
-    path: assets/HLA-B_1502/rs2844682.yaml
-    version: "1.0"
-  - kind: variant
-    path: assets/HLA-B_5701/rs2395029.yaml
-    version: "1.0"
-  - kind: variant
-    path: assets/HLA-B_5801/rs9263726.yaml
-    version: "1.0"
   - kind: assay
     path: assets/HLA_PROXY/assay.yaml
     version: "1.0"
