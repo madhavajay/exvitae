@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VERSION="$(tr -d '[:space:]' < "${SCRIPT_DIR}/VERSION")"
-IMAGE="${EXVITAE_DOCKER_IMAGE:-ghcr.io/openmined/exvitae:${VERSION}}"
+IMAGE="${EXVITAE_DOCKER_IMAGE:-ghcr.io/madhavajay/exvitae:${VERSION}}"
 TARGET="${EXVITAE_DOCKER_TARGET:-runtime}"
 
 if [[ ! -f "${SCRIPT_DIR}/bioscript/rust/Cargo.toml" ]]; then

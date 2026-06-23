@@ -147,12 +147,13 @@ def insertion_state(row, genotype):
     return ""
 
 
-def make_result(system, phenotype, genotype_interpretation, confidence, genotypes, limitations, interpretation):
+def make_result(system, phenotype, genotype_interpretation, confidence, genotypes, limitations, interpretation, abo_genotype=""):
     return {
         "participant_id": participant_id,
         "system": system,
         "blood_type": "",
         "phenotype": phenotype,
+        "abo_genotype": abo_genotype,
         "genotype_interpretation": genotype_interpretation,
         "confidence": confidence,
         "genotypes": genotypes,
@@ -198,6 +199,7 @@ def blood_type_summary(abo_result, rhd_result):
         interpretation,
     )
     result["blood_type"] = blood_type
+    result["abo_genotype"] = abo_result["abo_genotype"]
     return result
 
 
@@ -266,7 +268,7 @@ def predict_abo(rows, calls):
             "The marker combination does not fit the simplified common ABO rule set.",
         )
 
-    return make_result("ABO", phenotype, interpretation, "moderate", genotypes, limitations, reason)
+    return make_result("ABO", phenotype, interpretation, "moderate", genotypes, limitations, reason, interpretation)
 
 
 def predict_rhd(calls):

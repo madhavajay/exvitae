@@ -1,11 +1,11 @@
 schema: bioscript:assay:1.0
 version: "1.0"
-name: hla_proxy_combined_genotype
-label: HLA Proxy Marker Combined Genotype
+name: hla_proxy_markers
+label: HLA Proxy Markers
 summary:
-  Descriptive assay that emits a single stable combined genotype key for five HLA proxy markers. These SNPs are captured
-  together as a fingerprint rather than interpreted as definitive HLA allele typing because linkage disequilibrium and
-  predictive performance vary by ancestry and marker.
+  Descriptive assay that emits one row per HLA proxy marker. rs9263726 is interpreted as a research-use HLA-B*58:01
+  proxy for allopurinol-induced SCAR risk; other HLA proxy markers are reported as positive when a non-reference marker
+  allele is present and negative when only the reference allele is observed, without aggregate HLA inference.
 tags:
   - type:pgx
   - gene:HLA
@@ -39,11 +39,11 @@ members:
     path: ../HLA-B_5801/rs9263726.yaml
     version: "1.0"
 analyses:
-  - id: hla_proxy_combined
+  - id: hla_proxy_markers
     kind: bioscript
     path: hla_proxy.py
     output_format: tsv
-    label: HLA proxy marker combined genotype
+    label: HLA proxy marker list
     derived_from:
       - ../HLA-A_3101/rs1061235.yaml
       - ../HLA-B_1502/rs3909184.yaml
@@ -55,34 +55,35 @@ analyses:
         label: HLA proxy status
         value_type: string
         format: badge
-      - key: hla_proxy_key
-        label: HLA proxy combined genotype key
+      - key: hla_allele
+        label: HLA allele proxy
         value_type: string
-      - key: hla_proxy_observed_marker_count
-        label: HLA proxy observed marker count
-        value_type: integer
-      - key: rs1061235
-        label: rs1061235 genotype
+      - key: rsid
+        label: rsID
         value_type: string
-      - key: rs3909184
-        label: rs3909184 genotype
+      - key: genotype
+        label: Marker genotype
         value_type: string
-      - key: rs2844682
-        label: rs2844682 genotype
+      - key: drug
+        label: Drug
         value_type: string
-      - key: rs2395029
-        label: rs2395029 genotype
+      - key: condition
+        label: Condition
         value_type: string
-      - key: rs9263726
-        label: rs9263726 genotype
+      - key: phenotype
+        label: Proxy phenotype
+        value_type: string
+      - key: interpretation
+        label: Interpretation
         value_type: string
     logic:
       description: >
-        The script normalizes each observed SNP genotype by removing separators and sorting allele characters, so TA and AT
-        are emitted as AT. It then concatenates the five ordered marker calls into a stable key such as
-        HLA-A*3101_rs1061235:AT_HLA-B*1502_rs3909184:CG_HLA-B*1502_rs2844682:AG_HLA-B*5701_rs2395029:GT_HLA-B*5801_rs9263726:AG.
-        Missing markers are retained as HLA allele + rsid + missing segments so cohort/group statistics can count complete
-        and incomplete keys deterministically. No phasing or direct HLA allele call is inferred from this key.
+        The script normalizes each observed SNP genotype and emits one row per proxy marker. It no longer emits an
+        aggregate HLA proxy key. Non-rs9263726 marker rows report positive when the genotype contains a non-reference
+        allele and negative when the genotype is homozygous reference. For rs9263726, G/G is reported as proxy-negative
+        for allopurinol-induced SCAR, G/A is reported as proxy-positive / likely HLA-B*58:01 carrier, A/A is reported as
+        proxy-positive / likely HLA-B*58:01 carrier, possibly homozygous tag, and C or other alleles are reported as
+        unknown.
 provenance:
   sources:
     - kind: paper

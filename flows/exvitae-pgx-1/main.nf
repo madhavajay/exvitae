@@ -2,7 +2,7 @@
 
 nextflow.enable.dsl=2
 
-def EXVITAE_CONTAINER = 'ghcr.io/openmined/exvitae:0.2.3'
+def EXVITAE_CONTAINER = 'ghcr.io/madhavajay/exvitae:0.2.4'
 
 def countryValue(record) {
     def facets = record.facets ?: [:]

@@ -8,7 +8,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 VERSION_RE = re.compile(r"^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$")
-IMAGE_RE = re.compile(r"ghcr\.io/openmined/exvitae:[0-9A-Za-z][0-9A-Za-z.-]*")
+IMAGE_RE = re.compile(r"ghcr\.io/(?:openmined|madhavajay)/exvitae:[0-9A-Za-z][0-9A-Za-z.-]*")
+IMAGE_REPOSITORY = "ghcr.io/madhavajay/exvitae"
 
 
 def current_version() -> str:
@@ -27,7 +28,7 @@ def replace_yaml_metadata_version(text: str, version: str) -> str:
 def update_file(path: Path, version: str) -> None:
     text = path.read_text(encoding="utf-8")
     text = replace_yaml_metadata_version(text, version)
-    text = IMAGE_RE.sub(f"ghcr.io/openmined/exvitae:{version}", text)
+    text = IMAGE_RE.sub(f"{IMAGE_REPOSITORY}:{version}", text)
     path.write_text(text, encoding="utf-8")
 
 

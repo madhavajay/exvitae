@@ -64,6 +64,9 @@ analyses:
       - key: phenotype
         label: Predicted phenotype
         value_type: string
+      - key: abo_genotype
+        label: ABO genotype
+        value_type: string
       - key: genotype_interpretation
         label: Genotype interpretation
         value_type: string
@@ -83,9 +86,10 @@ analyses:
       description: >
         The analysis reads the member observation rows, normalizes unphased SNP and insertion/deletion genotype strings,
         and applies explicit common-marker rules. ABO is based on rs8176719, the common ABO*O.01 261delG marker, and
-        rs8176746, a B-associated ABO coding marker. RhD is reported only as a low-confidence rs590787 proxy because the
-        RHD/RHCE region requires copy-number and hybrid-allele assessment for reliable typing. Kell, Duffy, Kidd, and FUT2
-        use common marker mappings documented in ISBT/dbSNP records.
+        rs8176746, a B-associated ABO coding marker. The ABO row and combined summary expose the common-marker ABO
+        genotype as O/O, A/O, B/O, A/A, A/B, or B/B where resolvable. RhD is reported only as a low-confidence rs590787
+        proxy because the RHD/RHCE region requires copy-number and hybrid-allele assessment for reliable typing. Kell,
+        Duffy, Kidd, and FUT2 use common marker mappings documented in ISBT/dbSNP records.
 provenance:
   sources:
     - kind: database
