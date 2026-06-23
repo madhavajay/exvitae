@@ -86,8 +86,12 @@ def normalize_genotype(genotype):
     if genotype is None:
         return "missing"
 
+    text = genotype.strip()
+    if text == "" or text.lower() in ("missing", "unknown", "no_call", "no-call", "nocall"):
+        return "missing"
+
     alleles = []
-    for ch in genotype:
+    for ch in text:
         if ch != "/" and ch != "|" and ch != " " and ch != "-":
             alleles.append(ch)
 
