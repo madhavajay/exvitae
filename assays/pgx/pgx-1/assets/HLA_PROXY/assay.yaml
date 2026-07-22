@@ -24,19 +24,19 @@ support:
     - snp:genesforgood
 members:
   - kind: variant
-    path: ../HLA-A_3101/rs1061235.yaml
+    path: rs1061235.yaml
     version: "1.0"
   - kind: variant
-    path: ../HLA-B_1502/rs3909184.yaml
+    path: rs3909184.yaml
     version: "1.0"
   - kind: variant
-    path: ../HLA-B_1502/rs2844682.yaml
+    path: rs2844682.yaml
     version: "1.0"
   - kind: variant
-    path: ../HLA-B_5701/rs2395029.yaml
+    path: rs2395029.yaml
     version: "1.0"
   - kind: variant
-    path: ../HLA-B_5801/rs9263726.yaml
+    path: rs9263726.yaml
     version: "1.0"
 analyses:
   - id: hla_proxy_markers
@@ -45,11 +45,11 @@ analyses:
     output_format: tsv
     label: HLA proxy marker list
     derived_from:
-      - ../HLA-A_3101/rs1061235.yaml
-      - ../HLA-B_1502/rs3909184.yaml
-      - ../HLA-B_1502/rs2844682.yaml
-      - ../HLA-B_5701/rs2395029.yaml
-      - ../HLA-B_5801/rs9263726.yaml
+      - rs1061235.yaml
+      - rs3909184.yaml
+      - rs2844682.yaml
+      - rs2395029.yaml
+      - rs9263726.yaml
     emits:
       - key: hla_proxy_status
         label: HLA proxy status
