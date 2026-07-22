@@ -1,57 +1,10 @@
-RS1061235 = bioscript.variant(
-    rsid=["rs1061235", "rs3173409", "rs3823348", "rs41559417", "rs114782388", "rs117115314"],
-    grch37="6:29913298-29913298",
-    grch38="6:29945521-29945521",
-    ref="A",
-    alt="T",
-    kind="snp",
-)
-
-RS3909184 = bioscript.variant(
-    rsid=["rs3909184", "rs115153408", "rs118099270"],
-    grch37="6:30699384-30699384",
-    grch38="6:30731607-30731607",
-    ref="G",
-    alt=["C", "T"],
-    kind="snp",
-)
-
-RS2844682 = bioscript.variant(
-    rsid=["rs2844682", "rs60077366", "rs115766652", "rs117711722"],
-    grch37="6:30946148-30946148",
-    grch38="6:30978371-30978371",
-    ref="G",
-    alt=["A", "C", "T"],
-    kind="snp",
-)
-
-RS2395029 = bioscript.variant(
-    rsid=["rs2395029", "rs3997925", "rs60378661", "rs111645003", "rs114783691"],
-    grch37="6:31431780-31431780",
-    grch38="6:31464003-31464003",
-    ref="T",
-    alt="G",
-    kind="snp",
-)
-
-RS9263726 = bioscript.variant(
-    rsid=["rs9263726", "rs52792269", "rs61603795", "rs112940667", "rs114541727", "rs117673022", "rs186562789"],
-    grch37="6:31106499-31106499",
-    grch38="6:31138722-31138722",
-    ref="G",
-    alt=["A", "C"],
-    kind="snp",
-)
-
 HLA_PROXY_MARKERS = [
-    ("HLA-A*3101", "rs1061235", RS1061235, ""),
-    ("HLA-B*1502", "rs3909184", RS3909184, ""),
-    ("HLA-B*1502", "rs2844682", RS2844682, ""),
-    ("HLA-B*5701", "rs2395029", RS2395029, ""),
-    ("HLA-B*5801", "rs9263726", RS9263726, "allopurinol-induced SCAR"),
+    ("HLA-A*3101", "rs1061235", ""),
+    ("HLA-B*1502", "rs3909184", ""),
+    ("HLA-B*1502", "rs2844682", ""),
+    ("HLA-B*5701", "rs2395029", ""),
+    ("HLA-B*5801", "rs9263726", "allopurinol-induced SCAR"),
 ]
-
-HLA_PROXY_QUERY_PLAN = bioscript.query_plan([marker[2] for marker in HLA_PROXY_MARKERS])
 HLA_PROXY_REFERENCE_ALLELES = {
     "rs1061235": "A",
     "rs3909184": "G",
@@ -213,7 +166,7 @@ def main():
         marker = HLA_PROXY_MARKERS[index]
         hla_allele = marker[0]
         rsid = marker[1]
-        condition = marker[3]
+        condition = marker[2]
         genotype = calls[index]
         rows.append({
             "participant_id": participant_id,
